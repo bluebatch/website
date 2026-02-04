@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllUseCases } from "@/data/use-cases";
-import ContentWrapper from "@/components/ContentWrapper";
+import ContentWrapper from "@/components/content-wrapper";
 
 export default function UseCasesPage() {
   const useCases = getAllUseCases();

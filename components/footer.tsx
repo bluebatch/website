@@ -36,10 +36,10 @@ export default function Footer() {
             {/* Logo */}
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-400 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">N</span>
+                <span className="text-white font-bold text-xl">B</span>
               </div>
               <span className="text-xl font-bold text-white">
-                next<span className="text-secondary-500">8n</span>
+                blue<span className="text-secondary-500">batch</span>
               </span>
             </div>
 
@@ -66,10 +66,10 @@ export default function Footer() {
                 />
               </svg>
               <a
-                href="mailto:hello@next8n.com"
+                href="mailto:hello@bluebatch.com"
                 className="hover:text-secondary-500 transition-colors"
               >
-                hello@next8n.com
+                hello@bluebatch.com
               </a>
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           {/* Copyright */}
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} next8n. All rights reserved.
+            © {new Date().getFullYear()} bluebatch. All rights reserved.
           </p>
 
           {/* Social Media Icons */}

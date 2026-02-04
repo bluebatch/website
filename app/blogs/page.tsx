@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllBlogs } from "@/data/blogs";
-import ContentWrapper from "@/components/ContentWrapper";
+import ContentWrapper from "@/components/content-wrapper";
 
 export default function BlogsPage() {
   const blogs = getAllBlogs();

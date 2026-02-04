@@ -1,10 +1,10 @@
 "use client";
 
-import Button from "@/components/Button";
-import ContentWrapper from "@/components/ContentWrapper";
-import VideoBackgroundHero from "@/components/hero-components/VideoBackgroundHero";
-import SectionHeader from "@/components/SectionHeader";
-import VideoBoxContainer from "@/components/VideoBoxContainer";
+import Button from "@/components/button";
+import ContentWrapper from "@/components/content-wrapper";
+import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
+import SectionHeader from "@/components/section-header";
+import VideoBoxContainer from "@/components/video-box-container";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
             <VideoBackgroundHero.Headline>
               Build Powerful AI Agents with
               <VideoBackgroundHero.Highlight>
-                next8n
+                bluebatch
               </VideoBackgroundHero.Highlight>
             </VideoBackgroundHero.Headline>
 
@@ -54,7 +54,7 @@ export default function Home() {
             {/* Left Column - Section Header Text */}
             <div>
               <SectionHeader
-                smallHeadline="next8n AI agent builder"
+                smallHeadline="bluebatch AI agent builder"
                 largeHeadline="Build AI agents that work predictably in prod"
                 description="Source availability, 500+ integrations, and support for code give you the flexibility to connect AI models to your business systems at scale. Human-in-the-loop guardrails and the ability to add pre-defined logic give you the confidence they won't fail."
                 subtext="*14-day free trial. No credit card needed"

@@ -1,17 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const aboutUsMenu = [
     {
       icon: "🏢",
-      title: "next8n",
+      title: "bluebatch",
       description: "Learn about our mission and team",
       href: "/",
     },
@@ -78,10 +92,22 @@ export default function Navigation() {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 px-8 pt-4">
-      <nav className="mx-auto max-w-6xl bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200/50">
-        <div className="px-6">
-          <div className="flex h-20 items-center justify-between">
+    <div
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "px-10 pt-3" : "px-8 pt-4"
+      }`}
+    >
+      <nav
+        className={`mx-auto bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200/50 transition-all duration-300 ${
+          isScrolled ? "max-w-5xl" : "max-w-6xl"
+        }`}
+      >
+        <div
+          className={`transition-all duration-300 ${
+            isScrolled ? "px-5 h-16" : "px-6 h-20"
+          }`}
+        >
+          <div className="flex h-full items-center justify-between">
             {/* Logo */}
             <motion.div
               initial="hidden"
@@ -92,10 +118,10 @@ export default function Navigation() {
             >
               <Link href="/" className="flex items-center gap-2">
                 <div className="w-10 h-10 bg-gradient-to-br from-secondary-700 to-secondary-400 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">N</span>
+                  <span className="text-white font-bold text-xl">B</span>
                 </div>
                 <span className="text-xl font-bold text-gray-900">
-                  next<span className="text-secondary-500">8n</span>
+                  blue<span className="text-secondary-500">batch</span>
                 </span>
               </Link>
             </motion.div>

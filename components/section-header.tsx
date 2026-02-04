@@ -1,4 +1,4 @@
-import SalesButton from "./SalesButton";
+import SalesButton from "./sales-button";
 
 interface SectionHeaderProps {
   smallHeadline: string;

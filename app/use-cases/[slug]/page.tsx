@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getUseCaseBySlug, getAllUseCases } from "@/data/use-cases";
 import { notFound } from "next/navigation";
-import ContentWrapper from "@/components/ContentWrapper";
+import ContentWrapper from "@/components/content-wrapper";
 
 interface UseCasePageProps {
   params: Promise<{

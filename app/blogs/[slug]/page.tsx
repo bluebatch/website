@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getBlogBySlug, getAllBlogs } from "@/data/blogs";
 import { notFound } from "next/navigation";
-import ContentWrapper from "@/components/ContentWrapper";
+import ContentWrapper from "@/components/content-wrapper";
 
 interface BlogPostPageProps {
   params: Promise<{
