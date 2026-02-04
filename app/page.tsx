@@ -125,6 +125,19 @@ export default function Home() {
             </div>
           </div>
         </ContentWrapper>
+        <ContentWrapper>
+          <div className="px-4 py-20 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl text-center">
+              <h2 className="text-3xl font-bold">Ready to Get Started?</h2>
+              <p className="mt-4 text-lg text-gray-300">
+                Join us today and experience the difference
+              </p>
+              <button className="mt-8 rounded-md bg-gradient-to-r from-secondary-600 to-primary-600 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:from-secondary-700 hover:to-primary-700">
+                Sign Up Now
+              </button>
+            </div>
+          </div>
+        </ContentWrapper>
       </main>
     </div>
   );
