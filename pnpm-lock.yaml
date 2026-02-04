@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       framer-motion:
-        specifier: ^12.31.0
+        specifier: 12.31.0
         version: 12.31.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       next:
         specifier: 16.1.6
@@ -22,28 +22,28 @@ importers:
         version: 19.2.3(react@19.2.3)
     devDependencies:
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: '4'
         version: 4.1.18
       '@types/node':
-        specifier: ^20
+        specifier: '20'
         version: 20.19.31
       '@types/react':
-        specifier: ^19
+        specifier: '19'
         version: 19.2.10
       '@types/react-dom':
-        specifier: ^19
+        specifier: '19'
         version: 19.2.3(@types/react@19.2.10)
       eslint:
-        specifier: ^9
+        specifier: '9'
         version: 9.39.2(jiti@2.6.1)
       eslint-config-next:
         specifier: 16.1.6
         version: 16.1.6(@typescript-eslint/parser@8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       tailwindcss:
-        specifier: ^4
+        specifier: '4'
         version: 4.1.18
       typescript:
-        specifier: ^5
+        specifier: '5'
         version: 5.9.3
 
 packages:
