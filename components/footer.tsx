@@ -18,7 +18,7 @@ export default function Footer() {
   const legalMenu = [
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" },
-    { label: "Imprint", href: "#" },
+    { label: "Impressum", href: "/impressum" },
   ];
 
   const socialLinks = [
