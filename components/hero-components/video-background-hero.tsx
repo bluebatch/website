@@ -74,7 +74,7 @@ VideoBackgroundHero.TopLabel = function TopLabel({ children }: TopLabelProps) {
       transition={{ duration: 0.6 }}
       className="mb-8"
     >
-      <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-secondary-500 font-semibold text-sm border border-secondary-500/30">
+      <span className="inline-block px-6 py-2 bg-primary-300 backdrop-blur-sm rounded-full text-white font-semibold text-sm">
         {children}
       </span>
     </motion.div>

@@ -23,31 +23,31 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Primary Color Scale */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-primary-950: #172554;
+  /* Primary Color Scale - Deep Electric Navy (#002D62) */
+  --color-primary-50: #e8f1fb;
+  --color-primary-100: #d1e3f7;
+  --color-primary-200: #a3c7ef;
+  --color-primary-300: #75abe7;
+  --color-primary-400: #478fdf;
+  --color-primary-500: #1973d7;
+  --color-primary-600: #145cac;
+  --color-primary-700: #0f4581;
+  --color-primary-800: #002d62;
+  --color-primary-900: #00214a;
+  --color-primary-950: #001532;
 
-  /* Secondary Color Scale */
-  --color-secondary-50: #fff7ed;
-  --color-secondary-100: #ffedd5;
-  --color-secondary-200: #fed7aa;
-  --color-secondary-300: #fdba74;
-  --color-secondary-400: #fb923c;
-  --color-secondary-500: #f97316;
-  --color-secondary-600: #ea580c;
-  --color-secondary-700: #c2410c;
-  --color-secondary-800: #9a3412;
-  --color-secondary-900: #7c2d12;
-  --color-secondary-950: #431407;
+  /* Secondary Color Scale - Cyan Spark (#00F5FF) */
+  --color-secondary-50: #e6feff;
+  --color-secondary-100: #ccfefe;
+  --color-secondary-200: #99fcfd;
+  --color-secondary-300: #66fafc;
+  --color-secondary-400: #33f8fb;
+  --color-secondary-500: #00f5ff;
+  --color-secondary-600: #00c4cc;
+  --color-secondary-700: #009399;
+  --color-secondary-800: #006266;
+  --color-secondary-900: #003133;
+  --color-secondary-950: #001a1a;
 }
 
 /* Base styles using the new theme variables */
@@ -57,4 +57,20 @@
     color: var(--color-foreground);
     @apply font-sans;
   }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
 }

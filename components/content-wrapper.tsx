@@ -6,6 +6,8 @@ interface ContentWrapperProps {
   variant?: "light" | "dark";
   noPadding?: boolean;
   isFirstSection?: boolean;
+  background?: string;
+  border?: "B" | "T" | "BT";
 }
 
 export default function ContentWrapper({
@@ -14,6 +16,8 @@ export default function ContentWrapper({
   variant = "light",
   noPadding = false,
   isFirstSection = false,
+  background,
+  border,
 }: ContentWrapperProps) {
   const baseClasses = "w-full";
 
@@ -28,11 +32,23 @@ export default function ContentWrapper({
 
   const paddingClasses = noPadding
     ? ``
-    : `px-4 ${!isFirstSection ? "pt-8" : "pt-40"} pb-20 sm:px-6 lg:px-8`;
+    : `px-4 ${!isFirstSection ? "pt-16" : "pt-40"} pb-16 sm:px-6 lg:px-8`;
+
+  const borderMap = {
+    B: "border-b border-gray-200",
+    T: "border-t border-gray-200",
+    BT: "border-t border-b border-gray-200",
+  };
+
+  const borderClasses = border ? borderMap[border] : "";
 
   return (
     <div className={`${baseClasses} ${variantClasses[variant]}`}>
-      <div className={`${containerClasses} ${paddingClasses}`}>{children}</div>
+      <div
+        className={`${background} ${containerClasses} ${paddingClasses} ${borderClasses}`}
+      >
+        {children}
+      </div>
     </div>
   );
 }

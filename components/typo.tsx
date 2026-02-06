@@ -1,0 +1,82 @@
+import { ReactNode } from "react";
+
+interface TypoProps {
+  children: ReactNode;
+  className?: string;
+}
+
+function H1({ children, className = "" }: TypoProps) {
+  return (
+    <h1
+      className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight ${className}`}
+    >
+      {children}
+    </h1>
+  );
+}
+
+function H2({ children, className = "" }: TypoProps) {
+  return (
+    <h2
+      className={`text-3xl md:text-4xl font-bold mb-5 mt-10 leading-tight ${className}`}
+    >
+      {children}
+    </h2>
+  );
+}
+
+function H3({ children, className = "" }: TypoProps) {
+  return (
+    <h3
+      className={`text-xl md:text-2xl font-semibold mb-4 mt-8 leading-snug ${className}`}
+    >
+      {children}
+    </h3>
+  );
+}
+
+function H4({ children, className = "" }: TypoProps) {
+  return (
+    <h4
+      className={`text-lg md:text-xl font-semibold mb-3 mt-6 leading-snug ${className}`}
+    >
+      {children}
+    </h4>
+  );
+}
+
+function Paragraph({ children, className = "" }: TypoProps) {
+  return (
+    <p
+      className={`text-base md:text-lg text-gray-400 leading-relaxed mb-4 ${className}`}
+    >
+      {children}
+    </p>
+  );
+}
+
+function List({ children, className = "" }: TypoProps) {
+  return (
+    <ul
+      className={`list-disc list-inside text-gray-600 space-y-2 mt-4 ${className}`}
+    >
+      {children}
+    </ul>
+  );
+}
+
+function ListItem({ children, className = "" }: TypoProps) {
+  return <li className={className}>{children}</li>;
+}
+
+const Typo = {
+  H1,
+  H2,
+  H3,
+  H4,
+  Paragraph,
+  List,
+  ListItem,
+};
+
+export default Typo;

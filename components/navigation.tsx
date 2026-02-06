@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import ContactButton from "@/components/buttons/contact-button";
+import Image from "next/image";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -73,12 +75,28 @@ export default function Navigation() {
         href: "/use-cases/grosshandel",
         cases: [
           {
-            title: "Automatisierte Bestellabwicklung",
-            href: "/use-cases/grosshandel-bestellabwicklung",
+            title: "Angebots-Bot",
+            href: "/use-cases/grosshandel/angebots-bot",
           },
           {
-            title: "Lagerverwaltung",
-            href: "/use-cases/grosshandel-lagerverwaltung",
+            title: "Auftragserfassung",
+            href: "/use-cases/grosshandel/auftragserfassung",
+          },
+          {
+            title: "Invoice-Bot",
+            href: "/use-cases/grosshandel/invoice-bot",
+          },
+          {
+            title: "Zertifikatsprüfung Lieferanten",
+            href: "/use-cases/grosshandel/zertifikatspruefung-lieferanten",
+          },
+          {
+            title: "3-Wege-Rechnungsprüfung",
+            href: "/use-cases/grosshandel/3-wege-rechnungspruefung",
+          },
+          {
+            title: "Auftragserfassung unstrukturiert",
+            href: "/use-cases/grosshandel/auftragserfassung-unstrukturiert",
           },
         ],
       },
@@ -89,11 +107,11 @@ export default function Navigation() {
         cases: [
           {
             title: "Dokumentenverarbeitung",
-            href: "/use-cases/steuerberater-dokumentenverarbeitung",
+            href: "/use-cases/steuerberater/dokumentenverarbeitung",
           },
           {
             title: "Mandantenkommunikation",
-            href: "/use-cases/steuerberater-mandantenkommunikation",
+            href: "/use-cases/steuerberater/mandantenkommunikation",
           },
         ],
       },
@@ -104,11 +122,11 @@ export default function Navigation() {
         cases: [
           {
             title: "Produktdatenmanagement",
-            href: "/use-cases/ecommerce-produktdatenmanagement",
+            href: "/use-cases/ecommerce/produktdatenmanagement",
           },
           {
             title: "Kundenservice Automation",
-            href: "/use-cases/ecommerce-kundenservice",
+            href: "/use-cases/ecommerce/kundenservice",
           },
         ],
       },
@@ -162,17 +180,23 @@ export default function Navigation() {
   // Group blog posts by category for submenu
   const blogsByCategory = blogMenu
     .filter((blog) => blog.addToSubmenu)
-    .reduce((acc, blog) => {
-      if (!acc[blog.category]) {
-        acc[blog.category] = {
-          categoryName: blog.category,
-          categorySlug: blog.categorySlug,
-          posts: [],
-        };
-      }
-      acc[blog.category].posts.push(blog);
-      return acc;
-    }, {} as Record<string, { categoryName: string; categorySlug: string; posts: typeof blogMenu }>);
+    .reduce(
+      (acc, blog) => {
+        if (!acc[blog.category]) {
+          acc[blog.category] = {
+            categoryName: blog.category,
+            categorySlug: blog.categorySlug,
+            posts: [],
+          };
+        }
+        acc[blog.category].posts.push(blog);
+        return acc;
+      },
+      {} as Record<
+        string,
+        { categoryName: string; categorySlug: string; posts: typeof blogMenu }
+      >,
+    );
 
   const blogCategories = Object.values(blogsByCategory);
 
@@ -188,7 +212,7 @@ export default function Navigation() {
       }`}
     >
       <nav
-        className={`mx-auto bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200/50 transition-all duration-300 ${
+        className={`mx-auto bg-white/70 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200/50 transition-all duration-300 ${
           isScrolled ? "max-w-5xl" : "max-w-6xl"
         }`}
       >
@@ -207,9 +231,15 @@ export default function Navigation() {
               className="flex items-center"
             >
               <Link href="/" className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-secondary-700 to-secondary-400 rounded-lg flex items-center justify-center">
+                <Image
+                  src={"/logo.png"}
+                  width={46}
+                  height={46}
+                  alt="asd"
+                ></Image>
+                {/* <div className="w-10 h-10 bg-gradient-to-br from-secondary-700 to-secondary-400 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-xl">B</span>
-                </div>
+                </div> */}
                 <span className="text-xl font-bold text-gray-900">
                   blue<span className="text-secondary-500">batch</span>
                 </span>
@@ -283,9 +313,11 @@ export default function Navigation() {
                                 href={item.href}
                                 className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
                               >
-                                <img
+                                <Image
                                   src={item.icon}
                                   alt=""
+                                  width={20}
+                                  height={20}
                                   className="w-5 h-5 text-primary-500 group-hover:text-primary-600"
                                 />
                                 <div>
@@ -362,9 +394,11 @@ export default function Navigation() {
                             href={topic.href}
                             className="flex items-center gap-2 mb-3 hover:text-primary-500 transition-colors group"
                           >
-                            <img
+                            <Image
                               src={topic.icon}
                               alt=""
+                              width={24}
+                              height={24}
                               className="w-6 h-6 text-primary-500 group-hover:text-primary-600"
                             />
                             <h4 className="font-bold text-gray-900 group-hover:text-primary-500 text-sm uppercase tracking-wide">
@@ -513,12 +547,7 @@ export default function Navigation() {
               </button> */}
 
               {/* Get in Touch Button */}
-              <Link
-                href="/contact"
-                className="px-6 py-2.5 bg-gradient-to-r from-primary-400 to-primary-700 text-white rounded-lg font-medium hover:from-primary-700 hover:to-primary-900 transition-colors shadow-sm"
-              >
-                Get in Touch
-              </Link>
+              <ContactButton size="sm" showIcon={false}></ContactButton>
 
               {/* Language Selector */}
               {/* <button className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:text-gray-900 transition-colors font-medium rounded-lg hover:bg-gray-50">
@@ -565,9 +594,13 @@ export default function Navigation() {
               {/* Über uns Section */}
               {uberUnsMenu.sections.map((section, sectionIndex) => (
                 <div key={sectionIndex} className="space-y-1">
-                  <p className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">
+                  <Link
+                    href={section.href}
+                    className="block px-4 py-2 text-xs font-semibold text-gray-500 uppercase hover:text-primary-500"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     {section.title}
-                  </p>
+                  </Link>
                   {section.items.map((item, itemIndex) => (
                     <Link
                       key={itemIndex}
@@ -575,7 +608,13 @@ export default function Navigation() {
                       className="flex items-start gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <img src={item.icon} alt="" className="w-5 h-5 mt-0.5" />
+                      <Image
+                        src={item.icon}
+                        alt=""
+                        width={20}
+                        height={20}
+                        className="w-5 h-5 mt-0.5"
+                      />
                       <div>
                         <p className="font-medium">{item.title}</p>
                         <p className="text-xs text-gray-500">
@@ -587,74 +626,66 @@ export default function Navigation() {
                 </div>
               ))}
 
-              {/* Use-Cases Section */}
+              {/* Use-Cases Section - Top level only */}
               <div className="space-y-1 pt-2">
-                <p className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">
+                <Link
+                  href="/use-cases"
+                  className="block px-4 py-2 text-xs font-semibold text-gray-500 uppercase hover:text-primary-500"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   Use-Cases
-                </p>
+                </Link>
                 {useCasesMenu.topics.map((topic, topicIndex) => (
-                  <div key={topicIndex} className="px-4 py-2">
-                    <div className="flex items-center gap-2 mb-2">
-                      <img src={topic.icon} alt="" className="w-5 h-5" />
-                      <p className="font-semibold text-gray-900 text-sm">
-                        {topic.title}
-                      </p>
-                    </div>
-                    <div className="space-y-1 pl-6">
-                      {topic.cases.map((caseItem, caseIndex) => (
-                        <Link
-                          key={caseIndex}
-                          href={caseItem.href}
-                          className="block py-1 text-sm text-gray-700 hover:text-primary-500"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {caseItem.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
+                  <Link
+                    key={topicIndex}
+                    href={topic.href}
+                    className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <Image
+                      src={topic.icon}
+                      alt=""
+                      width={20}
+                      height={20}
+                      className="w-5 h-5"
+                    />
+                    <p className="font-medium">{topic.title}</p>
+                  </Link>
                 ))}
               </div>
 
-              {/* Blog Section */}
-              <div className="space-y-1 pt-2">
-                <p className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">
-                  Blog
-                </p>
-                {blogCategories.map((category, categoryIndex) => (
-                  <div key={categoryIndex} className="space-y-1">
-                    {categoryIndex > 0 && (
-                      <div className="border-t border-gray-200 my-2 mx-4"></div>
-                    )}
-                    <Link
-                      href={`/blogs?cat=${category.categorySlug}`}
-                      className="block px-4 py-2 font-bold text-gray-900 text-sm"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {category.categoryName}
-                    </Link>
-                    {category.posts.map((item, index) => (
-                      <Link
-                        key={index}
-                        href={item.href}
-                        className="block px-4 py-2 pl-6 text-gray-700 hover:bg-gray-50 rounded-lg"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        <p className="font-medium">{item.title}</p>
-                        <p className="text-xs text-gray-500">{item.description}</p>
-                      </Link>
-                    ))}
-                  </div>
-                ))}
+              {/* Blog - Just a link */}
+              <div className="pt-2">
+                <Link
+                  href="/blogs"
+                  className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                    />
+                  </svg>
+                  <p className="font-medium">Blog</p>
+                </Link>
               </div>
 
-              <Link
-                href="/contact"
-                className="block px-4 py-3 bg-gradient-to-r from-secondary-600 to-primary-600 text-white rounded-lg font-medium text-center mt-4"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Kontakt
-              </Link>
+              <div className="mt-4" onClick={() => setMobileMenuOpen(false)}>
+                <ContactButton
+                  showIcon={false}
+                  className="w-full justify-center"
+                >
+                  Kontakt
+                </ContactButton>
+              </div>
             </div>
           </div>
         )}

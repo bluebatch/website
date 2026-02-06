@@ -1,4 +1,4 @@
-import SalesButton from "./sales-button";
+import ContactButton from "@/components/buttons/contact-button";
 
 interface SectionHeaderProps {
   smallHeadline: string;
@@ -40,7 +40,7 @@ export default function SectionHeader({
       {/* Sales Button */}
       {showButton && (
         <div className="mb-4">
-          <SalesButton />
+          <ContactButton icon="chat">Talk to Sales</ContactButton>
         </div>
       )}
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const mainMenu = [
@@ -27,21 +28,24 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-gray-900 text-gray-300 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
           {/* Left Column - Logo & Info */}
           <div className="space-y-6">
             {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-400 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">B</span>
-              </div>
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/logo.png"
+                alt="BlueBatch Logo"
+                width={46}
+                height={46}
+              />
               <span className="text-xl font-bold text-white">
                 blue<span className="text-secondary-500">batch</span>
               </span>
-            </div>
+            </Link>
 
             {/* Description */}
             <p className="text-gray-400 max-w-md">

@@ -17,7 +17,7 @@ export default function Button({
   className = "",
 }: ButtonProps) {
   const baseClasses =
-    "px-8 py-4 rounded-full font-semibold transition-all inline-flex items-center justify-center gap-2";
+    "px-8 py-4 font-semibold transition-all inline-flex items-center justify-center gap-2";
 
   const variantClasses = {
     primary:
@@ -25,7 +25,7 @@ export default function Button({
     secondary:
       "bg-white text-gray-900 hover:bg-gray-100 shadow-md hover:shadow-lg",
     outline:
-      "bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 hover:bg-white/20",
+      "bg-white/10 backdrop-blur-sm text-white hover:bg-white/20",
   };
 
   const combinedClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
