@@ -249,7 +249,7 @@ export default function Navigation() {
                   <span className="text-white font-bold text-xl">B</span>
                 </div> */}
                 <span className="text-xl font-bold text-gray-900">
-                  blue<span className="text-secondary-500">batch</span>
+                  blue<span className="text-primary-600">batch</span>
                 </span>
               </Link>
             </motion.div>

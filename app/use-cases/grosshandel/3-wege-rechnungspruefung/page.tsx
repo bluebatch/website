@@ -3,7 +3,7 @@ import Image from "next/image";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import type { PageConfig } from "@/lib/get-subpages";
-import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
+import BackgroundHero from "@/components/hero-components/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
@@ -21,19 +21,24 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "3-Wege-Rechnungsprüfung – Großhandel",
+  title: "3-Wege-Rechnungsprüfung – Großhandel | BlueBatch",
   description:
-    "Wie bluebatch Großhändlern hilft, Rechnungen automatisch mit Bestellungen und Wareneingängen abzugleichen.",
+    "Wie BlueBatch Großhändlern hilft, Rechnungen automatisch mit Bestellungen und Wareneingängen abzugleichen.",
   openGraph: {
-    title: "3-Wege-Rechnungsprüfung – Großhandel",
+    title: "3-Wege-Rechnungsprüfung – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch Großhändlern hilft, Rechnungen automatisch abzugleichen.",
+      "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung. Nie wieder manuelle Prüfung.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch 3-Wege-Rechnungsprüfung" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "3-Wege-Rechnungsprüfung – Großhandel",
+    title: "3-Wege-Rechnungsprüfung – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch Großhändlern hilft, Rechnungen automatisch abzugleichen.",
+      "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung. Nie wieder manuelle Prüfung.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -57,32 +62,30 @@ export default function Page() {
   return (
     <>
       <ContentWrapper isFirstSection noPadding>
-        <VideoBackgroundHero
-          videoSrc="/videos/ki_workflow.mp4"
+        <BackgroundHero
+          imageSrc="/images/neonbrand-LUgHXvLe_kM-unsplash.jpg"
           overlayOpacity={0.85}
           opacityBackground="white"
         >
-          <VideoBackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>
             3-Wege-Rechnungsprüfung
-          </VideoBackgroundHero.TopLabel>
-          <VideoBackgroundHero.Headline>
+          </BackgroundHero.TopLabel>
+          <BackgroundHero.Headline>
             Bestellung, Wareneingang,{" "}
-            <VideoBackgroundHero.Highlight>
-              Rechnung
-            </VideoBackgroundHero.Highlight>
+            <BackgroundHero.Highlight>Rechnung</BackgroundHero.Highlight>
             <br />– automatisch abgeglichen
-          </VideoBackgroundHero.Headline>
-          <VideoBackgroundHero.Description>
+          </BackgroundHero.Headline>
+          <BackgroundHero.Description>
             n8n erkennt Abweichungen, routet Ausnahmen intelligent und
             beschleunigt die Freigabe um bis zu 95%. Keine manuellen Vergleiche,
             keine verpassten Skonti.
-          </VideoBackgroundHero.Description>
-          <VideoBackgroundHero.CallToAction>
+          </BackgroundHero.Description>
+          <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
-          </VideoBackgroundHero.CallToAction>
-          <VideoBackgroundHero.Stats>
+          </BackgroundHero.CallToAction>
+          <BackgroundHero.Stats>
             {stats.map((stat, index) => (
-              <VideoBackgroundHero.Stat
+              <BackgroundHero.Stat
                 key={stat.label}
                 value={stat.value}
                 suffix={stat.suffix}
@@ -90,8 +93,8 @@ export default function Page() {
                 index={index}
               />
             ))}
-          </VideoBackgroundHero.Stats>
-        </VideoBackgroundHero>
+          </BackgroundHero.Stats>
+        </BackgroundHero>
       </ContentWrapper>
 
       {/* Client Logos */}
@@ -118,7 +121,7 @@ export default function Page() {
               value={stat.value}
               suffix={stat.valueSuffix}
               subtitle={stat.label}
-              variant="danger"
+              variant="default"
             />
             // <SimpleCard
             //   key={stat.label}
@@ -176,7 +179,7 @@ export default function Page() {
         <CardShowcase>
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/invoice/data-extraction.webp"
+              src="/images/light-2156209.jpg"
               alt="OCR Datenextraktion"
             />
             <CardShowcase.Content>

@@ -64,7 +64,7 @@ interface TopLabelProps {
 VideoBackgroundHero.TopLabel = function TopLabel({ children }: TopLabelProps) {
   return (
     <AnimatedTopLabel>
-      <span className="inline-block px-6 py-2 bg-primary-300 backdrop-blur-sm rounded-full text-white font-semibold text-sm">
+      <span className="inline-block px-6 py-2 bg-secondary-400 backdrop-blur-sm rounded-full text-primary-900 font-semibold text-sm">
         {children}
       </span>
     </AnimatedTopLabel>
@@ -99,7 +99,7 @@ VideoBackgroundHero.Highlight = function Highlight({
   return (
     <AnimatedHighlight
       delay={delay}
-      className="bg-gradient-to-r from-secondary-500  to-secondary-800 bg-clip-text text-transparent"
+      className="bg-gradient-to-r from-secondary-500  to-primary-800 bg-clip-text text-transparent"
     >
       {children}
     </AnimatedHighlight>
@@ -167,7 +167,7 @@ VideoBackgroundHero.Stat = function Stat({
   prefix = "",
   suffix = "",
   label,
-  color = "text-secondary-500",
+  color = "text-primary-500",
   index = 0,
 }: StatProps) {
   return (

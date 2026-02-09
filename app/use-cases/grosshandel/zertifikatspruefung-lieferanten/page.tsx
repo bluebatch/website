@@ -3,7 +3,7 @@ import Image from "next/image";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import type { PageConfig } from "@/lib/get-subpages";
-import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
+import BackgroundHero from "@/components/hero-components/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/simple-grid";
 import SimpleCard, { SimpleCardFooter } from "@/components/cards/simple-card";
@@ -23,19 +23,24 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Zertifikatsprüfung Lieferanten – Großhandel",
+  title: "Zertifikatsprüfung Lieferanten – Großhandel | BlueBatch",
   description:
-    "Wie bluebatch Großhändlern hilft, Lieferantenzertifikate automatisch zu prüfen.",
+    "Wie BlueBatch Großhändlern hilft, Lieferantenzertifikate automatisch zu prüfen und Compliance sicherzustellen.",
   openGraph: {
-    title: "Zertifikatsprüfung Lieferanten – Großhandel",
+    title: "Zertifikatsprüfung Lieferanten – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch Großhändlern hilft, Lieferantenzertifikate automatisch zu prüfen.",
+      "ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Zertifikatsprüfung" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zertifikatsprüfung Lieferanten – Großhandel",
+    title: "Zertifikatsprüfung Lieferanten – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch Großhändlern hilft, Lieferantenzertifikate automatisch zu prüfen.",
+      "ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -49,34 +54,34 @@ export default function Page() {
   return (
     <>
       <ContentWrapper isFirstSection noPadding>
-        <VideoBackgroundHero
-          videoSrc="/videos/ki_workflow.mp4"
+        <BackgroundHero
+          imageSrc="/images/test4.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
-          <VideoBackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>
             Zertifikatsprüfung
-          </VideoBackgroundHero.TopLabel>
-          <VideoBackgroundHero.Headline>
+          </BackgroundHero.TopLabel>
+          <BackgroundHero.Headline>
             Lieferanten&shy;zertifikate{" "}
-            <VideoBackgroundHero.Highlight>
+            <BackgroundHero.Highlight>
               automatisch
-            </VideoBackgroundHero.Highlight>
+            </BackgroundHero.Highlight>
             <br />
             prüfen und überwachen
-          </VideoBackgroundHero.Headline>
-          <VideoBackgroundHero.Description>
+          </BackgroundHero.Headline>
+          <BackgroundHero.Description>
             ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. n8n
             überwacht Ablaufdaten, sendet Erinnerungen und validiert gegen
             Akkreditierungsstellen. Nie wieder abgelaufene Zertifikate
             übersehen.
-          </VideoBackgroundHero.Description>
-          <VideoBackgroundHero.CallToAction>
+          </BackgroundHero.Description>
+          <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Compliance-Check anfragen</ContactButton>
-          </VideoBackgroundHero.CallToAction>
-          <VideoBackgroundHero.Stats>
+          </BackgroundHero.CallToAction>
+          <BackgroundHero.Stats>
             {stats.map((stat, index) => (
-              <VideoBackgroundHero.Stat
+              <BackgroundHero.Stat
                 key={stat.label}
                 value={stat.value}
                 suffix={stat.suffix}
@@ -84,8 +89,8 @@ export default function Page() {
                 index={index}
               />
             ))}
-          </VideoBackgroundHero.Stats>
-        </VideoBackgroundHero>
+          </BackgroundHero.Stats>
+        </BackgroundHero>
       </ContentWrapper>
 
       <ContentWrapper>
@@ -138,7 +143,7 @@ export default function Page() {
         <CardShowcase>
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/invoice/data-extraction.webp"
+              src="/images/clean.jpg"
               alt="Zertifikatserfassung"
             />
             <CardShowcase.Content>
@@ -155,7 +160,7 @@ export default function Page() {
 
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/validation-check.png"
+              src="/images/signs-1638668.jpg"
               alt="Validierung"
             />
             <CardShowcase.Content>
@@ -170,7 +175,7 @@ export default function Page() {
 
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/expiry-monitoring.png"
+              src="/images/technology-1587673.jpg"
               alt="Ablaufüberwachung"
             />
             <CardShowcase.Content>
@@ -185,7 +190,7 @@ export default function Page() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/compliance-dashboard.png"
+              src="/images/thought-3216768.jpg"
               alt="Dashboard"
             />
             <CardShowcase.Content>
@@ -242,7 +247,7 @@ export default function Page() {
           </div>
           <div className="relative aspect-square">
             <Image
-              src="/images/escalation-workflow.png"
+              src="/images/doors-1767562.jpg"
               alt="Eskalationsworkflow"
               fill
               className="object-cover rounded-lg shadow-lg"

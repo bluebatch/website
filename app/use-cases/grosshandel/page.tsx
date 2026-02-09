@@ -19,19 +19,31 @@ import Customer from "@/components/customer/customer";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 
 export const metadata: Metadata = {
-  title: "Großhandel – Use Cases",
+  title: "Großhandel – Use Cases | BlueBatch",
   description:
-    "Wie bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+    "Wie BlueBatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
   openGraph: {
-    title: "Großhandel – Use Cases",
+    title: "Großhandel – BlueBatch Use Cases",
     description:
-      "Wie bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+      "Wie BlueBatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [
+      {
+        url: "/images/cover-fb.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BlueBatch Großhandel",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Großhandel – Use Cases",
+    title: "Großhandel – BlueBatch Use Cases",
     description:
-      "Wie bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+      "Wie BlueBatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -41,49 +53,49 @@ const useCases = [
     title: "Auftragserfassung",
     description:
       "Bestellungen aus E-Mails, PDFs, Faxen und Portalen automatisch erfassen. KI extrahiert alle Daten, validiert gegen ERP und Lager – von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.",
-    image: "/images/order-processing.png",
+    image: "/images/test5.jpg",
   },
   {
     slug: "bestellabwicklung",
     title: "Bestellabwicklung",
     description:
       "Von der Bestellung zur Auslieferung – vollautomatisch. Validierung, Lager-Routing, Kommissionierung und Versand orchestriert durch n8n. 80-90% schnellere Bearbeitung.",
-    image: "/images/warehouse-picking.png",
+    image: "/images/computer-3368242.jpg",
   },
   {
     slug: "lagerverwaltung",
     title: "Lagerverwaltung",
     description:
       "Echtzeit-Bestandssynchronisation über alle Lager und Kanäle. KI-basierte Bedarfsprognosen lösen automatisch Nachbestellungen aus. Nie wieder Fehlbestand oder Überbestand.",
-    image: "/images/demand-forecast.png",
+    image: "/images/sw.jpg",
   },
   {
     slug: "invoice-bot",
     title: "Invoice-Bot",
     description:
       "Eingangsrechnungen automatisch erfassen, prüfen und zur Freigabe weiterleiten. KI extrahiert Beträge, Steuer und Metadaten – 80% weniger manueller Aufwand.",
-    image: "/images/invoice.png",
+    image: "/images/invoice.jpg",
   },
   {
     slug: "3-wege-rechnungspruefung",
     title: "3-Wege-Rechnungsprüfung",
     description:
       "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung. Toleranzregeln filtern relevante Abweichungen, Exception Routing bringt Ausnahmen zu den richtigen Freigebern.",
-    image: "/images/invoice/3-way-matching.png",
+    image: "/images/neonbrand-LUgHXvLe_kM-unsplash.jpg",
   },
   {
     slug: "zertifikatspruefung-lieferanten",
     title: "Zertifikatsprüfung Lieferanten",
     description:
       "ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. n8n überwacht Ablaufdaten, sendet Erinnerungen und validiert gegen Akkreditierungsstellen.",
-    image: "/images/compliance-dashboard.png",
+    image: "/images/test4.jpg",
   },
   {
     slug: "angebots-bot",
     title: "Angebots-Bot",
     description:
       "Von der Kundenanfrage zum professionellen Angebot in Minuten. Automatische Preisabfrage, PDF-Generierung und Follow-up – 21x höhere Qualifizierungsrate.",
-    image: "/images/quote-bot.png",
+    image: "/images/calculator-178127.jpg",
   },
 ];
 
@@ -110,7 +122,7 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/order-processing.png" type="image" />
+            <Hero2ColumnImage src="/images/aaron-burden-AXqMy8MSSdk-unsplash.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>

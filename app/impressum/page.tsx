@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
+
+export const metadata: Metadata = {
+  title: "Impressum – BlueBatch",
+  description: "Impressum und rechtliche Informationen zu BlueBatch.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function Page() {
   return (

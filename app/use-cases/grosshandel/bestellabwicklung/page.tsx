@@ -42,19 +42,24 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Automatisierte Bestellabwicklung – Großhandel",
+  title: "Bestellabwicklung – Großhandel | BlueBatch",
   description:
-    "Wie bluebatch die Bestellabwicklung im Großhandel automatisiert – von der Erfassung bis zur Auslieferung.",
+    "Wie BlueBatch die Bestellabwicklung im Großhandel automatisiert – von der Erfassung bis zur Auslieferung.",
   openGraph: {
-    title: "Automatisierte Bestellabwicklung – Großhandel",
+    title: "Bestellabwicklung – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch die Bestellabwicklung im Großhandel automatisiert.",
+      "Von der Bestellung zur Auslieferung – vollautomatisch. 80-90% schnellere Bearbeitung.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Bestellabwicklung" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Automatisierte Bestellabwicklung – Großhandel",
+    title: "Bestellabwicklung – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch die Bestellabwicklung im Großhandel automatisiert.",
+      "Von der Bestellung zur Auslieferung – vollautomatisch. 80-90% schnellere Bearbeitung.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -81,7 +86,7 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/order-processing.png" type="image" />
+            <Hero2ColumnImage src="/images/computer-3368242.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
@@ -90,7 +95,7 @@ export default function Page() {
         <SimpleGrid cols={2} className="items-center gap-12">
           <div className="relative aspect-video">
             <Image
-              src="/images/manual-order-processing.png"
+              src="/images/domore.jpg"
               alt="Manuelle Bestellabwicklung"
               fill
               className="object-cover rounded-lg shadow-lg"
@@ -128,7 +133,7 @@ export default function Page() {
         <CardShowcase>
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/validation-check.png"
+              src="/images/exhibition-1659447.jpg"
               alt="Auftragsvalidierung"
             />
             <CardShowcase.Content>
@@ -145,7 +150,7 @@ export default function Page() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/warehouse-picking.png"
+              src="/images/process.jpg"
               alt="Kommissionierung"
             />
             <CardShowcase.Content>
@@ -160,7 +165,7 @@ export default function Page() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/shipping-automation.png"
+              src="/images/street-map-2679271.jpg"
               alt="Versandautomatisierung"
             />
             <CardShowcase.Content>
@@ -174,7 +179,7 @@ export default function Page() {
 
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/customer-notification.png"
+              src="/images/times-square-790792.jpg"
               alt="Kundenkommunikation"
             />
             <CardShowcase.Content>
@@ -214,10 +219,9 @@ export default function Page() {
               <ComparisonListItem>2-3 Tage Durchlaufzeit</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              <span className="text-xl font-bold text-red-700">
+              
                 Gesamt: ~720.000 €/Jahr (nur Fehler)
-              </span>
-            </ComparisonFooter>
+              </ComparisonFooter>
           </BeforeCard>
 
           <AfterCard>
@@ -229,10 +233,9 @@ export default function Page() {
               <ComparisonListItem>2-4 Stunden Durchlaufzeit</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              <span className="text-xl font-bold text-green-700">
+              
                 Gesamt: ~110.000 €/Jahr
-              </span>
-            </ComparisonFooter>
+              </ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
 

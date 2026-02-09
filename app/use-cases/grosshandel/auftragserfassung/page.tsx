@@ -3,7 +3,7 @@ import Image from "next/image";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import type { PageConfig } from "@/lib/get-subpages";
-import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
+import BackgroundHero from "@/components/hero-components/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
@@ -40,19 +40,24 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Auftragserfassung – Großhandel",
+  title: "Auftragserfassung – Großhandel | BlueBatch",
   description:
-    "Wie bluebatch die Auftragserfassung im Großhandel automatisiert.",
+    "Wie BlueBatch die Auftragserfassung im Großhandel automatisiert. Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen.",
   openGraph: {
-    title: "Auftragserfassung – Großhandel",
+    title: "Auftragserfassung – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch die Auftragserfassung im Großhandel automatisiert.",
+      "Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Auftragserfassung" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Auftragserfassung – Großhandel",
+    title: "Auftragserfassung – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch die Auftragserfassung im Großhandel automatisiert.",
+      "Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -66,33 +71,33 @@ export default function Page() {
   return (
     <>
       <ContentWrapper isFirstSection noPadding>
-        <VideoBackgroundHero
-          videoSrc="/videos/ki_workflow.mp4"
+        <BackgroundHero
+          imageSrc="/images/test5.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
-          <VideoBackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>
             Auftragserfassung
-          </VideoBackgroundHero.TopLabel>
-          <VideoBackgroundHero.Headline>
+          </BackgroundHero.TopLabel>
+          <BackgroundHero.Headline>
             Bestellungen aus{" "}
-            <VideoBackgroundHero.Highlight>
+            <BackgroundHero.Highlight>
               allen Kanälen
-            </VideoBackgroundHero.Highlight>
+            </BackgroundHero.Highlight>
             <br />
             automatisch erfassen
-          </VideoBackgroundHero.Headline>
-          <VideoBackgroundHero.Description>
+          </BackgroundHero.Headline>
+          <BackgroundHero.Description>
             E-Mail, PDF, Fax, EDI oder Portal – n8n extrahiert alle Daten,
             validiert gegen ERP und Lager, erstellt den Auftrag. Von 2-3 Tagen
             auf 1-2 Stunden Bearbeitungszeit.
-          </VideoBackgroundHero.Description>
-          <VideoBackgroundHero.CallToAction>
+          </BackgroundHero.Description>
+          <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
-          </VideoBackgroundHero.CallToAction>
-          <VideoBackgroundHero.Stats>
+          </BackgroundHero.CallToAction>
+          <BackgroundHero.Stats>
             {stats.map((stat, index) => (
-              <VideoBackgroundHero.Stat
+              <BackgroundHero.Stat
                 key={stat.label}
                 value={stat.value}
                 suffix={stat.suffix}
@@ -100,8 +105,8 @@ export default function Page() {
                 index={index}
               />
             ))}
-          </VideoBackgroundHero.Stats>
-        </VideoBackgroundHero>
+          </BackgroundHero.Stats>
+        </BackgroundHero>
       </ContentWrapper>
 
       <ContentWrapper>
@@ -195,7 +200,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/invoice/data-extraction.webp"
+                  src="/images/handshake-3382503.jpg"
                   alt="E-Mail Extraktion"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -220,7 +225,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/edi-integration.png"
+                  src="/images/road-166543.jpg"
                   alt="EDI Integration"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -247,7 +252,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/web-portal.png"
+                  src="/images/savings-2789112.jpg"
                   alt="Web Portal"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -276,7 +281,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/legacy-channels.png"
+                  src="/images/map-455769.jpg"
                   alt="Legacy Kanäle"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -315,11 +320,7 @@ export default function Page() {
                 Opportunitätskosten: ~200.000 €
               </ComparisonListItem>
             </ComparisonList>
-            <ComparisonFooter>
-              <span className="text-xl font-bold text-red-700">
-                Gesamt: ~1.400.000 €/Jahr
-              </span>
-            </ComparisonFooter>
+            <ComparisonFooter>Gesamt: ~1.400.000 €/Jahr</ComparisonFooter>
           </BeforeCard>
 
           <AfterCard>
@@ -335,21 +336,18 @@ export default function Page() {
                 Automatisierungskosten: 30.000 €/Jahr
               </ComparisonListItem>
             </ComparisonList>
-            <ComparisonFooter>
-              <span className="text-xl font-bold text-green-700">
-                Gesamt: ~285.000 €/Jahr
-              </span>
-            </ComparisonFooter>
+            <ComparisonFooter>Gesamt: ~285.000 €/Jahr</ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
+
         <SavingsCard>
           <SavingsBadge>ROI im ersten Jahr: 184%</SavingsBadge>
           <SavingsItems>
-            <SavingsItem label="Jährliche Ersparnis" highlight>
-              1.115.000 €
-            </SavingsItem>
+            <SavingsItem label="Jährliche Ersparnis">1.115.000 €</SavingsItem>
             <SavingsItem label="Amortisation">~1 Monat</SavingsItem>
-            <SavingsItem label="ROI fortlaufend">290%</SavingsItem>
+            <SavingsItem label="ROI fortlaufend" highlight>
+              290%
+            </SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>

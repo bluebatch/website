@@ -38,19 +38,24 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Angebots-Bot – Großhandel",
+  title: "Angebots-Bot – Großhandel | BlueBatch",
   description:
-    "Wie bluebatch Großhändlern hilft, Angebote automatisch zu erstellen und zu versenden.",
+    "Wie BlueBatch Großhändlern hilft, Angebote automatisch zu erstellen und zu versenden. 21x höhere Qualifizierungsrate.",
   openGraph: {
-    title: "Angebots-Bot – Großhandel",
+    title: "Angebots-Bot – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch Großhändlern hilft, Angebote automatisch zu erstellen.",
+      "Von der Kundenanfrage zum professionellen Angebot in Minuten. 21x höhere Qualifizierungsrate.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Angebots-Bot" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angebots-Bot – Großhandel",
+    title: "Angebots-Bot – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch Großhändlern hilft, Angebote automatisch zu erstellen.",
+      "Von der Kundenanfrage zum professionellen Angebot in Minuten. 21x höhere Qualifizierungsrate.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -112,7 +117,7 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/quote-bot.png" type="image" />
+            <Hero2ColumnImage src="/images/calculator-178127.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
@@ -205,7 +210,7 @@ export default function Page() {
           </div>
           <div className="relative aspect-video">
             <Image
-              src="/images/sales-team.jpg"
+              src="/images/businessman-3075837.jpg"
               alt="Sales Team Entlastung"
               fill
               className="object-cover rounded-lg shadow-lg"

@@ -28,7 +28,7 @@ function XIcon() {
 function CheckIcon() {
   return (
     <svg
-      className="w-5 h-5 text-green-500 flex-shrink-0"
+      className="w-5 h-5 text-green-400 flex-shrink-0"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -42,14 +42,16 @@ function CheckIcon() {
 // Styles
 const cardStyles = {
   before: {
-    card: "bg-red-50 border-red-200",
-    headline: "text-red-700",
-    footer: "border-red-200",
+    card: "bg-gray-50 border-gray-200",
+    headline: "bg-red-600 text-white",
+    footer: "border-gray-200",
+    listText: "text-gray-700",
   },
   after: {
-    card: "bg-green-50 border-green-200",
-    headline: "text-green-700",
-    footer: "border-green-200",
+    card: "bg-primary-800 border-primary-700",
+    headline: "bg-green-600 text-white",
+    footer: "border-green-400 text-white",
+    listText: "text-white",
   },
 };
 
@@ -64,11 +66,11 @@ export function ComparisonHeadline({
   const type = useContext(CardTypeContext);
   const headlineClass = cardStyles[type].headline;
   return (
-    <h3
-      className={`text-xl md:text-2xl font-bold ${headlineClass} ${className}`}
+    <span
+      className={`inline-block px-4 py-2 rounded-md text-lg md:text-xl font-bold ${headlineClass} ${className}`}
     >
       {children}
-    </h3>
+    </span>
   );
 }
 
@@ -91,8 +93,9 @@ export function ComparisonListItem({
 }) {
   const type = useContext(CardTypeContext);
   const Icon = type === "before" ? XIcon : CheckIcon;
+  const textClass = cardStyles[type].listText;
   return (
-    <li className={`flex items-start gap-3 text-gray-700 ${className}`}>
+    <li className={`flex items-start gap-3 ${textClass} ${className}`}>
       <span className="mt-0.5">
         <Icon />
       </span>
@@ -111,7 +114,9 @@ export function ComparisonFooter({
   const type = useContext(CardTypeContext);
   const footerClass = cardStyles[type].footer;
   return (
-    <div className={`mt-4 pt-4 border-t ${footerClass} ${className}`}>
+    <div
+      className={`mt-4 pt-4 border-t text-xl font-bold ${footerClass} ${className}`}
+    >
       {children}
     </div>
   );
@@ -134,7 +139,7 @@ export function BeforeCard({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
-        className={`border rounded-lg p-6 shadow-md ${styles.card} ${className}`}
+        className={`border p-6 shadow-md ${styles.card} ${className}`}
       >
         {children}
       </motion.div>
@@ -158,7 +163,7 @@ export function AfterCard({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
-        className={`border rounded-lg p-6 shadow-md ${styles.card} ${className}`}
+        className={`border p-6 shadow-md ${styles.card} ${className}`}
       >
         {children}
       </motion.div>

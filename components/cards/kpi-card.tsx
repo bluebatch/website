@@ -57,10 +57,10 @@ function AnimatedNumber({
 const variantStyles = {
   default: {
     card: "bg-white border-primary-300",
-    value: "text-secondary-500",
+    value: "text-secondary-700",
   },
   danger: {
-    card: "bg-red-50 border-red-200",
+    card: "bg-red-50 border-red-600",
     value: "text-red-600",
   },
   success: {
@@ -85,7 +85,7 @@ export default function KpiCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
-      className={`border flex flex-col items-center justify-center text-center p-6 shadow-md rounded-lg ${styles.card} ${className}`}
+      className={`border flex flex-col items-center justify-center text-center p-6 shadow-md ${styles.card} ${className}`}
     >
       <div className={`text-4xl md:text-5xl font-bold mb-2 ${styles.value}`}>
         <AnimatedNumber value={value} prefix={prefix} suffix={suffix} />

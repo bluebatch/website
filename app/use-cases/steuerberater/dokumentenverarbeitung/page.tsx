@@ -3,7 +3,7 @@ import Image from "next/image";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import type { PageConfig } from "@/lib/get-subpages";
-import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
+import BackgroundHero from "@/components/hero-components/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/simple-grid";
 import ComparisonCard, {
@@ -39,19 +39,24 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Dokumentenverarbeitung – Steuerberater",
+  title: "Dokumentenverarbeitung – Steuerberater | BlueBatch",
   description:
-    "Wie bluebatch Steuerberatern hilft, Belege und Dokumente automatisch zu verarbeiten.",
+    "Wie BlueBatch Steuerberatern hilft, Belege und Dokumente automatisch zu verarbeiten. 70% weniger manuelle Erfassung.",
   openGraph: {
-    title: "Dokumentenverarbeitung – Steuerberater",
+    title: "Dokumentenverarbeitung – Steuerberater | BlueBatch",
     description:
-      "Wie bluebatch Steuerberatern hilft, Belege und Dokumente automatisch zu verarbeiten.",
+      "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Dokumentenverarbeitung" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dokumentenverarbeitung – Steuerberater",
+    title: "Dokumentenverarbeitung – Steuerberater | BlueBatch",
     description:
-      "Wie bluebatch Steuerberatern hilft, Belege und Dokumente automatisch zu verarbeiten.",
+      "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -65,31 +70,31 @@ export default function Page() {
   return (
     <>
       <ContentWrapper isFirstSection noPadding>
-        <VideoBackgroundHero
-          videoSrc="/videos/ki_workflow.mp4"
+        <BackgroundHero
+          imageSrc="/images/ml.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
-          <VideoBackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>
             Dokumentenverarbeitung
-          </VideoBackgroundHero.TopLabel>
-          <VideoBackgroundHero.Headline>
+          </BackgroundHero.TopLabel>
+          <BackgroundHero.Headline>
             Belege{" "}
-            <VideoBackgroundHero.Highlight>
+            <BackgroundHero.Highlight>
               automatisch
-            </VideoBackgroundHero.Highlight>{" "}
+            </BackgroundHero.Highlight>{" "}
             erkennen und buchen
-          </VideoBackgroundHero.Headline>
-          <VideoBackgroundHero.Description>
+          </BackgroundHero.Headline>
+          <BackgroundHero.Description>
             KI-gestützte Klassifizierung, Datenextraktion und DATEV-Integration.
             Von 3-4 Minuten auf 20 Sekunden pro Beleg – GoBD-konform.
-          </VideoBackgroundHero.Description>
-          <VideoBackgroundHero.CallToAction>
+          </BackgroundHero.Description>
+          <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
-          </VideoBackgroundHero.CallToAction>
-          <VideoBackgroundHero.Stats>
+          </BackgroundHero.CallToAction>
+          <BackgroundHero.Stats>
             {stats.map((stat, index) => (
-              <VideoBackgroundHero.Stat
+              <BackgroundHero.Stat
                 key={stat.label}
                 value={stat.value}
                 suffix={stat.suffix}
@@ -97,8 +102,8 @@ export default function Page() {
                 index={index}
               />
             ))}
-          </VideoBackgroundHero.Stats>
-        </VideoBackgroundHero>
+          </BackgroundHero.Stats>
+        </BackgroundHero>
       </ContentWrapper>
 
       <ContentWrapper>
@@ -188,7 +193,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/invoice/data-extraction.webp"
+                  src="/images/business-3343885.jpg"
                   alt="Rechnungsextraktion"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -213,7 +218,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/edi-integration.png"
+                  src="/images/water-3355303.jpg"
                   alt="Kontoauszug-Verarbeitung"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -238,7 +243,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/web-portal.png"
+                  src="/images/website-3374825.jpg"
                   alt="Reisekostenabrechnung"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -263,7 +268,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/legacy-channels.png"
+                  src="/images/ali-yahya-dybKaTp3mu4-unsplash.jpg"
                   alt="Sonderfälle"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -297,10 +302,9 @@ export default function Page() {
               <ComparisonListItem>5-10% Fehlerquote bei Klassifizierung</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              <span className="text-xl font-bold text-red-700">
+              
                 Gesamt: ~112.500 €/Jahr
-              </span>
-            </ComparisonFooter>
+              </ComparisonFooter>
           </BeforeCard>
 
           <AfterCard>
@@ -311,10 +315,9 @@ export default function Page() {
               <ComparisonListItem>1-3% Fehlerquote nach Training</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              <span className="text-xl font-bold text-green-700">
+              
                 Gesamt: ~37.500 €/Jahr
-              </span>
-            </ComparisonFooter>
+              </ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
 

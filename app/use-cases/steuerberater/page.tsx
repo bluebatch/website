@@ -19,19 +19,31 @@ import Customer from "@/components/customer/customer";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 
 export const metadata: Metadata = {
-  title: "Steuerberater – Use Cases",
+  title: "Steuerberater – Use Cases | BlueBatch",
   description:
-    "Wie bluebatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
+    "Wie BlueBatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
   openGraph: {
-    title: "Steuerberater – Use Cases",
+    title: "Steuerberater – BlueBatch Use Cases",
     description:
-      "Wie bluebatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
+      "Wie BlueBatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [
+      {
+        url: "/images/cover-fb.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BlueBatch Steuerberater",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steuerberater – Use Cases",
+    title: "Steuerberater – BlueBatch Use Cases",
     description:
-      "Wie bluebatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
+      "Wie BlueBatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -41,21 +53,21 @@ const useCases = [
     title: "Dokumentenverarbeitung",
     description:
       "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren. KI extrahiert relevante Daten und überträgt sie strukturiert – 70% weniger manuelle Erfassung.",
-    image: "/images/invoice/data-extraction.webp",
+    image: "/images/ml.jpg",
   },
   {
     slug: "mandantenkommunikation",
     title: "Mandantenkommunikation",
     description:
       "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen. 24/7 Erreichbarkeit, 70% weniger Routine-E-Mails.",
-    image: "/images/web-portal.png",
+    image: "/images/test3.jpg",
   },
   {
     slug: "datev-jira-task-orchestration",
     title: "DATEV-Jira Orchestration",
     description:
       "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Aufgabenerstellung, Fristenüberwachung und Eskalations-Workflows – 99,9% Fristeneinhaltung.",
-    image: "/images/edi-integration.png",
+    image: "/images/test1.jpg",
   },
 ];
 
@@ -82,7 +94,7 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/invoice/data-extraction.webp" type="image" />
+            <Hero2ColumnImage src="/images/annie-spratt-QckxruozjRg-unsplash.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>

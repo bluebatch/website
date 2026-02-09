@@ -1,6 +1,14 @@
 import { Metadata } from "next";
 import ContentWrapper from "@/components/content-wrapper";
-import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
+import Hero2Column, {
+  Hero2ColumnTextColumn,
+  Hero2ColumnMediaColumn,
+  Hero2ColumnPreHeadline,
+  Hero2ColumnHeadline,
+  Hero2ColumnDescription,
+  Hero2ColumnCallToAction,
+  Hero2ColumnImage,
+} from "@/components/hero-components/hero-2-column";
 import SimpleGrid from "@/components/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
 import PhaseCard, {
@@ -32,13 +40,30 @@ export const metadata: Metadata = {
     "KI Implementierung",
     "Prozessautomatisierung",
   ],
+  openGraph: {
+    title: "Unser 6-Phasen-Prozess – BlueBatch",
+    description:
+      "Mit deutscher Engineering-Präzision und bewährtem Framework automatisieren wir Ihre Prozesse.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [
+      {
+        url: "/images/cover-fb.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BlueBatch Prozess",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Unser 6-Phasen-Prozess – BlueBatch",
+    description:
+      "Mit deutscher Engineering-Präzision und bewährtem Framework automatisieren wir Ihre Prozesse.",
+    images: ["/images/cover-fb.jpg"],
+  },
 };
-
-const stats = [
-  { value: 98, suffix: "%", label: "On-Time Delivery" },
-  { value: 200, suffix: "+", label: "Erfolgreiche Implementierungen" },
-  { value: 100, suffix: "%", label: "Datensouveränität (In-House)" },
-];
 
 const principles = [
   {
@@ -180,44 +205,28 @@ export default function HowWeDoPage() {
   return (
     <>
       {/* Hero Section */}
-      <ContentWrapper isFirstSection noPadding>
-        <VideoBackgroundHero
-          videoSrc="/videos/ki_workflow.mp4"
-          opacityBackground="white"
-          overlayOpacity={0.7}
-        >
-          <VideoBackgroundHero.TopLabel>
-            Systematic Excellence
-          </VideoBackgroundHero.TopLabel>
-          <VideoBackgroundHero.Headline>
-            Wo Engineering auf{" "}
-            <VideoBackgroundHero.Highlight>
-              Innovation
-            </VideoBackgroundHero.Highlight>{" "}
-            trifft.
-          </VideoBackgroundHero.Headline>
-          <VideoBackgroundHero.Description>
-            Die meisten Automatisierungsprojekte scheitern an der Planung, nicht
-            an der Technik. Wir bringen deutsche Engineering-Präzision in Ihre
-            Backoffice-Prozesse.
-          </VideoBackgroundHero.Description>
-          <VideoBackgroundHero.CallToAction>
-            <ContactButton icon="calendar" size="lg">
-              Den Blueprint anfordern
-            </ContactButton>
-          </VideoBackgroundHero.CallToAction>
-          <VideoBackgroundHero.Stats>
-            {stats.map((stat, index) => (
-              <VideoBackgroundHero.Stat
-                key={stat.label}
-                value={stat.value}
-                suffix={stat.suffix}
-                label={stat.label}
-                index={index}
-              />
-            ))}
-          </VideoBackgroundHero.Stats>
-        </VideoBackgroundHero>
+      <ContentWrapper isFirstSection>
+        <Hero2Column>
+          <Hero2ColumnTextColumn>
+            <Hero2ColumnPreHeadline>Systematic Excellence</Hero2ColumnPreHeadline>
+            <Hero2ColumnHeadline>
+              Wo Engineering auf Innovation trifft
+            </Hero2ColumnHeadline>
+            <Hero2ColumnDescription>
+              Die meisten Automatisierungsprojekte scheitern an der Planung, nicht
+              an der Technik. Wir bringen deutsche Engineering-Präzision in Ihre
+              Backoffice-Prozesse.
+            </Hero2ColumnDescription>
+            <Hero2ColumnCallToAction>
+              <ContactButton icon="calendar" size="lg">
+                Den Blueprint anfordern
+              </ContactButton>
+            </Hero2ColumnCallToAction>
+          </Hero2ColumnTextColumn>
+          <Hero2ColumnMediaColumn>
+            <Hero2ColumnImage src="/images/austin-distel-pjWbUrkUefU-unsplash.jpg" type="image" />
+          </Hero2ColumnMediaColumn>
+        </Hero2Column>
       </ContentWrapper>
       {/* German Engineering Principles */}
       <ContentWrapper background="bg-gray-50">

@@ -5,6 +5,7 @@ interface Logo {
   alt: string;
   width?: number;
   height?: number;
+  scale?: "xs" | "sm" | "md" | "lg";
 }
 
 interface LogoGridProps {
@@ -34,6 +35,14 @@ export default function LogoGrid({ logos, className = "" }: LogoGridProps) {
           !desktopLastInRow ? "md:border-r" : "md:border-r-0",
         ].join(" ");
 
+        const scaleClasses = {
+          xs: "h-6",
+          sm: "h-8",
+          md: "h-10",
+          lg: "h-12",
+        };
+        const logoScale = scaleClasses[logo.scale || "lg"];
+
         return (
           <div
             key={index}
@@ -44,7 +53,7 @@ export default function LogoGrid({ logos, className = "" }: LogoGridProps) {
               alt={logo.alt}
               width={logo.width || 120}
               height={logo.height || 60}
-              className="h-12 w-auto object-contain"
+              className={`${logoScale} w-auto object-contain`}
             />
           </div>
         );

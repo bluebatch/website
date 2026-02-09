@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
-import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
+import BackgroundHero from "@/components/hero-components/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
@@ -37,12 +37,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
+    images: [
+      {
+        url: "/images/cover-fb.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BlueBatch – Enterprise AI-Automation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "BlueBatch – Enterprise AI-Automation",
     description:
       "Skalieren Sie Ihren Umsatz, nicht Ihren Headcount. AI-Workflows live in nur 5 Tagen.",
+    images: ["/images/cover-fb.jpg"],
   },
   robots: {
     index: true,
@@ -55,40 +64,46 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <ContentWrapper isFirstSection noPadding>
-        <VideoBackgroundHero
-          videoSrc="/videos/ki_workflow.mp4"
+        <BackgroundHero
+          videoSrc="/videos/Video_of_Person_Drawing_Workflows.mp4"
           overlayOpacity={0.85}
           opacityBackground="white"
         >
-          <VideoBackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>
             Enterprise AI-Automation
-          </VideoBackgroundHero.TopLabel>
-          <VideoBackgroundHero.Headline>
+          </BackgroundHero.TopLabel>
+          <BackgroundHero.Headline>
             Skalieren Sie Ihren Umsatz,
             <br />
             nicht Ihren{" "}
-            <VideoBackgroundHero.Highlight>
-              Headcount
-            </VideoBackgroundHero.Highlight>
-          </VideoBackgroundHero.Headline>
-          <VideoBackgroundHero.Description>
+            <BackgroundHero.Highlight>Headcount</BackgroundHero.Highlight>
+          </BackgroundHero.Headline>
+          <BackgroundHero.Description>
             Wir beenden die Fehlallokation von Humankapital. BlueBatch
             automatisiert Ihre manuellen Backoffice-Prozesse mit AI-Workflows
             auf Enterprise-Niveau – live in nur 5 Tagen.
-          </VideoBackgroundHero.Description>
-          <VideoBackgroundHero.CallToAction>
+          </BackgroundHero.Description>
+          <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
-          </VideoBackgroundHero.CallToAction>
-          <VideoBackgroundHero.Stats>
-            <VideoBackgroundHero.Stat value={5} suffix=" Tage" label="Time-to-Value" />
-            <VideoBackgroundHero.Stat
+          </BackgroundHero.CallToAction>
+          <BackgroundHero.Stats>
+            <BackgroundHero.Stat
+              value={5}
+              suffix=" Tage"
+              label="Time-to-Value"
+            />
+            <BackgroundHero.Stat
               value={80}
               suffix="%"
               label="Weniger manueller Aufwand"
             />
-            <VideoBackgroundHero.Stat value={24} suffix="/7" label="Automatisierung" />
-          </VideoBackgroundHero.Stats>
-        </VideoBackgroundHero>
+            <BackgroundHero.Stat
+              value={24}
+              suffix="/7"
+              label="Automatisierung"
+            />
+          </BackgroundHero.Stats>
+        </BackgroundHero>
       </ContentWrapper>
 
       {/* About BlueBatch Section */}
@@ -117,7 +132,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-video">
             <Image
-              src="/images/about-automation.jpg"
+              src="/images/consulting.jpg"
               alt="AI Automation"
               fill
               className="object-cover rounded-lg shadow-lg"
@@ -372,7 +387,7 @@ export default function Home() {
         <SimpleGrid cols={2} className="items-center gap-12">
           <div className="relative aspect-video">
             <Image
-              src="/images/workflow-engineering.jpg"
+              src="/images/business-3152586.jpg"
               alt="Workflow Engineering"
               fill
               className="object-cover rounded-lg shadow-lg"
@@ -415,7 +430,7 @@ export default function Home() {
         <CardShowcase>
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/showcase-lockin.jpg"
+              src="/images/auditorium-2816353.jpg"
               alt="Kein Lock-in"
             />
             <CardShowcase.Content>
@@ -432,7 +447,7 @@ export default function Home() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/showcase-patterns.jpg"
+              src="/images/human-2944064.jpg"
               alt="Bewährte Patterns"
             />
             <CardShowcase.Content>
@@ -448,7 +463,7 @@ export default function Home() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/showcase-enterprise.jpg"
+              src="/images/ari-he-euQVngjZGSI-unsplash.jpg"
               alt="Enterprise-DNA"
             />
             <CardShowcase.Content>
@@ -464,7 +479,7 @@ export default function Home() {
 
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/showcase-managed.jpg"
+              src="/images/building-2762318.jpg"
               alt="Managed Operations"
             />
             <CardShowcase.Content>

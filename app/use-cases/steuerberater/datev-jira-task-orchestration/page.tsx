@@ -3,7 +3,7 @@ import Image from "next/image";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import type { PageConfig } from "@/lib/get-subpages";
-import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
+import BackgroundHero from "@/components/hero-components/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/simple-grid";
 import ComparisonCard, {
@@ -39,19 +39,24 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "DATEV-Jira Task Orchestration – Steuerberater",
+  title: "DATEV-Jira Task Orchestration – Steuerberater | BlueBatch",
   description:
-    "Automatisierte Aufgabenorchestrierung zwischen DATEV und Jira für Steuerkanzleien.",
+    "Automatisierte Aufgabenorchestrierung zwischen DATEV und Jira für Steuerkanzleien. 99,9% Fristeneinhaltung.",
   openGraph: {
-    title: "DATEV-Jira Task Orchestration – Steuerberater",
+    title: "DATEV-Jira Task Orchestration – Steuerberater | BlueBatch",
     description:
-      "Automatisierte Aufgabenorchestrierung zwischen DATEV und Jira für Steuerkanzleien.",
+      "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch DATEV-Jira Orchestration" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DATEV-Jira Task Orchestration – Steuerberater",
+    title: "DATEV-Jira Task Orchestration – Steuerberater | BlueBatch",
     description:
-      "Automatisierte Aufgabenorchestrierung zwischen DATEV und Jira für Steuerkanzleien.",
+      "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -65,31 +70,31 @@ export default function Page() {
   return (
     <>
       <ContentWrapper isFirstSection noPadding>
-        <VideoBackgroundHero
-          videoSrc="/videos/ki_workflow.mp4"
+        <BackgroundHero
+          imageSrc="/images/test1.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
-          <VideoBackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>
             DATEV-Jira Orchestration
-          </VideoBackgroundHero.TopLabel>
-          <VideoBackgroundHero.Headline>
+          </BackgroundHero.TopLabel>
+          <BackgroundHero.Headline>
             Aufgaben und Fristen{" "}
-            <VideoBackgroundHero.Highlight>
+            <BackgroundHero.Highlight>
               automatisch
-            </VideoBackgroundHero.Highlight>{" "}
+            </BackgroundHero.Highlight>{" "}
             synchronisieren
-          </VideoBackgroundHero.Headline>
-          <VideoBackgroundHero.Description>
+          </BackgroundHero.Headline>
+          <BackgroundHero.Description>
             Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische
             Priorisierung, Workload-Dashboards und Eskalations-Workflows.
-          </VideoBackgroundHero.Description>
-          <VideoBackgroundHero.CallToAction>
+          </BackgroundHero.Description>
+          <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Demo anfragen</ContactButton>
-          </VideoBackgroundHero.CallToAction>
-          <VideoBackgroundHero.Stats>
+          </BackgroundHero.CallToAction>
+          <BackgroundHero.Stats>
             {stats.map((stat, index) => (
-              <VideoBackgroundHero.Stat
+              <BackgroundHero.Stat
                 key={stat.label}
                 value={stat.value}
                 suffix={stat.suffix}
@@ -97,8 +102,8 @@ export default function Page() {
                 index={index}
               />
             ))}
-          </VideoBackgroundHero.Stats>
-        </VideoBackgroundHero>
+          </BackgroundHero.Stats>
+        </BackgroundHero>
       </ContentWrapper>
 
       <ContentWrapper>
@@ -186,7 +191,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/invoice/data-extraction.webp"
+                  src="/images/background-3228704.jpg"
                   alt="Synchronisation"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -211,7 +216,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/edi-integration.png"
+                  src="/images/tim-van-der-kuip-HVp2MG15y3E-unsplash.jpg"
                   alt="Fristenmanagement"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -236,7 +241,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/web-portal.png"
+                  src="/images/thought-3216768.jpg"
                   alt="Workload-Dashboard"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -261,7 +266,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/legacy-channels.png"
+                  src="/images/power-plant-344231.jpg"
                   alt="Eskalation"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -294,10 +299,9 @@ export default function Page() {
               <ComparisonListItem>30-40% Varianz in Teamauslastung</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              <span className="text-xl font-bold text-red-700">
+              
                 Zeitverlust: 1.900-2.900 Stunden/Jahr
-              </span>
-            </ComparisonFooter>
+              </ComparisonFooter>
           </BeforeCard>
 
           <AfterCard>
@@ -308,10 +312,9 @@ export default function Page() {
               <ComparisonListItem>Implementierung: 15.000-25.000 € (einmalig)</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              <span className="text-xl font-bold text-green-700">
+              
                 Einsparung: 218.000-325.000 €/Jahr
-              </span>
-            </ComparisonFooter>
+              </ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
 

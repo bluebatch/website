@@ -1,6 +1,36 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
+
+export const metadata: Metadata = {
+  title: "Use Cases – BlueBatch | Branchenlösungen für AI-Automation",
+  description:
+    "Entdecken Sie unsere Branchenlösungen für Großhandel, Steuerberater und E-Commerce. AI-Workflows für jede Branche.",
+  openGraph: {
+    title: "Use Cases – BlueBatch",
+    description:
+      "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, E-Commerce.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [
+      {
+        url: "/images/cover-fb.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BlueBatch Use Cases",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Use Cases – BlueBatch",
+    description:
+      "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, E-Commerce.",
+    images: ["/images/cover-fb.jpg"],
+  },
+};
 
 const topics = [
   {

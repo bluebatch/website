@@ -3,7 +3,7 @@ import Image from "next/image";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import type { PageConfig } from "@/lib/get-subpages";
-import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
+import BackgroundHero from "@/components/hero-components/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
@@ -29,19 +29,24 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Lagerverwaltung – Großhandel",
+  title: "Lagerverwaltung – Großhandel | BlueBatch",
   description:
-    "Wie bluebatch die Lagerverwaltung im Großhandel automatisiert – Echtzeit-Bestände und automatische Nachbestellungen.",
+    "Wie BlueBatch die Lagerverwaltung im Großhandel automatisiert – Echtzeit-Bestände und automatische Nachbestellungen.",
   openGraph: {
-    title: "Lagerverwaltung – Großhandel",
+    title: "Lagerverwaltung – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch die Lagerverwaltung im Großhandel automatisiert.",
+      "Echtzeit-Bestandssynchronisation und KI-basierte Bedarfsprognosen für automatische Nachbestellungen.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Lagerverwaltung" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lagerverwaltung – Großhandel",
+    title: "Lagerverwaltung – Großhandel | BlueBatch",
     description:
-      "Wie bluebatch die Lagerverwaltung im Großhandel automatisiert.",
+      "Echtzeit-Bestandssynchronisation und KI-basierte Bedarfsprognosen für automatische Nachbestellungen.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -90,33 +95,33 @@ export default function Page() {
   return (
     <>
       <ContentWrapper isFirstSection noPadding>
-        <VideoBackgroundHero
-          videoSrc="/videos/ki_workflow.mp4"
+        <BackgroundHero
+          imageSrc="/images/sw.jpg"
           overlayOpacity={0.85}
           opacityBackground="white"
         >
-          <VideoBackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>
             Lagerverwaltung
-          </VideoBackgroundHero.TopLabel>
-          <VideoBackgroundHero.Headline>
+          </BackgroundHero.TopLabel>
+          <BackgroundHero.Headline>
             Intelligente{" "}
-            <VideoBackgroundHero.Highlight>
+            <BackgroundHero.Highlight>
               Lagerverwaltung
-            </VideoBackgroundHero.Highlight>
+            </BackgroundHero.Highlight>
             <br />
             mit automatischer Nachbestellung
-          </VideoBackgroundHero.Headline>
-          <VideoBackgroundHero.Description>
+          </BackgroundHero.Headline>
+          <BackgroundHero.Description>
             Echtzeit-Bestandssynchronisation über alle Lager und Kanäle.
             KI-basierte Bedarfsprognosen lösen automatisch Nachbestellungen aus.
             Nie wieder Fehlbestand oder Überbestand.
-          </VideoBackgroundHero.Description>
-          <VideoBackgroundHero.CallToAction>
+          </BackgroundHero.Description>
+          <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Bestandsanalyse anfragen</ContactButton>
-          </VideoBackgroundHero.CallToAction>
-          <VideoBackgroundHero.Stats>
+          </BackgroundHero.CallToAction>
+          <BackgroundHero.Stats>
             {stats.map((stat, index) => (
-              <VideoBackgroundHero.Stat
+              <BackgroundHero.Stat
                 key={stat.label}
                 value={stat.value}
                 suffix={stat.suffix}
@@ -124,8 +129,8 @@ export default function Page() {
                 index={index}
               />
             ))}
-          </VideoBackgroundHero.Stats>
-        </VideoBackgroundHero>
+          </BackgroundHero.Stats>
+        </BackgroundHero>
       </ContentWrapper>
 
       <ContentWrapper>
@@ -212,7 +217,7 @@ export default function Page() {
           </div>
           <div className="relative aspect-video">
             <Image
-              src="/images/demand-forecast.png"
+              src="/images/exhibition-1659447.jpg"
               alt="KI Bedarfsprognose"
               fill
               className="object-cover rounded-lg shadow-lg"

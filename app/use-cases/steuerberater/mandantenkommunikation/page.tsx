@@ -3,7 +3,7 @@ import Image from "next/image";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import type { PageConfig } from "@/lib/get-subpages";
-import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
+import BackgroundHero from "@/components/hero-components/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/simple-grid";
 import ComparisonCard, {
@@ -39,19 +39,24 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Mandantenkommunikation – Steuerberater",
+  title: "Mandantenkommunikation – Steuerberater | BlueBatch",
   description:
-    "Wie bluebatch die Mandantenkommunikation für Steuerberater automatisiert.",
+    "Wie BlueBatch die Mandantenkommunikation für Steuerberater automatisiert. 70% weniger Routineanfragen.",
   openGraph: {
-    title: "Mandantenkommunikation – Steuerberater",
+    title: "Mandantenkommunikation – Steuerberater | BlueBatch",
     description:
-      "Wie bluebatch die Mandantenkommunikation für Steuerberater automatisiert.",
+      "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "BlueBatch",
+    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Mandantenkommunikation" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mandantenkommunikation – Steuerberater",
+    title: "Mandantenkommunikation – Steuerberater | BlueBatch",
     description:
-      "Wie bluebatch die Mandantenkommunikation für Steuerberater automatisiert.",
+      "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen.",
+    images: ["/images/cover-fb.jpg"],
   },
 };
 
@@ -65,32 +70,32 @@ export default function Page() {
   return (
     <>
       <ContentWrapper isFirstSection noPadding>
-        <VideoBackgroundHero
-          videoSrc="/videos/ki_workflow.mp4"
+        <BackgroundHero
+          imageSrc="/images/test3.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
-          <VideoBackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>
             Mandantenkommunikation
-          </VideoBackgroundHero.TopLabel>
-          <VideoBackgroundHero.Headline>
+          </BackgroundHero.TopLabel>
+          <BackgroundHero.Headline>
             Routineanfragen{" "}
-            <VideoBackgroundHero.Highlight>
+            <BackgroundHero.Highlight>
               automatisch
-            </VideoBackgroundHero.Highlight>{" "}
+            </BackgroundHero.Highlight>{" "}
             beantworten
-          </VideoBackgroundHero.Headline>
-          <VideoBackgroundHero.Description>
+          </BackgroundHero.Headline>
+          <BackgroundHero.Description>
             KI-gestützter Chatbot für Standardfragen, proaktive
             Fristenerinnerungen und automatisierte Belegkampagnen. Mehr Zeit für
             echte Beratung.
-          </VideoBackgroundHero.Description>
-          <VideoBackgroundHero.CallToAction>
+          </BackgroundHero.Description>
+          <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Demo anfragen</ContactButton>
-          </VideoBackgroundHero.CallToAction>
-          <VideoBackgroundHero.Stats>
+          </BackgroundHero.CallToAction>
+          <BackgroundHero.Stats>
             {stats.map((stat, index) => (
-              <VideoBackgroundHero.Stat
+              <BackgroundHero.Stat
                 key={stat.label}
                 value={stat.value}
                 suffix={stat.suffix}
@@ -98,8 +103,8 @@ export default function Page() {
                 index={index}
               />
             ))}
-          </VideoBackgroundHero.Stats>
-        </VideoBackgroundHero>
+          </BackgroundHero.Stats>
+        </BackgroundHero>
       </ContentWrapper>
 
       <ContentWrapper>
@@ -188,7 +193,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/invoice/data-extraction.webp"
+                  src="/images/benjamin-voros-Hon8H9dvTBM-unsplash.jpg"
                   alt="KI-Chatbot"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -213,7 +218,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/edi-integration.png"
+                  src="/images/startae-team-7tXA8xwe4W4-unsplash.jpg"
                   alt="Fristenerinnerung"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -238,7 +243,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/web-portal.png"
+                  src="/images/teemu-paananen-bzdhc5b3Bxs-unsplash.jpg"
                   alt="Belegkampagnen"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -263,7 +268,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/legacy-channels.png"
+                  src="/images/neonbrand-gYf49RB7bvE-unsplash.jpg"
                   alt="Status-Updates"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -296,10 +301,9 @@ export default function Page() {
               <ComparisonListItem>Verpasste Mandate durch langsame Reaktion: ~20.000 €/Jahr</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              <span className="text-xl font-bold text-red-700">
+              
                 Gesamt: ~130.000 €/Jahr
-              </span>
-            </ComparisonFooter>
+              </ComparisonFooter>
           </BeforeCard>
 
           <AfterCard>
@@ -310,10 +314,9 @@ export default function Page() {
               <ComparisonListItem>Einmalige Implementierung: 25.000 € (auf Jahr 1 angerechnet)</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              <span className="text-xl font-bold text-green-700">
+              
                 Jahr 1: ~81.000 € | Ab Jahr 2: ~56.000 €/Jahr
-              </span>
-            </ComparisonFooter>
+              </ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
 
