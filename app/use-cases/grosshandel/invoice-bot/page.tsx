@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import type { PageConfig } from "@/lib/get-subpages";
@@ -27,6 +26,7 @@ import TabGroup, {
 } from "@/components/tab-group";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 import { FaqContainer } from "@/components/faqs";
+import IntroBox from "@/components/intro-box";
 
 export const pageConfig: PageConfig = {
   title: "Invoice-Bot",
@@ -81,17 +81,18 @@ export default function Page() {
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
-      <ContentWrapper>
-        <div className="text-center">
-          <Typo.H2>
+      <ContentWrapper border="T">
+        <IntroBox>
+          <IntroBox.PreHeadline>Die Vorteile</IntroBox.PreHeadline>
+          <IntroBox.Headline>
             Vorteile der automatisierten Aufgabenerstellung aus
             Außendienst-Berichten
-          </Typo.H2>
-          <Typo.Paragraph>
+          </IntroBox.Headline>
+          <IntroBox.Subline>
             Unser n8n-Workflow verbindet mobile Besuchserfassung mit
             automatischer Aufgabenerstellung und CRM-Integration.
-          </Typo.Paragraph>
-        </div>
+          </IntroBox.Subline>
+        </IntroBox>
 
         <SimpleGrid cols={3} className="mt-10">
           <SimpleCard>
@@ -120,14 +121,15 @@ export default function Page() {
           </SimpleCard>
         </SimpleGrid>
       </ContentWrapper>
-      <ContentWrapper background="bg-gray-100">
-        <div className="text-center mb-12">
-          <Typo.H2>So funktioniert der Invoice-Bot</Typo.H2>
-          <Typo.Paragraph>
+      <ContentWrapper background="bg-gray-100" bodyWidth="small">
+        <IntroBox>
+          <IntroBox.PreHeadline>Der Prozess</IntroBox.PreHeadline>
+          <IntroBox.Headline>So funktioniert der Invoice-Bot</IntroBox.Headline>
+          <IntroBox.Subline>
             In nur 4 Schritten von der Eingangsrechnung zur automatischen
             Freigabe.
-          </Typo.Paragraph>
-        </div>
+          </IntroBox.Subline>
+        </IntroBox>
 
         <TimelineAsSteps>
           <TimelineAsStepsStep value={1}>
@@ -164,16 +166,17 @@ export default function Page() {
         </TimelineAsSteps>
       </ContentWrapper>
       <ContentWrapper>
-        <div className="text-center">
-          <Typo.H2>
+        <IntroBox>
+          <IntroBox.PreHeadline>Die Vorteile</IntroBox.PreHeadline>
+          <IntroBox.Headline>
             Vorteile der automatisierten Aufgabenerstellung aus
             Außendienst-Berichten
-          </Typo.H2>
-          <Typo.Paragraph>
+          </IntroBox.Headline>
+          <IntroBox.Subline>
             Unser n8n-Workflow verbindet mobile Besuchserfassung mit
             automatischer Aufgabenerstellung und CRM-Integration.
-          </Typo.Paragraph>
-        </div>
+          </IntroBox.Subline>
+        </IntroBox>
 
         <SimpleGrid cols={3} className="mt-10">
           <SimpleCard>
@@ -203,12 +206,13 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
       <ContentWrapper border="B">
-        <div className="text-center mb-12">
-          <Typo.H2>Workflow im Detail</Typo.H2>
-          <Typo.Paragraph>
+        <IntroBox>
+          <IntroBox.PreHeadline>Im Detail</IntroBox.PreHeadline>
+          <IntroBox.Headline>Workflow im Detail</IntroBox.Headline>
+          <IntroBox.Subline>
             Erfahren Sie, wie jeder Schritt des Invoice-Bots funktioniert.
-          </Typo.Paragraph>
-        </div>
+          </IntroBox.Subline>
+        </IntroBox>
 
         <TabGroup defaultValue="prozess">
           <TabNavigation>
@@ -379,16 +383,17 @@ export default function Page() {
       </ContentWrapper>
 
       <ContentWrapper>
-        <div className="text-center">
-          <Typo.H2>
+        <IntroBox>
+          <IntroBox.PreHeadline>Die Vorteile</IntroBox.PreHeadline>
+          <IntroBox.Headline>
             Vorteile der automatisierten Aufgabenerstellung aus
             Außendienst-Berichten
-          </Typo.H2>
-          <Typo.Paragraph>
+          </IntroBox.Headline>
+          <IntroBox.Subline>
             Unser n8n-Workflow verbindet mobile Besuchserfassung mit
             automatischer Aufgabenerstellung und CRM-Integration.
-          </Typo.Paragraph>
-        </div>
+          </IntroBox.Subline>
+        </IntroBox>
 
         <SimpleGrid cols={3} className="mt-10">
           <SimpleCard>

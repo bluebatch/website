@@ -33,32 +33,32 @@ import SavingsCard, {
 } from "@/components/cards/savings-card";
 
 export const pageConfig: PageConfig = {
-  title: "Mandantenkommunikation",
+  title: "DATEV-Jira Orchestration",
   description:
-    "Mandantenanfragen automatisiert beantworten und Dokumentenaustausch vereinfachen.",
+    "Bidirektionale Synchronisation zwischen DATEV und Jira für effizientes Fristenmanagement.",
 };
 
 export const metadata: Metadata = {
-  title: "Mandantenkommunikation – Steuerberater",
+  title: "DATEV-Jira Task Orchestration – Steuerberater",
   description:
-    "Wie bluebatch die Mandantenkommunikation für Steuerberater automatisiert.",
+    "Automatisierte Aufgabenorchestrierung zwischen DATEV und Jira für Steuerkanzleien.",
   openGraph: {
-    title: "Mandantenkommunikation – Steuerberater",
+    title: "DATEV-Jira Task Orchestration – Steuerberater",
     description:
-      "Wie bluebatch die Mandantenkommunikation für Steuerberater automatisiert.",
+      "Automatisierte Aufgabenorchestrierung zwischen DATEV und Jira für Steuerkanzleien.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mandantenkommunikation – Steuerberater",
+    title: "DATEV-Jira Task Orchestration – Steuerberater",
     description:
-      "Wie bluebatch die Mandantenkommunikation für Steuerberater automatisiert.",
+      "Automatisierte Aufgabenorchestrierung zwischen DATEV und Jira für Steuerkanzleien.",
   },
 };
 
 const stats = [
-  { value: 70, suffix: "%", label: "Weniger Routineanfragen" },
-  { value: 24, suffix: "/7", label: "Erreichbarkeit" },
-  { value: 50, suffix: "%", label: "Schnellere Belegsammlung" },
+  { value: 99.9, suffix: "%", label: "Fristeneinhaltung" },
+  { value: 60, suffix: "%", label: "Weniger Überstunden" },
+  { value: 45, suffix: "min", label: "Zeitersparnis/Tag" },
 ];
 
 export default function Page() {
@@ -71,19 +71,18 @@ export default function Page() {
           opacityBackground="white"
         >
           <VideoBackgroundHero.TopLabel>
-            Mandantenkommunikation
+            DATEV-Jira Orchestration
           </VideoBackgroundHero.TopLabel>
           <VideoBackgroundHero.Headline>
-            Routineanfragen{" "}
+            Aufgaben und Fristen{" "}
             <VideoBackgroundHero.Highlight>
               automatisch
             </VideoBackgroundHero.Highlight>{" "}
-            beantworten
+            synchronisieren
           </VideoBackgroundHero.Headline>
           <VideoBackgroundHero.Description>
-            KI-gestützter Chatbot für Standardfragen, proaktive
-            Fristenerinnerungen und automatisierte Belegkampagnen. Mehr Zeit für
-            echte Beratung.
+            Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische
+            Priorisierung, Workload-Dashboards und Eskalations-Workflows.
           </VideoBackgroundHero.Description>
           <VideoBackgroundHero.CallToAction>
             <ContactButton icon="chat">Demo anfragen</ContactButton>
@@ -108,44 +107,43 @@ export default function Page() {
             <IntroBox textCentered={false}>
               <IntroBox.PreHeadline>Das Problem</IntroBox.PreHeadline>
               <IntroBox.Headline>
-                60-70% der Anfragen sind Routine
+                2-5% Fristversäumnisse durch manuelle Verwaltung
               </IntroBox.Headline>
               <IntroBox.Subline>
-                „Bis wann muss ich meine Unterlagen einreichen?" „Wie ist der
-                Stand meiner Steuererklärung?" – Standardfragen binden wertvolle
-                Fachkraft-Zeit.
+                Getrennte Systeme, keine Integration: Aufgaben aus DATEV müssen
+                manuell in Projektmanagement-Tools übertragen werden. Bei 100+
+                Mandanten und dutzenden Fristen geht der Überblick verloren.
               </IntroBox.Subline>
               <IntroBox.Subline>
-                Das Einsammeln von Mandantenbelegen ist laut Branchenstudien das
-                größte Workflow-Problem – durchschnittlich 3-5 Erinnerungen pro
-                Mandant.
+                Jedes Fristversäumnis kostet durchschnittlich 500-2.000 € an
+                Säumniszuschlägen – plus Reputationsschaden und Haftungsrisiko.
               </IntroBox.Subline>
             </IntroBox>
           </div>
           <div>
             <TimelineAsSteps>
               <TimelineAsStepsStep value={1}>
-                <Typo.H3 className="mt-2!">Anfrage eingeht</Typo.H3>
+                <Typo.H3 className="mt-2!">DATEV-Aufgabe</Typo.H3>
                 <Typo.Paragraph>
-                  Per E-Mail, Telefon oder Portal – oft zu Standardthemen
+                  Neue Frist oder Auftrag im DATEV-System
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
               <TimelineAsStepsStep value={2}>
-                <Typo.H3 className="mt-2!">Recherche nötig</Typo.H3>
+                <Typo.H3 className="mt-2!">Manuelle Übertragung</Typo.H3>
                 <Typo.Paragraph>
-                  Status im System nachschauen, Fristen prüfen
+                  In Excel, Outlook-Kalender oder Papier-Listen eintragen
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
               <TimelineAsStepsStep value={3}>
-                <Typo.H3 className="mt-2!">Antwort verfassen</Typo.H3>
+                <Typo.H3 className="mt-2!">Status-Nachfrage</Typo.H3>
                 <Typo.Paragraph>
-                  Oft ähnliche Antworten für gleiche Fragen
+                  Teamleiter fragt regelmäßig nach Bearbeitungsstand
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
               <TimelineAsStepsStep value={4} isLast>
-                <Typo.H3 className="mt-2!">Nachfassen</Typo.H3>
+                <Typo.H3 className="mt-2!">Kurz vor Frist</Typo.H3>
                 <Typo.Paragraph>
-                  Wiederholte Erinnerungen für fehlende Belege
+                  Hektische Nacharbeit, wenn Problem erst spät erkannt wird
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
             </TimelineAsSteps>
@@ -157,39 +155,39 @@ export default function Page() {
         <IntroBox>
           <IntroBox.PreHeadline>Automatisierung</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Vier Säulen der Kommunikationsautomatisierung
+            Vier Kernfunktionen für perfekte Koordination
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Ein integriertes System für alle Kommunikationsanforderungen.
+            Nahtlose Verbindung zwischen DATEV und Jira für volle Transparenz.
           </IntroBox.Subline>
         </IntroBox>
 
-        <TabGroup defaultValue="chatbot">
+        <TabGroup defaultValue="sync">
           <TabNavigation>
-            <TabItem value="chatbot">KI-Chatbot</TabItem>
-            <TabItem value="fristen">Fristenerinnerung</TabItem>
-            <TabItem value="belege">Belegkampagnen</TabItem>
-            <TabItem value="status">Status-Updates</TabItem>
+            <TabItem value="sync">Bidirektionale Sync</TabItem>
+            <TabItem value="fristen">Fristenmanagement</TabItem>
+            <TabItem value="workload">Workload-Dashboard</TabItem>
+            <TabItem value="eskalation">Eskalation</TabItem>
           </TabNavigation>
 
-          <TabContent value="chatbot">
+          <TabContent value="sync">
             <SimpleGrid cols={2} className="items-center">
               <div>
-                <Typo.H3>KI-gestützter Chatbot</Typo.H3>
+                <Typo.H3>DATEV-Jira Synchronisation</Typo.H3>
                 <Typo.Paragraph>
-                  Automatische Beantwortung von Standardanfragen zu Fristen,
-                  Bearbeitungsstand und Beleganforderungen – 24/7 verfügbar.
+                  Automatische Ticket-Erstellung bei neuen DATEV-Aufträgen.
+                  Status-Updates fließen in beide Richtungen.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>Echtzeit-Zugriff auf Mandantenakte</Typo.ListItem>
-                  <Typo.ListItem>Dynamische Fristen- und Statusauskunft</Typo.ListItem>
-                  <Typo.ListItem>Eskalation zu Mitarbeitern bei komplexen Fragen</Typo.ListItem>
+                  <Typo.ListItem>Neuer Mandantenauftrag = Jira-Ticket</Typo.ListItem>
+                  <Typo.ListItem>Status in Jira → Dokumentation in DATEV</Typo.ListItem>
+                  <Typo.ListItem>Automatische Konflikt-Erkennung</Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
                 <Image
                   src="/images/invoice/data-extraction.webp"
-                  alt="KI-Chatbot"
+                  alt="Synchronisation"
                   fill
                   className="object-cover shadow-lg rounded-lg"
                 />
@@ -200,21 +198,21 @@ export default function Page() {
           <TabContent value="fristen">
             <SimpleGrid cols={2} className="items-center">
               <div>
-                <Typo.H3>Proaktive Fristenerinnerungen</Typo.H3>
+                <Typo.H3>Intelligentes Fristenmanagement</Typo.H3>
                 <Typo.Paragraph>
-                  Automatische Benachrichtigungen vor wichtigen Abgabefristen –
-                  gestaffelt nach Dringlichkeit.
+                  Alle Steuerfristen zentral verwaltet mit automatischen
+                  Erinnerungen und Kalenderintegration.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>30, 14, 7, 3 Tage Vorlauf-Erinnerungen</Typo.ListItem>
-                  <Typo.ListItem>Individuelle Präferenzen (E-Mail, SMS, Portal)</Typo.ListItem>
-                  <Typo.ListItem>Automatische Eskalationskette</Typo.ListItem>
+                  <Typo.ListItem>UStVA, Lohnsteuer, Jahresabschluss-Fristen</Typo.ListItem>
+                  <Typo.ListItem>Outlook/Google Calendar Sync</Typo.ListItem>
+                  <Typo.ListItem>Fristverlängerungs-Erinnerungen</Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
                 <Image
                   src="/images/edi-integration.png"
-                  alt="Fristenerinnerung"
+                  alt="Fristenmanagement"
                   fill
                   className="object-cover shadow-lg rounded-lg"
                 />
@@ -222,24 +220,24 @@ export default function Page() {
             </SimpleGrid>
           </TabContent>
 
-          <TabContent value="belege">
+          <TabContent value="workload">
             <SimpleGrid cols={2} className="items-center">
               <div>
-                <Typo.H3>Automatisierte Belegkampagnen</Typo.H3>
+                <Typo.H3>Workload-Dashboard</Typo.H3>
                 <Typo.Paragraph>
-                  Strukturierte Dokumentensammlung mit dynamischen Checklisten
-                  und intelligenter Nachverfolgung.
+                  Echtzeit-Übersicht über Teamauslastung für bessere
+                  Ressourcenplanung und fairere Arbeitsverteilung.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>Personalisierte Checklisten je Mandantentyp</Typo.ListItem>
-                  <Typo.ListItem>Automatische Tracking bei Upload</Typo.ListItem>
-                  <Typo.ListItem>Gezielte Erinnerungen für fehlende Belege</Typo.ListItem>
+                  <Typo.ListItem>Kapazitätsplanung mit Warnsystem</Typo.ListItem>
+                  <Typo.ListItem>Skill-basierte Aufgabenzuweisung</Typo.ListItem>
+                  <Typo.ListItem>Urlaubsplanung mit Auto-Vertretung</Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
                 <Image
                   src="/images/web-portal.png"
-                  alt="Belegkampagnen"
+                  alt="Workload-Dashboard"
                   fill
                   className="object-cover shadow-lg rounded-lg"
                 />
@@ -247,24 +245,24 @@ export default function Page() {
             </SimpleGrid>
           </TabContent>
 
-          <TabContent value="status">
+          <TabContent value="eskalation">
             <SimpleGrid cols={2} className="items-center">
               <div>
-                <Typo.H3>Automatische Status-Updates</Typo.H3>
+                <Typo.H3>Automatische Eskalation</Typo.H3>
                 <Typo.Paragraph>
-                  Mandanten erhalten proaktive Benachrichtigungen bei wichtigen
-                  Meilensteinen ihrer Steuerangelegenheiten.
+                  Vierstufiges Eskalationssystem sorgt dafür, dass keine Frist
+                  übersehen wird.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>Bearbeitungsstart und Fertigstellung</Typo.ListItem>
-                  <Typo.ListItem>Einreichung beim Finanzamt bestätigt</Typo.ListItem>
-                  <Typo.ListItem>Bescheid eingegangen mit nächsten Schritten</Typo.ListItem>
+                  <Typo.ListItem>7 Tage: Erinnerung an Bearbeiter</Typo.ListItem>
+                  <Typo.ListItem>3 Tage: Benachrichtigung Teamleiter</Typo.ListItem>
+                  <Typo.ListItem>1 Tag: Eskalation an Kanzleileitung</Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
                 <Image
                   src="/images/legacy-channels.png"
-                  alt="Status-Updates"
+                  alt="Eskalation"
                   fill
                   className="object-cover shadow-lg rounded-lg"
                 />
@@ -281,9 +279,9 @@ export default function Page() {
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>ROI-Kalkulation</IntroBox.PreHeadline>
-          <IntroBox.Headline>96% ROI im ersten Jahr</IntroBox.Headline>
+          <IntroBox.Headline>536-850% ROI im ersten Jahr</IntroBox.Headline>
           <IntroBox.Subline>
-            Für eine mittelgroße Kanzlei mit 500 Mandanten:
+            Für eine mittelgroße Kanzlei mit 15 Mitarbeitern und 500 Mandanten:
           </IntroBox.Subline>
         </IntroBox>
 
@@ -291,13 +289,13 @@ export default function Page() {
           <BeforeCard>
             <ComparisonHeadline>Vorher: Manuell</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>2 Mitarbeiter für Kommunikation @ 50.000 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>Überstunden in Spitzenzeiten: 10.000 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>Verpasste Mandate durch langsame Reaktion: ~20.000 €/Jahr</ComparisonListItem>
+              <ComparisonListItem>45-70 Min/Tag pro Mitarbeiter für Systemwechsel</ComparisonListItem>
+              <ComparisonListItem>2-5% Fristversäumnisse (500-2.000 €/Versäumnis)</ComparisonListItem>
+              <ComparisonListItem>30-40% Varianz in Teamauslastung</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
               <span className="text-xl font-bold text-red-700">
-                Gesamt: ~130.000 €/Jahr
+                Zeitverlust: 1.900-2.900 Stunden/Jahr
               </span>
             </ComparisonFooter>
           </BeforeCard>
@@ -305,29 +303,29 @@ export default function Page() {
           <AfterCard>
             <ComparisonHeadline>Nachher: Automatisiert</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>1 Mitarbeiter für komplexe Beratung @ 50.000 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>Automatisierungsplattform: 6.000 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>Einmalige Implementierung: 25.000 € (auf Jahr 1 angerechnet)</ComparisonListItem>
+              <ComparisonListItem>Jira Cloud: 1.800 €/Jahr</ComparisonListItem>
+              <ComparisonListItem>n8n Cloud: 2.400 €/Jahr</ComparisonListItem>
+              <ComparisonListItem>Implementierung: 15.000-25.000 € (einmalig)</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
               <span className="text-xl font-bold text-green-700">
-                Jahr 1: ~81.000 € | Ab Jahr 2: ~56.000 €/Jahr
+                Einsparung: 218.000-325.000 €/Jahr
               </span>
             </ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
 
         <SavingsCard>
-          <SavingsBadge>ROI im ersten Jahr: 96%</SavingsBadge>
+          <SavingsBadge>ROI im ersten Jahr: 536-850%</SavingsBadge>
           <SavingsItems>
-            <SavingsItem label="Ersparnis Jahr 1" highlight>
-              49.000 €
+            <SavingsItem label="Amortisation" highlight>
+              2-3 Monate
             </SavingsItem>
-            <SavingsItem label="Ab Jahr 2">
-              74.000 €/Jahr
+            <SavingsItem label="Fristeneinhaltung">
+              100%
             </SavingsItem>
-            <SavingsItem label="Amortisation">
-              ~6 Monate
+            <SavingsItem label="Weniger Überstunden">
+              40-60%
             </SavingsItem>
           </SavingsItems>
         </SavingsCard>
@@ -341,25 +339,24 @@ export default function Page() {
         <FaqContainer
           faqs={[
             {
-              question:
-                "Gibt der KI-Chatbot steuerliche Beratung?",
+              question: "Ist eine direkte DATEV-Integration überhaupt möglich?",
               answer:
-                "Nein, der Chatbot ist für organisatorische Anfragen konzipiert: Fristen, Bearbeitungsstand, Beleganforderungen. Er greift auf verifizierte Kanzleidaten zu. Bei fachlichen Steuerfragen wird automatisch an einen Sachbearbeiter eskaliert. Jede Antwort kann mit einem Disclaimer versehen werden.",
+                "DATEV bietet keine vollständig offene REST-API, aber mehrere Integrationswege: DATEV-Schnittstellen für Export/Import, DATEV Unternehmen Online für Datenaustausch, DATEVconnect für zertifizierte Partner, und DMS-Schnittstellen. Wir empfehlen einen hybriden Ansatz: automatischer Export aus DATEV, Verarbeitung in n8n, und strukturierte Rücksynchronisation.",
             },
             {
-              question: "Wie funktioniert die DATEV-Anbindung?",
+              question: "Wie sind die Mandantendaten geschützt?",
               answer:
-                "Über mehrere Wege: HTTP-Requests an DATEV-Schnittstellen, Dateiaustausch im DATEV-Format, oder Tools wie TaxDome als Brücke. Für tiefere Integration sind Middleware-Lösungen wie DATEVconnect verfügbar. Die konkrete Strategie wird im Implementierungsprojekt definiert.",
+                "TLS 1.3 für alle Verbindungen, keine Speicherung von Steuerdaten in Cloud-Systemen (nur Referenzen/IDs). Rollenbasierte Berechtigungen in Jira, API-Keys mit minimalen Rechten, DSGVO-konforme Verarbeitung mit Hosting in deutschen Rechenzentren. Das Steuergeheimnis (§203 StGB) wird gewahrt – keine sensiblen Daten in Jira, nur Aufgabenbeschreibungen und Status.",
             },
             {
-              question: "Was passiert bei falsch klassifizierten Anfragen?",
+              question: "Was passiert wenn die Automatisierung ausfällt?",
               answer:
-                "Mehrere Sicherheitsnetze: Bei unsicherer Klassifizierung wird automatisch eskaliert. Mandanten können jederzeit 'Mit Mitarbeiter sprechen' wählen. Fehlklassifizierungen werden markiert und verbessern das Modell. Bei kritischen Themen geht automatisch eine Kopie an den Sachbearbeiter.",
+                "Mehrfache Absicherung: Fehlerbenachrichtigungen bei Problemen, automatische Wiederholungsversuche, tägliche Integritätsprüfungen (DATEV vs. Jira Abgleich). Backup-Benachrichtigungen per E-Mail und SMS bei kritischen Fristen. DATEV bleibt immer das führende System (Source of Truth). Wöchentliche Kontrollberichte zeigen Abweichungen auf.",
             },
             {
-              question: "Wie ist der Datenschutz gewährleistet?",
+              question: "Wie lange dauert die Implementierung?",
               answer:
-                "DSGVO-konform: Datenminimierung, Hosting in DE/EU, TLS-Verschlüsselung, Auftragsverarbeitungsverträge, automatisches Löschkonzept, vollständige Audit-Trails. Bei Self-Hosting volle Kontrolle über alle Daten in der Kanzlei-Infrastruktur. Berufsgeheimnis wird durch entsprechende Verträge gewahrt.",
+                "Phase 1 (2-3 Wochen): Jira-Projekt einrichten, Basis-Workflows für Fristenüberwachung, Kalender-Integration, Team-Schulung. Phase 2 (2-4 Wochen): DATEV-Anbindung, automatische Datenübernahme, bidirektionale Statusaktualisierung. Phase 3 (fortlaufend): Dashboard-Anpassungen, Workflow-Verfeinerung. Ressourcen: 60-100 Stunden externer Partner, 20-40 Stunden intern.",
             },
           ]}
         />

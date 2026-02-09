@@ -1,8 +1,6 @@
-"use client";
-
-import Button from "@/components/button";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 import ContentWrapper from "@/components/content-wrapper";
+import Customer from "@/components/customer/customer";
 import VideoBackgroundHero from "@/components/hero-components/video-background-hero";
 
 export default function Page() {
@@ -30,6 +28,9 @@ export default function Page() {
           </VideoBackgroundHero.Description>
         </VideoBackgroundHero>
       </ContentWrapper>
+
+      {/* Client Logos */}
+
       <ContentWrapper>
         {/* <!-- Calendly inline widget begin --> */}
         <div
@@ -44,7 +45,9 @@ export default function Page() {
         ></script>
         {/* <!-- Calendly inline widget end --> */}
       </ContentWrapper>
-
+      <ContentWrapper noPadding>
+        <Customer />
+      </ContentWrapper>
       <ContentWrapper noPadding>
         <ConsultationCtaDefault />
       </ContentWrapper>

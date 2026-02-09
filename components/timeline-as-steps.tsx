@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import React, { ReactNode, isValidElement } from "react";
 import { motion } from "framer-motion";
 
 interface TimelineAsStepsProps {
@@ -10,15 +10,20 @@ interface TimelineAsStepsProps {
 
 interface StepProps {
   children: ReactNode;
-  value: number;
+  value: number | string;
+  index?: number;
   isLast?: boolean;
 }
 
 export function TimelineAsStepsStep({
   children,
   value,
+  index = 0,
   isLast = false,
 }: StepProps) {
+  // Use index for animation timing (consistent delays regardless of value)
+  const animationDelay = index * 0.1;
+
   return (
     <motion.div
       className="flex gap-4 md:gap-6"
@@ -27,7 +32,7 @@ export function TimelineAsStepsStep({
       viewport={{ once: true, amount: 0.3 }}
       transition={{
         duration: 0.5,
-        delay: value * 0.1,
+        delay: animationDelay,
         ease: "easeOut",
       }}
     >
@@ -41,7 +46,7 @@ export function TimelineAsStepsStep({
           viewport={{ once: true, amount: 0.5 }}
           transition={{
             duration: 0.3,
-            delay: value * 0.1,
+            delay: animationDelay,
             type: "spring",
             stiffness: 260,
             damping: 20,
@@ -58,7 +63,7 @@ export function TimelineAsStepsStep({
             viewport={{ once: true, amount: 0.5 }}
             transition={{
               duration: 0.3,
-              delay: value * 0.1 + 0.15,
+              delay: animationDelay + 0.15,
               ease: "easeOut",
             }}
           />
@@ -77,5 +82,20 @@ export default function TimelineAsSteps({
   children,
   className = "",
 }: TimelineAsStepsProps) {
-  return <div className={`flex flex-col ${className}`}>{children}</div>;
+  const childArray = React.Children.toArray(children);
+  const count = childArray.length;
+
+  return (
+    <div className={`flex flex-col ${className}`}>
+      {childArray.map((child, idx) => {
+        if (isValidElement<StepProps>(child)) {
+          return React.cloneElement(child, {
+            index: idx,
+            isLast: idx === count - 1,
+          });
+        }
+        return child;
+      })}
+    </div>
+  );
 }

@@ -34,26 +34,26 @@ export default function Navigation() {
           {
             icon: "/icons/building.svg",
             title: "bluebatch",
-            description: "Unsere Mission und Team",
+            description: "Unsere Mission",
             href: "/",
           },
           {
             icon: "/icons/process.svg",
             title: "Unser Prozess",
             description: "Wie wir arbeiten",
-            href: "/product/how-we-do",
+            href: "/unser-prozess",
           },
         ],
       },
       {
         title: "Los geht's",
-        href: "/product",
+        href: "/",
         items: [
           {
             icon: "/icons/rocket.svg",
-            title: "Was wir tun",
-            description: "Unsere Produkte und Services",
-            href: "/product/what-we-do",
+            title: "Das Team",
+            description: "lernen Sie uns kennen",
+            href: "/team",
           },
           {
             icon: "/icons/phone.svg",
@@ -75,28 +75,32 @@ export default function Navigation() {
         href: "/use-cases/grosshandel",
         cases: [
           {
-            title: "Angebots-Bot",
-            href: "/use-cases/grosshandel/angebots-bot",
-          },
-          {
             title: "Auftragserfassung",
             href: "/use-cases/grosshandel/auftragserfassung",
+          },
+          {
+            title: "Bestellabwicklung",
+            href: "/use-cases/grosshandel/bestellabwicklung",
+          },
+          {
+            title: "Lagerverwaltung",
+            href: "/use-cases/grosshandel/lagerverwaltung",
           },
           {
             title: "Invoice-Bot",
             href: "/use-cases/grosshandel/invoice-bot",
           },
           {
-            title: "Zertifikatsprüfung Lieferanten",
-            href: "/use-cases/grosshandel/zertifikatspruefung-lieferanten",
-          },
-          {
             title: "3-Wege-Rechnungsprüfung",
             href: "/use-cases/grosshandel/3-wege-rechnungspruefung",
           },
           {
-            title: "Auftragserfassung unstrukturiert",
-            href: "/use-cases/grosshandel/auftragserfassung-unstrukturiert",
+            title: "Zertifikatsprüfung Lieferanten",
+            href: "/use-cases/grosshandel/zertifikatspruefung-lieferanten",
+          },
+          {
+            title: "Angebots-Bot",
+            href: "/use-cases/grosshandel/angebots-bot",
           },
         ],
       },
@@ -112,6 +116,10 @@ export default function Navigation() {
           {
             title: "Mandantenkommunikation",
             href: "/use-cases/steuerberater/mandantenkommunikation",
+          },
+          {
+            title: "DATEV-Jira Orchestration",
+            href: "/use-cases/steuerberater/datev-jira-task-orchestration",
           },
         ],
       },

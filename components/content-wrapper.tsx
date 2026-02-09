@@ -8,6 +8,7 @@ interface ContentWrapperProps {
   isFirstSection?: boolean;
   background?: string;
   border?: "B" | "T" | "BT";
+  bodyWidth?: "wide" | "small" | "narrow";
 }
 
 export default function ContentWrapper({
@@ -18,6 +19,7 @@ export default function ContentWrapper({
   isFirstSection = false,
   background,
   border,
+  bodyWidth = "wide",
 }: ContentWrapperProps) {
   const baseClasses = "w-full";
 
@@ -42,12 +44,25 @@ export default function ContentWrapper({
 
   const borderClasses = border ? borderMap[border] : "";
 
+  const bodyWidthClasses = {
+    wide: "",
+    small: "max-w-4xl mx-auto",
+    narrow: "max-w-2xl mx-auto",
+  };
+
+  const contentWrapper =
+    bodyWidth !== "wide" ? (
+      <div className={bodyWidthClasses[bodyWidth]}>{children}</div>
+    ) : (
+      children
+    );
+
   return (
     <div className={`${baseClasses} ${variantClasses[variant]}`}>
       <div
         className={`${background} ${containerClasses} ${paddingClasses} ${borderClasses}`}
       >
-        {children}
+        {contentWrapper}
       </div>
     </div>
   );

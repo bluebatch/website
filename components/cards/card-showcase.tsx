@@ -1,13 +1,6 @@
-"use client";
-
 import { ReactNode } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
+import { AnimatedCardWrapper } from "./card-showcase-client";
 
 // Sub-components
 interface CardShowcaseImageProps {
@@ -16,15 +9,16 @@ interface CardShowcaseImageProps {
   className?: string;
 }
 
-function CardShowcaseImage({ src, alt, className = "" }: CardShowcaseImageProps) {
+function CardShowcaseImage({
+  src,
+  alt,
+  className = "",
+}: CardShowcaseImageProps) {
   return (
-    <div className={`relative h-48 md:h-56 w-full overflow-hidden ${className}`}>
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className="object-cover object-center"
-      />
+    <div
+      className={`relative h-48 md:h-56 w-full overflow-hidden ${className}`}
+    >
+      <Image src={src} alt={alt} fill className="object-cover object-center" />
       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
     </div>
   );
@@ -35,7 +29,10 @@ interface CardShowcaseTitleProps {
   className?: string;
 }
 
-function CardShowcaseTitle({ children, className = "" }: CardShowcaseTitleProps) {
+function CardShowcaseTitle({
+  children,
+  className = "",
+}: CardShowcaseTitleProps) {
   return (
     <h3 className={`text-xl font-semibold text-white mb-2 ${className}`}>
       {children}
@@ -48,7 +45,10 @@ interface CardShowcaseDescriptionProps {
   className?: string;
 }
 
-function CardShowcaseDescription({ children, className = "" }: CardShowcaseDescriptionProps) {
+function CardShowcaseDescription({
+  children,
+  className = "",
+}: CardShowcaseDescriptionProps) {
   return (
     <p className={`text-gray-400 text-sm leading-relaxed ${className}`}>
       {children}
@@ -62,20 +62,19 @@ interface CardShowcaseItemProps {
   className?: string;
 }
 
-function CardShowcaseItem({ children, size = "small", className = "" }: CardShowcaseItemProps) {
+function CardShowcaseItem({
+  children,
+  size = "small",
+  className = "",
+}: CardShowcaseItemProps) {
   const sizeClass = size === "large" ? "md:col-span-3" : "md:col-span-2";
 
   return (
-    <motion.div
-      variants={itemVariants}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
+    <AnimatedCardWrapper
       className={`relative overflow-hidden rounded-xl border border-gray-700/50 bg-gray-900/80 ${sizeClass} ${className}`}
     >
       {children}
-    </motion.div>
+    </AnimatedCardWrapper>
   );
 }
 
@@ -84,7 +83,10 @@ interface CardShowcaseContentProps {
   className?: string;
 }
 
-function CardShowcaseContent({ children, className = "" }: CardShowcaseContentProps) {
+function CardShowcaseContent({
+  children,
+  className = "",
+}: CardShowcaseContentProps) {
   return <div className={`p-6 ${className}`}>{children}</div>;
 }
 

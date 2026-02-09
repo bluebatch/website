@@ -3,28 +3,28 @@ import Image from "next/image";
 
 export default function Footer() {
   const mainMenu = [
-    { label: "About Us", href: "/" },
-    { label: "Services", href: "/product" },
+    { label: "Über uns", href: "/" },
+    { label: "Das Team", href: "/team" },
     { label: "Use Cases", href: "/use-cases" },
-    { label: "Blog", href: "/blogs" },
+    { label: "Blogs", href: "/blogs" },
   ];
 
   const productMenu = [
-    { label: "What We Do", href: "/product/what-we-do" },
-    { label: "How We Do It", href: "/product/how-we-do" },
-    { label: "Pricing", href: "/contact" },
+    { label: "Grosshandel", href: "/use-cases/grosshandel" },
+    { label: "Steuerberater", href: "/use-cases/steuerberater" },
+    { label: "e-Commerce", href: "/use-cases/ecommerce" },
   ];
 
   const legalMenu = [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
+    { label: "Kontakt", href: "/contact" },
+    { label: "Das Team", href: "/team" },
     { label: "Impressum", href: "/impressum" },
   ];
 
   const socialLinks = [
-    { icon: "linkedin", href: "#", label: "LinkedIn" },
-    { icon: "twitter", href: "#", label: "Twitter" },
-    { icon: "github", href: "#", label: "GitHub" },
+    { icon: "linkedin", href: "/", label: "LinkedIn" },
+    { icon: "twitter", href: "/", label: "Twitter" },
+    { icon: "github", href: "/", label: "GitHub" },
   ];
 
   return (
@@ -70,10 +70,10 @@ export default function Footer() {
                 />
               </svg>
               <a
-                href="mailto:hello@bluebatch.com"
+                href="mailto:info@bluebatch.com"
                 className="hover:text-secondary-500 transition-colors"
               >
-                hello@bluebatch.com
+                info@bluebatch.com
               </a>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function Footer() {
             {/* Product Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-                Product
+                Use-Cases
               </h3>
               <ul className="space-y-3">
                 {productMenu.map((item, index) => (
@@ -121,7 +121,7 @@ export default function Footer() {
             {/* Legal Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-                Legal
+                Ressourcen
               </h3>
               <ul className="space-y-3">
                 {legalMenu.map((item, index) => (
