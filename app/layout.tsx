@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bluebatch.de"),
-  title: "BlueBatch – AI Agent Builder",
-  description: "Build powerful AI agents that work predictably in production. Transform your business with intelligent automation and AI-powered workflows.",
+  metadataBase: new URL("https://bluebatch.io"),
+  title: "BlueBatch – AI Workflow Builder",
+  description:
+    "Build powerful AI agents that work predictably in production. Transform your business with intelligent automation and AI-powered workflows.",
 };
 
 export default function RootLayout({
