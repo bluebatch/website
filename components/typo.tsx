@@ -47,9 +47,7 @@ function H4({ children, className = "" }: TypoProps) {
 
 function Paragraph({ children, className = "" }: TypoProps) {
   return (
-    <p
-      className={`text-base md:text-lg text-gray-400 leading-relaxed mb-4 ${className}`}
-    >
+    <p className={`text-base text-gray-700 leading-relaxed mb-4 ${className}`}>
       {children}
     </p>
   );

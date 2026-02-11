@@ -83,10 +83,10 @@ function BoundlessImageCard({
 
   const childrenArray = Array.isArray(children) ? children : [children];
   const imageChild = childrenArray.find(
-    (child: any) => child?.type === BoundlessImageCardImage
+    (child: any) => child?.type === BoundlessImageCardImage,
   );
   const contentChild = childrenArray.find(
-    (child: any) => child?.type === BoundlessImageCardContent
+    (child: any) => child?.type === BoundlessImageCardContent,
   );
 
   // Calculate column spans for non-equal ratios
@@ -95,22 +95,23 @@ function BoundlessImageCard({
   const imageColSpan =
     ratio === "2-3" ? "md:col-span-3" : ratio === "3-2" ? "md:col-span-2" : "";
 
+  // On mobile, image always on top. On desktop, respect imagePosition
+  const imageOrderClass = imagePosition === "left" ? "md:order-1" : "md:order-2";
+  const contentOrderClass = imagePosition === "left" ? "md:order-2" : "md:order-1";
+
   return (
     <div
       className={`${background} ${roundedClass} ${shadowClass} ${borderClass} overflow-hidden ${className}`}
     >
       <div className={`grid grid-cols-1 ${gridCols} items-center`}>
-        {imagePosition === "left" ? (
-          <>
-            <div className={imageColSpan}>{imageChild}</div>
-            <div className={contentColSpan}>{contentChild}</div>
-          </>
-        ) : (
-          <>
-            <div className={contentColSpan}>{contentChild}</div>
-            <div className={imageColSpan}>{imageChild}</div>
-          </>
-        )}
+        {/* Image always first on mobile (order-1), positioned by prop on desktop */}
+        <div className={`${imageColSpan} h-full order-1 ${imageOrderClass}`}>
+          {imageChild}
+        </div>
+        {/* Content always second on mobile (order-2), positioned by prop on desktop */}
+        <div className={`${contentColSpan} order-2 ${contentOrderClass}`}>
+          {contentChild}
+        </div>
       </div>
     </div>
   );

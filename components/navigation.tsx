@@ -609,33 +609,29 @@ export default function Navigation() {
               <div className="space-y-1 pt-2">
                 <Link
                   href="/services"
-                  className="block px-4 py-2 text-xs font-semibold text-gray-500 uppercase hover:text-primary-500"
+                  className="flex items-start gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Services
-                </Link>
-                {servicesMenu.services.map((service, index) => (
-                  <Link
-                    key={index}
-                    href={service.href}
-                    className="flex items-start gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
+                  <svg
+                    className="w-5 h-5 text-primary-500 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <Image
-                      src={service.icon}
-                      alt=""
-                      width={20}
-                      height={20}
-                      className="w-5 h-5 mt-0.5"
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
-                    <div>
-                      <p className="font-medium">{service.title}</p>
-                      <p className="text-xs text-gray-500">
-                        {service.description}
-                      </p>
-                    </div>
-                  </Link>
-                ))}
+                  </svg>
+                  <div>
+                    <p className="font-medium">Services</p>
+                    <p className="text-xs text-gray-500">
+                      Alle unsere n8n Services
+                    </p>
+                  </div>
+                </Link>
               </div>
 
               {/* Use-Cases Section - Top level only */}

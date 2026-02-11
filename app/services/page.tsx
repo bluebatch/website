@@ -17,6 +17,8 @@ import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/customer/customer";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 import IntroBox from "@/components/intro-box";
+import BoundlessImageCard from "@/components/cards/boundless-image-card";
+import SimpleCard from "@/components/cards/simple-card";
 
 export const metadata: Metadata = {
   title: "n8n Services | BlueBatch",
@@ -65,6 +67,7 @@ const services = [
       "Ab €50/Monat",
     ],
     color: "from-blue-500 to-blue-600",
+    image: "/images/technology-integration.jpg",
   },
   {
     slug: "workflow-wartung",
@@ -80,6 +83,7 @@ const services = [
       "Ab €250/Monat",
     ],
     color: "from-green-500 to-green-600",
+    image: "/images/business-analytics.jpg",
   },
   {
     slug: "custom-nodes",
@@ -95,6 +99,7 @@ const services = [
       "Ab 3-7 Tage",
     ],
     color: "from-purple-500 to-purple-600",
+    image: "/images/web-development.jpg",
   },
   {
     slug: "schulungen",
@@ -110,6 +115,7 @@ const services = [
       "Individuelle Inhalte",
     ],
     color: "from-orange-500 to-orange-600",
+    image: "/images/training-seminar.jpg",
   },
   {
     slug: "performance-scaling",
@@ -125,6 +131,7 @@ const services = [
       "Ab €1.500 Audit",
     ],
     color: "from-red-500 to-red-600",
+    image: "/images/process-automation.jpg",
   },
 ];
 
@@ -188,7 +195,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding border="T">
         <Customer />
       </ContentWrapper>
 
@@ -204,98 +211,52 @@ export default function Page() {
 
         <div className="space-y-8">
           {services.map((service, index) => (
-            <div
+            <Link
               key={service.slug}
-              className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
+              href={`/services/${service.slug}`}
+              className="block group"
             >
-              <SimpleGrid cols={2} className="items-center">
-                {index % 2 === 0 ? (
-                  <>
-                    <div className="p-8 lg:p-12">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="text-5xl">{service.icon}</div>
-                        <div>
-                          <Typo.H3 className="mb-1">{service.title}</Typo.H3>
-                          <p className="text-primary-600 font-medium">
-                            {service.shortDescription}
-                          </p>
-                        </div>
-                      </div>
-                      <Typo.Paragraph className="text-gray-600 mb-6">
-                        {service.description}
-                      </Typo.Paragraph>
-                      <div className="grid grid-cols-2 gap-3 mb-6">
-                        {service.features.map((feature, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-center gap-2 text-gray-700 text-sm"
-                          >
-                            <span className="text-primary-600">✓</span>
-                            {feature}
-                          </div>
-                        ))}
-                      </div>
-                      <Link
-                        href={`/services/${service.slug}`}
-                        className="inline-flex items-center text-primary-600 font-medium hover:underline"
+              <BoundlessImageCard
+                imagePosition={index % 2 === 0 ? "right" : "left"}
+                className="cursor-pointer"
+              >
+                <BoundlessImageCard.Content>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div>
+                      <Typo.H3 className="mb-1 group-hover:text-primary-600 transition-colors">
+                        {service.title}
+                      </Typo.H3>
+                      <p className="text-primary-600 font-medium">
+                        {service.shortDescription}
+                      </p>
+                    </div>
+                  </div>
+                  <Typo.Paragraph className="text-gray-600 mb-6">
+                    {service.description}
+                  </Typo.Paragraph>
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-2 text-gray-700 text-sm"
                       >
-                        Mehr erfahren →
-                      </Link>
-                    </div>
-                    <div
-                      className={`h-full min-h-[400px] bg-gradient-to-br ${service.color} flex items-center justify-center p-12`}
-                    >
-                      <div className="text-white text-center">
-                        <div className="text-8xl mb-6">{service.icon}</div>
-                        <h3 className="text-3xl font-bold">{service.title}</h3>
+                        <span className="text-primary-600">✓</span>
+                        {feature}
                       </div>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div
-                      className={`h-full min-h-[400px] bg-gradient-to-br ${service.color} flex items-center justify-center p-12`}
-                    >
-                      <div className="text-white text-center">
-                        <div className="text-8xl mb-6">{service.icon}</div>
-                        <h3 className="text-3xl font-bold">{service.title}</h3>
-                      </div>
-                    </div>
-                    <div className="p-8 lg:p-12">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="text-5xl">{service.icon}</div>
-                        <div>
-                          <Typo.H3 className="mb-1">{service.title}</Typo.H3>
-                          <p className="text-primary-600 font-medium">
-                            {service.shortDescription}
-                          </p>
-                        </div>
-                      </div>
-                      <Typo.Paragraph className="text-gray-600 mb-6">
-                        {service.description}
-                      </Typo.Paragraph>
-                      <div className="grid grid-cols-2 gap-3 mb-6">
-                        {service.features.map((feature, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-center gap-2 text-gray-700 text-sm"
-                          >
-                            <span className="text-primary-600">✓</span>
-                            {feature}
-                          </div>
-                        ))}
-                      </div>
-                      <Link
-                        href={`/services/${service.slug}`}
-                        className="inline-flex items-center text-primary-600 font-medium hover:underline"
-                      >
-                        Mehr erfahren →
-                      </Link>
-                    </div>
-                  </>
-                )}
-              </SimpleGrid>
-            </div>
+                    ))}
+                  </div>
+                  <span className="inline-flex items-center text-primary-600 font-medium group-hover:underline">
+                    Mehr erfahren →
+                  </span>
+                </BoundlessImageCard.Content>
+
+                <BoundlessImageCard.Image
+                  fadeGradient
+                  src={service.image}
+                  alt={service.title}
+                />
+              </BoundlessImageCard>
+            </Link>
           ))}
         </div>
       </ContentWrapper>
@@ -313,36 +274,31 @@ export default function Page() {
 
         <SimpleGrid cols={4} className="gap-8">
           {benefits.map((benefit, index) => (
-            <div
+            <SimpleCard
               key={index}
-              className="bg-white p-6 rounded-lg shadow-sm text-center"
+              icon={<div className="text-5xl">{benefit.icon}</div>}
             >
-              <div className="text-5xl mb-4">{benefit.icon}</div>
-              <h3 className="font-semibold text-gray-900 mb-3">
-                {benefit.title}
-              </h3>
-              <p className="text-gray-600 text-sm">{benefit.description}</p>
-            </div>
+              <Typo.H3 className="mb-3">{benefit.title}</Typo.H3>
+              <Typo.Paragraph>{benefit.description}</Typo.Paragraph>
+            </SimpleCard>
           ))}
         </SimpleGrid>
       </ContentWrapper>
 
       {/* CTA Section */}
-      <ContentWrapper background="bg-primary-600">
-        <div className="text-center text-white max-w-3xl mx-auto">
-          <Typo.H2 className="text-white mb-6">
+      <ContentWrapper background="bg-primary-900">
+        <IntroBox dark>
+          <IntroBox.Headline>
             Nicht sicher, welcher Service der richtige ist?
-          </Typo.H2>
-          <Typo.Paragraph className="text-white opacity-90 mb-8 text-lg">
+          </IntroBox.Headline>
+          <IntroBox.Paragraph>
             Wir beraten Sie gerne kostenlos und unverbindlich. In einem kurzen
             Gespräch finden wir heraus, welche Services Ihrem Unternehmen am
             meisten helfen.
-          </Typo.Paragraph>
-          <div className="flex gap-4 justify-center">
-            <ContactButton size="lg">
-              Kostenlose Beratung anfragen
-            </ContactButton>
-          </div>
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <div className="flex gap-4 justify-center">
+          <ContactButton size="lg">Kostenlose Beratung anfragen</ContactButton>
         </div>
       </ContentWrapper>
 

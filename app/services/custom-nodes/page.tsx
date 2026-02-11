@@ -17,6 +17,7 @@ import ContactButton from "@/components/buttons/contact-button";
 import Customer, { allLogos } from "@/components/customer/customer";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 import SimpleCard from "@/components/cards/simple-card";
+import BoundlessImageCard from "@/components/cards/boundless-image-card";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
 } from "@/components/timeline-as-steps";
@@ -298,84 +299,38 @@ export default function Page() {
 
         <div className="space-y-8">
           {useCases.map((useCase, index) => (
-            <div
+            <BoundlessImageCard
+              ratio="3-2"
               key={index}
-              className="bg-white rounded-lg shadow-sm overflow-hidden"
+              imagePosition={index % 2 === 0 ? "right" : "left"}
             >
-              <SimpleGrid cols={2} className="items-center">
-                {index % 2 === 0 ? (
-                  <>
-                    <div className="p-8">
-                      <Typo.H3 className="mb-4">{useCase.title}</Typo.H3>
-                      <Typo.Paragraph className="text-gray-600 mb-6">
-                        {useCase.description}
-                      </Typo.Paragraph>
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-2">
-                          <span className="text-primary-600 font-semibold">
-                            Benefit:
-                          </span>
-                          <span className="text-gray-700">
-                            {useCase.benefit}
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-primary-600 font-semibold">
-                            Timeline:
-                          </span>
-                          <span className="text-gray-700">
-                            {useCase.timeline}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="relative h-80">
-                      <Image
-                        src={useCase.image}
-                        alt={useCase.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="relative h-80">
-                      <Image
-                        src={useCase.image}
-                        alt={useCase.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-8">
-                      <Typo.H3 className="mb-4">{useCase.title}</Typo.H3>
-                      <Typo.Paragraph className="text-gray-600 mb-6">
-                        {useCase.description}
-                      </Typo.Paragraph>
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-2">
-                          <span className="text-primary-600 font-semibold">
-                            Benefit:
-                          </span>
-                          <span className="text-gray-700">
-                            {useCase.benefit}
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-primary-600 font-semibold">
-                            Timeline:
-                          </span>
-                          <span className="text-gray-700">
-                            {useCase.timeline}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </SimpleGrid>
-            </div>
+              <BoundlessImageCard.Content>
+                <Typo.H3 className="mb-4">{useCase.title}</Typo.H3>
+                <Typo.Paragraph className="text-gray-600 mb-6">
+                  {useCase.description}
+                </Typo.Paragraph>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-primary-600 font-semibold">
+                      Benefit:
+                    </span>
+                    <span className="text-gray-700">{useCase.benefit}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-primary-600 font-semibold">
+                      Timeline:
+                    </span>
+                    <span className="text-gray-700">{useCase.timeline}</span>
+                  </div>
+                </div>
+              </BoundlessImageCard.Content>
+
+              <BoundlessImageCard.Image
+                fadeGradient
+                src={useCase.image}
+                alt={useCase.title}
+              />
+            </BoundlessImageCard>
           ))}
         </div>
       </ContentWrapper>
