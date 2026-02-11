@@ -1,0 +1,5 @@
+- n8n Hosting auf Kunden Infrastruktur (OnPrem oder Cloud)
+- Workflow-Nutering (Servicevertrag)
+- Custom Connectivity TypeScript, Node.js, SDKs "There's no node for my specific app."
+- Schulungen
+- High-Performance Scaling Redis, RabbitMQ, Docker Swarm "My n8n is lagging/crashing"

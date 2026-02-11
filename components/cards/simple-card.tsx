@@ -29,6 +29,7 @@ interface SimpleCardProps {
   icon?: JSX.Element;
   children?: ReactNode;
   className?: string;
+  background?: string;
 }
 
 interface FooterProps {
@@ -43,7 +44,7 @@ const itemVariants = {
 
 const variantStyles = {
   default: {
-    card: "bg-white border-primary-300",
+    card: "bg-white border-gray-200",
     footer: "border-primary-200",
   },
   danger: {
@@ -77,10 +78,12 @@ function SimpleCard({
   style = "light",
   variant = "default",
   className = "",
+  background,
 }: SimpleCardProps) {
   const imgClass = img || icon ? "pt-8" : "";
   const styleClass = style === "dark" ? "border border-secondary" : "";
   const variantClass = variantStyles[variant].card;
+  const backgroundClass = background || variantClass;
 
   // Separate Footer from other children
   const childArray = Children.toArray(children);
@@ -94,7 +97,7 @@ function SimpleCard({
   return (
     <CardVariantContext.Provider value={variant}>
       <div
-        className={`rounded-lg border flex flex-col items-center text-center px-4 shadow-md ${variantClass} ${styleClass} ${imgClass} ${className}`}
+        className={`pb-8 border flex flex-col items-center text-center px-4 shadow-md hover:shadow-lg ${backgroundClass} ${styleClass} ${imgClass} ${className}`}
       >
         {icon && (
           <motion.div

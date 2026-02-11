@@ -5,8 +5,17 @@ export default function Footer() {
   const mainMenu = [
     { label: "Über uns", href: "/" },
     { label: "Das Team", href: "/team" },
+    { label: "Services", href: "/services" },
     { label: "Use Cases", href: "/use-cases" },
     // { label: "Blogs", href: "/blogs" },
+  ];
+
+  const servicesMenu = [
+    { label: "n8n Hosting", href: "/services/n8n-hosting" },
+    { label: "Workflow-Wartung", href: "/services/workflow-wartung" },
+    { label: "Custom Nodes", href: "/services/custom-nodes" },
+    { label: "Schulungen", href: "/services/schulungen" },
+    { label: "Performance Scaling", href: "/services/performance-scaling" },
   ];
 
   const productMenu = [
@@ -79,7 +88,7 @@ export default function Footer() {
           </div>
 
           {/* Right Column - Menus */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
             {/* Main Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
@@ -87,6 +96,25 @@ export default function Footer() {
               </h3>
               <ul className="space-y-3">
                 {mainMenu.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="hover:text-secondary-500 transition-colors text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Services Menu */}
+            <div>
+              <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
+                Services
+              </h3>
+              <ul className="space-y-3">
+                {servicesMenu.map((item, index) => (
                   <li key={index}>
                     <Link
                       href={item.href}
