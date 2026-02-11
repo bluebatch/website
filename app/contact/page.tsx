@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "BlueBatch",
     images: [
       {
-        url: "/images/cover-fb.jpg",
+        url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
         alt: "BlueBatch Kontakt",
@@ -36,7 +36,10 @@ export const metadata: Metadata = {
     title: "Kontakt – BlueBatch",
     description:
       "Vereinbaren Sie ein kostenloses Beratungsgespräch. AI-Workflows für Ihr Unternehmen.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/contact",
   },
 };
 
@@ -56,7 +59,7 @@ export default function Page() {
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/product-school-r1wHNmAPWKA-unsplash.jpg" type="image" />
+            <Hero2ColumnImage src="/images/contact-meeting.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>

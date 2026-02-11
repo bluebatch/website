@@ -49,14 +49,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Dokumentenverarbeitung" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Dokumentenverarbeitung" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Dokumentenverarbeitung – Steuerberater | BlueBatch",
     description:
       "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/steuerberater/dokumentenverarbeitung",
   },
 };
 
@@ -71,7 +74,7 @@ export default function Page() {
     <>
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
-          imageSrc="/images/ml.jpg"
+          imageSrc="/images/machine-learning.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
@@ -193,7 +196,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/business-3343885.jpg"
+                  src="/images/business-analytics.jpg"
                   alt="Rechnungsextraktion"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -218,7 +221,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/water-3355303.jpg"
+                  src="/images/data-flow.jpg"
                   alt="Kontoauszug-Verarbeitung"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -243,7 +246,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/website-3374825.jpg"
+                  src="/images/web-development.jpg"
                   alt="Reisekostenabrechnung"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -268,7 +271,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/ali-yahya-dybKaTp3mu4-unsplash.jpg"
+                  src="/images/document-automation.jpg"
                   alt="Sonderfälle"
                   fill
                   className="object-cover shadow-lg rounded-lg"

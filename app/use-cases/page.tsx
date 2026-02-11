@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "BlueBatch",
     images: [
       {
-        url: "/images/cover-fb.jpg",
+        url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
         alt: "BlueBatch Use Cases",
@@ -28,7 +28,10 @@ export const metadata: Metadata = {
     title: "Use Cases – BlueBatch",
     description:
       "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, E-Commerce.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases",
   },
 };
 

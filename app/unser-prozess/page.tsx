@@ -27,6 +27,7 @@ import Typo from "@/components/typo";
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 import IntroBox from "@/components/intro-box";
+import { AnimatedNumber } from "@/components/cards/kpi-card";
 
 export const metadata: Metadata = {
   title: "How We Do – Unser 6-Phasen-Prozess | BlueBatch",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "BlueBatch",
     images: [
       {
-        url: "/images/cover-fb.jpg",
+        url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
         alt: "BlueBatch Prozess",
@@ -61,7 +62,10 @@ export const metadata: Metadata = {
     title: "Unser 6-Phasen-Prozess – BlueBatch",
     description:
       "Mit deutscher Engineering-Präzision und bewährtem Framework automatisieren wir Ihre Prozesse.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/unser-prozess",
   },
 };
 
@@ -81,9 +85,9 @@ const principles = [
 ];
 
 const failureStats = [
-  { value: "67%", label: "scheitern an schlechter Planung" },
-  { value: "23%", label: "scheitern an unklaren Anforderungen" },
-  { value: "45%", label: "scheitern an mangelndem Change Management" },
+  { value: 67, label: "scheitern an schlechter Planung" },
+  { value: 23, label: "scheitern an unklaren Anforderungen" },
+  { value: 45, label: "scheitern an mangelndem Change Management" },
 ];
 
 const managedServices = [
@@ -208,14 +212,16 @@ export default function HowWeDoPage() {
       <ContentWrapper isFirstSection>
         <Hero2Column>
           <Hero2ColumnTextColumn>
-            <Hero2ColumnPreHeadline>Systematic Excellence</Hero2ColumnPreHeadline>
+            <Hero2ColumnPreHeadline>
+              Systematic Excellence
+            </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
               Wo Engineering auf Innovation trifft
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Die meisten Automatisierungsprojekte scheitern an der Planung, nicht
-              an der Technik. Wir bringen deutsche Engineering-Präzision in Ihre
-              Backoffice-Prozesse.
+              Die meisten Automatisierungsprojekte scheitern an der Planung,
+              nicht an der Technik. Wir bringen deutsche Engineering-Präzision
+              in Ihre Backoffice-Prozesse.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="calendar" size="lg">
@@ -224,7 +230,10 @@ export default function HowWeDoPage() {
             </Hero2ColumnCallToAction>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/austin-distel-pjWbUrkUefU-unsplash.jpg" type="image" />
+            <Hero2ColumnImage
+              src="/images/workflow-planning.jpg"
+              type="image"
+            />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
@@ -249,29 +258,30 @@ export default function HowWeDoPage() {
         </SimpleGrid>
       </ContentWrapper>
       {/* Die Wahrheit über Automatisierung */}
-      <ContentWrapper>
-        <h3 className="text-sm md:text-base font-semibold bg-gradient-to-r from-secondary-600 via-primary-600 to-secondary-700 bg-clip-text text-transparent mb-4 uppercase tracking-wide text-center">
-          Die Wahrheit über Automatisierung
-        </h3>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
-          Warum Struktur den Unterschied macht
-        </h2>
-
-        <p className="text-xl font-semibold text-gray-800 text-center mb-8">
-          Zahlen lügen nicht:
-        </p>
+      <ContentWrapper background="bg-gradient-to-br from-primary-900 to-primary-600 ">
+        <IntroBox dark size="wide">
+          <IntroBox.PreHeadline>
+            Die Wahrheit über Automatisierung
+          </IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Warum Struktur den Unterschied macht
+          </IntroBox.Headline>
+          <IntroBox.Subline>Zahlen lügen nicht:</IntroBox.Subline>
+        </IntroBox>
 
         <SimpleGrid cols={3} className="mb-10">
-          {failureStats.map((stat) => (
-            <SimpleCard
+          {failureStats.map((stat, index) => (
+            <div
+              className={`text-center border-white ${index === 2 ? "" : "md:border-r"}`}
               key={stat.label}
-              className="bg-red-50! border border-red-100"
             >
-              <Typo.H3 className="text-red-600">{stat.value}</Typo.H3>
-              <Typo.Paragraph className="text-sm md:text-base text-gray-600 mt-2">
+              <Typo.H2 className="text-red-500">
+                {<AnimatedNumber value={stat.value} suffix="%" />}
+              </Typo.H2>
+              <Typo.Paragraph className="text-sm md:text-base text-white mt-2">
                 {stat.label}
               </Typo.Paragraph>
-            </SimpleCard>
+            </div>
           ))}
         </SimpleGrid>
 
@@ -388,18 +398,17 @@ export default function HowWeDoPage() {
       </ContentWrapper>
       {/* CTA Section */}
       <ContentWrapper>
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Bereit für den ersten Schritt?
-          </h2>
-          <p className="text-lg text-gray-600 mb-8">
+        <IntroBox textCentered size="narrow">
+          <IntroBox.PreHeadline>Bereit?</IntroBox.PreHeadline>
+          <IntroBox.Headline>Bereit für den ersten Schritt?</IntroBox.Headline>
+          <IntroBox.Subline>
             Lassen Sie uns gemeinsam analysieren, wie wir Ihre Prozesse
             systematisch automatisieren können.
-          </p>
+          </IntroBox.Subline>
           <ContactButton icon="calendar" size="lg">
             Kostenlose Erstberatung buchen
           </ContactButton>
-        </div>
+        </IntroBox>
       </ContentWrapper>
     </>
   );

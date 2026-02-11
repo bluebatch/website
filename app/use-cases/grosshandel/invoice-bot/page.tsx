@@ -45,14 +45,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Invoice-Bot" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Invoice-Bot" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Invoice-Bot – Großhandel | BlueBatch",
     description:
       "Eingangsrechnungen automatisch erfassen und verarbeiten. 80% weniger manueller Aufwand.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/grosshandel/invoice-bot",
   },
 };
 
@@ -82,7 +85,7 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/invoice.jpg" type="image" />
+            <Hero2ColumnImage src="/images/invoice-processing.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
@@ -251,7 +254,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/invoice/invoice-e2e.jpg"
+                  src="/images/invoice/invoice-end-to-end-process.jpg"
                   alt="Gesamter Prozess"
                   fill
                   className="object-cover shadow-lg"
@@ -281,7 +284,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/invoice/data-extraction.webp"
+                  src="/images/invoice/invoice-data-extraction.webp"
                   alt="Daten Extraktion"
                   fill
                   className="object-cover shadow-lg"
@@ -311,7 +314,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/invoice/humand-loop.jpg"
+                  src="/images/invoice/invoice-human-in-loop.jpg"
                   alt="Weiterleitung"
                   fill
                   className="object-cover shadow-lg"
@@ -339,7 +342,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/invoice/3-way-matching.png"
+                  src="/images/invoice/invoice-3-way-matching.png"
                   alt="Matching"
                   fill
                   className="object-cover shadow-lg"
@@ -373,7 +376,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/invoice/error-handling.png"
+                  src="/images/invoice/invoice-error-handling.png"
                   alt="Error Handling"
                   fill
                   className="object-cover shadow-lg"

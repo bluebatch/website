@@ -94,7 +94,7 @@ function SimpleCard({
   return (
     <CardVariantContext.Provider value={variant}>
       <div
-        className={`border flex flex-col items-center text-center px-4 shadow-md ${variantClass} ${styleClass} ${imgClass} ${className}`}
+        className={`rounded-lg border flex flex-col items-center text-center px-4 shadow-md ${variantClass} ${styleClass} ${imgClass} ${className}`}
       >
         {icon && (
           <motion.div

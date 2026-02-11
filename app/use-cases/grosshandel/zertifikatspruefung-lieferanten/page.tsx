@@ -33,14 +33,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Zertifikatsprüfung" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Zertifikatsprüfung" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Zertifikatsprüfung Lieferanten – Großhandel | BlueBatch",
     description:
       "ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/grosshandel/zertifikatspruefung-lieferanten",
   },
 };
 
@@ -55,7 +58,7 @@ export default function Page() {
     <>
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
-          imageSrc="/images/test4.jpg"
+          imageSrc="/images/certificate-check.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
@@ -143,7 +146,7 @@ export default function Page() {
         <CardShowcase>
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/clean.jpg"
+              src="/images/data-quality.jpg"
               alt="Zertifikatserfassung"
             />
             <CardShowcase.Content>
@@ -160,7 +163,7 @@ export default function Page() {
 
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/signs-1638668.jpg"
+              src="/images/compliance-signs.jpg"
               alt="Validierung"
             />
             <CardShowcase.Content>
@@ -175,7 +178,7 @@ export default function Page() {
 
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/technology-1587673.jpg"
+              src="/images/technology-integration.jpg"
               alt="Ablaufüberwachung"
             />
             <CardShowcase.Content>
@@ -190,7 +193,7 @@ export default function Page() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/thought-3216768.jpg"
+              src="/images/strategic-thinking.jpg"
               alt="Dashboard"
             />
             <CardShowcase.Content>
@@ -247,7 +250,7 @@ export default function Page() {
           </div>
           <div className="relative aspect-square">
             <Image
-              src="/images/doors-1767562.jpg"
+              src="/images/opportunity-doors.jpg"
               alt="Eskalationsworkflow"
               fill
               className="object-cover rounded-lg shadow-lg"

@@ -48,14 +48,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Angebots-Bot" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Angebots-Bot" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Angebots-Bot – Großhandel | BlueBatch",
     description:
       "Von der Kundenanfrage zum professionellen Angebot in Minuten. 21x höhere Qualifizierungsrate.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/grosshandel/angebots-bot",
   },
 };
 
@@ -117,7 +120,7 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/calculator-178127.jpg" type="image" />
+            <Hero2ColumnImage src="/images/pricing-calculator.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
@@ -210,7 +213,7 @@ export default function Page() {
           </div>
           <div className="relative aspect-video">
             <Image
-              src="/images/businessman-3075837.jpg"
+              src="/images/business-professional.jpg"
               alt="Sales Team Entlastung"
               fill
               className="object-cover rounded-lg shadow-lg"

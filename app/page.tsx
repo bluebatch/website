@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "BlueBatch",
     images: [
       {
-        url: "/images/cover-fb.jpg",
+        url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
         alt: "BlueBatch – Enterprise AI-Automation",
@@ -51,11 +51,14 @@ export const metadata: Metadata = {
     title: "BlueBatch – Enterprise AI-Automation",
     description:
       "Skalieren Sie Ihren Umsatz, nicht Ihren Headcount. AI-Workflows live in nur 5 Tagen.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
   },
   robots: {
     index: true,
     follow: true,
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
@@ -132,7 +135,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-video">
             <Image
-              src="/images/consulting.jpg"
+              src="/images/consulting-services.jpg"
               alt="AI Automation"
               fill
               className="object-cover rounded-lg shadow-lg"
@@ -387,7 +390,7 @@ export default function Home() {
         <SimpleGrid cols={2} className="items-center gap-12">
           <div className="relative aspect-video">
             <Image
-              src="/images/business-3152586.jpg"
+              src="/images/business-automation.jpg"
               alt="Workflow Engineering"
               fill
               className="object-cover rounded-lg shadow-lg"
@@ -430,7 +433,7 @@ export default function Home() {
         <CardShowcase>
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/auditorium-2816353.jpg"
+              src="/images/training-seminar.jpg"
               alt="Kein Lock-in"
             />
             <CardShowcase.Content>
@@ -447,7 +450,7 @@ export default function Home() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/human-2944064.jpg"
+              src="/images/human-resources.jpg"
               alt="Bewährte Patterns"
             />
             <CardShowcase.Content>
@@ -463,7 +466,7 @@ export default function Home() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/ari-he-euQVngjZGSI-unsplash.jpg"
+              src="/images/business-growth.jpg"
               alt="Enterprise-DNA"
             />
             <CardShowcase.Content>
@@ -479,7 +482,7 @@ export default function Home() {
 
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/building-2762318.jpg"
+              src="/images/office-building.jpg"
               alt="Managed Operations"
             />
             <CardShowcase.Content>

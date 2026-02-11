@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "BlueBatch",
     images: [
       {
-        url: "/images/cover-fb.jpg",
+        url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
         alt: "BlueBatch Großhandel",
@@ -43,7 +43,10 @@ export const metadata: Metadata = {
     title: "Großhandel – BlueBatch Use Cases",
     description:
       "Wie BlueBatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/grosshandel",
   },
 };
 
@@ -53,49 +56,49 @@ const useCases = [
     title: "Auftragserfassung",
     description:
       "Bestellungen aus E-Mails, PDFs, Faxen und Portalen automatisch erfassen. KI extrahiert alle Daten, validiert gegen ERP und Lager – von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.",
-    image: "/images/test5.jpg",
+    image: "/images/order-capture.jpg",
   },
   {
     slug: "bestellabwicklung",
     title: "Bestellabwicklung",
     description:
       "Von der Bestellung zur Auslieferung – vollautomatisch. Validierung, Lager-Routing, Kommissionierung und Versand orchestriert durch n8n. 80-90% schnellere Bearbeitung.",
-    image: "/images/computer-3368242.jpg",
+    image: "/images/order-processing.jpg",
   },
   {
     slug: "lagerverwaltung",
     title: "Lagerverwaltung",
     description:
       "Echtzeit-Bestandssynchronisation über alle Lager und Kanäle. KI-basierte Bedarfsprognosen lösen automatisch Nachbestellungen aus. Nie wieder Fehlbestand oder Überbestand.",
-    image: "/images/sw.jpg",
+    image: "/images/warehouse-software.jpg",
   },
   {
     slug: "invoice-bot",
     title: "Invoice-Bot",
     description:
       "Eingangsrechnungen automatisch erfassen, prüfen und zur Freigabe weiterleiten. KI extrahiert Beträge, Steuer und Metadaten – 80% weniger manueller Aufwand.",
-    image: "/images/invoice.jpg",
+    image: "/images/invoice-processing.jpg",
   },
   {
     slug: "3-wege-rechnungspruefung",
     title: "3-Wege-Rechnungsprüfung",
     description:
       "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung. Toleranzregeln filtern relevante Abweichungen, Exception Routing bringt Ausnahmen zu den richtigen Freigebern.",
-    image: "/images/neonbrand-LUgHXvLe_kM-unsplash.jpg",
+    image: "/images/invoice-verification.jpg",
   },
   {
     slug: "zertifikatspruefung-lieferanten",
     title: "Zertifikatsprüfung Lieferanten",
     description:
       "ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. n8n überwacht Ablaufdaten, sendet Erinnerungen und validiert gegen Akkreditierungsstellen.",
-    image: "/images/test4.jpg",
+    image: "/images/certificate-check.jpg",
   },
   {
     slug: "angebots-bot",
     title: "Angebots-Bot",
     description:
       "Von der Kundenanfrage zum professionellen Angebot in Minuten. Automatische Preisabfrage, PDF-Generierung und Follow-up – 21x höhere Qualifizierungsrate.",
-    image: "/images/calculator-178127.jpg",
+    image: "/images/pricing-calculator.jpg",
   },
 ];
 
@@ -122,7 +125,7 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/aaron-burden-AXqMy8MSSdk-unsplash.jpg" type="image" />
+            <Hero2ColumnImage src="/images/wholesale-planning.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>

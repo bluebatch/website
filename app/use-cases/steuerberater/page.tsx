@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "BlueBatch",
     images: [
       {
-        url: "/images/cover-fb.jpg",
+        url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
         alt: "BlueBatch Steuerberater",
@@ -43,7 +43,10 @@ export const metadata: Metadata = {
     title: "Steuerberater – BlueBatch Use Cases",
     description:
       "Wie BlueBatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/steuerberater",
   },
 };
 
@@ -53,21 +56,21 @@ const useCases = [
     title: "Dokumentenverarbeitung",
     description:
       "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren. KI extrahiert relevante Daten und überträgt sie strukturiert – 70% weniger manuelle Erfassung.",
-    image: "/images/ml.jpg",
+    image: "/images/machine-learning.jpg",
   },
   {
     slug: "mandantenkommunikation",
     title: "Mandantenkommunikation",
     description:
       "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen. 24/7 Erreichbarkeit, 70% weniger Routine-E-Mails.",
-    image: "/images/test3.jpg",
+    image: "/images/client-portal.jpg",
   },
   {
     slug: "datev-jira-task-orchestration",
     title: "DATEV-Jira Orchestration",
     description:
       "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Aufgabenerstellung, Fristenüberwachung und Eskalations-Workflows – 99,9% Fristeneinhaltung.",
-    image: "/images/test1.jpg",
+    image: "/images/datev-integration.jpg",
   },
 ];
 
@@ -94,7 +97,7 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/annie-spratt-QckxruozjRg-unsplash.jpg" type="image" />
+            <Hero2ColumnImage src="/images/tax-consulting-workspace.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>

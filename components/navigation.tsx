@@ -141,73 +141,6 @@ export default function Navigation() {
     ],
   };
 
-  // Blog Menu - List of blog posts with categories
-  const blogMenu = [
-    {
-      title: "Blog 1",
-      description: "Einführung in AI Agenten",
-      href: "/blogs/blog-1",
-      category: "AI & Technologie",
-      categorySlug: "ai-technologie",
-      addToSubmenu: true,
-    },
-    {
-      title: "Blog 2",
-      description: "Best Practices für Automation",
-      href: "/blogs/blog-2",
-      category: "AI & Technologie",
-      categorySlug: "ai-technologie",
-      addToSubmenu: true,
-    },
-    {
-      title: "Blog 3",
-      description: "Erfolgsgeschichten unserer Kunden",
-      href: "/blogs/blog-3",
-      category: "Success Stories",
-      categorySlug: "success-stories",
-      addToSubmenu: true,
-    },
-    {
-      title: "Blog 4",
-      description: "Prozessoptimierung im Unternehmen",
-      href: "/blogs/blog-4",
-      category: "Business",
-      categorySlug: "business",
-      addToSubmenu: true,
-    },
-    {
-      title: "Blog 5",
-      description: "Zukunft der Arbeit",
-      href: "/blogs/blog-5",
-      category: "Business",
-      categorySlug: "business",
-      addToSubmenu: false,
-    },
-  ];
-
-  // Group blog posts by category for submenu
-  const blogsByCategory = blogMenu
-    .filter((blog) => blog.addToSubmenu)
-    .reduce(
-      (acc, blog) => {
-        if (!acc[blog.category]) {
-          acc[blog.category] = {
-            categoryName: blog.category,
-            categorySlug: blog.categorySlug,
-            posts: [],
-          };
-        }
-        acc[blog.category].posts.push(blog);
-        return acc;
-      },
-      {} as Record<
-        string,
-        { categoryName: string; categorySlug: string; posts: typeof blogMenu }
-      >,
-    );
-
-  const blogCategories = Object.values(blogsByCategory);
-
   const itemVariants = {
     hidden: { y: -20, opacity: 0 },
     visible: { y: 0, opacity: 1 },
@@ -432,90 +365,6 @@ export default function Navigation() {
                   </div>
                 )}
               </motion.div>
-
-              {/* Blog Dropdown */}
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={itemVariants}
-                transition={{ duration: 0.4, delay: 0.4 }}
-                className="relative"
-                onMouseEnter={() => setActiveDropdown("blog")}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <Link
-                  href="/blogs"
-                  className="flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                    />
-                  </svg>
-                  Blog
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </Link>
-
-                {activeDropdown === "blog" && (
-                  <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-96 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
-                    onMouseEnter={() => setActiveDropdown("blog")}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <div className="p-2">
-                      {blogCategories.map((category, categoryIndex) => (
-                        <div key={categoryIndex}>
-                          {categoryIndex > 0 && (
-                            <div className="border-t border-gray-200 my-2"></div>
-                          )}
-                          <Link
-                            href={`/blogs?cat=${category.categorySlug}`}
-                            className="block px-3 py-2 font-bold text-gray-900 hover:text-primary-500 text-sm uppercase tracking-wide transition-colors"
-                          >
-                            {category.categoryName}
-                          </Link>
-                          <div className="space-y-1">
-                            {category.posts.map((item, index) => (
-                              <Link
-                                key={index}
-                                href={item.href}
-                                className="block p-3 rounded-lg hover:bg-gray-50 transition-colors group"
-                              >
-                                <h4 className="font-semibold text-gray-900 group-hover:text-primary-500">
-                                  {item.title}
-                                </h4>
-                                <p className="text-sm text-gray-500 mt-0.5">
-                                  {item.description}
-                                </p>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </motion.div>
             </div>
 
             {/* Right Side - Actions */}
@@ -660,30 +509,6 @@ export default function Navigation() {
                     <p className="font-medium">{topic.title}</p>
                   </Link>
                 ))}
-              </div>
-
-              {/* Blog - Just a link */}
-              <div className="pt-2">
-                <Link
-                  href="/blogs"
-                  className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                    />
-                  </svg>
-                  <p className="font-medium">Blog</p>
-                </Link>
               </div>
 
               <div className="mt-4" onClick={() => setMobileMenuOpen(false)}>

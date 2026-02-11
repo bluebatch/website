@@ -52,14 +52,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Bestellabwicklung" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Bestellabwicklung" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Bestellabwicklung – Großhandel | BlueBatch",
     description:
       "Von der Bestellung zur Auslieferung – vollautomatisch. 80-90% schnellere Bearbeitung.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/grosshandel/bestellabwicklung",
   },
 };
 
@@ -86,7 +89,7 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/computer-3368242.jpg" type="image" />
+            <Hero2ColumnImage src="/images/order-processing.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
@@ -95,7 +98,7 @@ export default function Page() {
         <SimpleGrid cols={2} className="items-center gap-12">
           <div className="relative aspect-video">
             <Image
-              src="/images/domore.jpg"
+              src="/images/productivity-boost.jpg"
               alt="Manuelle Bestellabwicklung"
               fill
               className="object-cover rounded-lg shadow-lg"
@@ -133,7 +136,7 @@ export default function Page() {
         <CardShowcase>
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/exhibition-1659447.jpg"
+              src="/images/trade-exhibition.jpg"
               alt="Auftragsvalidierung"
             />
             <CardShowcase.Content>
@@ -150,7 +153,7 @@ export default function Page() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/process.jpg"
+              src="/images/process-automation.jpg"
               alt="Kommissionierung"
             />
             <CardShowcase.Content>
@@ -165,7 +168,7 @@ export default function Page() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/street-map-2679271.jpg"
+              src="/images/logistics-mapping.jpg"
               alt="Versandautomatisierung"
             />
             <CardShowcase.Content>
@@ -179,7 +182,7 @@ export default function Page() {
 
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/times-square-790792.jpg"
+              src="/images/digital-marketplace.jpg"
               alt="Kundenkommunikation"
             />
             <CardShowcase.Content>

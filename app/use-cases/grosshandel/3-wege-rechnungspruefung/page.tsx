@@ -31,14 +31,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch 3-Wege-Rechnungsprüfung" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch 3-Wege-Rechnungsprüfung" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "3-Wege-Rechnungsprüfung – Großhandel | BlueBatch",
     description:
       "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung. Nie wieder manuelle Prüfung.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/grosshandel/3-wege-rechnungspruefung",
   },
 };
 
@@ -63,7 +66,7 @@ export default function Page() {
     <>
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
-          imageSrc="/images/neonbrand-LUgHXvLe_kM-unsplash.jpg"
+          imageSrc="/images/invoice-verification.jpg"
           overlayOpacity={0.85}
           opacityBackground="white"
         >
@@ -140,7 +143,7 @@ export default function Page() {
         <SimpleGrid cols={2} className="items-center gap-12">
           <div className="relative aspect-video">
             <Image
-              src="/images/invoice/3-way-matching.png"
+              src="/images/invoice/invoice-3-way-matching.png"
               alt="3-Wege-Matching Visualisierung"
               fill
               className="object-cover rounded-lg shadow-lg"
@@ -179,7 +182,7 @@ export default function Page() {
         <CardShowcase>
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/light-2156209.jpg"
+              src="/images/automation-efficiency.jpg"
               alt="OCR Datenextraktion"
             />
             <CardShowcase.Content>
@@ -196,7 +199,7 @@ export default function Page() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/invoice/invoice-e2e.jpg"
+              src="/images/invoice/invoice-end-to-end-process.jpg"
               alt="ERP Integration"
             />
             <CardShowcase.Content>
@@ -210,7 +213,7 @@ export default function Page() {
 
           <CardShowcase.Item size="small">
             <CardShowcase.Image
-              src="/images/invoice/humand-loop.jpg"
+              src="/images/invoice/invoice-human-in-loop.jpg"
               alt="Exception Routing"
             />
             <CardShowcase.Content>
@@ -225,7 +228,7 @@ export default function Page() {
 
           <CardShowcase.Item size="large">
             <CardShowcase.Image
-              src="/images/invoice/error-handling.png"
+              src="/images/invoice/invoice-error-handling.png"
               alt="Buchung und Zahlung"
             />
             <CardShowcase.Content>

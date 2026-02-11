@@ -21,14 +21,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Produktdatenmanagement" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Produktdatenmanagement" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Produktdatenmanagement – E-Commerce | BlueBatch",
     description:
       "Produktdaten automatisch pflegen, anreichern und über alle Kanäle synchronisieren.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/ecommerce/produktdatenmanagement",
   },
 };
 

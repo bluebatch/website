@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "BlueBatch",
     images: [
       {
-        url: "/images/cover-fb.jpg",
+        url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
         alt: "BlueBatch Team",
@@ -55,7 +55,10 @@ export const metadata: Metadata = {
     title: "Team – BlueBatch",
     description:
       "Lernen Sie das BlueBatch Team kennen. Workflow-Experten und Automatisierungs-Profis.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/team",
   },
 };
 
@@ -77,7 +80,7 @@ export default function TeamPage() {
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/startae-team-8RX3W79_UTE-unsplash.jpg" type="image" />
+            <Hero2ColumnImage src="/images/team-collaboration.jpg" type="image" />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
@@ -96,7 +99,7 @@ export default function TeamPage() {
         <div className="mt-12">
           <Team>
             <TeamMember>
-              <TeamImage src="/mh-small.png" alt="Max - Gründer" />
+              <TeamImage src="/mh-small.webp" alt="Max - Gründer" />
               <TeamName>Max</TeamName>
               <TeamRole>Gründer & CEO</TeamRole>
               <TeamDescription>
@@ -137,24 +140,24 @@ export default function TeamPage() {
         <SimpleGrid cols={3}>
           <div className="relative aspect-[4/3] overflow-hidden border-4 border-white">
             <Image
-              src="/team/team-1.jpg"
-              alt="Team"
+              src="/team/bluebatch-team-workspace.jpg"
+              alt="BlueBatch Team Workspace"
               fill
               className="object-cover"
             />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden border-4 border-white">
             <Image
-              src="/team/team-2.png"
-              alt="Team"
+              src="/team/bluebatch-team-collaboration.jpg"
+              alt="BlueBatch Team Collaboration"
               fill
               className="object-cover scale-110"
             />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden border-4 border-white">
             <Image
-              src="/team/team-3.png"
-              alt="Team"
+              src="/team/bluebatch-team-office.jpg"
+              alt="BlueBatch Team Office"
               fill
               className="object-cover scale-110"
             />

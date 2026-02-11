@@ -11,7 +11,7 @@ interface KpiCardProps {
   className?: string;
 }
 
-function AnimatedNumber({
+export function AnimatedNumber({
   value,
   prefix = "",
   suffix = "",

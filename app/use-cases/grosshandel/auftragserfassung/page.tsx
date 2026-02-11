@@ -50,14 +50,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Auftragserfassung" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Auftragserfassung" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Auftragserfassung – Großhandel | BlueBatch",
     description:
       "Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/grosshandel/auftragserfassung",
   },
 };
 
@@ -72,7 +75,7 @@ export default function Page() {
     <>
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
-          imageSrc="/images/test5.jpg"
+          imageSrc="/images/order-capture.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
@@ -200,7 +203,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/handshake-3382503.jpg"
+                  src="/images/partnership.jpg"
                   alt="E-Mail Extraktion"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -225,7 +228,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/road-166543.jpg"
+                  src="/images/business-roadmap.jpg"
                   alt="EDI Integration"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -252,7 +255,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/savings-2789112.jpg"
+                  src="/images/cost-savings.jpg"
                   alt="Web Portal"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -281,7 +284,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/map-455769.jpg"
+                  src="/images/process-mapping.jpg"
                   alt="Legacy Kanäle"
                   fill
                   className="object-cover shadow-lg rounded-lg"

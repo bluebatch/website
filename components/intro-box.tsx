@@ -59,13 +59,14 @@ function PreHeadline({
   className = "",
   dark = false,
 }: SubComponentProps) {
+  const defaultClass = "bg-gradient-to-r bg-clip-text text-transparent";
   const colorClasses = dark
-    ? "text-secondary-400"
-    : "bg-gradient-to-r from-primary-400 via-primary-700 to-primary-600 bg-clip-text text-transparent";
+    ? "from-secondary-400 via-secondary-600 to-secondary-300"
+    : "from-primary-400 via-primary-700 to-primary-600";
 
   return (
     <h3
-      className={`inline-block text-sm md:text-base font-semibold mb-4 uppercase tracking-wide ${colorClasses} ${className}`}
+      className={`inline-block text-sm md:text-base font-semibold mb-4 uppercase tracking-wide ${defaultClass} ${colorClasses} ${className}`}
     >
       {children}
     </h3>

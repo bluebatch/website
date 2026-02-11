@@ -48,7 +48,7 @@ export default function ConsultationCtaDefault({
         </ConsultationCtaButton>
       </ConsultationCtaTextColumn>
       {/* Image - 50% width, right side, 100% height */}
-      <ConsultationCtaImage src="/team/mh_portrait.webp" alt="Berater" />
+      <ConsultationCtaImage src="/team/max-portrait.webp" alt="Berater" />
     </ConsultationCta>
   );
 }

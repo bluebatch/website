@@ -49,14 +49,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch DATEV-Jira Orchestration" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch DATEV-Jira Orchestration" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "DATEV-Jira Task Orchestration – Steuerberater | BlueBatch",
     description:
       "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/steuerberater/datev-jira-task-orchestration",
   },
 };
 
@@ -71,7 +74,7 @@ export default function Page() {
     <>
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
-          imageSrc="/images/test1.jpg"
+          imageSrc="/images/datev-integration.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
@@ -191,7 +194,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/background-3228704.jpg"
+                  src="/images/workflow-background.jpg"
                   alt="Synchronisation"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -216,7 +219,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/tim-van-der-kuip-HVp2MG15y3E-unsplash.jpg"
+                  src="/images/task-management.jpg"
                   alt="Fristenmanagement"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -241,7 +244,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/thought-3216768.jpg"
+                  src="/images/strategic-thinking.jpg"
                   alt="Workload-Dashboard"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -266,7 +269,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/power-plant-344231.jpg"
+                  src="/images/process-power.jpg"
                   alt="Eskalation"
                   fill
                   className="object-cover shadow-lg rounded-lg"

@@ -49,14 +49,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Mandantenkommunikation" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Mandantenkommunikation" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mandantenkommunikation – Steuerberater | BlueBatch",
     description:
       "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/steuerberater/mandantenkommunikation",
   },
 };
 
@@ -71,7 +74,7 @@ export default function Page() {
     <>
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
-          imageSrc="/images/test3.jpg"
+          imageSrc="/images/client-portal.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
@@ -193,7 +196,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/benjamin-voros-Hon8H9dvTBM-unsplash.jpg"
+                  src="/images/digital-workflow.jpg"
                   alt="KI-Chatbot"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -218,7 +221,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/startae-team-7tXA8xwe4W4-unsplash.jpg"
+                  src="/images/team-meeting.jpg"
                   alt="Fristenerinnerung"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -243,7 +246,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/teemu-paananen-bzdhc5b3Bxs-unsplash.jpg"
+                  src="/images/client-communication.jpg"
                   alt="Belegkampagnen"
                   fill
                   className="object-cover shadow-lg rounded-lg"
@@ -268,7 +271,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video">
                 <Image
-                  src="/images/neonbrand-gYf49RB7bvE-unsplash.jpg"
+                  src="/images/communication-tools.jpg"
                   alt="Status-Updates"
                   fill
                   className="object-cover shadow-lg rounded-lg"

@@ -39,14 +39,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "BlueBatch",
-    images: [{ url: "/images/cover-fb.jpg", width: 1200, height: 630, alt: "BlueBatch Lagerverwaltung" }],
+    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Lagerverwaltung" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Lagerverwaltung – Großhandel | BlueBatch",
     description:
       "Echtzeit-Bestandssynchronisation und KI-basierte Bedarfsprognosen für automatische Nachbestellungen.",
-    images: ["/images/cover-fb.jpg"],
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/use-cases/grosshandel/lagerverwaltung",
   },
 };
 
@@ -96,7 +99,7 @@ export default function Page() {
     <>
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
-          imageSrc="/images/sw.jpg"
+          imageSrc="/images/warehouse-software.jpg"
           overlayOpacity={0.85}
           opacityBackground="white"
         >
@@ -217,7 +220,7 @@ export default function Page() {
           </div>
           <div className="relative aspect-video">
             <Image
-              src="/images/exhibition-1659447.jpg"
+              src="/images/trade-exhibition.jpg"
               alt="KI Bedarfsprognose"
               fill
               className="object-cover rounded-lg shadow-lg"

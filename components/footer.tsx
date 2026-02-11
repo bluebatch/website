@@ -6,7 +6,7 @@ export default function Footer() {
     { label: "Über uns", href: "/" },
     { label: "Das Team", href: "/team" },
     { label: "Use Cases", href: "/use-cases" },
-    { label: "Blogs", href: "/blogs" },
+    // { label: "Blogs", href: "/blogs" },
   ];
 
   const productMenu = [
