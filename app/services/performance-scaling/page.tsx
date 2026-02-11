@@ -476,12 +476,8 @@ export default function Page() {
             Optimierungspotenzial. Keine Verpflichtungen, nur Fakten.
           </Typo.Paragraph>
           <div className="flex gap-4 justify-center">
-            <ContactButton size="lg" variant="secondary">
-              Kostenlose Analyse anfragen
-            </ContactButton>
-            <ContactButton size="lg" variant="secondary">
-              Demo vereinbaren
-            </ContactButton>
+            <ContactButton size="lg">Kostenlose Analyse anfragen</ContactButton>
+            <ContactButton size="lg">Demo vereinbaren</ContactButton>
           </div>
         </div>
       </ContentWrapper>
