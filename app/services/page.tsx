@@ -54,8 +54,7 @@ const services = [
   {
     slug: "n8n-hosting",
     title: "n8n Hosting",
-    shortDescription:
-      "Self-Hosting auf Ihrer Infrastruktur",
+    shortDescription: "Self-Hosting auf Ihrer Infrastruktur",
     description:
       "Professionelles n8n Hosting auf Ihrer eigenen Infrastruktur – OnPrem oder Cloud. Maximale Datenkontrolle, DSGVO-konform und kosteneffizient. Unbegrenzte Workflows ab €50/Monat.",
     icon: "🏢",
@@ -70,8 +69,7 @@ const services = [
   {
     slug: "workflow-wartung",
     title: "Workflow-Wartung",
-    shortDescription:
-      "Servicevertrag mit 99,9% Uptime",
+    shortDescription: "Servicevertrag mit 99,9% Uptime",
     description:
       "Professionelle Wartung Ihrer n8n-Workflows. 24/7 Monitoring, proaktive Updates, Performance-Optimierung. Fokussieren Sie sich auf Ihr Business – wir kümmern uns um die Technik.",
     icon: "🔧",
@@ -86,8 +84,7 @@ const services = [
   {
     slug: "custom-nodes",
     title: "Custom Node Development",
-    shortDescription:
-      "Maßgeschneiderte Integrationen",
+    shortDescription: "Maßgeschneiderte Integrationen",
     description:
       "Es gibt keinen Node für Ihre App? Wir entwickeln Custom n8n Nodes für jede API, jedes System. TypeScript, Node.js, professionelle Entwicklung und langfristige Wartung.",
     icon: "💻",
@@ -102,8 +99,7 @@ const services = [
   {
     slug: "schulungen",
     title: "Schulungen & Workshops",
-    shortDescription:
-      "Befähigen Sie Ihr Team",
+    shortDescription: "Befähigen Sie Ihr Team",
     description:
       "Praxisorientierte n8n Schulungen für Ihr Team. Vor-Ort, Online oder Hybrid. Von Grundlagen bis Enterprise-Features. Individuell auf Ihre Anforderungen zugeschnitten.",
     icon: "🎓",
@@ -118,8 +114,7 @@ const services = [
   {
     slug: "performance-scaling",
     title: "Performance Scaling",
-    shortDescription:
-      "Von 23 auf 162 Requests/Sekunde",
+    shortDescription: "Von 23 auf 162 Requests/Sekunde",
     description:
       "n8n laggt oder crashed? Wir lösen Performance-Probleme mit Redis, RabbitMQ und Docker Swarm. 7x höherer Throughput, 0% Fehlerrate, 99,9% Uptime garantiert.",
     icon: "🚀",
@@ -184,7 +179,10 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/business-automation.jpg" type="image" />
+            <Hero2ColumnImage
+              src="/images/business-automation.jpg"
+              type="image"
+            />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
@@ -305,7 +303,9 @@ export default function Page() {
       {/* Benefits */}
       <ContentWrapper background="bg-gray-50">
         <IntroBox>
-          <IntroBox.Headline>Warum BlueBatch als n8n Partner?</IntroBox.Headline>
+          <IntroBox.Headline>
+            Warum BlueBatch als n8n Partner?
+          </IntroBox.Headline>
           <IntroBox.Paragraph>
             Ihr Full-Service-Partner für Enterprise n8n
           </IntroBox.Paragraph>
@@ -339,7 +339,7 @@ export default function Page() {
             meisten helfen.
           </Typo.Paragraph>
           <div className="flex gap-4 justify-center">
-            <ContactButton size="lg" variant="secondary">
+            <ContactButton size="lg">
               Kostenlose Beratung anfragen
             </ContactButton>
           </div>
