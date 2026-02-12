@@ -18,6 +18,8 @@ import Customer from "@/components/customer/customer";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 import StatsList from "@/components/stats-list";
 import IntroBox from "@/components/intro-box";
+import { AnimatedNumber } from "@/components/cards/kpi-card";
+import Icon from "@/components/icon";
 import TabGroup, {
   TabNavigation,
   TabItem,
@@ -76,6 +78,57 @@ const benefits = [
     value: 99.9,
     suffix: "%",
     label: "Uptime-Garantie mit Professional SLA",
+  },
+];
+
+const pricingTiers = [
+  {
+    name: "Small",
+    subtitle: "Base",
+    price: 1000,
+    priceSuffix: "",
+    workflowCount: 5,
+    workflowPrefix: "",
+    workflowsLabel: "Workflows",
+    sla: "48 Stunden",
+    credits: "4 Stunden",
+    features: [
+      { label: "Proaktive Updates", highlight: false },
+      { label: "Performance-Optimierung", highlight: false },
+    ],
+  },
+  {
+    name: "Medium",
+    subtitle: "",
+    price: 3000,
+    priceSuffix: "",
+    workflowCount: 15,
+    workflowPrefix: "",
+    workflowsLabel: "Workflows",
+    sla: "24 Stunden",
+    credits: "8 Stunden",
+    features: [
+      { label: "Proaktive Updates", highlight: false },
+      { label: "Performance-Optimierung", highlight: false },
+      { label: "Proactive Refactoring", highlight: true },
+    ],
+  },
+  {
+    name: "Large",
+    subtitle: "Enterprise",
+    price: 5000,
+    priceSuffix: "+",
+    workflowCount: 15,
+    workflowPrefix: "Ab ",
+    workflowsLabel: "Workflows",
+    sla: "12 Stunden oder individuell",
+    credits: "12 Stunden",
+    features: [
+      { label: "Proaktive Updates", highlight: false },
+      { label: "Performance-Optimierung", highlight: false },
+      { label: "Proactive Refactoring", highlight: true },
+      { label: "Dedicated Support", highlight: true },
+    ],
   },
 ];
 
@@ -425,6 +478,115 @@ export default function Page() {
               </div>
             </div>
           </div>
+        </SimpleGrid>
+      </ContentWrapper>
+
+      {/* Pricing Section */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Workflow-Servicevertrag</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Der Preis richtet sich nach der Anzahl Ihrer Kundenworkflows – nicht
+            nach technischen n8n Workflows. Ein Kundenworkflow wie
+            &quot;Rechnungseingang&quot; kann aus mehreren n8n Workflows
+            bestehen und wird als ein Workflow gezählt.
+          </IntroBox.Paragraph>
+        </IntroBox>
+
+        <SimpleGrid cols={3}>
+          {pricingTiers.map((tier, index) => (
+            <div
+              key={index}
+              className="relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
+            >
+              {/* Header */}
+              <div className="px-8 pt-8 pb-6">
+                <div className="flex items-baseline justify-between mb-2">
+                  <Typo.H3 className="text-lg font-semibold text-gray-900">
+                    {tier.name}
+                  </Typo.H3>
+                  {tier.subtitle && (
+                    <span className="text-xs text-gray-500 font-medium">
+                      {tier.subtitle}
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl font-bold text-gray-900 tracking-tight">
+                    <AnimatedNumber
+                      value={tier.price}
+                      suffix={tier.priceSuffix}
+                    />
+                    {" €"}
+                  </span>
+                  <span className="text-gray-500 text-sm">/Monat</span>
+                </div>
+              </div>
+
+              {/* Workflow Count - Highlighted */}
+              <div className="mx-8 mb-6 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl p-6 shadow-lg">
+                <div className="flex items-baseline justify-center gap-3">
+                  <div className="flex items-baseline gap-2">
+                    {tier.workflowPrefix && (
+                      <span className="text-2xl font-bold text-white">
+                        {tier.workflowPrefix}
+                      </span>
+                    )}
+                    <span className="text-5xl font-bold text-white tracking-tight">
+                      <AnimatedNumber value={tier.workflowCount} />
+                    </span>
+                  </div>
+                  <span className="text-primary-100 text-sm font-medium">
+                    {tier.workflowsLabel}
+                  </span>
+                </div>
+              </div>
+
+              {/* Details */}
+              <div className="px-8 pb-8 space-y-6">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between py-3 border-b border-gray-100">
+                    <span className="text-sm text-gray-600">Response SLA</span>
+                    <span className="text-sm font-semibold text-gray-900">
+                      {tier.sla}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-gray-100">
+                    <span className="text-sm text-gray-600">
+                      Entwicklung/Monat
+                    </span>
+                    <span className="text-sm font-semibold text-gray-900">
+                      {tier.credits}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <div className="space-y-3 pt-2">
+                  {tier.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <Icon.Checkmark
+                        className={
+                          feature.highlight
+                            ? "text-primary-600"
+                            : "text-gray-400"
+                        }
+                      />
+                      <span
+                        className={`text-sm ${
+                          feature.highlight
+                            ? "text-gray-900 font-medium"
+                            : "text-gray-600"
+                        }`}
+                      >
+                        {feature.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </SimpleGrid>
       </ContentWrapper>
 

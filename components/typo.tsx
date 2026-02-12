@@ -3,32 +3,36 @@ import { ReactNode } from "react";
 interface TypoProps {
   children: ReactNode;
   className?: string;
+  disableMargin?: boolean;
 }
 
-function H1({ children, className = "" }: TypoProps) {
+function H1({ children, className = "", disableMargin = false }: TypoProps) {
+  const marginClasses = disableMargin ? "" : "mb-6";
   return (
     <h1
-      className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight ${className}`}
+      className={`text-4xl md:text-5xl lg:text-6xl font-bold ${marginClasses} leading-tight ${className}`}
     >
       {children}
     </h1>
   );
 }
 
-function H2({ children, className = "" }: TypoProps) {
+function H2({ children, className = "", disableMargin = false }: TypoProps) {
+  const marginClasses = disableMargin ? "" : "mb-5 mt-10";
   return (
     <h2
-      className={`text-3xl md:text-4xl font-bold mb-5 mt-10 leading-tight ${className}`}
+      className={`text-3xl md:text-4xl font-bold ${marginClasses} leading-tight ${className}`}
     >
       {children}
     </h2>
   );
 }
 
-function H3({ children, className = "" }: TypoProps) {
+function H3({ children, className = "", disableMargin = false }: TypoProps) {
+  const marginClasses = disableMargin ? "" : "mb-4 mt-8";
   return (
     <h3
-      className={`text-xl md:text-2xl font-semibold mb-4 mt-8 leading-snug ${className}`}
+      className={`text-xl md:text-2xl font-semibold ${marginClasses} leading-snug ${className}`}
     >
       {children}
     </h3>

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -28,6 +30,7 @@ export default function Footer() {
     { label: "Kontakt", href: "/contact" },
     { label: "Das Team", href: "/team" },
     { label: "Impressum", href: "/impressum" },
+    { label: "Datenschutz", href: "/datenschutz" },
   ];
 
   const socialLinks = [
@@ -172,10 +175,32 @@ export default function Footer() {
 
         {/* Bottom Row - Copyright & Social */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          {/* Copyright */}
-          <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} bluebatch. All rights reserved.
-          </p>
+          {/* Copyright & Cookie Settings */}
+          <div className="flex items-center gap-4">
+            <p className="text-gray-500 text-sm">
+              © {new Date().getFullYear()} bluebatch. All rights reserved.
+            </p>
+            <button
+              onClick={() => window.openConsentSettings?.()}
+              className="flex cursor-pointer items-center gap-1.5 text-gray-500 text-sm transition-colors hover:text-secondary-500"
+              aria-label="Cookie-Einstellungen öffnen"
+            >
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 11c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm-1-9C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10c0-.34-.02-.675-.055-1.005a2.5 2.5 0 01-2.445-1.495 2.5 2.5 0 01-3-3A2.5 2.5 0 0115.05 4.55 9.96 9.96 0 0011 2zm5 10a1 1 0 110-2 1 1 0 010 2zm-3 4a1 1 0 110-2 1 1 0 010 2zm-5 1a1 1 0 110-2 1 1 0 010 2z"
+                />
+              </svg>
+              Cookie-Einstellungen
+            </button>
+          </div>
 
           {/* Social Media Icons */}
           <div className="flex items-center gap-4">

@@ -33,9 +33,9 @@ export default function Navigation() {
         items: [
           {
             icon: "/icons/building.svg",
-            title: "bluebatch",
-            description: "Unsere Mission",
-            href: "/",
+            title: "Warum BlueBatch?",
+            description: "Keine Agentur - IT-Experten",
+            href: "/warum-bluebatch",
           },
           {
             icon: "/icons/process.svg",

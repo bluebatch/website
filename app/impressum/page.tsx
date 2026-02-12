@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ContentWrapper variant="dark" isFirstSection>
+    <ContentWrapper isFirstSection>
       <Typo.H1>Impressum</Typo.H1>
 
       <Typo.H3>Angaben gemäß § 5 TMG</Typo.H3>

@@ -1,5 +1,12 @@
 {
   "permissions": {
-    "allow": ["Bash", "WebFetch", "cd", "WebSearch", "mkdir"]
+    "allow": [
+      "Bash",
+      "WebFetch",
+      "cd",
+      "WebSearch",
+      "mkdir",
+      "Bash(npm run build:*)"
+    ]
   }
 }
