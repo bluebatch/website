@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Script from "next/script";
 
-const GA_MEASUREMENT_ID = "G-EL0E8GDKZB"; // TODO: Replace with your GA4 Measurement ID
+const GA_MEASUREMENT_ID = "G-EL0E8GDKZB";
 const CONSENT_KEY = "cookie_consent";
 
 interface ConsentPreferences {
@@ -29,19 +29,41 @@ const ALL_GRANTED: ConsentPreferences = {
 
 declare global {
   interface Window {
-    dataLayer: Record<string, unknown>[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    dataLayer: any[];
     gtag: (...args: unknown[]) => void;
     openConsentSettings: () => void;
   }
 }
 
+function getGtag() {
+  window.dataLayer = window.dataLayer || [];
+  if (!window.gtag) {
+    window.gtag = function (...args: unknown[]) {
+      window.dataLayer.push(args);
+    };
+  }
+  return window.gtag;
+}
+
 function applyConsent(prefs: ConsentPreferences) {
-  window.gtag("consent", "update", {
+  const consentState = {
     analytics_storage: prefs.statistics ? "granted" : "denied",
     ad_storage: prefs.marketing ? "granted" : "denied",
     ad_user_data: prefs.marketing ? "granted" : "denied",
     ad_personalization: prefs.marketing ? "granted" : "denied",
-  });
+  };
+
+  const gtag = getGtag();
+  gtag("consent", "update", consentState);
+
+  // After granting analytics, fire a pageview since the initial one was suppressed
+  if (prefs.statistics) {
+    gtag("event", "page_view", {
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }
 }
 
 function savePreferences(prefs: ConsentPreferences) {
@@ -147,6 +169,7 @@ export default function CookieConsent() {
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
             gtag('consent', 'default', {
               'analytics_storage': 'denied',
               'ad_storage': 'denied',
@@ -196,6 +219,10 @@ export default function CookieConsent() {
               finden Sie in unserer{" "}
               <a href="/datenschutz" className="underline hover:text-primary-700">
                 Datenschutzerklärung
+              </a>{" "}
+              und unserem{" "}
+              <a href="/impressum" className="underline hover:text-primary-700">
+                Impressum
               </a>
               . Es besteht keine Verpflichtung, in die Verarbeitung Ihrer Daten
               einzuwilligen, um dieses Angebot zu nutzen. Sie können Ihre Auswahl
