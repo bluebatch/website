@@ -9,7 +9,7 @@ export default function Footer() {
     { label: "Das Team", href: "/team" },
     { label: "Services", href: "/services" },
     { label: "Use Cases", href: "/use-cases" },
-    // { label: "Blogs", href: "/blogs" },
+    { label: "Blog", href: "/blog" },
   ];
 
   const servicesMenu = [

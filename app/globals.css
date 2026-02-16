@@ -52,6 +52,16 @@
 
 /* Base styles using the new theme variables */
 @layer base {
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Scroll offset for anchor links to account for sticky navigation */
+  [id] {
+    scroll-margin-top: 120px;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
