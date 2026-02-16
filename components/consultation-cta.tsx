@@ -12,7 +12,7 @@ export default function ConsultationCta({
   className = "",
 }: ConsultationCtaProps) {
   return (
-    <div className={`relative h-[400px] md:h-[500px] lg:h-[550px] ${className}`}>
+    <div className={`relative h-[700px] md:h-[500px] lg:h-[550px] mt-16 ${className}`}>
       {children}
     </div>
   );
@@ -28,7 +28,7 @@ export function ConsultationCtaBackgroundBox({
 }: BackgroundBoxProps) {
   return (
     <div
-      className={`absolute bottom-0 left-0 right-0 h-[70%] bg-primary-800 ${className}`}
+      className={`absolute bottom-0 left-0 right-0 h-[50%] md:h-[70%] bg-primary-800 ${className}`}
     />
   );
 }
@@ -46,7 +46,7 @@ export function ConsultationCtaImage({
   className = "",
 }: ImageProps) {
   return (
-    <div className={`absolute right-0 bottom-0 w-1/2 h-full flex items-end justify-center ${className}`}>
+    <div className={`absolute bottom-0 right-0 w-full h-[50%] md:w-1/2 md:h-full flex items-end justify-center ${className}`}>
       <Image
         src={src}
         alt={alt}
@@ -69,7 +69,7 @@ export function ConsultationCtaTextColumn({
   className = "",
 }: TextColumnProps) {
   return (
-    <div className={`absolute left-0 bottom-0 w-1/2 h-[70%] text-white p-6 md:p-8 lg:p-10 flex flex-col justify-center ${className}`}>
+    <div className={`absolute left-0 top-0 md:bottom-0 md:top-auto w-full md:w-1/2 h-[50%] md:h-[70%] bg-primary-800 text-white p-6 md:p-8 lg:p-10 flex flex-col justify-center ${className}`}>
       {children}
     </div>
   );

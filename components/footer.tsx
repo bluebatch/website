@@ -34,9 +34,9 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: "linkedin", href: "/", label: "LinkedIn" },
+    { icon: "linkedin", href: "https://www.linkedin.com/company/bluebatch-io", label: "LinkedIn" },
     { icon: "twitter", href: "/", label: "Twitter" },
-    { icon: "github", href: "/", label: "GitHub" },
+    { icon: "github", href: "https://github.com/orgs/bluebatch", label: "GitHub" },
   ];
 
   return (

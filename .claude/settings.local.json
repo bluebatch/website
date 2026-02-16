@@ -3,9 +3,9 @@
     "allow": [
       "Bash",
       "WebFetch",
-      "cd",
+      "Cd",
       "WebSearch",
-      "mkdir",
+      "Mkdir",
       "Bash(npm run build:*)"
     ]
   }

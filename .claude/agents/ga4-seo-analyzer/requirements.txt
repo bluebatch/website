@@ -1,0 +1,10 @@
+# GA4 Analysis Agent - Requirements
+
+# Google Analytics Data API
+google-analytics-data>=0.18.0
+
+# Google Auth
+google-auth>=2.0.0
+
+# For database access (shared)
+# Already in content_db_agent

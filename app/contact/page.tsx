@@ -10,6 +10,7 @@ import Hero2Column, {
   Hero2ColumnDescription,
   Hero2ColumnImage,
 } from "@/components/hero-components/hero-2-column";
+import SimpleGrid from "@/components/simple-grid";
 
 export const metadata: Metadata = {
   title: "Kontakt – BlueBatch | Beratungsgespräch vereinbaren",
@@ -54,8 +55,8 @@ export default function Page() {
               Powerful AI Workflows mit BlueBatch
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Verwandeln Sie Ihr Unternehmen mit intelligenter Automatisierung und
-              KI-gestützten Workflows.
+              Verwandeln Sie Ihr Unternehmen mit intelligenter Automatisierung
+              und KI-gestützten Workflows.
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
@@ -65,25 +66,35 @@ export default function Page() {
       </ContentWrapper>
 
       <ContentWrapper>
-        {/* <!-- Calendly inline widget begin --> */}
-        <div
-          className="calendly-inline-widget"
-          data-url="https://calendly.com/max-oseven/30min"
-          style={{ minWidth: "320px", height: "700px" }}
-        ></div>
-        <script
-          type="text/javascript"
-          src="https://assets.calendly.com/assets/external/widget.js"
-          async
-        ></script>
-        {/* <!-- Calendly inline widget end --> */}
+        <SimpleGrid cols={2}>
+          <div
+            className="hs-form-frame"
+            data-region="eu1"
+            data-form-id="95d3395a-021c-4fd1-9768-1cdc4950c2bf"
+            data-portal-id="146998643"
+          ></div>
+          <div
+            className="calendly-inline-widget"
+            data-url="https://calendly.com/max-oseven/30min"
+          ></div>
+        </SimpleGrid>
       </ContentWrapper>
+
       <ContentWrapper noPadding>
         <Customer />
       </ContentWrapper>
       <ContentWrapper noPadding>
         <ConsultationCtaDefault />
       </ContentWrapper>
+      <script
+        src="https://js-eu1.hsforms.net/forms/embed/146998643.js"
+        defer
+      ></script>
+      <script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async
+      ></script>
     </>
   );
 }
