@@ -130,19 +130,20 @@ export default function TeamPage() {
             </TeamMember>
 
             <TeamMember>
-              <TeamImage src="/ah-small.webp" alt="Alexandra - Key Account" />
+              <TeamImage src="/ah-small.webp" alt="Alexandra - Backoffice Manager" />
               <TeamName>Alexandra</TeamName>
-              <TeamRole>Key Account & Performance</TeamRole>
+              <TeamRole>Backoffice Manager</TeamRole>
               <TeamDescription>
-                Alexandra sorgt dafür, dass jeder Kunde den maximalen ROI aus
-                seinen Workflows herausholt. Sie ist die Brücke zwischen
-                technischer Excellence und Business Impact.
+                Alexandra hält den Laden am Laufen – von Rechnungsstellung über
+                Vertragsmanagement bis hin zur Organisation interner Prozesse. Sie
+                sorgt für Struktur, Effizienz und den reibungslosen Betrieb aller
+                administrativen Abläufe.
               </TeamDescription>
               <TeamTags>
-                <TeamTag variant="primary">Key Account</TeamTag>
-                <TeamTag variant="secondary">Workflow Nurturing</TeamTag>
-                <TeamTag variant="accent">Performance Queen</TeamTag>
-                <TeamTag variant="primary">ROI Hunter</TeamTag>
+                <TeamTag variant="primary">Organisation</TeamTag>
+                <TeamTag variant="secondary">Verwaltung</TeamTag>
+                <TeamTag variant="accent">Rechnungswesen</TeamTag>
+                <TeamTag variant="primary">Vertragsmanagement</TeamTag>
               </TeamTags>
             </TeamMember>
 
