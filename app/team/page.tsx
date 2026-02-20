@@ -220,7 +220,7 @@ export default function TeamPage() {
         <SimpleGrid cols={3}>
           <div className="relative aspect-[4/3] overflow-hidden border-4 border-white">
             <Image
-              src="/team/Bluebatch-team-workspace.jpg"
+              src="/team/bluebatch-team-workspace.jpg"
               alt="Bluebatch Team Workspace"
               fill
               className="object-cover"
@@ -228,7 +228,7 @@ export default function TeamPage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden border-4 border-white">
             <Image
-              src="/team/Bluebatch-team-collaboration.jpg"
+              src="/team/bluebatch-team-collaboration.jpg"
               alt="Bluebatch Team Collaboration"
               fill
               className="object-cover scale-110"
@@ -236,7 +236,7 @@ export default function TeamPage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden border-4 border-white">
             <Image
-              src="/team/Bluebatch-team-office.jpg"
+              src="/team/bluebatch-team-office.jpg"
               alt="Bluebatch Team Office"
               fill
               className="object-cover scale-110"

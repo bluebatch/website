@@ -114,7 +114,7 @@ export default function BlogPage() {
             Workflow-Automatisierung zur Seite.
           </Typo.Paragraph>
           <Link
-            href="/kontakt"
+            href="/contact"
             className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
           >
             Jetzt Kontakt aufnehmen
