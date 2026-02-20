@@ -23,21 +23,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Zertifikatsprüfung Lieferanten – Großhandel | BlueBatch",
+  title: "Zertifikatsprüfung Lieferanten – Großhandel | Bluebatch",
   description:
-    "Wie BlueBatch Großhändlern hilft, Lieferantenzertifikate automatisch zu prüfen und Compliance sicherzustellen.",
+    "Wie Bluebatch Großhändlern hilft, Lieferantenzertifikate automatisch zu prüfen und Compliance sicherzustellen.",
   openGraph: {
-    title: "Zertifikatsprüfung Lieferanten – Großhandel | BlueBatch",
+    title: "Zertifikatsprüfung Lieferanten – Großhandel | Bluebatch",
     description:
       "ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Zertifikatsprüfung" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Zertifikatsprüfung",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zertifikatsprüfung Lieferanten – Großhandel | BlueBatch",
+    title: "Zertifikatsprüfung Lieferanten – Großhandel | Bluebatch",
     description:
       "ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -62,14 +69,10 @@ export default function Page() {
           overlayOpacity={0.8}
           opacityBackground="white"
         >
-          <BackgroundHero.TopLabel>
-            Zertifikatsprüfung
-          </BackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>Zertifikatsprüfung</BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
             Lieferanten&shy;zertifikate{" "}
-            <BackgroundHero.Highlight>
-              automatisch
-            </BackgroundHero.Highlight>
+            <BackgroundHero.Highlight>automatisch</BackgroundHero.Highlight>
             <br />
             prüfen und überwachen
           </BackgroundHero.Headline>

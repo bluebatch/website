@@ -34,9 +34,17 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: "linkedin", href: "https://www.linkedin.com/company/bluebatch-io", label: "LinkedIn" },
+    {
+      icon: "linkedin",
+      href: "https://www.linkedin.com/company/bluebatch-io",
+      label: "LinkedIn",
+    },
     { icon: "twitter", href: "/", label: "Twitter" },
-    { icon: "github", href: "https://github.com/orgs/bluebatch", label: "GitHub" },
+    {
+      icon: "github",
+      href: "https://github.com/orgs/bluebatch",
+      label: "GitHub",
+    },
   ];
 
   return (
@@ -50,7 +58,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/logo.png"
-                alt="BlueBatch Logo"
+                alt="Bluebatch Logo"
                 width={46}
                 height={46}
               />

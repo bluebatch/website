@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Typo from "@/components/typo";
 import {
   BlogImage,
-  CodeBlock,
+  CodeBlockFile,
   Separator,
   BlogLayout,
   BlogHero,
@@ -10,7 +10,7 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "Benutzerdefinierte Nodes in n8n erstellen: Ein vollständiger Entwickler-Leitfaden | BlueBatch",
+    "Benutzerdefinierte Nodes in n8n erstellen: Ein vollständiger Entwickler-Leitfaden | Bluebatch",
   description:
     "Transformieren Sie Ihre Workflow-Automatisierung mit benutzerdefinierten n8n Integrationen, die exakt Ihren Anforderungen entsprechen. Vollständiger Guide zur Custom Node Entwicklung.",
   openGraph: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Von der Einrichtung bis zum Deployment - alles über Custom Node Development in n8n",
     type: "article",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/blog/building-custom-node-dev-guide/hero.png",
@@ -96,20 +96,20 @@ export default function Page() {
               einer HTTP-Anfrage oder das Abfragen einer Datenbank. Jeder Node
               verfügt über:
             </Typo.Paragraph>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>
+            <Typo.List>
+              <Typo.ListItem>
                 <strong>Inputs:</strong> Eingehende Datenverbindungen
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <strong>Outputs:</strong> Ausgehende Datenverbindungen
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <strong>Parameters:</strong> Konfigurationsoptionen
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <strong>Credentials:</strong> Authentifizierungsinformationen
-              </li>
-            </ul>
+              </Typo.ListItem>
+            </Typo.List>
 
             <Typo.H3 className="mt-8">
               Visuelle Node-Struktur im n8n Interface
@@ -218,20 +218,10 @@ export default function Page() {
             <Typo.Paragraph>
               Jeder Custom Node besteht aus mehreren Schlüsseldateien:
             </Typo.Paragraph>
-            <CodeBlock language="bash">
-              {`my-custom-node/
-├── package.json
-├── nodes/
-│   ├── MyNode/
-│   │   ├── MyNode.node.ts          # Hauptlogik des Nodes
-│   │   ├── MyNode.node.json        # Node-Metadaten
-│   │   └── mynode.svg              # Node-Icon
-│   └── index.ts                    # Export-Definitionen
-├── credentials/
-│   ├── MyNodeApi.credentials.ts    # Authentifizierungslogik
-│   └── MyNodeApi.credentials.json  # Credential-Metadaten
-└── README.md`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="bash"
+              src="building-custom-node-dev-guide/code-blocks/01-file-structure.bash"
+            />
           </div>
 
           {/* Section: Development Environment */}
@@ -244,15 +234,18 @@ export default function Page() {
             </Typo.H2>
 
             <Typo.H3>Voraussetzungen</Typo.H3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Node.js 18 oder höher</li>
-              <li>npm oder yarn</li>
-              <li>Grundkenntnisse in TypeScript</li>
-              <li>Ein n8n-Account (für Testing)</li>
-            </ul>
+            <Typo.List>
+              <Typo.ListItem>Node.js 18 oder höher</Typo.ListItem>
+              <Typo.ListItem>npm oder yarn</Typo.ListItem>
+              <Typo.ListItem>Grundkenntnisse in TypeScript</Typo.ListItem>
+              <Typo.ListItem>Ein n8n-Account (für Testing)</Typo.ListItem>
+            </Typo.List>
 
             <Typo.H3 className="mt-8">Schritt 1: n8n CLI installieren</Typo.H3>
-            <CodeBlock language="bash">{`npm install -g n8n`}</CodeBlock>
+            <CodeBlockFile
+              language="bash"
+              src="building-custom-node-dev-guide/code-blocks/02-install-n8n.bash"
+            />
 
             <Typo.H3 className="mt-8">
               Schritt 2: Ihr Node-Projekt erstellen
@@ -260,26 +253,16 @@ export default function Page() {
             <Typo.Paragraph>
               Verwenden Sie das offizielle n8n-Starter-Template:
             </Typo.Paragraph>
-            <CodeBlock language="bash">
-              {`# Starter-Template klonen
-git clone https://github.com/n8n-io/n8n-nodes-starter.git my-custom-node
-cd my-custom-node
-
-# Dependencies installieren
-npm install
-
-# Node bauen
-npm run build`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="bash"
+              src="building-custom-node-dev-guide/code-blocks/03-create-project.bash"
+            />
 
             <Typo.H3 className="mt-8">Schritt 3: Mit n8n verlinken</Typo.H3>
-            <CodeBlock language="bash">
-              {`# Ihren Node mit n8n verlinken
-npm link
-
-# Im n8n-Installationsverzeichnis (~/.n8n/custom)
-npm link my-custom-node`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="bash"
+              src="building-custom-node-dev-guide/code-blocks/04-link-with-n8n.bash"
+            />
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
               <p className="text-sm">
                 <strong>Hinweis:</strong> Führen Sie{" "}
@@ -326,29 +309,18 @@ npm link my-custom-node`}
             </p>
 
             <p className="font-semibold mt-6 mb-3">Eigenschaften:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>JSON-basierte Konfiguration</li>
-              <li>Weniger Code erforderlich</li>
-              <li>Automatisches Request-Handling</li>
-              <li>Ideal für REST-APIs</li>
-            </ul>
+            <Typo.List>
+              <Typo.ListItem>JSON-basierte Konfiguration</Typo.ListItem>
+              <Typo.ListItem>Weniger Code erforderlich</Typo.ListItem>
+              <Typo.ListItem>Automatisches Request-Handling</Typo.ListItem>
+              <Typo.ListItem>Ideal für REST-APIs</Typo.ListItem>
+            </Typo.List>
 
             <p className="font-semibold mt-6 mb-3">Beispielstruktur:</p>
-            <CodeBlock language="typescript">
-              {`// Deklarativer Node verwendet Routing
-const routing = {
-  "user.create": {
-    request: {
-      method: "POST",
-      url: "/users",
-      body: {
-        name: "={{ $parameter.name }}",
-        email: "={{ $parameter.email }}",
-      },
-    },
-  },
-};`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/05-declarative-routing.ts"
+            />
 
             <Typo.H3 className="mt-8">Programmatischer Stil</Typo.H3>
             <p className="font-semibold text-gray-900 mb-4">
@@ -358,29 +330,21 @@ const routing = {
             </p>
 
             <p className="font-semibold mt-6 mb-3">Eigenschaften:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Vollständige Kontrolle über die Ausführung</li>
-              <li>Benutzerdefinierte Fehlerbehandlung</li>
-              <li>Komplexe Datenmanipulation</li>
-              <li>Mehrere API-Interaktionen</li>
-            </ul>
+            <Typo.List>
+              <Typo.ListItem>
+                Vollständige Kontrolle über die Ausführung
+              </Typo.ListItem>
+              <Typo.ListItem>Benutzerdefinierte Fehlerbehandlung</Typo.ListItem>
+              <Typo.ListItem>Komplexe Datenmanipulation</Typo.ListItem>
+              <Typo.ListItem>Mehrere API-Interaktionen</Typo.ListItem>
+            </Typo.List>
 
             <p className="font-semibold mt-6 mb-3">Beispielstruktur:</p>
-            <CodeBlock language="typescript" showLineNumbers>
-              {`// Programmatischer Node verwendet execute-Methode
-async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-  const items = this.getInputData();
-  const returnData: INodeExecutionData[] = [];
-
-  for (let i = 0; i < items.length; i++) {
-    // Benutzerdefinierte Logik hier
-    const result = await this.performCustomOperation(items[i]);
-    returnData.push({ json: result });
-  }
-
-  return [returnData];
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/06-programmatic-execute.ts"
+              showLineNumbers
+            />
 
             <Typo.H3 className="mt-8">Entscheidungsmatrix</Typo.H3>
             <div className="overflow-x-auto my-6">
@@ -496,116 +460,11 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
               </code>
               :
             </Typo.Paragraph>
-            <CodeBlock
+            <CodeBlockFile
               language="json"
               fileName="MicrosoftDynamicsLeads.node.json"
-            >
-              {`{
-  "displayName": "Microsoft Dynamics Leads",
-  "name": "microsoftDynamicsLeads",
-  "icon": "file:dynamics365.svg",
-  "group": ["transform"],
-  "version": 1,
-  "description": "Manage leads in Microsoft Dynamics 365 CRM",
-  "defaults": {
-    "name": "Dynamics Leads"
-  },
-  "inputs": ["main"],
-  "outputs": ["main"],
-  "credentials": [
-    {
-      "name": "microsoftDynamicsApi",
-      "required": true
-    }
-  ],
-  "properties": [
-    {
-      "displayName": "Operation",
-      "name": "operation",
-      "type": "options",
-      "options": [
-        {
-          "name": "Create Lead",
-          "value": "create"
-        },
-        {
-          "name": "Read Lead",
-          "value": "read"
-        },
-        {
-          "name": "Update Lead",
-          "value": "update"
-        }
-      ],
-      "default": "create",
-      "required": true
-    },
-    {
-      "displayName": "Lead ID",
-      "name": "leadId",
-      "type": "string",
-      "default": "",
-      "required": true,
-      "displayOptions": {
-        "show": {
-          "operation": ["read", "update"]
-        }
-      },
-      "description": "The ID of the lead to read or update"
-    },
-    {
-      "displayName": "First Name",
-      "name": "firstname",
-      "type": "string",
-      "default": "",
-      "required": true,
-      "displayOptions": {
-        "show": {
-          "operation": ["create", "update"]
-        }
-      },
-      "description": "First name of the lead"
-    },
-    {
-      "displayName": "Last Name",
-      "name": "lastname",
-      "type": "string",
-      "default": "",
-      "required": true,
-      "displayOptions": {
-        "show": {
-          "operation": ["create", "update"]
-        }
-      },
-      "description": "Last name of the lead"
-    },
-    {
-      "displayName": "Email",
-      "name": "emailaddress1",
-      "type": "string",
-      "default": "",
-      "displayOptions": {
-        "show": {
-          "operation": ["create", "update"]
-        }
-      },
-      "description": "Email address of the lead"
-    },
-    {
-      "displayName": "Company",
-      "name": "companyname",
-      "type": "string",
-      "default": "",
-      "displayOptions": {
-        "show": {
-          "operation": ["create", "update"]
-        }
-      },
-      "description": "Company name of the lead"
-    }
-  ]
-}`}
-            </CodeBlock>
+              src="building-custom-node-dev-guide/code-blocks/09-microsoft-dynamics-leads-node-json.json"
+            />
 
             <Typo.H3 className="mt-8">
               Schritt 2: Node-Logik implementieren
@@ -617,212 +476,10 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
               </code>
               :
             </Typo.Paragraph>
-            <CodeBlock language="typescript">
-              {`import {
-  IExecuteFunctions,
-  INodeExecutionData,
-  INodeType,
-  INodeTypeDescription,
-  NodeApiError,
-  NodeOperationError,
-} from "n8n-workflow";
-
-export class MicrosoftDynamicsLeads implements INodeType {
-  description: INodeTypeDescription = {
-    displayName: "Microsoft Dynamics Leads",
-    name: "microsoftDynamicsLeads",
-    icon: "file:dynamics365.svg",
-    group: ["transform"],
-    version: 1,
-    description: "Manage leads in Microsoft Dynamics 365 CRM",
-    defaults: {
-      name: "Dynamics Leads",
-    },
-    inputs: ["main"],
-    outputs: ["main"],
-    credentials: [
-      {
-        name: "microsoftDynamicsApi",
-        required: true,
-      },
-    ],
-    properties: [
-      // Properties würden hier aus der JSON-Datei geladen
-    ],
-  };
-
-  async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-    const items = this.getInputData();
-    const returnData: INodeExecutionData[] = [];
-
-    for (let i = 0; i < items.length; i++) {
-      try {
-        const operation = this.getNodeParameter("operation", i) as string;
-        const credentials = await this.getCredentials("microsoftDynamicsApi");
-
-        const instanceUrl = credentials.instanceUrl as string;
-        const accessToken = credentials.accessToken as string;
-
-        const baseUrl = \`\${instanceUrl}/api/data/v9.2\`;
-
-        let result: any;
-
-        switch (operation) {
-          case "create": {
-            // Lead erstellen
-            const firstname = this.getNodeParameter("firstname", i) as string;
-            const lastname = this.getNodeParameter("lastname", i) as string;
-            const emailaddress1 = this.getNodeParameter(
-              "emailaddress1",
-              i,
-            ) as string;
-            const companyname = this.getNodeParameter(
-              "companyname",
-              i,
-            ) as string;
-
-            const leadData = {
-              firstname,
-              lastname,
-              emailaddress1,
-              companyname,
-              subject: \`Lead: \${firstname} \${lastname}\`,
-            };
-
-            result = await this.helpers.request({
-              method: "POST",
-              url: \`\${baseUrl}/leads\`,
-              headers: {
-                Authorization: \`Bearer \${accessToken}\`,
-                "Content-Type": "application/json",
-                "OData-MaxVersion": "4.0",
-                "OData-Version": "4.0",
-              },
-              body: leadData,
-              json: true,
-            });
-
-            returnData.push({
-              json: {
-                operation: "create",
-                success: true,
-                leadId: result.leadid,
-                ...leadData,
-              },
-            });
-            break;
-          }
-
-          case "read": {
-            // Lead abrufen
-            const leadId = this.getNodeParameter("leadId", i) as string;
-
-            result = await this.helpers.request({
-              method: "GET",
-              url: \`\${baseUrl}/leads(\${leadId})\`,
-              headers: {
-                Authorization: \`Bearer \${accessToken}\`,
-                "OData-MaxVersion": "4.0",
-                "OData-Version": "4.0",
-              },
-              json: true,
-            });
-
-            returnData.push({
-              json: {
-                operation: "read",
-                success: true,
-                lead: result,
-              },
-            });
-            break;
-          }
-
-          case "update": {
-            // Lead aktualisieren
-            const leadId = this.getNodeParameter("leadId", i) as string;
-            const firstname = this.getNodeParameter("firstname", i) as string;
-            const lastname = this.getNodeParameter("lastname", i) as string;
-            const emailaddress1 = this.getNodeParameter(
-              "emailaddress1",
-              i,
-            ) as string;
-            const companyname = this.getNodeParameter(
-              "companyname",
-              i,
-            ) as string;
-
-            const updateData = {
-              firstname,
-              lastname,
-              emailaddress1,
-              companyname,
-            };
-
-            await this.helpers.request({
-              method: "PATCH",
-              url: \`\${baseUrl}/leads(\${leadId})\`,
-              headers: {
-                Authorization: \`Bearer \${accessToken}\`,
-                "Content-Type": "application/json",
-                "OData-MaxVersion": "4.0",
-                "OData-Version": "4.0",
-              },
-              body: updateData,
-              json: true,
-            });
-
-            returnData.push({
-              json: {
-                operation: "update",
-                success: true,
-                leadId,
-                ...updateData,
-              },
-            });
-            break;
-          }
-
-          default:
-            throw new NodeOperationError(
-              this.getNode(),
-              \`Unknown operation: \${operation}\`,
-            );
-        }
-      } catch (error) {
-        if (this.continueOnFail()) {
-          returnData.push({
-            json: {
-              error: error.message,
-              statusCode: error.statusCode,
-            },
-          });
-          continue;
-        }
-
-        // Spezifisches Error Handling für Dynamics API
-        if (error.statusCode === 401) {
-          throw new NodeApiError(this.getNode(), error, {
-            message: "Authentication failed",
-            description: "Please check your credentials and access token",
-          });
-        }
-
-        if (error.statusCode === 404) {
-          throw new NodeOperationError(
-            this.getNode(),
-            "Lead not found or you do not have access",
-          );
-        }
-
-        throw new NodeOperationError(this.getNode(), error);
-      }
-    }
-
-    return [returnData];
-  }
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/10-microsoft-dynamics-leads-node-ts.ts"
+            />
 
             <Typo.H3 className="mt-8">Schritt 3: Credentials erstellen</Typo.H3>
             <Typo.Paragraph>
@@ -832,64 +489,10 @@ export class MicrosoftDynamicsLeads implements INodeType {
               </code>
               :
             </Typo.Paragraph>
-            <CodeBlock language="typescript">
-              {`import { ICredentialType, INodeProperties } from "n8n-workflow";
-
-export class MicrosoftDynamicsApi implements ICredentialType {
-  name = "microsoftDynamicsApi";
-  displayName = "Microsoft Dynamics 365 API";
-  documentationUrl = "https://learn.microsoft.com/en-us/dynamics365/";
-  properties: INodeProperties[] = [
-    {
-      displayName: "Instance URL",
-      name: "instanceUrl",
-      type: "string",
-      default: "https://yourorg.crm.dynamics.com",
-      required: true,
-      description: "Your Dynamics 365 instance URL",
-      placeholder: "https://yourorg.crm.dynamics.com",
-    },
-    {
-      displayName: "Client ID",
-      name: "clientId",
-      type: "string",
-      default: "",
-      required: true,
-      description: "OAuth 2.0 Client ID from Azure AD App Registration",
-    },
-    {
-      displayName: "Client Secret",
-      name: "clientSecret",
-      type: "string",
-      typeOptions: {
-        password: true,
-      },
-      default: "",
-      required: true,
-      description: "OAuth 2.0 Client Secret",
-    },
-    {
-      displayName: "Tenant ID",
-      name: "tenantId",
-      type: "string",
-      default: "",
-      required: true,
-      description: "Azure AD Tenant ID",
-    },
-    {
-      displayName: "Access Token",
-      name: "accessToken",
-      type: "string",
-      typeOptions: {
-        password: true,
-      },
-      default: "",
-      required: true,
-      description: "OAuth 2.0 Access Token for API requests",
-    },
-  ];
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/11-microsoft-dynamics-api-credentials.ts"
+            />
 
             <Typo.H3 className="mt-8">
               Schritt 4: Ihren Node registrieren
@@ -901,11 +504,10 @@ export class MicrosoftDynamicsApi implements ICredentialType {
               </code>
               :
             </Typo.Paragraph>
-            <CodeBlock language="typescript">
-              {`import { MicrosoftDynamicsLeads } from "./MicrosoftDynamicsLeads/MicrosoftDynamicsLeads.node";
-
-export { MicrosoftDynamicsLeads };`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/12-nodes-index-export.ts"
+            />
 
             <Typo.Paragraph>
               Aktualisieren Sie{" "}
@@ -914,11 +516,10 @@ export { MicrosoftDynamicsLeads };`}
               </code>
               :
             </Typo.Paragraph>
-            <CodeBlock language="typescript">
-              {`import { MicrosoftDynamicsApi } from "./MicrosoftDynamicsApi.credentials";
-
-export { MicrosoftDynamicsApi };`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/13-credentials-index-export.ts"
+            />
           </div>
 
           {/* Section: Advanced Features */}
@@ -935,52 +536,10 @@ export { MicrosoftDynamicsApi };`}
               Lassen Sie Ihren Node sich basierend auf Benutzerauswahlen
               anpassen:
             </Typo.Paragraph>
-            <CodeBlock language="typescript">
-              {`{
-  displayName: 'Operation',
-  name: 'operation',
-  type: 'options',
-  options: [
-    {
-      name: 'Create Lead',
-      value: 'create',
-    },
-    {
-      name: 'Read Lead',
-      value: 'read',
-    },
-    {
-      name: 'Update Lead',
-      value: 'update',
-    },
-  ],
-  default: 'create',
-},
-{
-  displayName: 'Lead ID',
-  name: 'leadId',
-  type: 'string',
-  default: '',
-  displayOptions: {
-    show: {
-      operation: ['read', 'update'],
-    },
-  },
-  description: 'ID of the lead to read or update',
-},
-{
-  displayName: 'First Name',
-  name: 'firstname',
-  type: 'string',
-  default: '',
-  displayOptions: {
-    show: {
-      operation: ['create', 'update'],
-    },
-  },
-  description: 'First name of the lead',
-},`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/14-dynamic-parameters.ts"
+            />
 
             <Typo.H3 className="mt-8">
               Visuelles Ergebnis: Dynamisches Interface
@@ -1022,37 +581,10 @@ export { MicrosoftDynamicsApi };`}
             />
 
             <Typo.H3 className="mt-8">Error-Handling-Patterns</Typo.H3>
-            <CodeBlock language="typescript">
-              {`try {
-  const result = await this.helpers.request(requestOptions);
-  return result;
-} catch (error) {
-  if (error.statusCode === 401) {
-    throw new NodeApiError(this.getNode(), error, {
-      message: "Authentication failed",
-      description:
-        "Please check your Dynamics 365 credentials and access token",
-    });
-  }
-
-  if (error.statusCode === 404) {
-    throw new NodeOperationError(
-      this.getNode(),
-      "Lead not found or you do not have access to this resource",
-    );
-  }
-
-  if (error.statusCode === 403) {
-    throw new NodeApiError(this.getNode(), error, {
-      message: "Insufficient permissions",
-      description:
-        "Your account does not have permission to perform this operation",
-    });
-  }
-
-  throw new NodeOperationError(this.getNode(), error);
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/15-error-handling-patterns.ts"
+            />
 
             <Typo.H3 className="mt-8">Visuelle Fehleranzeige</Typo.H3>
             <BlogImage
@@ -1068,44 +600,10 @@ export { MicrosoftDynamicsApi };`}
             <Typo.Paragraph>
               Für komplexe APIs mit mehreren Endpoints:
             </Typo.Paragraph>
-            <CodeBlock language="typescript">
-              {`const resourceMapping = {
-  leads: {
-    create: {
-      method: "POST",
-      endpoint: "/leads",
-    },
-    read: {
-      method: "GET",
-      endpoint: "/leads",
-    },
-    update: {
-      method: "PATCH",
-      endpoint: "/leads",
-    },
-    delete: {
-      method: "DELETE",
-      endpoint: "/leads",
-    },
-  },
-  accounts: {
-    create: {
-      method: "POST",
-      endpoint: "/accounts",
-    },
-    list: {
-      method: "GET",
-      endpoint: "/accounts",
-    },
-  },
-  contacts: {
-    create: {
-      method: "POST",
-      endpoint: "/contacts",
-    },
-  },
-};`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/16-resource-mapping.ts"
+            />
           </div>
 
           {/* Section: Testing and Debugging */}
@@ -1124,14 +622,10 @@ export { MicrosoftDynamicsApi };`}
               ) und prüfen Sie die UI. Ihr Node sollte unter "Custom Nodes"
               erscheinen.
             </Typo.Paragraph>
-            <CodeBlock language="bash">
-              {`# Bauen und testen
-npm run build
-npm run test
-
-# n8n mit Ihrem Custom Node starten
-npx n8n start`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="bash"
+              src="building-custom-node-dev-guide/code-blocks/17-local-testing.bash"
+            />
 
             <Typo.H3 className="mt-8">Testing Workflow</Typo.H3>
             <BlogImage
@@ -1147,34 +641,24 @@ npx n8n start`}
             <p className="font-semibold mt-6 mb-3">
               1. Console Logging verwenden:
             </p>
-            <CodeBlock language="typescript">
-              {`console.log("Debug: Processing item", i, items[i]);`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/18-console-logging.ts"
+            />
 
             <p className="font-semibold mt-6 mb-3">
               2. API-Responses inspizieren:
             </p>
-            <CodeBlock language="typescript">
-              {`const response = await this.helpers.request({
-  method: "GET",
-  url: "https://api.example.com/data",
-  json: true,
-});
-console.log("API Response:", response);`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/19-api-response-inspection.ts"
+            />
 
             <p className="font-semibold mt-6 mb-3">3. Parameter-Validierung:</p>
-            <CodeBlock language="typescript">
-              {`const leadId = this.getNodeParameter("leadId", i) as string;
-if (!leadId) {
-  throw new NodeOperationError(this.getNode(), "Lead ID parameter is required");
-}
-
-const email = this.getNodeParameter("emailaddress1", i) as string;
-if (email && !this.isValidEmail(email)) {
-  throw new NodeOperationError(this.getNode(), "Invalid email address format");
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/20-parameter-validation.ts"
+            />
 
             <Typo.H3 className="mt-8">Häufige Probleme und Lösungen</Typo.H3>
             <div className="overflow-x-auto my-6">
@@ -1235,67 +719,29 @@ if (email && !this.isValidEmail(email)) {
             <Typo.H2 id="deployment-strategien">Deployment-Strategien</Typo.H2>
 
             <Typo.H3>Lokale Entwicklung</Typo.H3>
-            <CodeBlock language="bash">
-              {`# Für Entwicklung verlinken
-npm link
-
-# Im n8n-Verzeichnis
-npm link your-node-package`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="bash"
+              src="building-custom-node-dev-guide/code-blocks/21-local-development-linking.bash"
+            />
 
             <Typo.H3 className="mt-8">npm-Package</Typo.H3>
-            <CodeBlock language="bash">
-              {`# Auf npm veröffentlichen
-npm publish
-
-# In n8n installieren
-npm install your-custom-node`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="bash"
+              src="building-custom-node-dev-guide/code-blocks/22-npm-package-publish.bash"
+            />
 
             <Typo.H3 className="mt-8">Docker-Deployment</Typo.H3>
             <Typo.Paragraph>Erstellen Sie ein Dockerfile:</Typo.Paragraph>
-            <CodeBlock language="docker">
-              {`FROM n8nio/n8n:latest
-
-# Custom Node kopieren
-COPY --from=builder /app/dist /usr/local/lib/node_modules/n8n/node_modules/your-custom-node
-
-# Umgebungsvariablen setzen
-ENV N8N_CUSTOM_EXTENSIONS="/usr/local/lib/node_modules/n8n/node_modules/your-custom-node"
-
-EXPOSE 5678
-CMD ["n8n"]`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="docker"
+              src="building-custom-node-dev-guide/code-blocks/23-dockerfile.docker"
+            />
 
             <Typo.H3 className="mt-8">Docker Compose</Typo.H3>
-            <CodeBlock language="yaml">
-              {`version: "3.8"
-services:
-  n8n:
-    image: n8nio/n8n:latest
-    ports:
-      - "5678:5678"
-    environment:
-      - N8N_CUSTOM_EXTENSIONS=/custom-nodes
-    volumes:
-      - ./custom-nodes:/custom-nodes
-      - n8n_data:/home/node/.n8n
-    depends_on:
-      - postgres
-
-  postgres:
-    image: postgres:13
-    environment:
-      POSTGRES_DB: n8n
-      POSTGRES_USER: n8n
-      POSTGRES_PASSWORD: n8n
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-volumes:
-  n8n_data:
-  postgres_data:`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="yaml"
+              src="building-custom-node-dev-guide/code-blocks/24-docker-compose.yaml"
+            />
           </div>
 
           {/* Section: Best Practices */}
@@ -1308,110 +754,40 @@ volumes:
             </Typo.H2>
 
             <Typo.H3>Code-Organisation</Typo.H3>
-            <CodeBlock language="typescript">
-              {`// Gut: Separate Methoden für verschiedene Operationen
-class MyNode implements INodeType {
-  async execute(): Promise<INodeExecutionData[][]> {
-    const operation = this.getNodeParameter("operation", 0);
-
-    switch (operation) {
-      case "create":
-        return await this.create();
-      case "update":
-        return await this.update();
-      case "delete":
-        return await this.delete();
-    }
-  }
-
-  private async create(): Promise<INodeExecutionData[][]> {
-    // Create-Logik
-  }
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/25-code-organization.ts"
+            />
 
             <Typo.H3 className="mt-8">Fehlerbehandlung</Typo.H3>
-            <CodeBlock language="typescript">
-              {`// Gut: Umfassende Fehlerbehandlung
-try {
-  const result = await this.apiCall();
-  return result;
-} catch (error) {
-  if (error.statusCode === 429) {
-    throw new NodeApiError(this.getNode(), error, {
-      message: "Rate limit exceeded",
-      description: "Please try again later",
-    });
-  }
-
-  throw new NodeOperationError(this.getNode(), error);
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/26-comprehensive-error-handling.ts"
+            />
 
             <Typo.H3 className="mt-8">Input-Validierung</Typo.H3>
-            <CodeBlock language="typescript">
-              {`// Gut: Inputs validieren
-private validateParameters(params: any): void {
-  if (!params.email || !this.isValidEmail(params.email)) {
-    throw new NodeOperationError(this.getNode(), 'Valid email is required');
-  }
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/27-input-validation.ts"
+            />
 
             <Typo.H3 className="mt-8">Performance-Optimierung</Typo.H3>
-            <CodeBlock language="typescript">
-              {`// Items in Batches verarbeiten
-const batchSize = 100;
-const batches = this.chunkArray(items, batchSize);
-
-for (const batch of batches) {
-  await this.processBatch(batch);
-}
-
-// Häufig abgerufene Daten cachen
-private cache = new Map<string, any>();
-
-private async getCachedData(key: string): Promise<any> {
-  if (this.cache.has(key)) {
-    return this.cache.get(key);
-  }
-
-  const data = await this.fetchData(key);
-  this.cache.set(key, data);
-  return data;
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/28-performance-optimization.ts"
+            />
 
             <Typo.H3 className="mt-8">Sicherheitsaspekte</Typo.H3>
-            <CodeBlock language="typescript">
-              {`// Gut: Sicherer Credential-Zugriff
-const credentials = await this.getCredentials('myApiCredentials');
-const apiKey = credentials.apiKey as string;
-
-// Niemals Credentials loggen
-console.log('Making API call...'); // API-Key NICHT loggen
-
-// User-Inputs sanitizen
-private sanitizeInput(input: string): string {
-  return input.replace(/[<>]/g, '');
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/29-security-aspects.ts"
+            />
 
             <Typo.H3 className="mt-8">Dokumentation</Typo.H3>
-            <CodeBlock language="typescript">
-              {`/**
- * Erstellt oder aktualisiert einen Lead in Microsoft Dynamics 365
- * @param leadData - Lead-Daten mit Vorname, Nachname, E-Mail und Firma
- * @param operation - Operation (create oder update)
- * @returns Erstellter oder aktualisierter Lead mit ID
- */
-private async processLead(
-  leadData: any,
-  operation: 'create' | 'update'
-): Promise<any> {
-  // Implementation
-}`}
-            </CodeBlock>
+            <CodeBlockFile
+              language="typescript"
+              src="building-custom-node-dev-guide/code-blocks/30-documentation-example.ts"
+            />
 
             <Typo.H3 className="mt-8">
               Troubleshooting häufiger Probleme
@@ -1423,21 +799,21 @@ private async processLead(
               Der Custom Node wird nicht in der n8n-Oberfläche angezeigt
             </Typo.Paragraph>
             <p className="font-semibold mt-4">Lösungen:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>
+            <Typo.List>
+              <Typo.ListItem>
                 <code className="bg-gray-200 px-2 py-1 rounded">
                   package.json
                 </code>{" "}
                 exports überprüfen
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 Node neu bauen und{" "}
                 <code className="bg-gray-200 px-2 py-1 rounded">npm link</code>{" "}
                 ausführen
-              </li>
-              <li>n8n neu starten</li>
-              <li>Browser-Cache leeren</li>
-            </ul>
+              </Typo.ListItem>
+              <Typo.ListItem>n8n neu starten</Typo.ListItem>
+              <Typo.ListItem>Browser-Cache leeren</Typo.ListItem>
+            </Typo.List>
 
             <Typo.H4 className="mt-8">Credential-Fehler</Typo.H4>
             <p className="font-semibold">Problem:</p>
@@ -1445,13 +821,13 @@ private async processLead(
               Authentifizierungsfehler oder Credentials nicht gefunden
             </Typo.Paragraph>
             <p className="font-semibold mt-4">Lösungen:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>
+            <Typo.List>
+              <Typo.ListItem>
                 Credential-Name in Node und Credential-Datei muss übereinstimmen
-              </li>
-              <li>Credential-Typ korrekt registrieren</li>
-              <li>Credentials in n8n UI überprüfen</li>
-            </ul>
+              </Typo.ListItem>
+              <Typo.ListItem>Credential-Typ korrekt registrieren</Typo.ListItem>
+              <Typo.ListItem>Credentials in n8n UI überprüfen</Typo.ListItem>
+            </Typo.List>
 
             <Typo.H4 className="mt-8">API-Request-Fehler</Typo.H4>
             <p className="font-semibold">Problem:</p>
@@ -1459,12 +835,14 @@ private async processLead(
               HTTP-Requests schlagen fehl oder haben Timeouts
             </Typo.Paragraph>
             <p className="font-semibold mt-4">Lösungen:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Request-Timeouts erhöhen</li>
-              <li>Proper Error-Handling implementieren</li>
-              <li>API-Response-Format überprüfen</li>
-              <li>Network-Connectivity testen</li>
-            </ul>
+            <Typo.List>
+              <Typo.ListItem>Request-Timeouts erhöhen</Typo.ListItem>
+              <Typo.ListItem>
+                Proper Error-Handling implementieren
+              </Typo.ListItem>
+              <Typo.ListItem>API-Response-Format überprüfen</Typo.ListItem>
+              <Typo.ListItem>Network-Connectivity testen</Typo.ListItem>
+            </Typo.List>
           </div>
 
           {/* Section: Community and Resources */}
@@ -1475,8 +853,8 @@ private async processLead(
             <Typo.H2>Community und Ressourcen</Typo.H2>
 
             <Typo.H3>Offizielle Dokumentation</Typo.H3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>
+            <Typo.List>
+              <Typo.ListItem>
                 <a
                   href="https://docs.n8n.io/"
                   className="text-primary-600 hover:text-primary-700"
@@ -1485,8 +863,8 @@ private async processLead(
                 >
                   n8n Dokumentation
                 </a>
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <a
                   href="https://docs.n8n.io/integrations/creating-nodes/"
                   className="text-primary-600 hover:text-primary-700"
@@ -1495,8 +873,8 @@ private async processLead(
                 >
                   Node Development Guide
                 </a>
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <a
                   href="https://docs.n8n.io/api/"
                   className="text-primary-600 hover:text-primary-700"
@@ -1505,12 +883,12 @@ private async processLead(
                 >
                   API Reference
                 </a>
-              </li>
-            </ul>
+              </Typo.ListItem>
+            </Typo.List>
 
             <Typo.H3 className="mt-8">Community-Support</Typo.H3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>
+            <Typo.List>
+              <Typo.ListItem>
                 <a
                   href="https://community.n8n.io/"
                   className="text-primary-600 hover:text-primary-700"
@@ -1519,8 +897,8 @@ private async processLead(
                 >
                   n8n Community Forum
                 </a>
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <a
                   href="https://github.com/n8n-io/n8n/discussions"
                   className="text-primary-600 hover:text-primary-700"
@@ -1529,8 +907,8 @@ private async processLead(
                 >
                   GitHub Discussions
                 </a>
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <a
                   href="https://discord.gg/n8n"
                   className="text-primary-600 hover:text-primary-700"
@@ -1539,12 +917,12 @@ private async processLead(
                 >
                   Discord Server
                 </a>
-              </li>
-            </ul>
+              </Typo.ListItem>
+            </Typo.List>
 
             <Typo.H3 className="mt-8">Learning Resources</Typo.H3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>
+            <Typo.List>
+              <Typo.ListItem>
                 <a
                   href="https://www.youtube.com/@n8n-io"
                   className="text-primary-600 hover:text-primary-700"
@@ -1553,8 +931,8 @@ private async processLead(
                 >
                   YouTube Tutorials
                 </a>
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <a
                   href="https://blog.n8n.io/"
                   className="text-primary-600 hover:text-primary-700"
@@ -1563,8 +941,8 @@ private async processLead(
                 >
                   Blog Articles
                 </a>
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <a
                   href="https://github.com/n8n-io/n8n-nodes-starter"
                   className="text-primary-600 hover:text-primary-700"
@@ -1573,8 +951,8 @@ private async processLead(
                 >
                   Example Nodes Repository
                 </a>
-              </li>
-            </ul>
+              </Typo.ListItem>
+            </Typo.List>
           </div>
 
           {/* Conclusion */}
@@ -1592,32 +970,32 @@ private async processLead(
             </Typo.Paragraph>
 
             <Typo.H3 className="mt-8">Wichtige Erkenntnisse</Typo.H3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>
+            <Typo.List>
+              <Typo.ListItem>
                 <strong>Wählen Sie den richtigen Stil:</strong> Deklarativ für
                 einfache APIs, programmatisch für komplexe Logik
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <strong>Planen Sie Ihre Node-Struktur:</strong> Denken Sie an
                 Inputs, Outputs und Parameter-Designs
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <strong>Implementieren Sie robustes Error-Handling:</strong>{" "}
                 Fehlerbehandlung ist entscheidend für Produktions-Nodes
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <strong>Testen Sie gründlich:</strong> Nutzen Sie lokale
                 Entwicklung und das n8n-Testing-Framework
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <strong>Dokumentieren Sie Ihren Code:</strong> Zukünftige
                 Entwickler (einschließlich Sie selbst) werden es Ihnen danken
-              </li>
-              <li>
+              </Typo.ListItem>
+              <Typo.ListItem>
                 <strong>Folgen Sie Best Practices:</strong> Code-Organisation,
                 Sicherheit und Performance sind wichtig
-              </li>
-            </ul>
+              </Typo.ListItem>
+            </Typo.List>
 
             <Typo.Paragraph className="mt-8 text-lg">
               Die Zukunft der Workflow-Automatisierung liegt in Ihren Händen.

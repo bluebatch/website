@@ -19,30 +19,30 @@ import Customer from "@/components/customer/customer";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 
 export const metadata: Metadata = {
-  title: "Steuerberater – Use Cases | BlueBatch",
+  title: "Steuerberater – Use Cases | Bluebatch",
   description:
-    "Wie BlueBatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
+    "Wie Bluebatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
   openGraph: {
-    title: "Steuerberater – BlueBatch Use Cases",
+    title: "Steuerberater – Bluebatch Use Cases",
     description:
-      "Wie BlueBatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
+      "Wie Bluebatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch Steuerberater",
+        alt: "Bluebatch Steuerberater",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steuerberater – BlueBatch Use Cases",
+    title: "Steuerberater – Bluebatch Use Cases",
     description:
-      "Wie BlueBatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
+      "Wie Bluebatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -86,8 +86,8 @@ export default function Page() {
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Von der Dokumentenverarbeitung bis zur DATEV-Integration – wir
-              automatisieren die repetitiven Prozesse in Ihrer Kanzlei.
-              Weniger Routine, mehr Zeit für echte Beratung.
+              automatisieren die repetitiven Prozesse in Ihrer Kanzlei. Weniger
+              Routine, mehr Zeit für echte Beratung.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
@@ -97,7 +97,10 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/tax-consulting-workspace.jpg" type="image" />
+            <Hero2ColumnImage
+              src="/images/tax-consulting-workspace.jpg"
+              type="image"
+            />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>

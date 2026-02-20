@@ -38,21 +38,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Angebots-Bot – Großhandel | BlueBatch",
+  title: "Angebots-Bot – Großhandel | Bluebatch",
   description:
-    "Wie BlueBatch Großhändlern hilft, Angebote automatisch zu erstellen und zu versenden. 21x höhere Qualifizierungsrate.",
+    "Wie Bluebatch Großhändlern hilft, Angebote automatisch zu erstellen und zu versenden. 21x höhere Qualifizierungsrate.",
   openGraph: {
-    title: "Angebots-Bot – Großhandel | BlueBatch",
+    title: "Angebots-Bot – Großhandel | Bluebatch",
     description:
       "Von der Kundenanfrage zum professionellen Angebot in Minuten. 21x höhere Qualifizierungsrate.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Angebots-Bot" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Angebots-Bot",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angebots-Bot – Großhandel | BlueBatch",
+    title: "Angebots-Bot – Großhandel | Bluebatch",
     description:
       "Von der Kundenanfrage zum professionellen Angebot in Minuten. 21x höhere Qualifizierungsrate.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -110,7 +117,8 @@ export default function Page() {
             <Hero2ColumnDescription>
               Leads, die innerhalb von 5 Minuten kontaktiert werden, haben eine
               21x höhere Qualifizierungsrate. Unser Angebots-Bot erstellt
-              professionelle Angebote in Minuten statt Stunden – vollautomatisch.
+              professionelle Angebote in Minuten statt Stunden –
+              vollautomatisch.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Demo anfragen</ContactButton>
@@ -120,7 +128,10 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/pricing-calculator.jpg" type="image" />
+            <Hero2ColumnImage
+              src="/images/pricing-calculator.jpg"
+              type="image"
+            />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
@@ -135,25 +146,33 @@ export default function Page() {
 
         <SimpleGrid cols={4} className="mt-10">
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-secondary-500 mb-2">21x</div>
+            <div className="text-4xl font-bold text-secondary-500 mb-2">
+              21x
+            </div>
             <Typo.Paragraph className="text-sm">
               Höhere Qualifizierungsrate bei schnellem Kontakt
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-secondary-500 mb-2">70-90%</div>
+            <div className="text-4xl font-bold text-secondary-500 mb-2">
+              70-90%
+            </div>
             <Typo.Paragraph className="text-sm">
               Schnellere Angebotserstellung
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-secondary-500 mb-2">15-25%</div>
+            <div className="text-4xl font-bold text-secondary-500 mb-2">
+              15-25%
+            </div>
             <Typo.Paragraph className="text-sm">
               Höhere Conversion Rate
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-secondary-500 mb-2">24/7</div>
+            <div className="text-4xl font-bold text-secondary-500 mb-2">
+              24/7
+            </div>
             <Typo.Paragraph className="text-sm">
               Angebotsfähigkeit rund um die Uhr
             </Typo.Paragraph>
@@ -198,7 +217,9 @@ export default function Page() {
           <div>
             <IntroBox textCentered={false}>
               <IntroBox.PreHeadline>Sales-Team Entlastung</IntroBox.PreHeadline>
-              <IntroBox.Headline>40% mehr Zeit für echten Vertrieb</IntroBox.Headline>
+              <IntroBox.Headline>
+                40% mehr Zeit für echten Vertrieb
+              </IntroBox.Headline>
               <IntroBox.Subline>
                 Ihr Vertriebsteam verbringt weniger Zeit mit Admin-Aufgaben und
                 mehr Zeit mit dem, was zählt: Kundenbeziehungen aufbauen und
@@ -206,8 +227,8 @@ export default function Page() {
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Der Angebots-Bot übernimmt die repetitiven Aufgaben: Preise
-                nachschlagen, Dokumente formatieren, E-Mails versenden, Follow-ups
-                planen.
+                nachschlagen, Dokumente formatieren, E-Mails versenden,
+                Follow-ups planen.
               </IntroBox.Subline>
             </IntroBox>
           </div>

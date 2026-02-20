@@ -21,28 +21,28 @@ import SimpleCard, { SimpleCardFooter } from "@/components/cards/simple-card";
 import IntroBox from "@/components/intro-box";
 
 export const metadata: Metadata = {
-  title: "High-Performance n8n Scaling | BlueBatch",
+  title: "High-Performance n8n Scaling | Bluebatch",
   description:
     "n8n laggt oder crashed? Wir lösen Performance-Probleme mit Redis, RabbitMQ und Docker Swarm. 7x höherer Throughput garantiert.",
   openGraph: {
-    title: "High-Performance n8n Scaling | BlueBatch",
+    title: "High-Performance n8n Scaling | Bluebatch",
     description:
       "Von 23 auf 162 Requests/Sekunde. Professionelles Performance-Scaling für n8n mit Queue Mode.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch Performance Scaling",
+        alt: "Bluebatch Performance Scaling",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "High-Performance n8n Scaling | BlueBatch",
+    title: "High-Performance n8n Scaling | Bluebatch",
     description:
       "n8n Performance-Probleme? Wir skalieren auf Enterprise-Level mit Redis und Queue Mode.",
     images: ["/images/bluebatch-social-cover.jpg"],

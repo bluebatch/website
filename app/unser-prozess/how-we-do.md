@@ -36,7 +36,7 @@ Zahlen lügen nicht:
 
 45% scheitern an mangelndem Change Management.
 
-BlueBatch bricht dieses Muster. Mit einer 98% On-Time Delivery Rate und der Erfahrung aus über 200 erfolgreichen Implementierungen (Pexon Group) transformieren wir Ihr Backoffice systematisch.
+Bluebatch bricht dieses Muster. Mit einer 98% On-Time Delivery Rate und der Erfahrung aus über 200 erfolgreichen Implementierungen (Pexon Group) transformieren wir Ihr Backoffice systematisch.
 
 [DER 6-PHASEN-PROZESS]
 Ihr Weg zur automatisierten Exzellenz

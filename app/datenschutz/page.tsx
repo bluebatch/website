@@ -3,9 +3,9 @@ import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung – BlueBatch",
+  title: "Datenschutzerklärung – Bluebatch",
   description:
-    "Datenschutzerklärung und Informationen zum Umgang mit personenbezogenen Daten bei BlueBatch.",
+    "Datenschutzerklärung und Informationen zum Umgang mit personenbezogenen Daten bei Bluebatch.",
   robots: {
     index: false,
     follow: false,
@@ -26,10 +26,10 @@ export default function Page() {
       <Typo.H3>Allgemeine Hinweise</Typo.H3>
       <Typo.Paragraph>
         Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit
-        Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen.
-        Personenbezogene Daten sind alle Daten, mit denen Sie persönlich
-        identifiziert werden können. Ausführliche Informationen zum Thema
-        Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten
+        Ihren personenbezogenen Daten passiert, wenn Sie unsere Website
+        besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie
+        persönlich identifiziert werden können. Ausführliche Informationen zum
+        Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten
         Datenschutzerklärung.
       </Typo.Paragraph>
 
@@ -125,8 +125,8 @@ export default function Page() {
 
       <Typo.H4>Abschluss eines Vertrages über Auftragsverarbeitung</Typo.H4>
       <Typo.Paragraph>
-        Um die datenschutzkonforme Verarbeitung zu gewährleisten, haben wir einen
-        Vertrag über Auftragsverarbeitung mit unserem Hoster geschlossen.
+        Um die datenschutzkonforme Verarbeitung zu gewährleisten, haben wir
+        einen Vertrag über Auftragsverarbeitung mit unserem Hoster geschlossen.
       </Typo.Paragraph>
 
       {/* 3. Allgemeine Hinweise und Pflichtinformationen */}
@@ -247,8 +247,8 @@ export default function Page() {
         oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder
         an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen
         zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen
-        Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar
-        ist.
+        Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch
+        machbar ist.
       </Typo.Paragraph>
 
       <Typo.H3>SSL- bzw. TLS-Verschlüsselung</Typo.H3>
@@ -286,10 +286,10 @@ export default function Page() {
       </Typo.Paragraph>
       <Typo.List>
         <Typo.ListItem>
-          Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten
-          personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit,
-          um dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht,
-          die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu
+          Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen
+          Daten bestreiten, benötigen wir in der Regel Zeit, um dies zu
+          überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die
+          Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu
           verlangen.
         </Typo.ListItem>
         <Typo.ListItem>
@@ -325,11 +325,11 @@ export default function Page() {
       <Typo.H3>Widerspruch gegen Werbe-E-Mails</Typo.H3>
       <Typo.Paragraph>
         Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten
-        Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung
-        und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der
-        Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der
-        unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails,
-        vor.
+        Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter
+        Werbung und Informationsmaterialien wird hiermit widersprochen. Die
+        Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im
+        Falle der unverlangten Zusendung von Werbeinformationen, etwa durch
+        Spam-E-Mails, vor.
       </Typo.Paragraph>
 
       {/* 4. Datenerfassung auf unserer Website */}
@@ -372,8 +372,8 @@ export default function Page() {
 
       <Typo.H3>Server-Log-Dateien</Typo.H3>
       <Typo.Paragraph>
-        Der Provider der Seiten erhebt und speichert automatisch Informationen in
-        so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns
+        Der Provider der Seiten erhebt und speichert automatisch Informationen
+        in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns
         übermittelt. Dies sind:
       </Typo.Paragraph>
       <Typo.List>
@@ -451,12 +451,12 @@ export default function Page() {
         Wir erheben, verarbeiten und nutzen personenbezogene Daten nur, soweit
         sie für die Begründung, inhaltliche Ausgestaltung oder Änderung des
         Rechtsverhältnisses erforderlich sind (Bestandsdaten). Dies erfolgt auf
-        Grundlage von Art. 6 Abs. 1 lit. b DSGVO, der die Verarbeitung von
-        Daten zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen
-        gestattet. Personenbezogene Daten über die Inanspruchnahme unserer
-        Internetseiten (Nutzungsdaten) erheben, verarbeiten und nutzen wir nur,
-        soweit dies erforderlich ist, um dem Nutzer die Inanspruchnahme des
-        Dienstes zu ermöglichen oder abzurechnen.
+        Grundlage von Art. 6 Abs. 1 lit. b DSGVO, der die Verarbeitung von Daten
+        zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen gestattet.
+        Personenbezogene Daten über die Inanspruchnahme unserer Internetseiten
+        (Nutzungsdaten) erheben, verarbeiten und nutzen wir nur, soweit dies
+        erforderlich ist, um dem Nutzer die Inanspruchnahme des Dienstes zu
+        ermöglichen oder abzurechnen.
       </Typo.Paragraph>
       <Typo.Paragraph>
         Die erhobenen Kundendaten werden nach Abschluss des Auftrags oder
@@ -496,8 +496,8 @@ export default function Page() {
       </Typo.Paragraph>
       <Typo.Paragraph>
         Die Speicherung von Google-Analytics-Cookies und die Nutzung dieses
-        Analyse-Tools erfolgen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
-        Der Websitebetreiber hat ein berechtigtes Interesse an der Analyse des
+        Analyse-Tools erfolgen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der
+        Websitebetreiber hat ein berechtigtes Interesse an der Analyse des
         Nutzerverhaltens, um sowohl sein Webangebot als auch seine Werbung zu
         optimieren.
       </Typo.Paragraph>
@@ -505,18 +505,18 @@ export default function Page() {
       <Typo.H4>IP Anonymisierung</Typo.H4>
       <Typo.Paragraph>
         Wir haben auf dieser Website die Funktion IP-Anonymisierung aktiviert.
-        Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der
-        Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den
-        Europäischen Wirtschaftsraum vor der Übermittlung in die USA gekürzt. Nur
-        in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in
-        den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser
-        Website wird Google diese Informationen benutzen, um Ihre Nutzung der
-        Website auszuwerten, um Reports über die Websiteaktivitäten
-        zusammenzustellen und um weitere mit der Websitenutzung und der
-        Internetnutzung verbundene Dienstleistungen gegenüber dem
-        Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von
-        Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von
-        Google zusammengeführt.
+        Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten
+        der Europäischen Union oder in anderen Vertragsstaaten des Abkommens
+        über den Europäischen Wirtschaftsraum vor der Übermittlung in die USA
+        gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server
+        von Google in den USA übertragen und dort gekürzt. Im Auftrag des
+        Betreibers dieser Website wird Google diese Informationen benutzen, um
+        Ihre Nutzung der Website auszuwerten, um Reports über die
+        Websiteaktivitäten zusammenzustellen und um weitere mit der
+        Websitenutzung und der Internetnutzung verbundene Dienstleistungen
+        gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google
+        Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit
+        anderen Daten von Google zusammengeführt.
       </Typo.Paragraph>
 
       <Typo.H4>Browser Plugin</Typo.H4>
@@ -524,12 +524,13 @@ export default function Page() {
         Sie können die Speicherung der Cookies durch eine entsprechende
         Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch
         darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche
-        Funktionen dieser Website vollumfänglich werden nutzen können. Sie können
-        darüber hinaus die Erfassung der durch den Cookie erzeugten und auf Ihre
-        Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google
-        sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie
-        das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und
-        installieren: https://tools.google.com/dlpage/gaoptout?hl=de.
+        Funktionen dieser Website vollumfänglich werden nutzen können. Sie
+        können darüber hinaus die Erfassung der durch den Cookie erzeugten und
+        auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an
+        Google sowie die Verarbeitung dieser Daten durch Google verhindern,
+        indem Sie das unter dem folgenden Link verfügbare Browser-Plugin
+        herunterladen und installieren:
+        https://tools.google.com/dlpage/gaoptout?hl=de.
       </Typo.Paragraph>
 
       <Typo.H4>Widerspruch gegen Datenerfassung</Typo.H4>
@@ -540,8 +541,8 @@ export default function Page() {
         Website verhindert: Google Analytics deaktivieren.
       </Typo.Paragraph>
       <Typo.Paragraph>
-        Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden
-        Sie in der Datenschutzerklärung von Google:
+        Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics
+        finden Sie in der Datenschutzerklärung von Google:
         https://support.google.com/analytics/answer/6004245?hl=de.
       </Typo.Paragraph>
 
@@ -568,9 +569,9 @@ export default function Page() {
 
       <Typo.H3>Google Analytics Remarketing</Typo.H3>
       <Typo.Paragraph>
-        Unsere Websites nutzen die Funktionen von Google Analytics Remarketing in
-        Verbindung mit den geräteübergreifenden Funktionen von Google AdWords und
-        Google DoubleClick. Anbieter ist die Google Inc., 1600 Amphitheatre
+        Unsere Websites nutzen die Funktionen von Google Analytics Remarketing
+        in Verbindung mit den geräteübergreifenden Funktionen von Google AdWords
+        und Google DoubleClick. Anbieter ist die Google Inc., 1600 Amphitheatre
         Parkway, Mountain View, CA 94043, USA.
       </Typo.Paragraph>
       <Typo.Paragraph>
@@ -605,16 +606,16 @@ export default function Page() {
         Die Zusammenfassung der erfassten Daten in Ihrem Google-Konto erfolgt
         ausschließlich auf Grundlage Ihrer Einwilligung, die Sie bei Google
         abgeben oder widerrufen können (Art. 6 Abs. 1 lit. a DSGVO). Bei
-        Datenerfassungsvorgängen, die nicht in Ihrem Google-Konto zusammengeführt
-        werden (z.B. weil Sie kein Google-Konto haben oder der Zusammenführung
-        widersprochen haben) beruht die Erfassung der Daten auf Art. 6 Abs. 1
-        lit. f DSGVO. Das berechtigte Interesse ergibt sich daraus, dass der
-        Websitebetreiber ein Interesse an der anonymisierten Analyse der
-        Websitebesucher zu Werbezwecken hat.
+        Datenerfassungsvorgängen, die nicht in Ihrem Google-Konto
+        zusammengeführt werden (z.B. weil Sie kein Google-Konto haben oder der
+        Zusammenführung widersprochen haben) beruht die Erfassung der Daten auf
+        Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse ergibt sich
+        daraus, dass der Websitebetreiber ein Interesse an der anonymisierten
+        Analyse der Websitebesucher zu Werbezwecken hat.
       </Typo.Paragraph>
       <Typo.Paragraph>
-        Weitergehende Informationen und die Datenschutzbestimmungen finden Sie in
-        der Datenschutzerklärung von Google unter:
+        Weitergehende Informationen und die Datenschutzbestimmungen finden Sie
+        in der Datenschutzerklärung von Google unter:
         https://policies.google.com/technologies/ads?hl=de.
       </Typo.Paragraph>
 
@@ -673,9 +674,9 @@ export default function Page() {
 
       <Typo.H3>Facebook Pixel</Typo.H3>
       <Typo.Paragraph>
-        Unsere Website nutzt zur Konversionsmessung das Besucheraktions-Pixel von
-        Facebook, Facebook Inc., 1601 S. California Ave, Palo Alto, CA 94304,
-        USA (&bdquo;Facebook&ldquo;).
+        Unsere Website nutzt zur Konversionsmessung das Besucheraktions-Pixel
+        von Facebook, Facebook Inc., 1601 S. California Ave, Palo Alto, CA
+        94304, USA (&bdquo;Facebook&ldquo;).
       </Typo.Paragraph>
       <Typo.Paragraph>
         So kann das Verhalten der Seitenbesucher nachverfolgt werden, nachdem
@@ -685,15 +686,15 @@ export default function Page() {
         ausgewertet werden und zukünftige Werbemaßnahmen optimiert werden.
       </Typo.Paragraph>
       <Typo.Paragraph>
-        Die erhobenen Daten sind für uns als Betreiber dieser Website anonym, wir
-        können keine Rückschlüsse auf die Identität der Nutzer ziehen. Die Daten
-        werden aber von Facebook gespeichert und verarbeitet, sodass eine
-        Verbindung zum jeweiligen Nutzerprofil möglich ist und Facebook die Daten
-        für eigene Werbezwecke, entsprechend der Facebook-Datenverwendungsrichtlinie
-        verwenden kann. Dadurch kann Facebook das Schalten von Werbeanzeigen auf
-        Seiten von Facebook sowie außerhalb von Facebook ermöglichen. Diese
-        Verwendung der Daten kann von uns als Seitenbetreiber nicht beeinflusst
-        werden.
+        Die erhobenen Daten sind für uns als Betreiber dieser Website anonym,
+        wir können keine Rückschlüsse auf die Identität der Nutzer ziehen. Die
+        Daten werden aber von Facebook gespeichert und verarbeitet, sodass eine
+        Verbindung zum jeweiligen Nutzerprofil möglich ist und Facebook die
+        Daten für eigene Werbezwecke, entsprechend der
+        Facebook-Datenverwendungsrichtlinie verwenden kann. Dadurch kann
+        Facebook das Schalten von Werbeanzeigen auf Seiten von Facebook sowie
+        außerhalb von Facebook ermöglichen. Diese Verwendung der Daten kann von
+        uns als Seitenbetreiber nicht beeinflusst werden.
       </Typo.Paragraph>
       <Typo.Paragraph>
         In den Datenschutzhinweisen von Facebook finden Sie weitere Hinweise zum
@@ -721,8 +722,8 @@ export default function Page() {
         benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, welche
         uns die Überprüfung gestatten, dass Sie der Inhaber der angegebenen
         E-Mail-Adresse sind und mit dem Empfang des Newsletters einverstanden
-        sind. Weitere Daten werden nicht bzw. nur auf freiwilliger Basis erhoben.
-        Diese Daten verwenden wir ausschließlich für den Versand der
+        sind. Weitere Daten werden nicht bzw. nur auf freiwilliger Basis
+        erhoben. Diese Daten verwenden wir ausschließlich für den Versand der
         angeforderten Informationen und geben diese nicht an Dritte weiter.
       </Typo.Paragraph>
       <Typo.Paragraph>
@@ -789,8 +790,7 @@ export default function Page() {
       </Typo.Paragraph>
       <Typo.Paragraph>
         Weitere Informationen über Datenschutz bei YouTube finden Sie in deren
-        Datenschutzerklärung unter:
-        https://policies.google.com/privacy?hl=de.
+        Datenschutzerklärung unter: https://policies.google.com/privacy?hl=de.
       </Typo.Paragraph>
 
       <Typo.H3>Google Web Fonts</Typo.H3>
@@ -810,8 +810,8 @@ export default function Page() {
         DSGVO dar.
       </Typo.Paragraph>
       <Typo.Paragraph>
-        Bei der Verwendung des Tools werden von Ihnen persönliche Daten wie Name,
-        E-Mail-Adresse und Telefonnummer abgefragt. Sie haben außerdem die
+        Bei der Verwendung des Tools werden von Ihnen persönliche Daten wie
+        Name, E-Mail-Adresse und Telefonnummer abgefragt. Sie haben außerdem die
         Möglichkeit, Ihr Anliegen darzustellen und uns weitere Informationen zur
         Verfügung zu stellen. Wenn Sie das Tool nutzen, werden Ihre Angaben aus
         dem Anfrageformular inklusive der von Ihnen dort angegebenen
@@ -820,9 +820,9 @@ export default function Page() {
         Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
       </Typo.Paragraph>
       <Typo.Paragraph>
-        Für den Umgang mit den durch Verwendung von Calendly erfassten Daten gilt
-        diese Datenschutzerklärung sowie die Datenschutzerklärung des Anbieters.
-        Die Datenschutzerklärung von Calendly finden Sie unter:
+        Für den Umgang mit den durch Verwendung von Calendly erfassten Daten
+        gilt diese Datenschutzerklärung sowie die Datenschutzerklärung des
+        Anbieters. Die Datenschutzerklärung von Calendly finden Sie unter:
         https://calendly.com/pages/privacy
       </Typo.Paragraph>
     </ContentWrapper>

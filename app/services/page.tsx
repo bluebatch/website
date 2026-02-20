@@ -21,28 +21,28 @@ import BoundlessImageCard from "@/components/cards/boundless-image-card";
 import SimpleCard from "@/components/cards/simple-card";
 
 export const metadata: Metadata = {
-  title: "n8n Services | BlueBatch",
+  title: "n8n Services | Bluebatch",
   description:
     "Professionelle n8n Services: Hosting, Wartung, Custom Nodes, Schulungen und Performance Scaling. Ihr Partner für Enterprise n8n.",
   openGraph: {
-    title: "n8n Services | BlueBatch",
+    title: "n8n Services | Bluebatch",
     description:
       "Von Hosting bis High-Performance Scaling – alle n8n Services aus einer Hand.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch n8n Services",
+        alt: "Bluebatch n8n Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "n8n Services | BlueBatch",
+    title: "n8n Services | Bluebatch",
     description:
       "Professionelle n8n Services für Ihr Unternehmen. Hosting, Wartung, Entwicklung und mehr.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -265,7 +265,7 @@ export default function Page() {
       <ContentWrapper background="bg-gray-50">
         <IntroBox>
           <IntroBox.Headline>
-            Warum BlueBatch als n8n Partner?
+            Warum Bluebatch als n8n Partner?
           </IntroBox.Headline>
           <IntroBox.Paragraph>
             Ihr Full-Service-Partner für Enterprise n8n

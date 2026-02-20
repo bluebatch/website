@@ -4,28 +4,28 @@ import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 
 export const metadata: Metadata = {
-  title: "Use Cases – BlueBatch | Branchenlösungen für AI-Automation",
+  title: "Use Cases – Bluebatch | Branchenlösungen für AI-Automation",
   description:
     "Entdecken Sie unsere Branchenlösungen für Großhandel, Steuerberater und E-Commerce. AI-Workflows für jede Branche.",
   openGraph: {
-    title: "Use Cases – BlueBatch",
+    title: "Use Cases – Bluebatch",
     description:
       "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, E-Commerce.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch Use Cases",
+        alt: "Bluebatch Use Cases",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Use Cases – BlueBatch",
+    title: "Use Cases – Bluebatch",
     description:
       "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, E-Commerce.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -62,7 +62,7 @@ export default function Page() {
       <div className="text-center mb-16">
         <Typo.H1>Use Cases</Typo.H1>
         <Typo.Paragraph>
-          Entdecken Sie, wie Unternehmen mit bluebatch ihre Prozesse
+          Entdecken Sie, wie Unternehmen mit Bluebatch ihre Prozesse
           automatisieren.
         </Typo.Paragraph>
       </div>

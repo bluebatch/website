@@ -29,21 +29,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Lagerverwaltung – Großhandel | BlueBatch",
+  title: "Lagerverwaltung – Großhandel | Bluebatch",
   description:
-    "Wie BlueBatch die Lagerverwaltung im Großhandel automatisiert – Echtzeit-Bestände und automatische Nachbestellungen.",
+    "Wie Bluebatch die Lagerverwaltung im Großhandel automatisiert – Echtzeit-Bestände und automatische Nachbestellungen.",
   openGraph: {
-    title: "Lagerverwaltung – Großhandel | BlueBatch",
+    title: "Lagerverwaltung – Großhandel | Bluebatch",
     description:
       "Echtzeit-Bestandssynchronisation und KI-basierte Bedarfsprognosen für automatische Nachbestellungen.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Lagerverwaltung" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Lagerverwaltung",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lagerverwaltung – Großhandel | BlueBatch",
+    title: "Lagerverwaltung – Großhandel | Bluebatch",
     description:
       "Echtzeit-Bestandssynchronisation und KI-basierte Bedarfsprognosen für automatische Nachbestellungen.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -103,14 +110,10 @@ export default function Page() {
           overlayOpacity={0.85}
           opacityBackground="white"
         >
-          <BackgroundHero.TopLabel>
-            Lagerverwaltung
-          </BackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>Lagerverwaltung</BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
             Intelligente{" "}
-            <BackgroundHero.Highlight>
-              Lagerverwaltung
-            </BackgroundHero.Highlight>
+            <BackgroundHero.Highlight>Lagerverwaltung</BackgroundHero.Highlight>
             <br />
             mit automatischer Nachbestellung
           </BackgroundHero.Headline>
@@ -148,7 +151,8 @@ export default function Page() {
           <SimpleCard className="bg-red-50! border-red-100!">
             <Typo.H3 className="text-red-600">130.000 €+</Typo.H3>
             <Typo.Paragraph className="text-sm md:text-base text-gray-600 mt-2">
-              Jährlich verlorener Umsatz durch Lieferengpässe (bei 5% Fehlbestandsrate)
+              Jährlich verlorener Umsatz durch Lieferengpässe (bei 5%
+              Fehlbestandsrate)
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard className="bg-red-50! border-red-100!">
@@ -160,7 +164,8 @@ export default function Page() {
           <SimpleCard className="bg-red-50! border-red-100!">
             <Typo.H3 className="text-red-600">70-80%</Typo.H3>
             <Typo.Paragraph className="text-sm md:text-base text-gray-600 mt-2">
-              Typische Bestandsgenauigkeit – 20-30% Fehler bei manuellen Zählungen
+              Typische Bestandsgenauigkeit – 20-30% Fehler bei manuellen
+              Zählungen
             </Typo.Paragraph>
           </SimpleCard>
         </SimpleGrid>
@@ -208,8 +213,8 @@ export default function Page() {
               </IntroBox.Headline>
               <IntroBox.Subline>
                 Unsere KI-Modelle analysieren historische Verkaufsdaten,
-                Saisonmuster, Aktionskalender und externe Faktoren, um den Bedarf
-                präzise vorherzusagen.
+                Saisonmuster, Aktionskalender und externe Faktoren, um den
+                Bedarf präzise vorherzusagen.
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Das Ergebnis: 80-90% Prognosegenauigkeit statt Überschuss oder
@@ -241,12 +246,24 @@ export default function Page() {
           <SimpleCard
             className="text-center"
             icon={
-              <svg className="w-12 h-12 text-secondary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+              <svg
+                className="w-12 h-12 text-secondary-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+                />
               </svg>
             }
           >
-            <div className="text-3xl font-bold text-secondary-500 mb-2">95%+</div>
+            <div className="text-3xl font-bold text-secondary-500 mb-2">
+              95%+
+            </div>
             <Typo.Paragraph className="text-sm">
               Bestandsgenauigkeit statt 70-80%
             </Typo.Paragraph>
@@ -254,12 +271,24 @@ export default function Page() {
           <SimpleCard
             className="text-center"
             icon={
-              <svg className="w-12 h-12 text-secondary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+              <svg
+                className="w-12 h-12 text-secondary-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
+                />
               </svg>
             }
           >
-            <div className="text-3xl font-bold text-secondary-500 mb-2">8-10%</div>
+            <div className="text-3xl font-bold text-secondary-500 mb-2">
+              8-10%
+            </div>
             <Typo.Paragraph className="text-sm">
               Mehr Umsatz durch weniger Fehlbestände
             </Typo.Paragraph>
@@ -267,12 +296,24 @@ export default function Page() {
           <SimpleCard
             className="text-center"
             icon={
-              <svg className="w-12 h-12 text-secondary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <svg
+                className="w-12 h-12 text-secondary-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
             }
           >
-            <div className="text-3xl font-bold text-secondary-500 mb-2">17%</div>
+            <div className="text-3xl font-bold text-secondary-500 mb-2">
+              17%
+            </div>
             <Typo.Paragraph className="text-sm">
               Weniger Kapitalbindung im Lager
             </Typo.Paragraph>
@@ -280,12 +321,24 @@ export default function Page() {
           <SimpleCard
             className="text-center"
             icon={
-              <svg className="w-12 h-12 text-secondary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              <svg
+                className="w-12 h-12 text-secondary-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+                />
               </svg>
             }
           >
-            <div className="text-3xl font-bold text-secondary-500 mb-2">10x</div>
+            <div className="text-3xl font-bold text-secondary-500 mb-2">
+              10x
+            </div>
             <Typo.Paragraph className="text-sm">
               Skalierbarkeit ohne Personal-Aufbau
             </Typo.Paragraph>
@@ -318,8 +371,7 @@ export default function Page() {
                 "Ja, n8n unterstützt Integration mit allen gängigen ERP-Systemen (SAP, Oracle, NetSuite, ERPNext, Odoo, Microsoft Dynamics) über native Konnektoren, REST APIs oder EDI-Gateways. Die Automatisierungsschicht sitzt auf Ihren bestehenden Systemen und verbindet sie, ohne dass Ersatz erforderlich ist.",
             },
             {
-              question:
-                "Wie genau ist die KI-basierte Bedarfsprognose?",
+              question: "Wie genau ist die KI-basierte Bedarfsprognose?",
               answer:
                 "Moderne KI-Modelle erreichen 80-90% Prognosegenauigkeit durch Analyse historischer Verkaufsdaten, Saisonmuster, Aktionskalender und externer Faktoren (Markttrends, Wetter). Das System lernt kontinuierlich und verbessert sich mit jeder Iteration.",
             },

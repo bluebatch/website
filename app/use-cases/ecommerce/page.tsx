@@ -5,28 +5,28 @@ import Typo from "@/components/typo";
 import { getSubPages } from "@/lib/get-subpages";
 
 export const metadata: Metadata = {
-  title: "E-Commerce – Use Cases | BlueBatch",
+  title: "E-Commerce – Use Cases | Bluebatch",
   description:
-    "Wie BlueBatch E-Commerce-Unternehmen bei Produktdatenmanagement und Kundenservice unterstützt.",
+    "Wie Bluebatch E-Commerce-Unternehmen bei Produktdatenmanagement und Kundenservice unterstützt.",
   openGraph: {
-    title: "E-Commerce – BlueBatch Use Cases",
+    title: "E-Commerce – Bluebatch Use Cases",
     description:
       "Produktdaten und Kundenservice automatisieren – für Skalierung ohne wachsende Teams.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch E-Commerce",
+        alt: "Bluebatch E-Commerce",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "E-Commerce – BlueBatch Use Cases",
+    title: "E-Commerce – Bluebatch Use Cases",
     description:
       "Produktdaten und Kundenservice automatisieren – für Skalierung ohne wachsende Teams.",
     images: ["/images/bluebatch-social-cover.jpg"],

@@ -3,8 +3,8 @@ import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 
 export const metadata: Metadata = {
-  title: "Impressum – BlueBatch",
-  description: "Impressum und rechtliche Informationen zu BlueBatch.",
+  title: "Impressum – Bluebatch",
+  description: "Impressum und rechtliche Informationen zu Bluebatch.",
   robots: {
     index: false,
     follow: false,

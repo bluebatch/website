@@ -1,6 +1,6 @@
 <-- Hero Section
 Option 1: Der Skalierungs-Hebel (Fokus auf Business-Wachstum)
-Headline: Skalieren Sie Ihren Umsatz, nicht Ihren Headcount. Subline: Wir beenden die Fehlallokation von Humankapital. BlueBatch automatisiert Ihre manuellen Backoffice-Prozesse mit AI-Workflows auf Enterprise-Niveau – live in nur 5 Tagen. CTA-Button: [Jetzt ROI-Analyse anfragen]
+Headline: Skalieren Sie Ihren Umsatz, nicht Ihren Headcount. Subline: Wir beenden die Fehlallokation von Humankapital. Bluebatch automatisiert Ihre manuellen Backoffice-Prozesse mit AI-Workflows auf Enterprise-Niveau – live in nur 5 Tagen. CTA-Button: [Jetzt ROI-Analyse anfragen]
 
 Option 2: Der "Anti-Chaos" Hebel (Fokus auf Effizienz & Qualität)
 Headline: Schluss mit dem Abtippen. Willkommen in der Daten-Autobahn. Subline: Wir transformieren langsame, fehleranfällige manuelle Prozesse in hochverfügbare digitale Mitarbeiter. Keine "Clicky-Bude", sondern robuste KI-Lösungen mit der Enterprise-DNA der Pexon Consulting. CTA-Button: [Prozess-Check vereinbaren]
@@ -9,14 +9,14 @@ Option 3: Der Speed & Trust Hebel (Fokus auf Schnelligkeit & Expertise)
 Headline: Enterprise AI-Automation – produktiv in einer Arbeitswoche. Subline: Während andere noch evaluieren, liefern wir Ergebnisse. Wir bauen, betreiben und optimieren Ihre Backoffice-Automatisierung mit n8n und KI. Sicher, skalierbar und messbar profitabel. CTA-Button: [Ersten Workflow planen]
 
 ->>
-Über BlueBatch: Enterprise-DNA trifft auf radikale Automatisierung
+Über Bluebatch: Enterprise-DNA trifft auf radikale Automatisierung
 Die Mission: Talente befreien, Skalierung ermöglichen.
 Im Herzen des Mittelstands und des Großhandels liegt ein ungenutztes Potenzial. Während Unternehmen händeringend nach Fachkräften suchen, verbringen ihre besten Mitarbeiter oft mehr als die Hälfte ihrer Arbeitszeit mit mechanischen Aufgaben: Daten aus PDFs in ERP-Systeme übertragen, Angebote manuell zusammenstellen oder Stammdaten pflegen.
 
-BlueBatch wurde gegründet, um diese Fehlallokation von Humankapital zu beenden. Wir bauen keine klassische Software – wir erschaffen digitale Mitarbeiter. Unsere AI-Workflows übernehmen die kognitive Routinearbeit, damit Ihre Teams wieder das tun können, wofür sie eingestellt wurden: Strategien entwickeln, Kunden begeistern und das Geschäft vorantreiben.
+Bluebatch wurde gegründet, um diese Fehlallokation von Humankapital zu beenden. Wir bauen keine klassische Software – wir erschaffen digitale Mitarbeiter. Unsere AI-Workflows übernehmen die kognitive Routinearbeit, damit Ihre Teams wieder das tun können, wofür sie eingestellt wurden: Strategien entwickeln, Kunden begeistern und das Geschäft vorantreiben.
 
 Unser Erbe: Keine „Clicky-Bude“, sondern Enterprise-Expertise
-BlueBatch ist eine spezialisierte Tochter der Pexon Consulting. Als Teil einer etablierten IT-Cloud-Beratung auf Enterprise-Niveau bringen wir eine technologische Reife mit, die man bei reinen Automatisierungs-Agenturen selten findet.
+Bluebatch ist eine spezialisierte Tochter der Pexon Consulting. Als Teil einer etablierten IT-Cloud-Beratung auf Enterprise-Niveau bringen wir eine technologische Reife mit, die man bei reinen Automatisierungs-Agenturen selten findet.
 
 Cloud-Native & Sicher: Wir wissen, wie man Systeme skaliert, die höchsten Sicherheitsansprüchen genügen. Wir "basteln" nicht mit Tools, wir bauen robuste, architekturell saubere Lösungen.
 
@@ -44,18 +44,18 @@ Managed Operations: Wir übernehmen den Betrieb. Wir monitoren die KI-Qualität,
 
 Human-in-the-Loop: Wir integrieren Ihre Mitarbeiter sinnvoll in den Prozess. Die KI arbeitet vor, der Mensch gibt die finale Freigabe. So sichern wir 100% Qualität bei minimalem Zeitaufwand.
 
-Wir sind BlueBatch.
+Wir sind Bluebatch.
 Wir kombinieren die Agilität eines KI-Startups mit der Zuverlässigkeit einer Enterprise-Beratung. Lassen Sie uns gemeinsam die manuelle Ära beenden und Ihr Unternehmen auf "Autopilot" für Routineprozesse stellen.
 
 SECOND NON SAAS STYLE
 
-Über BlueBatch: Ihr Partner für Workflow Engineering & Managed AI
+Über Bluebatch: Ihr Partner für Workflow Engineering & Managed AI
 Wir bauen keine Plattform. Wir bauen Ihre Lösung.
-In einer Welt voller „Blackbox“-Software gehen wir einen anderen Weg. BlueBatch ist kein anonymes Tool, sondern eine Workflow-Engineering-Unit. Wir analysieren Ihre manuellen Prozesse, entwerfen die passende Architektur und implementieren hochgradig individuelle Automatisierungen, die genau dort ansetzen, wo Standard-Software scheitert.
+In einer Welt voller „Blackbox“-Software gehen wir einen anderen Weg. Bluebatch ist kein anonymes Tool, sondern eine Workflow-Engineering-Unit. Wir analysieren Ihre manuellen Prozesse, entwerfen die passende Architektur und implementieren hochgradig individuelle Automatisierungen, die genau dort ansetzen, wo Standard-Software scheitert.
 
-Das Besondere: Ihre Daten gehören Ihnen. Wir arbeiten nicht auf einer proprietären BlueBatch-Plattform. Wir bauen die Workflows direkt in Ihrer Infrastruktur oder auf dedizierten Instanzen. Ihre sensiblen Geschäftsdaten verlassen niemals Ihren Kontrollbereich. Wir nutzen modernste KI-Modelle und bewährte Automatisierungs-Patterns, passen diese aber präzise auf Ihre spezifischen Geschäftsregeln im Großhandel und Retail an.
+Das Besondere: Ihre Daten gehören Ihnen. Wir arbeiten nicht auf einer proprietären Bluebatch-Plattform. Wir bauen die Workflows direkt in Ihrer Infrastruktur oder auf dedizierten Instanzen. Ihre sensiblen Geschäftsdaten verlassen niemals Ihren Kontrollbereich. Wir nutzen modernste KI-Modelle und bewährte Automatisierungs-Patterns, passen diese aber präzise auf Ihre spezifischen Geschäftsregeln im Großhandel und Retail an.
 
-Warum BlueBatch? Der Engineering-Ansatz
+Warum Bluebatch? Der Engineering-Ansatz
 Kein Lock-in, volle Souveränität: Wir nutzen Open-Source-Power (wie n8n) und Cloud-Native-Technologien. Das bedeutet für Sie: Die Logik der Workflows ist transparent und bleibt in Ihrem Besitz. Sie sind nicht von einer unflexiblen Plattform abhängig.
 
 Bewährte Patterns – Individuelle Umsetzung: Wir erfinden das Rad nicht jedes Mal neu. Wir nutzen erprobte „Blueprints“ für die Belegverarbeitung, Stammdatenpflege oder Reklamationsbearbeitung. Aber: Wir wissen, dass Ihr Unternehmen eigene Nuancen hat. Deshalb individualisieren wir jeden Workflow, bis er sich nahtlos in Ihre bestehende Systemlandschaft (ERP, CRM, PIM) einfügt.
@@ -76,7 +76,7 @@ Quality Assurance: Durch „Human-in-the-Loop“-Schnittstellen stellen wir sich
 Unsere Philosophie: Ergebnisse statt Features
 Wir reden nicht über Software-Funktionen, sondern über Business-Impact. Unser Ziel ist es, dass Ihr Einkauf schneller verhandeln kann, Ihr Vertrieb schneller Angebote versendet und Ihr Backoffice von monotonen Aufgaben befreit wird.
 
-BlueBatch ist die Brücke zwischen Ihrer heutigen manuellen Arbeit und einer automatisierten, skalierbaren Zukunft.
+Bluebatch ist die Brücke zwischen Ihrer heutigen manuellen Arbeit und einer automatisierten, skalierbaren Zukunft.
 
 Neue Mission Statements (Hero-Section) – Fokus auf Service/Engineering:
 Option A (Der Engineering-Fokus):
@@ -85,7 +85,7 @@ Headline: Wir bauen Ihre digitale Belegschaft. Maßgeschneidert. Sicher. Subline
 
 Option B (Der Managed-Service-Fokus):
 
-Headline: Ihr Backoffice auf Autopilot – Wir bauen und betreiben Ihre Workflows. Subline: Nutzen Sie die Power von AI und n8n ohne interne IT-Ressourcen zu binden. BlueBatch liefert schlüsselfertiges Workflow-Engineering mit der Sicherheit der Pexon-Gruppe.
+Headline: Ihr Backoffice auf Autopilot – Wir bauen und betreiben Ihre Workflows. Subline: Nutzen Sie die Power von AI und n8n ohne interne IT-Ressourcen zu binden. Bluebatch liefert schlüsselfertiges Workflow-Engineering mit der Sicherheit der Pexon-Gruppe.
 
 Option C (Der Souveränitäts-Fokus):
 

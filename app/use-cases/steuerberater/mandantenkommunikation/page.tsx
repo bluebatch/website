@@ -39,21 +39,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Mandantenkommunikation – Steuerberater | BlueBatch",
+  title: "Mandantenkommunikation – Steuerberater | Bluebatch",
   description:
-    "Wie BlueBatch die Mandantenkommunikation für Steuerberater automatisiert. 70% weniger Routineanfragen.",
+    "Wie Bluebatch die Mandantenkommunikation für Steuerberater automatisiert. 70% weniger Routineanfragen.",
   openGraph: {
-    title: "Mandantenkommunikation – Steuerberater | BlueBatch",
+    title: "Mandantenkommunikation – Steuerberater | Bluebatch",
     description:
       "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Mandantenkommunikation" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Mandantenkommunikation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mandantenkommunikation – Steuerberater | BlueBatch",
+    title: "Mandantenkommunikation – Steuerberater | Bluebatch",
     description:
       "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -83,9 +90,7 @@ export default function Page() {
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
             Routineanfragen{" "}
-            <BackgroundHero.Highlight>
-              automatisch
-            </BackgroundHero.Highlight>{" "}
+            <BackgroundHero.Highlight>automatisch</BackgroundHero.Highlight>{" "}
             beantworten
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
@@ -189,9 +194,15 @@ export default function Page() {
                   Bearbeitungsstand und Beleganforderungen – 24/7 verfügbar.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>Echtzeit-Zugriff auf Mandantenakte</Typo.ListItem>
-                  <Typo.ListItem>Dynamische Fristen- und Statusauskunft</Typo.ListItem>
-                  <Typo.ListItem>Eskalation zu Mitarbeitern bei komplexen Fragen</Typo.ListItem>
+                  <Typo.ListItem>
+                    Echtzeit-Zugriff auf Mandantenakte
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Dynamische Fristen- und Statusauskunft
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Eskalation zu Mitarbeitern bei komplexen Fragen
+                  </Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
@@ -214,8 +225,12 @@ export default function Page() {
                   gestaffelt nach Dringlichkeit.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>30, 14, 7, 3 Tage Vorlauf-Erinnerungen</Typo.ListItem>
-                  <Typo.ListItem>Individuelle Präferenzen (E-Mail, SMS, Portal)</Typo.ListItem>
+                  <Typo.ListItem>
+                    30, 14, 7, 3 Tage Vorlauf-Erinnerungen
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Individuelle Präferenzen (E-Mail, SMS, Portal)
+                  </Typo.ListItem>
                   <Typo.ListItem>Automatische Eskalationskette</Typo.ListItem>
                 </Typo.List>
               </div>
@@ -239,9 +254,15 @@ export default function Page() {
                   und intelligenter Nachverfolgung.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>Personalisierte Checklisten je Mandantentyp</Typo.ListItem>
-                  <Typo.ListItem>Automatische Tracking bei Upload</Typo.ListItem>
-                  <Typo.ListItem>Gezielte Erinnerungen für fehlende Belege</Typo.ListItem>
+                  <Typo.ListItem>
+                    Personalisierte Checklisten je Mandantentyp
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Automatische Tracking bei Upload
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Gezielte Erinnerungen für fehlende Belege
+                  </Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
@@ -264,9 +285,15 @@ export default function Page() {
                   Meilensteinen ihrer Steuerangelegenheiten.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>Bearbeitungsstart und Fertigstellung</Typo.ListItem>
-                  <Typo.ListItem>Einreichung beim Finanzamt bestätigt</Typo.ListItem>
-                  <Typo.ListItem>Bescheid eingegangen mit nächsten Schritten</Typo.ListItem>
+                  <Typo.ListItem>
+                    Bearbeitungsstart und Fertigstellung
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Einreichung beim Finanzamt bestätigt
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Bescheid eingegangen mit nächsten Schritten
+                  </Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
@@ -299,27 +326,35 @@ export default function Page() {
           <BeforeCard>
             <ComparisonHeadline>Vorher: Manuell</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>2 Mitarbeiter für Kommunikation @ 50.000 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>Überstunden in Spitzenzeiten: 10.000 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>Verpasste Mandate durch langsame Reaktion: ~20.000 €/Jahr</ComparisonListItem>
+              <ComparisonListItem>
+                2 Mitarbeiter für Kommunikation @ 50.000 €/Jahr
+              </ComparisonListItem>
+              <ComparisonListItem>
+                Überstunden in Spitzenzeiten: 10.000 €/Jahr
+              </ComparisonListItem>
+              <ComparisonListItem>
+                Verpasste Mandate durch langsame Reaktion: ~20.000 €/Jahr
+              </ComparisonListItem>
             </ComparisonList>
-            <ComparisonFooter>
-              
-                Gesamt: ~130.000 €/Jahr
-              </ComparisonFooter>
+            <ComparisonFooter>Gesamt: ~130.000 €/Jahr</ComparisonFooter>
           </BeforeCard>
 
           <AfterCard>
             <ComparisonHeadline>Nachher: Automatisiert</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>1 Mitarbeiter für komplexe Beratung @ 50.000 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>Automatisierungsplattform: 6.000 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>Einmalige Implementierung: 25.000 € (auf Jahr 1 angerechnet)</ComparisonListItem>
+              <ComparisonListItem>
+                1 Mitarbeiter für komplexe Beratung @ 50.000 €/Jahr
+              </ComparisonListItem>
+              <ComparisonListItem>
+                Automatisierungsplattform: 6.000 €/Jahr
+              </ComparisonListItem>
+              <ComparisonListItem>
+                Einmalige Implementierung: 25.000 € (auf Jahr 1 angerechnet)
+              </ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              
-                Jahr 1: ~81.000 € | Ab Jahr 2: ~56.000 €/Jahr
-              </ComparisonFooter>
+              Jahr 1: ~81.000 € | Ab Jahr 2: ~56.000 €/Jahr
+            </ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
 
@@ -329,12 +364,8 @@ export default function Page() {
             <SavingsItem label="Ersparnis Jahr 1" highlight>
               49.000 €
             </SavingsItem>
-            <SavingsItem label="Ab Jahr 2">
-              74.000 €/Jahr
-            </SavingsItem>
-            <SavingsItem label="Amortisation">
-              ~6 Monate
-            </SavingsItem>
+            <SavingsItem label="Ab Jahr 2">74.000 €/Jahr</SavingsItem>
+            <SavingsItem label="Amortisation">~6 Monate</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>
@@ -347,8 +378,7 @@ export default function Page() {
         <FaqContainer
           faqs={[
             {
-              question:
-                "Gibt der KI-Chatbot steuerliche Beratung?",
+              question: "Gibt der KI-Chatbot steuerliche Beratung?",
               answer:
                 "Nein, der Chatbot ist für organisatorische Anfragen konzipiert: Fristen, Bearbeitungsstand, Beleganforderungen. Er greift auf verifizierte Kanzleidaten zu. Bei fachlichen Steuerfragen wird automatisch an einen Sachbearbeiter eskaliert. Jede Antwort kann mit einem Disclaimer versehen werden.",
             },

@@ -39,21 +39,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "DATEV-Jira Task Orchestration – Steuerberater | BlueBatch",
+  title: "DATEV-Jira Task Orchestration – Steuerberater | Bluebatch",
   description:
     "Automatisierte Aufgabenorchestrierung zwischen DATEV und Jira für Steuerkanzleien. 99,9% Fristeneinhaltung.",
   openGraph: {
-    title: "DATEV-Jira Task Orchestration – Steuerberater | BlueBatch",
+    title: "DATEV-Jira Task Orchestration – Steuerberater | Bluebatch",
     description:
       "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch DATEV-Jira Orchestration" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch DATEV-Jira Orchestration",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DATEV-Jira Task Orchestration – Steuerberater | BlueBatch",
+    title: "DATEV-Jira Task Orchestration – Steuerberater | Bluebatch",
     description:
       "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -83,9 +90,7 @@ export default function Page() {
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
             Aufgaben und Fristen{" "}
-            <BackgroundHero.Highlight>
-              automatisch
-            </BackgroundHero.Highlight>{" "}
+            <BackgroundHero.Highlight>automatisch</BackgroundHero.Highlight>{" "}
             synchronisieren
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
@@ -187,8 +192,12 @@ export default function Page() {
                   Status-Updates fließen in beide Richtungen.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>Neuer Mandantenauftrag = Jira-Ticket</Typo.ListItem>
-                  <Typo.ListItem>Status in Jira → Dokumentation in DATEV</Typo.ListItem>
+                  <Typo.ListItem>
+                    Neuer Mandantenauftrag = Jira-Ticket
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Status in Jira → Dokumentation in DATEV
+                  </Typo.ListItem>
                   <Typo.ListItem>Automatische Konflikt-Erkennung</Typo.ListItem>
                 </Typo.List>
               </div>
@@ -212,7 +221,9 @@ export default function Page() {
                   Erinnerungen und Kalenderintegration.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>UStVA, Lohnsteuer, Jahresabschluss-Fristen</Typo.ListItem>
+                  <Typo.ListItem>
+                    UStVA, Lohnsteuer, Jahresabschluss-Fristen
+                  </Typo.ListItem>
                   <Typo.ListItem>Outlook/Google Calendar Sync</Typo.ListItem>
                   <Typo.ListItem>Fristverlängerungs-Erinnerungen</Typo.ListItem>
                 </Typo.List>
@@ -237,9 +248,15 @@ export default function Page() {
                   Ressourcenplanung und fairere Arbeitsverteilung.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>Kapazitätsplanung mit Warnsystem</Typo.ListItem>
-                  <Typo.ListItem>Skill-basierte Aufgabenzuweisung</Typo.ListItem>
-                  <Typo.ListItem>Urlaubsplanung mit Auto-Vertretung</Typo.ListItem>
+                  <Typo.ListItem>
+                    Kapazitätsplanung mit Warnsystem
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Skill-basierte Aufgabenzuweisung
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Urlaubsplanung mit Auto-Vertretung
+                  </Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
@@ -262,9 +279,15 @@ export default function Page() {
                   übersehen wird.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>7 Tage: Erinnerung an Bearbeiter</Typo.ListItem>
-                  <Typo.ListItem>3 Tage: Benachrichtigung Teamleiter</Typo.ListItem>
-                  <Typo.ListItem>1 Tag: Eskalation an Kanzleileitung</Typo.ListItem>
+                  <Typo.ListItem>
+                    7 Tage: Erinnerung an Bearbeiter
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    3 Tage: Benachrichtigung Teamleiter
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    1 Tag: Eskalation an Kanzleileitung
+                  </Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
@@ -297,14 +320,19 @@ export default function Page() {
           <BeforeCard>
             <ComparisonHeadline>Vorher: Manuell</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>45-70 Min/Tag pro Mitarbeiter für Systemwechsel</ComparisonListItem>
-              <ComparisonListItem>2-5% Fristversäumnisse (500-2.000 €/Versäumnis)</ComparisonListItem>
-              <ComparisonListItem>30-40% Varianz in Teamauslastung</ComparisonListItem>
+              <ComparisonListItem>
+                45-70 Min/Tag pro Mitarbeiter für Systemwechsel
+              </ComparisonListItem>
+              <ComparisonListItem>
+                2-5% Fristversäumnisse (500-2.000 €/Versäumnis)
+              </ComparisonListItem>
+              <ComparisonListItem>
+                30-40% Varianz in Teamauslastung
+              </ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              
-                Zeitverlust: 1.900-2.900 Stunden/Jahr
-              </ComparisonFooter>
+              Zeitverlust: 1.900-2.900 Stunden/Jahr
+            </ComparisonFooter>
           </BeforeCard>
 
           <AfterCard>
@@ -312,12 +340,13 @@ export default function Page() {
             <ComparisonList>
               <ComparisonListItem>Jira Cloud: 1.800 €/Jahr</ComparisonListItem>
               <ComparisonListItem>n8n Cloud: 2.400 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>Implementierung: 15.000-25.000 € (einmalig)</ComparisonListItem>
+              <ComparisonListItem>
+                Implementierung: 15.000-25.000 € (einmalig)
+              </ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              
-                Einsparung: 218.000-325.000 €/Jahr
-              </ComparisonFooter>
+              Einsparung: 218.000-325.000 €/Jahr
+            </ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
 
@@ -327,12 +356,8 @@ export default function Page() {
             <SavingsItem label="Amortisation" highlight>
               2-3 Monate
             </SavingsItem>
-            <SavingsItem label="Fristeneinhaltung">
-              100%
-            </SavingsItem>
-            <SavingsItem label="Weniger Überstunden">
-              40-60%
-            </SavingsItem>
+            <SavingsItem label="Fristeneinhaltung">100%</SavingsItem>
+            <SavingsItem label="Weniger Überstunden">40-60%</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>

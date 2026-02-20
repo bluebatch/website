@@ -33,7 +33,7 @@ export default function Navigation() {
         items: [
           {
             icon: "/icons/building.svg",
-            title: "Warum BlueBatch?",
+            title: "Warum Bluebatch?",
             description: "Keine Agentur - IT-Experten",
             href: "/warum-bluebatch",
           },
@@ -137,6 +137,10 @@ export default function Navigation() {
           {
             title: "Angebots-Bot",
             href: "/use-cases/grosshandel/angebots-bot",
+          },
+          {
+            title: "KI-Automation mit easybill",
+            href: "/use-cases/grosshandel/ai-automation-with-easybill",
           },
         ],
       },

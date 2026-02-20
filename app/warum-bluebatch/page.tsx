@@ -22,28 +22,28 @@ import IntroBox from "@/components/intro-box";
 import Icon from "@/components/icon";
 
 export const metadata: Metadata = {
-  title: "Warum BlueBatch? Enterprise IT-Experten, keine Agentur | BlueBatch",
+  title: "Warum Bluebatch? Enterprise IT-Experten, keine Agentur | Bluebatch",
   description:
     "Wir sind keine n8n-Agentur. Wir sind Enterprise IT-Experten mit Development Background und tiefem Datenverständnis. Wir verstehen, wo Systeme welche Daten verarbeiten – für DSGVO-konforme Workflows.",
   openGraph: {
-    title: "Warum BlueBatch? Enterprise IT-Experten, keine Agentur",
+    title: "Warum Bluebatch? Enterprise IT-Experten, keine Agentur",
     description:
       "Enterprise IT-Background, tiefes Datenverständnis, DSGVO-Expertise. Wir verstehen Datenstrukturen und System-Architekturen.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch - Enterprise IT Experten",
+        alt: "Bluebatch - Enterprise IT Experten",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Warum BlueBatch? Enterprise IT-Experten, keine Agentur",
+    title: "Warum Bluebatch? Enterprise IT-Experten, keine Agentur",
     description:
       "Enterprise IT-Background, tiefes Datenverständnis, DSGVO-Expertise. Wir verstehen Datenstrukturen und System-Architekturen.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -270,7 +270,7 @@ export default function Page() {
       <ContentWrapper isFirstSection>
         <Hero2Column>
           <Hero2ColumnTextColumn>
-            <Hero2ColumnPreHeadline>Warum BlueBatch?</Hero2ColumnPreHeadline>
+            <Hero2ColumnPreHeadline>Warum Bluebatch?</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
               Keine Agentur. Echte IT-Experten.
             </Hero2ColumnHeadline>

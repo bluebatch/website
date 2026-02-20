@@ -11,21 +11,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Kundenservice Automation – E-Commerce | BlueBatch",
+  title: "Kundenservice Automation – E-Commerce | Bluebatch",
   description:
-    "Wie BlueBatch den Kundenservice im E-Commerce automatisiert – schnellere Antworten, weniger Tickets.",
+    "Wie Bluebatch den Kundenservice im E-Commerce automatisiert – schnellere Antworten, weniger Tickets.",
   openGraph: {
-    title: "Kundenservice Automation – E-Commerce | BlueBatch",
+    title: "Kundenservice Automation – E-Commerce | Bluebatch",
     description:
       "Kundenanfragen automatisch kategorisieren, beantworten und eskalieren.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Kundenservice" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Kundenservice",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kundenservice Automation – E-Commerce | BlueBatch",
+    title: "Kundenservice Automation – E-Commerce | Bluebatch",
     description:
       "Kundenanfragen automatisch kategorisieren, beantworten und eskalieren.",
     images: ["/images/bluebatch-social-cover.jpg"],

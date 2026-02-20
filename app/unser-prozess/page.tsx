@@ -30,7 +30,7 @@ import IntroBox from "@/components/intro-box";
 import { AnimatedNumber } from "@/components/cards/kpi-card";
 
 export const metadata: Metadata = {
-  title: "How We Do – Unser 6-Phasen-Prozess | BlueBatch",
+  title: "How We Do – Unser 6-Phasen-Prozess | Bluebatch",
   description:
     "Mit deutscher Engineering-Präzision und einem bewährten 6-Phasen-Framework automatisieren wir Ihre Backoffice-Prozesse. 98% On-Time Delivery, 200+ erfolgreiche Implementierungen.",
   keywords: [
@@ -42,24 +42,24 @@ export const metadata: Metadata = {
     "Prozessautomatisierung",
   ],
   openGraph: {
-    title: "Unser 6-Phasen-Prozess – BlueBatch",
+    title: "Unser 6-Phasen-Prozess – Bluebatch",
     description:
       "Mit deutscher Engineering-Präzision und bewährtem Framework automatisieren wir Ihre Prozesse.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch Prozess",
+        alt: "Bluebatch Prozess",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Unser 6-Phasen-Prozess – BlueBatch",
+    title: "Unser 6-Phasen-Prozess – Bluebatch",
     description:
       "Mit deutscher Engineering-Präzision und bewährtem Framework automatisieren wir Ihre Prozesse.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -121,7 +121,7 @@ const managedServices = [
     title: "Persönlicher Kundendienst",
     subtitle: "Strategische Betreuung | Direkter Draht",
     description:
-      "Bei BlueBatch gibt es kein anonymes Ticket-System. Sie haben einen festen Ansprechpartner, der Ihren Business-Case versteht.",
+      "Bei Bluebatch gibt es kein anonymes Ticket-System. Sie haben einen festen Ansprechpartner, der Ihren Business-Case versteht.",
     features: [
       "Kein Fachchinesisch: Wir übersetzen komplexe Tech-Themen in klare Business-Entscheidungen.",
       "Sparringspartner: Wir beraten Sie proaktiv, welcher nächste Prozess das größte ROI-Potenzial für Sie bietet.",
@@ -288,7 +288,7 @@ export default function HowWeDoPage() {
         <div className="bg-gradient-to-br from-primary-50 to-secondary-50 p-8  border border-primary-100 text-center">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             <strong className="text-gray-900">
-              BlueBatch bricht dieses Muster.
+              Bluebatch bricht dieses Muster.
             </strong>{" "}
             Mit einer 98% On-Time Delivery Rate und der Erfahrung aus über 200
             erfolgreichen Implementierungen (Pexon Group) transformieren wir Ihr
@@ -383,10 +383,10 @@ export default function HowWeDoPage() {
           ))}
         </TimelineAsSteps>
 
-        {/* BlueBatch-Gefühl Quote */}
+        {/* Bluebatch-Gefühl Quote */}
         <div className="mt-12 bg-gradient-to-br from-primary-50 to-secondary-50 p-8 rounded-xl border border-primary-100">
           <p className="text-sm font-semibold text-primary-600 mb-3">
-            Das BlueBatch-Gefühl
+            Das Bluebatch-Gefühl
           </p>
           <blockquote className="text-lg md:text-xl text-gray-700 italic leading-relaxed">
             „Am Montagmorgen erhalten Sie einen Report, der Ihnen zeigt, wie

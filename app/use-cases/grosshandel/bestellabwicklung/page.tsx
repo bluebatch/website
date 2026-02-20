@@ -42,21 +42,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Bestellabwicklung – Großhandel | BlueBatch",
+  title: "Bestellabwicklung – Großhandel | Bluebatch",
   description:
-    "Wie BlueBatch die Bestellabwicklung im Großhandel automatisiert – von der Erfassung bis zur Auslieferung.",
+    "Wie Bluebatch die Bestellabwicklung im Großhandel automatisiert – von der Erfassung bis zur Auslieferung.",
   openGraph: {
-    title: "Bestellabwicklung – Großhandel | BlueBatch",
+    title: "Bestellabwicklung – Großhandel | Bluebatch",
     description:
       "Von der Bestellung zur Auslieferung – vollautomatisch. 80-90% schnellere Bearbeitung.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Bestellabwicklung" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Bestellabwicklung",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bestellabwicklung – Großhandel | BlueBatch",
+    title: "Bestellabwicklung – Großhandel | Bluebatch",
     description:
       "Von der Bestellung zur Auslieferung – vollautomatisch. 80-90% schnellere Bearbeitung.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -77,9 +84,9 @@ export default function Page() {
               Von der Bestellung zur Auslieferung – vollautomatisch
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Bestellungen werden validiert, an das Lager geroutet, kommissioniert
-              und versendet – alles orchestriert durch n8n. 80-90% schnellere
-              Bearbeitung, 95%+ Auftragsgenauigkeit.
+              Bestellungen werden validiert, an das Lager geroutet,
+              kommissioniert und versendet – alles orchestriert durch n8n.
+              80-90% schnellere Bearbeitung, 95%+ Auftragsgenauigkeit.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Prozessanalyse anfragen</ContactButton>
@@ -157,7 +164,9 @@ export default function Page() {
               alt="Kommissionierung"
             />
             <CardShowcase.Content>
-              <CardShowcase.Title>2. Optimierte Kommissionierung</CardShowcase.Title>
+              <CardShowcase.Title>
+                2. Optimierte Kommissionierung
+              </CardShowcase.Title>
               <CardShowcase.Description>
                 Batch-Picking für ähnliche Aufträge, Laufweg-Optimierung,
                 Barcode-Scanning zur Fehlervermeidung. Pick-Listen automatisch
@@ -175,7 +184,8 @@ export default function Page() {
               <CardShowcase.Title>3. Carrier-Optimierung</CardShowcase.Title>
               <CardShowcase.Description>
                 Automatischer Preisvergleich zwischen Carriern. Labels per API
-                generiert, Tracking-Nummern erfasst. 10-15% Versandkosten-Ersparnis.
+                generiert, Tracking-Nummern erfasst. 10-15%
+                Versandkosten-Ersparnis.
               </CardShowcase.Description>
             </CardShowcase.Content>
           </CardShowcase.Item>
@@ -216,29 +226,37 @@ export default function Page() {
           <BeforeCard>
             <ComparisonHeadline>Vorher: Manuell</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>5-8% Fehlerrate = 75-120 Fehler/Tag</ComparisonListItem>
-              <ComparisonListItem>140 €/Fehler × 100 = 14.000 €/Tag</ComparisonListItem>
-              <ComparisonListItem>Arbeitskosten: 8 Vollzeitkräfte @ 45.000 €</ComparisonListItem>
+              <ComparisonListItem>
+                5-8% Fehlerrate = 75-120 Fehler/Tag
+              </ComparisonListItem>
+              <ComparisonListItem>
+                140 €/Fehler × 100 = 14.000 €/Tag
+              </ComparisonListItem>
+              <ComparisonListItem>
+                Arbeitskosten: 8 Vollzeitkräfte @ 45.000 €
+              </ComparisonListItem>
               <ComparisonListItem>2-3 Tage Durchlaufzeit</ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              
-                Gesamt: ~720.000 €/Jahr (nur Fehler)
-              </ComparisonFooter>
+              Gesamt: ~720.000 €/Jahr (nur Fehler)
+            </ComparisonFooter>
           </BeforeCard>
 
           <AfterCard>
             <ComparisonHeadline>Nachher: Automatisiert</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>0,5-1% Fehlerrate = 8-15 Fehler/Tag</ComparisonListItem>
-              <ComparisonListItem>140 €/Fehler × 12 = 1.700 €/Tag</ComparisonListItem>
-              <ComparisonListItem>Arbeitskosten: 3 Vollzeitkräfte für Sonderfälle</ComparisonListItem>
+              <ComparisonListItem>
+                0,5-1% Fehlerrate = 8-15 Fehler/Tag
+              </ComparisonListItem>
+              <ComparisonListItem>
+                140 €/Fehler × 12 = 1.700 €/Tag
+              </ComparisonListItem>
+              <ComparisonListItem>
+                Arbeitskosten: 3 Vollzeitkräfte für Sonderfälle
+              </ComparisonListItem>
               <ComparisonListItem>2-4 Stunden Durchlaufzeit</ComparisonListItem>
             </ComparisonList>
-            <ComparisonFooter>
-              
-                Gesamt: ~110.000 €/Jahr
-              </ComparisonFooter>
+            <ComparisonFooter>Gesamt: ~110.000 €/Jahr</ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
 
@@ -248,12 +266,8 @@ export default function Page() {
             <SavingsItem label="Jährliche Ersparnis" highlight>
               390.000 €+
             </SavingsItem>
-            <SavingsItem label="Amortisation">
-              2-3 Monate
-            </SavingsItem>
-            <SavingsItem label="Weniger manuelle Arbeit">
-              85%
-            </SavingsItem>
+            <SavingsItem label="Amortisation">2-3 Monate</SavingsItem>
+            <SavingsItem label="Weniger manuelle Arbeit">85%</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>
@@ -326,8 +340,7 @@ export default function Page() {
                 "Ja, n8n ist für Integrations-Flexibilität gebaut. Wir verbinden per API mit ERP-Systemen (SAP, NetSuite, Dynamics, Odoo), WMS-Plattformen (ShipHero, SkuVault, Fishbowl), Versanddienstleistern (DHL, UPS, FedEx) und E-Commerce-Plattformen. Bei Legacy-Systemen arbeiten wir mit Datenbank-Queries oder EDI.",
             },
             {
-              question:
-                "Wie lange dauert die Implementierung?",
+              question: "Wie lange dauert die Implementierung?",
               answer:
                 "Die Implementierung erfolgt in Phasen: Phase 1 (2-3 Wochen): Auftragserfassung parallel zum bestehenden Prozess. Phase 2 (2-3 Wochen): Lagervalidierung im Shadow-Mode. Phase 3 (2-4 Wochen): Versandautomatisierung schrittweise. Phase 4 (1-2 Wochen): Exception Handling. Gesamtzeit: 8-12 Wochen mit voller Kontrolle.",
             },

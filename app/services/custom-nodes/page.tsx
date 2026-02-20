@@ -30,28 +30,28 @@ import PhaseCard, {
 import IntroBox from "@/components/intro-box";
 
 export const metadata: Metadata = {
-  title: "Custom n8n Node Development | BlueBatch",
+  title: "Custom n8n Node Development | Bluebatch",
   description:
     "Maßgeschneiderte n8n Nodes für Ihre spezifischen Anforderungen. TypeScript, Node.js, SDK – professionelle Entwicklung und Wartung.",
   openGraph: {
-    title: "Custom n8n Node Development | BlueBatch",
+    title: "Custom n8n Node Development | Bluebatch",
     description:
       "Es gibt keinen Node für Ihre App? Wir entwickeln Custom n8n Nodes für jede Integration.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch Custom Nodes",
+        alt: "Bluebatch Custom Nodes",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom n8n Node Development | BlueBatch",
+    title: "Custom n8n Node Development | Bluebatch",
     description: "Maßgeschneiderte n8n Nodes für jede API und jedes System.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },

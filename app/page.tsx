@@ -15,9 +15,9 @@ import Customer from "@/components/customer/customer";
 import IntroBox from "@/components/intro-box";
 
 export const metadata: Metadata = {
-  title: "BlueBatch – Enterprise AI-Automation | Workflow Engineering",
+  title: "Bluebatch – Enterprise AI-Automation | Workflow Engineering",
   description:
-    "Wir beenden die Fehlallokation von Humankapital. BlueBatch automatisiert Ihre manuellen Backoffice-Prozesse mit AI-Workflows auf Enterprise-Niveau – live in nur 5 Tagen.",
+    "Wir beenden die Fehlallokation von Humankapital. Bluebatch automatisiert Ihre manuellen Backoffice-Prozesse mit AI-Workflows auf Enterprise-Niveau – live in nur 5 Tagen.",
   keywords: [
     "AI Automation",
     "Workflow Engineering",
@@ -29,26 +29,26 @@ export const metadata: Metadata = {
     "Retail",
     "Digitale Mitarbeiter",
   ],
-  authors: [{ name: "BlueBatch" }],
+  authors: [{ name: "Bluebatch" }],
   openGraph: {
-    title: "BlueBatch – Enterprise AI-Automation",
+    title: "Bluebatch – Enterprise AI-Automation",
     description:
       "Skalieren Sie Ihren Umsatz, nicht Ihren Headcount. AI-Workflows live in nur 5 Tagen.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch – Enterprise AI-Automation",
+        alt: "Bluebatch – Enterprise AI-Automation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BlueBatch – Enterprise AI-Automation",
+    title: "Bluebatch – Enterprise AI-Automation",
     description:
       "Skalieren Sie Ihren Umsatz, nicht Ihren Headcount. AI-Workflows live in nur 5 Tagen.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -82,7 +82,7 @@ export default function Home() {
             <BackgroundHero.Highlight>Headcount</BackgroundHero.Highlight>
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Wir beenden die Fehlallokation von Humankapital. BlueBatch
+            Wir beenden die Fehlallokation von Humankapital. Bluebatch
             automatisiert Ihre manuellen Backoffice-Prozesse mit AI-Workflows
             auf Enterprise-Niveau – live in nur 5 Tagen.
           </BackgroundHero.Description>
@@ -109,7 +109,7 @@ export default function Home() {
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* About BlueBatch Section */}
+      {/* About Bluebatch Section */}
       <ContentWrapper background="bg-gray-50">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div>
@@ -125,7 +125,7 @@ export default function Home() {
                 als die Hälfte ihrer Arbeitszeit mit mechanischen Aufgaben.
               </IntroBox.Subline>
               <IntroBox.Subline>
-                BlueBatch wurde gegründet, um diese Fehlallokation von
+                Bluebatch wurde gegründet, um diese Fehlallokation von
                 Humankapital zu beenden. Wir bauen keine klassische Software –
                 wir erschaffen digitale Mitarbeiter. Unsere AI-Workflows
                 übernehmen die kognitive Routinearbeit, damit Ihre Teams wieder
@@ -157,7 +157,7 @@ export default function Home() {
             Keine „Clicky-Bude", sondern Enterprise-Expertise
           </IntroBox.Headline>
           <IntroBox.Subline>
-            BlueBatch ist eine spezialisierte Tochter der Pexon Consulting. Als
+            Bluebatch ist eine spezialisierte Tochter der Pexon Consulting. Als
             Teil einer etablierten IT-Cloud-Beratung auf Enterprise-Niveau
             bringen wir eine technologische Reife mit, die man bei reinen
             Automatisierungs-Agenturen selten findet.
@@ -402,7 +402,7 @@ export default function Home() {
               <IntroBox.Headline>Wir bauen Ihre Lösung.</IntroBox.Headline>
               <IntroBox.Subline>
                 In einer Welt voller „Blackbox"-Software gehen wir einen anderen
-                Weg. BlueBatch ist kein anonymes Tool, sondern eine
+                Weg. Bluebatch ist kein anonymes Tool, sondern eine
                 Workflow-Engineering-Unit. Wir analysieren Ihre manuellen
                 Prozesse, entwerfen die passende Architektur und implementieren
                 hochgradig individuelle Automatisierungen.
@@ -423,7 +423,7 @@ export default function Home() {
         <IntroBox dark>
           <IntroBox.PreHeadline>Our Approach</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Warum BlueBatch? Der Engineering-Ansatz
+            Warum Bluebatch? Der Engineering-Ansatz
           </IntroBox.Headline>
           <IntroBox.Subline>
             Wir setzen auf Transparenz, bewährte Patterns und Enterprise-DNA.
@@ -560,7 +560,7 @@ export default function Home() {
             Backoffice von monotonen Aufgaben befreit wird.
           </IntroBox.Subline>
           <IntroBox.Paragraph>
-            BlueBatch ist die Brücke zwischen Ihrer heutigen manuellen Arbeit
+            Bluebatch ist die Brücke zwischen Ihrer heutigen manuellen Arbeit
             und einer automatisierten, skalierbaren Zukunft.
           </IntroBox.Paragraph>
           <div>
@@ -576,7 +576,7 @@ export default function Home() {
         <div className="py-12">
           <IntroBox dark>
             <IntroBox.PreHeadline>Who We Are</IntroBox.PreHeadline>
-            <IntroBox.Headline>Wir sind BlueBatch.</IntroBox.Headline>
+            <IntroBox.Headline>Wir sind Bluebatch.</IntroBox.Headline>
             <IntroBox.Subline className="mb-8!">
               Wir kombinieren die Agilität eines KI-Startups mit der
               Zuverlässigkeit einer Enterprise-Beratung. Lassen Sie uns

@@ -37,37 +37,37 @@ import Team, {
 } from "@/components/team/team";
 
 export const metadata: Metadata = {
-  title: "Team – BlueBatch | Die Menschen hinter der Automatisierung",
+  title: "Team – Bluebatch | Die Menschen hinter der Automatisierung",
   description:
-    "Lernen Sie das BlueBatch Team kennen. Workflow-Experten und Automatisierungs-Profis, die Ihre Prozesse auf das nächste Level bringen.",
+    "Lernen Sie das Bluebatch Team kennen. Workflow-Experten und Automatisierungs-Profis, die Ihre Prozesse auf das nächste Level bringen.",
   keywords: [
-    "BlueBatch Team",
+    "Bluebatch Team",
     "Workflow Experten",
     "Automatisierung",
     "KI Spezialisten",
     "Enterprise AI",
   ],
   openGraph: {
-    title: "Team – BlueBatch",
+    title: "Team – Bluebatch",
     description:
-      "Lernen Sie das BlueBatch Team kennen. Workflow-Experten und Automatisierungs-Profis.",
+      "Lernen Sie das Bluebatch Team kennen. Workflow-Experten und Automatisierungs-Profis.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch Team",
+        alt: "Bluebatch Team",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Team – BlueBatch",
+    title: "Team – Bluebatch",
     description:
-      "Lernen Sie das BlueBatch Team kennen. Workflow-Experten und Automatisierungs-Profis.",
+      "Lernen Sie das Bluebatch Team kennen. Workflow-Experten und Automatisierungs-Profis.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -84,7 +84,7 @@ export default function TeamPage() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Unser Team</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Die Köpfe hinter BlueBatch
+              Die Köpfe hinter Bluebatch
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Wir sind Workflow-Architekten, Code-Enthusiasten und
@@ -93,7 +93,10 @@ export default function TeamPage() {
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/team-collaboration.jpg" type="image" />
+            <Hero2ColumnImage
+              src="/images/team-collaboration.jpg"
+              type="image"
+            />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
@@ -117,7 +120,7 @@ export default function TeamPage() {
               <TeamRole>Gründer & CEO</TeamRole>
               <TeamDescription>
                 Mit einem unerschütterlichen Glauben an die Macht der
-                Automatisierung hat Max BlueBatch gegründet. Er verwandelt
+                Automatisierung hat Max Bluebatch gegründet. Er verwandelt
                 komplexe Prozesse in elegante Workflows – und Kaffee in Code.
               </TeamDescription>
               <TeamTags>
@@ -152,7 +155,7 @@ export default function TeamPage() {
               <TeamRole>Investor & Advisor</TeamRole>
               <TeamDescription>
                 Phillip bringt strategische Weitsicht und unternehmerische
-                Erfahrung ein. Als Investor und Berater unterstützt er BlueBatch
+                Erfahrung ein. Als Investor und Berater unterstützt er Bluebatch
                 bei Wachstum und Skalierung.
               </TeamDescription>
               <TeamTags>
@@ -199,9 +202,8 @@ export default function TeamPage() {
               <TeamName>Tim Nguyen</TeamName>
               <TeamRole>Praktikant Workflow Automation</TeamRole>
               <TeamDescription>
-                Tim studiert Wirtschaftsinformatik und unterstützt das Team
-                bei der Umsetzung und Dokumentation von
-                Automatisierungs-Workflows.
+                Tim studiert Wirtschaftsinformatik und unterstützt das Team bei
+                der Umsetzung und Dokumentation von Automatisierungs-Workflows.
               </TeamDescription>
               <TeamTags>
                 <TeamTag variant="primary">Praktikant</TeamTag>
@@ -218,24 +220,24 @@ export default function TeamPage() {
         <SimpleGrid cols={3}>
           <div className="relative aspect-[4/3] overflow-hidden border-4 border-white">
             <Image
-              src="/team/bluebatch-team-workspace.jpg"
-              alt="BlueBatch Team Workspace"
+              src="/team/Bluebatch-team-workspace.jpg"
+              alt="Bluebatch Team Workspace"
               fill
               className="object-cover"
             />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden border-4 border-white">
             <Image
-              src="/team/bluebatch-team-collaboration.jpg"
-              alt="BlueBatch Team Collaboration"
+              src="/team/Bluebatch-team-collaboration.jpg"
+              alt="Bluebatch Team Collaboration"
               fill
               className="object-cover scale-110"
             />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden border-4 border-white">
             <Image
-              src="/team/bluebatch-team-office.jpg"
-              alt="BlueBatch Team Office"
+              src="/team/Bluebatch-team-office.jpg"
+              alt="Bluebatch Team Office"
               fill
               className="object-cover scale-110"
             />
@@ -255,7 +257,7 @@ export default function TeamPage() {
             das, was wirklich zählt.
           </IntroBox.Subline>
           <IntroBox.Paragraph>
-            Bei BlueBatch dreht sich alles um Ergebnisse. Wir messen unseren
+            Bei Bluebatch dreht sich alles um Ergebnisse. Wir messen unseren
             Erfolg nicht an Projektlaufzeiten, sondern an der Zeit, die wir
             unseren Kunden zurückgeben.
           </IntroBox.Paragraph>
@@ -266,7 +268,7 @@ export default function TeamPage() {
       <ContentWrapper background="bg-gray-50">
         <IntroBox>
           <IntroBox.PreHeadline>Karriere</IntroBox.PreHeadline>
-          <IntroBox.Headline>Werde Teil von BlueBatch</IntroBox.Headline>
+          <IntroBox.Headline>Werde Teil von Bluebatch</IntroBox.Headline>
           <IntroBox.Subline>
             Wir wachsen und suchen talentierte Menschen, die mit uns die Zukunft
             der Automatisierung gestalten wollen.
@@ -281,14 +283,22 @@ export default function TeamPage() {
               <HiringLocation>Remote / Hybrid</HiringLocation>
               <HiringDescription>
                 Du baust komplexe Automatisierungs-Workflows mit n8n und
-                integrierst APIs, Datenbanken und KI-Services zu leistungsstarken
-                Lösungen für unsere Kunden.
+                integrierst APIs, Datenbanken und KI-Services zu
+                leistungsstarken Lösungen für unsere Kunden.
               </HiringDescription>
               <HiringRequirements>
-                <HiringRequirement>Erfahrung mit n8n oder vergleichbaren Automation-Tools</HiringRequirement>
-                <HiringRequirement>Kenntnisse in REST APIs und Webhooks</HiringRequirement>
-                <HiringRequirement>Grundlagen in JavaScript/TypeScript</HiringRequirement>
-                <HiringRequirement>Verständnis für Geschäftsprozesse</HiringRequirement>
+                <HiringRequirement>
+                  Erfahrung mit n8n oder vergleichbaren Automation-Tools
+                </HiringRequirement>
+                <HiringRequirement>
+                  Kenntnisse in REST APIs und Webhooks
+                </HiringRequirement>
+                <HiringRequirement>
+                  Grundlagen in JavaScript/TypeScript
+                </HiringRequirement>
+                <HiringRequirement>
+                  Verständnis für Geschäftsprozesse
+                </HiringRequirement>
               </HiringRequirements>
               <HiringTags>
                 <HiringTag variant="primary">n8n</HiringTag>
@@ -308,10 +318,18 @@ export default function TeamPage() {
                 Partnerschaften auf.
               </HiringDescription>
               <HiringRequirements>
-                <HiringRequirement>Erfahrung im B2B Account Management</HiringRequirement>
-                <HiringRequirement>Technisches Verständnis für SaaS & Automation</HiringRequirement>
-                <HiringRequirement>Starke Kommunikationsfähigkeiten</HiringRequirement>
-                <HiringRequirement>Erfahrung mit CRM-Systemen</HiringRequirement>
+                <HiringRequirement>
+                  Erfahrung im B2B Account Management
+                </HiringRequirement>
+                <HiringRequirement>
+                  Technisches Verständnis für SaaS & Automation
+                </HiringRequirement>
+                <HiringRequirement>
+                  Starke Kommunikationsfähigkeiten
+                </HiringRequirement>
+                <HiringRequirement>
+                  Erfahrung mit CRM-Systemen
+                </HiringRequirement>
               </HiringRequirements>
               <HiringTags>
                 <HiringTag variant="primary">B2B</HiringTag>
@@ -330,10 +348,18 @@ export default function TeamPage() {
                 Vertragsmanagement bis hin zur Organisation interner Prozesse.
               </HiringDescription>
               <HiringRequirements>
-                <HiringRequirement>Erfahrung in Büroorganisation oder Verwaltung</HiringRequirement>
-                <HiringRequirement>Sicherer Umgang mit digitalen Tools</HiringRequirement>
-                <HiringRequirement>Strukturierte und eigenständige Arbeitsweise</HiringRequirement>
-                <HiringRequirement>Grundkenntnisse in Buchhaltung von Vorteil</HiringRequirement>
+                <HiringRequirement>
+                  Erfahrung in Büroorganisation oder Verwaltung
+                </HiringRequirement>
+                <HiringRequirement>
+                  Sicherer Umgang mit digitalen Tools
+                </HiringRequirement>
+                <HiringRequirement>
+                  Strukturierte und eigenständige Arbeitsweise
+                </HiringRequirement>
+                <HiringRequirement>
+                  Grundkenntnisse in Buchhaltung von Vorteil
+                </HiringRequirement>
               </HiringRequirements>
               <HiringTags>
                 <HiringTag variant="primary">Organisation</HiringTag>
@@ -352,10 +378,18 @@ export default function TeamPage() {
                 Computer Vision und NLP-Modelle in die Workflows unserer Kunden.
               </HiringDescription>
               <HiringRequirements>
-                <HiringRequirement>Erfahrung mit LLMs und AI APIs (OpenAI, Claude, etc.)</HiringRequirement>
-                <HiringRequirement>Python oder TypeScript Kenntnisse</HiringRequirement>
-                <HiringRequirement>Verständnis für Prompt Engineering</HiringRequirement>
-                <HiringRequirement>Interesse an neuen KI-Technologien</HiringRequirement>
+                <HiringRequirement>
+                  Erfahrung mit LLMs und AI APIs (OpenAI, Claude, etc.)
+                </HiringRequirement>
+                <HiringRequirement>
+                  Python oder TypeScript Kenntnisse
+                </HiringRequirement>
+                <HiringRequirement>
+                  Verständnis für Prompt Engineering
+                </HiringRequirement>
+                <HiringRequirement>
+                  Interesse an neuen KI-Technologien
+                </HiringRequirement>
               </HiringRequirements>
               <HiringTags>
                 <HiringTag variant="primary">KI</HiringTag>
@@ -374,10 +408,18 @@ export default function TeamPage() {
                 legst den Grundstein für erfolgreiche Geschäftsbeziehungen.
               </HiringDescription>
               <HiringRequirements>
-                <HiringRequirement>Erste Erfahrung im B2B-Vertrieb oder SDR-Rolle</HiringRequirement>
-                <HiringRequirement>Kommunikationsstärke und Überzeugungskraft</HiringRequirement>
-                <HiringRequirement>Eigeninitiative und Zielorientierung</HiringRequirement>
-                <HiringRequirement>Affinität zu Tech & Automation</HiringRequirement>
+                <HiringRequirement>
+                  Erste Erfahrung im B2B-Vertrieb oder SDR-Rolle
+                </HiringRequirement>
+                <HiringRequirement>
+                  Kommunikationsstärke und Überzeugungskraft
+                </HiringRequirement>
+                <HiringRequirement>
+                  Eigeninitiative und Zielorientierung
+                </HiringRequirement>
+                <HiringRequirement>
+                  Affinität zu Tech & Automation
+                </HiringRequirement>
               </HiringRequirements>
               <HiringTags>
                 <HiringTag variant="primary">Sales</HiringTag>
@@ -392,15 +434,24 @@ export default function TeamPage() {
               <HiringType>Teilzeit (15-20h/Woche)</HiringType>
               <HiringLocation>Remote</HiringLocation>
               <HiringDescription>
-                Du unterstützt unser Team bei der Entwicklung und Optimierung von
-                Automatisierungs-Workflows und sammelst Praxiserfahrung mit
+                Du unterstützt unser Team bei der Entwicklung und Optimierung
+                von Automatisierungs-Workflows und sammelst Praxiserfahrung mit
                 modernsten Tools.
               </HiringDescription>
               <HiringRequirements>
-                <HiringRequirement>Laufendes Studium (Informatik, BWL, o.ä.)</HiringRequirement>
-                <HiringRequirement>Interesse an Automatisierung und No-Code/Low-Code</HiringRequirement>
-                <HiringRequirement>Schnelle Auffassungsgabe und Lernbereitschaft</HiringRequirement>
-                <HiringRequirement>Erste Erfahrung mit Tools wie n8n, Make oder Zapier von Vorteil</HiringRequirement>
+                <HiringRequirement>
+                  Laufendes Studium (Informatik, BWL, o.ä.)
+                </HiringRequirement>
+                <HiringRequirement>
+                  Interesse an Automatisierung und No-Code/Low-Code
+                </HiringRequirement>
+                <HiringRequirement>
+                  Schnelle Auffassungsgabe und Lernbereitschaft
+                </HiringRequirement>
+                <HiringRequirement>
+                  Erste Erfahrung mit Tools wie n8n, Make oder Zapier von
+                  Vorteil
+                </HiringRequirement>
               </HiringRequirements>
               <HiringTags>
                 <HiringTag variant="primary">Werkstudent</HiringTag>

@@ -5,16 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Blog | BlueBatch - Workflow-Automatisierung & n8n Expertise",
+  title: "Blog | Bluebatch - Workflow-Automatisierung & n8n Expertise",
   description:
     "Entdecken Sie unsere Artikel über Workflow-Automatisierung, n8n Custom Nodes, Integrationen und Best Practices für effiziente Geschäftsprozesse.",
   openGraph: {
-    title: "BlueBatch Blog - Workflow-Automatisierung Insights",
+    title: "Bluebatch Blog - Workflow-Automatisierung Insights",
     description:
       "Expertenwissen zu n8n, Custom Nodes und Automatisierungslösungen",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
   },
   alternates: {
     canonical: "/blog",
@@ -44,7 +44,7 @@ export default function BlogPage() {
         background="bg-gradient-to-br from-blue-50 to-indigo-50"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <Typo.H1 className="mb-6">BlueBatch Blog</Typo.H1>
+          <Typo.H1 className="mb-6">Bluebatch Blog</Typo.H1>
           <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
             Expertenwissen zu Workflow-Automatisierung, n8n Custom Nodes und
             effiziente Geschäftsprozesse

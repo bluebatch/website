@@ -1,0 +1,10 @@
+FROM n8nio/n8n:latest
+
+# Custom Node kopieren
+COPY --from=builder /app/dist /usr/local/lib/node_modules/n8n/node_modules/your-custom-node
+
+# Umgebungsvariablen setzen
+ENV N8N_CUSTOM_EXTENSIONS="/usr/local/lib/node_modules/n8n/node_modules/your-custom-node"
+
+EXPOSE 5678
+CMD ["n8n"]

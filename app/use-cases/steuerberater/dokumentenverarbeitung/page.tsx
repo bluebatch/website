@@ -39,21 +39,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Dokumentenverarbeitung – Steuerberater | BlueBatch",
+  title: "Dokumentenverarbeitung – Steuerberater | Bluebatch",
   description:
-    "Wie BlueBatch Steuerberatern hilft, Belege und Dokumente automatisch zu verarbeiten. 70% weniger manuelle Erfassung.",
+    "Wie Bluebatch Steuerberatern hilft, Belege und Dokumente automatisch zu verarbeiten. 70% weniger manuelle Erfassung.",
   openGraph: {
-    title: "Dokumentenverarbeitung – Steuerberater | BlueBatch",
+    title: "Dokumentenverarbeitung – Steuerberater | Bluebatch",
     description:
       "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Dokumentenverarbeitung" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Dokumentenverarbeitung",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dokumentenverarbeitung – Steuerberater | BlueBatch",
+    title: "Dokumentenverarbeitung – Steuerberater | Bluebatch",
     description:
       "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -83,9 +90,7 @@ export default function Page() {
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
             Belege{" "}
-            <BackgroundHero.Highlight>
-              automatisch
-            </BackgroundHero.Highlight>{" "}
+            <BackgroundHero.Highlight>automatisch</BackgroundHero.Highlight>{" "}
             erkennen und buchen
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
@@ -189,9 +194,15 @@ export default function Page() {
                   Steuersätze (7%/19%), Rechnungsnummer, Lieferant.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>95-99% Genauigkeit bei digitalen PDFs</Typo.ListItem>
-                  <Typo.ListItem>Automatische Steuerschlüssel-Ermittlung</Typo.ListItem>
-                  <Typo.ListItem>Reverse-Charge-Erkennung (§13b UStG)</Typo.ListItem>
+                  <Typo.ListItem>
+                    95-99% Genauigkeit bei digitalen PDFs
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Automatische Steuerschlüssel-Ermittlung
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Reverse-Charge-Erkennung (§13b UStG)
+                  </Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
@@ -239,9 +250,15 @@ export default function Page() {
                   werden korrekt klassifiziert.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>Verpflegungsmehraufwand-Berechnung</Typo.ListItem>
-                  <Typo.ListItem>Bewirtung: 70% vs. 100% Abzugsfähigkeit</Typo.ListItem>
-                  <Typo.ListItem>Prüfung auf Pflichtangaben (Anlass, Teilnehmer)</Typo.ListItem>
+                  <Typo.ListItem>
+                    Verpflegungsmehraufwand-Berechnung
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Bewirtung: 70% vs. 100% Abzugsfähigkeit
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Prüfung auf Pflichtangaben (Anlass, Teilnehmer)
+                  </Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
@@ -264,9 +281,15 @@ export default function Page() {
                   Behandlung erfordern.
                 </Typo.Paragraph>
                 <Typo.List>
-                  <Typo.ListItem>Innergemeinschaftlicher Erwerb (§1a UStG)</Typo.ListItem>
-                  <Typo.ListItem>Drittland-Importe mit Einfuhrumsatzsteuer</Typo.ListItem>
-                  <Typo.ListItem>Kleinunternehmerregelung §19 UStG</Typo.ListItem>
+                  <Typo.ListItem>
+                    Innergemeinschaftlicher Erwerb (§1a UStG)
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Drittland-Importe mit Einfuhrumsatzsteuer
+                  </Typo.ListItem>
+                  <Typo.ListItem>
+                    Kleinunternehmerregelung §19 UStG
+                  </Typo.ListItem>
                 </Typo.List>
               </div>
               <div className="relative aspect-video">
@@ -300,27 +323,33 @@ export default function Page() {
           <BeforeCard>
             <ComparisonHeadline>Vorher: Manuell</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>2,5 FTE für Belegerfassung @ 45.000 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>3-4 Minuten pro Beleg (Sichten, Klassifizieren, Erfassen)</ComparisonListItem>
-              <ComparisonListItem>5-10% Fehlerquote bei Klassifizierung</ComparisonListItem>
+              <ComparisonListItem>
+                2,5 FTE für Belegerfassung @ 45.000 €/Jahr
+              </ComparisonListItem>
+              <ComparisonListItem>
+                3-4 Minuten pro Beleg (Sichten, Klassifizieren, Erfassen)
+              </ComparisonListItem>
+              <ComparisonListItem>
+                5-10% Fehlerquote bei Klassifizierung
+              </ComparisonListItem>
             </ComparisonList>
-            <ComparisonFooter>
-              
-                Gesamt: ~112.500 €/Jahr
-              </ComparisonFooter>
+            <ComparisonFooter>Gesamt: ~112.500 €/Jahr</ComparisonFooter>
           </BeforeCard>
 
           <AfterCard>
             <ComparisonHeadline>Nachher: Automatisiert</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>0,5 FTE für Exception Handling @ 45.000 €/Jahr</ComparisonListItem>
-              <ComparisonListItem>20 Sekunden pro Beleg (inkl. Prüfung)</ComparisonListItem>
-              <ComparisonListItem>1-3% Fehlerquote nach Training</ComparisonListItem>
+              <ComparisonListItem>
+                0,5 FTE für Exception Handling @ 45.000 €/Jahr
+              </ComparisonListItem>
+              <ComparisonListItem>
+                20 Sekunden pro Beleg (inkl. Prüfung)
+              </ComparisonListItem>
+              <ComparisonListItem>
+                1-3% Fehlerquote nach Training
+              </ComparisonListItem>
             </ComparisonList>
-            <ComparisonFooter>
-              
-                Gesamt: ~37.500 €/Jahr
-              </ComparisonFooter>
+            <ComparisonFooter>Gesamt: ~37.500 €/Jahr</ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
 
@@ -330,12 +359,8 @@ export default function Page() {
             <SavingsItem label="Jährliche Ersparnis" highlight>
               75.000 €
             </SavingsItem>
-            <SavingsItem label="Amortisation">
-              2-4 Monate
-            </SavingsItem>
-            <SavingsItem label="Kosten pro Beleg">
-              -83%
-            </SavingsItem>
+            <SavingsItem label="Amortisation">2-4 Monate</SavingsItem>
+            <SavingsItem label="Kosten pro Beleg">-83%</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>

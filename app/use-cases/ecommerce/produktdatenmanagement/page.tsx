@@ -11,21 +11,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Produktdatenmanagement – E-Commerce | BlueBatch",
+  title: "Produktdatenmanagement – E-Commerce | Bluebatch",
   description:
-    "Wie BlueBatch E-Commerce-Unternehmen hilft, Produktdaten automatisch zu pflegen und zu synchronisieren.",
+    "Wie Bluebatch E-Commerce-Unternehmen hilft, Produktdaten automatisch zu pflegen und zu synchronisieren.",
   openGraph: {
-    title: "Produktdatenmanagement – E-Commerce | BlueBatch",
+    title: "Produktdatenmanagement – E-Commerce | Bluebatch",
     description:
       "Produktdaten automatisch pflegen, anreichern und über alle Kanäle synchronisieren.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Produktdatenmanagement" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Produktdatenmanagement",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Produktdatenmanagement – E-Commerce | BlueBatch",
+    title: "Produktdatenmanagement – E-Commerce | Bluebatch",
     description:
       "Produktdaten automatisch pflegen, anreichern und über alle Kanäle synchronisieren.",
     images: ["/images/bluebatch-social-cover.jpg"],

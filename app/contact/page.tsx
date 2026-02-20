@@ -13,28 +13,28 @@ import Hero2Column, {
 import SimpleGrid from "@/components/simple-grid";
 
 export const metadata: Metadata = {
-  title: "Kontakt – BlueBatch | Beratungsgespräch vereinbaren",
+  title: "Kontakt – Bluebatch | Beratungsgespräch vereinbaren",
   description:
-    "Vereinbaren Sie ein kostenloses Beratungsgespräch mit BlueBatch. Erfahren Sie, wie AI-Workflows Ihre Prozesse automatisieren können.",
+    "Vereinbaren Sie ein kostenloses Beratungsgespräch mit Bluebatch. Erfahren Sie, wie AI-Workflows Ihre Prozesse automatisieren können.",
   openGraph: {
-    title: "Kontakt – BlueBatch",
+    title: "Kontakt – Bluebatch",
     description:
       "Vereinbaren Sie ein kostenloses Beratungsgespräch. AI-Workflows für Ihr Unternehmen.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch Kontakt",
+        alt: "Bluebatch Kontakt",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kontakt – BlueBatch",
+    title: "Kontakt – Bluebatch",
     description:
       "Vereinbaren Sie ein kostenloses Beratungsgespräch. AI-Workflows für Ihr Unternehmen.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -52,7 +52,7 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Kontakt</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Powerful AI Workflows mit BlueBatch
+              Powerful AI Workflows mit Bluebatch
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Verwandeln Sie Ihr Unternehmen mit intelligenter Automatisierung

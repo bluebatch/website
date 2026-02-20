@@ -21,21 +21,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "3-Wege-Rechnungsprüfung – Großhandel | BlueBatch",
+  title: "3-Wege-Rechnungsprüfung – Großhandel | Bluebatch",
   description:
-    "Wie BlueBatch Großhändlern hilft, Rechnungen automatisch mit Bestellungen und Wareneingängen abzugleichen.",
+    "Wie Bluebatch Großhändlern hilft, Rechnungen automatisch mit Bestellungen und Wareneingängen abzugleichen.",
   openGraph: {
-    title: "3-Wege-Rechnungsprüfung – Großhandel | BlueBatch",
+    title: "3-Wege-Rechnungsprüfung – Großhandel | Bluebatch",
     description:
       "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung. Nie wieder manuelle Prüfung.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch 3-Wege-Rechnungsprüfung" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch 3-Wege-Rechnungsprüfung",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "3-Wege-Rechnungsprüfung – Großhandel | BlueBatch",
+    title: "3-Wege-Rechnungsprüfung – Großhandel | Bluebatch",
     description:
       "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung. Nie wieder manuelle Prüfung.",
     images: ["/images/bluebatch-social-cover.jpg"],

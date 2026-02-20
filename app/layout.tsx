@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bluebatch.io"),
-  title: "BlueBatch – AI Workflow Builder",
+  title: "Bluebatch – AI Workflow Builder",
   description:
     "Build powerful AI agents that work predictably in production. Transform your business with intelligent automation and AI-powered workflows.",
 };

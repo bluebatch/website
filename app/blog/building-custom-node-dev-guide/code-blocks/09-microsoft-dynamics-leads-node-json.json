@@ -1,0 +1,105 @@
+{
+  "displayName": "Microsoft Dynamics Leads",
+  "name": "microsoftDynamicsLeads",
+  "icon": "file:dynamics365.svg",
+  "group": ["transform"],
+  "version": 1,
+  "description": "Manage leads in Microsoft Dynamics 365 CRM",
+  "defaults": {
+    "name": "Dynamics Leads"
+  },
+  "inputs": ["main"],
+  "outputs": ["main"],
+  "credentials": [
+    {
+      "name": "microsoftDynamicsApi",
+      "required": true
+    }
+  ],
+  "properties": [
+    {
+      "displayName": "Operation",
+      "name": "operation",
+      "type": "options",
+      "options": [
+        {
+          "name": "Create Lead",
+          "value": "create"
+        },
+        {
+          "name": "Read Lead",
+          "value": "read"
+        },
+        {
+          "name": "Update Lead",
+          "value": "update"
+        }
+      ],
+      "default": "create",
+      "required": true
+    },
+    {
+      "displayName": "Lead ID",
+      "name": "leadId",
+      "type": "string",
+      "default": "",
+      "required": true,
+      "displayOptions": {
+        "show": {
+          "operation": ["read", "update"]
+        }
+      },
+      "description": "The ID of the lead to read or update"
+    },
+    {
+      "displayName": "First Name",
+      "name": "firstname",
+      "type": "string",
+      "default": "",
+      "required": true,
+      "displayOptions": {
+        "show": {
+          "operation": ["create", "update"]
+        }
+      },
+      "description": "First name of the lead"
+    },
+    {
+      "displayName": "Last Name",
+      "name": "lastname",
+      "type": "string",
+      "default": "",
+      "required": true,
+      "displayOptions": {
+        "show": {
+          "operation": ["create", "update"]
+        }
+      },
+      "description": "Last name of the lead"
+    },
+    {
+      "displayName": "Email",
+      "name": "emailaddress1",
+      "type": "string",
+      "default": "",
+      "displayOptions": {
+        "show": {
+          "operation": ["create", "update"]
+        }
+      },
+      "description": "Email address of the lead"
+    },
+    {
+      "displayName": "Company",
+      "name": "companyname",
+      "type": "string",
+      "default": "",
+      "displayOptions": {
+        "show": {
+          "operation": ["create", "update"]
+        }
+      },
+      "description": "Company name of the lead"
+    }
+  ]
+}

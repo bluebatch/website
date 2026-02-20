@@ -22,7 +22,7 @@ KI-Feinschliff: Wir optimieren die Antwortqualität der KI und senken gleichzeit
 Wachstums-Support: Wenn Ihr Business sich verändert, wächst der Workflow mit. Wir implementieren laufend neue Anforderungen, damit die Automatisierung nie zum Flaschenhals wird.
 
 3. Persönlicher Kundendienst: Ihr Partner auf Augenhöhe
-   Strategische Betreuung | Direkter Draht Bei BlueBatch gibt es kein anonymes Ticket-System. Sie haben einen festen Ansprechpartner, der Ihren Business-Case im Großhandel versteht.
+   Strategische Betreuung | Direkter Draht Bei Bluebatch gibt es kein anonymes Ticket-System. Sie haben einen festen Ansprechpartner, der Ihren Business-Case im Großhandel versteht.
 
 Kein Fachchinesisch: Wir übersetzen komplexe Tech-Themen in klare Business-Entscheidungen.
 
@@ -30,4 +30,4 @@ Sparringspartner: Wir beraten Sie proaktiv, welcher nächste Prozess das größt
 
 Enterprise-Verlässlichkeit: Durch unsere Wurzeln bei Pexon Consulting garantieren wir eine Betreuung auf höchstem professionellem Niveau.
 
-Das BlueBatch-Gefühl: > Am Montagmorgen erhalten Sie einen Report, der Ihnen zeigt, wie viele tausend manuelle Klicks wir Ihrem Team letzte Woche erspart haben. Im Call am Nachmittag besprechen wir kurz die Optimierungen – und danach können Sie das Thema wieder komplett uns überlassen.
+Das Bluebatch-Gefühl: > Am Montagmorgen erhalten Sie einen Report, der Ihnen zeigt, wie viele tausend manuelle Klicks wir Ihrem Team letzte Woche erspart haben. Im Call am Nachmittag besprechen wir kurz die Optimierungen – und danach können Sie das Thema wieder komplett uns überlassen.

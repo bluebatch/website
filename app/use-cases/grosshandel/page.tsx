@@ -19,30 +19,30 @@ import Customer from "@/components/customer/customer";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 
 export const metadata: Metadata = {
-  title: "Großhandel – Use Cases | BlueBatch",
+  title: "Großhandel – Use Cases | Bluebatch",
   description:
-    "Wie BlueBatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+    "Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
   openGraph: {
-    title: "Großhandel – BlueBatch Use Cases",
+    title: "Großhandel – Bluebatch Use Cases",
     description:
-      "Wie BlueBatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+      "Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch Großhandel",
+        alt: "Bluebatch Großhandel",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Großhandel – BlueBatch Use Cases",
+    title: "Großhandel – Bluebatch Use Cases",
     description:
-      "Wie BlueBatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+      "Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -100,6 +100,13 @@ const useCases = [
       "Von der Kundenanfrage zum professionellen Angebot in Minuten. Automatische Preisabfrage, PDF-Generierung und Follow-up – 21x höhere Qualifizierungsrate.",
     image: "/images/pricing-calculator.jpg",
   },
+  {
+    slug: "ai-automation-with-easybill",
+    title: "KI-Automatisierung mit easybill",
+    description:
+      "Rechnungen, Angebote und Kundendaten in easybill vollautomatisch verwalten. Von der Dokumentenerstellung über ZUGFeRD/XRechnung bis zum Mahnwesen – 80% weniger manuelle Buchhaltungsarbeit.",
+    image: "/images/process-automation.jpg",
+  },
 ];
 
 export default function Page() {
@@ -121,11 +128,14 @@ export default function Page() {
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
-              7 erprobte Automatisierungslösungen für den Großhandel
+              8 erprobte Automatisierungslösungen für den Großhandel
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/wholesale-planning.jpg" type="image" />
+            <Hero2ColumnImage
+              src="/images/wholesale-planning.jpg"
+              type="image"
+            />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>

@@ -40,21 +40,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Auftragserfassung – Großhandel | BlueBatch",
+  title: "Auftragserfassung – Großhandel | Bluebatch",
   description:
-    "Wie BlueBatch die Auftragserfassung im Großhandel automatisiert. Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen.",
+    "Wie Bluebatch die Auftragserfassung im Großhandel automatisiert. Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen.",
   openGraph: {
-    title: "Auftragserfassung – Großhandel | BlueBatch",
+    title: "Auftragserfassung – Großhandel | Bluebatch",
     description:
       "Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Auftragserfassung" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Auftragserfassung",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Auftragserfassung – Großhandel | BlueBatch",
+    title: "Auftragserfassung – Großhandel | Bluebatch",
     description:
       "Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -79,14 +86,10 @@ export default function Page() {
           overlayOpacity={0.8}
           opacityBackground="white"
         >
-          <BackgroundHero.TopLabel>
-            Auftragserfassung
-          </BackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>Auftragserfassung</BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
             Bestellungen aus{" "}
-            <BackgroundHero.Highlight>
-              allen Kanälen
-            </BackgroundHero.Highlight>
+            <BackgroundHero.Highlight>allen Kanälen</BackgroundHero.Highlight>
             <br />
             automatisch erfassen
           </BackgroundHero.Headline>

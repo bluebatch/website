@@ -79,9 +79,7 @@ function Paragraph({ children, className = "" }: TypoProps) {
 
 function List({ children, className = "" }: TypoProps) {
   return (
-    <ul
-      className={`list-disc list-inside text-gray-600 space-y-2 mt-4 ${className}`}
-    >
+    <ul className={`list-disc pl-6 space-y-2 text-gray-700 ${className}`}>
       {children}
     </ul>
   );

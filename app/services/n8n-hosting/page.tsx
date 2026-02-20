@@ -20,28 +20,28 @@ import IntroBox from "@/components/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 
 export const metadata: Metadata = {
-  title: "n8n Hosting auf Kunden-Infrastruktur | BlueBatch",
+  title: "n8n Hosting auf Kunden-Infrastruktur | Bluebatch",
   description:
     "n8n Self-Hosting auf Ihrer eigenen Infrastruktur – OnPrem oder Cloud. Maximale Datenkontrolle, DSGVO-konform und kosteneffizient.",
   openGraph: {
-    title: "n8n Hosting auf Kunden-Infrastruktur | BlueBatch",
+    title: "n8n Hosting auf Kunden-Infrastruktur | Bluebatch",
     description:
       "Professionelles n8n Hosting auf Ihrer eigenen Infrastruktur. OnPrem oder Cloud, DSGVO-konform, unbegrenzte Workflows.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
+    siteName: "Bluebatch",
     images: [
       {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "BlueBatch n8n Hosting",
+        alt: "Bluebatch n8n Hosting",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "n8n Hosting auf Kunden-Infrastruktur | BlueBatch",
+    title: "n8n Hosting auf Kunden-Infrastruktur | Bluebatch",
     description:
       "Professionelles n8n Hosting auf Ihrer eigenen Infrastruktur. OnPrem oder Cloud, DSGVO-konform.",
     images: ["/images/bluebatch-social-cover.jpg"],

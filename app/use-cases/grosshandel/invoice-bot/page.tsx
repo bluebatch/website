@@ -35,21 +35,28 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Invoice-Bot – Großhandel | BlueBatch",
+  title: "Invoice-Bot – Großhandel | Bluebatch",
   description:
-    "Wie BlueBatch Großhändlern hilft, Rechnungen automatisch zu erfassen, prüfen und zur Freigabe weiterzuleiten.",
+    "Wie Bluebatch Großhändlern hilft, Rechnungen automatisch zu erfassen, prüfen und zur Freigabe weiterzuleiten.",
   openGraph: {
-    title: "Invoice-Bot – Großhandel | BlueBatch",
+    title: "Invoice-Bot – Großhandel | Bluebatch",
     description:
       "Eingangsrechnungen automatisch erfassen und verarbeiten. 80% weniger manueller Aufwand.",
     type: "website",
     locale: "de_DE",
-    siteName: "BlueBatch",
-    images: [{ url: "/images/bluebatch-social-cover.jpg", width: 1200, height: 630, alt: "BlueBatch Invoice-Bot" }],
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Invoice-Bot",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Invoice-Bot – Großhandel | BlueBatch",
+    title: "Invoice-Bot – Großhandel | Bluebatch",
     description:
       "Eingangsrechnungen automatisch erfassen und verarbeiten. 80% weniger manueller Aufwand.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -85,7 +92,10 @@ export default function Page() {
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/invoice-processing.jpg" type="image" />
+            <Hero2ColumnImage
+              src="/images/invoice-processing.jpg"
+              type="image"
+            />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
