@@ -66,38 +66,68 @@ export default function Navigation() {
     ],
   };
 
-  // Services - Cluster Menu
+  // Services & Tools - Cluster Menu
   const servicesMenu = {
-    services: [
+    sections: [
       {
-        title: "n8n Hosting",
-        icon: "/icons/building.svg",
-        href: "/services/n8n-hosting",
-        description: "OnPrem oder Cloud",
+        title: "Services",
+        href: "/services",
+        items: [
+          {
+            icon: "/icons/building.svg",
+            title: "n8n Hosting",
+            description: "OnPrem oder Cloud",
+            href: "/services/n8n-hosting",
+          },
+          {
+            icon: "/icons/process.svg",
+            title: "Workflow-Wartung",
+            description: "24/7 Monitoring",
+            href: "/services/workflow-wartung",
+          },
+          {
+            icon: "/icons/rocket.svg",
+            title: "Custom Nodes",
+            description: "Maßgeschneiderte Integrationen",
+            href: "/services/custom-nodes",
+          },
+          {
+            icon: "/icons/chart.svg",
+            title: "Schulungen",
+            description: "Workshops & Training",
+            href: "/services/schulungen",
+          },
+          {
+            icon: "/icons/phone.svg",
+            title: "Performance Scaling",
+            description: "High-Performance Setup",
+            href: "/services/performance-scaling",
+          },
+        ],
       },
       {
-        title: "Workflow-Wartung",
-        icon: "/icons/process.svg",
-        href: "/services/workflow-wartung",
-        description: "24/7 Monitoring",
-      },
-      {
-        title: "Custom Nodes",
-        icon: "/icons/rocket.svg",
-        href: "/services/custom-nodes",
-        description: "Maßgeschneiderte Integrationen",
-      },
-      {
-        title: "Schulungen",
-        icon: "/icons/chart.svg",
-        href: "/services/schulungen",
-        description: "Workshops & Training",
-      },
-      {
-        title: "Performance Scaling",
-        icon: "/icons/phone.svg",
-        href: "/services/performance-scaling",
-        description: "High-Performance Setup",
+        title: "Tools",
+        href: "/tools",
+        items: [
+          {
+            icon: "/icons/process.svg",
+            title: "n8n",
+            description: "Workflow-Automatisierung",
+            href: "/tools/n8n",
+          },
+          {
+            icon: "/icons/building.svg",
+            title: "Navision",
+            description: "Microsoft Dynamics ERP",
+            href: "/tools/navision",
+          },
+          {
+            icon: "/icons/chart.svg",
+            title: "Easybill",
+            description: "Rechnungssoftware",
+            href: "/tools/easybill",
+          },
+        ],
       },
     ],
   };
@@ -364,42 +394,46 @@ export default function Navigation() {
 
                 {activeDropdown === "services" && (
                   <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-[500px] bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-[550px] bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
                     onMouseEnter={() => setActiveDropdown("services")}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <div className="p-4">
-                      <Link
-                        href="/services"
-                        className="block font-bold text-gray-900 hover:text-primary-500 mb-3 text-sm uppercase tracking-wide transition-colors"
-                      >
-                        Alle Services
-                      </Link>
-                      <div className="space-y-2">
-                        {servicesMenu.services.map((service, index) => (
+                    <div className="p-4 grid grid-cols-2 gap-6">
+                      {servicesMenu.sections.map((section, sectionIndex) => (
+                        <div key={sectionIndex}>
                           <Link
-                            key={index}
-                            href={service.href}
-                            className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                            href={section.href}
+                            className="block font-bold text-gray-900 hover:text-primary-500 mb-3 text-sm uppercase tracking-wide transition-colors"
                           >
-                            <Image
-                              src={service.icon}
-                              alt=""
-                              width={20}
-                              height={20}
-                              className="w-5 h-5 text-primary-500 group-hover:text-primary-600"
-                            />
-                            <div>
-                              <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
-                                {service.title}
-                              </h5>
-                              <p className="text-xs text-gray-500 mt-0.5">
-                                {service.description}
-                              </p>
-                            </div>
+                            {section.title}
                           </Link>
-                        ))}
-                      </div>
+                          <div className="space-y-2">
+                            {section.items.map((item, itemIndex) => (
+                              <Link
+                                key={itemIndex}
+                                href={item.href}
+                                className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                              >
+                                <Image
+                                  src={item.icon}
+                                  alt=""
+                                  width={20}
+                                  height={20}
+                                  className="w-5 h-5 text-primary-500 group-hover:text-primary-600"
+                                />
+                                <div>
+                                  <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
+                                    {item.title}
+                                  </h5>
+                                  <p className="text-xs text-gray-500 mt-0.5">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
@@ -637,34 +671,40 @@ export default function Navigation() {
                 </div>
               ))}
 
-              {/* Services Section */}
-              <div className="space-y-1 pt-2">
-                <Link
-                  href="/services"
-                  className="flex items-start gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <svg
-                    className="w-5 h-5 text-primary-500 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+              {/* Services & Tools Sections */}
+              {servicesMenu.sections.map((section, sectionIndex) => (
+                <div key={sectionIndex} className="space-y-1 pt-2">
+                  <Link
+                    href={section.href}
+                    className="block px-4 py-2 text-xs font-semibold text-gray-500 uppercase hover:text-primary-500"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <div>
-                    <p className="font-medium">Services</p>
-                    <p className="text-xs text-gray-500">
-                      Alle unsere n8n Services
-                    </p>
-                  </div>
-                </Link>
-              </div>
+                    {section.title}
+                  </Link>
+                  {section.items.map((item, itemIndex) => (
+                    <Link
+                      key={itemIndex}
+                      href={item.href}
+                      className="flex items-start gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <Image
+                        src={item.icon}
+                        alt=""
+                        width={20}
+                        height={20}
+                        className="w-5 h-5 mt-0.5"
+                      />
+                      <div>
+                        <p className="font-medium">{item.title}</p>
+                        <p className="text-xs text-gray-500">
+                          {item.description}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ))}
 
               {/* Use-Cases Section - Top level only */}
               <div className="space-y-1 pt-2">

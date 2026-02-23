@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import { getSubPages } from "@/lib/get-subpages";
+import { InternalLinkLabel } from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
   title: "E-Commerce – Use Cases | Bluebatch",
@@ -68,9 +69,7 @@ export default async function Page() {
                 {page.title}
               </h2>
               <p className="text-gray-600 mb-4">{page.description}</p>
-              <span className="text-sm font-medium text-primary-600 group-hover:underline">
-                Mehr erfahren →
-              </span>
+              <InternalLinkLabel>Mehr erfahren</InternalLinkLabel>
             </div>
           </Link>
         ))}

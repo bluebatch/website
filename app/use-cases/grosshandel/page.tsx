@@ -17,6 +17,7 @@ import Hero2Column, {
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/customer/customer";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
+import InternalLink from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
   title: "Großhandel – Use Cases | Bluebatch",
@@ -159,12 +160,9 @@ export default function Page() {
                   <Typo.Paragraph className="text-gray-600 mb-6">
                     {useCase.description}
                   </Typo.Paragraph>
-                  <Link
-                    href={`/use-cases/grosshandel/${useCase.slug}`}
-                    className="inline-flex items-center text-primary-600 font-medium hover:underline"
-                  >
-                    Mehr erfahren →
-                  </Link>
+                  <InternalLink href={`/use-cases/grosshandel/${useCase.slug}`}>
+                    Mehr erfahren
+                  </InternalLink>
                 </div>
                 <div className="relative aspect-video">
                   <Image
@@ -190,12 +188,9 @@ export default function Page() {
                   <Typo.Paragraph className="text-gray-600 mb-6">
                     {useCase.description}
                   </Typo.Paragraph>
-                  <Link
-                    href={`/use-cases/grosshandel/${useCase.slug}`}
-                    className="inline-flex items-center text-primary-600 font-medium hover:underline"
-                  >
-                    Mehr erfahren →
-                  </Link>
+                  <InternalLink href={`/use-cases/grosshandel/${useCase.slug}`}>
+                    Mehr erfahren
+                  </InternalLink>
                 </div>
               </>
             )}

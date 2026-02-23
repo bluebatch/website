@@ -45,6 +45,7 @@ import { FaqContainer } from "@/components/faqs";
 import IntroBox from "@/components/intro-box";
 import Customer from "@/components/customer/customer";
 import KpiCard from "@/components/cards/kpi-card";
+import ToolLink from "@/components/tool-link";
 
 export const pageConfig: PageConfig = {
   title: "KI-Automatisierung mit easybill",
@@ -53,13 +54,11 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "KI-Automatisierung mit easybill – Großhandel | Bluebatch",
+  title: "KI-Automatisierung mit easybill – Großhandel | Bluebatch",
   description:
     "Wie Bluebatch Großhändlern hilft, easybill mit KI-gestützten n8n-Workflows zu automatisieren – von der Rechnungserstellung bis zum Mahnwesen.",
   openGraph: {
-    title:
-      "KI-Automatisierung mit easybill – Großhandel | Bluebatch",
+    title: "KI-Automatisierung mit easybill – Großhandel | Bluebatch",
     description:
       "Rechnungen, Angebote und Zahlungen in easybill vollautomatisch verwalten. 80% weniger manuelle Buchhaltungsarbeit.",
     type: "website",
@@ -76,8 +75,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "KI-Automatisierung mit easybill – Großhandel | Bluebatch",
+    title: "KI-Automatisierung mit easybill – Großhandel | Bluebatch",
     description:
       "Rechnungen, Angebote und Zahlungen in easybill vollautomatisch verwalten. 80% weniger manuelle Buchhaltungsarbeit.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -128,17 +126,15 @@ export default function Page() {
       <ContentWrapper isFirstSection>
         <Hero2Column>
           <Hero2ColumnTextColumn>
-            <Hero2ColumnPreHeadline>
-              easybill + n8n + KI
-            </Hero2ColumnPreHeadline>
+            <Hero2ColumnPreHeadline>easybill + n8n + KI</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
               Rechnungen und Buchhaltung in easybill vollautomatisch
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Vom Auftragseingang über die Rechnungserstellung bis zum
               Zahlungseingang – automatisieren Sie Ihren gesamten
-              Dokumentenfluss in easybill mit n8n-Workflows und KI.
-              80% weniger manuelle Buchhaltungsarbeit.
+              Dokumentenfluss in easybill mit n8n-Workflows und KI. 80% weniger
+              manuelle Buchhaltungsarbeit.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Demo anfragen</ContactButton>
@@ -210,15 +206,15 @@ export default function Page() {
               </IntroBox.Headline>
               <IntroBox.Subline>
                 Im Großhandel fallen täglich Hunderte von Dokumenten an:
-                Auftragsbestätigungen, Lieferscheine, Rechnungen,
-                Gutschriften, Mahnungen. Jedes Dokument manuell in easybill
-                zu erstellen, kostet Zeit und produziert Fehler.
+                Auftragsbestätigungen, Lieferscheine, Rechnungen, Gutschriften,
+                Mahnungen. Jedes Dokument manuell in easybill zu erstellen,
+                kostet Zeit und produziert Fehler.
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Dazu kommt: Zahlungseingänge müssen manuell zugeordnet,
                 DATEV-Exporte händisch angestoßen und Mahnungen einzeln
-                verschickt werden. Bei 200+ Rechnungen pro Woche
-                verliert Ihr Team den Überblick.
+                verschickt werden. Bei 200+ Rechnungen pro Woche verliert Ihr
+                Team den Überblick.
               </IntroBox.Subline>
             </IntroBox>
           </div>
@@ -232,8 +228,8 @@ export default function Page() {
             So automatisieren wir Ihre easybill-Prozesse
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Vier Schritte – vom Auftragseingang bis zum automatischen
-            Mahnwesen, orchestriert durch n8n.
+            Vier Schritte – vom Auftragseingang bis zum automatischen Mahnwesen,
+            orchestriert durch n8n.
           </IntroBox.Subline>
         </IntroBox>
 
@@ -250,9 +246,7 @@ export default function Page() {
                   <PhaseCardBadge>{phase.badge}</PhaseCardBadge>
                 </PhaseCardHeader>
                 <PhaseCardSubtitle>{phase.subtitle}</PhaseCardSubtitle>
-                <PhaseCardDescription>
-                  {phase.description}
-                </PhaseCardDescription>
+                <PhaseCardDescription>{phase.description}</PhaseCardDescription>
               </PhaseCard>
             </TimelineAsStepsStep>
           ))}
@@ -261,9 +255,7 @@ export default function Page() {
 
       <ContentWrapper>
         <IntroBox>
-          <IntroBox.PreHeadline>
-            easybill API-Funktionen
-          </IntroBox.PreHeadline>
+          <IntroBox.PreHeadline>easybill API-Funktionen</IntroBox.PreHeadline>
           <IntroBox.Headline>
             Was wir über die easybill-API automatisieren
           </IntroBox.Headline>
@@ -288,49 +280,48 @@ export default function Page() {
             <Typo.Paragraph>
               Automatische Erstellung von Rechnungen, Angeboten,
               Auftragsbestätigungen, Lieferscheinen und Gutschriften.
-              Finalisierung, PDF-Generierung und Versand per E-Mail
-              – alles über die API.
+              Finalisierung, PDF-Generierung und Versand per E-Mail – alles über
+              die API.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
             <Typo.H3>Kunden & Kontakte</Typo.H3>
             <Typo.Paragraph>
-              Kundenstammdaten bidirektional synchronisieren zwischen
-              ERP, CRM und easybill. Kundengruppen für
-              Staffelpreise und regionale Zuordnung automatisch
-              verwalten.
+              Kundenstammdaten bidirektional synchronisieren zwischen ERP, CRM
+              und easybill. Kundengruppen für Staffelpreise und regionale
+              Zuordnung automatisch verwalten.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
             <Typo.H3>Produkte & Preise</Typo.H3>
             <Typo.Paragraph>
-              Produktkatalog mit Preisen, Steuersätzen und
-              Lagerbeständen zentral pflegen. Änderungen aus dem
-              ERP automatisch in easybill synchronisieren.
+              Produktkatalog mit Preisen, Steuersätzen und Lagerbeständen
+              zentral pflegen. Änderungen aus dem ERP automatisch in easybill
+              synchronisieren.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
             <Typo.H3>Zahlungsmanagement</Typo.H3>
             <Typo.Paragraph>
-              Zahlungseingänge automatisch Rechnungen zuordnen,
-              offene Posten überwachen und SEPA-Lastschriften
-              generieren. Vollständiges Forderungsmanagement.
+              Zahlungseingänge automatisch Rechnungen zuordnen, offene Posten
+              überwachen und SEPA-Lastschriften generieren. Vollständiges
+              Forderungsmanagement.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
             <Typo.H3>E-Rechnung & Compliance</Typo.H3>
             <Typo.Paragraph>
-              ZUGFeRD 2.x und XRechnung 3.0 automatisch generieren
-              – je nach Kundentyp. Pflichtformat für B2G und
-              zunehmend für B2B in Deutschland.
+              ZUGFeRD 2.x und XRechnung 3.0 automatisch generieren – je nach
+              Kundentyp. Pflichtformat für B2G und zunehmend für B2B in
+              Deutschland.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
             <Typo.H3>DATEV & Steuerberater</Typo.H3>
             <Typo.Paragraph>
               Buchhaltungsdaten automatisch an das DATEV-Rechenzentrum
-              exportieren. Ihr Steuerberater erhält alle Daten ohne
-              manuellen Aufwand.
+              exportieren. Ihr Steuerberater erhält alle Daten ohne manuellen
+              Aufwand.
             </Typo.Paragraph>
           </SimpleCard>
         </SimpleGrid>
@@ -386,9 +377,7 @@ export default function Page() {
                 0,5 Vollzeitkräfte für Sonderfälle
               </ComparisonListItem>
             </ComparisonList>
-            <ComparisonFooter>
-              Gesamt: ~55.000 €/Jahr
-            </ComparisonFooter>
+            <ComparisonFooter>Gesamt: ~55.000 €/Jahr</ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
 
@@ -457,7 +446,8 @@ export default function Page() {
             easybill Dokumentation & Ressourcen
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Alle Informationen basieren auf der offiziellen easybill-Dokumentation.
+            Alle Informationen basieren auf der offiziellen
+            easybill-Dokumentation.
           </IntroBox.Subline>
         </IntroBox>
 
@@ -488,9 +478,9 @@ export default function Page() {
             <SimpleCard className="h-full hover:border-primary-400 transition-colors">
               <Typo.H3>easybill Plattform</Typo.H3>
               <Typo.Paragraph>
-                Cloud-basierte Rechnungssoftware mit DATEV-Anbindung,
-                E-Rechnung (ZUGFeRD/XRechnung), Lagerverwaltung und
-                automatischem Mahnwesen.
+                Cloud-basierte Rechnungssoftware mit DATEV-Anbindung, E-Rechnung
+                (ZUGFeRD/XRechnung), Lagerverwaltung und automatischem
+                Mahnwesen.
               </Typo.Paragraph>
               <span className="text-primary-600 font-medium text-sm mt-2 inline-block">
                 easybill.de &rarr;
@@ -506,8 +496,8 @@ export default function Page() {
             <SimpleCard className="h-full hover:border-primary-400 transition-colors">
               <Typo.H3>E-Rechnung mit easybill</Typo.H3>
               <Typo.Paragraph>
-                ZUGFeRD 2.x und XRechnung 3.0 – Pflichtformate ab 2025
-                für B2G, zunehmend Standard im B2B. Automatisiert per API.
+                ZUGFeRD 2.x und XRechnung 3.0 – Pflichtformate ab 2025 für B2G,
+                zunehmend Standard im B2B. Automatisiert per API.
               </Typo.Paragraph>
               <span className="text-primary-600 font-medium text-sm mt-2 inline-block">
                 E-Rechnung Infos &rarr;
@@ -515,6 +505,10 @@ export default function Page() {
             </SimpleCard>
           </Link>
         </SimpleGrid>
+      </ContentWrapper>
+
+      <ContentWrapper border="T" background="bg-primary-700">
+        <ToolLink dark n8n easybill className="mb-8" />
       </ContentWrapper>
 
       <ContentWrapper>
@@ -533,8 +527,7 @@ export default function Page() {
                 "Ja, die easybill-API unterstützt die automatische Generierung von E-Rechnungen im ZUGFeRD 2.x (PDF/A-3 mit eingebettetem XML) und XRechnung 3.0 (reines XML) Format. Der Workflow setzt das richtige Format je nach Kundentyp automatisch – Pflichtformat für B2G und zunehmend Standard im B2B.",
             },
             {
-              question:
-                "Wie funktioniert das automatische Mahnwesen?",
+              question: "Wie funktioniert das automatische Mahnwesen?",
               answer:
                 "Der n8n-Workflow überwacht alle offenen Rechnungen in easybill über die API. Bei Überschreiten des Zahlungsziels werden automatisch Mahnungen erstellt und versendet – mit eskalierenden Stufen (freundliche Erinnerung, 1. Mahnung, 2. Mahnung). Zahlungseingänge stoppen den Mahnprozess automatisch. Eskalation an das Team bei kritischen Fällen.",
             },

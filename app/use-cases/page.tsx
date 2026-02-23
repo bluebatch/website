@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
+import { InternalLinkLabel } from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
   title: "Use Cases – Bluebatch | Branchenlösungen für AI-Automation",
@@ -79,9 +80,7 @@ export default function Page() {
                 {topic.title}
               </h2>
               <p className="text-gray-600 mb-4">{topic.description}</p>
-              <span className="text-sm font-medium text-primary-600 group-hover:underline">
-                Use Cases ansehen →
-              </span>
+              <InternalLinkLabel>Use Cases ansehen</InternalLinkLabel>
             </div>
           </Link>
         ))}

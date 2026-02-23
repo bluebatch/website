@@ -19,6 +19,7 @@ import ConsultationCtaDefault from "@/components/consultation-cta-default";
 import IntroBox from "@/components/intro-box";
 import BoundlessImageCard from "@/components/cards/boundless-image-card";
 import SimpleCard from "@/components/cards/simple-card";
+import { InternalLinkLabel } from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
   title: "n8n Services | Bluebatch",
@@ -245,9 +246,7 @@ export default function Page() {
                       </div>
                     ))}
                   </div>
-                  <span className="inline-flex items-center text-primary-600 font-medium group-hover:underline">
-                    Mehr erfahren →
-                  </span>
+                  <InternalLinkLabel>Mehr erfahren</InternalLinkLabel>
                 </BoundlessImageCard.Content>
 
                 <BoundlessImageCard.Image

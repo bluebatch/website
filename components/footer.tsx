@@ -26,6 +26,12 @@ export default function Footer() {
     { label: "e-Commerce", href: "/use-cases/ecommerce" },
   ];
 
+  const toolsMenu = [
+    { label: "n8n", href: "/tools/n8n" },
+    { label: "Navision", href: "/tools/navision" },
+    { label: "Easybill", href: "/tools/easybill" },
+  ];
+
   const legalMenu = [
     { label: "Kontakt", href: "/contact" },
     { label: "Das Team", href: "/team" },
@@ -99,7 +105,7 @@ export default function Footer() {
           </div>
 
           {/* Right Column - Menus */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-8">
             {/* Main Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
@@ -126,6 +132,25 @@ export default function Footer() {
               </h3>
               <ul className="space-y-3">
                 {servicesMenu.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="hover:text-secondary-500 transition-colors text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Tools Menu */}
+            <div>
+              <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
+                Tools
+              </h3>
+              <ul className="space-y-3">
+                {toolsMenu.map((item, index) => (
                   <li key={index}>
                     <Link
                       href={item.href}

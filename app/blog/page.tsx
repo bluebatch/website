@@ -23,6 +23,17 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "wie-wirkt-sich-ki-auf-den-grosshandel-aus",
+    title:
+      "Wie wirkt sich KI auf den Großhandel aus? Der komplette Überblick für 2026",
+    description:
+      "63% der Großhändler stufen KI als relevant ein, aber nur 24% setzen sie ein. Erfahren Sie, wo KI im Großhandel heute echten Mehrwert liefert — mit konkreten Zahlen und Anwendungsbeispielen.",
+    author: "Max Hänsel",
+    date: "2026-02-23",
+    image: "/images/wholesale-planning.jpg",
+    tags: ["KI", "Großhandel", "Automatisierung", "Supply Chain"],
+  },
+  {
     slug: "building-custom-node-dev-guide",
     title:
       "Benutzerdefinierte Nodes in n8n erstellen: Ein vollständiger Entwickler-Leitfaden",

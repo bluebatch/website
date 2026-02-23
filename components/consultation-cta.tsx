@@ -12,7 +12,9 @@ export default function ConsultationCta({
   className = "",
 }: ConsultationCtaProps) {
   return (
-    <div className={`relative h-[700px] md:h-[500px] lg:h-[550px] mt-16 ${className}`}>
+    <div
+      className={`relative h-[700px] md:h-[500px] lg:h-[550px] ${className}`}
+    >
       {children}
     </div>
   );
@@ -46,7 +48,9 @@ export function ConsultationCtaImage({
   className = "",
 }: ImageProps) {
   return (
-    <div className={`absolute bottom-0 right-0 w-full h-[50%] md:w-1/2 md:h-full flex items-end justify-center ${className}`}>
+    <div
+      className={`absolute bottom-0 right-0 w-full h-[50%] md:w-1/2 md:h-full flex items-end justify-center ${className}`}
+    >
       <Image
         src={src}
         alt={alt}
@@ -69,7 +73,9 @@ export function ConsultationCtaTextColumn({
   className = "",
 }: TextColumnProps) {
   return (
-    <div className={`absolute left-0 top-0 md:bottom-0 md:top-auto w-full md:w-1/2 h-[50%] md:h-[70%] bg-primary-800 text-white p-6 md:p-8 lg:p-10 flex flex-col justify-center ${className}`}>
+    <div
+      className={`absolute left-0 top-0 md:bottom-0 md:top-auto w-full md:w-1/2 h-[50%] md:h-[70%] bg-primary-800 text-white p-6 md:p-8 lg:p-10 flex flex-col justify-center ${className}`}
+    >
       {children}
     </div>
   );
@@ -147,11 +153,7 @@ export function ConsultationCtaChecklistItem({
         stroke="currentColor"
         strokeWidth={2}
       >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M5 13l4 4L19 7"
-        />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
       <span className="text-gray-300 text-sm leading-snug">{children}</span>
     </li>
