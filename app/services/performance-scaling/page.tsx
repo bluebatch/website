@@ -17,7 +17,7 @@ import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/customer/customer";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 import { AnimatedNumber } from "@/components/cards/kpi-card";
-import SimpleCard, { SimpleCardFooter } from "@/components/cards/simple-card";
+import SimpleCard from "@/components/cards/simple-card";
 import IntroBox from "@/components/intro-box";
 
 export const metadata: Metadata = {
@@ -82,7 +82,7 @@ const problems = [
 const architecture = [
   {
     component: "Redis Queue Mode",
-    iconSrc: "/icons/rocket.svg",
+    imageSrc: "/tools/redis.png",
     benefit: "7x Performance-Increase",
     description:
       "Von 23 auf 162 Requests/Sekunde. Message Broker für resiliente Job-Verarbeitung.",
@@ -95,7 +95,7 @@ const architecture = [
   },
   {
     component: "PostgreSQL Database",
-    iconSrc: "/icons/factory.svg",
+    imageSrc: "/tools/postgresql_plain_wordmark_logo_icon_146390.png",
     benefit: "1000x mehr Capacity",
     description:
       "Production-ready Datenbank für tausende Executions pro Minute. MVCC vermeidet Locks.",
@@ -108,7 +108,7 @@ const architecture = [
   },
   {
     component: "Docker Swarm / Kubernetes",
-    iconSrc: "/icons/building.svg",
+    imageSrc: "/tools/Kubernetes.png",
     benefit: "Zero-Downtime Deployments",
     description:
       "Container-Orchestrierung für High Availability und Auto-Scaling.",
@@ -121,7 +121,7 @@ const architecture = [
   },
   {
     component: "Prometheus & Grafana",
-    iconSrc: "/icons/chart.svg",
+    imageSrc: "/tools/grafana-prometheus.png",
     benefit: "Vollständige Observability",
     description:
       "Real-time Monitoring aller Metriken. Proaktive Alerts bei Performance-Degradation.",
@@ -172,32 +172,32 @@ const benchmarks = [
 const technologies = [
   {
     name: "Redis",
-    logo: "/images/technology-integration.jpg",
+    logo: "/tools/redis.png",
     description: "In-Memory Message Broker für Queue Mode",
   },
   {
     name: "PostgreSQL",
-    logo: "/images/technology-integration.jpg",
+    logo: "/tools/postgresql_plain_wordmark_logo_icon_146390.png",
     description: "Enterprise-ready Datenbank",
   },
   {
     name: "Kubernetes",
-    logo: "/images/technology-integration.jpg",
+    logo: "/tools/Kubernetes.png",
     description: "Container-Orchestrierung",
   },
   {
     name: "Prometheus",
-    logo: "/images/business-analytics.jpg",
+    logo: "/tools/prometheus.png",
     description: "Metrics & Monitoring",
   },
   {
     name: "Grafana",
-    logo: "/images/business-analytics.jpg",
+    logo: "/tools/grafana-prometheus.png",
     description: "Dashboards & Visualization",
   },
   {
     name: "Docker",
-    logo: "/images/technology-integration.jpg",
+    logo: "/tools/docker.svg",
     description: "Container-Plattform",
   },
 ];
@@ -342,17 +342,12 @@ export default function Page() {
 
         <SimpleGrid cols={2} className="gap-8">
           {architecture.map((component, index) => (
-            <SimpleCard
-              key={index}
-              icon={
-                <Image
-                  src={component.iconSrc}
-                  alt={component.component}
-                  width={64}
-                  height={64}
-                />
-              }
-            >
+            <SimpleCard key={index}>
+              <SimpleCard.Image
+                src={component.imageSrc}
+                alt={component.component}
+                size="lg"
+              />
               <Typo.H3 className="mb-1">{component.component}</Typo.H3>
               <p className="text-primary-600 font-semibold mb-4">
                 {component.benefit}
@@ -360,8 +355,8 @@ export default function Page() {
               <Typo.Paragraph className="text-gray-600 mb-6">
                 {component.description}
               </Typo.Paragraph>
-              <SimpleCardFooter>
-                <div className="grid grid-cols-2  px-4">
+              <SimpleCard.Footer>
+                <div className="grid grid-cols-2 px-4">
                   {component.features.map((feature, idx) => (
                     <div
                       key={idx}
@@ -372,7 +367,7 @@ export default function Page() {
                     </div>
                   ))}
                 </div>
-              </SimpleCardFooter>
+              </SimpleCard.Footer>
             </SimpleCard>
           ))}
         </SimpleGrid>
@@ -389,20 +384,9 @@ export default function Page() {
 
         <SimpleGrid cols={6} className="gap-6">
           {technologies.map((tech, index) => (
-            <SimpleCard
-              key={index}
-              icon={
-                <div className="relative h-16 w-16">
-                  <Image
-                    src={tech.logo}
-                    alt={tech.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              }
-            >
-              <h4 className="font-semibold text-gray-900 mb-2">{tech.name}</h4>
+            <SimpleCard key={index}>
+              <SimpleCard.Image src={tech.logo} alt={tech.name} size="md" />
+              <Typo.H4>{tech.name}</Typo.H4>
               <p className="text-gray-600 text-xs">{tech.description}</p>
             </SimpleCard>
           ))}
@@ -424,18 +408,14 @@ export default function Page() {
             <Typo.H2 className="mb-6">Unser Scaling-Ansatz</Typo.H2>
             <div className="space-y-6">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  1. Performance Audit
-                </h4>
+                <Typo.H4 disableMargin>1. Performance Audit</Typo.H4>
                 <p className="text-gray-600">
                   Detaillierte Analyse Ihrer aktuellen Installation.
                   Identifikation von Bottlenecks und Performance-Problemen.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  2. Architektur-Design
-                </h4>
+                <Typo.H4 disableMargin>2. Architektur-Design</Typo.H4>
                 <p className="text-gray-600">
                   Individueller Skalierungsplan basierend auf Ihren
                   Anforderungen. Horizontale und vertikale Skalierung
@@ -443,18 +423,14 @@ export default function Page() {
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  3. Migration & Setup
-                </h4>
+                <Typo.H4 disableMargin>3. Migration & Setup</Typo.H4>
                 <p className="text-gray-600">
                   Queue Mode Konfiguration, PostgreSQL Migration,
                   Worker-Scaling. Zero-Downtime Migration garantiert.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  4. Monitoring & Optimization
-                </h4>
+                <Typo.H4 disableMargin>4. Monitoring & Optimization</Typo.H4>
                 <p className="text-gray-600">
                   Prometheus & Grafana Setup. Kontinuierliche
                   Performance-Überwachung und Optimierung.

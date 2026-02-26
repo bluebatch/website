@@ -225,10 +225,10 @@ export default function Page() {
 
         <SimpleGrid cols={3} className="gap-8">
           {benefits.map((benefit, index) => (
-            <SimpleCard
-              key={index}
-              icon={<div className="text-5xl">{benefit.icon}</div>}
-            >
+            <SimpleCard key={index}>
+              <SimpleCard.Icon>
+                <div className="text-5xl">{benefit.icon}</div>
+              </SimpleCard.Icon>
               <Typo.H3 className="mb-3">{benefit.title}</Typo.H3>
               <Typo.Paragraph>{benefit.description}</Typo.Paragraph>
             </SimpleCard>

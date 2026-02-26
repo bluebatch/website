@@ -16,7 +16,7 @@ import Hero2Column, {
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/customer/customer";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
-import SimpleCard, { SimpleCardFooter } from "@/components/cards/simple-card";
+import SimpleCard, { SimpleCardIcon } from "@/components/cards/simple-card";
 import IntroBox from "@/components/intro-box";
 
 export const metadata: Metadata = {
@@ -167,20 +167,21 @@ const targetGroups = [
     description:
       "Keine Programmierkenntnisse erforderlich. Intuitives Drag-and-Drop Interface.",
     roles: ["Process Manager", "Data Analysts", "Operations Manager"],
-    icon: "👔",
+    iconSrc: "/icons/business-card-membership-card.svg",
   },
   {
     group: "Entwickler",
     description:
       "TypeScript und Node.js für Custom Extensions. Volle Kontrolle über Integrationen.",
     roles: ["Software-Entwickler", "DevOps Engineers", "IT Operations"],
-    icon: "👨‍💻",
+    iconSrc:
+      "/icons/computer-programmer-software-engineer-coder-software-developer.svg",
   },
   {
     group: "IT-Administratoren",
     description: "System-Management, Deployment, Security und Governance.",
     roles: ["System-Administratoren", "IT-Manager", "Security-Officers"],
-    icon: "🔧",
+    iconSrc: "/icons/admin-with-cogwheels.svg",
   },
 ];
 
@@ -251,9 +252,9 @@ export default function Page() {
                         Praxisorientierte Schulung mit Hands-On Übungen
                       </Typo.Paragraph>
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-gray-900">
+                        <Typo.H4 disableMargin>
                           Inhalte:
-                        </h4>
+                        </Typo.H4>
                         <ul className="space-y-2">
                           {training.topics.map((topic, idx) => (
                             <li
@@ -302,9 +303,9 @@ export default function Page() {
                         Praxisorientierte Schulung mit Hands-On Übungen
                       </Typo.Paragraph>
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-gray-900">
+                        <Typo.H4 disableMargin>
                           Inhalte:
-                        </h4>
+                        </Typo.H4>
                         <ul className="space-y-2">
                           {training.topics.map((topic, idx) => (
                             <li
@@ -337,17 +338,14 @@ export default function Page() {
 
         <SimpleGrid cols={3} className="gap-8">
           {formats.map((format, index) => (
-            <SimpleCard
-              key={index}
-              icon={
-                <Image
-                  src={format.iconSrc}
-                  alt={format.name}
-                  width={64}
-                  height={64}
-                />
-              }
-            >
+            <SimpleCard key={index}>
+              <SimpleCard.Icon
+                src={format.iconSrc}
+                alt={format.name}
+                color="white"
+                background="primary-gradient"
+                size="lg"
+              />
               <Typo.H3 className="mb-3">{format.name}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 mb-6">
                 {format.description}
@@ -363,12 +361,12 @@ export default function Page() {
                   </div>
                 ))}
               </div>
-              <SimpleCardFooter>
+              <SimpleCard.Footer>
                 <p className="text-sm text-gray-600">
                   <span className="font-semibold">Ideal für:</span>{" "}
                   {format.bestFor}
                 </p>
-              </SimpleCardFooter>
+              </SimpleCard.Footer>
             </SimpleCard>
           ))}
         </SimpleGrid>
@@ -394,15 +392,22 @@ export default function Page() {
               key={index}
               className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-8"
             >
-              <div className="text-5xl mb-4">{target.icon}</div>
+              <SimpleCardIcon
+                src={target.iconSrc}
+                alt={target.group}
+                color="white"
+                background="primary-gradient"
+                size="md"
+                className="mb-4"
+              />
               <Typo.H3 className="mb-3">{target.group}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 mb-6">
                 {target.description}
               </Typo.Paragraph>
               <div className="space-y-2">
-                <h4 className="font-semibold text-gray-900 text-sm mb-2">
+                <Typo.H4 disableMargin className="text-sm mb-2">
                   Typische Rollen:
-                </h4>
+                </Typo.H4>
                 {target.roles.map((role, idx) => (
                   <div
                     key={idx}
@@ -454,18 +459,18 @@ export default function Page() {
             <Typo.H2 className="mb-6">Warum professionelle Schulung?</Typo.H2>
             <div className="space-y-6">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin className="mb-2">
                   Strukturierter Lernpfad
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Systematischer Aufbau von Grundlagen zu Advanced Topics. Keine
                   Information Overload, klare Lernziele.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin className="mb-2">
                   Experten-Guidance
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Lernen von n8n-zertifizierten Spezialisten mit 500+
                   erfolgreichen Implementierungen. Best Practices aus der
@@ -473,18 +478,18 @@ export default function Page() {
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin className="mb-2">
                   Hands-On Practice
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Interaktive Übungen und praktische Sessions. Sofortiges
                   Feedback und Korrektur während der Schulung.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin className="mb-2">
                   Team-Alignment
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Gesamtes Team lernt dieselbe Methodik. Konsistente Standards
                   und Practices, bessere Zusammenarbeit.
@@ -507,23 +512,23 @@ export default function Page() {
 
           <SimpleGrid cols={3} className="gap-6 mb-12">
             <div className="bg-white p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-900 mb-2">
+              <Typo.H4 disableMargin className="mb-2">
                 Teilnehmerzahl
-              </h4>
+              </Typo.H4>
               <p className="text-gray-600 text-sm">
                 Gruppenrabatte ab 3+ Teilnehmern
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-900 mb-2">
+              <Typo.H4 disableMargin className="mb-2">
                 Schulungsdauer
-              </h4>
+              </Typo.H4>
               <p className="text-gray-600 text-sm">
                 2-5 Tage je nach Level und Tiefe
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-900 mb-2">Format</h4>
+              <Typo.H4 disableMargin className="mb-2">Format</Typo.H4>
               <p className="text-gray-600 text-sm">
                 Vor-Ort, Online oder Hybrid
               </p>

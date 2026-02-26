@@ -177,7 +177,10 @@ export default function Page() {
 
         <SimpleGrid cols={3} className="gap-8">
           {features.map((feature, index) => (
-            <SimpleCard key={index} icon={<>{feature.icon}</>}>
+            <SimpleCard key={index}>
+              <SimpleCard.Icon>
+                <>{feature.icon}</>
+              </SimpleCard.Icon>
               <Typo.H3 className="mb-3 text-xl">{feature.title}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 text-sm">
                 {feature.description}
@@ -240,7 +243,10 @@ export default function Page() {
 
         <SimpleGrid cols={3} className="gap-8">
           {integrations.map((integration, index) => (
-            <SimpleCard key={index} icon={<>{integration.icon}</>}>
+            <SimpleCard key={index}>
+              <SimpleCard.Icon>
+                <>{integration.icon}</>
+              </SimpleCard.Icon>
               <Typo.H3 className="mb-3 text-xl">{integration.title}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 text-sm">
                 {integration.description}

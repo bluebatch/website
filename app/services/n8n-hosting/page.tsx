@@ -53,37 +53,37 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    icon: "🔒",
+    iconSrc: "/icons/privacy.svg",
     title: "100% Datenkontrolle",
     description:
       "Ihre Daten bleiben auf Ihrer Infrastruktur. Volle Kontrolle über Sicherheit und Compliance.",
   },
   {
-    icon: "⚖️",
+    iconSrc: "/icons/law-round.svg",
     title: "DSGVO-Konform",
     description:
       "Daten bleiben in Deutschland/EU. Einfache Einhaltung aller Datenschutzanforderungen.",
   },
   {
-    icon: "💰",
+    iconSrc: "/icons/return-of-investment.svg",
     title: "Kosteneffizient",
     description:
       "Unbegrenzte Workflows und Executions. Ab €50/Monat statt €600+ bei Cloud-Alternativen.",
   },
   {
-    icon: "🚀",
+    iconSrc: "/icons/autoscaling.svg",
     title: "Skalierbar",
     description:
       "Von einfachem Docker-Setup bis Enterprise Kubernetes. Wächst mit Ihren Anforderungen.",
   },
   {
-    icon: "🔧",
+    iconSrc: "/icons/settings.svg",
     title: "Flexibel",
     description:
       "OnPrem oder Cloud nach Ihren Anforderungen. Docker, Kubernetes oder Bare Metal.",
   },
   {
-    icon: "🛡️",
+    iconSrc: "/icons/enterprise.svg",
     title: "Sichere Architektur",
     description:
       "Best Practices für Netzwerk-Sicherheit, Verschlüsselung, Backup und High Availability.",
@@ -174,7 +174,12 @@ export default function Page() {
 
         <SimpleGrid cols={3} className="gap-8">
           {features.map((feature, index) => (
-            <SimpleCard key={index} icon={<>{feature.icon}</>}>
+            <SimpleCard key={index}>
+              <SimpleCard.Icon
+                src={feature.iconSrc}
+                alt={feature.title}
+                color="primary-gradient"
+              />
               <Typo.H3 className="mb-3 text-xl">{feature.title}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 text-sm">
                 {feature.description}
@@ -277,36 +282,36 @@ export default function Page() {
             <Typo.H2 className="mb-6">Technische Highlights</Typo.H2>
             <div className="space-y-6">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin>
                   Container-Orchestrierung
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Docker Compose für einfache Setups, Kubernetes für
                   Enterprise-Deployments mit High Availability.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin>
                   PostgreSQL Datenbank
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Production-ready Datenbank mit Streaming Replication und
                   automatischem Failover.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin>
                   Queue Mode mit Redis
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Horizontale Skalierung für High-Volume Workloads. Bis zu 162
                   Executions pro Sekunde.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin>
                   Monitoring & Alerting
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Prometheus & Grafana für vollständige Observability Ihrer
                   n8n-Instanz.

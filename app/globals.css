@@ -36,6 +36,19 @@
   --color-primary-900: #00214a;
   --color-primary-950: #001532;
 
+  /* CTA Color Scale - Orange (#FF6B00) */
+  --color-cta-50: #fff7ed;
+  --color-cta-100: #ffedd5;
+  --color-cta-200: #fed7aa;
+  --color-cta-300: #fdba74;
+  --color-cta-400: #fb923c;
+  --color-cta-500: #f97316;
+  --color-cta-600: #ea580c;
+  --color-cta-700: #c2410c;
+  --color-cta-800: #9a3412;
+  --color-cta-900: #7c2d12;
+  --color-cta-950: #431407;
+
   /* Secondary Color Scale - Cyan Spark (#00F5FF) */
   --color-secondary-50: #e6feff;
   --color-secondary-100: #ccfefe;

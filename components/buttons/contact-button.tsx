@@ -2,7 +2,6 @@ import Button from "@/components/button";
 import { ReactNode } from "react";
 
 type ContactIcon = "phone" | "mail" | "calendar" | "chat";
-type ContactColor = "primary" | "secondary" | "outline" | "dark";
 type ContactSize = "sm" | "md" | "lg";
 
 interface ContactButtonProps {
@@ -11,7 +10,7 @@ interface ContactButtonProps {
   iconOnly?: boolean;
   icon?: ContactIcon;
   showIcon?: boolean;
-  color?: ContactColor;
+  dark?: boolean;
   size?: ContactSize;
   className?: string;
 }
@@ -85,14 +84,9 @@ const iconOnlySizeClasses: Record<ContactSize, string> = {
   lg: "!p-4",
 };
 
-const colorToVariant: Record<ContactColor, "primary" | "secondary" | "outline"> = {
-  primary: "primary",
-  secondary: "secondary",
-  outline: "outline",
-  dark: "secondary",
-};
-
-const darkColorOverride = "!bg-gray-900 !text-white hover:!bg-gray-800";
+const ctaClasses =
+  "!bg-gradient-to-r !from-cta-400 !to-cta-600 !text-white hover:!from-cta-500 hover:!to-cta-700 !shadow-lg hover:!shadow-xl";
+const darkClasses = "!bg-gray-900 !text-white hover:!bg-gray-800";
 
 export default function ContactButton({
   children,
@@ -100,26 +94,25 @@ export default function ContactButton({
   iconOnly = false,
   icon = "mail",
   showIcon = true,
-  color = "primary",
+  dark = false,
   size = "md",
   className = "",
 }: ContactButtonProps) {
-  const variant = colorToVariant[color];
   const sizeClass = iconOnly ? iconOnlySizeClasses[size] : sizeClasses[size];
-  const colorClass = color === "dark" ? darkColorOverride : "";
+  const colorClass = dark ? darkClasses : ctaClasses;
 
   const combinedClassName = `${sizeClass} ${colorClass} ${className}`.trim();
 
   if (iconOnly) {
     return (
-      <Button href={href} variant={variant} className={combinedClassName}>
+      <Button href={href} className={combinedClassName}>
         {icons[icon]}
       </Button>
     );
   }
 
   return (
-    <Button href={href} variant={variant} className={combinedClassName}>
+    <Button href={href} className={combinedClassName}>
       {showIcon && icons[icon]}
       {children || "Kontakt"}
     </Button>

@@ -162,7 +162,10 @@ export default function Page() {
 
         <SimpleGrid cols={3} className="gap-8">
           {modules.map((module, index) => (
-            <SimpleCard key={index} icon={<>{module.icon}</>}>
+            <SimpleCard key={index}>
+              <SimpleCard.Icon>
+                <>{module.icon}</>
+              </SimpleCard.Icon>
               <Typo.H3 className="mb-3 text-xl">{module.title}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 text-sm">
                 {module.description}
@@ -226,7 +229,10 @@ export default function Page() {
 
         <SimpleGrid cols={2} className="gap-8">
           {automations.map((automation, index) => (
-            <SimpleCard key={index} icon={<>{automation.icon}</>}>
+            <SimpleCard key={index}>
+              <SimpleCard.Icon>
+                <>{automation.icon}</>
+              </SimpleCard.Icon>
               <Typo.H3 className="mb-3 text-xl">{automation.title}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 text-sm">
                 {automation.description}

@@ -1,46 +1,19 @@
-"use client";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  JSX,
-  ReactNode,
-  Children,
-  isValidElement,
-  createContext,
-  useContext,
-} from "react";
-
-interface Img {
-  imageSrc: string;
-  imageAlt: string;
-  imgWidth: number;
-  imgHeight: number;
-}
+import { ReactNode, Children, isValidElement, cloneElement } from "react";
 
 type CardVariant = "default" | "danger" | "success";
 
-// Context to pass variant to sub-components
-const CardVariantContext = createContext<CardVariant>("default");
-
-interface SimpleCardProps {
-  img?: Img;
-  style?: "dark" | "light";
-  variant?: CardVariant;
-  icon?: JSX.Element;
-  children?: ReactNode;
-  className?: string;
-  background?: string;
-}
-
-interface FooterProps {
-  children: ReactNode;
-  className?: string;
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, x: 0 },
-  show: { opacity: 1, x: 0 },
-};
+type IconColor =
+  | "primary"
+  | "secondary"
+  | "primary-gradient"
+  | "white"
+  | "blue"
+  | "purple"
+  | "green"
+  | "orange"
+  | "red"
+  | "pink";
 
 const variantStyles = {
   default: {
@@ -57,9 +30,194 @@ const variantStyles = {
   },
 };
 
-// Footer sub-component - exported for SSR compatibility
-export function SimpleCardFooter({ children, className = "" }: FooterProps) {
-  const variant = useContext(CardVariantContext);
+const bgColorClasses: Record<IconColor, string> = {
+  primary: "bg-primary-500",
+  secondary: "bg-secondary-500",
+  "primary-gradient": "bg-gradient-to-br from-primary-400 to-primary-700",
+  white: "bg-white",
+  blue: "bg-blue-500",
+  purple: "bg-purple-500",
+  green: "bg-green-600",
+  orange: "bg-orange-500",
+  red: "bg-red-500",
+  pink: "bg-pink-500",
+};
+
+const textColorClasses: Record<IconColor, string> = {
+  primary: "text-primary-500",
+  secondary: "text-secondary-500",
+  "primary-gradient": "",
+  white: "text-white",
+  blue: "text-blue-500",
+  purple: "text-purple-500",
+  green: "text-green-600",
+  orange: "text-orange-500",
+  red: "text-red-500",
+  pink: "text-pink-500",
+};
+
+// --- Shared size system ---
+
+type VisualSize = "sm" | "md" | "lg" | "xl";
+
+const visualSizeClasses: Record<VisualSize, string> = {
+  sm: "size-8",
+  md: "size-10",
+  lg: "size-16",
+  xl: "size-28",
+};
+
+const bgCircleSizeClasses: Record<VisualSize, string> = {
+  sm: "size-14",
+  md: "size-16",
+  lg: "size-24",
+  xl: "size-40",
+};
+
+// --- Icon sub-component ---
+
+interface SimpleCardIconProps {
+  src?: string;
+  alt?: string;
+  color?: IconColor;
+  background?: IconColor;
+  size?: VisualSize;
+  className?: string;
+  children?: ReactNode;
+}
+
+const PrimaryGradientDefs = () => (
+  <svg width="0" height="0" className="absolute">
+    <defs>
+      <linearGradient
+        id="icon-primary-gradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="100%"
+      >
+        <stop offset="0%" stopColor="var(--color-primary-400)" />
+        <stop offset="100%" stopColor="var(--color-primary-700)" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+export function SimpleCardIcon({
+  src,
+  alt = "",
+  color = "primary",
+  background,
+  size = "md",
+  className = "",
+  children,
+}: SimpleCardIconProps) {
+  // Build the icon element
+  let icon: ReactNode;
+
+  if (children) {
+    const needsGradientDefs = color === "primary-gradient";
+    icon = (
+      <div className={textColorClasses[color]}>
+        {needsGradientDefs && <PrimaryGradientDefs />}
+        {children}
+      </div>
+    );
+  } else {
+    icon = (
+      <div
+        className={`${visualSizeClasses[size]} ${bgColorClasses[color]}`}
+        style={{
+          WebkitMaskImage: `url(${src})`,
+          WebkitMaskSize: "contain",
+          WebkitMaskRepeat: "no-repeat",
+          WebkitMaskPosition: "center",
+        }}
+        role="img"
+        aria-label={alt}
+      />
+    );
+  }
+
+  // Wrap in background circle if set
+  if (background) {
+    return (
+      <div
+        className={`${bgCircleSizeClasses[size]} rounded-full ${bgColorClasses[background]} flex items-center justify-center ${className}`}
+      >
+        {icon}
+      </div>
+    );
+  }
+
+  // No background — attach className directly
+  if (children) {
+    const needsGradientDefs = color === "primary-gradient";
+    return (
+      <div className={`${textColorClasses[color]} ${className}`}>
+        {needsGradientDefs && <PrimaryGradientDefs />}
+        {children}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className={`${visualSizeClasses[size]} ${bgColorClasses[color]} ${className}`}
+      style={{
+        WebkitMaskImage: `url(${src})`,
+        WebkitMaskSize: "contain",
+        WebkitMaskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+      }}
+      role="img"
+      aria-label={alt}
+    />
+  );
+}
+
+// --- Image sub-component ---
+
+interface SimpleCardImageProps {
+  src: string;
+  alt: string;
+  size?: VisualSize;
+  className?: string;
+}
+
+export function SimpleCardImage({
+  src,
+  alt,
+  size = "md",
+  className = "",
+}: SimpleCardImageProps) {
+  return (
+    <div
+      className={`${visualSizeClasses[size]} relative flex items-center justify-center`}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className={`object-contain ${className}`}
+      />
+    </div>
+  );
+}
+
+// --- Footer sub-component ---
+
+interface FooterProps {
+  children: ReactNode;
+  className?: string;
+  variant?: CardVariant;
+}
+
+export function SimpleCardFooter({
+  children,
+  className = "",
+  variant = "default",
+}: FooterProps) {
   const footerBorderClass = variantStyles[variant].footer;
 
   return (
@@ -71,80 +229,74 @@ export function SimpleCardFooter({ children, className = "" }: FooterProps) {
   );
 }
 
+// --- Main component ---
+
+interface SimpleCardProps {
+  dark?: boolean;
+  variant?: CardVariant;
+  children?: ReactNode;
+  className?: string;
+  background?: string;
+}
+
 function SimpleCard({
-  img,
-  icon,
   children,
-  style = "light",
+  dark = false,
   variant = "default",
   className = "",
   background,
 }: SimpleCardProps) {
-  const imgClass = img || icon ? "pt-8" : "";
-  const styleClass = style === "dark" ? "border border-secondary" : "";
   const variantClass = variantStyles[variant].card;
   const backgroundClass = background || variantClass;
+  const darkClass = dark ? "border-secondary" : "";
 
-  // Separate Footer from other children
   const childArray = Children.toArray(children);
-  const footer = childArray.find(
+
+  const iconChild = childArray.find(
+    (child) => isValidElement(child) && child.type === SimpleCardIcon,
+  );
+  const imageChild = childArray.find(
+    (child) => isValidElement(child) && child.type === SimpleCardImage,
+  );
+  const footerChild = childArray.find(
     (child) => isValidElement(child) && child.type === SimpleCardFooter,
   );
-  const otherChildren = childArray.filter(
-    (child) => !(isValidElement(child) && child.type === SimpleCardFooter),
+
+  const contentChildren = childArray.filter(
+    (child) =>
+      !(
+        isValidElement(child) &&
+        (child.type === SimpleCardIcon ||
+          child.type === SimpleCardImage ||
+          child.type === SimpleCardFooter)
+      ),
   );
 
+  const footerWithVariant =
+    footerChild && isValidElement(footerChild)
+      ? cloneElement(footerChild as React.ReactElement<FooterProps>, {
+          variant,
+        })
+      : null;
+
+  const hasVisual = iconChild || imageChild;
+
   return (
-    <CardVariantContext.Provider value={variant}>
-      <div
-        className={`pb-8 border flex flex-col items-center text-center px-4 shadow-md hover:shadow-lg ${backgroundClass} ${styleClass} ${imgClass} ${className}`}
-      >
-        {icon && (
-          <motion.div
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 1 }}
-            className="mb-4"
-            transition={{ type: "tween", duration: 1.5, ease: "easeOut" }}
-          >
-            {icon}
-          </motion.div>
-        )}
-        {img && (
-          <motion.div
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 1 }}
-            className="mb-4"
-            transition={{ type: "tween", duration: 1.5, ease: "easeOut" }}
-          >
-            <Image
-              src={img.imageSrc}
-              alt={img.imageAlt}
-              width={img.imgWidth}
-              height={img.imgHeight}
-            />
-          </motion.div>
-        )}
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 1 }}
-          transition={{ type: "tween", duration: 1.5, ease: "easeOut" }}
-          className={footer ? "flex-1" : ""}
-        >
-          {otherChildren}
-        </motion.div>
-        {footer}
+    <div
+      className={`border flex flex-col items-center text-center px-4 pb-8 shadow-md hover:shadow-lg ${hasVisual ? "pt-8" : ""} ${backgroundClass} ${darkClass} ${className}`}
+    >
+      {iconChild}
+      {imageChild}
+      <div className={footerWithVariant ? "flex-1" : ""}>
+        {contentChildren}
       </div>
-    </CardVariantContext.Provider>
+      {footerWithVariant}
+    </div>
   );
 }
 
-// Attach sub-component for dot notation (client-side only)
+SimpleCard.Icon = SimpleCardIcon;
+SimpleCard.Image = SimpleCardImage;
 SimpleCard.Footer = SimpleCardFooter;
 
 export default SimpleCard;

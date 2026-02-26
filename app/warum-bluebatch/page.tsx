@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import SimpleGrid from "@/components/simple-grid";
@@ -169,7 +168,7 @@ const technicalExpertise = [
     title: "Custom Node Development",
     description:
       "Echte TypeScript/Node.js Entwicklung auf SDK-Ebene. npm Package Publishing, komplexe OAuth2 Flows, Performance-kritische Implementierungen.",
-    iconSrc: "/icons/process.svg",
+    iconSrc: "/icons/code.svg",
     features: [
       "TypeScript & Node.js SDK",
       "npm Registry Publishing",
@@ -181,7 +180,7 @@ const technicalExpertise = [
     title: "Enterprise Infrastructure",
     description:
       "Multi-Region Deployments, Auto-Scaling, Zero-Downtime Migrations. Custom Monitoring & Alerting mit Prometheus & Grafana.",
-    iconSrc: "/icons/building.svg",
+    iconSrc: "/icons/enterprise.svg",
     features: [
       "Kubernetes Orchestration",
       "Auto-Scaling Setup",
@@ -193,7 +192,7 @@ const technicalExpertise = [
     title: "Legacy-Integration",
     description:
       "Deep Integration mit On-Premise ERP, SOAP/XML Services, proprietären Protokollen. VPN & Network-Level Integration.",
-    iconSrc: "/icons/factory.svg",
+    iconSrc: "/icons/bvnc.svg",
     features: [
       "On-Premise ERP Integration",
       "SOAP/XML Services",
@@ -205,7 +204,7 @@ const technicalExpertise = [
     title: "Datenarchitektur & Compliance",
     description:
       "Wir verstehen Datenstrukturen und Datenflüsse zwischen Systemen. Diese Expertise ermöglicht DSGVO-konforme Architekturen mit Verschlüsselung, Access Control und ISO 27001 Compliance.",
-    iconSrc: "/icons/rocket.svg",
+    iconSrc: "/icons/data-center-table-management.svg",
     features: [
       "Datenfluss-Analyse",
       "DSGVO-Architektur",
@@ -436,17 +435,13 @@ export default function Page() {
 
         <SimpleGrid cols={2} className="gap-8">
           {technicalExpertise.map((item, index) => (
-            <SimpleCard
-              key={index}
-              icon={
-                <Image
-                  src={item.iconSrc}
-                  alt={item.title}
-                  width={64}
-                  height={64}
-                />
-              }
-            >
+            <SimpleCard key={index}>
+              <SimpleCard.Icon
+                src={item.iconSrc}
+                alt={item.title}
+                color="primary"
+                size="lg"
+              />
               <Typo.H3 className="mb-3">{item.title}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 mb-6">
                 {item.description}
@@ -521,9 +516,9 @@ export default function Page() {
                 <div key={index}>
                   <div className="flex items-center gap-2 mb-2">
                     <Icon.Checkmark className="text-primary-600" />
-                    <h4 className="font-semibold text-gray-900">
+                    <Typo.H4 disableMargin>
                       {item.title}
-                    </h4>
+                    </Typo.H4>
                   </div>
                   <p className="text-gray-600 mb-2">{item.description}</p>
                   <span className="inline-flex items-center gap-2 bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-sm font-semibold">
@@ -584,9 +579,9 @@ export default function Page() {
             </Typo.H2>
             <div className="space-y-6">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin className="mb-2">
                   Continuous Optimization
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Proactive Refactoring, Performance Tuning, Security Updates.
                   Wir optimieren kontinuierlich, nicht nur bei bezahlten
@@ -594,18 +589,18 @@ export default function Page() {
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin className="mb-2">
                   Transparente Wartungsverträge
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Fixe monatliche Kosten statt unerwarteter Stundensätze.
                   Planbare Budgets mit inkludierten Entwicklungsstunden.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin className="mb-2">
                   Knowledge Transfer
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Wir dokumentieren, schulen Ihr Team und übergeben Know-how.
                   Keine Vendor Lock-in Strategien.

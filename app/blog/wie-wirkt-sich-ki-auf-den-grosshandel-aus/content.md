@@ -7,7 +7,7 @@
 
 ---
 
-![Hero Image: KI im modernen Großhandelslager](img/hero-ki-grosshandel.jpg)
+![Hero Image: KI im modernen Großhandelslager](img/wholesale-planning.png)
 
 ## Die Ausgangslage: Warum der Großhandel jetzt handeln muss
 
@@ -21,9 +21,20 @@ Dieser Artikel zeigt, wo KI im Großhandel heute bereits echten Mehrwert liefert
 
 ---
 
+## Inhaltsverzeichnis
+
+1. [Demand Forecasting: Nie wieder auf Bauchgefühl verlassen](#1-demand-forecasting-nie-wieder-auf-bauchgefühl-verlassen)
+2. [Supply Chain Transparenz: Probleme erkennen, bevor sie eskalieren](#2-supply-chain-transparenz-probleme-erkennen-bevor-sie-eskalieren)
+3. [Lager und Logistik: Mehr Kapazität, weniger Fläche](#3-lager-und-logistik-mehr-kapazität-weniger-fläche)
+4. [Vertrieb: Vom Bestellannehmer zum strategischen Berater](#4-vertrieb-vom-bestellannehmer-zum-strategischen-berater)
+5. [Preisgestaltung: Das Ende der statischen Rabattlisten](#5-preisgestaltung-das-ende-der-statischen-rabattlisten)
+6. [Die Realität: Warum 68 Prozent den ROI nicht messen](#6-die-realität-warum-68-prozent-den-roi-nicht-messen)
+7. [Fazit: Was Großhändler jetzt tun sollten](#fazit-was-großhändler-jetzt-tun-sollten)
+8. [Die wichtigsten Zahlen im Überblick](#die-wichtigsten-zahlen-im-überblick)
+
 ## 1. Demand Forecasting: Nie wieder auf Bauchgefühl verlassen
 
-![Dashboard mit Absatzprognosen](img/demand-forecasting-dashboard.jpg)
+![Dashboard mit Absatzprognosen](img/business-analytics.png)
 
 Die Bedarfsplanung ist der Bereich, in dem KI im Großhandel am schnellsten spürbaren Mehrwert liefert. Traditionelle Methoden — Excel-Tabellen, historische Durchschnitte, das Bauchgefühl des Einkaufsleiters — werden von KI-Systemen deutlich übertroffen.
 
@@ -46,7 +57,7 @@ KI-Modelle analysieren nicht nur historische Verkaufsdaten, sondern kombinieren 
 
 ## 2. Supply Chain Transparenz: Probleme erkennen, bevor sie eskalieren
 
-![Vernetzte Lieferkette mit Echtzeit-Monitoring](img/supply-chain-visibility.jpg)
+![Vernetzte Lieferkette mit Echtzeit-Monitoring](img/logistics-mapping.png)
 
 Die Lieferkette ist das Rückgrat jedes Großhändlers. Und genau hier entfaltet KI eine ihrer stärksten Wirkungen: **Echtzeit-Transparenz über die gesamte Kette** — vom Lieferanten bis zum Kunden.
 
@@ -67,7 +78,7 @@ SAP beschreibt in seiner 2026-Roadmap, wie Agentic AI bereits autonom auf Störu
 
 ## 3. Lager und Logistik: Mehr Kapazität, weniger Fläche
 
-![Modernes Smart Warehouse](img/smart-warehouse.jpg)
+![Modernes Smart Warehouse](img/warehouse-software.png)
 
 Im Lager zeigt sich die physische Seite der KI-Revolution. Die Ergebnisse sind beeindruckend: KI-gestützte Systeme können die **Lagerkapazität um 7 bis 15 Prozent steigern** — ohne einen einzigen Quadratmeter zusätzliche Fläche.
 
@@ -99,7 +110,7 @@ Sensordaten von Gabelstaplern, Förderbändern und Kühlanlagen werden kontinuie
 
 ## 4. Vertrieb: Vom Bestellannehmer zum strategischen Berater
 
-![Vertriebsmitarbeiter mit KI-Empfehlungen](img/ai-sales-team.jpg)
+![Vertriebsmitarbeiter mit KI-Empfehlungen](img/team-collaboration.png)
 
 Hier wird es für viele Großhändler besonders spannend — und gleichzeitig unbequem. Denn KI verändert nicht nur die Effizienz des Vertriebs, sondern seine gesamte Rolle.
 
@@ -125,7 +136,7 @@ Deloitte quantifiziert den Effekt: Großhändler, die GenAI im Vertrieb einsetze
 
 ## 5. Preisgestaltung: Das Ende der statischen Rabattlisten
 
-![Dynamische Preisgestaltung](img/dynamic-pricing.jpg)
+![Dynamische Preisgestaltung](img/pricing-calculator.png)
 
 Dieser Punkt wird im Großhandel noch zu wenig diskutiert — dabei hat er das Potenzial, Geschäftsmodelle grundlegend zu verändern.
 
@@ -180,7 +191,7 @@ Erfolgreiche Großhändler gehen schrittweise vor:
 
 ## Fazit: Was Großhändler jetzt tun sollten
 
-![Team plant KI-Einstieg](img/ki-einstieg-grosshandel.jpg)
+![Team plant KI-Einstieg](img/strategic-thinking.png)
 
 KI im Großhandel ist kein Zukunftsthema mehr — es ist Gegenwart. Die Technologie ist reif, die Use Cases sind erprobt, die Zahlen sind überzeugend. Was fehlt, ist bei vielen Unternehmen der erste Schritt.
 

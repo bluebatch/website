@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import ContentWrapper from "@/components/content-wrapper";
 import Typo from "@/components/typo";
 import SimpleGrid from "@/components/simple-grid";
@@ -92,25 +91,25 @@ const techStack = [
     name: "TypeScript",
     description:
       "Type-safe Development für robuste und wartbare Nodes. Bessere IDE-Unterstützung und Fehlervermeidung.",
-    iconSrc: "/icons/process.svg",
+    imageSrc: "/tools/Typescript.png",
   },
   {
     name: "Node.js",
     description:
       "Asynchrone I/O für effiziente API-Kommunikation. Zugriff auf das gesamte npm-Ökosystem.",
-    iconSrc: "/icons/factory.svg",
+    imageSrc: "/tools/nodejs.png",
   },
   {
     name: "n8n SDK",
     description:
       "Offizielles n8n Node SDK für schnelle Entwicklung. Declarative und Programmatic Styles.",
-    iconSrc: "/icons/building.svg",
+    imageSrc: "/tools/N8n-logo.png",
   },
   {
     name: "CI/CD",
     description:
       "Automated Testing und Deployment-Pipelines. GitHub Actions für kontinuierliche Integration.",
-    iconSrc: "/icons/rocket.svg",
+    imageSrc: "/tools/cicd.png",
   },
 ];
 
@@ -118,13 +117,15 @@ const customNodeScenarios = [
   {
     title: "Proprietäre APIs",
     description: "Unternehmenseigene APIs, die nicht öffentlich verfügbar sind",
-    iconSrc: "/icons/building.svg",
+    iconSrc: "/icons/code.svg",
+    iconColor: "blue" as const,
     gradient: "bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200",
   },
   {
     title: "Legacy-Systeme",
     description: "Veraltete ERP/CRM-Systeme mit speziellen Datenformaten",
     iconSrc: "/icons/factory.svg",
+    iconColor: "purple" as const,
     gradient:
       "bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200",
   },
@@ -132,13 +133,15 @@ const customNodeScenarios = [
     title: "Nischen-Services",
     description: "Spezialisierte Branchenlösungen ohne bestehende Integration",
     iconSrc: "/icons/chart.svg",
+    iconColor: "green" as const,
     gradient: "bg-gradient-to-br from-green-50 to-green-100 border-green-200",
   },
   {
     title: "Spezielle Auth",
     description:
       "JWT, komplexe OAuth2-Flows oder proprietäre Authentifizierung",
-    iconSrc: "/icons/process.svg",
+    iconSrc: "/icons/auth-fingerprint.svg",
+    iconColor: "orange" as const,
     gradient:
       "bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200",
   },
@@ -146,12 +149,14 @@ const customNodeScenarios = [
     title: "Interne Systeme",
     description: "Firmeninterne Tools, Datenbanken und Microservices",
     iconSrc: "/icons/building.svg",
+    iconColor: "red" as const,
     gradient: "bg-gradient-to-br from-red-50 to-red-100 border-red-200",
   },
   {
     title: "Performance-Kritisch",
     description: "Optimierte Nodes für High-Volume Workloads",
     iconSrc: "/icons/rocket.svg",
+    iconColor: "pink" as const,
     gradient: "bg-gradient-to-br from-pink-50 to-pink-100 border-pink-200",
   },
 ];
@@ -267,18 +272,12 @@ export default function Page() {
 
         <SimpleGrid cols={3} className="gap-6">
           {customNodeScenarios.map((scenario, index) => (
-            <SimpleCard
-              key={index}
-              background={scenario.gradient}
-              icon={
-                <Image
-                  src={scenario.iconSrc}
-                  alt={scenario.title}
-                  width={48}
-                  height={48}
-                />
-              }
-            >
+            <SimpleCard key={index} background={scenario.gradient}>
+              <SimpleCard.Icon
+                src={scenario.iconSrc}
+                alt={scenario.title}
+                color={scenario.iconColor}
+              />
               <Typo.H3 className="mb-2">{scenario.title}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 text-sm">
                 {scenario.description}
@@ -346,17 +345,12 @@ export default function Page() {
 
         <SimpleGrid cols={4} className="gap-6">
           {techStack.map((tech, index) => (
-            <SimpleCard
-              key={index}
-              icon={
-                <Image
-                  src={tech.iconSrc}
-                  alt={tech.name}
-                  width={64}
-                  height={64}
-                />
-              }
-            >
+            <SimpleCard key={index}>
+              <SimpleCard.Image
+                src={tech.imageSrc}
+                alt={tech.name}
+                size="lg"
+              />
               <Typo.H3 className="mb-3">{tech.name}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 text-sm">
                 {tech.description}

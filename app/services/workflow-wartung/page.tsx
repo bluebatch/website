@@ -441,36 +441,36 @@ export default function Page() {
             <Typo.H2 className="mb-6">Warum Workflow-Wartung?</Typo.H2>
             <div className="space-y-6">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin>
                   Kostenplanbarkeit
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Fixe monatliche Kosten statt unerwarteter Notfall-Reparaturen.
                   Transparente Budgetplanung für Ihre IT-Infrastruktur.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin>
                   Minimierte Ausfallzeiten
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Proaktives Monitoring verhindert 85-90% aller Ausfälle bevor
                   sie Ihr Business beeinträchtigen.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin>
                   Fokus auf Kerngeschäft
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Ihr Team konzentriert sich auf strategische Aufgaben, während
                   wir die technische Wartung übernehmen.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <Typo.H4 disableMargin>
                   Kontinuierliche Verbesserung
-                </h4>
+                </Typo.H4>
                 <p className="text-gray-600">
                   Regelmäßige Performance-Optimierung führt zu 60% schnelleren
                   Workflow-Executions.

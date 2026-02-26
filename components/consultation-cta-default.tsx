@@ -6,8 +6,8 @@ import ConsultationCta, {
   ConsultationCtaHeadline,
   ConsultationCtaChecklist,
   ConsultationCtaChecklistItem,
-  ConsultationCtaButton,
 } from "@/components/consultation-cta";
+import ContactButton from "@/components/buttons/contact-button";
 
 interface ConsultationCtaDefaultProps {
   className?: string;
@@ -43,9 +43,9 @@ export default function ConsultationCtaDefault({
             Transparente Einblicke in unsere Methoden, Technologien & Referenzen
           </ConsultationCtaChecklistItem>
         </ConsultationCtaChecklist>
-        <ConsultationCtaButton href={buttonHref}>
+        <ContactButton href={buttonHref || "/contact"}>
           {buttonText}
-        </ConsultationCtaButton>
+        </ContactButton>
       </ConsultationCtaTextColumn>
       {/* Image - 50% width, right side, 100% height */}
       <ConsultationCtaImage src="/team/max-portrait.webp" alt="Berater" />

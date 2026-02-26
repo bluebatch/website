@@ -6,7 +6,7 @@ import type { PageConfig } from "@/lib/get-subpages";
 import BackgroundHero from "@/components/hero-components/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/simple-grid";
-import SimpleCard, { SimpleCardFooter } from "@/components/cards/simple-card";
+import SimpleCard from "@/components/cards/simple-card";
 import CardShowcase from "@/components/cards/card-showcase";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
@@ -115,11 +115,11 @@ export default function Page() {
               jedem Audit Lücken gefunden. Abgelaufene Zertifikate, fehlende
               Dokumentation, nicht nachvollziehbare Prozesse.
             </Typo.Paragraph>
-            <SimpleCardFooter>
+            <SimpleCard.Footer>
               <span className="text-lg font-bold text-red-700">
                 10.000€ - 100.000€ pro Beanstandung
               </span>
-            </SimpleCardFooter>
+            </SimpleCard.Footer>
           </SimpleCard>
 
           <SimpleCard variant="danger">
@@ -129,11 +129,11 @@ export default function Page() {
               kann existenzbedrohend sein. FDA Warning Letters,
               Kundenabwanderung, Medienberichterstattung.
             </Typo.Paragraph>
-            <SimpleCardFooter>
+            <SimpleCard.Footer>
               <span className="text-lg font-bold text-red-700">
                 500.000 € durchschnittlicher Rückruf-Schaden
               </span>
-            </SimpleCardFooter>
+            </SimpleCard.Footer>
           </SimpleCard>
         </SimpleGrid>
       </ContentWrapper>
@@ -271,69 +271,36 @@ export default function Page() {
         </IntroBox>
 
         <SimpleGrid cols={3} className="mt-10">
-          <SimpleCard
-            icon={
-              <svg
-                className="w-12 h-12 text-secondary-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
-                />
-              </svg>
-            }
-          >
+          <SimpleCard>
+            <SimpleCard.Icon
+              src="/icons/shield-check.svg"
+              alt="Wert"
+              color="primary-gradient"
+            />
             <Typo.H3>95.000-645.000 €</Typo.H3>
             <Typo.Paragraph>
               Jährlicher Wert durch vermiedene Strafen, Zeitersparnis,
               Audit-Effizienz und Risikoreduktion
             </Typo.Paragraph>
           </SimpleCard>
-          <SimpleCard
-            icon={
-              <svg
-                className="w-12 h-12 text-secondary-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            }
-          >
+          <SimpleCard>
+            <SimpleCard.Icon
+              src="/icons/clock.svg"
+              alt="ROI"
+              color="primary-gradient"
+            />
             <Typo.H3>3-6 Monate ROI</Typo.H3>
             <Typo.Paragraph>
               Schnelle Amortisation durch sofortige Zeitersparnis und
               Risikoreduktion. Ab dann reine Einsparungen.
             </Typo.Paragraph>
           </SimpleCard>
-          <SimpleCard
-            icon={
-              <svg
-                className="w-12 h-12 text-secondary-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            }
-          >
+          <SimpleCard>
+            <SimpleCard.Icon
+              src="/icons/check-circle.svg"
+              alt="Null Beanstandungen"
+              color="primary-gradient"
+            />
             <Typo.H3>Null Audit-Beanstandungen</Typo.H3>
             <Typo.Paragraph>
               Keine Beanstandungen mehr bei internen oder externen Audits wegen

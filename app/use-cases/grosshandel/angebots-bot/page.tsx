@@ -146,7 +146,7 @@ export default function Page() {
 
         <SimpleGrid cols={4} className="mt-10">
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-secondary-500 mb-2">
+            <div className="text-4xl font-bold text-primary-500 mb-2">
               21x
             </div>
             <Typo.Paragraph className="text-sm">
@@ -154,7 +154,7 @@ export default function Page() {
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-secondary-500 mb-2">
+            <div className="text-4xl font-bold text-primary-500 mb-2">
               70-90%
             </div>
             <Typo.Paragraph className="text-sm">
@@ -162,7 +162,7 @@ export default function Page() {
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-secondary-500 mb-2">
+            <div className="text-4xl font-bold text-primary-500 mb-2">
               15-25%
             </div>
             <Typo.Paragraph className="text-sm">
@@ -170,7 +170,7 @@ export default function Page() {
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-secondary-500 mb-2">
+            <div className="text-4xl font-bold text-primary-500 mb-2">
               24/7
             </div>
             <Typo.Paragraph className="text-sm">

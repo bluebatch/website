@@ -58,11 +58,17 @@ function H3({
   );
 }
 
-function H4({ children, className = "", id }: TypoProps) {
+function H4({
+  children,
+  className = "",
+  disableMargin = false,
+  id,
+}: TypoProps) {
+  const marginClasses = disableMargin ? "" : "mb-3 mt-6";
   return (
     <h4
       id={id}
-      className={`text-lg md:text-xl font-semibold mb-3 mt-6 leading-snug ${className}`}
+      className={`text-lg md:text-xl font-semibold ${marginClasses} leading-snug ${className}`}
     >
       {children}
     </h4>

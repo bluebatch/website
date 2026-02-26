@@ -138,25 +138,25 @@ const services = [
 
 const benefits = [
   {
-    icon: "🏆",
+    iconSrc: "/icons/handshake.svg",
     title: "Alles aus einer Hand",
     description:
       "Von Hosting bis Scaling – alle n8n Services von einem Partner. Keine Schnittstellenprobleme, klare Verantwortung.",
   },
   {
-    icon: "🔒",
+    iconSrc: "/icons/enterprise.svg",
     title: "Enterprise-ready",
     description:
       "Production-tested Lösungen für Enterprise-Kunden. High Availability, Security, Compliance.",
   },
   {
-    icon: "⚡",
+    iconSrc: "/icons/return-of-investment.svg",
     title: "Schneller ROI",
     description:
       "Messbare Ergebnisse innerhalb von 90 Tagen. 200-240% ROI bei Automatisierungsprojekten.",
   },
   {
-    icon: "🇩🇪",
+    iconSrc: "/icons/flag-for-flag-germany.svg",
     title: "Made in Germany",
     description:
       "Deutschsprachiger Support, DSGVO-konform, Server in der EU. Ihre Daten bleiben in Deutschland.",
@@ -273,10 +273,12 @@ export default function Page() {
 
         <SimpleGrid cols={4} className="gap-8">
           {benefits.map((benefit, index) => (
-            <SimpleCard
-              key={index}
-              icon={<div className="text-5xl">{benefit.icon}</div>}
-            >
+            <SimpleCard key={index}>
+              <SimpleCard.Icon
+                src={benefit.iconSrc}
+                alt={benefit.title}
+                color="primary"
+              />
               <Typo.H3 className="mb-3">{benefit.title}</Typo.H3>
               <Typo.Paragraph>{benefit.description}</Typo.Paragraph>
             </SimpleCard>

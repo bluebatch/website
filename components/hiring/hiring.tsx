@@ -204,7 +204,7 @@ export function HiringApply({
 }: HiringApplyProps) {
   return (
     <div className={`mt-auto pt-4 ${className}`}>
-      <ContactButton href={href} icon="mail" color="primary" size="sm">
+      <ContactButton href={href} icon="mail" size="sm">
         {children || "Jetzt bewerben"}
       </ContactButton>
     </div>

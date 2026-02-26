@@ -17,9 +17,7 @@ import Hero2Column, {
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/consultation-cta-default";
 import IntroBox from "@/components/intro-box";
-import SimpleCard, {
-  SimpleCardFooter,
-} from "@/components/cards/simple-card";
+import SimpleCard from "@/components/cards/simple-card";
 import { InternalLinkLabel } from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
@@ -183,7 +181,10 @@ export default function Page() {
 
         <SimpleGrid cols={3} className="gap-8">
           {features.map((feature, index) => (
-            <SimpleCard key={index} icon={<>{feature.icon}</>}>
+            <SimpleCard key={index}>
+              <SimpleCard.Icon>
+                <>{feature.icon}</>
+              </SimpleCard.Icon>
               <Typo.H3 className="mb-3 text-xl">{feature.title}</Typo.H3>
               <Typo.Paragraph className="text-gray-600 text-sm">
                 {feature.description}
@@ -202,9 +203,9 @@ export default function Page() {
             <div className="space-y-6">
               {useCases.map((useCase, index) => (
                 <div key={index}>
-                  <h4 className="font-semibold text-gray-900 mb-2">
+                  <Typo.H4 disableMargin>
                     {useCase.title}
-                  </h4>
+                  </Typo.H4>
                   <p className="text-gray-600">{useCase.description}</p>
                 </div>
               ))}
@@ -233,19 +234,19 @@ export default function Page() {
         <SimpleGrid cols={3} className="gap-8">
           {bluebatchServices.map((service, index) => (
             <Link key={index} href={service.href} className="block group">
-              <SimpleCard
-                icon={<div className="text-4xl">{service.icon}</div>}
-                background="bg-white"
-              >
+              <SimpleCard background="bg-white">
+                <SimpleCard.Icon>
+                  <div className="text-4xl">{service.icon}</div>
+                </SimpleCard.Icon>
                 <Typo.H3 className="mb-3 text-lg group-hover:text-primary-600 transition-colors">
                   {service.title}
                 </Typo.H3>
                 <Typo.Paragraph className="text-gray-600 text-sm">
                   {service.description}
                 </Typo.Paragraph>
-                <SimpleCardFooter>
+                <SimpleCard.Footer>
                   <InternalLinkLabel>Mehr erfahren</InternalLinkLabel>
-                </SimpleCardFooter>
+                </SimpleCard.Footer>
               </SimpleCard>
             </Link>
           ))}
