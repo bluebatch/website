@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ContentWrapper from "@/components/content-wrapper";
+import ContentWrapper from "@/components/layout/content-wrapper";
 import Hero2Column, {
   Hero2ColumnTextColumn,
   Hero2ColumnMediaColumn,
@@ -8,8 +8,8 @@ import Hero2Column, {
   Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnImage,
-} from "@/components/hero-components/hero-2-column";
-import SimpleGrid from "@/components/simple-grid";
+} from "@/components/heroes/hero-2-column";
+import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
 import PhaseCard, {
   PhaseCardHeader,
@@ -22,11 +22,11 @@ import PhaseCard, {
 } from "@/components/cards/phase-card";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
-} from "@/components/timeline-as-steps";
-import Typo from "@/components/typo";
+} from "@/components/ui/timeline-as-steps";
+import Typo from "@/components/ui/typo";
 import ContactButton from "@/components/buttons/contact-button";
-import ConsultationCtaDefault from "@/components/consultation-cta-default";
-import IntroBox from "@/components/intro-box";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import IntroBox from "@/components/ui/intro-box";
 import { AnimatedNumber } from "@/components/cards/kpi-card";
 
 export const metadata: Metadata = {

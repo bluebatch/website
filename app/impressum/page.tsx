@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
 
 export const metadata: Metadata = {
   title: "Impressum – Bluebatch",

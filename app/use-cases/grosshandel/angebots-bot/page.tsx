@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -12,9 +12,9 @@ import Hero2Column, {
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
-} from "@/components/hero-components/hero-2-column";
+} from "@/components/heroes/hero-2-column";
 import ContactButton from "@/components/buttons/contact-button";
-import SimpleGrid from "@/components/simple-grid";
+import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
 import PhaseCard, {
   PhaseCardHeader,
@@ -25,11 +25,11 @@ import PhaseCard, {
 } from "@/components/cards/phase-card";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
-} from "@/components/timeline-as-steps";
-import ConsultationCtaDefault from "@/components/consultation-cta-default";
-import { FaqContainer } from "@/components/faqs";
-import IntroBox from "@/components/intro-box";
-import Customer from "@/components/customer/customer";
+} from "@/components/ui/timeline-as-steps";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import { FaqContainer } from "@/components/ui/faqs";
+import IntroBox from "@/components/ui/intro-box";
+import Customer from "@/components/sections/customer/customer";
 
 export const pageConfig: PageConfig = {
   title: "Angebots-Bot",
@@ -146,33 +146,25 @@ export default function Page() {
 
         <SimpleGrid cols={4} className="mt-10">
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-2">
-              21x
-            </div>
+            <Typo.H3 className="text-primary-500!">21x</Typo.H3>
             <Typo.Paragraph className="text-sm">
               Höhere Qualifizierungsrate bei schnellem Kontakt
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-2">
-              70-90%
-            </div>
+            <Typo.H3 className="text-primary-500!">70-90%</Typo.H3>
             <Typo.Paragraph className="text-sm">
               Schnellere Angebotserstellung
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-2">
-              15-25%
-            </div>
+            <Typo.H3 className="text-primary-500!">15-25%</Typo.H3>
             <Typo.Paragraph className="text-sm">
               Höhere Conversion Rate
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-2">
-              24/7
-            </div>
+            <Typo.H3 className="text-primary-500!">24/7</Typo.H3>
             <Typo.Paragraph className="text-sm">
               Angebotsfähigkeit rund um die Uhr
             </Typo.Paragraph>

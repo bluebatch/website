@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Typo from "@/components/typo";
+import Typo from "@/components/ui/typo";
 import {
   BlogImage,
   CodeBlockFile,

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ContentWrapper from "@/components/content-wrapper";
+import ContentWrapper from "@/components/layout/content-wrapper";
 import Hero2Column, {
   Hero2ColumnTextColumn,
   Hero2ColumnMediaColumn,
@@ -8,9 +8,9 @@ import Hero2Column, {
   Hero2ColumnHeadline,
   Hero2ColumnDescription,
   Hero2ColumnImage,
-} from "@/components/hero-components/hero-2-column";
-import ConsultationCtaDefault from "@/components/consultation-cta-default";
-import Customer from "@/components/customer/customer";
+} from "@/components/heroes/hero-2-column";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import Customer from "@/components/sections/customer/customer";
 import Hiring, {
   HiringPosition,
   HiringTitle,
@@ -23,8 +23,8 @@ import Hiring, {
   HiringTag,
   HiringApply,
 } from "@/components/hiring/hiring";
-import IntroBox from "@/components/intro-box";
-import SimpleGrid from "@/components/simple-grid";
+import IntroBox from "@/components/ui/intro-box";
+import SimpleGrid from "@/components/layout/simple-grid";
 import Team, {
   TeamMember,
   TeamImage,

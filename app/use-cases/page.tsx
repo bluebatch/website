@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
 import { InternalLinkLabel } from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
   title: "Use Cases – Bluebatch | Branchenlösungen für AI-Automation",
   description:
-    "Entdecken Sie unsere Branchenlösungen für Großhandel, Steuerberater und E-Commerce. AI-Workflows für jede Branche.",
+    "Branchenlösungen für KI-Automatisierung: Großhandel, Steuerberater und Personaldienstleister. Entdecken Sie erprobte AI-Workflows für Ihre Branche.",
   openGraph: {
     title: "Use Cases – Bluebatch",
     description:
-      "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, E-Commerce.",
+      "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, Personaldienstleister.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Use Cases – Bluebatch",
     description:
-      "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, E-Commerce.",
+      "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, Personaldienstleister.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -50,10 +50,10 @@ const topics = [
       "Dokumentenverarbeitung und Mandantenkommunikation digitalisieren – für mehr Zeit und zufriedene Mandanten.",
   },
   {
-    href: "/use-cases/ecommerce",
-    title: "E-Commerce",
+    href: "/use-cases/personaldienstleister",
+    title: "Personaldienstleister",
     description:
-      "Produktdaten und Kundenservice automatisieren – für Skalierung ohne wachsende Teams.",
+      "Bewerber-Screening, Onboarding und Compliance automatisieren – für schnellere Vermittlungen und null Bußgeldrisiko.",
   },
 ];
 

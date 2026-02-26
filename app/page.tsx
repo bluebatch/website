@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
-import BackgroundHero from "@/components/hero-components/background-hero";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
+import BackgroundHero from "@/components/heroes/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
-import SimpleGrid from "@/components/simple-grid";
+import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
-} from "@/components/timeline-as-steps";
-import ConsultationCtaDefault from "@/components/consultation-cta-default";
+} from "@/components/ui/timeline-as-steps";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import CardShowcase from "@/components/cards/card-showcase";
-import Customer from "@/components/customer/customer";
-import IntroBox from "@/components/intro-box";
+import Customer from "@/components/sections/customer/customer";
+import IntroBox from "@/components/ui/intro-box";
 
 export const metadata: Metadata = {
   title: "Bluebatch – Enterprise AI-Automation | Workflow Engineering",

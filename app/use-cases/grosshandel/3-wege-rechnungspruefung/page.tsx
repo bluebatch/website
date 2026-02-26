@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
-import BackgroundHero from "@/components/hero-components/background-hero";
+import BackgroundHero from "@/components/heroes/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
-import SimpleGrid from "@/components/simple-grid";
+import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
 import CardShowcase from "@/components/cards/card-showcase";
-import ConsultationCtaDefault from "@/components/consultation-cta-default";
-import { FaqContainer } from "@/components/faqs";
-import IntroBox from "@/components/intro-box";
-import Customer from "@/components/customer/customer";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import { FaqContainer } from "@/components/ui/faqs";
+import IntroBox from "@/components/ui/intro-box";
+import Customer from "@/components/sections/customer/customer";
 import KpiCard from "@/components/cards/kpi-card";
 
 export const pageConfig: PageConfig = {

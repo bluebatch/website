@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import Typo from "@/components/typo";
-import ContentWrapper from "../content-wrapper";
+import Typo from "@/components/ui/typo";
+import ContentWrapper from "../layout/content-wrapper";
 
 type BlogLayoutProps = {
   children: ReactNode;

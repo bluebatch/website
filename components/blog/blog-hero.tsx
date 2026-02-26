@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
 import Image from "next/image";
 
 type BlogHeroProps = {

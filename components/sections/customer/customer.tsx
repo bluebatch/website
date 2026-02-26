@@ -1,5 +1,5 @@
-import LogoGrid from "../logo-grid";
-import IntroBox from "../intro-box";
+import LogoGrid from "../../media/logo-grid";
+import IntroBox from "../../ui/intro-box";
 
 const allLogos = [
   {

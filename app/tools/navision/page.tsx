@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
-import SimpleGrid from "@/components/simple-grid";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
+import SimpleGrid from "@/components/layout/simple-grid";
 import Hero2Column, {
   Hero2ColumnTextColumn,
   Hero2ColumnMediaColumn,
@@ -11,14 +11,14 @@ import Hero2Column, {
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
-} from "@/components/hero-components/hero-2-column";
+} from "@/components/heroes/hero-2-column";
 import ContactButton from "@/components/buttons/contact-button";
-import ConsultationCtaDefault from "@/components/consultation-cta-default";
-import IntroBox from "@/components/intro-box";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
-} from "@/components/timeline-as-steps";
+} from "@/components/ui/timeline-as-steps";
 
 export const metadata: Metadata = {
   title: "Microsoft Dynamics NAV (Navision) Automatisierung | Bluebatch",

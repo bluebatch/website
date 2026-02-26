@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ReactNode } from "react";
-import Button from "@/components/button";
+import Button from "@/components/ui/button";
 
 const baseClass =
   "inline-flex items-center gap-1.5 text-primary-600 font-medium hover:text-primary-800 active:text-primary-900 transition-colors group/link";

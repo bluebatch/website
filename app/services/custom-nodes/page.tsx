@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
-import SimpleGrid from "@/components/simple-grid";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
+import SimpleGrid from "@/components/layout/simple-grid";
 import Hero2Column, {
   Hero2ColumnTextColumn,
   Hero2ColumnMediaColumn,
@@ -11,22 +11,22 @@ import Hero2Column, {
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
-} from "@/components/hero-components/hero-2-column";
+} from "@/components/heroes/hero-2-column";
 import ContactButton from "@/components/buttons/contact-button";
-import Customer, { allLogos } from "@/components/customer/customer";
-import ConsultationCtaDefault from "@/components/consultation-cta-default";
+import Customer, { allLogos } from "@/components/sections/customer/customer";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import SimpleCard from "@/components/cards/simple-card";
 import BoundlessImageCard from "@/components/cards/boundless-image-card";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
-} from "@/components/timeline-as-steps";
+} from "@/components/ui/timeline-as-steps";
 import PhaseCard, {
   PhaseCardHeader,
   PhaseCardTitle,
   PhaseCardBadge,
   PhaseCardDescription,
 } from "@/components/cards/phase-card";
-import IntroBox from "@/components/intro-box";
+import IntroBox from "@/components/ui/intro-box";
 
 export const metadata: Metadata = {
   title: "Custom n8n Node Development | Bluebatch",

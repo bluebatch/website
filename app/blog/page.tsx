@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
+import { Suspense } from "react";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
 import Link from "next/link";
-import Image from "next/image";
+import BlogListFiltered from "@/components/blog/blog-list-filtered";
 
 export const metadata: Metadata = {
   title: "Blog | Bluebatch - Workflow-Automatisierung & n8n Expertise",
@@ -21,31 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPosts = [
-  {
-    slug: "wie-wirkt-sich-ki-auf-den-grosshandel-aus",
-    title:
-      "Wie wirkt sich KI auf den Großhandel aus? Der komplette Überblick für 2026",
-    description:
-      "63% der Großhändler stufen KI als relevant ein, aber nur 24% setzen sie ein. Erfahren Sie, wo KI im Großhandel heute echten Mehrwert liefert — mit konkreten Zahlen und Anwendungsbeispielen.",
-    author: "Max Hänsel",
-    date: "2026-02-23",
-    image: "/images/wholesale-planning.jpg",
-    tags: ["KI", "Großhandel", "Automatisierung", "Supply Chain"],
-  },
-  {
-    slug: "building-custom-node-dev-guide",
-    title:
-      "Benutzerdefinierte Nodes in n8n erstellen: Ein vollständiger Entwickler-Leitfaden",
-    description:
-      "Transformieren Sie Ihre Workflow-Automatisierung mit benutzerdefinierten n8n Integrationen, die exakt Ihren Anforderungen entsprechen. Vollständiger Guide zur Custom Node Entwicklung.",
-    author: "Max Hänsel",
-    date: "2025-02-16",
-    image: "/blog/building-custom-node-dev-guide/hero.png",
-    tags: ["n8n", "Custom Nodes", "Workflow-Automatisierung", "TypeScript"],
-  },
-];
-
 export default function BlogPage() {
   return (
     <>
@@ -63,56 +39,12 @@ export default function BlogPage() {
         </div>
       </ContentWrapper>
 
-      {/* Blog Posts Grid */}
+      {/* Blog Posts Grid with Filter */}
       <ContentWrapper>
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-              >
-                <div className="relative h-48 w-full overflow-hidden bg-gray-100">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
-                    <span>{post.author}</span>
-                    <span>•</span>
-                    <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString("de-DE", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </time>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 line-clamp-3 mb-4">
-                    {post.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {post.tags.slice(0, 3).map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <Suspense>
+            <BlogListFiltered />
+          </Suspense>
         </div>
       </ContentWrapper>
 

@@ -6,6 +6,54 @@ import { motion } from "framer-motion";
 import ContactButton from "@/components/buttons/contact-button";
 import Image from "next/image";
 
+const navIcons: Record<string, string[]> = {
+  "/icons/phone.svg": [
+    "M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z",
+  ],
+  "/icons/factory.svg": [
+    "M2 20a2 2 0 002 2h16a2 2 0 002-2V8l-7 5V8l-7 5V4a2 2 0 00-2-2H4a2 2 0 00-2 2z",
+    "M17 18h1", "M12 18h1", "M7 18h1",
+  ],
+};
+
+function NavIcon({ src, className }: { src: string; className?: string }) {
+  const paths = navIcons[src];
+  if (!paths) {
+    return (
+      <span
+        className={className}
+        role="img"
+        aria-hidden
+        style={{
+          display: "inline-block",
+          backgroundColor: "currentColor",
+          WebkitMaskImage: `url(${src})`,
+          WebkitMaskSize: "contain",
+          WebkitMaskRepeat: "no-repeat",
+          WebkitMaskPosition: "center",
+          maskImage: `url(${src})`,
+          maskSize: "contain",
+          maskRepeat: "no-repeat",
+          maskPosition: "center",
+        }}
+      />
+    );
+  }
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {paths.map((d, i) => <path key={i} d={d} />)}
+    </svg>
+  );
+}
+
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -28,17 +76,15 @@ export default function Navigation() {
   const uberUnsMenu = {
     sections: [
       {
-        title: "Über uns",
-        href: "/",
         items: [
           {
-            icon: "/icons/building.svg",
+            icon: "/icons/award.svg",
             title: "Warum Bluebatch?",
             description: "Keine Agentur - IT-Experten",
             href: "/warum-bluebatch",
           },
           {
-            icon: "/icons/process.svg",
+            icon: "/icons/workflow.svg",
             title: "Unser Prozess",
             description: "Wie wir arbeiten",
             href: "/unser-prozess",
@@ -46,11 +92,9 @@ export default function Navigation() {
         ],
       },
       {
-        title: "Los geht's",
-        href: "/",
         items: [
           {
-            icon: "/icons/rocket.svg",
+            icon: "/icons/people-group.svg",
             title: "Das Team",
             description: "lernen Sie uns kennen",
             href: "/team",
@@ -74,31 +118,31 @@ export default function Navigation() {
         href: "/services",
         items: [
           {
-            icon: "/icons/building.svg",
+            icon: "/icons/server-minimalistic.svg",
             title: "n8n Hosting",
             description: "OnPrem oder Cloud",
             href: "/services/n8n-hosting",
           },
           {
-            icon: "/icons/process.svg",
+            icon: "/icons/monitor-camera.svg",
             title: "Workflow-Wartung",
             description: "24/7 Monitoring",
             href: "/services/workflow-wartung",
           },
           {
-            icon: "/icons/rocket.svg",
+            icon: "/icons/puzzle.svg",
             title: "Custom Nodes",
             description: "Maßgeschneiderte Integrationen",
             href: "/services/custom-nodes",
           },
           {
-            icon: "/icons/chart.svg",
+            icon: "/icons/academic-cap.svg",
             title: "Schulungen",
             description: "Workshops & Training",
             href: "/services/schulungen",
           },
           {
-            icon: "/icons/phone.svg",
+            icon: "/icons/speedometer.svg",
             title: "Performance Scaling",
             description: "High-Performance Setup",
             href: "/services/performance-scaling",
@@ -110,19 +154,16 @@ export default function Navigation() {
         href: "/tools",
         items: [
           {
-            icon: "/icons/process.svg",
             title: "n8n",
             description: "Workflow-Automatisierung",
             href: "/tools/n8n",
           },
           {
-            icon: "/icons/building.svg",
             title: "Navision",
             description: "Microsoft Dynamics ERP",
             href: "/tools/navision",
           },
           {
-            icon: "/icons/chart.svg",
             title: "Easybill",
             description: "Rechnungssoftware",
             href: "/tools/easybill",
@@ -176,7 +217,7 @@ export default function Navigation() {
       },
       {
         title: "Steuerberater",
-        icon: "/icons/chart.svg",
+        icon: "/icons/calculator.svg",
         href: "/use-cases/steuerberater",
         cases: [
           {
@@ -194,17 +235,29 @@ export default function Navigation() {
         ],
       },
       {
-        title: "E-Commerce",
-        icon: "/icons/shopping-cart.svg",
-        href: "/use-cases/ecommerce",
+        title: "Personaldienstleister",
+        icon: "/icons/personal-connections.svg",
+        href: "/use-cases/personaldienstleister",
         cases: [
           {
-            title: "Produktdatenmanagement",
-            href: "/use-cases/ecommerce/produktdatenmanagement",
+            title: "Bewerber-Screening",
+            href: "/use-cases/personaldienstleister/bewerber-screening",
           },
           {
-            title: "Kundenservice Automation",
-            href: "/use-cases/ecommerce/kundenservice",
+            title: "Bewerberkommunikation",
+            href: "/use-cases/personaldienstleister/bewerberkommunikation",
+          },
+          {
+            title: "Digitales Onboarding",
+            href: "/use-cases/personaldienstleister/digitales-onboarding",
+          },
+          {
+            title: "Compliance-Überwachung",
+            href: "/use-cases/personaldienstleister/compliance-ueberwachung",
+          },
+          {
+            title: "Zeiterfassung & Abrechnung",
+            href: "/use-cases/personaldienstleister/zeiterfassung-abrechnung",
           },
         ],
       },
@@ -271,10 +324,10 @@ export default function Navigation() {
               >
                 <Link
                   href="/"
-                  className="flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
+                  className="group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
                 >
                   <svg
-                    className="w-4 h-4"
+                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -288,7 +341,7 @@ export default function Navigation() {
                   </svg>
                   Über uns
                   <svg
-                    className="w-4 h-4"
+                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -311,12 +364,6 @@ export default function Navigation() {
                     <div className="p-4 grid grid-cols-2 gap-6">
                       {uberUnsMenu.sections.map((section, sectionIndex) => (
                         <div key={sectionIndex}>
-                          <Link
-                            href={section.href}
-                            className="block font-bold text-gray-900 hover:text-primary-500 mb-3 text-sm uppercase tracking-wide transition-colors"
-                          >
-                            {section.title}
-                          </Link>
                           <div className="space-y-2">
                             {section.items.map((item, itemIndex) => (
                               <Link
@@ -324,13 +371,12 @@ export default function Navigation() {
                                 href={item.href}
                                 className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
                               >
-                                <Image
-                                  src={item.icon}
-                                  alt=""
-                                  width={20}
-                                  height={20}
-                                  className="w-5 h-5 text-primary-500 group-hover:text-primary-600"
-                                />
+                                {"icon" in item && item.icon && (
+                                  <NavIcon
+                                    src={item.icon}
+                                    className="w-5 h-5 text-gray-700 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5"
+                                  />
+                                )}
                                 <div>
                                   <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
                                     {item.title}
@@ -361,10 +407,10 @@ export default function Navigation() {
               >
                 <Link
                   href="/services"
-                  className="flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
+                  className="group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
                 >
                   <svg
-                    className="w-4 h-4"
+                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -378,7 +424,7 @@ export default function Navigation() {
                   </svg>
                   Services
                   <svg
-                    className="w-4 h-4"
+                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -414,13 +460,12 @@ export default function Navigation() {
                                 href={item.href}
                                 className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
                               >
-                                <Image
-                                  src={item.icon}
-                                  alt=""
-                                  width={20}
-                                  height={20}
-                                  className="w-5 h-5 text-primary-500 group-hover:text-primary-600"
-                                />
+                                {"icon" in item && item.icon && (
+                                  <NavIcon
+                                    src={item.icon}
+                                    className="w-5 h-5 text-gray-700 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5"
+                                  />
+                                )}
                                 <div>
                                   <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
                                     {item.title}
@@ -451,10 +496,10 @@ export default function Navigation() {
               >
                 <Link
                   href="/use-cases"
-                  className="flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
+                  className="group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
                 >
                   <svg
-                    className="w-4 h-4"
+                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -468,7 +513,7 @@ export default function Navigation() {
                   </svg>
                   Use-Cases
                   <svg
-                    className="w-4 h-4"
+                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -484,7 +529,7 @@ export default function Navigation() {
 
                 {activeDropdown === "usecases" && (
                   <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-[700px] bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-[800px] bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
                     onMouseEnter={() => setActiveDropdown("usecases")}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
@@ -495,12 +540,9 @@ export default function Navigation() {
                             href={topic.href}
                             className="flex items-center gap-2 mb-3 hover:text-primary-500 transition-colors group"
                           >
-                            <Image
+                            <NavIcon
                               src={topic.icon}
-                              alt=""
-                              width={24}
-                              height={24}
-                              className="w-6 h-6 text-primary-500 group-hover:text-primary-600"
+                              className="w-6 h-6 text-gray-700 group-hover:text-primary-500 transition-colors"
                             />
                             <h4 className="font-bold text-gray-900 group-hover:text-primary-500 text-sm uppercase tracking-wide">
                               {topic.title}
@@ -535,10 +577,10 @@ export default function Navigation() {
               >
                 <Link
                   href="/blog"
-                  className="flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
+                  className="group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
                 >
                   <svg
-                    className="w-4 h-4"
+                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -635,135 +677,60 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-gray-200">
-            <div className="px-4 py-4 space-y-2">
-              {/* Über uns Section */}
-              {uberUnsMenu.sections.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="space-y-1">
-                  <Link
-                    href={section.href}
-                    className="block px-4 py-2 text-xs font-semibold text-gray-500 uppercase hover:text-primary-500"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {section.title}
-                  </Link>
-                  {section.items.map((item, itemIndex) => (
-                    <Link
-                      key={itemIndex}
-                      href={item.href}
-                      className="flex items-start gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <Image
-                        src={item.icon}
-                        alt=""
-                        width={20}
-                        height={20}
-                        className="w-5 h-5 mt-0.5"
-                      />
-                      <div>
-                        <p className="font-medium">{item.title}</p>
-                        <p className="text-xs text-gray-500">
-                          {item.description}
-                        </p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              ))}
-
-              {/* Services & Tools Sections */}
-              {servicesMenu.sections.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="space-y-1 pt-2">
-                  <Link
-                    href={section.href}
-                    className="block px-4 py-2 text-xs font-semibold text-gray-500 uppercase hover:text-primary-500"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {section.title}
-                  </Link>
-                  {section.items.map((item, itemIndex) => (
-                    <Link
-                      key={itemIndex}
-                      href={item.href}
-                      className="flex items-start gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <Image
-                        src={item.icon}
-                        alt=""
-                        width={20}
-                        height={20}
-                        className="w-5 h-5 mt-0.5"
-                      />
-                      <div>
-                        <p className="font-medium">{item.title}</p>
-                        <p className="text-xs text-gray-500">
-                          {item.description}
-                        </p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              ))}
-
-              {/* Use-Cases Section - Top level only */}
-              <div className="space-y-1 pt-2">
-                <Link
-                  href="/use-cases"
-                  className="block px-4 py-2 text-xs font-semibold text-gray-500 uppercase hover:text-primary-500"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Use-Cases
-                </Link>
+            <div className="px-4 py-4 space-y-1">
+              <Link
+                href="/"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Über uns
+              </Link>
+              <Link
+                href="/services"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                href="/tools"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Tools
+              </Link>
+              <Link
+                href="/use-cases"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Use-Cases
+              </Link>
+              <div className="pl-8 space-y-1">
                 {useCasesMenu.topics.map((topic, topicIndex) => (
                   <Link
                     key={topicIndex}
                     href={topic.href}
-                    className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <Image
+                    <NavIcon
                       src={topic.icon}
-                      alt=""
-                      width={20}
-                      height={20}
-                      className="w-5 h-5"
+                      className="w-4.5 h-4.5 text-gray-500"
                     />
-                    <p className="font-medium">{topic.title}</p>
+                    {topic.title}
                   </Link>
                 ))}
               </div>
+              <Link
+                href="/blog"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Blog
+              </Link>
 
-              {/* Blog Section */}
-              <div className="space-y-1 pt-2">
-                <Link
-                  href="/blog"
-                  className="flex items-start gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <svg
-                    className="w-5 h-5 text-primary-500 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                    />
-                  </svg>
-                  <div>
-                    <p className="font-medium">Blog</p>
-                    <p className="text-xs text-gray-500">
-                      Workflow-Automatisierung Insights
-                    </p>
-                  </div>
-                </Link>
-              </div>
-
-              <div className="mt-4" onClick={() => setMobileMenuOpen(false)}>
+              <div className="pt-2" onClick={() => setMobileMenuOpen(false)}>
                 <ContactButton
                   showIcon={false}
                   className="w-full justify-center"

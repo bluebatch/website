@@ -23,7 +23,7 @@ export default function Footer() {
   const productMenu = [
     { label: "Grosshandel", href: "/use-cases/grosshandel" },
     { label: "Steuerberater", href: "/use-cases/steuerberater" },
-    { label: "e-Commerce", href: "/use-cases/ecommerce" },
+    { label: "PDL", href: "/use-cases/personaldienstleister" },
   ];
 
   const toolsMenu = [
@@ -105,7 +105,7 @@ export default function Footer() {
           </div>
 
           {/* Right Column - Menus */}
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
             {/* Main Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">

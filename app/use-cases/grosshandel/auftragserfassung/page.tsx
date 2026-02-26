@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
-import BackgroundHero from "@/components/hero-components/background-hero";
+import BackgroundHero from "@/components/heroes/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
-import SimpleGrid from "@/components/simple-grid";
+import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
 import ComparisonCard, {
   BeforeCard,
@@ -17,16 +17,16 @@ import ComparisonCard, {
 } from "@/components/cards/comparison-card";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
-} from "@/components/timeline-as-steps";
+} from "@/components/ui/timeline-as-steps";
 import TabGroup, {
   TabNavigation,
   TabItem,
   TabContent,
-} from "@/components/tab-group";
-import ConsultationCtaDefault from "@/components/consultation-cta-default";
-import { FaqContainer } from "@/components/faqs";
-import IntroBox from "@/components/intro-box";
-import Customer from "@/components/customer/customer";
+} from "@/components/ui/tab-group";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import { FaqContainer } from "@/components/ui/faqs";
+import IntroBox from "@/components/ui/intro-box";
+import Customer from "@/components/sections/customer/customer";
 import SavingsCard, {
   SavingsBadge,
   SavingsItems,

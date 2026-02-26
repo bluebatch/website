@@ -1,7 +1,7 @@
 "use client";
 
 import LogoCarousel from "./logo-carousel";
-import Typo from "./typo";
+import Typo from "../ui/typo";
 
 interface Logo {
   src: string;

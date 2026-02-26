@@ -1,4 +1,4 @@
-import Button from "@/components/button";
+import Button from "@/components/ui/button";
 import { ReactNode } from "react";
 
 type ContactIcon = "phone" | "mail" | "calendar" | "chat";

@@ -6,7 +6,7 @@ import ConsultationCta, {
   ConsultationCtaHeadline,
   ConsultationCtaChecklist,
   ConsultationCtaChecklistItem,
-} from "@/components/consultation-cta";
+} from "@/components/sections/consultation-cta";
 import ContactButton from "@/components/buttons/contact-button";
 
 interface ConsultationCtaDefaultProps {

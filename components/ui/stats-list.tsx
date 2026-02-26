@@ -1,8 +1,8 @@
 "use client";
 
 import { ReactNode } from "react";
-import SimpleGrid from "@/components/simple-grid";
-import Typo from "@/components/typo";
+import SimpleGrid from "@/components/layout/simple-grid";
+import Typo from "@/components/ui/typo";
 import { AnimatedNumber } from "@/components/cards/kpi-card";
 
 interface Stat {

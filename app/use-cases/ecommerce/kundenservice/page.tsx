@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ContentWrapper from "@/components/content-wrapper";
-import Typo from "@/components/typo";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
 
 export const pageConfig: PageConfig = {
