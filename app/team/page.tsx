@@ -102,7 +102,7 @@ export default function TeamPage() {
       </ContentWrapper>
 
       {/* Team Section */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>Das Team</IntroBox.PreHeadline>
           <IntroBox.Headline>Expertise trifft Leidenschaft</IntroBox.Headline>
@@ -216,7 +216,7 @@ export default function TeamPage() {
       </ContentWrapper>
 
       {/* Team Photos */}
-      <ContentWrapper background="bg-primary-800">
+      <ContentWrapper colorScheme="primary-dark">
         <SimpleGrid cols={3}>
           <div className="relative aspect-[4/3] overflow-hidden border-4 border-white">
             <Image
@@ -265,7 +265,7 @@ export default function TeamPage() {
       </ContentWrapper>
 
       {/* Open Positions */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>Karriere</IntroBox.PreHeadline>
           <IntroBox.Headline>Werde Teil von Bluebatch</IntroBox.Headline>

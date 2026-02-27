@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ReactNode, Children, isValidElement, cloneElement } from "react";
+import { colorSchemeMap, type ColorScheme } from "@/lib/color-schemes";
 
 type CardVariant = "default" | "danger" | "success";
 
@@ -236,7 +237,7 @@ interface SimpleCardProps {
   variant?: CardVariant;
   children?: ReactNode;
   className?: string;
-  background?: string;
+  colorScheme?: ColorScheme;
 }
 
 function SimpleCard({
@@ -244,10 +245,13 @@ function SimpleCard({
   dark = false,
   variant = "default",
   className = "",
-  background,
+  colorScheme,
 }: SimpleCardProps) {
   const variantClass = variantStyles[variant].card;
-  const backgroundClass = background || variantClass;
+  const scheme = colorScheme ? colorSchemeMap[colorScheme] : null;
+  const backgroundClass = scheme
+    ? `${scheme.bg} ${scheme.text}`
+    : variantClass;
   const darkClass = dark ? "border-secondary" : "";
 
   const childArray = Children.toArray(children);

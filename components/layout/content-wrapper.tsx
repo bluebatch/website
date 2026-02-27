@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
+import { colorSchemeMap, type ColorScheme } from "@/lib/color-schemes";
 
 interface ContentWrapperProps {
   children: ReactNode;
   fullscreen?: boolean;
-  variant?: "light" | "dark";
+  colorScheme?: ColorScheme;
   noPadding?: boolean;
   isFirstSection?: boolean;
-  background?: string;
   border?: "B" | "T" | "BT";
   bodyWidth?: "wide" | "small" | "narrow";
 }
@@ -14,22 +14,16 @@ interface ContentWrapperProps {
 export default function ContentWrapper({
   children,
   fullscreen = false,
-  variant = "light",
+  colorScheme = "white",
   noPadding = false,
   isFirstSection = false,
-  background,
   border,
   bodyWidth = "wide",
 }: ContentWrapperProps) {
-  const baseClasses = "w-full";
-
-  const variantClasses = {
-    light: "bg-white text-gray-900",
-    dark: "bg-gray-900 text-white",
-  };
+  const scheme = colorSchemeMap[colorScheme];
 
   const containerClasses = fullscreen
-    ? `w-full border-l border-r border-gray-200 `
+    ? `w-full border-l border-r border-gray-200`
     : `mx-auto max-w-7xl border-l border-r border-gray-200`;
 
   const paddingClasses = noPadding
@@ -58,9 +52,9 @@ export default function ContentWrapper({
     );
 
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]}`}>
+    <div className={`w-full `}>
       <div
-        className={`${background} ${containerClasses} ${paddingClasses} ${borderClasses}`}
+        className={`${containerClasses} ${scheme.bg} ${scheme.text} ${paddingClasses} ${borderClasses}`}
       >
         {contentWrapper}
       </div>

@@ -165,7 +165,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>Multi-Channel Intake</IntroBox.PreHeadline>
           <IntroBox.Headline>Alle Bestellkanäle, ein System</IntroBox.Headline>

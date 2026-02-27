@@ -172,7 +172,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>Der Workflow</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -235,7 +235,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-primary-800">
+      <ContentWrapper colorScheme="primary-dark">
         <div className="py-8">
           <IntroBox dark>
             <IntroBox.PreHeadline>Integration</IntroBox.PreHeadline>

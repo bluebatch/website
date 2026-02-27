@@ -199,7 +199,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 3: Der digitale Onboarding-Prozess (PhaseCard Timeline) */}
-      <ContentWrapper background="bg-gray-50" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>Die Lösung</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -425,7 +425,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 5: Module im Detail (TabGroup) */}
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>Module im Detail</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -732,7 +732,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 7: n8n-Automatisierung */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>n8n Automation</IntroBox.PreHeadline>
           <IntroBox.Headline>

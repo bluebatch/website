@@ -221,7 +221,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>Der Workflow</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -331,7 +331,7 @@ export default function Page() {
         <Customer />
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>ROI-Kalkulation</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -393,7 +393,7 @@ export default function Page() {
         </SavingsCard>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-primary-800">
+      <ContentWrapper colorScheme="primary-dark">
         <div className="py-8">
           <IntroBox dark>
             <IntroBox.PreHeadline>Integration</IntroBox.PreHeadline>
@@ -439,7 +439,7 @@ export default function Page() {
         <ConsultationCtaDefault />
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>Referenzen</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -507,7 +507,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper border="T" background="bg-primary-700">
+      <ContentWrapper border="T" colorScheme="primary-dark">
         <ToolLink dark n8n easybill className="mb-8" />
       </ContentWrapper>
 

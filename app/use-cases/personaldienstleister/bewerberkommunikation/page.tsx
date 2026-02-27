@@ -164,7 +164,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 3: ComparisonCard – Vorher vs. Nachher */}
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>Der Unterschied</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -323,7 +323,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 5: TimelineAsSteps – Der automatisierte Chat-Flow */}
-      <ContentWrapper background="bg-gray-50" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>Der Prozess</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -585,7 +585,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 8: IT-Tools & Infrastruktur */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>Technologie-Stack</IntroBox.PreHeadline>
           <IntroBox.Headline>

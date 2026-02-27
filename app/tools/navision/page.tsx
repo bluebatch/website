@@ -151,7 +151,7 @@ export default function Page() {
         </Hero2Column>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>Navision Module</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -219,7 +219,7 @@ export default function Page() {
         </TimelineAsSteps>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>Typische Automatisierungen</IntroBox.Headline>
           <IntroBox.Paragraph>

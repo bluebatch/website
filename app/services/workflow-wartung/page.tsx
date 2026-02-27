@@ -179,7 +179,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Stats */}
-      <ContentWrapper background="bg-gradient-to-br from-primary-700 to-primary-900">
+      <ContentWrapper colorScheme="gradient-primary-dark">
         <StatsList stats={benefits} cols={4} />
       </ContentWrapper>
 
@@ -189,7 +189,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Maintenance Services */}
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>Workflow-as-a-Service</IntroBox.PreHeadline>
           <IntroBox.Headline>

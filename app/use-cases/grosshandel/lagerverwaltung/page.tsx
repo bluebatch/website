@@ -171,7 +171,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>Der Workflow</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -234,7 +234,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>Ergebnisse</IntroBox.PreHeadline>
           <IntroBox.Headline>

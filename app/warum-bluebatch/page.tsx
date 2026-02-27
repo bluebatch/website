@@ -312,7 +312,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Agentur vs. Experten Comparison */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>Der fundamentale Unterschied</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -468,7 +468,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* What Agencies Can't Do */}
-      <ContentWrapper background="bg-gradient-to-br from-red-50 to-orange-50">
+      <ContentWrapper colorScheme="gradient-warm">
         <IntroBox>
           <IntroBox.PreHeadline>Grenzen</IntroBox.PreHeadline>
           <IntroBox.Headline>Was Agenturen NICHT können</IntroBox.Headline>
@@ -533,7 +533,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Data Understanding & DSGVO */}
-      <ContentWrapper background="bg-primary-900">
+      <ContentWrapper colorScheme="primary-darker">
         <IntroBox dark>
           <IntroBox.PreHeadline>Datenverständnis</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -571,7 +571,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Long-term Ownership */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Content>
             <Typo.H2 className="mb-6">
@@ -617,7 +617,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* CTA Section */}
-      <ContentWrapper background="bg-primary-600">
+      <ContentWrapper colorScheme="primary">
         <IntroBox dark>
           <IntroBox.PreHeadline>Jetzt starten</IntroBox.PreHeadline>
           <IntroBox.Headline>Bereit für echte IT-Expertise?</IntroBox.Headline>

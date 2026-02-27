@@ -166,7 +166,7 @@ export default function Page() {
         </Hero2Column>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>Warum Easybill?</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -233,7 +233,7 @@ export default function Page() {
         </TimelineAsSteps>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>Easybill-Integrationen</IntroBox.Headline>
           <IntroBox.Paragraph>

@@ -167,7 +167,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 3: Problem-Darstellung – Typischer Compliance-Alltag */}
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <SimpleGrid cols={2} className="items-start gap-12">
           <div>
             <IntroBox textCentered={false}>
@@ -285,7 +285,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 5: Höchstüberlassungsdauer & Equal Pay – 2-Column (reversed) */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-start gap-12">
           <div className="relative aspect-video">
             <Image
@@ -357,7 +357,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 6: Tarifwerk 2026 – Dark Section */}
-      <ContentWrapper background="bg-primary-800">
+      <ContentWrapper colorScheme="primary-dark">
         <IntroBox dark>
           <IntroBox.PreHeadline>Tarifwerk 2026</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -469,7 +469,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 8: IT-Tools & Infrastruktur */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>IT-Infrastruktur</IntroBox.PreHeadline>
           <IntroBox.Headline>

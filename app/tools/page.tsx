@@ -213,7 +213,7 @@ export default function Page() {
         </div>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>
             Warum Bluebatch als Integrations-Partner?

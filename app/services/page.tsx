@@ -261,7 +261,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Benefits */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>
             Warum Bluebatch als n8n Partner?
@@ -287,7 +287,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* CTA Section */}
-      <ContentWrapper background="bg-primary-900">
+      <ContentWrapper colorScheme="primary-darker">
         <IntroBox dark>
           <IntroBox.Headline>
             Nicht sicher, welcher Service der richtige ist?

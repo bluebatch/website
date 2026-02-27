@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/layout/navigation";
 import Footer from "@/components/layout/footer";
 import CookieConsent from "@/components/ui/cookie-consent";
+import { PostHogProvider } from "@/components/providers/posthog";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,12 +33,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navigation />
+        <PostHogProvider>
+          <Navigation />
 
-        {children}
+          {children}
 
-        <Footer />
-        <CookieConsent />
+          <Footer />
+          <CookieConsent />
+        </PostHogProvider>
       </body>
     </html>
   );

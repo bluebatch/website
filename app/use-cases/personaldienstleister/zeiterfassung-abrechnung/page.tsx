@@ -206,7 +206,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 4: TimelineAsSteps + PhaseCard (End-to-End-Pipeline) */}
-      <ContentWrapper background="bg-gray-50" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>End-to-End-Prozess</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -371,7 +371,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 6: TabGroup (3 Tabs) */}
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>Technische Details</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -627,7 +627,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 9: IT-Tools & Infrastruktur */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-start gap-12">
           <IntroBox textCentered={false}>
             <IntroBox.PreHeadline>IT-Infrastruktur</IntroBox.PreHeadline>

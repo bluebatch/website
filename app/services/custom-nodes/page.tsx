@@ -272,7 +272,7 @@ export default function Page() {
 
         <SimpleGrid cols={3} className="gap-6">
           {customNodeScenarios.map((scenario, index) => (
-            <SimpleCard key={index} background={scenario.gradient}>
+            <SimpleCard key={index} className={scenario.gradient}>
               <SimpleCard.Icon
                 src={scenario.iconSrc}
                 alt={scenario.title}
@@ -288,7 +288,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Real-World Examples */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>Erfolgreiche Projekte</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -361,7 +361,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Development Process */}
-      <ContentWrapper background="bg-gray-50" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <IntroBox>
           <IntroBox.Headline>Entwicklungsprozess</IntroBox.Headline>
           <IntroBox.Paragraph>

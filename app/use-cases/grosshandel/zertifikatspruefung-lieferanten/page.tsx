@@ -138,7 +138,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-900">
+      <ContentWrapper colorScheme="dark">
         <IntroBox dark>
           <IntroBox.PreHeadline>Der Workflow</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -262,7 +262,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>ROI</IntroBox.PreHeadline>
           <IntroBox.Headline>

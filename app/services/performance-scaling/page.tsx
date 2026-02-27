@@ -253,7 +253,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Benchmarks */}
-      <ContentWrapper background="bg-gradient-to-br from-gray-900 to-gray-800">
+      <ContentWrapper colorScheme="gradient-dark">
         <IntroBox dark>
           <IntroBox.Headline>Nachgewiesene Performance-Gains</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -332,7 +332,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Architecture Components */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>High-Performance Architektur</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -394,7 +394,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Scaling Approach */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div className="relative aspect-square">
             <Image
@@ -442,7 +442,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* CTA Section */}
-      <ContentWrapper background="bg-primary-600">
+      <ContentWrapper colorScheme="primary">
         <div className="text-center text-white max-w-3xl mx-auto">
           <Typo.H2 className="text-white mb-6">
             Bereit für Enterprise-Performance?

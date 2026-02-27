@@ -146,7 +146,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div className="relative aspect-video">
             <Image
@@ -178,7 +178,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-900">
+      <ContentWrapper colorScheme="dark">
         <IntroBox dark>
           <IntroBox.PreHeadline>Workflow-Architektur</IntroBox.PreHeadline>
           <IntroBox.Headline>

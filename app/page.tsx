@@ -110,7 +110,7 @@ export default function Home() {
       </ContentWrapper>
 
       {/* About Bluebatch Section */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div>
             <IntroBox textCentered={false}>
@@ -210,7 +210,7 @@ export default function Home() {
       </ContentWrapper>
 
       {/* What Drives Us Section */}
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div>
             <IntroBox textCentered={false}>
@@ -320,7 +320,7 @@ export default function Home() {
       </ContentWrapper>
 
       {/* Individual Solutions Section */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div className="relative aspect-video">
             <Image
@@ -353,7 +353,7 @@ export default function Home() {
       </ContentWrapper>
 
       {/* Engineering Approach Section */}
-      <ContentWrapper background="bg-gray-900">
+      <ContentWrapper colorScheme="dark">
         <IntroBox dark>
           <IntroBox.PreHeadline>Our Approach</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -433,7 +433,7 @@ export default function Home() {
       </ContentWrapper>
 
       {/* Workflow-as-a-Service Section */}
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div>
             <IntroBox textCentered={false}>
@@ -506,7 +506,7 @@ export default function Home() {
       </ContentWrapper>
 
       {/* Final Statement Section */}
-      <ContentWrapper background="bg-primary-800">
+      <ContentWrapper colorScheme="primary-dark">
         <div className="py-12">
           <IntroBox dark>
             <IntroBox.PreHeadline>Who We Are</IntroBox.PreHeadline>

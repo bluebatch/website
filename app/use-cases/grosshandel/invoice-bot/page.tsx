@@ -139,7 +139,7 @@ export default function Page() {
           </SimpleCard>
         </SimpleGrid>
       </ContentWrapper>
-      <ContentWrapper background="bg-gray-100" bodyWidth="small">
+      <ContentWrapper colorScheme="gray" bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>Der Prozess</IntroBox.PreHeadline>
           <IntroBox.Headline>So funktioniert der Invoice-Bot</IntroBox.Headline>

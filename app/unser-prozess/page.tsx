@@ -238,7 +238,7 @@ export default function HowWeDoPage() {
         </Hero2Column>
       </ContentWrapper>
       {/* German Engineering Principles */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             Wir bringen die Prinzipien des deutschen Engineerings – Präzision,
@@ -258,7 +258,7 @@ export default function HowWeDoPage() {
         </SimpleGrid>
       </ContentWrapper>
       {/* Die Wahrheit über Automatisierung */}
-      <ContentWrapper background="bg-gradient-to-br from-primary-900 to-primary-600 ">
+      <ContentWrapper colorScheme="gradient-primary">
         <IntroBox dark size="wide">
           <IntroBox.PreHeadline>
             Die Wahrheit über Automatisierung
@@ -297,7 +297,7 @@ export default function HowWeDoPage() {
         </div>
       </ContentWrapper>
       {/* 6-Phasen-Prozess */}
-      <ContentWrapper background="bg-gray-50" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <h3 className="text-sm md:text-base font-semibold bg-gradient-to-r from-secondary-600 via-primary-600 to-secondary-700 bg-clip-text text-transparent mb-4 uppercase tracking-wide text-center">
           Der 6-Phasen-Prozess
         </h3>

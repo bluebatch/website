@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Image from "next/image";
+import { colorSchemeMap, type ColorScheme } from "@/lib/color-schemes";
 
 // Sub-components
 interface BoundlessImageCardImageProps {
@@ -54,7 +55,7 @@ interface BoundlessImageCardProps {
   rounded?: boolean;
   shadow?: boolean;
   border?: boolean;
-  background?: string;
+  colorScheme?: ColorScheme;
 }
 
 function BoundlessImageCard({
@@ -65,8 +66,9 @@ function BoundlessImageCard({
   rounded = true,
   shadow = true,
   border = true,
-  background = "bg-white",
+  colorScheme = "white",
 }: BoundlessImageCardProps) {
+  const scheme = colorSchemeMap[colorScheme];
   const roundedClass = rounded ? "rounded-lg" : "";
   const shadowClass = shadow
     ? "shadow-sm hover:shadow-lg transition-shadow"
@@ -101,7 +103,7 @@ function BoundlessImageCard({
 
   return (
     <div
-      className={`${background} ${roundedClass} ${shadowClass} ${borderClass} overflow-hidden ${className}`}
+      className={`${scheme.bg} ${scheme.text} ${roundedClass} ${shadowClass} ${borderClass} overflow-hidden ${className}`}
     >
       <div className={`grid grid-cols-1 ${gridCols} items-center`}>
         {/* Image always first on mobile (order-1), positioned by prop on desktop */}

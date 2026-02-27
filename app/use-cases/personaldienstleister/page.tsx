@@ -167,7 +167,7 @@ export default function Page() {
       {useCases.map((useCase, index) => (
         <ContentWrapper
           key={useCase.slug}
-          background={index % 2 === 1 ? "bg-gray-50" : undefined}
+          colorScheme={index % 2 === 1 ? "gray-light" : undefined}
         >
           <SimpleGrid cols={2} className="items-center gap-12">
             {index % 2 === 0 ? (

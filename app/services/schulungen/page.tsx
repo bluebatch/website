@@ -328,7 +328,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Training Formats */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>Schulungsformate</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -423,7 +423,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Outcomes */}
-      <ContentWrapper background="bg-primary-600">
+      <ContentWrapper colorScheme="primary">
         <IntroBox dark>
           <IntroBox.Headline>Was Sie erreichen</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -501,7 +501,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Pricing Info */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <div className="max-w-4xl mx-auto text-center">
           <Typo.H2 className="mb-6">Individuelle Angebote</Typo.H2>
           <Typo.Paragraph className="text-gray-600 mb-8">

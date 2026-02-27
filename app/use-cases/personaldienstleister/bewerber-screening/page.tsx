@@ -175,7 +175,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 3: CardShowcase – So funktioniert KI-Matching */}
-      <ContentWrapper background="bg-gray-900">
+      <ContentWrapper colorScheme="dark">
         <IntroBox dark>
           <IntroBox.PreHeadline>Der Workflow</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -283,7 +283,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 4: 2-Column – Qualifikationslücken-Analyse */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div>
             <IntroBox textCentered={false}>
@@ -451,7 +451,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 7: n8n-Automatisierung im Detail */}
-      <ContentWrapper background="bg-gray-100">
+      <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>n8n-Workflows</IntroBox.PreHeadline>
           <IntroBox.Headline>

@@ -28,7 +28,7 @@ export default function BlogPage() {
       {/* Hero Section */}
       <ContentWrapper
         isFirstSection
-        background="bg-gradient-to-br from-blue-50 to-indigo-50"
+        colorScheme="gradient-cool"
       >
         <div className="max-w-4xl mx-auto text-center">
           <Typo.H1 className="mb-6">Bluebatch Blog</Typo.H1>
@@ -49,7 +49,7 @@ export default function BlogPage() {
       </ContentWrapper>
 
       {/* Call to Action */}
-      <ContentWrapper background="bg-gradient-to-br from-blue-50 to-indigo-50">
+      <ContentWrapper colorScheme="gradient-cool">
         <div className="max-w-4xl mx-auto text-center">
           <Typo.H2 className="mb-6">Benötigen Sie Unterstützung?</Typo.H2>
           <Typo.Paragraph className="text-lg mb-8">

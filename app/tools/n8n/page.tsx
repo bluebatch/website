@@ -170,7 +170,7 @@ export default function Page() {
         </Hero2Column>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>Warum n8n?</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -222,7 +222,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper background="bg-primary-900">
+      <ContentWrapper colorScheme="primary-darker">
         <IntroBox dark>
           <IntroBox.Headline>Bluebatch + n8n</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -234,7 +234,7 @@ export default function Page() {
         <SimpleGrid cols={3} className="gap-8">
           {bluebatchServices.map((service, index) => (
             <Link key={index} href={service.href} className="block group">
-              <SimpleCard background="bg-white">
+              <SimpleCard colorScheme="white">
                 <SimpleCard.Icon>
                   <div className="text-4xl">{service.icon}</div>
                 </SimpleCard.Icon>

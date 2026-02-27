@@ -162,7 +162,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Key Features Grid */}
-      <ContentWrapper background="bg-gray-50">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>Warum Self-Hosted n8n?</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -195,7 +195,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Deployment Options */}
-      <ContentWrapper background="bg-gradient-to-br from-primary-500 to-primary-900">
+      <ContentWrapper colorScheme="gradient-primary-alt">
         <IntroBox dark>
           <IntroBox.Headline>Deployment-Optionen</IntroBox.Headline>
           <IntroBox.Paragraph>
