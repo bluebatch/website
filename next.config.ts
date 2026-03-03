@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "X-Frame-Options",
-            value: "DENY",
+            value: "ALLOW-FROM https://eu.posthog.com",
           },
           {
             key: "X-Content-Type-Options",
@@ -63,7 +63,7 @@ const nextConfig: NextConfig = {
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self' https://*.hsforms.com https://forms.hubspot.com",
-              "frame-ancestors 'none'",
+              "frame-ancestors https://eu.posthog.com https://*.posthog.com",
               "upgrade-insecure-requests",
             ].join("; "),
           },
