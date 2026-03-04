@@ -14,7 +14,6 @@ import Hero2Column, {
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
 import ContactButton from "@/components/buttons/contact-button";
-import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import IntroBox from "@/components/ui/intro-box";
 import BoundlessImageCard from "@/components/cards/boundless-image-card";
@@ -22,13 +21,13 @@ import SimpleCard from "@/components/cards/simple-card";
 import { InternalLinkLabel } from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
-  title: "Tools im Überblick | Bluebatch",
+  title: "Automatisierungs-Tools im Vergleich | Bluebatch",
   description:
-    "Alle Tools im Überblick: Automatisierungs-Tools (n8n, Make, Zapier, Power Automate, Workato, UiPath) und Großhandel-Tools (Navision, Easybill). Beratung, Migration und Integration durch Bluebatch.",
+    "Alle Automatisierungstools im Überblick: n8n, Make, Zapier, Power Automate, Workato, UiPath und mehr. Beratung, Migration und Integration durch Bluebatch.",
   openGraph: {
-    title: "Tools im Überblick | Bluebatch",
+    title: "Automatisierungs-Tools im Vergleich | Bluebatch",
     description:
-      "Automatisierungs-Tools und Großhandel-Tools – wir beraten, migrieren und automatisieren.",
+      "n8n, Make, Zapier, Power Automate, Workato, UiPath – wir beraten, migrieren und automatisieren.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -37,23 +36,23 @@ export const metadata: Metadata = {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Bluebatch Tools & Integrationen",
+        alt: "Bluebatch Automatisierungs-Tools",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tools im Überblick | Bluebatch",
+    title: "Automatisierungs-Tools im Vergleich | Bluebatch",
     description:
-      "Automatisierungs-Tools und Großhandel-Tools – Beratung und Migration.",
+      "n8n, Make, Zapier, Power Automate, Workato, UiPath – Beratung und Migration.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/tools",
+    canonical: "/tools/automation-tools",
   },
 };
 
-const automationTools = [
+const tools = [
   {
     slug: "n8n",
     title: "n8n",
@@ -182,37 +181,6 @@ const automationTools = [
   },
 ];
 
-const grosshandelTools = [
-  {
-    slug: "navision",
-    title: "Microsoft Dynamics NAV (Navision)",
-    shortDescription: "Enterprise Resource Planning",
-    description:
-      "Microsoft Dynamics NAV – heute Dynamics 365 Business Central – ist das ERP-System für den Mittelstand. Wir automatisieren Ihre Navision-Prozesse über n8n und schaffen nahtlose Verbindungen zu Ihren anderen Systemen.",
-    features: [
-      "Finanzmanagement",
-      "Supply Chain",
-      "Microsoft-Ökosystem",
-      "Cloud & On-Premise",
-    ],
-    image: "/images/business-analytics.jpg",
-  },
-  {
-    slug: "easybill",
-    title: "Easybill",
-    shortDescription: "Cloud-Rechnungssoftware",
-    description:
-      "Easybill ist die deutsche Cloud-Rechnungssoftware für KMU und Freelancer. Mit ZUGFeRD, XRechnung und DATEV-Integration ist Easybill die ideale Basis für automatisierte Buchhaltungsprozesse.",
-    features: [
-      "ZUGFeRD & XRechnung",
-      "DATEV-Export",
-      "E-Commerce-Integration",
-      "DSGVO-konform",
-    ],
-    image: "/images/invoice-processing.jpg",
-  },
-];
-
 const benefits = [
   {
     icon: "🔗",
@@ -240,21 +208,22 @@ export default function Page() {
       <ContentWrapper isFirstSection>
         <Hero2Column>
           <Hero2ColumnTextColumn>
-            <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
+            <Hero2ColumnPreHeadline>
+              Automatisierungs-Tools
+            </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Unsere Tools im Überblick
+              Automatisierungs-Tools im Vergleich
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Von Automatisierungs-Tools wie n8n, Make und Zapier bis zu
-              Großhandel-Tools wie Navision und Easybill – wir kennen alle
-              Plattformen und beraten Sie unabhängig. Migration, Integration und
-              Optimierung aus einer Hand.
+              Von n8n über Make und Zapier bis Power Automate – wir kennen alle
+              Automatisierungsplattformen und beraten Sie unabhängig. Migration,
+              Integration und Optimierung aus einer Hand.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
-              n8n • Make • Zapier • Power Automate • Navision • Easybill
+              n8n • Make • Zapier • Power Automate • Workato • UiPath
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
@@ -266,22 +235,18 @@ export default function Page() {
         </Hero2Column>
       </ContentWrapper>
 
-      <ContentWrapper noPadding border="T">
-        <Customer />
-      </ContentWrapper>
-
       <ContentWrapper>
         <IntroBox>
-          <IntroBox.PreHeadline>Tool-Übersicht</IntroBox.PreHeadline>
-          <IntroBox.Headline>Automatisierungs-Tools</IntroBox.Headline>
+          <IntroBox.PreHeadline>Expertise</IntroBox.PreHeadline>
+          <IntroBox.Headline>Unsere Tool-Expertise</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Wir kennen alle Automatisierungsplattformen im Detail und beraten
-            Sie unabhängig bei Migration, Integration und Optimierung.
+            Wir kennen diese Tools im Detail und automatisieren Ihre Prozesse
+            mit maßgeschneiderten n8n-Workflows.
           </IntroBox.Paragraph>
         </IntroBox>
 
         <div className="space-y-8">
-          {automationTools.map((tool, index) => (
+          {tools.map((tool, index) => (
             <Link
               key={tool.slug}
               href={`/tools/automation-tools/${tool.slug}`}
@@ -328,113 +293,9 @@ export default function Page() {
             </Link>
           ))}
         </div>
-
-        <div className="mt-8 text-center">
-          <Link
-            href="/tools/automation-tools"
-            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
-          >
-            Alle Automatisierungs-Tools ansehen
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
-        </div>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light">
-        <IntroBox>
-          <IntroBox.PreHeadline>Tool-Übersicht</IntroBox.PreHeadline>
-          <IntroBox.Headline>Großhandel-Tools</IntroBox.Headline>
-          <IntroBox.Paragraph>
-            ERP-Integration und Rechnungsautomatisierung für den Großhandel –
-            maßgeschneidert mit n8n.
-          </IntroBox.Paragraph>
-        </IntroBox>
-
-        <div className="space-y-8">
-          {grosshandelTools.map((tool, index) => (
-            <Link
-              key={tool.slug}
-              href={`/tools/grosshandel/${tool.slug}`}
-              className="block group"
-            >
-              <BoundlessImageCard
-                imagePosition={index % 2 === 0 ? "right" : "left"}
-                className="cursor-pointer"
-              >
-                <BoundlessImageCard.Content>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div>
-                      <Typo.H3 className="mb-1 group-hover:text-primary-600 transition-colors">
-                        {tool.title}
-                      </Typo.H3>
-                      <p className="text-primary-600 font-medium">
-                        {tool.shortDescription}
-                      </p>
-                    </div>
-                  </div>
-                  <Typo.Paragraph textColor="muted" spacing="lg">
-                    {tool.description}
-                  </Typo.Paragraph>
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    {tool.features.map((feature, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-center gap-2 text-gray-700 text-sm"
-                      >
-                        <span className="text-primary-600">✓</span>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  <InternalLinkLabel>Mehr erfahren</InternalLinkLabel>
-                </BoundlessImageCard.Content>
-
-                <BoundlessImageCard.Image
-                  fadeGradient
-                  src={tool.image}
-                  alt={tool.title}
-                />
-              </BoundlessImageCard>
-            </Link>
-          ))}
-        </div>
-
-        <div className="mt-8 text-center">
-          <Link
-            href="/tools/grosshandel"
-            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
-          >
-            Alle Großhandel-Tools ansehen
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
-        </div>
-      </ContentWrapper>
-
-      <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Ihr Partner</IntroBox.PreHeadline>
           <IntroBox.Headline>

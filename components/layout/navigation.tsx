@@ -150,23 +150,49 @@ export default function Navigation() {
         ],
       },
       {
-        title: "Tools",
-        href: "/tools",
+        title: "Automation",
+        href: "/tools/automation-tools",
         items: [
           {
             title: "n8n",
             description: "Workflow-Automatisierung",
-            href: "/tools/n8n",
+            href: "/tools/automation-tools/n8n",
           },
+          {
+            title: "Make",
+            description: "Visueller Szenario-Builder",
+            href: "/tools/automation-tools/make",
+          },
+          {
+            title: "Zapier",
+            description: "No-Code Automatisierung",
+            href: "/tools/automation-tools/zapier",
+          },
+          {
+            title: "Power Automate",
+            description: "Microsoft-Automatisierung",
+            href: "/tools/automation-tools/power-automate",
+          },
+          {
+            title: "Alle Automation-Tools",
+            description: "Workato, UiPath, Tray.io u.m.",
+            href: "/tools/automation-tools",
+          },
+        ],
+      },
+      {
+        title: "Großhandel",
+        href: "/tools/grosshandel",
+        items: [
           {
             title: "Navision",
             description: "Microsoft Dynamics ERP",
-            href: "/tools/navision",
+            href: "/tools/grosshandel/navision",
           },
           {
             title: "Easybill",
             description: "Rechnungssoftware",
-            href: "/tools/easybill",
+            href: "/tools/grosshandel/easybill",
           },
         ],
       },
@@ -406,7 +432,7 @@ export default function Navigation() {
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  href="/services"
+                  href="/tools"
                   className="group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
                 >
                   <svg
@@ -422,7 +448,7 @@ export default function Navigation() {
                       d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  Services
+                  Tools
                   <svg
                     className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
                     fill="none"
@@ -440,11 +466,11 @@ export default function Navigation() {
 
                 {activeDropdown === "services" && (
                   <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-[550px] bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-[750px] bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
                     onMouseEnter={() => setActiveDropdown("services")}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <div className="p-4 grid grid-cols-2 gap-6">
+                    <div className="p-4 grid grid-cols-3 gap-6">
                       {servicesMenu.sections.map((section, sectionIndex) => (
                         <div key={sectionIndex}>
                           <Link
@@ -699,6 +725,22 @@ export default function Navigation() {
               >
                 Tools
               </Link>
+              <div className="pl-8 space-y-1">
+                <Link
+                  href="/tools/automation-tools"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Automation-Tools
+                </Link>
+                <Link
+                  href="/tools/grosshandel"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Großhandel-Tools
+                </Link>
+              </div>
               <Link
                 href="/use-cases"
                 className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"

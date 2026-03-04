@@ -27,9 +27,10 @@ export default function Footer() {
   ];
 
   const toolsMenu = [
-    { label: "n8n", href: "/tools/n8n" },
-    { label: "Navision", href: "/tools/navision" },
-    { label: "Easybill", href: "/tools/easybill" },
+    { label: "n8n", href: "/tools/automation-tools/n8n" },
+    { label: "Navision", href: "/tools/grosshandel/navision" },
+    { label: "Easybill", href: "/tools/grosshandel/easybill" },
+    { label: "Alle Tools", href: "/tools" },
   ];
 
   const legalMenu = [
@@ -105,26 +106,7 @@ export default function Footer() {
           </div>
 
           {/* Right Column - Menus */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
-            {/* Main Menu */}
-            <div>
-              <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-                Menu
-              </h3>
-              <ul className="space-y-3">
-                {mainMenu.map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      href={item.href}
-                      className="hover:text-secondary-500 transition-colors text-sm"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
             {/* Services Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
@@ -163,7 +145,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Product Menu */}
+            {/* Use-Cases Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
                 Use-Cases
@@ -182,7 +164,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Legal Menu */}
+            {/* Ressourcen Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
                 Ressourcen

@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/tools/n8n",
+    canonical: "/tools/automation-tools/n8n",
   },
 };
 
@@ -172,6 +172,7 @@ export default function Page() {
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
+          <IntroBox.PreHeadline>Features</IntroBox.PreHeadline>
           <IntroBox.Headline>Warum n8n?</IntroBox.Headline>
           <IntroBox.Paragraph>
             n8n ist die führende Open-Source Alternative zu Zapier und Make –
@@ -186,7 +187,7 @@ export default function Page() {
                 <>{feature.icon}</>
               </SimpleCard.Icon>
               <Typo.H3 className="mb-3 text-xl">{feature.title}</Typo.H3>
-              <Typo.Paragraph className="text-gray-600 text-sm">
+              <Typo.Paragraph textColor="muted" size="sm">
                 {feature.description}
               </Typo.Paragraph>
             </SimpleCard>
@@ -224,6 +225,7 @@ export default function Page() {
 
       <ContentWrapper colorScheme="primary-darker">
         <IntroBox dark>
+          <IntroBox.PreHeadline>Unsere Services</IntroBox.PreHeadline>
           <IntroBox.Headline>Bluebatch + n8n</IntroBox.Headline>
           <IntroBox.Paragraph>
             Als n8n-Experten bieten wir Ihnen das Komplettpaket – vom Hosting
@@ -241,7 +243,7 @@ export default function Page() {
                 <Typo.H3 className="mb-3 text-lg group-hover:text-primary-600 transition-colors">
                   {service.title}
                 </Typo.H3>
-                <Typo.Paragraph className="text-gray-600 text-sm">
+                <Typo.Paragraph textColor="muted" size="sm">
                   {service.description}
                 </Typo.Paragraph>
                 <SimpleCard.Footer>

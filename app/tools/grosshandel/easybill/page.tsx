@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/tools/easybill",
+    canonical: "/tools/grosshandel/easybill",
   },
 };
 
@@ -168,6 +168,7 @@ export default function Page() {
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
+          <IntroBox.PreHeadline>Features</IntroBox.PreHeadline>
           <IntroBox.Headline>Warum Easybill?</IntroBox.Headline>
           <IntroBox.Paragraph>
             Easybill vereinfacht Ihre Rechnungsstellung und bietet die perfekte
@@ -182,7 +183,7 @@ export default function Page() {
                 <>{feature.icon}</>
               </SimpleCard.Icon>
               <Typo.H3 className="mb-3 text-xl">{feature.title}</Typo.H3>
-              <Typo.Paragraph className="text-gray-600 text-sm">
+              <Typo.Paragraph textColor="muted" size="sm">
                 {feature.description}
               </Typo.Paragraph>
             </SimpleCard>
@@ -192,6 +193,7 @@ export default function Page() {
 
       <ContentWrapper>
         <IntroBox>
+          <IntroBox.PreHeadline>Unser Prozess</IntroBox.PreHeadline>
           <IntroBox.Headline>
             So automatisieren wir Ihre Easybill-Prozesse
           </IntroBox.Headline>
@@ -203,14 +205,14 @@ export default function Page() {
         <TimelineAsSteps>
           <TimelineAsStepsStep value={1}>
             <Typo.H3 className="mb-2">API-Anbindung</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
+            <Typo.Paragraph textColor="muted">
               Sichere Anbindung Ihres Easybill-Accounts über die REST-API an
               n8n. Konfiguration der Authentifizierung und Berechtigungen.
             </Typo.Paragraph>
           </TimelineAsStepsStep>
           <TimelineAsStepsStep value={2}>
             <Typo.H3 className="mb-2">Dokumentenautomatisierung</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
+            <Typo.Paragraph textColor="muted">
               Automatische Erstellung von Rechnungen, Angeboten und
               Gutschriften basierend auf Bestellungen, Lieferscheinen oder
               Zeiterfassungsdaten.
@@ -218,14 +220,14 @@ export default function Page() {
           </TimelineAsStepsStep>
           <TimelineAsStepsStep value={3}>
             <Typo.H3 className="mb-2">Zahlungsmanagement</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
+            <Typo.Paragraph textColor="muted">
               Automatisierte Zahlungsüberwachung, Mahnwesen und
               Zahlungszuordnung. Benachrichtigungen bei offenen Posten.
             </Typo.Paragraph>
           </TimelineAsStepsStep>
           <TimelineAsStepsStep value={4}>
             <Typo.H3 className="mb-2">Monitoring & Reporting</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
+            <Typo.Paragraph textColor="muted">
               Kontinuierliches Monitoring aller automatisierten Prozesse,
               automatische DATEV-Exports und Fehlerbenachrichtigungen.
             </Typo.Paragraph>
@@ -235,6 +237,7 @@ export default function Page() {
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
+          <IntroBox.PreHeadline>Integrationen</IntroBox.PreHeadline>
           <IntroBox.Headline>Easybill-Integrationen</IntroBox.Headline>
           <IntroBox.Paragraph>
             Diese Systeme verbinden wir über n8n mit Ihrer Easybill-Instanz
@@ -248,7 +251,7 @@ export default function Page() {
                 <>{integration.icon}</>
               </SimpleCard.Icon>
               <Typo.H3 className="mb-3 text-xl">{integration.title}</Typo.H3>
-              <Typo.Paragraph className="text-gray-600 text-sm">
+              <Typo.Paragraph textColor="muted" size="sm">
                 {integration.description}
               </Typo.Paragraph>
             </SimpleCard>
@@ -258,6 +261,7 @@ export default function Page() {
 
       <ContentWrapper>
         <IntroBox>
+          <IntroBox.PreHeadline>Case Study</IntroBox.PreHeadline>
           <IntroBox.Headline>Praxisbeispiel</IntroBox.Headline>
           <IntroBox.Paragraph>
             Sehen Sie, wie KI-Automatisierung mit Easybill in der Praxis
@@ -277,7 +281,7 @@ export default function Page() {
               <Typo.H3 className="mb-3 group-hover:text-primary-600 transition-colors">
                 KI-Automation mit Easybill im Großhandel
               </Typo.H3>
-              <Typo.Paragraph className="text-gray-600 mb-6">
+              <Typo.Paragraph textColor="muted" spacing="lg">
                 Erfahren Sie, wie wir für einen Großhändler die komplette
                 Rechnungsverarbeitung mit Easybill und n8n automatisiert
                 haben – inklusive KI-gestützter Dokumentenerkennung.

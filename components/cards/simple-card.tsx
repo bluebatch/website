@@ -238,6 +238,7 @@ interface SimpleCardProps {
   children?: ReactNode;
   className?: string;
   colorScheme?: ColorScheme;
+  align?: "center" | "left";
 }
 
 function SimpleCard({
@@ -246,6 +247,7 @@ function SimpleCard({
   variant = "default",
   className = "",
   colorScheme,
+  align = "center",
 }: SimpleCardProps) {
   const variantClass = variantStyles[variant].card;
   const scheme = colorScheme ? colorSchemeMap[colorScheme] : null;
@@ -287,7 +289,7 @@ function SimpleCard({
 
   return (
     <div
-      className={`border flex flex-col items-center text-center px-4 pb-8 shadow-md hover:shadow-lg ${hasVisual ? "pt-8" : ""} ${backgroundClass} ${darkClass} ${className}`}
+      className={`border flex flex-col ${align === "left" ? "items-start text-left px-6" : "items-center text-center px-4"} pb-8 shadow-md hover:shadow-lg ${hasVisual ? "pt-8" : "pt-6"} ${backgroundClass} ${darkClass} ${className}`}
     >
       {iconChild}
       {imageChild}

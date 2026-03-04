@@ -75,9 +75,28 @@ function H4({
   );
 }
 
-function Paragraph({ children, className = "" }: TypoProps) {
+interface ParagraphProps extends TypoProps {
+  textColor?: "muted";
+  size?: "sm";
+  spacing?: "lg" | "none";
+}
+
+function Paragraph({
+  children,
+  className = "",
+  textColor,
+  size,
+  spacing,
+}: ParagraphProps) {
+  const colorClass = textColor === "muted" ? "text-gray-600" : "text-gray-700";
+  const sizeClass = size === "sm" ? "text-sm" : "text-base";
+  const spacingClass =
+    spacing === "lg" ? "mb-6" : spacing === "none" ? "mb-0" : "mb-4";
+
   return (
-    <p className={`text-base text-gray-700 leading-relaxed mb-4 ${className}`}>
+    <p
+      className={`${sizeClass} ${colorClass} leading-relaxed ${spacingClass} ${className}`}
+    >
       {children}
     </p>
   );

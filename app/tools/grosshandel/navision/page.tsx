@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/tools/navision",
+    canonical: "/tools/grosshandel/navision",
   },
 };
 
@@ -153,6 +153,7 @@ export default function Page() {
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
+          <IntroBox.PreHeadline>Module</IntroBox.PreHeadline>
           <IntroBox.Headline>Navision Module</IntroBox.Headline>
           <IntroBox.Paragraph>
             Microsoft Dynamics NAV bietet umfassende ERP-Funktionalität für den
@@ -167,7 +168,7 @@ export default function Page() {
                 <>{module.icon}</>
               </SimpleCard.Icon>
               <Typo.H3 className="mb-3 text-xl">{module.title}</Typo.H3>
-              <Typo.Paragraph className="text-gray-600 text-sm">
+              <Typo.Paragraph textColor="muted" size="sm">
                 {module.description}
               </Typo.Paragraph>
             </SimpleCard>
@@ -177,6 +178,7 @@ export default function Page() {
 
       <ContentWrapper>
         <IntroBox>
+          <IntroBox.PreHeadline>Unser Prozess</IntroBox.PreHeadline>
           <IntroBox.Headline>
             So automatisieren wir Ihre Navision-Prozesse
           </IntroBox.Headline>
@@ -188,7 +190,7 @@ export default function Page() {
         <TimelineAsSteps>
           <TimelineAsStepsStep value={1}>
             <Typo.H3 className="mb-2">Analyse & Bestandsaufnahme</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
+            <Typo.Paragraph textColor="muted">
               Wir analysieren Ihre bestehenden Navision-Prozesse, identifizieren
               Automatisierungspotenziale und definieren die
               Schnittstellen-Anforderungen.
@@ -196,7 +198,7 @@ export default function Page() {
           </TimelineAsStepsStep>
           <TimelineAsStepsStep value={2}>
             <Typo.H3 className="mb-2">API-Anbindung</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
+            <Typo.Paragraph textColor="muted">
               Anbindung von Navision über OData, SOAP oder REST-APIs an n8n.
               Bei Bedarf entwickeln wir Custom Nodes für spezifische
               Navision-Funktionen.
@@ -204,14 +206,14 @@ export default function Page() {
           </TimelineAsStepsStep>
           <TimelineAsStepsStep value={3}>
             <Typo.H3 className="mb-2">Workflow-Automatisierung</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
+            <Typo.Paragraph textColor="muted">
               Erstellung der automatisierten Workflows in n8n – von einfachen
               Datensynchronisationen bis zu komplexen Multi-System-Prozessen.
             </Typo.Paragraph>
           </TimelineAsStepsStep>
           <TimelineAsStepsStep value={4}>
             <Typo.H3 className="mb-2">Monitoring & Betrieb</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
+            <Typo.Paragraph textColor="muted">
               24/7 Monitoring Ihrer automatisierten Prozesse, proaktive
               Fehlererkennung und kontinuierliche Optimierung.
             </Typo.Paragraph>
@@ -221,6 +223,7 @@ export default function Page() {
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
+          <IntroBox.PreHeadline>Use Cases</IntroBox.PreHeadline>
           <IntroBox.Headline>Typische Automatisierungen</IntroBox.Headline>
           <IntroBox.Paragraph>
             Diese Navision-Prozesse automatisieren wir am häufigsten
@@ -234,7 +237,7 @@ export default function Page() {
                 <>{automation.icon}</>
               </SimpleCard.Icon>
               <Typo.H3 className="mb-3 text-xl">{automation.title}</Typo.H3>
-              <Typo.Paragraph className="text-gray-600 text-sm">
+              <Typo.Paragraph textColor="muted" size="sm">
                 {automation.description}
               </Typo.Paragraph>
             </SimpleCard>

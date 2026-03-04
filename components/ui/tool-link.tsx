@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const tools = [
-  { key: "n8n", label: "n8n", href: "/tools/n8n", logo: "/tools/N8n-logo.png" },
-  { key: "navision", label: "Navision", href: "/tools/navision", logo: "/tools/ms-dynamics-nav.png" },
-  { key: "easybill", label: "Easybill", href: "/tools/easybill", logo: "/tools/easybill.png" },
+  { key: "n8n", label: "n8n", href: "/tools/automation-tools/n8n", logo: "/tools/N8n-logo.png" },
+  { key: "navision", label: "Navision", href: "/tools/grosshandel/navision", logo: "/tools/ms-dynamics-nav.png" },
+  { key: "easybill", label: "Easybill", href: "/tools/grosshandel/easybill", logo: "/tools/easybill.png" },
 ] as const;
 
 interface ToolLinkProps {
