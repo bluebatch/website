@@ -10,6 +10,7 @@ import TimelineAsSteps, {
   TimelineAsStepsStep,
 } from "@/components/ui/timeline-as-steps";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import LatestBlogPosts from "@/components/sections/latest-blog-posts";
 import CardShowcase from "@/components/cards/card-showcase";
 import Customer from "@/components/sections/customer/customer";
 import IntroBox from "@/components/ui/intro-box";
@@ -150,7 +151,7 @@ export default function Home() {
       </ContentWrapper>
 
       {/* Enterprise Heritage Section */}
-      <ContentWrapper>
+      <ContentWrapper colorScheme="gradient-warm">
         <IntroBox>
           <IntroBox.PreHeadline>Enterprise Heritage</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -208,6 +209,9 @@ export default function Home() {
           </SimpleCard>
         </SimpleGrid>
       </ContentWrapper>
+
+      {/* Latest Blog Posts */}
+      <LatestBlogPosts />
 
       {/* What Drives Us Section */}
       <ContentWrapper colorScheme="gray">
@@ -506,7 +510,7 @@ export default function Home() {
       </ContentWrapper>
 
       {/* Final Statement Section */}
-      <ContentWrapper colorScheme="primary-dark">
+      <ContentWrapper colorScheme="gradient-primary-alt">
         <div className="py-12">
           <IntroBox dark>
             <IntroBox.PreHeadline>Who We Are</IntroBox.PreHeadline>
@@ -524,11 +528,6 @@ export default function Home() {
             </div>
           </IntroBox>
         </div>
-      </ContentWrapper>
-
-      {/* Consultation CTA */}
-      <ContentWrapper noPadding>
-        <ConsultationCtaDefault />
       </ContentWrapper>
     </>
   );

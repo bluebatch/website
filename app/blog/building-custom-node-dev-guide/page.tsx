@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { BlogTagId } from "@/lib/blog-tags";
 import Typo from "@/components/ui/typo";
 import {
   BlogImage,
@@ -7,6 +8,14 @@ import {
   BlogLayout,
   BlogHero,
 } from "@/components/blog";
+
+export const blogMeta = {
+  slug: "building-custom-node-dev-guide",
+  author: "Max Hänsel",
+  date: "2025-02-16",
+  image: "/blog/building-custom-node-dev-guide/hero.png",
+  tags: ["n8n", "custom-nodes", "automatisierung", "development"] as BlogTagId[],
+};
 
 export const metadata: Metadata = {
   title:

@@ -4,6 +4,7 @@ import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import Link from "next/link";
 import BlogListFiltered from "@/components/blog/blog-list-filtered";
+import { getBlogPosts } from "@/lib/get-blog-posts";
 
 export const metadata: Metadata = {
   title: "Blog | Bluebatch - Workflow-Automatisierung & n8n Expertise",
@@ -22,7 +23,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getBlogPosts();
+
   return (
     <>
       {/* Hero Section */}
@@ -43,7 +46,7 @@ export default function BlogPage() {
       <ContentWrapper>
         <div className="max-w-6xl mx-auto">
           <Suspense>
-            <BlogListFiltered />
+            <BlogListFiltered posts={posts} />
           </Suspense>
         </div>
       </ContentWrapper>

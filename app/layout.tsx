@@ -5,6 +5,7 @@ import Navigation from "@/components/layout/navigation";
 import Footer from "@/components/layout/footer";
 import CookieConsent from "@/components/ui/cookie-consent";
 import { PostHogProvider } from "@/components/providers/posthog";
+import { getBlogPosts } from "@/lib/get-blog-posts";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,18 +24,24 @@ export const metadata: Metadata = {
     "Build powerful AI agents that work predictably in production. Transform your business with intelligent automation and AI-powered workflows.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const allPosts = await getBlogPosts();
+  const latestBlogPosts = allPosts.slice(0, 5).map((p) => ({
+    title: p.title,
+    slug: p.slug,
+  }));
+
   return (
     <html lang="de">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <PostHogProvider>
-          <Navigation />
+          <Navigation latestBlogPosts={latestBlogPosts} />
 
           {children}
 

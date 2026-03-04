@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
+import type { BlogTagId } from "@/lib/blog-tags";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+
+export const blogMeta = {
+  slug: "wie-wirkt-sich-ki-auf-den-grosshandel-aus",
+  author: "Max Hänsel",
+  date: "2026-02-23",
+  image: "/images/wholesale-planning.jpg",
+  tags: ["ki", "grosshandel", "automatisierung", "supply-chain"] as BlogTagId[],
+};
 
 export const metadata: Metadata = {
   title:

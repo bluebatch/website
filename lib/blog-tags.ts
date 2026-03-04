@@ -17,6 +17,8 @@ export const blogTags: BlogTag[] = [
   { id: "development", label: "Development" },
 ];
 
+export type BlogTagId = (typeof blogTags)[number]["id"];
+
 export function getTagById(id: string): BlogTag | undefined {
   return blogTags.find((tag) => tag.id === id);
 }
