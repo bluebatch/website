@@ -320,19 +320,13 @@ export default function Navigation() {
               transition={{ duration: 0.4, delay: 0.1 }}
               className="flex items-center"
             >
-              <Link href="/" className="flex items-center gap-2">
+              <Link href="/" className="flex items-center">
                 <Image
-                  src={"/logo.png"}
-                  width={46}
+                  src="/logo/Bluebatch_white-with-text.svg"
+                  width={160}
                   height={46}
-                  alt="asd"
-                ></Image>
-                {/* <div className="w-10 h-10 bg-gradient-to-br from-secondary-700 to-secondary-400 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">B</span>
-                </div> */}
-                <span className="text-xl font-bold text-gray-900">
-                  blue<span className="text-primary-600">batch</span>
-                </span>
+                  alt="Bluebatch Logo"
+                />
               </Link>
             </motion.div>
 

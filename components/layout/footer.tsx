@@ -62,16 +62,13 @@ export default function Footer() {
           {/* Left Column - Logo & Info */}
           <div className="space-y-6">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center">
               <Image
-                src="/logo.png"
+                src="/logo/Bluebatch_dark-with-text.svg"
                 alt="Bluebatch Logo"
-                width={46}
+                width={160}
                 height={46}
               />
-              <span className="text-xl font-bold text-white">
-                blue<span className="text-secondary-500">batch</span>
-              </span>
             </Link>
 
             {/* Description */}
