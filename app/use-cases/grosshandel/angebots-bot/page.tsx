@@ -3,6 +3,8 @@ import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
+import { getRewriteOverrides } from "@/lib/get-rewrites";
+import { rewriteSiteConfig } from "./rewrite.site";
 import Hero2Column, {
   Hero2ColumnTextColumn,
   Hero2ColumnMediaColumn,
@@ -37,37 +39,55 @@ export const pageConfig: PageConfig = {
     "Automatische Angebotserstellung und -versand basierend auf Kundenanfragen.",
 };
 
-export const metadata: Metadata = {
+const defaultMeta = {
   title: "Angebots-Bot – Großhandel | Bluebatch",
   description:
     "Wie Bluebatch Großhändlern hilft, Angebote automatisch zu erstellen und zu versenden. 21x höhere Qualifizierungsrate.",
-  openGraph: {
-    title: "Angebots-Bot – Großhandel | Bluebatch",
-    description:
-      "Von der Kundenanfrage zum professionellen Angebot in Minuten. 21x höhere Qualifizierungsrate.",
-    type: "website",
-    locale: "de_DE",
-    siteName: "Bluebatch",
-    images: [
-      {
-        url: "/images/bluebatch-social-cover.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Bluebatch Angebots-Bot",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Angebots-Bot – Großhandel | Bluebatch",
-    description:
-      "Von der Kundenanfrage zum professionellen Angebot in Minuten. 21x höhere Qualifizierungsrate.",
-    images: ["/images/bluebatch-social-cover.jpg"],
-  },
-  alternates: {
-    canonical: "/use-cases/grosshandel/angebots-bot",
-  },
+  ogDescription:
+    "Von der Kundenanfrage zum professionellen Angebot in Minuten. 21x höhere Qualifizierungsrate.",
 };
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const overrides = getRewriteOverrides(rewriteSiteConfig, params);
+
+  const title = overrides?.metaTitle ?? defaultMeta.title;
+  const description = overrides?.metaDescription ?? defaultMeta.description;
+  const canonical = overrides?.source ?? "/use-cases/grosshandel/angebots-bot";
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description: overrides?.metaDescription ?? defaultMeta.ogDescription,
+      type: "website",
+      locale: "de_DE",
+      siteName: "Bluebatch",
+      images: [
+        {
+          url: "/images/bluebatch-social-cover.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Bluebatch Angebots-Bot",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: overrides?.metaDescription ?? defaultMeta.ogDescription,
+      images: ["/images/bluebatch-social-cover.jpg"],
+    },
+    alternates: {
+      canonical,
+    },
+  };
+}
 
 const phases = [
   {
@@ -104,15 +124,24 @@ const phases = [
   },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  const overrides = getRewriteOverrides(rewriteSiteConfig, params);
+
   return (
     <>
       <ContentWrapper isFirstSection>
         <Hero2Column>
           <Hero2ColumnTextColumn>
-            <Hero2ColumnPreHeadline>Angebots-Bot</Hero2ColumnPreHeadline>
+            <Hero2ColumnPreHeadline>
+              {overrides?.preHeadline ?? "Angebots-Bot"}
+            </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Von der Anfrage zum Angebot in Minuten
+              {overrides?.headline ?? "Von der Anfrage zum Angebot in Minuten"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Leads, die innerhalb von 5 Minuten kontaktiert werden, haben eine

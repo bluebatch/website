@@ -1,10 +1,14 @@
 import type { NextConfig } from "next";
+import { collectRewriteRules } from "./lib/get-rewrites";
 
 const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
 
   async rewrites() {
+    const siteRewrites = collectRewriteRules();
+
     return [
+      ...siteRewrites,
       {
         source: "/ingest/static/:path*",
         destination: "https://eu-assets.i.posthog.com/static/:path*",
