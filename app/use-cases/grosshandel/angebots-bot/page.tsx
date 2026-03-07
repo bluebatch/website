@@ -57,7 +57,7 @@ export async function generateMetadata({
 
   const title = overrides?.metaTitle ?? defaultMeta.title;
   const description = overrides?.metaDescription ?? defaultMeta.description;
-  const canonical = overrides?.source ?? "/use-cases/grosshandel/angebots-bot";
+  const canonical = "/use-cases/grosshandel/angebots-bot";
 
   return {
     title,

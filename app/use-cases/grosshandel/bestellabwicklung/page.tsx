@@ -3,6 +3,8 @@ import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
+import { getRewriteOverrides } from "@/lib/get-rewrites";
+import { rewriteSiteConfig } from "./rewrite.site";
 import Hero2Column, {
   Hero2ColumnTextColumn,
   Hero2ColumnMediaColumn,
@@ -41,47 +43,74 @@ export const pageConfig: PageConfig = {
     "Bestellungen automatisch erfassen, validieren und weiterleiten – ohne manuelle Eingriffe.",
 };
 
-export const metadata: Metadata = {
+const defaultMeta = {
   title: "Bestellabwicklung – Großhandel | Bluebatch",
   description:
     "Wie Bluebatch die Bestellabwicklung im Großhandel automatisiert – von der Erfassung bis zur Auslieferung.",
-  openGraph: {
-    title: "Bestellabwicklung – Großhandel | Bluebatch",
-    description:
-      "Von der Bestellung zur Auslieferung – vollautomatisch. 80-90% schnellere Bearbeitung.",
-    type: "website",
-    locale: "de_DE",
-    siteName: "Bluebatch",
-    images: [
-      {
-        url: "/images/bluebatch-social-cover.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Bluebatch Bestellabwicklung",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bestellabwicklung – Großhandel | Bluebatch",
-    description:
-      "Von der Bestellung zur Auslieferung – vollautomatisch. 80-90% schnellere Bearbeitung.",
-    images: ["/images/bluebatch-social-cover.jpg"],
-  },
-  alternates: {
-    canonical: "/use-cases/grosshandel/bestellabwicklung",
-  },
+  ogDescription:
+    "Von der Bestellung zur Auslieferung – vollautomatisch. 80-90% schnellere Bearbeitung.",
 };
 
-export default function Page() {
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const overrides = getRewriteOverrides(rewriteSiteConfig, params);
+
+  const title = overrides?.metaTitle ?? defaultMeta.title;
+  const description = overrides?.metaDescription ?? defaultMeta.description;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description: overrides?.metaDescription ?? defaultMeta.ogDescription,
+      type: "website",
+      locale: "de_DE",
+      siteName: "Bluebatch",
+      images: [
+        {
+          url: "/images/bluebatch-social-cover.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Bluebatch Bestellabwicklung",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: overrides?.metaDescription ?? defaultMeta.ogDescription,
+      images: ["/images/bluebatch-social-cover.jpg"],
+    },
+    alternates: {
+      canonical: "/use-cases/grosshandel/bestellabwicklung",
+    },
+  };
+}
+
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  const overrides = getRewriteOverrides(rewriteSiteConfig, params);
+
   return (
     <>
       <ContentWrapper isFirstSection>
         <Hero2Column>
           <Hero2ColumnTextColumn>
-            <Hero2ColumnPreHeadline>Bestellabwicklung</Hero2ColumnPreHeadline>
+            <Hero2ColumnPreHeadline>
+              {overrides?.preHeadline ?? "Bestellabwicklung"}
+            </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Von der Bestellung zur Auslieferung – vollautomatisch
+              {overrides?.headline ??
+                "Von der Bestellung zur Auslieferung – vollautomatisch"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Bestellungen werden validiert, an das Lager geroutet,

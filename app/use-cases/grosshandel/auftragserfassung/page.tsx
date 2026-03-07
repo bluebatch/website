@@ -3,6 +3,8 @@ import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
+import { getRewriteOverrides } from "@/lib/get-rewrites";
+import { rewriteSiteConfig } from "./rewrite.site";
 import BackgroundHero from "@/components/heroes/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -39,37 +41,54 @@ export const pageConfig: PageConfig = {
     "Bestellungen aus E-Mails, Faxen und Portalen automatisch erfassen und verarbeiten.",
 };
 
-export const metadata: Metadata = {
+const defaultMeta = {
   title: "Auftragserfassung – Großhandel | Bluebatch",
   description:
     "Wie Bluebatch die Auftragserfassung im Großhandel automatisiert. Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen.",
-  openGraph: {
-    title: "Auftragserfassung – Großhandel | Bluebatch",
-    description:
-      "Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
-    type: "website",
-    locale: "de_DE",
-    siteName: "Bluebatch",
-    images: [
-      {
-        url: "/images/bluebatch-social-cover.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Bluebatch Auftragserfassung",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Auftragserfassung – Großhandel | Bluebatch",
-    description:
-      "Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
-    images: ["/images/bluebatch-social-cover.jpg"],
-  },
-  alternates: {
-    canonical: "/use-cases/grosshandel/auftragserfassung",
-  },
+  ogDescription:
+    "Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
 };
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const overrides = getRewriteOverrides(rewriteSiteConfig, params);
+
+  const title = overrides?.metaTitle ?? defaultMeta.title;
+  const description = overrides?.metaDescription ?? defaultMeta.description;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description: overrides?.metaDescription ?? defaultMeta.ogDescription,
+      type: "website",
+      locale: "de_DE",
+      siteName: "Bluebatch",
+      images: [
+        {
+          url: "/images/bluebatch-social-cover.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Bluebatch Auftragserfassung",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: overrides?.metaDescription ?? defaultMeta.ogDescription,
+      images: ["/images/bluebatch-social-cover.jpg"],
+    },
+    alternates: {
+      canonical: "/use-cases/grosshandel/auftragserfassung",
+    },
+  };
+}
 
 const stats = [
   { value: 75, suffix: "%", label: "Schnellere Bearbeitung" },
@@ -77,7 +96,14 @@ const stats = [
   { value: 24, suffix: "/7", label: "Bestellverarbeitung" },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  const overrides = getRewriteOverrides(rewriteSiteConfig, params);
+
   return (
     <>
       <ContentWrapper isFirstSection noPadding>
@@ -86,12 +112,20 @@ export default function Page() {
           overlayOpacity={0.8}
           opacityBackground="white"
         >
-          <BackgroundHero.TopLabel>Auftragserfassung</BackgroundHero.TopLabel>
+          <BackgroundHero.TopLabel>
+            {overrides?.preHeadline ?? "Auftragserfassung"}
+          </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
-            Bestellungen aus{" "}
-            <BackgroundHero.Highlight>allen Kanälen</BackgroundHero.Highlight>
-            <br />
-            automatisch erfassen
+            {overrides?.headline ?? (
+              <>
+                Bestellungen aus{" "}
+                <BackgroundHero.Highlight>
+                  allen Kanälen
+                </BackgroundHero.Highlight>
+                <br />
+                automatisch erfassen
+              </>
+            )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
             E-Mail, PDF, Fax, EDI oder Portal – n8n extrahiert alle Daten,
