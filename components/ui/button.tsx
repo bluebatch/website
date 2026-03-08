@@ -17,7 +17,7 @@ export default function Button({
   className = "",
 }: ButtonProps) {
   const baseClasses =
-    "px-8 py-4 font-semibold transition-all inline-flex items-center justify-center gap-2";
+    "px-8 py-4 font-semibold transition-all inline-flex items-center justify-center gap-2 cursor-pointer";
 
   const variantClasses = {
     primary:

@@ -1,5 +1,9 @@
+"use client";
+
 import Button from "@/components/ui/button";
 import { ReactNode } from "react";
+import { useContactModal } from "@/components/contact/contact-modal";
+import { ContactChannel } from "@/components/contact/contact-channel";
 
 type ContactIcon = "phone" | "mail" | "calendar" | "chat";
 type ContactSize = "sm" | "md" | "lg";
@@ -7,6 +11,7 @@ type ContactSize = "sm" | "md" | "lg";
 interface ContactButtonProps {
   children?: ReactNode;
   href?: string;
+  channels?: ContactChannel[];
   iconOnly?: boolean;
   icon?: ContactIcon;
   showIcon?: boolean;
@@ -88,9 +93,12 @@ const ctaClasses =
   "!bg-gradient-to-r !from-cta-400 !to-cta-600 !text-white hover:!from-cta-500 hover:!to-cta-700 !shadow-lg hover:!shadow-xl";
 const darkClasses = "!bg-gray-900 !text-white hover:!bg-gray-800";
 
+export { ContactChannel };
+
 export default function ContactButton({
   children,
-  href = "/contact",
+  href,
+  channels,
   iconOnly = false,
   icon = "mail",
   showIcon = true,
@@ -98,21 +106,65 @@ export default function ContactButton({
   size = "md",
   className = "",
 }: ContactButtonProps) {
+  const { openForm, openMeeting, openChannels } = useContactModal();
+
   const sizeClass = iconOnly ? iconOnlySizeClasses[size] : sizeClasses[size];
   const colorClass = dark ? darkClasses : ctaClasses;
-
   const combinedClassName = `${sizeClass} ${colorClass} ${className}`.trim();
+
+  // Link mode: explicit href that is NOT /contact
+  const isLinkMode = href && href !== "/contact";
+
+  const handleClick = () => {
+    const activeChannels = channels ?? [
+      ContactChannel.Mail,
+      ContactChannel.Meeting,
+      ContactChannel.Phone,
+    ];
+
+    if (activeChannels.length === 1) {
+      switch (activeChannels[0]) {
+        case ContactChannel.Mail:
+          openForm();
+          break;
+        case ContactChannel.Meeting:
+          openMeeting();
+          break;
+        case ContactChannel.Phone:
+          window.location.href = "tel:+491634412159";
+          break;
+      }
+    } else {
+      openChannels(activeChannels);
+    }
+  };
+
+  if (isLinkMode) {
+    if (iconOnly) {
+      return (
+        <Button href={href} className={combinedClassName}>
+          {icons[icon]}
+        </Button>
+      );
+    }
+    return (
+      <Button href={href} className={combinedClassName}>
+        {showIcon && icons[icon]}
+        {children || "Kontakt"}
+      </Button>
+    );
+  }
 
   if (iconOnly) {
     return (
-      <Button href={href} className={combinedClassName}>
+      <Button onClick={handleClick} className={combinedClassName}>
         {icons[icon]}
       </Button>
     );
   }
 
   return (
-    <Button href={href} className={combinedClassName}>
+    <Button onClick={handleClick} className={combinedClassName}>
       {showIcon && icons[icon]}
       {children || "Kontakt"}
     </Button>

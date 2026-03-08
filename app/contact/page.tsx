@@ -10,11 +10,7 @@ import Hero2Column, {
   Hero2ColumnDescription,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
-import SimpleGrid from "@/components/layout/simple-grid";
-import ContactModal from "@/components/contact/contact-modal";
-import ContactMailButton from "@/components/contact/mail/contact-mail-button";
-import ContactMeetingButton from "@/components/contact/meeting/contact-meeting-button";
-import ContactPhoneCard from "@/components/contact/phone/contact-phone-card";
+import ContactChannelCards from "@/components/contact/contact-channel-cards";
 
 export const metadata: Metadata = {
   title: "Kontakt | Bluebatch - KI-Automatisierung & Beratung",
@@ -35,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ContactModal>
+    <>
       <ContentWrapper isFirstSection>
         <Hero2Column>
           <Hero2ColumnTextColumn>
@@ -55,11 +51,7 @@ export default function Page() {
       </ContentWrapper>
 
       <ContentWrapper>
-        <SimpleGrid cols={3}>
-          <ContactMailButton />
-          <ContactMeetingButton />
-          <ContactPhoneCard />
-        </SimpleGrid>
+        <ContactChannelCards />
       </ContentWrapper>
 
       <ContentWrapper noPadding>
@@ -68,6 +60,6 @@ export default function Page() {
       <ContentWrapper noPadding>
         <ConsultationCtaDefault />
       </ContentWrapper>
-    </ContactModal>
+    </>
   );
 }

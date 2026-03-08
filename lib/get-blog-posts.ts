@@ -1,12 +1,15 @@
 import fs from "fs";
 import path from "path";
 import type { BlogTagId } from "@/lib/blog-tags";
+import { getAuthor } from "@/lib/blog-authors";
 
 export interface BlogPost {
   slug: string;
   title: string;
   description: string;
   author: string;
+  authorImage?: string;
+  authorLinkedIn?: string;
   date: string;
   image: string;
   tags: BlogTagId[];
@@ -31,11 +34,15 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
       typeof mod.metadata?.title === "string" ? mod.metadata.title : "";
     const title = rawTitle.replace(/ \| Bluebatch$/, "");
 
+    const author = getAuthor(mod.blogMeta.author);
+
     posts.push({
       slug: mod.blogMeta.slug,
       title,
       description: mod.metadata?.description ?? "",
-      author: mod.blogMeta.author,
+      author: author.name,
+      authorImage: author.image,
+      authorLinkedIn: author.linkedIn,
       date: mod.blogMeta.date,
       image: mod.blogMeta.image,
       tags: mod.blogMeta.tags,

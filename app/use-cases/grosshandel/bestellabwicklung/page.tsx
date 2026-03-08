@@ -62,9 +62,21 @@ export async function generateMetadata({
   const title = overrides?.metaTitle ?? defaultMeta.title;
   const description = overrides?.metaDescription ?? defaultMeta.description;
 
+  const defaultKeywords = [
+    "Bestellabwicklung",
+    "automatische Bestellabwicklung",
+    "Bestellabwicklung automatisieren",
+    "Großhandel Bestellprozess",
+    "Order Processing Automation",
+    "Fulfillment Automatisierung",
+    "ERP Bestellabwicklung",
+    "Bluebatch",
+  ];
+
   return {
     title,
     description,
+    keywords: overrides?.keywords ?? defaultKeywords,
     openGraph: {
       title,
       description: overrides?.metaDescription ?? defaultMeta.ogDescription,

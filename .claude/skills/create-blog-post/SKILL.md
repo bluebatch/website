@@ -15,7 +15,7 @@ Read the provided `.md` file. It MUST have YAML frontmatter delimited by `---`:
 slug: my-blog-post-slug
 title: "The Blog Post Title"
 description: "SEO description for the post"
-author: "Author Name"
+author: "Author Name"  # Must match a key in lib/blog-authors.ts
 date: "2026-02-27"
 image: "/blog/my-blog-post-slug/hero.png"
 readTime: "8 Min. Lesezeit"
@@ -179,7 +179,12 @@ export default function Page() {
       <BlogHero>
         <BlogHero.Headline>{title}</BlogHero.Headline>
         <BlogHero.Meta>
-          <BlogHero.Author>{author}</BlogHero.Author>
+          <BlogHero.Author
+            image="{authorImage or omit}"
+            linkedIn="{authorLinkedIn or omit}"
+          >
+            {author}
+          </BlogHero.Author>
           <BlogHero.ReadTime>{readTime}</BlogHero.ReadTime>
           <BlogHero.Date dateTime="{date}">{formatted date}</BlogHero.Date>
         </BlogHero.Meta>

@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import ContentWrapper from "@/components/layout/content-wrapper";
-import Typo from "@/components/ui/typo";
-import Link from "next/link";
 import BlogListFiltered from "@/components/blog/blog-list-filtered";
 import { getBlogPosts } from "@/lib/get-blog-posts";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import Hero2Column, {
+  Hero2ColumnTextColumn,
+  Hero2ColumnMediaColumn,
+  Hero2ColumnPreHeadline,
+  Hero2ColumnHeadline,
+  Hero2ColumnDescription,
+  Hero2ColumnImage,
+} from "@/components/heroes/hero-2-column";
 
 export const metadata: Metadata = {
   title: "Blog | Bluebatch - Workflow-Automatisierung & n8n Expertise",
@@ -28,18 +35,20 @@ export default async function BlogPage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <ContentWrapper
-        isFirstSection
-        colorScheme="gradient-cool"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <Typo.H1 className="mb-6">Bluebatch Blog</Typo.H1>
-          <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
-            Expertenwissen zu Workflow-Automatisierung, n8n Custom Nodes und
-            effiziente Geschäftsprozesse
-          </Typo.Paragraph>
-        </div>
+      <ContentWrapper isFirstSection>
+        <Hero2Column>
+          <Hero2ColumnTextColumn>
+            <Hero2ColumnPreHeadline>Blog</Hero2ColumnPreHeadline>
+            <Hero2ColumnHeadline>Bluebatch Blog</Hero2ColumnHeadline>
+            <Hero2ColumnDescription>
+              Expertenwissen zu Workflow-Automatisierung, n8n Custom Nodes und
+              effiziente Geschäftsprozesse
+            </Hero2ColumnDescription>
+          </Hero2ColumnTextColumn>
+          <Hero2ColumnMediaColumn>
+            <Hero2ColumnImage src="/images/team-collaboration.jpg" type="image" />
+          </Hero2ColumnMediaColumn>
+        </Hero2Column>
       </ContentWrapper>
 
       {/* Blog Posts Grid with Filter */}
@@ -51,21 +60,8 @@ export default async function BlogPage() {
         </div>
       </ContentWrapper>
 
-      {/* Call to Action */}
-      <ContentWrapper colorScheme="gradient-cool">
-        <div className="max-w-4xl mx-auto text-center">
-          <Typo.H2 className="mb-6">Benötigen Sie Unterstützung?</Typo.H2>
-          <Typo.Paragraph className="text-lg mb-8">
-            Unser Team steht Ihnen bei der Entwicklung von Custom Nodes und
-            Workflow-Automatisierung zur Seite.
-          </Typo.Paragraph>
-          <Link
-            href="/contact"
-            className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
-          >
-            Jetzt Kontakt aufnehmen
-          </Link>
-        </div>
+      <ContentWrapper noPadding>
+        <ConsultationCtaDefault />
       </ContentWrapper>
     </>
   );

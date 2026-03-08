@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { getRewriteOverrides } from "@/lib/get-rewrites";
+import { rewriteSiteConfig } from "./rewrite.site";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -20,37 +22,66 @@ import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 import { InternalLinkLabel } from "@/components/buttons/internal-link";
 
-export const metadata: Metadata = {
+const defaultMeta = {
   title: "n8n Workflow-Automatisierung | Bluebatch",
   description:
     "n8n ist die Open-Source Workflow-Automatisierungsplattform mit 1.200+ Integrationen. Erfahren Sie, wie Bluebatch n8n für Ihr Unternehmen einsetzt.",
-  openGraph: {
-    title: "n8n Workflow-Automatisierung | Bluebatch",
-    description:
-      "Die Open-Source Automatisierungsplattform für Enterprise-Workflows. Self-hosted, flexibel, skalierbar.",
-    type: "website",
-    locale: "de_DE",
-    siteName: "Bluebatch",
-    images: [
-      {
-        url: "/images/bluebatch-social-cover.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Bluebatch n8n Automatisierung",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "n8n Workflow-Automatisierung | Bluebatch",
-    description:
-      "n8n: Open-Source Workflow-Automatisierung mit 1.200+ Integrationen.",
-    images: ["/images/bluebatch-social-cover.jpg"],
-  },
-  alternates: {
-    canonical: "/tools/automation-tools/n8n",
-  },
+  ogDescription:
+    "Die Open-Source Automatisierungsplattform für Enterprise-Workflows. Self-hosted, flexibel, skalierbar.",
 };
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const overrides = getRewriteOverrides(rewriteSiteConfig, params);
+
+  const title = overrides?.metaTitle ?? defaultMeta.title;
+  const description = overrides?.metaDescription ?? defaultMeta.description;
+
+  const defaultKeywords = [
+    "n8n",
+    "n8n Automatisierung",
+    "Workflow Automatisierung",
+    "Open Source Automation",
+    "n8n Integrationen",
+    "Self-Hosted Automation",
+    "n8n Workflow Builder",
+    "Bluebatch",
+  ];
+
+  return {
+    title,
+    description,
+    keywords: overrides?.keywords ?? defaultKeywords,
+    openGraph: {
+      title,
+      description: overrides?.metaDescription ?? defaultMeta.ogDescription,
+      type: "website",
+      locale: "de_DE",
+      siteName: "Bluebatch",
+      images: [
+        {
+          url: "/images/bluebatch-social-cover.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Bluebatch n8n Automatisierung",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: overrides?.metaDescription ?? defaultMeta.ogDescription,
+      images: ["/images/bluebatch-social-cover.jpg"],
+    },
+    alternates: {
+      canonical: "/tools/automation-tools/n8n",
+    },
+  };
+}
 
 const features = [
   {
@@ -138,15 +169,25 @@ const bluebatchServices = [
   },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  const overrides = getRewriteOverrides(rewriteSiteConfig, params);
+
   return (
     <>
       <ContentWrapper isFirstSection>
         <Hero2Column>
           <Hero2ColumnTextColumn>
-            <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
+            <Hero2ColumnPreHeadline>
+              {overrides?.preHeadline ?? "Tools"}
+            </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              n8n – Die Open-Source Workflow-Automatisierung
+              {overrides?.headline ??
+                "n8n – Die Open-Source Workflow-Automatisierung"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               n8n verbindet visuelle Prozessgestaltung mit der Flexibilität von

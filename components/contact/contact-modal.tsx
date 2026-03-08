@@ -1,22 +1,31 @@
 "use client";
 
-import { useState, useEffect, ReactNode } from "react";
+import {
+  useState,
+  useEffect,
+  ReactNode,
+  createContext,
+  useContext,
+} from "react";
+import Script from "next/script";
+import { ContactChannel } from "./contact-channel";
+import ContactChannelCards from "./contact-channel-cards";
 
-type ModalType = "form" | "meeting" | null;
+type ModalType = "form" | "meeting" | "channels" | null;
 
 interface ContactModalContextProps {
   activeModal: ModalType;
   openForm: () => void;
   openMeeting: () => void;
+  openChannels: (channels?: ContactChannel[]) => void;
   close: () => void;
 }
-
-import { createContext, useContext } from "react";
 
 const ContactModalContext = createContext<ContactModalContextProps>({
   activeModal: null,
   openForm: () => {},
   openMeeting: () => {},
+  openChannels: () => {},
   close: () => {},
 });
 
@@ -26,6 +35,12 @@ export function useContactModal() {
 
 export default function ContactModal({ children }: { children: ReactNode }) {
   const [activeModal, setActiveModal] = useState<ModalType>(null);
+  const [visibleChannels, setVisibleChannels] = useState<ContactChannel[]>([
+    ContactChannel.Mail,
+    ContactChannel.Meeting,
+    ContactChannel.Phone,
+  ]);
+  const [cameFromChannels, setCameFromChannels] = useState(false);
 
   useEffect(() => {
     if (activeModal) {
@@ -38,16 +53,81 @@ export default function ContactModal({ children }: { children: ReactNode }) {
     };
   }, [activeModal]);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && activeModal) {
+        setActiveModal(null);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [activeModal]);
+
+  const openForm = () => {
+    if (activeModal === "channels") setCameFromChannels(true);
+    setActiveModal("form");
+  };
+
+  const openMeeting = () => {
+    if (activeModal === "channels") setCameFromChannels(true);
+    setActiveModal("meeting");
+  };
+
+  const openChannels = (channels?: ContactChannel[]) => {
+    setCameFromChannels(false);
+    setVisibleChannels(
+      channels ?? [
+        ContactChannel.Mail,
+        ContactChannel.Meeting,
+        ContactChannel.Phone,
+      ],
+    );
+    setActiveModal("channels");
+  };
+
+  const close = () => {
+    setActiveModal(null);
+    setCameFromChannels(false);
+  };
+
+  const goBack = () => {
+    setActiveModal("channels");
+    setCameFromChannels(false);
+  };
+
+  const modalMaxWidth =
+    activeModal === "meeting"
+      ? "max-w-5xl"
+      : activeModal === "channels"
+        ? "max-w-4xl"
+        : "max-w-2xl";
+
   return (
     <ContactModalContext.Provider
       value={{
         activeModal,
-        openForm: () => setActiveModal("form"),
-        openMeeting: () => setActiveModal("meeting"),
-        close: () => setActiveModal(null),
+        openForm,
+        openMeeting,
+        openChannels,
+        close,
       }}
     >
       {children}
+
+      {/* HubSpot form container — always in DOM so script can populate it */}
+      <div className="fixed -left-[9999px] aria-hidden">
+        <div
+          id="hs-contact-form"
+          className="hs-form-frame"
+          data-region="eu1"
+          data-form-id="95d3395a-021c-4fd1-9768-1cdc4950c2bf"
+          data-portal-id="146998643"
+        />
+      </div>
+      <Script
+        src="https://js-eu1.hsforms.net/forms/embed/146998643.js"
+        strategy="afterInteractive"
+      />
 
       {/* Modal Overlay */}
       <div
@@ -56,19 +136,17 @@ export default function ContactModal({ children }: { children: ReactNode }) {
             ? "visible opacity-100 bg-black/60 backdrop-blur-sm"
             : "invisible opacity-0"
         }`}
-        onClick={() => setActiveModal(null)}
+        onClick={close}
       >
         <div
-          className={`relative bg-white rounded-2xl shadow-2xl w-full mx-4 transition-transform duration-200 ${
-            activeModal === "meeting"
-              ? "max-w-5xl"
-              : "max-w-2xl max-h-[90vh] overflow-y-auto"
+          className={`relative bg-white rounded-2xl shadow-2xl w-full mx-4 transition-all duration-200 ${modalMaxWidth} ${
+            activeModal === "channels" ? "" : "max-h-[90vh] overflow-y-auto"
           } ${activeModal ? "scale-100" : "scale-95"}`}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}
           <button
-            onClick={() => setActiveModal(null)}
+            onClick={close}
             className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer"
           >
             <svg
@@ -86,20 +164,63 @@ export default function ContactModal({ children }: { children: ReactNode }) {
             </svg>
           </button>
 
-          <div className="p-8 min-h-[500px]">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              {activeModal === "form" ? "Anfrage senden" : "Meeting buchen"}
-            </h2>
+          <div className="p-8">
+            {activeModal === "channels" && (
+              <>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Kontakt aufnehmen
+                </h2>
+                <ContactChannelCards channels={visibleChannels} />
+              </>
+            )}
 
-            <div className={activeModal === "form" ? "block" : "hidden"}>
+            <div className={activeModal === "form" ? "block min-h-[500px]" : "hidden"}>
+              {cameFromChannels && activeModal === "form" && (
+                <BackButton onClick={goBack} />
+              )}
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Anfrage senden
+              </h2>
               <FormPortal />
             </div>
 
-            <MeetingIframe active={activeModal === "meeting"} />
+            <div className={activeModal === "meeting" ? "block min-h-[500px]" : "hidden"}>
+              {cameFromChannels && activeModal === "meeting" && (
+                <BackButton onClick={goBack} />
+              )}
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Meeting buchen
+              </h2>
+              <MeetingIframe active={activeModal === "meeting"} />
+            </div>
           </div>
         </div>
       </div>
     </ContactModalContext.Provider>
+  );
+}
+
+function BackButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors mb-4 cursor-pointer"
+    >
+      <svg
+        className="w-4 h-4"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15 19l-7-7 7-7"
+        />
+      </svg>
+      Zurück
+    </button>
   );
 }
 

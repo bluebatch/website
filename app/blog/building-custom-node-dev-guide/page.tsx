@@ -53,7 +53,12 @@ export default function Page() {
         </BlogHero.Headline>
 
         <BlogHero.Meta>
-          <BlogHero.Author>Max Hänsel</BlogHero.Author>
+          <BlogHero.Author
+            image="/mh-small.webp"
+            linkedIn="https://www.linkedin.com/in/maximilianhaensel/"
+          >
+            Max Hänsel
+          </BlogHero.Author>
           <BlogHero.ReadTime>15 Min. Lesezeit</BlogHero.ReadTime>
           <BlogHero.Date dateTime="2025-02-16">16. Februar 2025</BlogHero.Date>
         </BlogHero.Meta>

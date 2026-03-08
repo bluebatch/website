@@ -59,9 +59,21 @@ export async function generateMetadata({
   const description = overrides?.metaDescription ?? defaultMeta.description;
   const canonical = "/use-cases/grosshandel/angebots-bot";
 
+  const defaultKeywords = [
+    "Angebots-Bot",
+    "Angebotserstellung automatisieren",
+    "automatische Angebotserstellung",
+    "Großhandel Angebote",
+    "KI Angebotserstellung",
+    "ERP Angebotsautomatisierung",
+    "PDF Angebot generieren",
+    "Bluebatch",
+  ];
+
   return {
     title,
     description,
+    keywords: overrides?.keywords ?? defaultKeywords,
     openGraph: {
       title,
       description: overrides?.metaDescription ?? defaultMeta.ogDescription,

@@ -6,6 +6,7 @@ import Footer from "@/components/layout/footer";
 import CookieConsent from "@/components/ui/cookie-consent";
 import { PostHogProvider } from "@/components/providers/posthog";
 import { getBlogPosts } from "@/lib/get-blog-posts";
+import ContactModal from "@/components/contact/contact-modal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,12 +42,14 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <PostHogProvider>
-          <Navigation latestBlogPosts={latestBlogPosts} />
+          <ContactModal>
+            <Navigation latestBlogPosts={latestBlogPosts} />
 
-          {children}
+            {children}
 
-          <Footer />
-          <CookieConsent />
+            <Footer />
+            <CookieConsent />
+          </ContactModal>
         </PostHogProvider>
       </body>
     </html>

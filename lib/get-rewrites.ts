@@ -7,6 +7,7 @@ export interface RewriteOverride {
   headline?: string;
   metaTitle?: string;
   metaDescription?: string;
+  keywords?: string[];
 }
 
 export interface RewriteSiteConfig {
