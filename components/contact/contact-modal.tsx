@@ -44,12 +44,33 @@ export default function ContactModal({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (activeModal) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
       document.body.style.overflow = "hidden";
     } else {
+      const top = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
       document.body.style.overflow = "";
+      if (top) {
+        window.scrollTo(0, parseInt(top, 10) * -1);
+      }
     }
     return () => {
+      const top = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
       document.body.style.overflow = "";
+      if (top) {
+        window.scrollTo(0, parseInt(top, 10) * -1);
+      }
     };
   }, [activeModal]);
 
@@ -131,7 +152,7 @@ export default function ContactModal({ children }: { children: ReactNode }) {
 
       {/* Modal Overlay */}
       <div
-        className={`fixed inset-0 z-[100] flex items-center justify-center transition-all duration-200 ${
+        className={`fixed inset-0 z-[100] flex items-end md:items-center justify-center transition-all duration-200 overscroll-none ${
           activeModal
             ? "visible opacity-100 bg-black/60 backdrop-blur-sm"
             : "invisible opacity-0"
@@ -139,35 +160,42 @@ export default function ContactModal({ children }: { children: ReactNode }) {
         onClick={close}
       >
         <div
-          className={`relative bg-white rounded-2xl shadow-2xl w-full mx-4 transition-all duration-200 ${modalMaxWidth} ${
-            activeModal === "channels" ? "" : "max-h-[90vh] overflow-y-auto"
-          } ${activeModal ? "scale-100" : "scale-95"}`}
+          className={`bg-white w-full h-full md:h-auto flex flex-col md:rounded-2xl md:shadow-2xl md:mx-4 md:max-h-[90vh] ${modalMaxWidth} transition-all duration-200 ${activeModal ? "scale-100" : "scale-95"}`}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Close button */}
-          <button
-            onClick={close}
-            className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer"
-          >
-            <svg
-              className="w-5 h-5 text-gray-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {/* Fixed header with back + close */}
+          <div className="shrink-0 bg-white flex items-center justify-between px-5 md:px-8 pt-4 pb-2 md:rounded-t-2xl">
+            <div>
+              {cameFromChannels &&
+                (activeModal === "form" || activeModal === "meeting") && (
+                  <BackButton onClick={goBack} />
+                )}
+            </div>
+            <button
+              onClick={close}
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
+              <svg
+                className="w-5 h-5 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
 
-          <div className="p-8">
+          {/* Scrollable content */}
+          <div className="flex-1 overflow-y-auto px-5 md:px-8 pb-5 md:pb-8">
             {activeModal === "channels" && (
               <>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
                   Kontakt aufnehmen
                 </h2>
                 <ContactChannelCards channels={visibleChannels} />
@@ -175,20 +203,14 @@ export default function ContactModal({ children }: { children: ReactNode }) {
             )}
 
             <div className={activeModal === "form" ? "block min-h-[500px]" : "hidden"}>
-              {cameFromChannels && activeModal === "form" && (
-                <BackButton onClick={goBack} />
-              )}
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
                 Anfrage senden
               </h2>
               <FormPortal />
             </div>
 
             <div className={activeModal === "meeting" ? "block min-h-[500px]" : "hidden"}>
-              {cameFromChannels && activeModal === "meeting" && (
-                <BackButton onClick={goBack} />
-              )}
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
                 Meeting buchen
               </h2>
               <MeetingIframe active={activeModal === "meeting"} />
@@ -204,7 +226,7 @@ function BackButton({ onClick }: { onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors mb-4 cursor-pointer"
+      className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer"
     >
       <svg
         className="w-4 h-4"

@@ -11,12 +11,12 @@ const gridCols: Record<number, string> = {
 };
 
 const cardClass =
-  "group flex flex-col items-center gap-4 p-10 rounded-2xl border-2 border-gray-200 bg-white hover:border-primary-500 hover:shadow-lg transition-all cursor-pointer";
+  "group flex flex-col items-center gap-3 md:gap-4 p-5 md:p-10 rounded-2xl border-2 border-gray-200 bg-white hover:border-primary-500 hover:shadow-lg transition-all cursor-pointer";
 const iconWrapperClass =
-  "w-16 h-16 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow";
+  "w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow";
 const titleClass =
-  "text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors";
-const descClass = "text-gray-500 text-center";
+  "text-lg md:text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors";
+const descClass = "text-sm md:text-base text-gray-500 text-center";
 
 interface ContactChannelCardsProps {
   channels?: ContactChannel[];
@@ -34,7 +34,7 @@ export default function ContactChannelCards({
 
   return (
     <div
-      className={`grid grid-cols-1 ${gridCols[visibleChannels.length] || "md:grid-cols-3"} gap-6 md:gap-8`}
+      className={`grid grid-cols-1 ${gridCols[visibleChannels.length] || "md:grid-cols-3"} gap-3 md:gap-8`}
     >
       {visibleChannels.includes(ContactChannel.Mail) && (
         <button onClick={openForm} className={cardClass}>
