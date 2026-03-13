@@ -57,13 +57,16 @@ export async function generateMetadata({
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
 
+  const title =
+    overrides?.metaTitle ??
+    "Workflow-Automatisierung Berlin – n8n, KI & Prozessoptimierung | Bluebatch";
+  const description =
+    overrides?.metaDescription ??
+    "Ihr Partner für Workflow-Automatisierung und KI-Lösungen in Berlin. n8n-Workflows, API-Integrationen und Prozessoptimierung für Startups, Mittelstand und Unternehmen in Deutschlands Startup-Hauptstadt.";
+
   return {
-    title:
-      overrides?.metaTitle ??
-      "Workflow-Automatisierung Berlin – n8n, KI & Prozessoptimierung | Bluebatch",
-    description:
-      overrides?.metaDescription ??
-      "Ihr Partner für Workflow-Automatisierung und KI-Lösungen in Berlin. n8n-Workflows, API-Integrationen und Prozessoptimierung für Startups, Mittelstand und Unternehmen in Deutschlands Startup-Hauptstadt.",
+    title,
+    description,
     keywords: overrides?.keywords ?? [
       "Workflow-Automatisierung Berlin",
       "n8n Berlin",
@@ -72,6 +75,27 @@ export async function generateMetadata({
       "API Integration Berlin",
       "Bluebatch",
     ],
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: "de_DE",
+      siteName: "Bluebatch",
+      images: [
+        {
+          url: "/images/cities/berlin.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Bluebatch Workflow-Automatisierung Berlin",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/cities/berlin.jpg"],
+    },
     alternates: {
       canonical: `/standorte/${metaCustom.slug}`,
     },
@@ -127,7 +151,7 @@ export default async function Page({
       {/* 1. Hero */}
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
-          imageSrc="/images/office-building.jpg"
+          imageSrc="/images/cities/berlin.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >

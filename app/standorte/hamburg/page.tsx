@@ -73,10 +73,37 @@ export async function generateMetadata({
   return {
     title,
     description,
+    keywords: overrides?.keywords ?? [
+      "Workflow-Automatisierung Hamburg",
+      "n8n Hamburg",
+      "KI Automatisierung Hamburg",
+      "Prozessoptimierung Hamburg",
+      "Bluebatch",
+    ],
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: "de_DE",
+      siteName: "Bluebatch",
+      images: [
+        {
+          url: "/images/cities/hamburg.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Bluebatch Workflow-Automatisierung Hamburg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/cities/hamburg.jpg"],
+    },
     alternates: {
       canonical: `/standorte/${metaCustom.slug}`,
     },
-    ...(overrides?.keywords && { keywords: overrides.keywords }),
   };
 }
 
