@@ -728,12 +728,12 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 11: Customer Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
       {/* Section 12: ConsultationCtaDefault */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
 

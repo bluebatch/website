@@ -126,7 +126,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 2: Customer Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
@@ -844,7 +844,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 12: ConsultationCtaDefault (AFTER FAQ) */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

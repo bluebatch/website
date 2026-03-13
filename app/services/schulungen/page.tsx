@@ -373,7 +373,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
@@ -501,8 +501,8 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Pricing Info */}
-      <ContentWrapper colorScheme="gray-light">
-        <div className="max-w-4xl mx-auto text-center">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
+        <div className="text-center">
           <Typo.H2 className="mb-6">Individuelle Angebote</Typo.H2>
           <Typo.Paragraph className="text-gray-600 mb-8">
             Unsere Schulungen werden individuell auf Ihre Anforderungen, Ihr
@@ -547,7 +547,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Contact CTA */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

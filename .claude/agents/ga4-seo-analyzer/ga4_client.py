@@ -206,12 +206,12 @@ class GA4Client:
             dimension_filter=organic_filter
         )
 
-    def get_leads(self, days: int = 28, event_name: str = "kontaktformular_gesendet") -> List[Dict]:
+    def get_leads(self, days: int = 28, event_name: str = "generate_lead") -> List[Dict]:
         """Get lead conversions by landing page.
 
         Args:
             days: Number of days to analyze
-            event_name: The conversion event name (default: kontaktformular_gesendet)
+            event_name: The conversion event name (default: generate_lead)
         """
 
         # Filter for the specific event
@@ -236,7 +236,7 @@ class GA4Client:
             limit=500
         )
 
-    def get_leads_by_page(self, days: int = 28, event_name: str = "kontaktformular_gesendet") -> List[Dict]:
+    def get_leads_by_page(self, days: int = 28, event_name: str = "generate_lead") -> List[Dict]:
         """Get lead conversions aggregated by landing page.
 
         Args:
@@ -265,7 +265,7 @@ class GA4Client:
             limit=100
         )
 
-    def get_leads_by_source(self, days: int = 28, event_name: str = "kontaktformular_gesendet") -> List[Dict]:
+    def get_leads_by_source(self, days: int = 28, event_name: str = "generate_lead") -> List[Dict]:
         """Get lead conversions by traffic source/medium.
 
         Args:
@@ -294,7 +294,7 @@ class GA4Client:
             limit=50
         )
 
-    def get_lead_stats(self, days: int = 28, event_name: str = "kontaktformular_gesendet") -> Dict:
+    def get_lead_stats(self, days: int = 28, event_name: str = "generate_lead") -> Dict:
         """Get overall lead statistics.
 
         Args:
@@ -328,3 +328,19 @@ class GA4Client:
             "conversion_rate": round(total_leads / sessions * 100, 2) if sessions > 0 else 0,
             "event_name": event_name
         }
+
+    def get_event_overview(self, days: int = 28) -> List[Dict]:
+        """Get event counts for all events."""
+
+        order = [OrderBy(
+            metric=OrderBy.MetricOrderBy(metric_name="eventCount"),
+            desc=True
+        )]
+
+        return self._run_report(
+            dimensions=["eventName"],
+            metrics=["eventCount", "totalUsers"],
+            date_range_days=days,
+            order_by=order,
+            limit=50
+        )

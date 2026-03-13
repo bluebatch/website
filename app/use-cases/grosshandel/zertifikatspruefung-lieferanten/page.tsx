@@ -311,11 +311,11 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
 

@@ -150,6 +150,23 @@ export default function TeamPage() {
             </TeamMember>
 
             <TeamMember>
+              <TeamImage src="/mm-small.png" alt="Markus Mosch - Head of Sales" />
+              <TeamName>Markus Mosch</TeamName>
+              <TeamRole>Head of Sales</TeamRole>
+              <TeamDescription>
+                Markus verantwortet den Vertrieb bei Bluebatch und bringt
+                jahrelange Erfahrung in der Personaldienstleistungsbranche mit.
+                Er verbindet Marktverständnis mit Automatisierungsexpertise.
+              </TeamDescription>
+              <TeamTags>
+                <TeamTag variant="primary">Sales</TeamTag>
+                <TeamTag variant="secondary">Personaldienstleistung</TeamTag>
+                <TeamTag variant="accent">Strategie</TeamTag>
+              </TeamTags>
+              <TeamLinkedIn href="https://www.linkedin.com/in/markus-mosch-32a4111a2/" />
+            </TeamMember>
+
+            <TeamMember>
               <TeamImage initials="PH" />
               <TeamName>Phillip Pham</TeamName>
               <TeamRole>Investor & Advisor</TeamRole>
@@ -465,12 +482,12 @@ export default function TeamPage() {
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
       {/* Consultation CTA */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

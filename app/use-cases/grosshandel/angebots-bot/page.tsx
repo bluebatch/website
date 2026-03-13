@@ -177,7 +177,7 @@ export default async function Page({
         </Hero2Column>
       </ContentWrapper>
 
-      <ContentWrapper border="T">
+      <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Ihre Vorteile</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -316,12 +316,12 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 

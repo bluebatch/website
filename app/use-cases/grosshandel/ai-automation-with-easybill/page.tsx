@@ -152,7 +152,7 @@ export default function Page() {
         </Hero2Column>
       </ContentWrapper>
 
-      <ContentWrapper border="T">
+      <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Ihre Vorteile</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -327,7 +327,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
@@ -435,7 +435,7 @@ export default function Page() {
         </div>
       </ContentWrapper>
 
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
 
@@ -507,7 +507,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper border="T" colorScheme="primary-dark">
+      <ContentWrapper colorScheme="primary-dark">
         <ToolLink dark n8n easybill className="mb-8" />
       </ContentWrapper>
 

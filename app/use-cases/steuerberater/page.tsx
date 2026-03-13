@@ -107,7 +107,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
@@ -164,7 +164,7 @@ export default function Page() {
       ))}
 
       {/* Contact CTA */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

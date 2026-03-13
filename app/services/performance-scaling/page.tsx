@@ -235,8 +235,8 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Introduction Text */}
-      <ContentWrapper>
-        <div className="max-w-4xl mx-auto text-center">
+      <ContentWrapper bodyWidth="small">
+        <div className="text-center">
           <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
             Was als einfaches Automatisierungstool beginnt, stößt bei steigenden
             Anforderungen schnell an Grenzen. Langsame Executions, Memory-Fehler
@@ -248,7 +248,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
@@ -442,8 +442,8 @@ export default function Page() {
       </ContentWrapper>
 
       {/* CTA Section */}
-      <ContentWrapper colorScheme="primary">
-        <div className="text-center text-white max-w-3xl mx-auto">
+      <ContentWrapper colorScheme="primary" bodyWidth="narrow">
+        <div className="text-center text-white">
           <Typo.H2 className="text-white mb-6">
             Bereit für Enterprise-Performance?
           </Typo.H2>
@@ -459,7 +459,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Contact CTA */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

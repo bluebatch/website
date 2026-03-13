@@ -298,7 +298,7 @@ export default function Page() {
         </Link>
       </ContentWrapper>
 
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

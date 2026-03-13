@@ -266,7 +266,7 @@ export default function Page() {
         </Hero2Column>
       </ContentWrapper>
 
-      <ContentWrapper noPadding border="T">
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
@@ -458,7 +458,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

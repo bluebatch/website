@@ -15,37 +15,67 @@ export interface BlogPost {
   tags: BlogTagId[];
 }
 
-export async function getBlogPosts(): Promise<BlogPost[]> {
+interface BlogDir {
+  name: string;
+  importPath: string;
+}
+
+function getBlogDirs(): BlogDir[] {
   const blogDir = path.join(process.cwd(), "app/blog");
   const entries = fs.readdirSync(blogDir, { withFileTypes: true });
-  const dirs = entries.filter(
-    (e) =>
-      e.isDirectory() &&
-      fs.existsSync(path.join(blogDir, e.name, "page.tsx")),
-  );
+  const dirs: BlogDir[] = [];
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+
+    if (entry.name.startsWith("(")) {
+      // Route group — scan inside for actual blog directories
+      const groupDir = path.join(blogDir, entry.name);
+      const groupEntries = fs.readdirSync(groupDir, { withFileTypes: true });
+      for (const sub of groupEntries) {
+        if (
+          sub.isDirectory() &&
+          fs.existsSync(path.join(groupDir, sub.name, "page.tsx"))
+        ) {
+          dirs.push({
+            name: sub.name,
+            importPath: `${entry.name}/${sub.name}`,
+          });
+        }
+      }
+    } else if (fs.existsSync(path.join(blogDir, entry.name, "page.tsx"))) {
+      dirs.push({ name: entry.name, importPath: entry.name });
+    }
+  }
+
+  return dirs;
+}
+
+export async function getBlogPosts(): Promise<BlogPost[]> {
+  const dirs = getBlogDirs();
 
   const posts: BlogPost[] = [];
 
   for (const dir of dirs) {
-    const mod = await import(`@/app/blog/${dir.name}/page`);
-    if (!mod.blogMeta) continue;
+    const mod = await import(`@/app/blog/${dir.importPath}/page`);
+    if (!mod.metaCustom || mod.metaCustom.publish !== true) continue;
 
     const rawTitle =
       typeof mod.metadata?.title === "string" ? mod.metadata.title : "";
     const title = rawTitle.replace(/ \| Bluebatch$/, "");
 
-    const author = getAuthor(mod.blogMeta.author);
+    const author = getAuthor(mod.metaCustom.author);
 
     posts.push({
-      slug: mod.blogMeta.slug,
+      slug: mod.metaCustom.slug,
       title,
       description: mod.metadata?.description ?? "",
       author: author.name,
       authorImage: author.image,
       authorLinkedIn: author.linkedIn,
-      date: mod.blogMeta.date,
-      image: mod.blogMeta.image,
-      tags: mod.blogMeta.tags,
+      date: mod.metaCustom.date,
+      image: mod.metaCustom.image,
+      tags: mod.metaCustom.tags,
     });
   }
 

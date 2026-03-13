@@ -99,7 +99,7 @@ export default function Page() {
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
-      <ContentWrapper border="T">
+      <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Die Vorteile</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -223,7 +223,7 @@ export default function Page() {
           </SimpleCard>
         </SimpleGrid>
       </ContentWrapper>
-      <ContentWrapper border="B">
+      <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Im Detail</IntroBox.PreHeadline>
           <IntroBox.Headline>Workflow im Detail</IntroBox.Headline>
@@ -396,7 +396,7 @@ export default function Page() {
           </TabContent>
         </TabGroup>
       </ContentWrapper>
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
 
@@ -441,7 +441,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
       <ContentWrapper>

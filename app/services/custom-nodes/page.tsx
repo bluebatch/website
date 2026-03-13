@@ -248,8 +248,8 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Introduction Text */}
-      <ContentWrapper>
-        <div className="max-w-4xl mx-auto text-center">
+      <ContentWrapper bodyWidth="small">
+        <div className="text-center">
           <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
             Die n8n Community bietet über 400 fertige Integrationen – doch für
             spezialisierte Geschäftsprozesse, proprietäre APIs oder
@@ -424,12 +424,12 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
       {/* Contact CTA */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

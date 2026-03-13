@@ -460,7 +460,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* 9. CTA */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

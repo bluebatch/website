@@ -9,7 +9,10 @@ Usage:
     python main.py --top-pages                 # Top organic landing pages
     python main.py --top-pages --limit 50      # Top 50 pages
     python main.py --underperforming           # High traffic, low conversion
-    python main.py --leads                     # Lead analysis (kontaktformular_gesendet)
+    python main.py --events                     # Event overview (page_view, scroll, generate_lead, etc.)
+    python main.py --leads                     # Lead analysis (generate_lead)
+    python main.py --search-terms              # Google Search Console: top queries
+    python main.py --search-pages              # Google Search Console: top pages
     python main.py --date-range 30             # Last 30 days (default: 28)
 
 Requirements:
@@ -49,7 +52,7 @@ def cmd_status():
         print(f"  Conversions (GA4): {stats.get('conversions', 'N/A')}")
 
         print(f"\nLead-Tracking (Event: {lead_stats.get('event_name')}):")
-        print(f"  Kontaktformulare: {lead_stats.get('total_leads', 0)}")
+        print(f"  Leads: {lead_stats.get('total_leads', 0)}")
         print(f"  Conversion Rate: {lead_stats.get('conversion_rate', 0)}%")
 
     except FileNotFoundError:
@@ -115,10 +118,33 @@ def cmd_underperforming(limit: int = 20, date_range: int = 28):
         print(f"\nError: {e}")
 
 
-def cmd_leads(date_range: int = 28):
-    """Show lead/conversion details from kontaktformular_gesendet event."""
+def cmd_events(date_range: int = 28):
+    """Show event overview with counts."""
     print("\n" + "=" * 60)
-    print(f"Lead Analysis - Kontaktformular (Last {date_range} Days)")
+    print(f"Event Overview (Last {date_range} Days)")
+    print("=" * 60)
+
+    try:
+        client = GA4Client()
+        events = client.get_event_overview(days=date_range)
+
+        print(f"\n{'Event':<35} {'Count':>10} {'Users':>10}")
+        print("-" * 57)
+
+        for event in events:
+            name = event['eventName']
+            count = event['eventCount']
+            users = event['totalUsers']
+            print(f"{name:<35} {count:>10,} {users:>10,}")
+
+    except Exception as e:
+        print(f"\nError: {e}")
+
+
+def cmd_leads(date_range: int = 28):
+    """Show lead/conversion details from generate_lead event."""
+    print("\n" + "=" * 60)
+    print(f"Lead Analysis - generate_lead (Last {date_range} Days)")
     print("=" * 60)
 
     try:
@@ -181,6 +207,59 @@ def cmd_leads(date_range: int = 28):
         print(f"\nError: {e}")
 
 
+def cmd_search_terms(limit: int = 50, date_range: int = 28):
+    """Show top Google Search queries from Search Console."""
+    print("\n" + "=" * 60)
+    print(f"Google Search Console - Top Queries (Last {date_range} Days)")
+    print("=" * 60)
+
+    try:
+        from gsc_client import GSCClient
+        gsc = GSCClient()
+
+        stats = gsc.get_search_stats(days=date_range)
+        print(f"\nOverview:")
+        print(f"  Total Clicks: {stats['clicks']:,}")
+        print(f"  Total Impressions: {stats['impressions']:,}")
+        print(f"  Avg CTR: {stats['ctr']}%")
+        print(f"  Avg Position: {stats['position']}")
+
+        queries = gsc.get_top_queries(days=date_range, limit=limit)
+
+        print(f"\n{'Query':<45} {'Clicks':>8} {'Impr':>8} {'CTR':>7} {'Pos':>6}")
+        print("-" * 76)
+
+        for q in queries:
+            query = q['query'][:43] + '..' if len(q['query']) > 45 else q['query']
+            print(f"{query:<45} {q['clicks']:>8,} {q['impressions']:>8,} {q['ctr']:>6.1f}% {q['position']:>5.1f}")
+
+    except Exception as e:
+        print(f"\nError: {e}")
+
+
+def cmd_search_pages(limit: int = 50, date_range: int = 28):
+    """Show top pages from Search Console."""
+    print("\n" + "=" * 60)
+    print(f"Google Search Console - Top Pages (Last {date_range} Days)")
+    print("=" * 60)
+
+    try:
+        from gsc_client import GSCClient
+        gsc = GSCClient()
+
+        pages = gsc.get_top_pages(days=date_range, limit=limit)
+
+        print(f"\n{'Page':<55} {'Clicks':>8} {'Impr':>8} {'CTR':>7} {'Pos':>6}")
+        print("-" * 86)
+
+        for p in pages:
+            page = p['page'][:53] + '..' if len(p['page']) > 55 else p['page']
+            print(f"{page:<55} {p['clicks']:>8,} {p['impressions']:>8,} {p['ctr']:>6.1f}% {p['position']:>5.1f}")
+
+    except Exception as e:
+        print(f"\nError: {e}")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="GA4 Analysis Agent - SEO Traffic Insights",
@@ -191,6 +270,8 @@ Examples:
     python main.py --top-pages --limit 50
     python main.py --underperforming
     python main.py --leads
+    python main.py --search-terms
+    python main.py --search-pages
         """
     )
 
@@ -200,8 +281,14 @@ Examples:
                         help='Show top organic landing pages')
     parser.add_argument('--underperforming', action='store_true',
                         help='Find underperforming pages')
+    parser.add_argument('--events', action='store_true',
+                        help='Show event overview (page_view, scroll, generate_lead, etc.)')
     parser.add_argument('--leads', action='store_true',
-                        help='Show lead/conversion analysis (kontaktformular_gesendet)')
+                        help='Show lead/conversion analysis (generate_lead)')
+    parser.add_argument('--search-terms', action='store_true',
+                        help='Google Search Console: top search queries')
+    parser.add_argument('--search-pages', action='store_true',
+                        help='Google Search Console: top pages by clicks')
     parser.add_argument('--limit', type=int, default=20,
                         help='Number of results (default: 20)')
     parser.add_argument('--date-range', type=int, default=28,
@@ -215,8 +302,14 @@ Examples:
         cmd_top_pages(limit=args.limit, date_range=args.date_range)
     elif args.underperforming:
         cmd_underperforming(limit=args.limit, date_range=args.date_range)
+    elif args.events:
+        cmd_events(date_range=args.date_range)
     elif args.leads:
         cmd_leads(date_range=args.date_range)
+    elif args.search_terms:
+        cmd_search_terms(limit=args.limit, date_range=args.date_range)
+    elif args.search_pages:
+        cmd_search_pages(limit=args.limit, date_range=args.date_range)
     else:
         parser.print_help()
 

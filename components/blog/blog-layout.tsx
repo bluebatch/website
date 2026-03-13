@@ -8,7 +8,7 @@ type BlogLayoutProps = {
 
 function BlogLayout({ children }: BlogLayoutProps) {
   return (
-    <ContentWrapper noPadding>
+    <ContentWrapper noPadding bodyWidth="wide">
       <div className="grid grid-cols-1 xl:grid-cols-[200px_1fr_300px] gap-6">
         {/* Left Sidebar - Hidden on Mobile */}
         <div className="hidden xl:block"></div>

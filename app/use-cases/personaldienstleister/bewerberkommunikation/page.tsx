@@ -130,7 +130,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 2: Hero2Column – Das Problem */}
-      <ContentWrapper border="T">
+      <ContentWrapper>
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Das Problem</Hero2ColumnPreHeadline>
@@ -847,7 +847,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 10: Customer */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
@@ -895,7 +895,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 12: ConsultationCtaDefault */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

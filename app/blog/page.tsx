@@ -46,18 +46,19 @@ export default async function BlogPage() {
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/team-collaboration.jpg" type="image" />
+            <Hero2ColumnImage
+              src="/images/team-collaboration.jpg"
+              type="image"
+            />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
       {/* Blog Posts Grid with Filter */}
       <ContentWrapper>
-        <div className="max-w-6xl mx-auto">
-          <Suspense>
-            <BlogListFiltered posts={posts} />
-          </Suspense>
-        </div>
+        <Suspense>
+          <BlogListFiltered posts={posts} />
+        </Suspense>
       </ContentWrapper>
 
       <ContentWrapper noPadding>

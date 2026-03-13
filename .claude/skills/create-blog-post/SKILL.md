@@ -237,7 +237,27 @@ Read `lib/blog-posts.ts` and add the new post as the **first entry** in the `blo
 
 Read `lib/blog-tags.ts`. For each tag in the post's `tags` array, check if it already exists in `blogTags`. If a tag is new, add it to the array with a sensible `label` (capitalized/formatted version of the ID).
 
-## Step 7: Verify
+## Step 7: Image Audit — Rename and Compress
+
+After the page is created, audit all images in the blog post directory (`public/blog/{slug}/` or referenced in the post).
+
+### Rename images
+- Image filenames must be **descriptive and kebab-case** — they should reflect the content/purpose of the image, not be generic.
+- **Bad names:** `IMG_2847.png`, `screenshot-1.png`, `image.jpg`, `hero.png` (if non-descriptive), `Untitled.png`
+- **Good names:** `bewerbungsprozess-zeitstrahl.png`, `n8n-workflow-kandidaten-matching.png`, `time-to-hire-vergleich.jpg`
+- If you rename a file, update all references in `page.tsx` (BlogImage src, BlogHero.Image src, metaCustom.image) and `content.md`.
+
+### Compress images
+- Check file sizes using `ls -lh`. Images over **300 KB** should be compressed.
+- Use system tools to compress: `npx sharp-cli` or `convert` (ImageMagick) if available, or `pnpm exec` tools.
+- Target: JPEG quality 80, PNG → convert to WebP if over 500 KB, max width 1600px.
+- If no compression tool is available, flag the large images to the user with their sizes.
+
+### Verify
+- Ensure all image paths in `page.tsx` still resolve correctly after renames.
+- List any images renamed and their old → new names in the summary.
+
+## Step 8: Verify
 
 Run `npm run build` to verify the new page compiles without errors. If there are errors, fix them.
 

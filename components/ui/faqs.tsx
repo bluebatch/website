@@ -1,18 +1,10 @@
 "use client";
-import { PropsWithChildren, ReactNode } from "react";
+import { Children, PropsWithChildren, ReactNode, isValidElement } from "react";
 import Typo from "./typo";
 
-// Main container component
-export function FAQs({ children }: PropsWithChildren) {
-  return (
-    <div className="space-y-4 text-center">
-      <Typo.H3>Häufig gestellte Fragen</Typo.H3>
-      <Typo.Paragraph>
-        Hier finden Sie die Antworten auf häufig gestellte Fragen.
-      </Typo.Paragraph>
-      {children}
-    </div>
-  );
+// Sub-component for custom headline
+function FaqContainerHeadline({ children }: PropsWithChildren) {
+  return <>{children}</>;
 }
 
 // Individual FAQ item component using <details> and <summary> for a native HTML/CSS accordion
@@ -20,7 +12,7 @@ interface FAQItemProps {
   title: ReactNode;
 }
 
-export function FAQItem({ title, children }: PropsWithChildren<FAQItemProps>) {
+function FAQItem({ title, children }: PropsWithChildren<FAQItemProps>) {
   return (
     <details className="group border-b border-gray-200 pb-4">
       <summary className="flex cursor-pointer list-none items-center justify-between text-left text-lg font-semibold">
@@ -52,16 +44,31 @@ export interface FaqContainerProps {
   faqs: { question: string; answer: string }[];
 }
 
-export function FaqContainer({ faqs }: FaqContainerProps) {
+export function FaqContainer({
+  faqs,
+  children,
+}: PropsWithChildren<FaqContainerProps>) {
+  let headline: ReactNode = "Häufig gestellte Fragen";
+
+  Children.forEach(children, (child) => {
+    if (isValidElement<PropsWithChildren>(child) && child.type === FaqContainerHeadline) {
+      headline = child.props.children;
+    }
+  });
+
   return (
-    <>
-      <FAQs>
-        {faqs.map((faq, i) => (
-          <FAQItem key={`${faq.question}-${i}`} title={faq.question}>
-            <Typo.Paragraph>{faq.answer}</Typo.Paragraph>
-          </FAQItem>
-        ))}
-      </FAQs>
-    </>
+    <div className="space-y-4 text-center">
+      <Typo.H3>{headline}</Typo.H3>
+      <Typo.Paragraph>
+        Hier finden Sie die Antworten auf häufig gestellte Fragen.
+      </Typo.Paragraph>
+      {faqs.map((faq, i) => (
+        <FAQItem key={`${faq.question}-${i}`} title={faq.question}>
+          <Typo.Paragraph>{faq.answer}</Typo.Paragraph>
+        </FAQItem>
+      ))}
+    </div>
   );
 }
+
+FaqContainer.Headline = FaqContainerHeadline;

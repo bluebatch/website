@@ -1,5 +1,6 @@
 import LogoGrid from "../../media/logo-grid";
 import IntroBox from "../../ui/intro-box";
+import CustomerBand from "./customer-band";
 
 const allLogos = [
   {
@@ -44,9 +45,17 @@ const allLogos = [
 
 interface CustomerProps {
   logos?: typeof allLogos;
+  type?: "grid" | "band";
 }
 
-export default function Customer({ logos = allLogos }: CustomerProps) {
+export default function Customer({
+  logos = allLogos,
+  type = "band",
+}: CustomerProps) {
+  if (type === "band") {
+    return <CustomerBand logos={logos} />;
+  }
+
   return (
     <>
       <div className="text-center pt-20">

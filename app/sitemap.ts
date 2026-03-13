@@ -4,23 +4,35 @@ import path from "path";
 
 const BASE_URL = "https://bluebatch.io";
 
-function getRoutes(dir: string, basePath = ""): string[] {
-  const routes: string[] = [];
+interface RouteEntry {
+  routePath: string;
+  filePath: string;
+}
+
+function getRoutes(dir: string, basePath = ""): RouteEntry[] {
+  const routes: RouteEntry[] = [];
   const entries = fs.readdirSync(dir, { withFileTypes: true });
 
   for (const entry of entries) {
     if (!entry.isDirectory()) continue;
 
-    // Skip Next.js internal/private folders and route groups
-    if (entry.name.startsWith("_") || entry.name.startsWith("(")) continue;
+    // Skip Next.js internal/private folders
+    if (entry.name.startsWith("_")) continue;
 
     const fullPath = path.join(dir, entry.name);
+
+    // Route groups: recurse without adding to URL path
+    if (entry.name.startsWith("(")) {
+      routes.push(...getRoutes(fullPath, basePath));
+      continue;
+    }
+
     const routePath = `${basePath}/${entry.name}`;
+    const pagePath = path.join(fullPath, "page.tsx");
 
     // Check if this directory has a page.tsx (is an actual route)
-    const hasPage = fs.existsSync(path.join(fullPath, "page.tsx"));
-    if (hasPage) {
-      routes.push(routePath);
+    if (fs.existsSync(pagePath)) {
+      routes.push({ routePath, filePath: pagePath });
     }
 
     // Recurse into subdirectories
@@ -30,9 +42,25 @@ function getRoutes(dir: string, basePath = ""): string[] {
   return routes;
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+/**
+ * Check if a page exports metaCustom with publish: false.
+ * Uses static file reading — works reliably without dynamic imports.
+ */
+function isUnpublished(filePath: string): boolean {
+  try {
+    const content = fs.readFileSync(filePath, "utf-8");
+    // Only check pages that export metaCustom
+    if (!content.includes("metaCustom")) return false;
+    // Check for publish: false
+    return /publish:\s*false/.test(content);
+  } catch {
+    return false;
+  }
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const appDir = path.join(process.cwd(), "app");
-  const dynamicRoutes = getRoutes(appDir);
+  const allRoutes = getRoutes(appDir);
 
   // Root page
   const routes: MetadataRoute.Sitemap = [
@@ -44,12 +72,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  for (const route of dynamicRoutes) {
+  for (const { routePath, filePath } of allRoutes) {
+    if (isUnpublished(filePath)) continue;
+
     routes.push({
-      url: `${BASE_URL}${route}`,
+      url: `${BASE_URL}${routePath}`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: route.split("/").length <= 2 ? 0.8 : 0.6,
+      priority: routePath.split("/").length <= 2 ? 0.8 : 0.6,
     });
   }
 

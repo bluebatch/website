@@ -922,12 +922,12 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 9: Customer Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
       {/* Section 10: Consultation CTA */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
 

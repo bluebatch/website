@@ -166,8 +166,8 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Introduction Text */}
-      <ContentWrapper>
-        <div className="max-w-4xl mx-auto text-center">
+      <ContentWrapper bodyWidth="small">
+        <div className="text-center">
           <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
             Workflows sind das Herzstück Ihrer Automatisierung – doch ohne
             kontinuierliche Wartung können sie schnell zum Risikofaktor werden.
@@ -184,7 +184,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
@@ -591,7 +591,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Contact CTA */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

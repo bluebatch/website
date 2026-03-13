@@ -293,8 +293,8 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Introduction */}
-      <ContentWrapper>
-        <div className="max-w-4xl mx-auto text-center">
+      <ContentWrapper bodyWidth="small">
+        <div className="text-center">
           <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
             Der Unterschied zwischen einer n8n-Agentur und einem Enterprise
             IT-Team ist fundamental: Agenturen verkaufen Workflows. Wir bauen
@@ -307,7 +307,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
@@ -322,7 +322,7 @@ export default function Page() {
         </IntroBox>
 
         {/* Legend/Header */}
-        <div className="max-w-5xl mx-auto mb-12">
+        <div className="mb-12">
           <div className="grid md:grid-cols-[1fr_12rem_1fr] items-center">
             <div className="text-center">
               <span className="text-lg font-bold text-red-900 uppercase tracking-wider">
@@ -342,7 +342,7 @@ export default function Page() {
 
         <div className="space-y-16">
           {agencyVsExperts.map((item, index) => (
-            <div key={index} className="max-w-5xl mx-auto">
+            <div key={index}>
               {/* Mobile Headline */}
               <div className="md:hidden mb-6 text-center">
                 <h3 className="text-xl font-bold text-gray-900 leading-tight">
@@ -548,7 +548,7 @@ export default function Page() {
           </IntroBox.Paragraph>
         </IntroBox>
 
-        <div className="max-w-3xl mx-auto">
+        <div>
           <div className="grid grid-cols-3 gap-8 mt-12">
             <div>
               <div className="text-5xl font-bold text-white mb-2">
@@ -633,7 +633,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Contact CTA */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

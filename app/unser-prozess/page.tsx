@@ -239,7 +239,7 @@ export default function HowWeDoPage() {
       </ContentWrapper>
       {/* German Engineering Principles */}
       <ContentWrapper colorScheme="gray-light">
-        <div className="max-w-4xl mx-auto text-center mb-12">
+        <div className="text-center mb-12">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             Wir bringen die Prinzipien des deutschen Engineerings – Präzision,
             Gründlichkeit und Systematik – in die Welt der KI-Automatisierung.
@@ -335,7 +335,7 @@ export default function HowWeDoPage() {
           ))}
         </TimelineAsSteps>
       </ContentWrapper>
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
       {/* Managed Operations */}

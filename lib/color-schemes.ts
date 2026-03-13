@@ -30,6 +30,10 @@ export const colorSchemeMap = {
     bg: "bg-gradient-to-br from-blue-50 to-indigo-50",
     text: "text-gray-900",
   },
+  "gradient-night": {
+    bg: "bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900",
+    text: "text-white",
+  },
 } as const;
 
 export type ColorScheme = keyof typeof colorSchemeMap;

@@ -9,6 +9,13 @@ import SimpleCard from "@/components/cards/simple-card";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
 } from "@/components/ui/timeline-as-steps";
+import Link from "next/link";
+import GlassCard from "@/components/cards/glass-card";
+import {
+  GlassCardTitle,
+  GlassCardDescription,
+  GlassCardArrow,
+} from "@/components/cards/glass-card";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import LatestBlogPosts from "@/components/sections/latest-blog-posts";
 import CardShowcase from "@/components/cards/card-showcase";
@@ -146,12 +153,12 @@ export default function Home() {
       </ContentWrapper>
 
       {/* Client Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
       {/* Enterprise Heritage Section */}
-      <ContentWrapper colorScheme="gradient-warm">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>Enterprise Heritage</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -214,7 +221,7 @@ export default function Home() {
       <LatestBlogPosts />
 
       {/* What Drives Us Section */}
-      <ContentWrapper colorScheme="gray">
+      <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div>
             <IntroBox textCentered={false}>
@@ -437,7 +444,7 @@ export default function Home() {
       </ContentWrapper>
 
       {/* Workflow-as-a-Service Section */}
-      <ContentWrapper colorScheme="gray">
+      <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div>
             <IntroBox textCentered={false}>
@@ -509,8 +516,89 @@ export default function Home() {
         </IntroBox>
       </ContentWrapper>
 
+      {/* Standorte */}
+      <ContentWrapper colorScheme="gradient-night">
+        <IntroBox dark>
+          <IntroBox.Headline>Unsere Standorte</IntroBox.Headline>
+          <IntroBox.Subline>
+            Persönliche Betreuung in den wichtigsten Wirtschaftsregionen
+            Deutschlands.
+          </IntroBox.Subline>
+        </IntroBox>
+
+        <SimpleGrid cols={3} className="mt-10">
+          {[
+            {
+              name: "Berlin",
+              slug: "berlin",
+              fact: "AI-Workflows für Startups, Scale-ups und Konzerne in der Hauptstadt.",
+              image: "/images/cities/berlin.jpg",
+              delay: "0s",
+            },
+            {
+              name: "München",
+              slug: "muenchen",
+              fact: "Prozessautomatisierung für Industrie und Tech im Süden Deutschlands.",
+              image: "/images/cities/muenchen.jpg",
+              delay: "0.8s",
+            },
+            {
+              name: "Hamburg",
+              slug: "hamburg",
+              fact: "Workflow Engineering für Handel, Logistik und Maritime Wirtschaft.",
+              image: "/images/cities/hamburg.jpg",
+              delay: "1.6s",
+            },
+          ].map((city) => (
+            <Link
+              key={city.slug}
+              href={`/standorte/${city.slug}`}
+              className="group"
+            >
+              <GlassCard
+                float
+                floatDelay={city.delay}
+                className="h-full overflow-hidden p-0!"
+              >
+                <div className="relative h-44 w-full overflow-hidden">
+                  <Image
+                    src={city.image}
+                    alt={city.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
+                <div className="p-6">
+                  <GlassCardTitle>{city.name}</GlassCardTitle>
+                  <GlassCardDescription>{city.fact}</GlassCardDescription>
+                  <GlassCardArrow>Mehr erfahren</GlassCardArrow>
+                </div>
+              </GlassCard>
+            </Link>
+          ))}
+        </SimpleGrid>
+
+        <div className="mt-16 text-center">
+          <Link
+            href="/standorte"
+            className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-3 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg hover:shadow-blue-500/10"
+          >
+            Alle Standorte entdecken
+            <span className="inline-block transition-transform group-hover:translate-x-1">
+              &rarr;
+            </span>
+          </Link>
+        </div>
+      </ContentWrapper>
+
+      {/* Customer Logo Band */}
+      <ContentWrapper noPadding bodyWidth="full">
+        <Customer type="band" />
+      </ContentWrapper>
+
       {/* Final Statement Section */}
-      <ContentWrapper colorScheme="gradient-primary-alt">
+      <ContentWrapper colorScheme="dark">
         <div className="py-12">
           <IntroBox dark>
             <IntroBox.PreHeadline>Who We Are</IntroBox.PreHeadline>

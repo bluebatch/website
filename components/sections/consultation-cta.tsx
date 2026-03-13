@@ -15,7 +15,9 @@ export default function ConsultationCta({
     <div
       className={`relative h-[700px] md:h-[500px] lg:h-[550px] ${className}`}
     >
-      {children}
+      <div className="relative mx-auto max-w-7xl h-full">
+        {children}
+      </div>
     </div>
   );
 }
@@ -30,7 +32,7 @@ export function ConsultationCtaBackgroundBox({
 }: BackgroundBoxProps) {
   return (
     <div
-      className={`absolute bottom-0 left-0 right-0 h-[50%] md:h-[70%] bg-primary-800 ${className}`}
+      className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-screen h-[50%] md:h-[70%] bg-primary-800 ${className}`}
     />
   );
 }

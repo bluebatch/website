@@ -57,7 +57,7 @@ export function AnimatedNumber({
 const variantStyles = {
   default: {
     card: "bg-white border-primary-300",
-    value: "text-secondary-700",
+    value: "text-primary-700",
   },
   danger: {
     card: "bg-red-50 border-red-600",

@@ -333,7 +333,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 5: Customer Logos */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
@@ -674,7 +674,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Section 10: ConsultationCtaDefault */}
-      <ContentWrapper noPadding>
+      <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
     </>

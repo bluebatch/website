@@ -93,7 +93,19 @@ function Subline({
   children,
   className = "",
   dark = false,
-}: SubComponentProps) {
+  variant = "default",
+}: SubComponentProps & { variant?: "default" | "label" }) {
+  if (variant === "label") {
+    const colorClasses = dark ? "text-white/60" : "text-gray-400";
+    return (
+      <p
+        className={`text-sm font-medium uppercase tracking-widest mb-4 ${colorClasses} ${className}`}
+      >
+        {children}
+      </p>
+    );
+  }
+
   const colorClasses = dark ? "text-white" : "text-gray-600";
 
   return (
