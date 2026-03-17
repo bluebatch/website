@@ -1,0 +1,10 @@
+{
+  "id": "flat-illustration",
+  "name": "Flat Illustration",
+  "description": "Modern flat vector illustrations with bold shapes and limited color palette. Great for concept visualizations and feature explanations.",
+  "style_prompt": "Modern flat vector illustration, bold geometric shapes, limited color palette, no outlines, clean edges, digital art style, abstract representation, professional and friendly, minimal detail",
+  "color_guidance": "primary blue, secondary lighter blue, white, light gray, accent with warm orange sparingly for emphasis, flat colors, no gradients within shapes",
+  "aspect_ratio": "16:9",
+  "best_for": ["concept explanations", "feature cards", "abstract process illustrations", "landing page sections", "blog post headers"],
+  "avoid": "photorealism, heavy shadows, 3D effects, complex textures, too many colors"
+}

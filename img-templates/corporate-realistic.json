@@ -1,0 +1,10 @@
+{
+  "id": "corporate-realistic",
+  "name": "Corporate Realistic",
+  "description": "Professional, realistic corporate photography style. Suitable for hero images, team settings, and business context visuals.",
+  "style_prompt": "Professional corporate photography, modern office environment, soft natural lighting, shallow depth of field, clean composition, business professional setting, high quality, editorial style",
+  "color_guidance": "Neutral warm tones, soft blues in environment, professional lighting. The website applies its own blue overlays, so neutral/warm base images work best.",
+  "aspect_ratio": "16:9",
+  "best_for": ["hero backgrounds", "team/office scenes", "business context imagery", "client interaction visuals"],
+  "avoid": "overly staged poses, stock photo cliches, harsh lighting, busy backgrounds"
+}

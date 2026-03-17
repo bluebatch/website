@@ -10,8 +10,12 @@ type BlogHeroProps = {
 
 function BlogHero({ children }: BlogHeroProps) {
   return (
-    <ContentWrapper bodyWidth="narrow" isFirstSection>
-      <div>{children}</div>
+    <ContentWrapper bodyWidth="wide" isFirstSection>
+      <div className="grid grid-cols-1 xl:grid-cols-[200px_1fr_300px] gap-6">
+        <div className="hidden xl:block" />
+        <div>{children}</div>
+        <div className="hidden xl:block" />
+      </div>
     </ContentWrapper>
   );
 }

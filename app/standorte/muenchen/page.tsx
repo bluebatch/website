@@ -14,6 +14,7 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import { CityLinksFromMeta } from "@/components/standorte/city-links";
 import { FaqContainer } from "@/components/ui/faqs";
 import Typo from "@/components/ui/typo";
+import { Building2, Globe, Car, ShieldCheck } from "lucide-react";
 import type { CityMeta } from "@/lib/meta-custom";
 import { getRewriteOverrides } from "@/lib/get-rewrites";
 import { rewriteSiteConfig } from "./rewrite.site";
@@ -230,6 +231,9 @@ export default async function Page({
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
           <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Building2 className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>DAX-Konzerne & Industriegrößen</Typo.H3>
             <Typo.Paragraph>
               BMW, Siemens, Allianz, Munich Re, Linde, Infineon, MTU und
@@ -241,6 +245,9 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Globe className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>Internationale Tech-Giganten</Typo.H3>
             <Typo.Paragraph>
               Apple betreibt in München sein größtes europäisches Engineering
@@ -253,6 +260,9 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Car className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>Automotive & Präzisionsfertigung</Typo.H3>
             <Typo.Paragraph>
               BMW-Zulieferer, Continental, ZF und Bosch bilden ein dichtes
@@ -263,6 +273,9 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <ShieldCheck className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>Versicherung & Fintech</Typo.H3>
             <Typo.Paragraph>
               Allianz und Munich Re sind die weltweit größten Versicherer und

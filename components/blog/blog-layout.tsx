@@ -66,8 +66,30 @@ function BlogLayoutNavigationItem({
   );
 }
 
+type BlogLayoutNavigationSubItemProps = {
+  idLink: string;
+  children: ReactNode;
+};
+
+function BlogLayoutNavigationSubItem({
+  idLink,
+  children,
+}: BlogLayoutNavigationSubItemProps) {
+  return (
+    <li className="pl-4">
+      <a
+        href={`#${idLink}`}
+        className="text-primary-400 hover:text-primary-700 text-xs"
+      >
+        {children}
+      </a>
+    </li>
+  );
+}
+
 BlogLayout.Content = BlogLayoutContent;
 BlogLayout.Navigation = BlogLayoutNavigation;
 BlogLayout.NavigationItem = BlogLayoutNavigationItem;
+BlogLayout.NavigationSubItem = BlogLayoutNavigationSubItem;
 
 export default BlogLayout;

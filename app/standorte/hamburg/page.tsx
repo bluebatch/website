@@ -27,6 +27,7 @@ import { FaqContainer } from "@/components/ui/faqs";
 import { CityLinksFromMeta } from "@/components/standorte/city-links";
 import { getRewriteOverrides } from "@/lib/get-rewrites";
 import { rewriteSiteConfig } from "./rewrite.site";
+import { Workflow, BrainCircuit, Cable, Server, GraduationCap, Wrench } from "lucide-react";
 import type { CityMeta } from "@/lib/meta-custom";
 
 export const metaCustom: CityMeta = {
@@ -442,6 +443,9 @@ export default async function Page({
         />
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Workflow className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>n8n Workflow-Entwicklung</Typo.H3>
             <Typo.Paragraph>
               Maßgeschneiderte Automatisierungen für Ihre Branche — ob
@@ -455,6 +459,9 @@ export default async function Page({
             </Link>
           </SimpleCard>
           <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <BrainCircuit className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>KI-Integration</Typo.H3>
             <Typo.Paragraph>
               AI Agents für intelligente Entscheidungen in Ihren Workflows.
@@ -464,6 +471,9 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Cable className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>API-Integrationen</Typo.H3>
             <Typo.Paragraph>
               Nahtlose Verbindung Ihrer bestehenden Systeme — ERP, CRM, WMS,
@@ -473,6 +483,9 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Server className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>Self-Hosted Setup</Typo.H3>
             <Typo.Paragraph>
               DSGVO-konforme Installation auf Ihrer eigenen Infrastruktur.
@@ -485,6 +498,9 @@ export default async function Page({
             </Link>
           </SimpleCard>
           <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <GraduationCap className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>Schulungen</Typo.H3>
             <Typo.Paragraph>
               Ihr Team wird zum Automatisierungsexperten. Praxisnahe
@@ -497,6 +513,9 @@ export default async function Page({
             </Link>
           </SimpleCard>
           <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Wrench className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>Wartung &amp; Support</Typo.H3>
             <Typo.Paragraph>
               Laufende Betreuung und Weiterentwicklung Ihrer

@@ -1,0 +1,10 @@
+{
+  "id": "gradient-abstract",
+  "name": "Gradient Abstract",
+  "description": "Abstract gradient artwork with flowing shapes. Ideal for hero sections, backgrounds, and decorative section imagery.",
+  "style_prompt": "Abstract gradient art, flowing organic shapes, smooth color transitions, modern minimalist, soft mesh gradients, glass morphism elements, subtle bokeh, futuristic and clean, no text, no people",
+  "color_guidance": "blue to purple gradient, with white and light accents, soft glowing elements, can include subtle geometric shapes floating in the gradient",
+  "aspect_ratio": "16:9",
+  "best_for": ["hero backgrounds", "section dividers", "decorative imagery", "about/brand pages", "social media covers"],
+  "avoid": "sharp edges, photorealism, text in image, busy patterns, dark mood"
+}

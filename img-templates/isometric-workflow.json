@@ -1,0 +1,10 @@
+{
+  "id": "isometric-workflow",
+  "name": "Isometric Workflow",
+  "description": "Isometric 3D illustrations showing workflows, architecture diagrams, and system connections. Great for technical process visualization.",
+  "style_prompt": "Isometric 3D illustration style, clean geometric shapes, soft shadows, workflow diagram with connected nodes, modern tech aesthetic, light background, professional, no photorealism, digital illustration",
+  "color_guidance": "blue primary color, white and light gray surfaces, subtle blue gradients on key elements, soft drop shadows, connection lines in blue, nodes in white with blue accents",
+  "aspect_ratio": "16:9",
+  "best_for": ["workflow diagrams", "architecture overviews", "system integrations", "pipeline visualizations", "n8n workflow illustrations"],
+  "avoid": "photorealistic textures, dark backgrounds, overly complex detail, hand-drawn style"
+}

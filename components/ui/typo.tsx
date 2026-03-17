@@ -104,7 +104,7 @@ function Paragraph({
 
 function List({ children, className = "" }: TypoProps) {
   return (
-    <ul className={`list-disc pl-6 space-y-2 text-gray-700 ${className}`}>
+    <ul className={`list-disc pl-6 space-y-2 text-gray-700 mb-4 ${className}`}>
       {children}
     </ul>
   );

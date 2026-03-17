@@ -20,6 +20,7 @@ import ComparisonCard, {
 import { FaqContainer } from "@/components/ui/faqs";
 import { CityLinksFromMeta } from "@/components/standorte/city-links";
 import ContactButton from "@/components/buttons/contact-button";
+import { Cpu, ShoppingCart, HeartPulse, Landmark, Plane, Palette } from "lucide-react";
 import type { CityMeta } from "@/lib/meta-custom";
 import { getRewriteOverrides } from "@/lib/get-rewrites";
 import { rewriteSiteConfig } from "./rewrite.site";
@@ -223,6 +224,9 @@ export default async function Page({
         </IntroBox>
         <SimpleGrid cols={3}>
           <SimpleCard>
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Cpu className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>IKT & FinTech</Typo.H3>
             <Typo.Paragraph>
               Berlin ist Deutschlands größter IT-Standort und vereint 89 % der
@@ -232,6 +236,9 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <ShoppingCart className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>E-Commerce & Plattformen</Typo.H3>
             <Typo.Paragraph>
               Mit Zalando, Delivery Hero und HelloFresh ist Berlin das Zentrum
@@ -240,6 +247,9 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <HeartPulse className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>HealthTech & Life Sciences</Typo.H3>
             <Typo.Paragraph>
               Die Charité als Europas größtes Universitätsklinikum, Bayer und
@@ -248,6 +258,9 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Landmark className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>Öffentliche Verwaltung</Typo.H3>
             <Typo.Paragraph>
               Mit BärGPT hat Berlin einen eigenen KI-Assistenten für die
@@ -256,6 +269,9 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Plane className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>Tourismus & Gastgewerbe</Typo.H3>
             <Typo.Paragraph>
               Über 30 Millionen Übernachtungen und 12,7 Millionen Gäste jährlich
@@ -264,6 +280,9 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Palette className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
             <Typo.H3>Kreativwirtschaft</Typo.H3>
             <Typo.Paragraph>
               Film, Musik, Design und Games — Berlin ist Deutschlands kreatives

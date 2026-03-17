@@ -1,0 +1,10 @@
+{
+  "id": "clean-infographic",
+  "name": "Clean Infographic",
+  "description": "Flat, minimal infographics with clean lines. Perfect for data visualizations, statistics, comparison charts, and KPI displays.",
+  "style_prompt": "Clean flat infographic style, minimal design, white background, simple geometric shapes, thin lines, modern sans-serif typography, data visualization, no photorealism, vector-art look, professional business context",
+  "color_guidance": "primary blue gradient, accent light blue, neutral grays, white background, use blue for key data points and gray for supporting elements",
+  "aspect_ratio": "16:9",
+  "best_for": ["statistics", "KPI cards", "comparison charts", "percentage displays", "before/after metrics"],
+  "avoid": "photorealistic elements, complex 3D, heavy shadows, cluttered layouts"
+}

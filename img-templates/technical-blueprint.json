@@ -1,0 +1,10 @@
+{
+  "id": "technical-blueprint",
+  "name": "Technical Blueprint",
+  "description": "Blueprint/schematic style with a technical feel. Perfect for architecture diagrams, API flows, and system documentation visuals.",
+  "style_prompt": "Technical blueprint style, dark blue background, white and light blue lines, schematic diagram aesthetic, grid pattern, clean connecting lines with arrows, node-based layout, engineering drawing feel",
+  "color_guidance": "dark navy background, white lines and text, cyan light blue for highlights, subtle grid pattern, clean technical aesthetic",
+  "aspect_ratio": "16:9",
+  "best_for": ["API architecture", "system diagrams", "data flow charts", "integration maps", "technical documentation visuals"],
+  "avoid": "photorealism, organic shapes, warm colors, hand-drawn elements"
+}
