@@ -5,16 +5,58 @@ import type { BlogPost } from "@/lib/get-blog-posts";
 
 interface BlogCardProps {
   post: BlogPost;
+  highlight?: boolean;
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
+export default function BlogCard({ post, highlight }: BlogCardProps) {
   const postTags = getTagsByIds(post.tags);
 
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+      className={`group relative block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden ${
+        highlight ? "scale-105 lg:scale-110" : ""
+      }`}
     >
+      {/* Glassy gradient border on all cards */}
+      <div
+        className="pointer-events-none absolute inset-0 z-20 rounded-2xl"
+        style={{
+          padding: "2px",
+          background: highlight
+            ? "linear-gradient(135deg, rgba(59,130,246,0.8), rgba(59,130,246,0.2), rgba(59,130,246,0.6))"
+            : "linear-gradient(135deg, rgba(200,200,200,0.6), rgba(200,200,200,0.1))",
+          WebkitMask:
+            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMaskComposite: "xor",
+          maskComposite: "exclude",
+        }}
+      />
+
+      {/* Inner glow overlay on all cards */}
+      <div className="pointer-events-none absolute inset-0 z-10 rounded-2xl bg-gradient-to-br from-white/10 to-transparent" />
+
+      {/* Badge */}
+      {highlight && (
+        <span
+          className="absolute top-4 right-4 z-30 text-white text-sm font-bold px-4 py-1.5 rounded-full backdrop-blur-md bg-primary-500/50 shadow-[0_8px_32px_rgba(59,130,246,0.3)]"
+        >
+          <div
+            className="pointer-events-none absolute inset-0 rounded-full"
+            style={{
+              padding: "2px",
+              background:
+                "linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.08))",
+              WebkitMask:
+                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+              WebkitMaskComposite: "xor",
+              maskComposite: "exclude",
+            }}
+          />
+          Empfohlen
+        </span>
+      )}
+
       <div className="relative h-48 w-full overflow-hidden bg-gray-100">
         <Image
           src={post.image}

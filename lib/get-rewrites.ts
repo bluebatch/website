@@ -73,7 +73,9 @@ function extractSources(content: string): string[] {
 
 function filePathToRoute(filePath: string): string {
   const appDir = path.join(process.cwd(), "app");
-  const relative = path.dirname(filePath).replace(appDir, "");
+  let relative = path.dirname(filePath).replace(appDir, "");
+  // Strip Next.js route groups like (grosshandel) from the path
+  relative = relative.replace(/\/\([^)]+\)/g, "");
   return relative || "/";
 }
 

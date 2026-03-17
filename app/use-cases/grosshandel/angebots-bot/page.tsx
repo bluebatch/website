@@ -29,6 +29,7 @@ import TimelineAsSteps, {
   TimelineAsStepsStep,
 } from "@/components/ui/timeline-as-steps";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import LatestBlogPosts from "@/components/sections/latest-blog-posts";
 import { FaqContainer } from "@/components/ui/faqs";
 import IntroBox from "@/components/ui/intro-box";
 import Customer from "@/components/sections/customer/customer";
@@ -315,6 +316,8 @@ export default async function Page({
           </SimpleGrid>
         </div>
       </ContentWrapper>
+
+      <LatestBlogPosts highlightSlug="automatische-angebotserstellung-grosshandel" />
 
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
