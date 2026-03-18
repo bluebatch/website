@@ -29,13 +29,13 @@ import PhaseCard, {
 import IntroBox from "@/components/ui/intro-box";
 
 export const metadata: Metadata = {
-  title: "Custom n8n Node Development | Bluebatch",
+  title: "n8n Node Entwicklung | Custom Nodes | Bluebatch",
   description:
-    "Maßgeschneiderte n8n Nodes für Ihre spezifischen Anforderungen. TypeScript, Node.js, SDK – professionelle Entwicklung und Wartung.",
+    "Professionelle n8n Node Entwicklung für Ihre spezifischen Anforderungen. TypeScript, Node.js, SDK – maßgeschneiderte Entwicklung und Wartung.",
   openGraph: {
-    title: "Custom n8n Node Development | Bluebatch",
+    title: "n8n Node Entwicklung | Custom Nodes | Bluebatch",
     description:
-      "Es gibt keinen Node für Ihre App? Wir entwickeln Custom n8n Nodes für jede Integration.",
+      "Kein passender n8n Node für Ihre App? Wir entwickeln Custom n8n Nodes für jede Integration.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -225,9 +225,9 @@ export default function Page() {
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>n8n Services</Hero2ColumnPreHeadline>
-            <Hero2ColumnHeadline>Custom Node Development</Hero2ColumnHeadline>
+            <Hero2ColumnHeadline>n8n Node Entwicklung für Ihr Unternehmen</Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              &quot;Es gibt keinen Node für meine App&quot; – wir entwickeln
+              Sie brauchen einen n8n Node für Ihre App? Wir entwickeln
               ihn. Professionelle TypeScript-Entwicklung für jede API, jedes
               System, jede Integration. Von Legacy-ERP bis moderne
               Cloud-Services.
@@ -251,11 +251,12 @@ export default function Page() {
       <ContentWrapper bodyWidth="small">
         <div className="text-center">
           <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
-            Die n8n Community bietet über 400 fertige Integrationen – doch für
-            spezialisierte Geschäftsprozesse, proprietäre APIs oder
-            Legacy-Systeme reicht das oft nicht aus. Genau hier kommen Custom
-            Nodes ins Spiel: Maßgeschneiderte Integrationen, die perfekt auf
-            Ihre individuellen Anforderungen zugeschnitten sind.
+            Ein individueller n8n Node verbindet Ihre Systeme genau so, wie Sie
+            es brauchen. Die n8n Community bietet über 400 fertige
+            Integrationen – doch für spezialisierte Geschäftsprozesse,
+            proprietäre APIs oder Legacy-Systeme reicht das oft nicht aus.
+            Genau hier entwickeln wir Ihren n8n Node als maßgeschneiderte
+            Integration, die perfekt auf Ihre Anforderungen zugeschnitten ist.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>
@@ -263,10 +264,10 @@ export default function Page() {
       {/* When Custom Nodes Are Needed */}
       <ContentWrapper>
         <IntroBox>
-          <IntroBox.Headline>Wann brauchen Sie Custom Nodes?</IntroBox.Headline>
+          <IntroBox.Headline>Wann brauchen Sie einen eigenen n8n Node?</IntroBox.Headline>
           <IntroBox.Paragraph>
             Obwohl n8n 400+ eingebaute Nodes bietet, gibt es viele Szenarien, in
-            denen Custom Nodes unverzichtbar sind
+            denen ein eigener n8n Node unverzichtbar ist
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -290,9 +291,9 @@ export default function Page() {
       {/* Real-World Examples */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
-          <IntroBox.Headline>Erfolgreiche Projekte</IntroBox.Headline>
+          <IntroBox.Headline>Erfolgreiche n8n Node Projekte</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Reale Beispiele unserer Custom Node Entwicklungen
+            Reale Beispiele unserer n8n Node Entwicklungen
           </IntroBox.Paragraph>
         </IntroBox>
 

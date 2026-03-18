@@ -20,13 +20,13 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import InternalLink from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
-  title: "Großhandel – Use Cases | Bluebatch",
+  title: "Wholesale AI für den Großhandel – Use Cases | Bluebatch",
   description:
-    "Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+    "Wholesale AI: Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung mit KI zu automatisieren.",
   openGraph: {
-    title: "Großhandel – Bluebatch Use Cases",
+    title: "Wholesale AI – Bluebatch Use Cases für den Großhandel",
     description:
-      "Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+      "Wholesale AI: Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung mit KI zu automatisieren.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Großhandel – Bluebatch Use Cases",
+    title: "Wholesale AI – Bluebatch Use Cases für den Großhandel",
     description:
-      "Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung zu automatisieren.",
+      "Wholesale AI: Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung mit KI zu automatisieren.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -56,7 +56,7 @@ const useCases = [
     slug: "auftragserfassung",
     title: "Auftragserfassung",
     description:
-      "Bestellungen aus E-Mails, PDFs, Faxen und Portalen automatisch erfassen. KI extrahiert alle Daten, validiert gegen ERP und Lager – von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.",
+      "Bestellungen aus E-Mails, PDFs, Faxen und Portalen automatisch erfassen. Unsere Wholesale AI extrahiert alle Daten, validiert gegen ERP und Lager – von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.",
     image: "/images/order-capture.jpg",
   },
   {
@@ -70,14 +70,14 @@ const useCases = [
     slug: "lagerverwaltung",
     title: "Lagerverwaltung",
     description:
-      "Echtzeit-Bestandssynchronisation über alle Lager und Kanäle. KI-basierte Bedarfsprognosen lösen automatisch Nachbestellungen aus. Nie wieder Fehlbestand oder Überbestand.",
+      "Echtzeit-Bestandssynchronisation über alle Lager und Kanäle. Wholesale AI Bedarfsprognosen lösen automatisch Nachbestellungen aus. Nie wieder Fehlbestand oder Überbestand.",
     image: "/images/warehouse-software.jpg",
   },
   {
     slug: "invoice-bot",
     title: "Invoice-Bot",
     description:
-      "Eingangsrechnungen automatisch erfassen, prüfen und zur Freigabe weiterleiten. KI extrahiert Beträge, Steuer und Metadaten – 80% weniger manueller Aufwand.",
+      "Eingangsrechnungen automatisch erfassen, prüfen und zur Freigabe weiterleiten. Wholesale AI extrahiert Beträge, Steuer und Metadaten – 80% weniger manueller Aufwand.",
     image: "/images/invoice-processing.jpg",
   },
   {
@@ -118,18 +118,19 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Branchenlösungen</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Automatisierung für den Großhandel
+              Wholesale AI: Automatisierung für den Großhandel
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Von der Auftragserfassung bis zur Rechnungsprüfung – wir
-              automatisieren die repetitiven Prozesse, die Ihr Team ausbremsen.
-              Weniger manuelle Arbeit, mehr Zeit für strategische Aufgaben.
+              Mit Wholesale AI automatisieren wir die repetitiven Prozesse, die
+              Ihr Team ausbremsen – von der Auftragserfassung bis zur
+              Rechnungsprüfung. Weniger manuelle Arbeit, mehr Zeit für
+              strategische Aufgaben.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
-              8 erprobte Automatisierungslösungen für den Großhandel
+              8 erprobte Wholesale AI Lösungen für den Großhandel
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>

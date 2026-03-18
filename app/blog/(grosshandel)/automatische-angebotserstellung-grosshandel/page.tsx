@@ -15,14 +15,14 @@ export const metaCustom: BlogMeta = {
 
 export const metadata: Metadata = {
   title:
-    "Automatische Angebotserstellung im Großhandel: So erstellt KI eure Angebote in Sekunden | Bluebatch",
+    "KI Angebote im Großhandel: Automatische Angebotserstellung in Sekunden | Bluebatch",
   description:
-    "78% der Kunden kaufen beim Anbieter, der zuerst antwortet. Erfahren Sie, wie KI-gestützte Workflows Angebote in Sekunden statt Stunden erstellen — mit konkretem n8n-Praxisbeispiel.",
+    "KI Angebote revolutionieren den Großhandel — 78% der Kunden kaufen beim schnellsten Anbieter. Erfahren Sie, wie KI Angebote per Workflow in Sekunden statt Stunden erstellt werden.",
   openGraph: {
     title:
-      "Automatische Angebotserstellung im Großhandel: KI erstellt Angebote in Sekunden",
+      "KI Angebote im Großhandel: Automatische Angebotserstellung in Sekunden",
     description:
-      "78% der Kunden kaufen beim Anbieter, der zuerst antwortet. KI-Workflows erstellen Angebote in Sekunden statt Stunden.",
+      "KI Angebote erstellen in Sekunden statt Stunden — 78% der Kunden kaufen beim schnellsten Anbieter.",
     type: "article",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -45,8 +45,8 @@ export default function Page() {
     <>
       <BlogHero>
         <BlogHero.Headline>
-          Automatische Angebotserstellung im Großhandel: So erstellt KI eure
-          Angebote in Sekunden
+          KI Angebote im Großhandel: So funktioniert automatische
+          Angebotserstellung in Sekunden
         </BlogHero.Headline>
 
         <BlogHero.Meta>
@@ -77,9 +77,9 @@ export default function Page() {
               folgt, kostet euer Team jeden Tag Stunden.
             </Typo.Paragraph>
             <Typo.Paragraph>
-              Dieser Artikel zeigt euch Schritt für Schritt, wie ein KI-Workflow
-              aus einer Kundenanfrage automatisch ein Angebot macht. Anfrage
-              rein, Angebot raus — in Sekunden statt Stunden.
+              Dieser Artikel zeigt euch Schritt für Schritt, wie KI Angebote
+              aus Kundenanfragen automatisch erstellt. Anfrage rein, Angebot
+              raus — in Sekunden statt Stunden.
             </Typo.Paragraph>
           </div>
 
@@ -298,8 +298,8 @@ export default function Page() {
             </Typo.Paragraph>
 
             <Typo.Paragraph>
-              Kein neues ERP. Kein halbjähriges IT-Projekt. Sondern ein
-              KI-Workflow, der eure bestehenden Systeme verbindet:
+              Kein neues ERP. Kein halbjähriges IT-Projekt. Sondern KI Angebote
+              per Workflow, der eure bestehenden Systeme verbindet:
               E-Mail-Postfach, ERP, Preislisten, Kundendaten. Die Systeme
               bleiben, nur der manuelle Prozess dazwischen fällt weg.
             </Typo.Paragraph>
@@ -424,7 +424,7 @@ export default function Page() {
           {/* Section 3 */}
           <div>
             <Typo.H2 id="der-ki-workflow">
-              Der KI-Workflow Schritt für Schritt
+              KI Angebote erstellen: Der Workflow Schritt für Schritt
             </Typo.H2>
 
             <Typo.Paragraph>
@@ -564,7 +564,7 @@ export default function Page() {
           {/* Section 4 */}
           <div>
             <Typo.H2 id="praxisbeispiel">
-              Praxisbeispiel: Ein echter Workflow in der Tiefe
+              Praxisbeispiel: KI Angebote in einem echten Workflow
             </Typo.H2>
 
             <Typo.Paragraph>
@@ -1319,8 +1319,8 @@ export default function Page() {
             </div>
 
             <Typo.Paragraph>
-              Dazu kommt, was sich nicht direkt in Euro messen lässt: Wenn eure
-              Angebote in Minuten statt Stunden rausgehen, gewinnt ihr Aufträge,
+              Dazu kommt, was sich nicht direkt in Euro messen lässt: Wenn KI Angebote
+              in Minuten statt Stunden rausgehen, gewinnt ihr Aufträge,
               die vorher beim Wettbewerb gelandet wären. Unternehmen mit
               schnellen Reaktionszeiten berichten von bis zu{" "}
               <strong>35 % höheren Win Rates</strong>.
@@ -1343,7 +1343,7 @@ export default function Page() {
             Was ist automatische Angebotserstellung?
           </BlogLayout.NavigationItem>
           <BlogLayout.NavigationItem idLink="der-ki-workflow">
-            Der KI-Workflow Schritt für Schritt
+            KI Angebote erstellen: Workflow
           </BlogLayout.NavigationItem>
           <BlogLayout.NavigationSubItem idLink="schritt-1-anfrage-empfangen">
             Anfrage empfangen
@@ -1364,7 +1364,7 @@ export default function Page() {
             Versand oder Freigabe
           </BlogLayout.NavigationSubItem>
           <BlogLayout.NavigationItem idLink="praxisbeispiel">
-            Praxisbeispiel: Echter Workflow
+            Praxisbeispiel: KI Angebote
           </BlogLayout.NavigationItem>
           <BlogLayout.NavigationSubItem idLink="happy-path">
             Happy Path

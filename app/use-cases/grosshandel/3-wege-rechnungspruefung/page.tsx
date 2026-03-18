@@ -21,13 +21,13 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "3-Wege-Rechnungsprüfung – Großhandel | Bluebatch",
+  title: "Automatische Rechnungsprüfung: 3-Wege-Matching – Großhandel | Bluebatch",
   description:
-    "Wie Bluebatch Großhändlern hilft, Rechnungen automatisch mit Bestellungen und Wareneingängen abzugleichen.",
+    "Automatische Rechnungsprüfung mit 3-Wege-Matching: Wie Bluebatch Großhändlern hilft, Rechnungen automatisch mit Bestellungen und Wareneingängen abzugleichen.",
   openGraph: {
-    title: "3-Wege-Rechnungsprüfung – Großhandel | Bluebatch",
+    title: "Automatische Rechnungsprüfung: 3-Wege-Matching – Großhandel | Bluebatch",
     description:
-      "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung. Nie wieder manuelle Prüfung.",
+      "Automatische Rechnungsprüfung: Abgleich von Bestellung, Wareneingang und Rechnung. Nie wieder manuelle Prüfung.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "3-Wege-Rechnungsprüfung – Großhandel | Bluebatch",
+    title: "Automatische Rechnungsprüfung: 3-Wege-Matching – Großhandel | Bluebatch",
     description:
-      "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung. Nie wieder manuelle Prüfung.",
+      "Automatische Rechnungsprüfung mit 3-Wege-Matching. Nie wieder manuelle Prüfung.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -81,14 +81,15 @@ export default function Page() {
             3-Wege-Rechnungsprüfung
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
-            Bestellung, Wareneingang,{" "}
-            <BackgroundHero.Highlight>Rechnung</BackgroundHero.Highlight>
-            <br />– automatisch abgeglichen
+            Automatische Rechnungsprüfung:{" "}
+            <BackgroundHero.Highlight>3-Wege-Matching</BackgroundHero.Highlight>
+            <br />für den Großhandel
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            n8n erkennt Abweichungen, routet Ausnahmen intelligent und
-            beschleunigt die Freigabe um bis zu 95%. Keine manuellen Vergleiche,
-            keine verpassten Skonti.
+            Unsere automatische Rechnungsprüfung erkennt Abweichungen zwischen
+            Bestellung, Wareneingang und Rechnung, routet Ausnahmen intelligent
+            und beschleunigt die Freigabe um bis zu 95%. Keine manuellen
+            Vergleiche, keine verpassten Skonti.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
@@ -116,11 +117,13 @@ export default function Page() {
         <IntroBox>
           <IntroBox.PreHeadline>Das Problem</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Warum manuelle Rechnungsprüfung nicht skaliert
+            Warum manuelle Rechnungsprüfung nicht skaliert – ohne Workflow
+            Rechnungseingang
           </IntroBox.Headline>
           <IntroBox.Subline>
             Finanzteams verbringen Stunden damit, Zeilen zwischen drei
-            Dokumenten zu vergleichen – fehleranfällig und zeitraubend.
+            Dokumenten zu vergleichen – fehleranfällig und zeitraubend. Ohne
+            automatische Rechnungsprüfung bleibt der Prozess ein Engpass.
           </IntroBox.Subline>
         </IntroBox>
 
@@ -160,13 +163,14 @@ export default function Page() {
             <IntroBox textCentered={false}>
               <IntroBox.PreHeadline>Die Lösung</IntroBox.PreHeadline>
               <IntroBox.Headline>
-                Intelligentes 3-Wege-Matching
+                Automatische Rechnungserfassung mit intelligentem 3-Wege-Matching
               </IntroBox.Headline>
               <IntroBox.Subline>
-                Unser n8n-Workflow vergleicht automatisch jede Rechnungszeile
-                mit Bestellung und Wareneingang. Toleranzregeln filtern
-                relevante Abweichungen, Exception Routing bringt Ausnahmen zu
-                den richtigen Freigebern.
+                Unser Rechnungsprüfung Workflow vergleicht automatisch jede
+                Rechnungszeile mit Bestellung und Wareneingang. Die automatische
+                Rechnungsprüfung filtert über Toleranzregeln relevante
+                Abweichungen, Exception Routing bringt Ausnahmen zu den
+                richtigen Freigebern.
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Das Ergebnis: 75-85% aller Rechnungen werden vollautomatisch
@@ -182,7 +186,7 @@ export default function Page() {
         <IntroBox dark>
           <IntroBox.PreHeadline>Workflow-Architektur</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            So funktioniert die Automatisierung
+            OCR Rechnungserfassung und Workflow Eingangsrechnungen
           </IntroBox.Headline>
         </IntroBox>
 
@@ -197,9 +201,10 @@ export default function Page() {
                 1. KI-gestützte Datenextraktion
               </CardShowcase.Title>
               <CardShowcase.Description>
-                Rechnungen treffen per E-Mail oder Scan ein. OCR und GPT-4
-                extrahieren alle relevanten Daten – unabhängig vom
-                Dokumentformat.
+                Rechnungen treffen per E-Mail oder Scan ein. Unsere OCR
+                Rechnungserfassung mit GPT-4 extrahiert alle relevanten Daten –
+                unabhängig vom Dokumentformat. Die automatische Rechnungsprüfung
+                beginnt bereits bei der Erfassung.
               </CardShowcase.Description>
             </CardShowcase.Content>
           </CardShowcase.Item>
@@ -243,9 +248,10 @@ export default function Page() {
                 4. Freigabe, Buchung, Zahlung
               </CardShowcase.Title>
               <CardShowcase.Description>
-                Genehmigte Rechnungen fließen automatisch ins ERP zur Buchung.
+                Genehmigte Rechnungen fließen durch den Workflow
+                Eingangsrechnungen automatisch ins ERP zur Buchung.
                 Skontofristen werden eingehalten, Duplikate erkannt und
-                blockiert.
+                blockiert – automatische Rechnungsprüfung von Anfang bis Ende.
               </CardShowcase.Description>
             </CardShowcase.Content>
           </CardShowcase.Item>

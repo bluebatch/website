@@ -17,9 +17,9 @@ import TabGroup, {
 import { getCitiesByBundesland, getPublishedCities } from "@/lib/get-city-metas";
 
 export const metadata: Metadata = {
-  title: "Standorte — Workflow-Automatisierung in ganz Deutschland | Bluebatch",
+  title: "Automatisierungs Agentur — Workflow-Automatisierung in ganz Deutschland | Bluebatch",
   description:
-    "Bluebatch unterstützt Unternehmen in ganz Deutschland bei der Workflow-Automatisierung. Finden Sie Ihren Standort — von Berlin bis München.",
+    "Bluebatch ist Ihre Automatisierungs Agentur für Unternehmen in ganz Deutschland. Finden Sie Ihren Standort — von Berlin bis München.",
   alternates: {
     canonical: "/standorte",
   },
@@ -36,12 +36,12 @@ export default function StandortePage() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Standorte</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Workflow-Automatisierung in ganz Deutschland
+              Ihre Automatisierungs Agentur in ganz Deutschland
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Bluebatch unterstützt Unternehmen in über 80 deutschen Städten bei
-              der Automatisierung ihrer Geschäftsprozesse. Remote-first, aber
-              immer nah an Ihnen.
+              Als erfahrene Automatisierungs Agentur unterstützt Bluebatch
+              Unternehmen in über 80 deutschen Städten bei der Automatisierung
+              ihrer Geschäftsprozesse. Remote-first, aber immer nah an Ihnen.
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
         </Hero2Column>
@@ -51,10 +51,14 @@ export default function StandortePage() {
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Alle Standorte</IntroBox.PreHeadline>
-          <IntroBox.Headline>Alle Städte nach Bundesland</IntroBox.Headline>
+          <IntroBox.Headline>Ihre Automatisierungs Agentur — alle Städte nach Bundesland</IntroBox.Headline>
           <IntroBox.Subline>
-            Finden Sie Ihren Standort — wir sind in jeder deutschen Großstadt
-            für Sie da.
+            Finden Sie Ihren Standort — als Automatisierungs Agentur sind wir
+            in jeder deutschen Großstadt für Sie da. Ob n8n-Workflows,
+            KI-Integrationen oder Prozessoptimierung: Bluebatch ist die
+            Automatisierungs Agentur, die Ihre Geschäftsprozesse effizient
+            digitalisiert. Vertrauen Sie auf eine spezialisierte
+            Automatisierungs Agentur mit Erfahrung in über 80 Städten.
           </IntroBox.Subline>
         </IntroBox>
 

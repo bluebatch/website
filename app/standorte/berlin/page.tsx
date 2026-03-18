@@ -60,15 +60,16 @@ export async function generateMetadata({
 
   const title =
     overrides?.metaTitle ??
-    "Workflow-Automatisierung Berlin – n8n, KI & Prozessoptimierung | Bluebatch";
+    "KI Agentur Berlin – n8n, Workflow-Automatisierung & Prozessoptimierung | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Ihr Partner für Workflow-Automatisierung und KI-Lösungen in Berlin. n8n-Workflows, API-Integrationen und Prozessoptimierung für Startups, Mittelstand und Unternehmen in Deutschlands Startup-Hauptstadt.";
+    "Bluebatch ist Ihre KI Agentur Berlin — Ihr Partner für Workflow-Automatisierung, n8n-Workflows, API-Integrationen und Prozessoptimierung für Startups, Mittelstand und Unternehmen in Deutschlands Startup-Hauptstadt.";
 
   return {
     title,
     description,
     keywords: overrides?.keywords ?? [
+      "KI Agentur Berlin",
       "Workflow-Automatisierung Berlin",
       "n8n Berlin",
       "KI Automatisierung Berlin",
@@ -131,9 +132,9 @@ const berlinFaqs = [
   },
   {
     question:
-      "Was unterscheidet Bluebatch von anderen IT-Dienstleistern in Berlin?",
+      "Was unterscheidet Bluebatch als KI Agentur Berlin von anderen IT-Dienstleistern?",
     answer:
-      "Wir sind spezialisiert auf Workflow-Automatisierung mit n8n und KI — kein Bauchladen, sondern tiefe Expertise. Unsere Kunden profitieren von Self-Hosted-Lösungen, die volle Datenkontrolle gewährleisten, individueller Workflow-Entwicklung und langfristiger Betreuung. Wir verstehen die Berliner Startup- und Unternehmenslandschaft und liefern Lösungen, die mit Ihrem Unternehmen skalieren.",
+      "Als spezialisierte KI Agentur Berlin fokussieren wir uns auf Workflow-Automatisierung mit n8n und KI — kein Bauchladen, sondern tiefe Expertise. Unsere Kunden profitieren von Self-Hosted-Lösungen, die volle Datenkontrolle gewährleisten, individueller Workflow-Entwicklung und langfristiger Betreuung. Wir verstehen die Berliner Startup- und Unternehmenslandschaft und liefern Lösungen, die mit Ihrem Unternehmen skalieren.",
   },
 ];
 
@@ -162,17 +163,17 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                Workflow-Automatisierung & KI in{" "}
+                KI Agentur Berlin –{" "}
                 <BackgroundHero.Highlight>
-                  Deutschlands Startup-Hauptstadt
+                  Workflow-Automatisierung für Deutschlands Startup-Hauptstadt
                 </BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Ihr Partner für n8n-Workflows, KI-Automatisierung und
-            Prozessoptimierung in Berlin und Brandenburg. Self-hosted,
-            DSGVO-konform und skalierbar.
+            Als KI Agentur Berlin sind wir Ihr Partner für n8n-Workflows,
+            KI-Automatisierung und Prozessoptimierung in Berlin und Brandenburg.
+            Self-hosted, DSGVO-konform und skalierbar.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Beratung anfragen</ContactButton>
@@ -202,14 +203,15 @@ export default async function Page({
             Europas zweitattraktivster Startup-Standort
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Warum Berlin auf Automatisierung setzt
+            Warum Berlin eine spezialisierte KI Agentur braucht
           </IntroBox.Headline>
           <IntroBox.Subline>
             Berlins Wirtschaft wächst schneller als der Bundesdurchschnitt — zum
             zwölften Mal in Folge. Mit rund 500 Neugründungen pro Jahr, über
             1,68 Millionen Beschäftigten und 43.200 Gewerbeanmeldungen allein
-            2025 steigt der Bedarf an intelligenter Automatisierung rasant. Wer
-            in diesem Tempo skalieren will, braucht Workflows, die mitwachsen.
+            2025 steigt der Bedarf an intelligenter Automatisierung rasant. Als
+            KI Agentur Berlin unterstützen wir Unternehmen dabei, in diesem
+            Tempo zu skalieren — mit Workflows, die mitwachsen.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
@@ -333,7 +335,7 @@ export default async function Page({
             alt="Industrielle Innovation in Berlin – Tesla Gigafactory und Siemensstadt 2.0 als Treiber moderner Workflow-Automatisierung"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Berlin als Industriestandort der Zukunft</Typo.H2>
+            <Typo.H2>KI Agentur Berlin — Partner für den Industriestandort der Zukunft</Typo.H2>
             <Typo.Paragraph>
               Die Tesla Gigafactory in Grünheide produziert mit einer Kapazität
               von 500.000 Fahrzeugen pro Jahr und beschäftigt rund 11.000
@@ -344,8 +346,8 @@ export default async function Page({
             <Typo.Paragraph>
               Diese Großprojekte erfordern modernste Automatisierung — von der
               Produktionssteuerung über Lieferketten-Management bis zur
-              Integration von IoT-Daten in Echtzeit-Workflows. Genau hier setzen
-              wir mit n8n-basierten Lösungen an.
+              Integration von IoT-Daten in Echtzeit-Workflows. Als KI Agentur
+              Berlin setzen wir genau hier mit n8n-basierten Lösungen an.
             </Typo.Paragraph>
           </BoundlessImageCard.Content>
         </BoundlessImageCard>

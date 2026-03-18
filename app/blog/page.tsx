@@ -14,13 +14,13 @@ import Hero2Column, {
 } from "@/components/heroes/hero-2-column";
 
 export const metadata: Metadata = {
-  title: "Blog | Bluebatch - Workflow-Automatisierung & n8n Expertise",
+  title: "Blog Workflow Automatisierung & n8n Expertise | Bluebatch",
   description:
-    "Entdecken Sie unsere Artikel über Workflow-Automatisierung, n8n Custom Nodes, Integrationen und Best Practices für effiziente Geschäftsprozesse.",
+    "Im Blog Workflow Themen entdecken: Automatisierung, n8n Custom Nodes, Integrationen und Best Practices für effiziente Geschäftsprozesse.",
   openGraph: {
-    title: "Bluebatch Blog - Workflow-Automatisierung Insights",
+    title: "Blog Workflow Automatisierung — Bluebatch Insights",
     description:
-      "Expertenwissen zu n8n, Custom Nodes und Automatisierungslösungen",
+      "Blog Workflow Wissen zu n8n, Custom Nodes und Automatisierungslösungen",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -39,10 +39,19 @@ export default async function BlogPage() {
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Blog</Hero2ColumnPreHeadline>
-            <Hero2ColumnHeadline>Bluebatch Blog</Hero2ColumnHeadline>
+            <Hero2ColumnHeadline>
+              Blog Workflow Automatisierung & n8n Expertise
+            </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Expertenwissen zu Workflow-Automatisierung, n8n Custom Nodes und
-              effiziente Geschäftsprozesse
+              In unserem Blog Workflow Themen vertiefen: Von
+              Prozessautomatisierung über n8n Custom Nodes bis hin zu
+              KI-gestützten Geschäftsprozessen. Unser Blog Workflow Wissen hilft
+              euch, repetitive Aufgaben zu eliminieren und Abläufe effizient zu
+              gestalten. Entdeckt praxisnahe Blog Workflow Anleitungen,
+              Integrationsbeispiele und Best Practices — damit euer Team sich
+              auf das konzentriert, was wirklich zählt. Jeder Blog Workflow
+              Beitrag basiert auf echten Projekterfahrungen aus dem
+              Automatisierungsalltag.
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>

@@ -50,11 +50,13 @@ export const metaCustom: CityMeta = {
 };
 
 const defaultMeta = {
-  title: `Workflow-Automatisierung München | Bluebatch`,
-  description: `Bluebatch ist Ihr Partner für Workflow-Automatisierung und KI-Lösungen in München. n8n-Workflows, API-Integrationen und Prozessoptimierung für DAX-Konzerne, Tech-Giganten und Mittelständler.`,
+  title: `KI Agentur München – Workflow-Automatisierung & Prozessoptimierung | Bluebatch`,
+  description: `Bluebatch ist Ihre KI Agentur München — Ihr Partner für Workflow-Automatisierung, n8n-Workflows, API-Integrationen und Prozessoptimierung für DAX-Konzerne, Tech-Giganten und Mittelständler.`,
 };
 
 const defaultKeywords = [
+  "KI Agentur München",
+  "bayerische KI Agentur",
   "Workflow-Automatisierung München",
   "n8n München",
   "KI Automatisierung München",
@@ -132,9 +134,9 @@ const muenchenFaqs = [
       "AI Agents erweitern jeden n8n-Workflow um intelligente Entscheidungen. Sie klassifizieren eingehende Daten, generieren Texte und E-Mails, extrahieren Informationen aus Dokumenten und treffen regelbasierte Entscheidungen. Münchner Unternehmen nutzen KI-gestützte Workflows bereits für automatisierte Angebotserstellung, Dokumentenverarbeitung und datenbasierte Entscheidungsprozesse.",
   },
   {
-    question: "Was unterscheidet Bluebatch von anderen IT-Dienstleistern in München?",
+    question: "Was unterscheidet Bluebatch als KI Agentur München von anderen IT-Dienstleistern?",
     answer:
-      "Wir sind spezialisiert auf Workflow-Automatisierung mit n8n und KI — kein Bauchladen, sondern tiefe Expertise. Unsere Kunden profitieren von Self-Hosted-Lösungen mit voller Datenkontrolle, individueller Workflow-Entwicklung und langfristiger Betreuung. Wir verstehen die spezifischen Anforderungen der Münchner Schlüsselindustrien: Automotive Supply Chains, Halbleiterfertigung, Versicherungs- und Rückversicherungsprozesse, Fintech-Compliance und Aerospace-Zertifizierung — von DAX-Konzernen über Tech-Unternehmen bis zum Hidden Champion im Mittelstand.",
+      "Als KI Agentur München sind wir spezialisiert auf Workflow-Automatisierung mit n8n und KI — kein Bauchladen, sondern tiefe Expertise. Unsere Kunden profitieren von Self-Hosted-Lösungen mit voller Datenkontrolle, individueller Workflow-Entwicklung und langfristiger Betreuung. Wir verstehen die spezifischen Anforderungen der Münchner Schlüsselindustrien: Automotive Supply Chains, Halbleiterfertigung, Versicherungs- und Rückversicherungsprozesse, Fintech-Compliance und Aerospace-Zertifizierung — von DAX-Konzernen über Tech-Unternehmen bis zum Hidden Champion im Mittelstand.",
   },
 ];
 
@@ -163,16 +165,17 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI & Automatisierung im{" "}
-                <BackgroundHero.Highlight>Isar Valley</BackgroundHero.Highlight>
+                KI Agentur München –{" "}
+                <BackgroundHero.Highlight>Automatisierung im Isar Valley</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Workflow-Automatisierung mit n8n für DAX-Konzerne, Tech-Giganten und
-            innovative Mittelständler in München. Von BMW über Siemens bis zu
-            Europas größtem Apple Engineering Hub — wir automatisieren Prozesse
-            dort, wo Deutschlands Wirtschaftskraft zuhause ist.
+            Als KI Agentur München bieten wir Workflow-Automatisierung mit n8n
+            für DAX-Konzerne, Tech-Giganten und innovative Mittelständler. Von
+            BMW über Siemens bis zu Europas größtem Apple Engineering Hub — wir
+            automatisieren Prozesse dort, wo Deutschlands Wirtschaftskraft
+            zuhause ist.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">
@@ -206,9 +209,10 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <Typo.H2>
-            Münchens Wirtschaft braucht smarte Automatisierung
+            Warum München eine spezialisierte KI Agentur braucht
           </Typo.H2>
           <Typo.Paragraph>
+            Als KI Agentur München verstehen wir die Herausforderungen:
             Höchste Kaufkraft (36.461 Euro pro Einwohner, 35 % über dem
             Bundesdurchschnitt), höchste Akademikerquote aller deutschen Städte
             und eine Arbeitslosenquote von nur 4,5 % — München ist Deutschlands
@@ -223,11 +227,12 @@ export default async function Page({
 
       {/* Section 3: SimpleGrid — Wirtschaftsmacht München */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Wirtschaftsmacht München</Typo.H2>
+        <Typo.H2>Bayerische KI Agentur für Münchens Wirtschaftsmacht</Typo.H2>
         <Typo.Paragraph>
           München vereint DAX-Konzerne und internationale Tech-Giganten auf
           engstem Raum — ein einzigartiges Ökosystem, das skalierbare
-          Automatisierung verlangt.
+          Automatisierung verlangt. Als bayerische KI Agentur kennen wir die
+          Anforderungen dieser Unternehmen aus erster Hand.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
           <SimpleCard align="left">
@@ -363,7 +368,7 @@ export default async function Page({
             alt="Isar Valley München — Europas führender Tech-Standort mit internationalen Technologieunternehmen und innovativen Startups"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Isar Valley: Europas Tech-Hub</Typo.H2>
+            <Typo.H2>Isar Valley: Bayerische KI Agentur im Herzen von Europas Tech-Hub</Typo.H2>
             <Typo.Paragraph>
               München wird als &bdquo;Silicon Valley an der Isar&ldquo;
               bezeichnet — und das zu Recht. Eine Studie der Europäischen

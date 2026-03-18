@@ -194,13 +194,13 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>n8n Services</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              n8n Schulungen & Workshops
+              n8n Schulung & Workshops
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Befähigen Sie Ihr Team zur Workflow-Automatisierung.
-              Praxisorientierte Schulungen von Grundlagen bis
-              Enterprise-Deployment. Vor-Ort, Online oder Hybrid – individuell
-              auf Ihre Bedürfnisse zugeschnitten.
+              Unsere n8n Schulung befähigt Ihr Team zur
+              Workflow-Automatisierung. Praxisorientierte Trainings von
+              Grundlagen bis Enterprise-Deployment. Vor-Ort, Online oder
+              Hybrid – individuell auf Ihre Bedürfnisse zugeschnitten.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Schulung anfragen</ContactButton>
@@ -218,10 +218,10 @@ export default function Page() {
       {/* Training Levels */}
       <ContentWrapper>
         <IntroBox>
-          <IntroBox.Headline>Schulungs-Level</IntroBox.Headline>
+          <IntroBox.Headline>n8n Schulung nach Level</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Von Grundlagen bis Enterprise – wir haben das richtige Training für
-            Ihr Team
+            Von Grundlagen bis Enterprise – jede n8n Schulung wird individuell
+            auf den Wissensstand Ihres Teams abgestimmt
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -330,7 +330,7 @@ export default function Page() {
       {/* Training Formats */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
-          <IntroBox.Headline>Schulungsformate</IntroBox.Headline>
+          <IntroBox.Headline>Formate für Ihre n8n Schulung</IntroBox.Headline>
           <IntroBox.Paragraph>
             Wählen Sie das Format, das am besten zu Ihrem Team passt
           </IntroBox.Paragraph>
@@ -382,7 +382,7 @@ export default function Page() {
         <IntroBox>
           <IntroBox.Headline>Zielgruppen</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Maßgeschneiderte Schulungen für jede Rolle
+            Jede n8n Schulung ist maßgeschneidert auf die jeweilige Rolle
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -456,7 +456,7 @@ export default function Page() {
             />
           </div>
           <div>
-            <Typo.H2 className="mb-6">Warum professionelle Schulung?</Typo.H2>
+            <Typo.H2 className="mb-6">Warum eine professionelle n8n Schulung?</Typo.H2>
             <div className="space-y-6">
               <div>
                 <Typo.H4 disableMargin className="mb-2">
@@ -483,7 +483,7 @@ export default function Page() {
                 </Typo.H4>
                 <p className="text-gray-600">
                   Interaktive Übungen und praktische Sessions. Sofortiges
-                  Feedback und Korrektur während der Schulung.
+                  Feedback und Korrektur während der n8n Schulung.
                 </p>
               </div>
               <div>
@@ -503,9 +503,9 @@ export default function Page() {
       {/* Pricing Info */}
       <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <div className="text-center">
-          <Typo.H2 className="mb-6">Individuelle Angebote</Typo.H2>
+          <Typo.H2 className="mb-6">Individuelle Angebote für Ihre n8n Schulung</Typo.H2>
           <Typo.Paragraph className="text-gray-600 mb-8">
-            Unsere Schulungen werden individuell auf Ihre Anforderungen, Ihr
+            Jede n8n Schulung wird individuell auf Ihre Anforderungen, Ihr
             Team und Ihre Use Cases zugeschnitten. Wir erstellen Ihnen ein
             maßgeschneidertes Angebot basierend auf:
           </Typo.Paragraph>
