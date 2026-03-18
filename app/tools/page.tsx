@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
-import Typo from "@/components/ui/typo";
-import SimpleGrid from "@/components/layout/simple-grid";
 import Hero2Column, {
   Hero2ColumnTextColumn,
   Hero2ColumnMediaColumn,
@@ -17,14 +16,12 @@ import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import IntroBox from "@/components/ui/intro-box";
-import BoundlessImageCard from "@/components/cards/boundless-image-card";
-import SimpleCard from "@/components/cards/simple-card";
-import { InternalLinkLabel } from "@/components/buttons/internal-link";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Tools im Überblick | Bluebatch",
   description:
-    "Alle Tools im Überblick: Automatisierungs-Tools (n8n, Make, Zapier, Power Automate, Workato, UiPath) und Großhandel-Tools (Navision, Easybill). Beratung, Migration und Integration durch Bluebatch.",
+    "Alle Tools im Überblick: n8n, Make, Zapier, Power Automate, Workato, UiPath, Navision, Easybill, microtech ERP und Freshworks. Beratung, Migration und Integration durch Bluebatch.",
   openGraph: {
     title: "Tools im Überblick | Bluebatch",
     description:
@@ -57,180 +54,83 @@ const automationTools = [
   {
     slug: "n8n",
     title: "n8n",
-    shortDescription: "Workflow-Automatisierungsplattform",
-    description:
-      "n8n ist die Open-Source Workflow-Automatisierungsplattform, die visuelle Prozessgestaltung mit Code-Flexibilität verbindet. Mit über 1.200 Integrationen automatisieren Sie komplexe Geschäftsprozesse – self-hosted oder in der Cloud.",
-    features: [
-      "1.200+ Integrationen",
-      "Visual Builder + Code",
-      "Self-Hosted Option",
-      "Enterprise-ready",
-    ],
-    image: "/images/digital-workflow.jpg",
+    description: "Open-Source Workflow-Automatisierung mit 1.200+ Integrationen.",
+    image: "/tools/N8n-logo.png",
   },
   {
     slug: "make",
-    title: "Make (Integromat)",
-    shortDescription: "Visueller Szenario-Builder",
-    description:
-      "Make ist die visuelle Automatisierungsplattform mit über 3.000 Integrationen. Wir beraten bei der Optimierung Ihrer Make-Szenarien und unterstützen bei der Migration zu n8n für mehr Kontrolle und Kosteneffizienz.",
-    features: [
-      "3.000+ Integrationen",
-      "Visueller Builder",
-      "KI-Module",
-      "Migrationsberatung",
-    ],
-    image: "/images/technology-integration.jpg",
+    title: "Make",
+    description: "Visueller Szenario-Builder mit 3.000+ Integrationen.",
+    image: "/tools/make.svg",
   },
   {
     slug: "zapier",
     title: "Zapier",
-    shortDescription: "No-Code Automatisierung",
-    description:
-      "Zapier verbindet über 8.000 Apps und ist die meistgenutzte No-Code-Automatisierungsplattform. Wir helfen bei der Optimierung und beim kosteneffizienten Umstieg auf n8n – mit bis zu 90% Einsparung.",
-    features: [
-      "8.000+ Integrationen",
-      "Einfachste Bedienung",
-      "KI-Features",
-      "Migrationsberatung",
-    ],
-    image: "/images/technology-integration.jpg",
+    description: "No-Code-Plattform mit 8.000+ App-Verbindungen.",
+    image: "/tools/zapier.svg",
   },
   {
     slug: "power-automate",
-    title: "Microsoft Power Automate",
-    shortDescription: "Microsoft-Automatisierung & RPA",
-    description:
-      "Power Automate ist Microsofts Automatisierungsplattform mit 1.000+ Konnektoren und Desktop-RPA. Wir beraten unabhängig und unterstützen bei der Migration zu n8n – mit bis zu 80% Kosteneinsparung.",
-    features: [
-      "1.000+ Konnektoren",
-      "Desktop Flows (RPA)",
-      "Microsoft-Ökosystem",
-      "Unabhängige Beratung",
-    ],
-    image: "/images/technology-integration.jpg",
+    title: "Power Automate",
+    description: "Microsofts Automatisierung mit 1.000+ Konnektoren und RPA.",
+    image: "/tools/power-automate.svg",
   },
   {
     slug: "workato",
     title: "Workato",
-    shortDescription: "Enterprise iPaaS",
-    description:
-      "Workato ist die Enterprise-iPaaS-Plattform mit 1.200+ Konnektoren und KI-Copilot. Bei Kosten von bis zu 180.000 €/Jahr helfen wir bei der Migration zu n8n – mit bis zu 90% Einsparung.",
-    features: [
-      "1.200+ Konnektoren",
-      "Enterprise Governance",
-      "KI-Copilot",
-      "Migrationsberatung",
-    ],
-    image: "/images/technology-integration.jpg",
+    description: "Enterprise iPaaS mit 1.200+ Konnektoren und KI-Copilot.",
+    image: "/tools/workato.svg",
   },
   {
     slug: "uipath",
     title: "UiPath",
-    shortDescription: "Robotic Process Automation",
-    description:
-      "UiPath ist der Marktführer für RPA mit Desktop-Automatisierung, KI und Process Mining. Wir beraten zur optimalen Kombination von UiPath-RPA und n8n-API-Automatisierung.",
-    features: [
-      "Desktop-RPA",
-      "KI & Document AI",
-      "Process Mining",
-      "Hybride Strategie",
-    ],
-    image: "/images/technology-integration.jpg",
+    description: "Marktführer für RPA mit Desktop-Automatisierung.",
+    image: "/tools/uipath.svg",
   },
   {
     slug: "tray-io",
-    title: "Tray.io (Tray.ai)",
-    shortDescription: "Enterprise Automation Cloud",
-    description:
-      "Tray.ai ist die Enterprise-Automatisierungsplattform mit Merlin AI und 600+ Konnektoren. Wir helfen bei der kosteneffizienten Migration zu n8n – mit bis zu 90% Ersparnis.",
-    features: [
-      "600+ Konnektoren",
-      "Merlin AI",
-      "Embedded iPaaS",
-      "Migrationsberatung",
-    ],
-    image: "/images/technology-integration.jpg",
+    title: "Tray.io",
+    description: "Enterprise Automation Cloud mit Merlin AI.",
+    image: "/tools/tray-io.svg",
   },
   {
     slug: "activepieces",
     title: "Activepieces",
-    shortDescription: "Open-Source Automatisierung",
-    description:
-      "Activepieces ist eine MIT-lizenzierte Open-Source-Alternative mit 560+ Integrationen. Wir beraten zum Vergleich mit n8n und unterstützen bei der Migration zur leistungsstärkeren Plattform.",
-    features: [
-      "MIT-Lizenz",
-      "560+ Integrationen",
-      "KI-Agenten",
-      "Vergleichsberatung",
-    ],
-    image: "/images/technology-integration.jpg",
+    description: "MIT-lizenzierte Open-Source-Alternative mit 560+ Integrationen.",
+    image: "/tools/activepieces.svg",
   },
   {
     slug: "pipedream",
     title: "Pipedream",
-    shortDescription: "Developer-First Automatisierung",
-    description:
-      "Pipedream ist die Code-native Automatisierungsplattform mit 2.800+ Integrationen. Nach der Workday-Übernahme beraten wir zur DSGVO-konformen Migration auf n8n.",
-    features: [
-      "2.800+ Integrationen",
-      "Code-First Ansatz",
-      "npm/PyPI-Zugriff",
-      "Migrationsberatung",
-    ],
-    image: "/images/technology-integration.jpg",
+    description: "Code-native Plattform mit 2.800+ Integrationen.",
+    image: "/tools/pipedream.svg",
   },
 ];
 
 const grosshandelTools = [
   {
     slug: "navision",
-    title: "Microsoft Dynamics NAV (Navision)",
-    shortDescription: "Enterprise Resource Planning",
-    description:
-      "Microsoft Dynamics NAV – heute Dynamics 365 Business Central – ist das ERP-System für den Mittelstand. Wir automatisieren Ihre Navision-Prozesse über n8n und schaffen nahtlose Verbindungen zu Ihren anderen Systemen.",
-    features: [
-      "Finanzmanagement",
-      "Supply Chain",
-      "Microsoft-Ökosystem",
-      "Cloud & On-Premise",
-    ],
-    image: "/images/business-analytics.jpg",
+    title: "Navision",
+    description: "Microsoft Dynamics NAV / Business Central – ERP für den Mittelstand.",
+    image: "/tools/ms-dynamics-nav.png",
   },
   {
     slug: "easybill",
     title: "Easybill",
-    shortDescription: "Cloud-Rechnungssoftware",
-    description:
-      "Easybill ist die deutsche Cloud-Rechnungssoftware für KMU und Freelancer. Mit ZUGFeRD, XRechnung und DATEV-Integration ist Easybill die ideale Basis für automatisierte Buchhaltungsprozesse.",
-    features: [
-      "ZUGFeRD & XRechnung",
-      "DATEV-Export",
-      "E-Commerce-Integration",
-      "DSGVO-konform",
-    ],
-    image: "/images/invoice-processing.jpg",
-  },
-];
-
-const benefits = [
-  {
-    icon: "🔗",
-    title: "Nahtlose Integration",
-    description:
-      "Wir verbinden alle Ihre Tools über n8n miteinander – ohne manuelle Schnittstellen, ohne Datenverlust.",
+    description: "Deutsche Cloud-Rechnungssoftware mit ZUGFeRD und DATEV.",
+    image: "/tools/easybill.png",
   },
   {
-    icon: "⚡",
-    title: "Automatisierte Workflows",
-    description:
-      "Kein manueller Datentransfer mehr zwischen Systemen. Ihre Prozesse laufen automatisch und fehlerfrei.",
+    slug: "microtech-bueroplus",
+    title: "microtech ERP",
+    description: "ERP für den deutschen Mittelstand mit GraphQL API.",
+    image: "/tools/microtech.svg",
   },
   {
-    icon: "🇩🇪",
-    title: "Deutsche Expertise",
-    description:
-      "DSGVO-konform, deutschsprachiger Support und tiefes Verständnis für deutsche Business-Software.",
+    slug: "freshworks",
+    title: "Freshworks",
+    description: "Freshdesk, Freshsales, Freshservice – Helpdesk, CRM & ITSM.",
+    image: "/tools/freshworks.png",
   },
 ];
 
@@ -245,16 +145,15 @@ export default function Page() {
               Unsere Tools im Überblick
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Von Automatisierungs-Tools wie n8n, Make und Zapier bis zu
-              Großhandel-Tools wie Navision und Easybill – wir kennen alle
-              Plattformen und beraten Sie unabhängig. Migration, Integration und
-              Optimierung aus einer Hand.
+              Von n8n über Make und Zapier bis Navision und Freshworks – wir
+              kennen alle Plattformen und beraten Sie unabhängig. Migration,
+              Integration und Optimierung aus einer Hand.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
-              n8n • Make • Zapier • Power Automate • Navision • Easybill
+              n8n • Make • Zapier • Navision • Easybill • microtech • Freshworks
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
@@ -272,190 +171,80 @@ export default function Page() {
 
       <ContentWrapper>
         <IntroBox>
-          <IntroBox.PreHeadline>Tool-Übersicht</IntroBox.PreHeadline>
+          <IntroBox.PreHeadline>Automatisierung</IntroBox.PreHeadline>
           <IntroBox.Headline>Automatisierungs-Tools</IntroBox.Headline>
-          <IntroBox.Paragraph>
-            Wir kennen alle Automatisierungsplattformen im Detail und beraten
-            Sie unabhängig bei Migration, Integration und Optimierung.
-          </IntroBox.Paragraph>
+          <IntroBox.Subline>
+            Workflow-Plattformen, iPaaS und RPA – wir beraten, migrieren und
+            integrieren.
+          </IntroBox.Subline>
         </IntroBox>
 
-        <div className="space-y-8">
-          {automationTools.map((tool, index) => (
+        <div className="divide-y divide-gray-100">
+          {automationTools.map((tool) => (
             <Link
               key={tool.slug}
-              href={`/tools/automation-tools/${tool.slug}`}
-              className="block group"
+              href={`/tools/${tool.slug}`}
+              className="group flex items-center gap-5 py-5 transition-colors hover:bg-gray-50 -mx-4 px-4 rounded-lg"
             >
-              <BoundlessImageCard
-                imagePosition={index % 2 === 0 ? "right" : "left"}
-                className="cursor-pointer"
-              >
-                <BoundlessImageCard.Content>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div>
-                      <Typo.H3 className="mb-1 group-hover:text-primary-600 transition-colors">
-                        {tool.title}
-                      </Typo.H3>
-                      <p className="text-primary-600 font-medium">
-                        {tool.shortDescription}
-                      </p>
-                    </div>
-                  </div>
-                  <Typo.Paragraph textColor="muted" spacing="lg">
-                    {tool.description}
-                  </Typo.Paragraph>
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    {tool.features.map((feature, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-center gap-2 text-gray-700 text-sm"
-                      >
-                        <span className="text-primary-600">✓</span>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  <InternalLinkLabel>Mehr erfahren</InternalLinkLabel>
-                </BoundlessImageCard.Content>
-
-                <BoundlessImageCard.Image
-                  fadeGradient
+              <div className="relative h-10 w-10 shrink-0">
+                <Image
                   src={tool.image}
                   alt={tool.title}
+                  fill
+                  className="object-contain"
                 />
-              </BoundlessImageCard>
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">
+                  {tool.title}
+                </p>
+                <p className="text-sm text-gray-500 truncate">
+                  {tool.description}
+                </p>
+              </div>
+              <ArrowRight className="h-4 w-4 shrink-0 text-gray-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
             </Link>
           ))}
-        </div>
-
-        <div className="mt-8 text-center">
-          <Link
-            href="/tools/automation-tools"
-            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
-          >
-            Alle Automatisierungs-Tools ansehen
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
         </div>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
-          <IntroBox.PreHeadline>Tool-Übersicht</IntroBox.PreHeadline>
+          <IntroBox.PreHeadline>Großhandel & Business</IntroBox.PreHeadline>
           <IntroBox.Headline>Großhandel-Tools</IntroBox.Headline>
-          <IntroBox.Paragraph>
-            ERP-Integration und Rechnungsautomatisierung für den Großhandel –
-            maßgeschneidert mit n8n.
-          </IntroBox.Paragraph>
+          <IntroBox.Subline>
+            ERP, Rechnungssoftware, Helpdesk und CRM – wir integrieren Ihre
+            bestehenden Systeme in automatisierte Workflows.
+          </IntroBox.Subline>
         </IntroBox>
 
-        <div className="space-y-8">
-          {grosshandelTools.map((tool, index) => (
+        <div className="divide-y divide-gray-200">
+          {grosshandelTools.map((tool) => (
             <Link
               key={tool.slug}
-              href={`/tools/grosshandel/${tool.slug}`}
-              className="block group"
+              href={`/tools/${tool.slug}`}
+              className="group flex items-center gap-5 py-5 transition-colors hover:bg-gray-100 -mx-4 px-4 rounded-lg"
             >
-              <BoundlessImageCard
-                imagePosition={index % 2 === 0 ? "right" : "left"}
-                className="cursor-pointer"
-              >
-                <BoundlessImageCard.Content>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div>
-                      <Typo.H3 className="mb-1 group-hover:text-primary-600 transition-colors">
-                        {tool.title}
-                      </Typo.H3>
-                      <p className="text-primary-600 font-medium">
-                        {tool.shortDescription}
-                      </p>
-                    </div>
-                  </div>
-                  <Typo.Paragraph textColor="muted" spacing="lg">
-                    {tool.description}
-                  </Typo.Paragraph>
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    {tool.features.map((feature, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-center gap-2 text-gray-700 text-sm"
-                      >
-                        <span className="text-primary-600">✓</span>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  <InternalLinkLabel>Mehr erfahren</InternalLinkLabel>
-                </BoundlessImageCard.Content>
-
-                <BoundlessImageCard.Image
-                  fadeGradient
+              <div className="relative h-10 w-10 shrink-0">
+                <Image
                   src={tool.image}
                   alt={tool.title}
+                  fill
+                  className="object-contain"
                 />
-              </BoundlessImageCard>
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">
+                  {tool.title}
+                </p>
+                <p className="text-sm text-gray-500 truncate">
+                  {tool.description}
+                </p>
+              </div>
+              <ArrowRight className="h-4 w-4 shrink-0 text-gray-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
             </Link>
           ))}
         </div>
-
-        <div className="mt-8 text-center">
-          <Link
-            href="/tools/grosshandel"
-            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
-          >
-            Alle Großhandel-Tools ansehen
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
-        </div>
-      </ContentWrapper>
-
-      <ContentWrapper>
-        <IntroBox>
-          <IntroBox.PreHeadline>Ihr Partner</IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            Warum Bluebatch als Integrations-Partner?
-          </IntroBox.Headline>
-          <IntroBox.Paragraph>
-            Wir verbinden Ihre Tools zu einem nahtlosen Gesamtsystem
-          </IntroBox.Paragraph>
-        </IntroBox>
-
-        <SimpleGrid cols={3} className="gap-8">
-          {benefits.map((benefit, index) => (
-            <SimpleCard key={index}>
-              <SimpleCard.Icon>
-                <div className="text-5xl">{benefit.icon}</div>
-              </SimpleCard.Icon>
-              <Typo.H3 className="mb-3">{benefit.title}</Typo.H3>
-              <Typo.Paragraph>{benefit.description}</Typo.Paragraph>
-            </SimpleCard>
-          ))}
-        </SimpleGrid>
       </ContentWrapper>
 
       <ContentWrapper noPadding bodyWidth="full">
