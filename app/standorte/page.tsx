@@ -36,6 +36,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/automatisierungs-agentur",
   },
+  openGraph: {
+    title: "Automatisierungs Agentur — Workflow-Automatisierung in ganz Deutschland | Bluebatch",
+    description:
+      "Bluebatch ist Ihre Automatisierungs Agentur für Unternehmen in ganz Deutschland. Finden Sie Ihren Standort — von Berlin bis München.",
+  },
 };
 
 export default async function StandortePage({

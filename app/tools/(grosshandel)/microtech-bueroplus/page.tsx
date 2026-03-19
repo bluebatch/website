@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/tools/grosshandel/microtech-bueroplus",
+    canonical: "/tools/microtech-bueroplus",
   },
 };
 

@@ -28,9 +28,9 @@ export default function SectionHeader({
       </h3>
 
       {/* Large Headline with Gradient */}
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight">
+      <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight">
         {largeHeadline}
-      </h1>
+      </h2>
 
       {/* Description Text */}
       <p className={`text-base md:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed ${align === "center" ? "max-w-4xl mx-auto" : ""}`}>

@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/datenschutz",
   },
+  openGraph: {
+    title: "Datenschutzerklärung – Bluebatch",
+    description:
+      "Datenschutzerklärung und Informationen zum Umgang mit personenbezogenen Daten bei Bluebatch.",
+  },
 };
 
 export default function Page() {

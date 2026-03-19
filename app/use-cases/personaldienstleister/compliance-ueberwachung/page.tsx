@@ -235,7 +235,7 @@ export default function Page() {
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Die Lösung</Hero2ColumnPreHeadline>
-            <Hero2ColumnHeadline>
+            <Hero2ColumnHeadline as="h2">
               Automatisches Fristenmonitoring mit Echtzeit-Eskalation
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>

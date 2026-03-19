@@ -18,6 +18,7 @@ interface PreHeadlineProps {
 
 interface HeadlineProps {
   children: ReactNode;
+  as?: "h1" | "h2" | "h3";
 }
 
 interface DescriptionProps {
@@ -75,11 +76,11 @@ export function Hero2ColumnPreHeadline({ children }: PreHeadlineProps) {
   );
 }
 
-export function Hero2ColumnHeadline({ children }: HeadlineProps) {
+export function Hero2ColumnHeadline({ children, as: Tag = "h1" }: HeadlineProps) {
   return (
-    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight break-words hyphens-auto" lang="de">
+    <Tag className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight break-words hyphens-auto" lang="de">
       {children}
-    </h1>
+    </Tag>
   );
 }
 

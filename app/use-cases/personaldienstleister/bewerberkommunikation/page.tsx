@@ -134,7 +134,7 @@ export default function Page() {
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Das Problem</Hero2ColumnPreHeadline>
-            <Hero2ColumnHeadline>
+            <Hero2ColumnHeadline as="h2">
               Bewerber warten – und wechseln zur Konkurrenz
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>

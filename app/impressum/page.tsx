@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/impressum",
   },
+  openGraph: {
+    title: "Impressum – Bluebatch",
+    description: "Impressum und rechtliche Informationen zu Bluebatch.",
+  },
 };
 
 export default function Page() {

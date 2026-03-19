@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/tools/automation-tools/tray-io",
+    canonical: "/tools/tray-io",
   },
 };
 

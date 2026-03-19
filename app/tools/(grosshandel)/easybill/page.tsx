@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/tools/grosshandel/easybill",
+    canonical: "/tools/easybill",
   },
 };
 
