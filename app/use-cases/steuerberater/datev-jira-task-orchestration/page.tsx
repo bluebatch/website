@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -38,14 +40,23 @@ export const pageConfig: PageConfig = {
     "Bidirektionale Synchronisation zwischen DATEV und Jira für effizientes Fristenmanagement.",
 };
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/n8n-datev",
+  rewrites: [
+    {
+      source: "/n8n-datev",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "DATEV-Jira Task Orchestration – Steuerberater | Bluebatch",
+  title: "n8n DATEV Integration – Jira Task Orchestration | Bluebatch",
   description:
-    "Automatisierte Aufgabenorchestrierung zwischen DATEV und Jira für Steuerkanzleien. 99,9% Fristeneinhaltung.",
+    "n8n DATEV Integration für automatisierte Aufgabenorchestrierung mit Jira. 99,9% Fristeneinhaltung für Steuerkanzleien.",
   openGraph: {
-    title: "DATEV-Jira Task Orchestration – Steuerberater | Bluebatch",
+    title: "n8n DATEV Integration – Jira Task Orchestration | Bluebatch",
     description:
-      "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
+      "n8n DATEV Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -60,13 +71,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DATEV-Jira Task Orchestration – Steuerberater | Bluebatch",
+    title: "n8n DATEV Integration – Jira Task Orchestration | Bluebatch",
     description:
-      "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
+      "n8n DATEV Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/use-cases/steuerberater/datev-jira-task-orchestration",
+    canonical: "/n8n-datev",
   },
 };
 
@@ -76,7 +87,13 @@ const stats = [
   { value: 45, suffix: "min", label: "Zeitersparnis/Tag" },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       <ContentWrapper isFirstSection noPadding>
@@ -86,15 +103,15 @@ export default function Page() {
           opacityBackground="white"
         >
           <BackgroundHero.TopLabel>
-            DATEV-Jira Orchestration
+            DATEV-Integration mit n8n
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
-            Aufgaben und Fristen{" "}
+            n8n DATEV Aufgaben und Fristen{" "}
             <BackgroundHero.Highlight>automatisch</BackgroundHero.Highlight>{" "}
             synchronisieren
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische
+            Mit n8n DATEV und Jira bidirektional synchronisieren. Automatische
             Priorisierung, Workload-Dashboards und Eskalations-Workflows.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -123,7 +140,7 @@ export default function Page() {
                 2-5% Fristversäumnisse durch manuelle Verwaltung
               </IntroBox.Headline>
               <IntroBox.Subline>
-                Getrennte Systeme, keine Integration: Aufgaben aus DATEV müssen
+                Ohne DATEV-Integration mit n8n müssen Aufgaben aus DATEV
                 manuell in Projektmanagement-Tools übertragen werden. Bei 100+
                 Mandanten und dutzenden Fristen geht der Überblick verloren.
               </IntroBox.Subline>
@@ -171,7 +188,7 @@ export default function Page() {
             Vier Kernfunktionen für perfekte Koordination
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Nahtlose Verbindung zwischen DATEV und Jira für volle Transparenz.
+            Unsere Lösung verbindet n8n und DATEV nahtlos mit Jira für volle Transparenz.
           </IntroBox.Subline>
         </IntroBox>
 
@@ -186,7 +203,7 @@ export default function Page() {
           <TabContent value="sync">
             <SimpleGrid cols={2} className="items-center">
               <div>
-                <Typo.H3>DATEV-Jira Synchronisation</Typo.H3>
+                <Typo.H3>DATEV-Jira Synchronisation via n8n</Typo.H3>
                 <Typo.Paragraph>
                   Automatische Ticket-Erstellung bei neuen DATEV-Aufträgen.
                   Status-Updates fließen in beide Richtungen.
@@ -372,7 +389,7 @@ export default function Page() {
             {
               question: "Ist eine direkte DATEV-Integration überhaupt möglich?",
               answer:
-                "DATEV bietet keine vollständig offene REST-API, aber mehrere Integrationswege: DATEV-Schnittstellen für Export/Import, DATEV Unternehmen Online für Datenaustausch, DATEVconnect für zertifizierte Partner, und DMS-Schnittstellen. Wir empfehlen einen hybriden Ansatz: automatischer Export aus DATEV, Verarbeitung in n8n, und strukturierte Rücksynchronisation.",
+                "DATEV bietet keine vollständig offene REST-API, aber wir können n8n und DATEV verbinden über mehrere Integrationswege: DATEV-Schnittstellen für Export/Import, DATEV Unternehmen Online für Datenaustausch, DATEVconnect für zertifizierte Partner, und DMS-Schnittstellen. Wir empfehlen einen hybriden Ansatz: automatischer Export aus DATEV, Verarbeitung in n8n, und strukturierte Rücksynchronisation.",
             },
             {
               question: "Wie sind die Mandantendaten geschützt?",

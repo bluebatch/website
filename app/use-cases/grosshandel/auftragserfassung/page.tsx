@@ -3,8 +3,9 @@ import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { getRewriteOverrides } from "@/lib/get-rewrites";
-import { rewriteSiteConfig } from "./rewrite.site";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import BackgroundHero from "@/components/heroes/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -41,12 +42,103 @@ export const pageConfig: PageConfig = {
     "Bestellungen aus E-Mails, Faxen und Portalen automatisch erfassen und verarbeiten.",
 };
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/bestellung-erfassen",
+  rewrites: [
+    {
+      source: "/ai-lastenheft",
+      preHeadline: "AI Lastenheft",
+      headline: "AI-gestützte Lastenheft-Erstellung für den Großhandel",
+      metaTitle: "AI Lastenheft – Anforderungen automatisch erfassen | Bluebatch",
+      metaDescription:
+        "AI-gestützte Lastenheft-Erstellung für den Großhandel. Bestellungen und Anforderungen aus E-Mails, PDFs und Portalen automatisch erfassen.",
+      keywords: [
+        "AI Lastenheft",
+        "KI Lastenheft erstellen",
+        "Lastenheft automatisch",
+        "AI Anforderungserfassung",
+        "Lastenheft Großhandel",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/ai-lastenheft-erstellen",
+      preHeadline: "AI Lastenheft erstellen",
+      headline: "Lastenheft automatisch erstellen mit KI",
+      metaTitle:
+        "AI Lastenheft erstellen – Großhandel | Bluebatch",
+      metaDescription:
+        "Lastenheft automatisch erstellen mit KI. Anforderungen aus allen Kanälen erfassen, strukturieren und validieren – in Minuten statt Stunden.",
+      keywords: [
+        "AI Lastenheft erstellen",
+        "Lastenheft Generator",
+        "automatisches Lastenheft",
+        "KI Anforderungsdokument",
+        "Lastenheft Software",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/automatische-auftragserfassung",
+      preHeadline: "Automatische Auftragserfassung",
+      headline: "Automatische Auftragserfassung für den Großhandel",
+      metaTitle: "Automatische Auftragserfassung – Großhandel | Bluebatch",
+      metaDescription:
+        "Automatische Auftragserfassung für Großhändler. Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
+      keywords: [
+        "automatische Auftragserfassung",
+        "Aufträge automatisch erfassen",
+        "Bestellerfassung automatisieren",
+        "Order Capture Automation",
+        "Großhandel Auftragseingang",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/ki-auftragserfassung",
+      preHeadline: "KI-Auftragserfassung",
+      headline: "KI-gestützte Auftragserfassung für den Großhandel",
+      metaTitle: "KI-Auftragserfassung – Großhandel | Bluebatch",
+      metaDescription:
+        "KI-gestützte Auftragserfassung für Großhändler. Bestelldaten automatisch extrahieren, validieren und ins ERP übertragen.",
+      keywords: [
+        "KI Auftragserfassung",
+        "künstliche Intelligenz Bestellungen",
+        "KI Datenextraktion",
+        "intelligente Auftragsverarbeitung",
+        "KI ERP Integration",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/auftraege-automatisch-erfassen",
+      preHeadline: "Aufträge automatisch erfassen",
+      headline: "Aufträge automatisch erfassen im Großhandel",
+      metaTitle: "Aufträge automatisch erfassen – Großhandel | Bluebatch",
+      metaDescription:
+        "Aufträge automatisch erfassen für Großhändler. Von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit – ohne manuelle Dateneingabe.",
+      keywords: [
+        "Aufträge automatisch erfassen",
+        "Auftragseingabe automatisieren",
+        "manuelle Dateneingabe eliminieren",
+        "Bestellungen digitalisieren",
+        "Großhandel Digitalisierung",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/bestellung-erfassen",
+    },
+  ],
+};
+
 const defaultMeta = {
-  title: "Auftragserfassung – Großhandel | Bluebatch",
+  title:
+    "Bestellung erfassen – Automatische Auftragserfassung im Großhandel | Bluebatch",
   description:
-    "Wie Bluebatch die Auftragserfassung im Großhandel automatisiert. Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen.",
+    "Bestellung erfassen leicht gemacht: Bluebatch automatisiert den Bestellprozess im Einkauf. Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen.",
   ogDescription:
-    "Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
+    "Bestellung erfassen aus E-Mails, PDFs und Portalen – automatisch und fehlerfrei.",
 };
 
 export async function generateMetadata({
@@ -61,13 +153,13 @@ export async function generateMetadata({
   const description = overrides?.metaDescription ?? defaultMeta.description;
 
   const defaultKeywords = [
+    "Bestellung erfassen",
+    "Bestellprozess Einkauf",
     "Auftragserfassung",
     "automatische Auftragserfassung",
     "Bestellungen erfassen",
     "Großhandel Auftragserfassung",
     "E-Mail Bestellungen verarbeiten",
-    "PDF Bestellung automatisch",
-    "ERP Auftragserfassung",
     "Bluebatch",
   ];
 
@@ -97,7 +189,7 @@ export async function generateMetadata({
       images: ["/images/bluebatch-social-cover.jpg"],
     },
     alternates: {
-      canonical: "/use-cases/grosshandel/auftragserfassung",
+      canonical: "/bestellung-erfassen",
     },
   };
 }
@@ -113,6 +205,8 @@ export default async function Page({
 }: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
 
@@ -130,19 +224,20 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                Bestellungen aus{" "}
+                Bestellung erfassen:{" "}
                 <BackgroundHero.Highlight>
-                  allen Kanälen
+                  Alle Kanäle
                 </BackgroundHero.Highlight>
                 <br />
-                automatisch erfassen
+                automatisch verarbeiten
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            E-Mail, PDF, Fax, EDI oder Portal – n8n extrahiert alle Daten,
-            validiert gegen ERP und Lager, erstellt den Auftrag. Von 2-3 Tagen
-            auf 1-2 Stunden Bearbeitungszeit.
+            Bestellung erfassen aus E-Mail, PDF, Fax, EDI oder Portal – n8n
+            extrahiert alle Daten, validiert gegen ERP und Lager und erstellt
+            den Auftrag. So optimieren Sie den gesamten Bestellprozess im
+            Einkauf – von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
@@ -167,16 +262,17 @@ export default async function Page({
             <IntroBox textCentered={false}>
               <IntroBox.PreHeadline>Das Problem</IntroBox.PreHeadline>
               <IntroBox.Headline>
-                Manuelle Eingabe kostet 17.800 € pro Fehler
+                Jede manuell erfasste Bestellung kostet 17.800 € pro Fehler
               </IntroBox.Headline>
               <IntroBox.Subline>
-                Manuelle Auftragserfassung hat eine Fehlerrate von 10%+. Bei
-                10.000 Eingaben bedeutet das 1.000 Fehler – und jeder B2B-Fehler
-                kostet durchschnittlich 17.800 € zur Behebung.
+                Wer Bestellungen manuell erfassen muss, kennt die Fehlerrate von
+                10%+. Bei 10.000 Eingaben bedeutet das 1.000 Fehler – und jeder
+                B2B-Fehler kostet durchschnittlich 17.800 € zur Behebung.
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Dazu kommt: 200.000-350.000 € jährliche Arbeitskosten für ein
-                Team, das 15.000 Bestellungen pro Jahr manuell eingibt.
+                Team, das im Bestellprozess Einkauf 15.000 Bestellungen pro
+                Jahr manuell eingibt.
               </IntroBox.Subline>
             </IntroBox>
           </div>
@@ -214,7 +310,7 @@ export default async function Page({
       <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>Multi-Channel Intake</IntroBox.PreHeadline>
-          <IntroBox.Headline>Alle Bestellkanäle, ein System</IntroBox.Headline>
+          <IntroBox.Headline>Erfassung von Bestellungen aus allen Kanälen – ein System</IntroBox.Headline>
           <IntroBox.Subline>
             Egal wie Ihre Kunden bestellen – der Workflow verarbeitet alle
             Formate einheitlich.
@@ -412,9 +508,10 @@ export default async function Page({
         <FaqContainer
           faqs={[
             {
-              question: "Wie genau ist die automatische Extraktion?",
+              question:
+                "Wie genau kann das System Bestellungen automatisch erfassen?",
               answer:
-                "95-98% bei strukturierten Dokumenten (konsistente PDFs, EDI), 85-90% bei semi-strukturierten. Das System flaggt Extraktionen mit niedrigem Confidence Score für manuelle Überprüfung. Die Genauigkeit verbessert sich durch Machine Learning.",
+                "95-98% Genauigkeit bei strukturierten Dokumenten (konsistente PDFs, EDI), 85-90% bei semi-strukturierten. Das System flaggt Extraktionen mit niedrigem Confidence Score für manuelle Überprüfung. Die Genauigkeit verbessert sich durch Machine Learning.",
             },
             {
               question: "Was passiert bei nicht verarbeitbaren Bestellungen?",

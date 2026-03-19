@@ -13,7 +13,7 @@ export default function BlogCard({ post, highlight }: BlogCardProps) {
 
   return (
     <Link
-      href={`/blog/${post.slug}`}
+      href={post.href}
       className={`group relative block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden ${
         highlight ? "scale-105 lg:scale-110" : ""
       }`}

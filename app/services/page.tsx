@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Link from "next/link";
+import { resolveHref } from "@/lib/get-canonical-path";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -21,14 +24,35 @@ import BoundlessImageCard from "@/components/cards/boundless-image-card";
 import SimpleCard from "@/components/cards/simple-card";
 import { InternalLinkLabel } from "@/components/buttons/internal-link";
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/ki-implementierung",
+  rewrites: [
+    {
+      source: "/ki-implementierung",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "n8n Services | Bluebatch",
+  title: "KI-Implementierung & Services | Bluebatch",
   description:
-    "Professionelle n8n Services: Hosting, Wartung, Custom Nodes, Schulungen und Performance Scaling. Ihr Partner für Enterprise n8n.",
+    "Implementierung von KI vom Experten: Professionelle Services für KI Agenten Integration, Prozess Automation und Systemintegration. Ihre Softwareentwicklung Firma für n8n.",
+  keywords: [
+    "Implementierung von KI",
+    "KI Agenten Integration",
+    "KI Agenten Beratung",
+    "Systemintegration Beratung",
+    "Prozesse aufsetzen",
+    "Schnittstellen Management",
+    "Automatisierung Prozess",
+    "Prozess Automation",
+    "Softwareentwicklung Firma",
+    "Consulting Services IT",
+  ],
   openGraph: {
-    title: "n8n Services | Bluebatch",
+    title: "Implementierung von KI & Services | Bluebatch",
     description:
-      "Von Hosting bis High-Performance Scaling – alle n8n Services aus einer Hand.",
+      "KI erfolgreich implementieren – von KI Agenten Integration bis Prozess Automation, alle Services aus einer Hand.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -37,19 +61,19 @@ export const metadata: Metadata = {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Bluebatch n8n Services",
+        alt: "Bluebatch KI Services und Implementierung",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "n8n Services | Bluebatch",
+    title: "Implementierung von KI & Services | Bluebatch",
     description:
-      "Professionelle n8n Services für Ihr Unternehmen. Hosting, Wartung, Entwicklung und mehr.",
+      "KI erfolgreich implementieren für Ihr Unternehmen. Consulting Services IT, Prozess Automation und mehr.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/services",
+    canonical: "/ki-implementierung",
   },
 };
 
@@ -139,9 +163,9 @@ const services = [
 const benefits = [
   {
     iconSrc: "/icons/handshake.svg",
-    title: "Alles aus einer Hand",
+    title: "Schnittstellen Management aus einer Hand",
     description:
-      "Von Hosting bis Scaling – alle n8n Services von einem Partner. Keine Schnittstellenprobleme, klare Verantwortung.",
+      "Von Hosting bis Scaling – alle n8n Services von einem Partner. Professionelles Schnittstellen Management, klare Verantwortung.",
   },
   {
     iconSrc: "/icons/enterprise.svg",
@@ -163,7 +187,13 @@ const benefits = [
   },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       {/* Hero Section */}
@@ -172,12 +202,13 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Services</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Professionelle n8n Services
+              KI-Implementierung & Professionelle Services
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Von Hosting über Wartung bis zu Custom Development und Schulungen
-              – wir sind Ihr Full-Service-Partner für Enterprise n8n. Alles aus
-              einer Hand, made in Germany.
+              Implementierung von KI vom Experten: Von KI Agenten Integration über
+              Schnittstellen Management bis zu Prozess Automation – wir sind
+              Ihre Softwareentwicklung Firma für Enterprise n8n. Consulting
+              Services IT aus einer Hand, made in Germany.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
@@ -203,10 +234,11 @@ export default function Page() {
       {/* Services Grid */}
       <ContentWrapper>
         <IntroBox>
-          <IntroBox.Headline>Unsere Services</IntroBox.Headline>
+          <IntroBox.Headline>Unsere Services für KI Agenten Beratung</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Maßgeschneiderte Lösungen für jede Phase Ihrer n8n-Journey – vom
-            ersten Setup bis zur Enterprise-Skalierung.
+            Maßgeschneiderte Lösungen für jede Phase Ihrer KI-Integration –
+            vom Prozesse aufsetzen über Systemintegration Beratung bis zur
+            Enterprise-Skalierung.
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -214,7 +246,7 @@ export default function Page() {
           {services.map((service, index) => (
             <Link
               key={service.slug}
-              href={`/services/${service.slug}`}
+              href={resolveHref(`/services/${service.slug}`)}
               className="block group"
             >
               <BoundlessImageCard
@@ -264,10 +296,11 @@ export default function Page() {
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.Headline>
-            Warum Bluebatch als n8n Partner?
+            Warum Bluebatch für Automatisierung Prozess & Implementierung von KI?
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            Ihr Full-Service-Partner für Enterprise n8n
+            Ihr Full-Service-Partner für Enterprise n8n und KI Agenten
+            Integration
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -294,8 +327,8 @@ export default function Page() {
           </IntroBox.Headline>
           <IntroBox.Paragraph>
             Wir beraten Sie gerne kostenlos und unverbindlich. In einem kurzen
-            Gespräch finden wir heraus, welche Services Ihrem Unternehmen am
-            meisten helfen.
+            Gespräch finden wir heraus, welche Consulting Services IT und
+            Prozess Automation Ihrem Unternehmen am meisten helfen.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex gap-4 justify-center">

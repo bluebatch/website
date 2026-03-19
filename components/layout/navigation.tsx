@@ -57,7 +57,7 @@ function NavIcon({ src, className }: { src: string; className?: string }) {
 }
 
 interface NavigationProps {
-  latestBlogPosts?: { title: string; slug: string }[];
+  latestBlogPosts?: { title: string; slug: string; href: string }[];
 }
 
 export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
@@ -121,84 +121,84 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
     sections: [
       {
         title: "Services",
-        href: "/services",
+        href: "/ki-implementierung",
         items: [
           {
             icon: "/icons/server-minimalistic.svg",
             title: "n8n Hosting",
             description: "OnPrem oder Cloud",
-            href: "/services/n8n-hosting",
+            href: "/n8n-hosting-deutschland",
           },
           {
             icon: "/icons/monitor-camera.svg",
             title: "Workflow-Wartung",
             description: "24/7 Monitoring",
-            href: "/services/workflow-wartung",
+            href: "/workflow-wartung",
           },
           {
             icon: "/icons/puzzle.svg",
             title: "Custom Nodes",
             description: "Maßgeschneiderte Integrationen",
-            href: "/services/custom-nodes",
+            href: "/n8n-node",
           },
           {
             icon: "/icons/academic-cap.svg",
             title: "Schulungen",
             description: "Workshops & Training",
-            href: "/services/schulungen",
+            href: "/n8n-schulung",
           },
           {
             icon: "/icons/speedometer.svg",
             title: "Performance Scaling",
             description: "High-Performance Setup",
-            href: "/services/performance-scaling",
+            href: "/n8n-performance",
           },
         ],
       },
       {
         title: "Automation",
-        href: "/tools/automation-tools",
+        href: "/tools",
         items: [
           {
             title: "n8n",
             description: "Workflow-Automatisierung",
-            href: "/tools/automation-tools/n8n",
+            href: "/was-ist-n8n",
           },
           {
             title: "Make",
             description: "Visueller Szenario-Builder",
-            href: "/tools/automation-tools/make",
+            href: "/tools/make",
           },
           {
             title: "Zapier",
             description: "No-Code Automatisierung",
-            href: "/tools/automation-tools/zapier",
+            href: "/tools/zapier",
           },
           {
             title: "Power Automate",
             description: "Microsoft-Automatisierung",
-            href: "/tools/automation-tools/power-automate",
+            href: "/tools/power-automate",
           },
           {
             title: "Alle Automation-Tools",
             description: "Workato, UiPath, Tray.io u.m.",
-            href: "/tools/automation-tools",
+            href: "/tools",
           },
         ],
       },
       {
         title: "Großhandel",
-        href: "/tools/grosshandel",
+        href: "/tools",
         items: [
           {
             title: "Navision",
             description: "Microsoft Dynamics ERP",
-            href: "/tools/grosshandel/navision",
+            href: "/tools/navision",
           },
           {
             title: "Easybill",
             description: "Rechnungssoftware",
-            href: "/tools/grosshandel/easybill",
+            href: "/tools/easybill",
           },
         ],
       },
@@ -211,11 +211,11 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
       {
         title: "Großhandel",
         icon: "/icons/factory.svg",
-        href: "/use-cases/grosshandel",
+        href: "/wholesale-ai",
         cases: [
           {
             title: "Auftragserfassung",
-            href: "/use-cases/grosshandel/auftragserfassung",
+            href: "/bestellung-erfassen",
           },
           {
             title: "Bestellabwicklung",
@@ -231,7 +231,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
           },
           {
             title: "3-Wege-Rechnungsprüfung",
-            href: "/use-cases/grosshandel/3-wege-rechnungspruefung",
+            href: "/automatische-rechnungspruefung",
           },
           {
             title: "Zertifikatsprüfung Lieferanten",
@@ -254,7 +254,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
         cases: [
           {
             title: "Dokumentenverarbeitung",
-            href: "/use-cases/steuerberater/dokumentenverarbeitung",
+            href: "/ki-dokumentenmanagement",
           },
           {
             title: "Mandantenkommunikation",
@@ -262,7 +262,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
           },
           {
             title: "DATEV-Jira Orchestration",
-            href: "/use-cases/steuerberater/datev-jira-task-orchestration",
+            href: "/n8n-datev",
           },
         ],
       },
@@ -605,7 +605,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  href="/blog"
+                  href="/blog-workflow"
                   className="group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
                 >
                   <svg
@@ -653,7 +653,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                         {latestBlogPosts.map((post) => (
                           <Link
                             key={post.slug}
-                            href={`/blog/${post.slug}`}
+                            href={post.href}
                             className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group"
                           >
                             <p className="text-sm font-medium text-gray-900 group-hover:text-primary-500 line-clamp-1">
@@ -663,7 +663,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                         ))}
                       </div>
                       <div className="border-t border-gray-100 mt-2 pt-2 px-2">
-                        <Button href="/blog" className="w-full text-xs py-1.5 px-3">
+                        <Button href="/blog-workflow" className="w-full text-xs py-1.5 px-3">
                           Alle Artikel ansehen
                           <ArrowRight className="w-3.5 h-3.5" />
                         </Button>
@@ -763,7 +763,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 Über uns
               </Link>
               <Link
-                href="/services"
+                href="/ki-implementierung"
                 className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -778,14 +778,14 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
               </Link>
               <div className="pl-8 space-y-1">
                 <Link
-                  href="/tools/automation-tools"
+                  href="/tools"
                   className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Automation-Tools
                 </Link>
                 <Link
-                  href="/tools/grosshandel"
+                  href="/tools"
                   className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -816,7 +816,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 ))}
               </div>
               <Link
-                href="/blog"
+                href="/blog-workflow"
                 className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >

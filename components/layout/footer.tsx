@@ -7,29 +7,29 @@ export default function Footer() {
   const mainMenu = [
     { label: "Über uns", href: "/" },
     { label: "Das Team", href: "/team" },
-    { label: "Services", href: "/services" },
+    { label: "Services", href: "/ki-implementierung" },
     { label: "Use Cases", href: "/use-cases" },
-    { label: "Blog", href: "/blog" },
+    { label: "Blog", href: "/blog-workflow" },
   ];
 
   const servicesMenu = [
-    { label: "n8n Hosting", href: "/services/n8n-hosting" },
-    { label: "Workflow-Wartung", href: "/services/workflow-wartung" },
-    { label: "Custom Nodes", href: "/services/custom-nodes" },
-    { label: "Schulungen", href: "/services/schulungen" },
-    { label: "Performance Scaling", href: "/services/performance-scaling" },
+    { label: "n8n Hosting", href: "/n8n-hosting-deutschland" },
+    { label: "Workflow-Wartung", href: "/workflow-wartung" },
+    { label: "Custom Nodes", href: "/n8n-node" },
+    { label: "Schulungen", href: "/n8n-schulung" },
+    { label: "Performance Scaling", href: "/n8n-performance" },
   ];
 
   const productMenu = [
-    { label: "Grosshandel", href: "/use-cases/grosshandel" },
+    { label: "Grosshandel", href: "/wholesale-ai" },
     { label: "Steuerberater", href: "/use-cases/steuerberater" },
     { label: "PDL", href: "/use-cases/personaldienstleister" },
   ];
 
   const toolsMenu = [
-    { label: "n8n", href: "/tools/automation-tools/n8n" },
-    { label: "Navision", href: "/tools/grosshandel/navision" },
-    { label: "Easybill", href: "/tools/grosshandel/easybill" },
+    { label: "n8n", href: "/was-ist-n8n" },
+    { label: "Navision", href: "/tools/navision" },
+    { label: "Easybill", href: "/tools/easybill" },
     { label: "Alle Tools", href: "/tools" },
   ];
 

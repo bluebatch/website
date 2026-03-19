@@ -47,7 +47,7 @@ export default async function LatestBlogPosts({
         ))}
       </div>
       <div className="text-center mt-10">
-        <Button href="/blog">Alle Artikel ansehen</Button>
+        <Button href="/blog-workflow">Alle Artikel ansehen</Button>
       </div>
     </ContentWrapper>
   );

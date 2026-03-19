@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { resolveHref } from "@/lib/get-canonical-path";
 import IntroBox from "@/components/ui/intro-box";
 import SimpleGrid from "@/components/layout/simple-grid";
 import GlassCard from "@/components/cards/glass-card";
@@ -34,7 +35,7 @@ export function CityLinksFromMeta({
           {publishedCrossRef.map((city) => (
             <Link
               key={city.slug}
-              href={`/standorte/${city.slug}`}
+              href={resolveHref(`/standorte/${city.slug}`)}
               className="group"
             >
               <GlassCard className="h-full">

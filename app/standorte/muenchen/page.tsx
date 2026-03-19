@@ -16,8 +16,103 @@ import { FaqContainer } from "@/components/ui/faqs";
 import Typo from "@/components/ui/typo";
 import { Building2, Globe, Car, ShieldCheck } from "lucide-react";
 import type { CityMeta } from "@/lib/meta-custom";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import { getRewriteOverrides } from "@/lib/get-rewrites";
-import { rewriteSiteConfig } from "./rewrite.site";
+
+
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/ki-agentur-muenchen",
+  rewrites: [
+    {
+      source: "/ai-workflows-muenchen",
+      preHeadline: "AI Workflows München",
+      headline: "AI Workflows & Automatisierung in München",
+      metaTitle: "AI Workflows München – KI-Automatisierung | Bluebatch",
+      metaDescription:
+        "AI Workflows für Unternehmen in München. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
+      keywords: [
+        "AI Workflows München",
+        "KI Automatisierung München",
+        "Workflow Automatisierung München",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/n8n-automation-muenchen",
+      preHeadline: "n8n Automation München",
+      headline: "n8n Automation in München – Workflows automatisieren",
+      metaTitle: "n8n Automation München | Bluebatch",
+      metaDescription:
+        "n8n Automation für Unternehmen in München. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+      keywords: [
+        "n8n Automation München",
+        "n8n München",
+        "Workflow Automation München",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/n8n-muenchen",
+      preHeadline: "n8n München",
+      headline: "n8n Agentur in München",
+      metaTitle: "n8n München – Workflow-Automatisierung | Bluebatch",
+      metaDescription:
+        "n8n Experten in München. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in München und Umgebung.",
+      keywords: [
+        "n8n München",
+        "n8n Agentur München",
+        "n8n Beratung München",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/automation-muenchen",
+      preHeadline: "Automation München",
+      headline: "Automation & Prozessoptimierung in München",
+      metaTitle: "Automation München – Prozessoptimierung | Bluebatch",
+      metaDescription:
+        "Automation für Unternehmen in München. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
+      keywords: [
+        "Automation München",
+        "Prozessautomatisierung München",
+        "Workflow Automation München",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/it-dienstleister-muenchen",
+      preHeadline: "IT Dienstleister München",
+      headline: "IT Dienstleister in München – Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister München – Automatisierung | Bluebatch",
+      metaDescription:
+        "Ihr IT Dienstleister in München. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in München.",
+      keywords: [
+        "IT Dienstleister München",
+        "IT Service München",
+        "Digitalisierung München",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/ki-beratung-muenchen",
+      preHeadline: "KI Beratung München",
+      headline: "KI Beratung in München – Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung München – KI-Lösungen | Bluebatch",
+      metaDescription:
+        "KI Beratung für Unternehmen in München. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
+      keywords: [
+        "KI Beratung München",
+        "KI Lösungen München",
+        "Künstliche Intelligenz München",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/ki-agentur-muenchen",
+    },
+  ],
+};
 
 export const metaCustom: CityMeta = {
   name: "München",
@@ -70,6 +165,7 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }): Promise<Metadata> {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
 
@@ -102,7 +198,7 @@ export async function generateMetadata({
       images: ["/images/cities/muenchen.jpg"],
     },
     alternates: {
-      canonical: `/standorte/${metaCustom.slug}`,
+      canonical: "/ki-agentur-muenchen",
     },
   };
 }
@@ -134,9 +230,9 @@ const muenchenFaqs = [
       "AI Agents erweitern jeden n8n-Workflow um intelligente Entscheidungen. Sie klassifizieren eingehende Daten, generieren Texte und E-Mails, extrahieren Informationen aus Dokumenten und treffen regelbasierte Entscheidungen. Münchner Unternehmen nutzen KI-gestützte Workflows bereits für automatisierte Angebotserstellung, Dokumentenverarbeitung und datenbasierte Entscheidungsprozesse.",
   },
   {
-    question: "Was unterscheidet Bluebatch als KI Agentur München von anderen IT-Dienstleistern?",
+    question: "Was unterscheidet Bluebatch als KI-Agentur in München von anderen IT-Dienstleistern?",
     answer:
-      "Als KI Agentur München sind wir spezialisiert auf Workflow-Automatisierung mit n8n und KI — kein Bauchladen, sondern tiefe Expertise. Unsere Kunden profitieren von Self-Hosted-Lösungen mit voller Datenkontrolle, individueller Workflow-Entwicklung und langfristiger Betreuung. Wir verstehen die spezifischen Anforderungen der Münchner Schlüsselindustrien: Automotive Supply Chains, Halbleiterfertigung, Versicherungs- und Rückversicherungsprozesse, Fintech-Compliance und Aerospace-Zertifizierung — von DAX-Konzernen über Tech-Unternehmen bis zum Hidden Champion im Mittelstand.",
+      "Als Münchner KI-Agentur sind wir spezialisiert auf Workflow-Automatisierung mit n8n und KI — kein Bauchladen, sondern tiefe Expertise. Unsere Kunden profitieren von Self-Hosted-Lösungen mit voller Datenkontrolle, individueller Workflow-Entwicklung und langfristiger Betreuung. Wir verstehen die spezifischen Anforderungen der Münchner Schlüsselindustrien: Automotive Supply Chains, Halbleiterfertigung, Versicherungs- und Rückversicherungsprozesse, Fintech-Compliance und Aerospace-Zertifizierung — von DAX-Konzernen über Tech-Unternehmen bis zum Hidden Champion im Mittelstand.",
   },
 ];
 
@@ -147,6 +243,7 @@ export default async function Page({
 }) {
   if (!metaCustom.publish) notFound();
 
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
 
@@ -212,7 +309,7 @@ export default async function Page({
             Warum München eine spezialisierte KI Agentur braucht
           </Typo.H2>
           <Typo.Paragraph>
-            Als KI Agentur München verstehen wir die Herausforderungen:
+            Als KI-Agentur in München verstehen wir die Herausforderungen:
             Höchste Kaufkraft (36.461 Euro pro Einwohner, 35 % über dem
             Bundesdurchschnitt), höchste Akademikerquote aller deutschen Städte
             und eine Arbeitslosenquote von nur 4,5 % — München ist Deutschlands
@@ -231,7 +328,7 @@ export default async function Page({
         <Typo.Paragraph>
           München vereint DAX-Konzerne und internationale Tech-Giganten auf
           engstem Raum — ein einzigartiges Ökosystem, das skalierbare
-          Automatisierung verlangt. Als bayerische KI Agentur kennen wir die
+          Automatisierung verlangt. Als KI-Agentur in Bayern kennen wir die
           Anforderungen dieser Unternehmen aus erster Hand.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -239,7 +336,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Building2 className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>DAX-Konzerne & Industriegrößen</Typo.H3>
+            <Typo.H3>DAX-Konzerne & Industriegrößen — KI Group München</Typo.H3>
             <Typo.Paragraph>
               BMW, Siemens, Allianz, Munich Re, Linde, Infineon, MTU und
               Traton haben ihren Hauptsitz in München. Dazu kommen MAN und
@@ -296,7 +393,7 @@ export default async function Page({
 
       {/* Section 4: DataTable — Warum München automatisieren muss */}
       <ContentWrapper>
-        <Typo.H2>Warum München automatisieren muss</Typo.H2>
+        <Typo.H2>Warum München automatisieren muss — Münchner KI-Agentur</Typo.H2>
         <Typo.Paragraph>
           Die Stärken des Wirtschaftsstandorts München schaffen gleichzeitig die
           größten Herausforderungen. Workflow-Automatisierung mit n8n und KI
@@ -368,7 +465,7 @@ export default async function Page({
             alt="Isar Valley München — Europas führender Tech-Standort mit internationalen Technologieunternehmen und innovativen Startups"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Isar Valley: Bayerische KI Agentur im Herzen von Europas Tech-Hub</Typo.H2>
+            <Typo.H2>Isar Valley: KI-Agentur im Herzen von Europas Tech-Hub</Typo.H2>
             <Typo.Paragraph>
               München wird als &bdquo;Silicon Valley an der Isar&ldquo;
               bezeichnet — und das zu Recht. Eine Studie der Europäischen
@@ -378,7 +475,8 @@ export default async function Page({
             </Typo.Paragraph>
             <Typo.Paragraph>
               Apple, Google, Microsoft und Amazon haben hier ihre größten
-              europäischen Standorte aufgebaut. Bayern übertraf 2024 sogar
+              europäischen Standorte aufgebaut — eine KI-Gruppe in München, die
+              weltweit ihresgleichen sucht. Bayern übertraf 2024 sogar
               Berlin beim eingeworbenen Risikokapital mit 2,3 Milliarden Euro.
               UnternehmerTUM an der TU München ist eines der größten
               Gründerzentren Europas. Diese Tech-Dichte treibt die Nachfrage
@@ -391,10 +489,11 @@ export default async function Page({
 
       {/* Section 6: ProsCons — Automatisierung mit Bluebatch */}
       <ContentWrapper>
-        <Typo.H2>Automatisierung mit Bluebatch in München</Typo.H2>
+        <Typo.H2>Automatisierung mit Bluebatch — KI-Agentur in München</Typo.H2>
         <Typo.Paragraph>
-          Transparenz ist uns wichtig. Deshalb zeigen wir Ihnen nicht nur, was
-          wir können — sondern auch, wann wir nicht der richtige Partner sind.
+          Transparenz ist uns wichtig. Als Münchner KI-Agentur zeigen wir Ihnen
+          nicht nur, was wir können — sondern auch, wann wir nicht der richtige
+          Partner sind.
         </Typo.Paragraph>
         <ProsCons>
           <ProsCons.Pros>
@@ -446,8 +545,7 @@ export default async function Page({
           <IntroBox.Subline>
             DAX-Konzerne, Automotive-Zulieferer, Halbleiterhersteller und
             Fintech-Startups — Münchens Industrien brauchen Automatisierung mit
-            Enterprise-Sicherheit, Präzision und Skalierbarkeit. Unser bewährtes
-            6-Phasen-Framework liefert genau das.
+            Enterprise-Sicherheit, Präzision und Skalierbarkeit. Als KI-Agentur in München liefern wir mit unserem bewährten 6-Phasen-Framework genau das.
           </IntroBox.Subline>
         </IntroBox>
         <div className="mt-8 text-center">

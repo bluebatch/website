@@ -916,7 +916,7 @@ export default function Page() {
               </Typo.ListItem>
               <Typo.ListItem>
                 <a
-                  href="https://github.com/n8n-io/n8n/discussions"
+                  href="https://github.com/n8n-io/n8n"
                   className="text-primary-600 hover:text-primary-700"
                   target="_blank"
                   rel="noopener noreferrer"

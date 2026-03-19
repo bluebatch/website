@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -20,14 +22,23 @@ import { AnimatedNumber } from "@/components/cards/kpi-card";
 import SimpleCard from "@/components/cards/simple-card";
 import IntroBox from "@/components/ui/intro-box";
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/n8n-performance",
+  rewrites: [
+    {
+      source: "/n8n-performance",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "High-Performance n8n Scaling | Bluebatch",
+  title: "n8n Performance Scaling | Bluebatch",
   description:
-    "n8n laggt oder crashed? Wir lösen Performance-Probleme mit Redis, RabbitMQ und Docker Swarm. 7x höherer Throughput garantiert.",
+    "Performance-Probleme mit n8n? Wir lösen sie mit Redis, RabbitMQ und Docker Swarm. 7x höherer Throughput garantiert.",
   openGraph: {
-    title: "High-Performance n8n Scaling | Bluebatch",
+    title: "Performance-Scaling für n8n | Bluebatch",
     description:
-      "Von 23 auf 162 Requests/Sekunde. Professionelles Performance-Scaling für n8n mit Queue Mode.",
+      "Von 23 auf 162 Requests/Sekunde. Professionelles Performance-Scaling mit Queue Mode für n8n.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -42,13 +53,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "High-Performance n8n Scaling | Bluebatch",
+    title: "Performance-Scaling für n8n | Bluebatch",
     description:
-      "n8n Performance-Probleme? Wir skalieren auf Enterprise-Level mit Redis und Queue Mode.",
+      "Performance-Probleme mit n8n? Wir skalieren auf Enterprise-Level mit Redis und Queue Mode.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/services/performance-scaling",
+    canonical: "/n8n-performance",
   },
 };
 
@@ -202,7 +213,13 @@ const technologies = [
   },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       {/* Hero Section */}
@@ -210,11 +227,12 @@ export default function Page() {
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>n8n Services</Hero2ColumnPreHeadline>
-            <Hero2ColumnHeadline>High-Performance Scaling</Hero2ColumnHeadline>
+            <Hero2ColumnHeadline>n8n Performance Scaling für Ihr Unternehmen</Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Ihre n8n-Instanz laggt oder crashed? Wir lösen
-              Performance-Probleme mit Queue Mode, Redis und optimierter
-              Architektur. Von 23 auf 162 Requests/Sekunde – garantiert.
+              Die Performance von n8n ist entscheidend für skalierbare Automatisierung.
+              Ihre Instanz laggt oder crashed? Wir lösen Performance-Probleme
+              mit Queue Mode, Redis und optimierter Architektur. Von 23 auf
+              162 Requests/Sekunde – garantiert.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">
@@ -240,9 +258,11 @@ export default function Page() {
           <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
             Was als einfaches Automatisierungstool beginnt, stößt bei steigenden
             Anforderungen schnell an Grenzen. Langsame Executions, Memory-Fehler
-            und System-Crashes sind die Folge. Doch mit der richtigen
+            und System-Crashes beeinträchtigen die Performance von n8n erheblich. Doch mit der richtigen
             Architektur – Redis Queue Mode, PostgreSQL und Container
             Orchestrierung – skaliert n8n problemlos auf Enterprise-Level.
+            Auch im Bereich AI Acceleration & Workflows sorgt optimale
+            n8n-Performance-Optimierung für schnellere Ergebnisse.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>
@@ -255,7 +275,7 @@ export default function Page() {
       {/* Benchmarks */}
       <ContentWrapper colorScheme="gradient-dark">
         <IntroBox dark>
-          <IntroBox.Headline>Nachgewiesene Performance-Gains</IntroBox.Headline>
+          <IntroBox.Headline>Nachgewiesene Performance-Gains für n8n</IntroBox.Headline>
           <IntroBox.Paragraph>
             Real-World Benchmarks von unseren Enterprise-Deployments
           </IntroBox.Paragraph>
@@ -334,9 +354,9 @@ export default function Page() {
       {/* Architecture Components */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
-          <IntroBox.Headline>High-Performance Architektur</IntroBox.Headline>
+          <IntroBox.Headline>Performance-Architektur für n8n und AI Acceleration</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Die Komponenten unserer Enterprise-Scaling-Lösung
+            Die Komponenten unserer Enterprise-Scaling-Lösung für maximale Performance von n8n
           </IntroBox.Paragraph>
         </IntroBox>
 

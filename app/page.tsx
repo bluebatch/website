@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -10,6 +11,7 @@ import TimelineAsSteps, {
   TimelineAsStepsStep,
 } from "@/components/ui/timeline-as-steps";
 import Link from "next/link";
+import { resolveHref } from "@/lib/get-canonical-path";
 import GlassCard from "@/components/cards/glass-card";
 import {
   GlassCardTitle,
@@ -22,27 +24,60 @@ import CardShowcase from "@/components/cards/card-showcase";
 import Customer from "@/components/sections/customer/customer";
 import IntroBox from "@/components/ui/intro-box";
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  rewrites: [
+    {
+      source: "/n8n-automatisierung",
+      metaTitle: "n8n Automatisierung – Enterprise AI-Automation | Bluebatch",
+      metaDescription:
+        "n8n Automatisierung für Ihr Unternehmen. KI Agentur für Workflow Engineering mit Enterprise-Fokus.",
+      keywords: ["n8n Automatisierung", "n8n Workflow", "Bluebatch"],
+    },
+    {
+      source: "/ki-agentur",
+      metaTitle:
+        "KI Agentur – n8n Automatisierung & Workflow Engineering | Bluebatch",
+      metaDescription:
+        "Ihre KI Agentur für n8n Automatisierung. Enterprise-Workflows, Custom Nodes und AI-Agenten aus einer Hand.",
+      keywords: ["KI Agentur", "KI Agentur Deutschland", "Bluebatch"],
+    },
+    {
+      source: "/ai-agentur",
+      metaTitle:
+        "AI Agentur – n8n Automatisierung & Workflow Engineering | Bluebatch",
+      metaDescription:
+        "Ihre AI Agentur für n8n Automatisierung. Enterprise-Workflows, Custom Nodes und AI-Agenten aus einer Hand.",
+      keywords: ["AI Agentur", "AI Agentur Deutschland", "Bluebatch"],
+    },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "Bluebatch – n8n Automatisierung | KI Agentur für Workflows",
+  title: "Bluebatch – Automatisierung mit n8n | KI Agentur für Workflows",
   description:
-    "n8n Automatisierung vom Experten: Bluebatch ist Ihre KI Agentur für intelligente Workflow-Automatisierung auf Enterprise-Niveau – live in nur 5 Tagen.",
+    "Workflow-Automatisierung mit n8n vom Experten: Bluebatch ist Ihre KI Agentur für intelligente Prozessautomatisierung auf Enterprise-Niveau – live in nur 5 Tagen.",
   keywords: [
-    "n8n Automatisierung",
+    "Automatisierung mit n8n",
     "KI Agentur",
     "AI Agentur",
     "Workflow Engineering",
     "Enterprise AI",
     "Backoffice Automatisierung",
     "KI Workflows",
+    "KI Automatisierung Agentur",
+    "Software Agentur",
+    "Agentur Digitale Transformation",
+    "KI Readiness Check",
+    "KI-Implementierung",
     "Großhandel",
     "Retail",
     "Digitale Mitarbeiter",
   ],
   authors: [{ name: "Bluebatch" }],
   openGraph: {
-    title: "Bluebatch – n8n Automatisierung | KI Agentur",
+    title: "Bluebatch – Automatisierung mit n8n | KI Agentur",
     description:
-      "n8n Automatisierung vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount – live in nur 5 Tagen.",
+      "Workflow-Automatisierung mit n8n vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount – live in nur 5 Tagen.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -51,15 +86,15 @@ export const metadata: Metadata = {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Bluebatch – n8n Automatisierung | KI Agentur",
+        alt: "Bluebatch – Automatisierung mit n8n | KI Agentur",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bluebatch – n8n Automatisierung | KI Agentur",
+    title: "Bluebatch – Automatisierung mit n8n | KI Agentur",
     description:
-      "n8n Automatisierung vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount – live in nur 5 Tagen.",
+      "Workflow-Automatisierung mit n8n vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount – live in nur 5 Tagen.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   robots: {
@@ -77,7 +112,7 @@ export default function Home() {
       {/* Hero Section */}
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
-          videoSrc="/videos/Video_of_Person_Drawing_Workflows.mp4"
+          videoSrc="/videos/video-of-Person-drawing-workflows.mp4"
           overlayOpacity={0.85}
           opacityBackground="white"
         >
@@ -127,7 +162,7 @@ export default function Home() {
             <IntroBox textCentered={false}>
               <IntroBox.PreHeadline>The DNA</IntroBox.PreHeadline>
               <IntroBox.Headline>
-                Ihre KI Agentur für radikale n8n Automatisierung
+                Ihre KI Agentur für radikale Automatisierung mit n8n
               </IntroBox.Headline>
               <IntroBox.Subline>
                 Im Herzen des Mittelstands und des Großhandels liegt ein
@@ -137,18 +172,18 @@ export default function Home() {
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Bluebatch wurde gegründet, um diese Fehlallokation von
-                Humankapital zu beenden. Wir bauen keine klassische Software –
-                mit n8n Automatisierung erschaffen wir digitale Mitarbeiter.
-                Unsere AI-Workflows übernehmen die kognitive Routinearbeit,
-                damit Ihre Teams wieder das tun können, wofür sie eingestellt
-                wurden.
+                Humankapital zu beenden. Als KI Automatisierung Agentur bauen
+                wir keine klassische Software – durch Automatisierung mit n8n
+                erschaffen wir digitale Mitarbeiter. Unsere AI-Workflows
+                übernehmen die kognitive Routinearbeit, damit Ihre Teams wieder
+                das tun können, wofür sie eingestellt wurden.
               </IntroBox.Subline>
             </IntroBox>
           </div>
           <div className="relative aspect-video">
             <Image
               src="/images/consulting-services.jpg"
-              alt="n8n Automatisierung"
+              alt="Automatisierung mit n8n"
               fill
               className="object-cover rounded-lg shadow-lg"
             />
@@ -186,8 +221,9 @@ export default function Home() {
             <Typo.H3>Cloud-Native & Sicher</Typo.H3>
             <Typo.Paragraph>
               Wir wissen, wie man Systeme skaliert, die höchsten
-              Sicherheitsansprüchen genügen. Wir „basteln" nicht mit Tools, wir
-              bauen robuste, architekturell saubere Lösungen.
+              Sicherheitsansprüchen genügen. Als Software Agentur „basteln" wir
+              nicht mit Tools, sondern bauen robuste, architekturell saubere
+              Lösungen.
             </Typo.Paragraph>
           </SimpleCard>
 
@@ -211,11 +247,12 @@ export default function Home() {
               alt="Professionalität"
               color="primary-gradient"
             />
-            <Typo.H3>Professionalität im Kern</Typo.H3>
+            <Typo.H3>Agentur Digitale Transformation</Typo.H3>
             <Typo.Paragraph>
               Wir kennen den Unterschied zwischen einem Prototyp und einer
               geschäftskritischen Anwendung. Unsere Workflows sind darauf
-              ausgelegt, 24/7 reibungslos zu funktionieren.
+              ausgelegt, 24/7 reibungslos zu funktionieren – von der
+              KI-Implementierung bis zum laufenden Betrieb.
             </Typo.Paragraph>
           </SimpleCard>
         </SimpleGrid>
@@ -233,7 +270,7 @@ export default function Home() {
                 „Time-to-Market"-Falle
               </IntroBox.PreHeadline>
               <IntroBox.Headline>
-                n8n Automatisierung als Lösung
+                Automatisierung mit n8n als Lösung
               </IntroBox.Headline>
               <IntroBox.Paragraph>
                 Besonders im Großhandel und Retail ist Geschwindigkeit die
@@ -244,8 +281,8 @@ export default function Home() {
               </IntroBox.Paragraph>
               <IntroBox.Paragraph>
                 Wir lösen dieses Problem durch Workflow Engineering. Mit einer
-                Kombination aus moderner KI und n8n Automatisierung schaffen wir
-                „Daten-Autobahnen".
+                Kombination aus moderner KI und n8n-basierter Automatisierung
+                schaffen wir „Daten-Autobahnen".
               </IntroBox.Paragraph>
             </IntroBox>
           </div>
@@ -301,7 +338,7 @@ export default function Home() {
             />
             <Typo.H3>Tag 1-5: Live</Typo.H3>
             <Typo.Paragraph>
-              Durch n8n Automatisierung bringen wir Ihren ersten produktiven
+              Durch Automatisierung mit n8n bringen wir Ihren ersten produktiven
               Workflow live. Keine monatelangen Planungsphasen, sondern direkte
               Ergebnisse.
             </Typo.Paragraph>
@@ -357,7 +394,8 @@ export default function Home() {
                 Weg. Bluebatch ist kein anonymes Tool, sondern eine
                 Workflow-Engineering-Unit. Wir analysieren Ihre manuellen
                 Prozesse, entwerfen die passende Architektur und implementieren
-                individuelle Lösungen auf Basis von n8n Automatisierung.
+                individuelle Lösungen auf Basis von n8n-basierter
+                Automatisierung.
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Das Besondere: Ihre Daten gehören Ihnen. Wir bauen die Workflows
@@ -513,7 +551,8 @@ export default function Home() {
           </IntroBox.Subline>
           <IntroBox.Paragraph>
             Bluebatch ist die Brücke zwischen Ihrer heutigen manuellen Arbeit
-            und einer skalierbaren Zukunft – powered by n8n Automatisierung.
+            und einer skalierbaren Zukunft – powered by Workflow-Automatisierung
+            über n8n.
           </IntroBox.Paragraph>
           <div>
             <ContactButton icon="calendar" size="lg">
@@ -559,7 +598,7 @@ export default function Home() {
           ].map((city) => (
             <Link
               key={city.slug}
-              href={`/standorte/${city.slug}`}
+              href={resolveHref(`/standorte/${city.slug}`)}
               className="group"
             >
               <GlassCard
@@ -588,7 +627,7 @@ export default function Home() {
 
         <div className="mt-16 text-center">
           <Link
-            href="/standorte"
+            href="/automatisierungs-agentur"
             className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-3 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg hover:shadow-blue-500/10"
           >
             Alle Standorte entdecken
@@ -618,7 +657,7 @@ export default function Home() {
             </IntroBox.Subline>
             <div>
               <ContactButton icon="chat">
-                Jetzt Prozess-Check vereinbaren
+                Jetzt KI Readiness Check vereinbaren
               </ContactButton>
             </div>
           </IntroBox>

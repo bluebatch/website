@@ -82,7 +82,7 @@ export default function BlogListFiltered({ posts }: BlogListFilteredProps) {
           {activeTags.length > 0 && (
             <button
               onClick={() =>
-                router.replace("/blog", { scroll: false })
+                router.replace("/blog-workflow", { scroll: false })
               }
               className="ml-auto text-xs text-gray-500 hover:text-gray-700 transition-colors cursor-pointer"
             >

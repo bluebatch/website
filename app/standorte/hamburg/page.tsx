@@ -25,10 +25,105 @@ import SavingsCard, {
 import SectionHeader from "@/components/ui/section-header";
 import { FaqContainer } from "@/components/ui/faqs";
 import { CityLinksFromMeta } from "@/components/standorte/city-links";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import { getRewriteOverrides } from "@/lib/get-rewrites";
-import { rewriteSiteConfig } from "./rewrite.site";
 import { Workflow, BrainCircuit, Cable, Server, GraduationCap, Wrench } from "lucide-react";
 import type { CityMeta } from "@/lib/meta-custom";
+
+
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/ki-agentur-hamburg",
+  rewrites: [
+    {
+      source: "/ai-workflows-hamburg",
+      preHeadline: "AI Workflows Hamburg",
+      headline: "AI Workflows & Automatisierung in Hamburg",
+      metaTitle: "AI Workflows Hamburg – KI-Automatisierung | Bluebatch",
+      metaDescription:
+        "AI Workflows für Unternehmen in Hamburg. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
+      keywords: [
+        "AI Workflows Hamburg",
+        "KI Automatisierung Hamburg",
+        "Workflow Automatisierung Hamburg",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/n8n-automation-hamburg",
+      preHeadline: "n8n Automation Hamburg",
+      headline: "n8n Automation in Hamburg – Workflows automatisieren",
+      metaTitle: "n8n Automation Hamburg | Bluebatch",
+      metaDescription:
+        "n8n Automation für Unternehmen in Hamburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+      keywords: [
+        "n8n Automation Hamburg",
+        "n8n Hamburg",
+        "Workflow Automation Hamburg",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/n8n-hamburg",
+      preHeadline: "n8n Hamburg",
+      headline: "n8n Agentur in Hamburg",
+      metaTitle: "n8n Hamburg – Workflow-Automatisierung | Bluebatch",
+      metaDescription:
+        "n8n Experten in Hamburg. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Hamburg und Umgebung.",
+      keywords: [
+        "n8n Hamburg",
+        "n8n Agentur Hamburg",
+        "n8n Beratung Hamburg",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/automation-hamburg",
+      preHeadline: "Automation Hamburg",
+      headline: "Automation & Prozessoptimierung in Hamburg",
+      metaTitle: "Automation Hamburg – Prozessoptimierung | Bluebatch",
+      metaDescription:
+        "Automation für Unternehmen in Hamburg. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
+      keywords: [
+        "Automation Hamburg",
+        "Prozessautomatisierung Hamburg",
+        "Workflow Automation Hamburg",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/it-dienstleister-hamburg",
+      preHeadline: "IT Dienstleister Hamburg",
+      headline: "IT Dienstleister in Hamburg – Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Hamburg – Automatisierung | Bluebatch",
+      metaDescription:
+        "Ihr IT Dienstleister in Hamburg. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Hamburg.",
+      keywords: [
+        "IT Dienstleister Hamburg",
+        "IT Service Hamburg",
+        "Digitalisierung Hamburg",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/ki-beratung-hamburg",
+      preHeadline: "KI Beratung Hamburg",
+      headline: "KI Beratung in Hamburg – Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Hamburg – KI-Lösungen | Bluebatch",
+      metaDescription:
+        "KI Beratung für Unternehmen in Hamburg. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
+      keywords: [
+        "KI Beratung Hamburg",
+        "KI Lösungen Hamburg",
+        "Künstliche Intelligenz Hamburg",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/ki-agentur-hamburg",
+    },
+  ],
+};
 
 export const metaCustom: CityMeta = {
   name: "Hamburg",
@@ -62,19 +157,22 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }): Promise<Metadata> {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
   const title =
     overrides?.metaTitle ??
-    `Workflow-Automatisierung ${metaCustom.name} | Bluebatch`;
+    `KI Agentur Hamburg – Workflow-Automatisierung & Prozessoptimierung | Bluebatch`;
   const description =
     overrides?.metaDescription ??
-    `Bluebatch ist Ihr Partner für Workflow-Automatisierung und KI-Lösungen in ${metaCustom.name}. n8n-Workflows, API-Integrationen und Prozessoptimierung für Unternehmen in ${metaCustom.name} und Umgebung.`;
+    `Bluebatch ist Ihre KI Agentur Hamburg — Ihr Partner für Workflow-Automatisierung, n8n-Workflows, API-Integrationen und Prozessoptimierung für Unternehmen in Hamburg und Umgebung.`;
 
   return {
     title,
     description,
     keywords: overrides?.keywords ?? [
+      "KI Agentur Hamburg",
+      "KI Beratung Hamburg",
       "Workflow-Automatisierung Hamburg",
       "n8n Hamburg",
       "KI Automatisierung Hamburg",
@@ -103,7 +201,7 @@ export async function generateMetadata({
       images: ["/images/cities/hamburg.jpg"],
     },
     alternates: {
-      canonical: `/standorte/${metaCustom.slug}`,
+      canonical: "/ki-agentur-hamburg",
     },
   };
 }
@@ -132,9 +230,9 @@ const faqs = [
       "Bei einer Self-Hosted-Installation bleiben Ihre Daten vollständig auf Ihrer eigenen Infrastruktur. Es werden keine Daten an Drittanbieter übermittelt. Das macht n8n 100 % DSGVO-konform — besonders wichtig für Hamburger Unternehmen mit sensiblen Logistik- und Kundendaten.",
   },
   {
-    question: "Was kostet Workflow-Automatisierung mit Bluebatch?",
+    question: "Was kostet Workflow-Automatisierung mit einer KI-Agentur in Hamburg?",
     answer:
-      "Die Kosten hängen vom Umfang und der Komplexität ab. Erste Automatisierungsprojekte starten bereits ab wenigen Tausend Euro. Der Return on Investment liegt typischerweise bei 3 bis 6 Monaten — durch eingesparte Arbeitszeit, weniger Fehler und schnellere Durchlaufzeiten.",
+      "Die Kosten hängen vom Umfang und der Komplexität ab. Als KI-Agentur in Hamburg bieten wir erste Automatisierungsprojekte bereits ab wenigen Tausend Euro an. Der Return on Investment liegt typischerweise bei 3 bis 6 Monaten — durch eingesparte Arbeitszeit, weniger Fehler und schnellere Durchlaufzeiten.",
   },
   {
     question: "Wie unterstützt n8n die Hamburger Hafenlogistik?",
@@ -155,6 +253,7 @@ export default async function Page({
 }) {
   if (!metaCustom.publish) notFound();
 
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
 
@@ -166,14 +265,20 @@ export default async function Page({
           {overrides?.preHeadline ?? "Standort Hamburg"}
         </BackgroundHero.TopLabel>
         <BackgroundHero.Headline>
-          {overrides?.headline ??
-            "n8n-Automatisierung für Hamburgs Wirtschaft"}
+          {overrides?.headline ?? (
+            <>
+              KI Agentur Hamburg –{" "}
+              <BackgroundHero.Highlight>
+                Workflow-Automatisierung für die Hansestadt
+              </BackgroundHero.Highlight>
+            </>
+          )}
         </BackgroundHero.Headline>
         <BackgroundHero.Description>
-          Von Hafen-Logistik bis E-Commerce —
-          Workflow-Automatisierung und KI-Lösungen für Unternehmen in
-          der Hansestadt. Bluebatch unterstützt Hamburger Firmen bei der
-          Digitalisierung und Prozessoptimierung mit n8n.
+          Als KI Agentur Hamburg sind wir Ihr Partner für n8n-Workflows,
+          KI-Automatisierung und Prozessoptimierung — von Hafen-Logistik
+          bis E-Commerce. Self-hosted, DSGVO-konform und skalierbar
+          für Unternehmen in der Hansestadt.
         </BackgroundHero.Description>
         <BackgroundHero.CallToAction>
           <ContactButton icon="chat">
@@ -191,7 +296,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.Headline>
-            Automatisierung für die Handelsmetropole
+            KI-Agentur in Hamburg — Automatisierung für die Handelsmetropole
           </IntroBox.Headline>
           <IntroBox.Paragraph>
             Seit der Hansezeit ist Hamburg Deutschlands Tor zur Welt — heute als
@@ -203,8 +308,9 @@ export default async function Page({
             einem historischen Beschäftigungsrekord von über 1,09 Millionen
             sozialversicherungspflichtig Beschäftigten stoßen viele Unternehmen
             an personelle Grenzen. Von der HafenCity bis zum Schanzenviertel —
-            Workflow-Automatisierung ermöglicht es, mit bestehenden Teams mehr
-            zu leisten und repetitive Aufgaben zu eliminieren.
+            als Hamburger KI-Agentur ermöglichen wir es Unternehmen, mit bestehenden
+            Teams mehr zu leisten und repetitive Aufgaben durch
+            Workflow-Automatisierung zu eliminieren.
           </IntroBox.Paragraph>
         </IntroBox>
       </ContentWrapper>
@@ -212,7 +318,7 @@ export default async function Page({
       {/* 4. TabGroup — Branchen-Automatisierung */}
       <ContentWrapper>
         <Typo.H2 className="text-center">
-          Branchen-Automatisierung in Hamburg
+          Hamburger KI-Agentur — Branchen-Automatisierung
         </Typo.H2>
         <Typo.Paragraph className="text-center max-w-3xl mx-auto">
           Hamburgs Wirtschaft ist vielseitig — und jede Branche hat eigene
@@ -397,7 +503,7 @@ export default async function Page({
             alt="Digitaler Datenfluss und smartPORT-Automatisierung im Hamburger Hafen"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Hafen-Automatisierung mit smartPORT-DNA</Typo.H2>
+            <Typo.H2>Hafen-Automatisierung mit smartPORT-DNA — KI Beratung Hamburg</Typo.H2>
             <Typo.Paragraph>
               Der Hamburger Hafen setzt mit der smartPORT-Initiative der Hamburg
               Port Authority (HPA) Maßstäbe bei der Digitalisierung von
@@ -438,7 +544,7 @@ export default async function Page({
         <SectionHeader
           smallHeadline="Leistungen"
           largeHeadline="Unsere Leistungen in Hamburg"
-          description="Von der ersten Analyse bis zum laufenden Betrieb — wir begleiten Hamburger Unternehmen auf dem gesamten Weg zur Automatisierung."
+          description="Von der ersten Analyse bis zum laufenden Betrieb — als KI-Agentur in Hamburg begleiten wir Unternehmen auf dem gesamten Weg zur Automatisierung."
           showButton={false}
         />
         <SimpleGrid cols={3}>
@@ -454,7 +560,7 @@ export default async function Page({
               zur automatisierten Zollabwicklung entwickeln wir Workflows, die
               exakt zu Ihren Prozessen passen.
             </Typo.Paragraph>
-            <Link href="/services/custom-nodes" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
+            <Link href="/n8n-node" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
               Mehr erfahren <span aria-hidden="true">&rarr;</span>
             </Link>
           </SimpleCard>
@@ -462,7 +568,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <BrainCircuit className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>KI-Integration</Typo.H3>
+            <Typo.H3>KI-Integration & KI-Beratung in Hamburg</Typo.H3>
             <Typo.Paragraph>
               AI Agents für intelligente Entscheidungen in Ihren Workflows.
               Intelligente Dokumentenklassifikation für Frachtpapiere und
@@ -493,7 +599,7 @@ export default async function Page({
               Reederei-Daten — besonders wichtig für Hamburgs regulierte
               Logistik- und Luftfahrtbranchen.
             </Typo.Paragraph>
-            <Link href="/services/n8n-hosting" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
+            <Link href="/n8n-hosting-deutschland" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
               Mehr erfahren <span aria-hidden="true">&rarr;</span>
             </Link>
           </SimpleCard>
@@ -508,7 +614,7 @@ export default async function Page({
               Hafenlogistik, Medienproduktion und E-Commerce-Fulfillment,
               damit Sie Workflows eigenständig erstellen und anpassen können.
             </Typo.Paragraph>
-            <Link href="/services/schulungen" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
+            <Link href="/n8n-schulung" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
               Mehr erfahren <span aria-hidden="true">&rarr;</span>
             </Link>
           </SimpleCard>
@@ -523,7 +629,7 @@ export default async function Page({
               Reaktionszeiten — damit Ihre Hafen-, Fulfillment- und
               Redaktions-Workflows rund um die Uhr zuverlässig laufen.
             </Typo.Paragraph>
-            <Link href="/services/workflow-wartung" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
+            <Link href="/workflow-wartung" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
               Mehr erfahren <span aria-hidden="true">&rarr;</span>
             </Link>
           </SimpleCard>

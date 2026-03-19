@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -38,14 +40,23 @@ export const pageConfig: PageConfig = {
     "Belege, Rechnungen und Steuerdokumente automatisch erkennen, klassifizieren und verarbeiten.",
 };
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/ki-dokumentenmanagement",
+  rewrites: [
+    {
+      source: "/ki-dokumentenmanagement",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "Dokumentenverarbeitung – Steuerberater | Bluebatch",
+  title: "KI Dokumentenmanagement – Steuerberater | Bluebatch",
   description:
-    "Wie Bluebatch Steuerberatern hilft, Belege und Dokumente automatisch zu verarbeiten. 70% weniger manuelle Erfassung.",
+    "KI Dokumentenmanagement für Steuerberater: Belege und Dokumente automatisch verarbeiten mit OCR KI. 70% weniger manuelle Erfassung.",
   openGraph: {
-    title: "Dokumentenverarbeitung – Steuerberater | Bluebatch",
+    title: "KI Dokumentenmanagement – Steuerberater | Bluebatch",
     description:
-      "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
+      "KI Dokumentenmanagement: Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -60,13 +71,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dokumentenverarbeitung – Steuerberater | Bluebatch",
+    title: "KI Dokumentenmanagement – Steuerberater | Bluebatch",
     description:
-      "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
+      "KI Dokumentenmanagement: Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/use-cases/steuerberater/dokumentenverarbeitung",
+    canonical: "/ki-dokumentenmanagement",
   },
 };
 
@@ -76,7 +87,13 @@ const stats = [
   { value: 4, suffix: "x", label: "Mehr Belege pro Mitarbeiter" },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       <ContentWrapper isFirstSection noPadding>
@@ -86,15 +103,15 @@ export default function Page() {
           opacityBackground="white"
         >
           <BackgroundHero.TopLabel>
-            Dokumentenverarbeitung
+            KI-basiertes Dokumentenmanagement
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
-            Belege{" "}
+            KI Dokumentenmanagement:{" "}
             <BackgroundHero.Highlight>automatisch</BackgroundHero.Highlight>{" "}
             erkennen und buchen
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            KI-gestützte Klassifizierung, Datenextraktion und DATEV-Integration.
+            KI Dokumentenmanagement mit OCR KI für Klassifizierung, Datenextraktion und DATEV-Integration.
             Von 3-4 Minuten auf 20 Sekunden pro Beleg – GoBD-konform.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -120,17 +137,17 @@ export default function Page() {
             <IntroBox textCentered={false}>
               <IntroBox.PreHeadline>Das Problem</IntroBox.PreHeadline>
               <IntroBox.Headline>
-                40-50% der Arbeitszeit für Dateneingabe
+                40-50% der Arbeitszeit für Dateneingabe ohne Dokumentenmanagement mit KI
               </IntroBox.Headline>
               <IntroBox.Subline>
-                Jeder Beleg muss gesichtet, klassifiziert und manuell ins System
+                Ohne künstliche Intelligenz Dokumentenmanagement muss jeder Beleg gesichtet, klassifiziert und manuell ins System
                 eingegeben werden. Bei 10.000+ Belegen pro Monat bedeutet das
                 hunderte Arbeitsstunden.
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Die Fehlerquote bei manueller Klassifizierung liegt bei 5-10%.
                 Steuerliche Fehlbuchungen können bei Betriebsprüfungen teuer
-                werden.
+                werden. KI OCR Technologie reduziert diese Quote drastisch.
               </IntroBox.Subline>
             </IntroBox>
           </div>
@@ -169,11 +186,11 @@ export default function Page() {
         <IntroBox>
           <IntroBox.PreHeadline>Belegarten</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Alle Dokumenttypen, ein Workflow
+            OCR Formularerkennung für alle Dokumenttypen
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Der Workflow verarbeitet alle gängigen Belegarten und erkennt
-            steuerliche Besonderheiten automatisch.
+            Unser KI-basiertes Dokumentenmanagement verarbeitet alle gängigen Belegarten und erkennt
+            steuerliche Besonderheiten durch OCR Formularerkennung automatisch.
           </IntroBox.Subline>
         </IntroBox>
 
@@ -188,9 +205,9 @@ export default function Page() {
           <TabContent value="rechnungen">
             <SimpleGrid cols={2} className="items-center">
               <div>
-                <Typo.H3>Eingangs- und Ausgangsrechnungen</Typo.H3>
+                <Typo.H3>OCR KI für Eingangs- und Ausgangsrechnungen</Typo.H3>
                 <Typo.Paragraph>
-                  Automatische Extraktion aller relevanten Daten: Datum, Betrag,
+                  Automatische Extraktion aller relevanten Daten per OCR KI: Datum, Betrag,
                   Steuersätze (7%/19%), Rechnungsnummer, Lieferant.
                 </Typo.Paragraph>
                 <Typo.List>
@@ -312,7 +329,7 @@ export default function Page() {
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>ROI-Kalkulation</IntroBox.PreHeadline>
-          <IntroBox.Headline>400-600% ROI im ersten Jahr</IntroBox.Headline>
+          <IntroBox.Headline>400-600% ROI mit Dokumentenmanagement mit KI</IntroBox.Headline>
           <IntroBox.Subline>
             Für eine mittelgroße Kanzlei mit 200 Mandanten und 15.000 Belegen
             pro Monat:
@@ -378,9 +395,9 @@ export default function Page() {
                 "Ja, die Lösung erfüllt alle GoBD-Anforderungen: Unveränderbarkeit durch revisionssichere Archivierung mit Zeitstempeln und Hashwerten, vollständige Nachvollziehbarkeit aller Verarbeitungsschritte, und 10-jährige Aufbewahrung. Wir empfehlen, die Verfahrensdokumentation von einem IT-Prüfer abnehmen zu lassen.",
             },
             {
-              question: "Wie genau ist die Datenextraktion?",
+              question: "Wie genau ist die Datenextraktion im KI-basierten Dokumentenmanagement?",
               answer:
-                "Bei strukturierten digitalen PDFs erreichen wir 95-99% Genauigkeit. Bei semi-strukturierten Dokumenten (unterschiedliche Layouts) 85-90%. Das System flaggt Extraktionen mit niedrigem Confidence Score automatisch für manuelle Prüfung. Die Genauigkeit verbessert sich kontinuierlich durch Machine Learning.",
+                "Durch künstliche Intelligenz Dokumentenmanagement erreichen wir bei strukturierten digitalen PDFs 95-99% Genauigkeit. Bei semi-strukturierten Dokumenten (unterschiedliche Layouts) 85-90%. Das System flaggt Extraktionen mit niedrigem Confidence Score automatisch für manuelle Prüfung. Die Genauigkeit verbessert sich kontinuierlich durch Machine Learning.",
             },
             {
               question: "Wie funktioniert die DATEV-Integration?",

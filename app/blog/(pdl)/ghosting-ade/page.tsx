@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  if (!metaCustom.publish) redirect("/blog");
+  if (!metaCustom.publish) redirect("/blog-workflow");
   return (
     <>
       <BlogHero>

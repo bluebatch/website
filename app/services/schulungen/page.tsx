@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -19,14 +21,23 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import SimpleCard, { SimpleCardIcon } from "@/components/cards/simple-card";
 import IntroBox from "@/components/ui/intro-box";
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/n8n-schulung",
+  rewrites: [
+    {
+      source: "/n8n-schulung",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "n8n Schulungen & Workshops | Bluebatch",
+  title: "n8n Schulung & Workshops | Bluebatch",
   description:
-    "Professionelle n8n Schulungen für Ihr Team. Vor-Ort, Online oder Hybrid. Von Grundlagen bis Enterprise-Features.",
+    "Professionelle Schulungen für n8n – für Ihr Team. Vor-Ort, Online oder Hybrid. Von Grundlagen bis Enterprise-Features.",
   openGraph: {
-    title: "n8n Schulungen & Workshops | Bluebatch",
+    title: "Schulungen für n8n & Workshops | Bluebatch",
     description:
-      "Praxisorientierte n8n Schulungen für Ihr Team. Vom Einsteiger bis zum Enterprise-Deployment.",
+      "Praxisorientierte Schulungen für n8n. Vom Einsteiger bis zum Enterprise-Deployment.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -35,19 +46,19 @@ export const metadata: Metadata = {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Bluebatch n8n Schulungen",
+        alt: "Bluebatch Schulungen für n8n",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "n8n Schulungen & Workshops | Bluebatch",
+    title: "Schulungen für n8n & Workshops | Bluebatch",
     description:
-      "Professionelle n8n Schulungen für Ihr Team. Vor-Ort, Online oder Hybrid.",
+      "Professionelle Schulungen für n8n – für Ihr Team. Vor-Ort, Online oder Hybrid.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/services/schulungen",
+    canonical: "/n8n-schulung",
   },
 };
 
@@ -84,8 +95,8 @@ const trainingLevels = [
     audience: "Teams & Organisationen",
     topics: [
       "AI-Agent Entwicklung mit LLMs",
-      "Multi-Agent-Systeme",
-      "Enterprise Security & Governance",
+      "Multi-Agent-Systeme & KI Accelerator Programme",
+      "Enterprise Security & Governance inkl. KI DSGVO Schulung",
       "High-Performance Scaling (Redis, Queue Mode)",
       "Custom Node Development",
     ],
@@ -185,7 +196,13 @@ const targetGroups = [
   },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       {/* Hero Section */}
@@ -199,8 +216,9 @@ export default function Page() {
             <Hero2ColumnDescription>
               Unsere n8n Schulung befähigt Ihr Team zur
               Workflow-Automatisierung. Praxisorientierte Trainings von
-              Grundlagen bis Enterprise-Deployment. Vor-Ort, Online oder
-              Hybrid – individuell auf Ihre Bedürfnisse zugeschnitten.
+              Grundlagen bis Enterprise-Deployment, inklusive KI DSGVO Schulung.
+              Sie können jede Schulung für n8n oder einen KI Workshop buchen – Vor-Ort,
+              Online oder Hybrid, individuell auf Ihre Bedürfnisse zugeschnitten.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Schulung anfragen</ContactButton>
@@ -218,9 +236,9 @@ export default function Page() {
       {/* Training Levels */}
       <ContentWrapper>
         <IntroBox>
-          <IntroBox.Headline>n8n Schulung nach Level</IntroBox.Headline>
+          <IntroBox.Headline>Schulung nach Level – n8n lernen</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Von Grundlagen bis Enterprise – jede n8n Schulung wird individuell
+            Von Grundlagen bis Enterprise – jede Schulung für n8n wird individuell
             auf den Wissensstand Ihres Teams abgestimmt
           </IntroBox.Paragraph>
         </IntroBox>
@@ -330,7 +348,7 @@ export default function Page() {
       {/* Training Formats */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
-          <IntroBox.Headline>Formate für Ihre n8n Schulung</IntroBox.Headline>
+          <IntroBox.Headline>Formate für Ihre Schulung</IntroBox.Headline>
           <IntroBox.Paragraph>
             Wählen Sie das Format, das am besten zu Ihrem Team passt
           </IntroBox.Paragraph>
@@ -382,7 +400,7 @@ export default function Page() {
         <IntroBox>
           <IntroBox.Headline>Zielgruppen</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Jede n8n Schulung ist maßgeschneidert auf die jeweilige Rolle
+            Jede Schulung ist maßgeschneidert auf die jeweilige Rolle
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -425,7 +443,7 @@ export default function Page() {
       {/* Outcomes */}
       <ContentWrapper colorScheme="primary">
         <IntroBox dark>
-          <IntroBox.Headline>Was Sie erreichen</IntroBox.Headline>
+          <IntroBox.Headline>KI Accelerator: Was Sie erreichen</IntroBox.Headline>
           <IntroBox.Paragraph>
             Messbare Ergebnisse für Ihr Team und Ihre Organisation
           </IntroBox.Paragraph>
@@ -456,7 +474,7 @@ export default function Page() {
             />
           </div>
           <div>
-            <Typo.H2 className="mb-6">Warum eine professionelle n8n Schulung?</Typo.H2>
+            <Typo.H2 className="mb-6">Warum eine professionelle Schulung für n8n oder KI Workshop buchen?</Typo.H2>
             <div className="space-y-6">
               <div>
                 <Typo.H4 disableMargin className="mb-2">
@@ -483,7 +501,7 @@ export default function Page() {
                 </Typo.H4>
                 <p className="text-gray-600">
                   Interaktive Übungen und praktische Sessions. Sofortiges
-                  Feedback und Korrektur während der n8n Schulung.
+                  Feedback und Korrektur während der Schulung.
                 </p>
               </div>
               <div>
@@ -503,9 +521,9 @@ export default function Page() {
       {/* Pricing Info */}
       <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <div className="text-center">
-          <Typo.H2 className="mb-6">Individuelle Angebote für Ihre n8n Schulung</Typo.H2>
+          <Typo.H2 className="mb-6">Individuelle Angebote für Ihre Schulung</Typo.H2>
           <Typo.Paragraph className="text-gray-600 mb-8">
-            Jede n8n Schulung wird individuell auf Ihre Anforderungen, Ihr
+            Jede Schulung für n8n wird individuell auf Ihre Anforderungen, Ihr
             Team und Ihre Use Cases zugeschnitten. Wir erstellen Ihnen ein
             maßgeschneidertes Angebot basierend auf:
           </Typo.Paragraph>

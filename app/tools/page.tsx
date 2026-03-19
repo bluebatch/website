@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { resolveHref } from "@/lib/get-canonical-path";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Hero2Column, {
@@ -183,7 +184,7 @@ export default function Page() {
           {automationTools.map((tool) => (
             <Link
               key={tool.slug}
-              href={`/tools/${tool.slug}`}
+              href={resolveHref(`/tools/${tool.slug}`)}
               className="group flex items-center gap-5 py-5 transition-colors hover:bg-gray-50 -mx-4 px-4 rounded-lg"
             >
               <div className="relative h-10 w-10 shrink-0">
@@ -222,7 +223,7 @@ export default function Page() {
           {grosshandelTools.map((tool) => (
             <Link
               key={tool.slug}
-              href={`/tools/${tool.slug}`}
+              href={resolveHref(`/tools/${tool.slug}`)}
               className="group flex items-center gap-5 py-5 transition-colors hover:bg-gray-100 -mx-4 px-4 rounded-lg"
             >
               <div className="relative h-10 w-10 shrink-0">

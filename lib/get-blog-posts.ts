@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import type { BlogTagId } from "@/lib/blog-tags";
 import { getAuthor } from "@/lib/blog-authors";
+import { resolveHref } from "@/lib/get-canonical-path";
 
 export interface BlogPost {
   slug: string;
@@ -13,6 +14,7 @@ export interface BlogPost {
   date: string;
   image: string;
   tags: BlogTagId[];
+  href: string;
 }
 
 interface BlogDir {
@@ -66,8 +68,9 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 
     const author = getAuthor(mod.metaCustom.author);
 
+    const slug = mod.metaCustom.slug;
     posts.push({
-      slug: mod.metaCustom.slug,
+      slug,
       title,
       description: mod.metadata?.description ?? "",
       author: author.name,
@@ -76,6 +79,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
       date: mod.metaCustom.date,
       image: mod.metaCustom.image,
       tags: mod.metaCustom.tags,
+      href: resolveHref(`/blog/${slug}`),
     });
   }
 

@@ -5,10 +5,10 @@ const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
 
   async rewrites() {
-    const siteRewrites = collectRewriteRules();
+    const { rewrites } = collectRewriteRules();
 
     return [
-      ...siteRewrites,
+      ...rewrites,
       {
         source: "/ingest/static/:path*",
         destination: "https://eu-assets.i.posthog.com/static/:path*",
@@ -20,6 +20,24 @@ const nextConfig: NextConfig = {
       {
         source: "/ingest/decide",
         destination: "https://eu.i.posthog.com/decide",
+      },
+    ];
+  },
+
+  async redirects() {
+    const { redirects } = collectRewriteRules();
+    return [
+      ...redirects,
+      // Legacy tool URLs → new flat URLs (route groups removed the middle segment)
+      {
+        source: "/tools/automation-tools/:slug*",
+        destination: "/tools/:slug*",
+        permanent: true,
+      },
+      {
+        source: "/tools/grosshandel/:slug*",
+        destination: "/tools/:slug*",
+        permanent: true,
       },
     ];
   },

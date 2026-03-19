@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -18,6 +20,25 @@ export const pageConfig: PageConfig = {
   title: "3-Wege-Rechnungsprüfung",
   description:
     "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung zur Freigabe.",
+};
+
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/automatische-rechnungspruefung",
+  rewrites: [
+    {
+      source: "/automatische-rechnungspruefung",
+      metaTitle:
+        "Automatische Rechnungsprüfung – 3-Wege-Matching | Bluebatch",
+      metaDescription:
+        "Automatische Rechnungsprüfung mit 3-Wege-Matching für den Großhandel. OCR Rechnungserfassung, Workflow Rechnungseingang und intelligente Abgleichlogik.",
+      keywords: [
+        "automatische Rechnungsprüfung",
+        "3-Wege-Rechnungsprüfung",
+        "OCR Rechnungserfassung",
+        "Bluebatch",
+      ],
+    },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -48,7 +69,7 @@ export const metadata: Metadata = {
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/use-cases/grosshandel/3-wege-rechnungspruefung",
+    canonical: "/automatische-rechnungspruefung",
   },
 };
 
@@ -68,7 +89,13 @@ const painPoints = [
   { value: 15, label: "Kosten pro Rechnung (manuell)", valueSuffix: "€" },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       <ContentWrapper isFirstSection noPadding>

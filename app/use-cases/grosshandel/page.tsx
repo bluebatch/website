@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Link from "next/link";
+import { resolveHref } from "@/lib/get-canonical-path";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -18,6 +21,15 @@ import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import InternalLink from "@/components/buttons/internal-link";
+
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/wholesale-ai",
+  rewrites: [
+    {
+      source: "/wholesale-ai",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Wholesale AI für den Großhandel – Use Cases | Bluebatch",
@@ -47,7 +59,7 @@ export const metadata: Metadata = {
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/use-cases/grosshandel",
+    canonical: "/wholesale-ai",
   },
 };
 
@@ -56,28 +68,28 @@ const useCases = [
     slug: "auftragserfassung",
     title: "Auftragserfassung",
     description:
-      "Bestellungen aus E-Mails, PDFs, Faxen und Portalen automatisch erfassen. Unsere Wholesale AI extrahiert alle Daten, validiert gegen ERP und Lager – von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.",
+      "Bestellungen aus E-Mails, PDFs, Faxen und Portalen automatisch erfassen. Unsere KI für den Großhandel extrahiert alle Daten, validiert gegen ERP und Lager – von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.",
     image: "/images/order-capture.jpg",
   },
   {
     slug: "bestellabwicklung",
-    title: "Bestellabwicklung",
+    title: "AI im Wholesale: Bestellabwicklung",
     description:
-      "Von der Bestellung zur Auslieferung – vollautomatisch. Validierung, Lager-Routing, Kommissionierung und Versand orchestriert durch n8n. 80-90% schnellere Bearbeitung.",
+      "Von der Bestellung zur Auslieferung – vollautomatisch. KI für den Großhandel orchestriert Validierung, Lager-Routing, Kommissionierung und Versand durch n8n. 80-90% schnellere Bearbeitung im Lead to Cash Prozess.",
     image: "/images/order-processing.jpg",
   },
   {
     slug: "lagerverwaltung",
     title: "Lagerverwaltung",
     description:
-      "Echtzeit-Bestandssynchronisation über alle Lager und Kanäle. Wholesale AI Bedarfsprognosen lösen automatisch Nachbestellungen aus. Nie wieder Fehlbestand oder Überbestand.",
+      "Echtzeit-Bestandssynchronisation über alle Lager und Kanäle. AI im Wholesale erstellt Bedarfsprognosen und löst automatisch Nachbestellungen aus. Nie wieder Fehlbestand oder Überbestand.",
     image: "/images/warehouse-software.jpg",
   },
   {
     slug: "invoice-bot",
     title: "Invoice-Bot",
     description:
-      "Eingangsrechnungen automatisch erfassen, prüfen und zur Freigabe weiterleiten. Wholesale AI extrahiert Beträge, Steuer und Metadaten – 80% weniger manueller Aufwand.",
+      "Eingangsrechnungen automatisch erfassen, prüfen und zur Freigabe weiterleiten. KI für den Großhandel extrahiert Beträge, Steuer und Metadaten – 80% weniger manueller Aufwand.",
     image: "/images/invoice-processing.jpg",
   },
   {
@@ -98,7 +110,7 @@ const useCases = [
     slug: "angebots-bot",
     title: "Angebots-Bot",
     description:
-      "Von der Kundenanfrage zum professionellen Angebot in Minuten. Automatische Preisabfrage, PDF-Generierung und Follow-up – 21x höhere Qualifizierungsrate.",
+      "Von der Kundenanfrage zum professionellen Angebot in Minuten. AI im Wholesale übernimmt Preisabfrage, PDF-Generierung und Follow-up – 21x höhere Qualifizierungsrate.",
     image: "/images/pricing-calculator.jpg",
   },
   {
@@ -110,7 +122,13 @@ const useCases = [
   },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       <ContentWrapper isFirstSection>
@@ -122,15 +140,15 @@ export default function Page() {
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Mit Wholesale AI automatisieren wir die repetitiven Prozesse, die
-              Ihr Team ausbremsen – von der Auftragserfassung bis zur
-              Rechnungsprüfung. Weniger manuelle Arbeit, mehr Zeit für
-              strategische Aufgaben.
+              Ihr Team ausbremsen – vom Lead to Cash Prozess über die
+              Auftragserfassung bis zur Rechnungsprüfung. Weniger manuelle
+              Arbeit, mehr Zeit für strategische Aufgaben.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
-              8 erprobte Wholesale AI Lösungen für den Großhandel
+              8 erprobte KI-Lösungen für den Großhandel
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
@@ -161,7 +179,7 @@ export default function Page() {
                   <Typo.Paragraph className="text-gray-600 mb-6">
                     {useCase.description}
                   </Typo.Paragraph>
-                  <InternalLink href={`/use-cases/grosshandel/${useCase.slug}`}>
+                  <InternalLink href={resolveHref(`/use-cases/grosshandel/${useCase.slug}`)}>
                     Mehr erfahren
                   </InternalLink>
                 </div>
@@ -189,7 +207,7 @@ export default function Page() {
                   <Typo.Paragraph className="text-gray-600 mb-6">
                     {useCase.description}
                   </Typo.Paragraph>
-                  <InternalLink href={`/use-cases/grosshandel/${useCase.slug}`}>
+                  <InternalLink href={resolveHref(`/use-cases/grosshandel/${useCase.slug}`)}>
                     Mehr erfahren
                   </InternalLink>
                 </div>

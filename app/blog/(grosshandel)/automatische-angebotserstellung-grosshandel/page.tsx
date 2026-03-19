@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Typo from "@/components/ui/typo";
@@ -11,6 +13,25 @@ export const metaCustom: BlogMeta = {
   image: "/blog/automatische-angebotserstellung-grosshandel/hero.png",
   tags: ["ki", "grosshandel", "automatisierung"] as BlogTagId[],
   publish: true,
+};
+
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/ki-angebote",
+  rewrites: [
+    {
+      source: "/ki-angebote",
+      metaTitle:
+        "KI Angebote im Großhandel: Automatische Angebotserstellung | Bluebatch",
+      metaDescription:
+        "KI Angebote automatisch erstellen. Von der Kundenanfrage zum fertigen Angebot in Sekunden — mit n8n-Praxisbeispiel.",
+      keywords: [
+        "KI Angebote",
+        "KI Angebotserstellung",
+        "KI Angebote Großhandel",
+        "Bluebatch",
+      ],
+    },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -36,11 +57,17 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "/blog/automatische-angebotserstellung-grosshandel",
+    canonical: "/ki-angebote",
   },
 };
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       <BlogHero>

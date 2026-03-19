@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -26,12 +28,21 @@ import TabGroup, {
   TabContent,
 } from "@/components/ui/tab-group";
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/workflow-wartung",
+  rewrites: [
+    {
+      source: "/workflow-wartung",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "Workflow-Wartung & Servicevertrag | Bluebatch",
+  title: "Workflow Wartung & Servicevertrag | Bluebatch",
   description:
     "Professionelle Wartung Ihrer n8n-Workflows. 24/7 Monitoring, proaktive Updates, 99,9% Uptime-Garantie.",
   openGraph: {
-    title: "Workflow-Wartung & Servicevertrag | Bluebatch",
+    title: "Wartung Ihrer Workflows & Servicevertrag | Bluebatch",
     description:
       "Professionelle Wartung Ihrer n8n-Workflows mit 24/7 Monitoring und 99,9% Uptime-Garantie.",
     type: "website",
@@ -48,13 +59,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Workflow-Wartung & Servicevertrag | Bluebatch",
+    title: "Wartung Ihrer Workflows & Servicevertrag | Bluebatch",
     description:
       "Professionelle Wartung Ihrer n8n-Workflows mit 24/7 Monitoring und 99,9% Uptime-Garantie.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/services/workflow-wartung",
+    canonical: "/workflow-wartung",
   },
 };
 
@@ -132,7 +143,13 @@ const pricingTiers = [
   },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       {/* Hero Section */}
@@ -141,9 +158,10 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>n8n Services</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Workflow-Wartung & Servicevertrag
+              Workflow Wartung & Servicevertrag
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
+              Professionelle Wartung Ihrer Workflows ist essenziell für stabile Automatisierung.
               Ihre Workflows laufen – wir sorgen dafür, dass es so bleibt.
               Proaktives Monitoring, regelmäßige Updates und
               Performance-Optimierung. Fokussieren Sie sich auf Ihr Business,
@@ -172,8 +190,9 @@ export default function Page() {
             Workflows sind das Herzstück Ihrer Automatisierung – doch ohne
             kontinuierliche Wartung können sie schnell zum Risikofaktor werden.
             API-Änderungen, n8n-Updates oder steigende Datenvolumen führen zu
-            Ausfällen und Inkonsistenzen. Mit unserem Wartungsservice bleiben
-            Ihre Workflows stabil, performant und zukunftssicher.
+            Ausfällen und Inkonsistenzen. Mit unserem Service zur Wartung Ihrer Workflows bleiben
+            sie stabil, performant und zukunftssicher. Ein integrierter
+            Schnittstellen Monitor erkennt Probleme, bevor sie Ihr Business beeinträchtigen.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>
@@ -193,10 +212,10 @@ export default function Page() {
         <IntroBox>
           <IntroBox.PreHeadline>Workflow-as-a-Service</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Was umfasst die Workflow-Wartung?
+            Was umfasst die Wartung Ihrer Workflows?
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            Unsere Wartungsverträge decken alle Aspekte der Workflow-Pflege ab –
+            Unsere Serviceverträge decken alle Aspekte der Workflow-Pflege ab –
             von der Überwachung bis zur Optimierung.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -248,7 +267,7 @@ export default function Page() {
             <SimpleGrid cols={2} className="items-center gap-12">
               <div>
                 <Typo.H3 className="mb-4">
-                  Aktives Monitoring & Echtzeit-Alarmierung
+                  Schnittstellen Monitor & Echtzeit-Alarmierung
                 </Typo.H3>
                 <Typo.Paragraph className="text-gray-700 mb-6">
                   Wir installieren einen speziellen „Monitoring-Agenten", der
@@ -438,7 +457,7 @@ export default function Page() {
             />
           </div>
           <div>
-            <Typo.H2 className="mb-6">Warum Workflow-Wartung?</Typo.H2>
+            <Typo.H2 className="mb-6">Warum Workflows professionell warten?</Typo.H2>
             <div className="space-y-6">
               <div>
                 <Typo.H4 disableMargin>
@@ -484,7 +503,7 @@ export default function Page() {
       {/* Pricing Section */}
       <ContentWrapper>
         <IntroBox>
-          <IntroBox.Headline>Workflow-Servicevertrag</IntroBox.Headline>
+          <IntroBox.Headline>Servicevertrag für die Wartung Ihrer Workflows</IntroBox.Headline>
           <IntroBox.Paragraph>
             Der Preis richtet sich nach der Anzahl Ihrer Kundenworkflows – nicht
             nach technischen n8n Workflows. Ein Kundenworkflow wie

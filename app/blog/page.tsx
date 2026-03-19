@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import { Suspense } from "react";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import BlogListFiltered from "@/components/blog/blog-list-filtered";
@@ -13,6 +15,15 @@ import Hero2Column, {
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/blog-workflow",
+  rewrites: [
+    {
+      source: "/blog-workflow",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "Blog Workflow Automatisierung & n8n Expertise | Bluebatch",
   description:
@@ -26,11 +37,17 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
   },
   alternates: {
-    canonical: "/blog",
+    canonical: "/blog-workflow",
   },
 };
 
-export default async function BlogPage() {
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   const posts = await getBlogPosts();
 
   return (
@@ -47,9 +64,9 @@ export default async function BlogPage() {
               Prozessautomatisierung über n8n Custom Nodes bis hin zu
               KI-gestützten Geschäftsprozessen. Unser Blog Workflow Wissen hilft
               euch, repetitive Aufgaben zu eliminieren und Abläufe effizient zu
-              gestalten. Entdeckt praxisnahe Blog Workflow Anleitungen,
-              Integrationsbeispiele und Best Practices — damit euer Team sich
-              auf das konzentriert, was wirklich zählt. Jeder Blog Workflow
+              gestalten. Entdeckt praxisnahe Anleitungen zu Blog Workflow
+              Automatisierung, Integrationsbeispiele und Best Practices — damit
+              euer Team sich auf das konzentriert, was wirklich zählt. Jeder
               Beitrag basiert auf echten Projekterfahrungen aus dem
               Automatisierungsalltag.
             </Hero2ColumnDescription>

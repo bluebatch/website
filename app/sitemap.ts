@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
+import { getMainRewriteMap } from "@/lib/get-rewrites";
 
 const BASE_URL = "https://bluebatch.io";
 
@@ -61,11 +62,13 @@ function isUnpublished(filePath: string): boolean {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const appDir = path.join(process.cwd(), "app");
   const allRoutes = getRoutes(appDir);
+  const mainRewriteMap = getMainRewriteMap();
 
-  // Root page
+  // Root page — check if it has a mainRewrite
+  const rootRewrite = mainRewriteMap.get("/");
   const routes: MetadataRoute.Sitemap = [
     {
-      url: BASE_URL,
+      url: rootRewrite ? `${BASE_URL}${rootRewrite}` : BASE_URL,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
@@ -75,8 +78,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const { routePath, filePath } of allRoutes) {
     if (isUnpublished(filePath)) continue;
 
+    // If this route has a mainRewrite, use the flat URL instead
+    const mainRewrite = mainRewriteMap.get(routePath);
+    const url = mainRewrite
+      ? `${BASE_URL}${mainRewrite}`
+      : `${BASE_URL}${routePath}`;
+
     routes.push({
-      url: `${BASE_URL}${routePath}`,
+      url,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: routePath.split("/").length <= 2 ? 0.8 : 0.6,

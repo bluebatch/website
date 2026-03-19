@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -28,14 +30,23 @@ import PhaseCard, {
 } from "@/components/cards/phase-card";
 import IntroBox from "@/components/ui/intro-box";
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/n8n-node",
+  rewrites: [
+    {
+      source: "/n8n-node",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "n8n Node Entwicklung | Custom Nodes | Bluebatch",
   description:
-    "Professionelle n8n Node Entwicklung für Ihre spezifischen Anforderungen. TypeScript, Node.js, SDK – maßgeschneiderte Entwicklung und Wartung.",
+    "Professionelle Custom-Node-Entwicklung für n8n. TypeScript, Node.js, SDK – maßgeschneiderte Entwicklung und Wartung Ihrer Integrationen.",
   openGraph: {
-    title: "n8n Node Entwicklung | Custom Nodes | Bluebatch",
+    title: "Custom Nodes für n8n entwickeln | Bluebatch",
     description:
-      "Kein passender n8n Node für Ihre App? Wir entwickeln Custom n8n Nodes für jede Integration.",
+      "Kein passender Node für Ihre App? Wir entwickeln Custom Nodes für n8n – für jede Integration.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -50,12 +61,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom n8n Node Development | Bluebatch",
-    description: "Maßgeschneiderte n8n Nodes für jede API und jedes System.",
+    title: "Custom Node Development für n8n | Bluebatch",
+    description: "Maßgeschneiderte Nodes für n8n – für jede API und jedes System.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/services/custom-nodes",
+    canonical: "/n8n-node",
   },
 };
 
@@ -102,7 +113,7 @@ const techStack = [
   {
     name: "n8n SDK",
     description:
-      "Offizielles n8n Node SDK für schnelle Entwicklung. Declarative und Programmatic Styles.",
+      "Offizielles Node SDK von n8n für schnelle Entwicklung. Declarative und Programmatic Styles.",
     imageSrc: "/tools/N8n-logo.png",
   },
   {
@@ -217,7 +228,13 @@ const authMethods = [
   "Certificate-based Auth",
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       {/* Hero Section */}
@@ -227,7 +244,7 @@ export default function Page() {
             <Hero2ColumnPreHeadline>n8n Services</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>n8n Node Entwicklung für Ihr Unternehmen</Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Sie brauchen einen n8n Node für Ihre App? Wir entwickeln
+              Sie brauchen einen Custom Node für n8n? Wir entwickeln
               ihn. Professionelle TypeScript-Entwicklung für jede API, jedes
               System, jede Integration. Von Legacy-ERP bis moderne
               Cloud-Services.
@@ -251,12 +268,14 @@ export default function Page() {
       <ContentWrapper bodyWidth="small">
         <div className="text-center">
           <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
-            Ein individueller n8n Node verbindet Ihre Systeme genau so, wie Sie
+            Ein individueller Node verbindet Ihre Systeme in n8n genau so, wie Sie
             es brauchen. Die n8n Community bietet über 400 fertige
             Integrationen – doch für spezialisierte Geschäftsprozesse,
             proprietäre APIs oder Legacy-Systeme reicht das oft nicht aus.
-            Genau hier entwickeln wir Ihren n8n Node als maßgeschneiderte
+            Genau hier entwickeln wir Ihren Custom Node als maßgeschneiderte
             Integration, die perfekt auf Ihre Anforderungen zugeschnitten ist.
+            Ob Sie KI Agenten erstellen oder einen eigenen Chatbot erstellen
+            Open Source – mit Custom Nodes schaffen wir die passende Grundlage.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>
@@ -264,10 +283,10 @@ export default function Page() {
       {/* When Custom Nodes Are Needed */}
       <ContentWrapper>
         <IntroBox>
-          <IntroBox.Headline>Wann brauchen Sie einen eigenen n8n Node?</IntroBox.Headline>
+          <IntroBox.Headline>Wann brauchen Sie einen eigenen Node für n8n?</IntroBox.Headline>
           <IntroBox.Paragraph>
             Obwohl n8n 400+ eingebaute Nodes bietet, gibt es viele Szenarien, in
-            denen ein eigener n8n Node unverzichtbar ist
+            denen ein eigener Custom Node unverzichtbar ist
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -291,9 +310,9 @@ export default function Page() {
       {/* Real-World Examples */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
-          <IntroBox.Headline>Erfolgreiche n8n Node Projekte</IntroBox.Headline>
+          <IntroBox.Headline>Erfolgreiche Custom-Node-Projekte für n8n</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Reale Beispiele unserer n8n Node Entwicklungen
+            Reale Beispiele unserer Node-Entwicklungen in n8n
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -393,7 +412,7 @@ export default function Page() {
       <ContentWrapper>
         <SimpleGrid cols={2} className="gap-12">
           <div>
-            <Typo.H2 className="mb-6">Unterstützte API-Typen</Typo.H2>
+            <Typo.H2 className="mb-6">Unterstützte API-Typen für KI Agenten erstellen</Typo.H2>
             <div className="space-y-3">
               {apiTypes.map((api, index) => (
                 <div
@@ -408,7 +427,7 @@ export default function Page() {
           </div>
 
           <div>
-            <Typo.H2 className="mb-6">Authentifizierung</Typo.H2>
+            <Typo.H2 className="mb-6">Authentifizierung – auch für einen eigenen Chatbot erstellen Open Source</Typo.H2>
             <div className="space-y-3">
               {authMethods.map((method, index) => (
                 <div

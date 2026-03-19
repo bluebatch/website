@@ -25,8 +25,10 @@ Convert the route to a file path. The mapping follows Next.js App Router convent
 - `/services/custom-nodes` → `app/services/custom-nodes/page.tsx`
 - `/blog/some-slug` → look in `app/blog/**/some-slug/page.tsx` (may be in a route group like `(grosshandel)`)
 - `/standorte/berlin` → `app/standorte/berlin/page.tsx`
+- `/tools/n8n` → `app/tools/(automation-tools)/n8n/page.tsx` (route groups!)
+- `/tools/easybill` → `app/tools/(grosshandel)/easybill/page.tsx`
 
-If the file doesn't exist, check for route groups: `app/blog/(grosshandel)/slug/page.tsx`, `app/blog/(pdl)/slug/page.tsx`, etc.
+If the file doesn't exist, check for route groups: `(automation-tools)`, `(grosshandel)`, `(grosshandel)`, `(pdl)`, etc.
 
 Read the full `page.tsx` file.
 
@@ -49,58 +51,70 @@ The keyword MUST appear EXACTLY as written to count as an exact match. This is t
 
 **Partial match** = only SOME words of the keyword are found.
 
-### A. Hero / H1 — Main Keyword (max 40 points)
+### A. Hero / H1 — Main Keyword (max 35 points)
 
-Check the Hero headline (H1) for the **Haupt-Keyword**. The H1 is the MOST important element for SEO — it must contain the keyword as close to exact as possible.
+Check the Hero headline (H1) for the **Haupt-Keyword**.
 
-- **Exact match** (keyword appears verbatim, only case may differ): **40 points**
-- **Variant match** (all words present but modified — plural, hyphen, extra words, reordered): **20 points**
-- **Partial match** (only some keyword words found in H1): **10 points**
+- **Exact match** (keyword appears verbatim, only case may differ): **35 points**
+- **Variant match** (all words present but modified): **18 points**
+- **Partial match** (only some keyword words found in H1): **8 points**
 - **Not found in H1**: Check `metadata.title` — if found there: **5 points**
 - **Not found anywhere**: **0 points**
 
 Look in this priority order:
-
 1. `Hero2ColumnHeadline` or `BlogHero.Headline` content (this is the H1)
 2. Any `Typo.H1` content
 3. `metadata.title` field (fallback, low score)
 
-### B. H2 Headings — All Keywords (max 30 points)
+### B. H2/H3 Headings — Keywords (max 25 points)
 
-Check all H2 elements (`Typo.H2`, `IntroBox.Headline`) for the Haupt-Keyword AND additional keywords.
+Check all H2 elements (`Typo.H2`, `IntroBox.Headline`) and H3 elements (`Typo.H3`) for the Haupt-Keyword AND additional keywords.
 
-For each keyword, check if it appears in ANY H2:
+**Haupt-Keyword in H2** (max 10pts):
+- Exact in at least 1 H2: 10pts
+- Variant in H2: 5pts
+- Not in any H2: 0pts
 
-- Exact match in H2: counts as **found**
-- Variant match in H2: counts as **half-found** (0.5)
-- Not found: 0
+**Secondary keywords in H2/H3** (max 15pts):
+- For each secondary keyword: exact in H2/H3 = 1, variant = 0.5
+- Score: `(found / total_secondary_keywords) * 15`, rounded
+- Secondary keywords should appear mainly in H3s, sparingly in H2s
 
-Score: `(found / total_keywords) * 30`, rounded
+### C. Body Text — Keyword Density (max 25 points)
 
-### C. Body Text — Keyword Density (max 20 points)
+#### C1. Haupt-Keyword density (max 15pts)
 
-Count occurrences of the **Haupt-Keyword** in paragraph text (`Typo.Paragraph`, `Hero2ColumnDescription`, plain `<p>` tags, list items).
+Target density: **0.5–1.5%** of total visible text.
 
-Only count **exact matches** (keyword verbatim, case-insensitive):
+Count exact matches of Haupt-Keyword in body text (paragraphs, descriptions, list items — NOT headings or metadata):
+- Density 0.5–1.5%: **15 points**
+- Density 0.3–0.5% or 1.5–2.0%: **10 points** (slightly under/over)
+- Density 0.1–0.3% or 2.0–3.0%: **5 points** (too sparse or stuffed)
+- Density <0.1% or >3.0%: **0 points**
 
-- 5+ exact occurrences: **20 points**
-- 3-4 exact occurrences: **15 points**
-- 1-2 exact occurrences: **8 points**
-- 0 exact occurrences but variants present: **4 points**
-- Nothing found: **0 points**
+Rough heuristic: For a typical page with ~1000 words, 0.5-1.5% means the keyword appears **5-15 times** in body text.
 
-### D. First 100 Characters (max 10 points)
+#### C2. Secondary keywords density (max 10pts)
+
+Each secondary keyword should appear **1-2 times** per text passage, mainly in body text and H3 subheadings.
+
+- 50%+ of secondary keywords present (1-2 times each): **10 points**
+- 25-50% present: **5 points**
+- <25% present: **2 points**
+- None present: **0 points**
+
+### D. First 100 Characters (max 15 points)
 
 Check if the Haupt-Keyword appears in the first meaningful text content on the page (the Hero description or first paragraph).
 
-- **Exact match** in first 100 chars of visible text: **10 points**
-- **Exact match** in first 300 chars: **5 points**
-- **Variant** in first 300 chars: **2 points**
+- **Exact match** in first 100 chars of visible text: **15 points**
+- **Exact match** in first 300 chars: **8 points**
+- **Variant** in first 300 chars: **3 points**
 - Not found: **0 points**
 
 ### Total Score
 
-`Score = A + B + C + D` (0–100)
+`Score = A + B + C1 + C2 + D` (0–100)
 
 ## Step 4: Output results
 
@@ -109,22 +123,23 @@ For each validated page, print a summary:
 ```
 Page: /services/schulungen
 Haupt-Keyword: "n8n schulung"
-Keywords: (none)
+Keywords: "ki dsgvo schulung", "ki workshop buchen", "ki accelerator"
 
-  Hero/H1:     20/40  — variant: H1 is "n8n Schulungen & Workshops" (plural + extra words ≠ "n8n schulung")
-  H2s:         15/30  — variant found in 1 H2 ("Warum professionelle Schulung?" — singular but with extra words)
-  Body density: 15/20  — 3 exact "n8n Schulung" in body, plus many variants
-  First 100ch:  2/10   — variant "n8n Schulungen" in first 60 chars, not exact
+  Hero/H1:       35/35  — exact "n8n Schulung" in H1
+  H2/H3:        20/25  — haupt in 1 H2 (10/10), 2/3 secondary in H3s (10/15)
+  Body density:  15/15  — haupt appears 7x in ~1000 words = 0.7% (optimal)
+  Secondary kw:   8/10  — 2/3 secondary keywords present 1-2x each
+  First 100ch:   15/15  — exact in hero description
 
-  SCORE: 52/100
+  SCORE: 93/100
 ```
 
 ## Step 5: Update keywords.md
 
 After scoring all pages, update `keywords.md`:
 
-1. Set the **Score** column to the numeric score: `52`
-2. Set the **Review** column to today's date: `2026-03-18`
+1. Set the **Score** column to the numeric score: `93`
+2. Set the **Review** column to today's date
 
 Only update rows for pages that were actually validated (have keywords). Do NOT touch rows without keywords.
 
@@ -139,3 +154,4 @@ Only update rows for pages that were actually validated (have keywords). Do NOT 
 - If `$ARGUMENTS` specifies a section or page, only validate that subset
 - Always print the summary to the user before updating the file
 - Use subagents if validating more than 5 pages, to speed things up
+- Secondary keywords belong mainly in H3s and body text, sparingly in H2s

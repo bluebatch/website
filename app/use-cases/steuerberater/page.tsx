@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { resolveHref } from "@/lib/get-canonical-path";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -125,7 +126,7 @@ export default function Page() {
                   <Typo.Paragraph className="text-gray-600 mb-6">
                     {useCase.description}
                   </Typo.Paragraph>
-                  <InternalLink href={`/use-cases/steuerberater/${useCase.slug}`}>
+                  <InternalLink href={resolveHref(`/use-cases/steuerberater/${useCase.slug}`)}>
                     Mehr erfahren
                   </InternalLink>
                 </div>
@@ -153,7 +154,7 @@ export default function Page() {
                   <Typo.Paragraph className="text-gray-600 mb-6">
                     {useCase.description}
                   </Typo.Paragraph>
-                  <InternalLink href={`/use-cases/steuerberater/${useCase.slug}`}>
+                  <InternalLink href={resolveHref(`/use-cases/steuerberater/${useCase.slug}`)}>
                     Mehr erfahren
                   </InternalLink>
                 </div>

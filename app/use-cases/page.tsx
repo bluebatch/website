@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 const topics = [
   {
-    href: "/use-cases/grosshandel",
+    href: "/wholesale-ai",
     title: "Großhandel",
     description:
       "Bestellabwicklung und Lagerverwaltung automatisieren – für schnellere Prozesse und weniger Fehler.",

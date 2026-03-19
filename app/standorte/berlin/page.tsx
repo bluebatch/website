@@ -22,8 +22,103 @@ import { CityLinksFromMeta } from "@/components/standorte/city-links";
 import ContactButton from "@/components/buttons/contact-button";
 import { Cpu, ShoppingCart, HeartPulse, Landmark, Plane, Palette } from "lucide-react";
 import type { CityMeta } from "@/lib/meta-custom";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import { getRewriteOverrides } from "@/lib/get-rewrites";
-import { rewriteSiteConfig } from "./rewrite.site";
+
+
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/ki-agentur-berlin",
+  rewrites: [
+    {
+      source: "/ai-workflows-berlin",
+      preHeadline: "AI Workflows Berlin",
+      headline: "AI Workflows & Automatisierung in Berlin",
+      metaTitle: "AI Workflows Berlin – KI-Automatisierung | Bluebatch",
+      metaDescription:
+        "AI Workflows für Unternehmen in Berlin. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
+      keywords: [
+        "AI Workflows Berlin",
+        "KI Automatisierung Berlin",
+        "Workflow Automatisierung Berlin",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/n8n-automation-berlin",
+      preHeadline: "n8n Automation Berlin",
+      headline: "n8n Automation in Berlin – Workflows automatisieren",
+      metaTitle: "n8n Automation Berlin | Bluebatch",
+      metaDescription:
+        "n8n Automation für Unternehmen in Berlin. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+      keywords: [
+        "n8n Automation Berlin",
+        "n8n Berlin",
+        "Workflow Automation Berlin",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/n8n-berlin",
+      preHeadline: "n8n Berlin",
+      headline: "n8n Agentur in Berlin",
+      metaTitle: "n8n Berlin – Workflow-Automatisierung | Bluebatch",
+      metaDescription:
+        "n8n Experten in Berlin. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Berlin und Umgebung.",
+      keywords: [
+        "n8n Berlin",
+        "n8n Agentur Berlin",
+        "n8n Beratung Berlin",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/automation-berlin",
+      preHeadline: "Automation Berlin",
+      headline: "Automation & Prozessoptimierung in Berlin",
+      metaTitle: "Automation Berlin – Prozessoptimierung | Bluebatch",
+      metaDescription:
+        "Automation für Unternehmen in Berlin. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
+      keywords: [
+        "Automation Berlin",
+        "Prozessautomatisierung Berlin",
+        "Workflow Automation Berlin",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/it-dienstleister-berlin",
+      preHeadline: "IT Dienstleister Berlin",
+      headline: "IT Dienstleister in Berlin – Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Berlin – Automatisierung | Bluebatch",
+      metaDescription:
+        "Ihr IT Dienstleister in Berlin. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Berlin.",
+      keywords: [
+        "IT Dienstleister Berlin",
+        "IT Service Berlin",
+        "Digitalisierung Berlin",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/ki-beratung-berlin",
+      preHeadline: "KI Beratung Berlin",
+      headline: "KI Beratung in Berlin – Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Berlin – KI-Lösungen | Bluebatch",
+      metaDescription:
+        "KI Beratung für Unternehmen in Berlin. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
+      keywords: [
+        "KI Beratung Berlin",
+        "KI Lösungen Berlin",
+        "Künstliche Intelligenz Berlin",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/ki-agentur-berlin",
+    },
+  ],
+};
 
 export const metaCustom: CityMeta = {
   name: "Berlin",
@@ -55,6 +150,7 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }): Promise<Metadata> {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
 
@@ -99,7 +195,7 @@ export async function generateMetadata({
       images: ["/images/cities/berlin.jpg"],
     },
     alternates: {
-      canonical: `/standorte/${metaCustom.slug}`,
+      canonical: "/ki-agentur-berlin",
     },
   };
 }
@@ -132,9 +228,9 @@ const berlinFaqs = [
   },
   {
     question:
-      "Was unterscheidet Bluebatch als KI Agentur Berlin von anderen IT-Dienstleistern?",
+      "Was unterscheidet Bluebatch als KI-Agentur in Berlin von anderen IT-Dienstleistern?",
     answer:
-      "Als spezialisierte KI Agentur Berlin fokussieren wir uns auf Workflow-Automatisierung mit n8n und KI — kein Bauchladen, sondern tiefe Expertise. Unsere Kunden profitieren von Self-Hosted-Lösungen, die volle Datenkontrolle gewährleisten, individueller Workflow-Entwicklung und langfristiger Betreuung. Wir verstehen die Berliner Startup- und Unternehmenslandschaft und liefern Lösungen, die mit Ihrem Unternehmen skalieren.",
+      "Als Berliner KI-Agentur fokussieren wir uns auf Workflow-Automatisierung mit n8n und KI — kein Bauchladen, sondern tiefe Expertise. Unsere Kunden profitieren von Self-Hosted-Lösungen, die volle Datenkontrolle gewährleisten, individueller Workflow-Entwicklung und langfristiger Betreuung. Wir verstehen die Berliner Startup- und Unternehmenslandschaft und liefern Lösungen, die mit Ihrem Unternehmen skalieren.",
   },
 ];
 
@@ -145,6 +241,7 @@ export default async function Page({
 }) {
   if (!metaCustom.publish) notFound();
 
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
 
@@ -210,7 +307,7 @@ export default async function Page({
             zwölften Mal in Folge. Mit rund 500 Neugründungen pro Jahr, über
             1,68 Millionen Beschäftigten und 43.200 Gewerbeanmeldungen allein
             2025 steigt der Bedarf an intelligenter Automatisierung rasant. Als
-            KI Agentur Berlin unterstützen wir Unternehmen dabei, in diesem
+            KI-Agentur in Berlin unterstützen wir Unternehmen dabei, in diesem
             Tempo zu skalieren — mit Workflows, die mitwachsen.
           </IntroBox.Subline>
         </IntroBox>
@@ -221,7 +318,7 @@ export default async function Page({
         <IntroBox>
           <IntroBox.PreHeadline>Branchen in Berlin</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Schlüsselbranchen mit Automatisierungsbedarf
+            Ihre Agentur für KI in Berlin — Schlüsselbranchen mit Automatisierungsbedarf
           </IntroBox.Headline>
         </IntroBox>
         <SimpleGrid cols={3}>
@@ -229,12 +326,13 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cpu className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>IKT & FinTech</Typo.H3>
+            <Typo.H3>IKT & FinTech — KI-Beratung in Berlin</Typo.H3>
             <Typo.Paragraph>
               Berlin ist Deutschlands größter IT-Standort und vereint 89 % der
               deutschen FinTech-Investitionen. Automatisierte Compliance-Checks,
               Datenverarbeitung und Kundenservice sind hier keine Option — sie
-              sind Pflicht.
+              sind Pflicht. Als KI-Unternehmen Berlin unterstützen wir FinTechs
+              bei der Automatisierung regulatorischer Prozesse.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
@@ -301,7 +399,7 @@ export default async function Page({
         <IntroBox>
           <IntroBox.PreHeadline>Berlin in Zahlen</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Wirtschaftskraft der Hauptstadtregion
+            Wirtschaftskraft der Hauptstadtregion — KI Beratung Berlin
           </IntroBox.Headline>
         </IntroBox>
         <SimpleGrid cols={4}>
@@ -335,7 +433,7 @@ export default async function Page({
             alt="Industrielle Innovation in Berlin – Tesla Gigafactory und Siemensstadt 2.0 als Treiber moderner Workflow-Automatisierung"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>KI Agentur Berlin — Partner für den Industriestandort der Zukunft</Typo.H2>
+            <Typo.H2>Berliner KI-Agentur — Partner für den Industriestandort der Zukunft</Typo.H2>
             <Typo.Paragraph>
               Die Tesla Gigafactory in Grünheide produziert mit einer Kapazität
               von 500.000 Fahrzeugen pro Jahr und beschäftigt rund 11.000
@@ -346,8 +444,7 @@ export default async function Page({
             <Typo.Paragraph>
               Diese Großprojekte erfordern modernste Automatisierung — von der
               Produktionssteuerung über Lieferketten-Management bis zur
-              Integration von IoT-Daten in Echtzeit-Workflows. Als KI Agentur
-              Berlin setzen wir genau hier mit n8n-basierten Lösungen an.
+              Integration von IoT-Daten in Echtzeit-Workflows. Als Ihre Agentur für KI in Berlin setzen wir genau hier mit n8n-basierten Lösungen an.
             </Typo.Paragraph>
           </BoundlessImageCard.Content>
         </BoundlessImageCard>
@@ -409,8 +506,8 @@ export default async function Page({
           <IntroBox.Subline>
             Berliner Startups und Scale-ups brauchen Automatisierung, die mit
             ihrem Tempo mithält — schnelle Iterationen, lean Operations und
-            skalierbare Workflows ab Tag eins. Unser bewährtes 6-Phasen-Framework
-            ist genau dafür gebaut.
+            skalierbare Workflows ab Tag eins. Als KI-Agentur in Berlin liefern wir
+            mit unserem bewährten 6-Phasen-Framework genau das.
           </IntroBox.Subline>
         </IntroBox>
         <div className="mt-8 text-center">

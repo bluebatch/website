@@ -2,11 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const tools = [
-  { key: "n8n", label: "n8n", href: "/tools/automation-tools/n8n", logo: "/tools/N8n-logo.png" },
-  { key: "make", label: "Make", href: "/tools/automation-tools/make", logo: "/tools/make.svg" },
-  { key: "zapier", label: "Zapier", href: "/tools/automation-tools/zapier", logo: "/tools/zapier.svg" },
-  { key: "navision", label: "Navision", href: "/tools/grosshandel/navision", logo: "/tools/ms-dynamics-nav.png" },
-  { key: "easybill", label: "Easybill", href: "/tools/grosshandel/easybill", logo: "/tools/easybill.png" },
+  { key: "n8n", label: "n8n", href: "/was-ist-n8n", logo: "/tools/N8n-logo.png" },
+  { key: "make", label: "Make", href: "/tools/make", logo: "/tools/make.svg" },
+  { key: "zapier", label: "Zapier", href: "/tools/zapier", logo: "/tools/zapier.svg" },
+  { key: "navision", label: "Navision", href: "/tools/navision", logo: "/tools/ms-dynamics-nav.png" },
+  { key: "easybill", label: "Easybill", href: "/tools/easybill", logo: "/tools/easybill.png" },
 ] as const;
 
 const sizeConfig = {

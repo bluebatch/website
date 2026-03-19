@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { resolveHref } from "@/lib/get-canonical-path";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -16,16 +17,33 @@ import TabGroup, {
 } from "@/components/ui/tab-group";
 import { getCitiesByBundesland, getPublishedCities } from "@/lib/get-city-metas";
 
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
+
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/automatisierungs-agentur",
+  rewrites: [
+    {
+      source: "/automatisierungs-agentur",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "Automatisierungs Agentur — Workflow-Automatisierung in ganz Deutschland | Bluebatch",
   description:
     "Bluebatch ist Ihre Automatisierungs Agentur für Unternehmen in ganz Deutschland. Finden Sie Ihren Standort — von Berlin bis München.",
   alternates: {
-    canonical: "/standorte",
+    canonical: "/automatisierungs-agentur",
   },
 };
 
-export default function StandortePage() {
+export default async function StandortePage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
   const citiesByBundesland = getCitiesByBundesland();
   const allPublished = getPublishedCities();
 
@@ -78,7 +96,7 @@ export default function StandortePage() {
                 {allPublished.map((city) => (
                   <Link
                     key={city.slug}
-                    href={`/standorte/${city.slug}`}
+                    href={resolveHref(`/standorte/${city.slug}`)}
                     className="py-1 text-sm text-primary-600 hover:text-primary-800 hover:underline"
                   >
                     {city.name}
@@ -94,7 +112,7 @@ export default function StandortePage() {
                     {cities.map((city) => (
                       <Link
                         key={city.slug}
-                        href={`/standorte/${city.slug}`}
+                        href={resolveHref(`/standorte/${city.slug}`)}
                         className="py-1 text-sm text-primary-600 hover:text-primary-800 hover:underline"
                       >
                         {city.name}

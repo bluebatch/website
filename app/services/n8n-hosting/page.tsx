@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -19,14 +21,23 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/n8n-hosting-deutschland",
+  rewrites: [
+    {
+      source: "/n8n-hosting-deutschland",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "n8n Hosting Deutschland – Self-Hosted auf Ihrer Infrastruktur | Bluebatch",
   description:
-    "n8n Hosting Deutschland: Self-Hosting auf Ihrer eigenen Infrastruktur – OnPrem oder Cloud. Als open source Workflow Engine bietet n8n maximale Datenkontrolle und n8n Datenschutz nach DSGVO.",
+    "n8n in Deutschland hosten: Self-Hosting auf Ihrer eigenen Infrastruktur – OnPrem oder Cloud. Als open source Workflow Engine bietet n8n maximale Datenkontrolle und Datenschutz nach DSGVO.",
   openGraph: {
-    title: "n8n Hosting Deutschland – Self-Hosted auf Ihrer Infrastruktur | Bluebatch",
+    title: "Self-Hosting von n8n – Infrastruktur in Deutschland | Bluebatch",
     description:
-      "n8n Hosting Deutschland auf Ihrer eigenen Infrastruktur. Die open source Workflow Engine DSGVO-konform betrieben.",
+      "n8n in Deutschland hosten – auf Ihrer eigenen Infrastruktur. Die open source Workflow Engine DSGVO-konform betrieben.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -41,13 +52,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "n8n Hosting Deutschland – Self-Hosted | Bluebatch",
+    title: "Self-Hosting von n8n in Deutschland | Bluebatch",
     description:
-      "n8n Hosting Deutschland: open source Workflow Engine auf Ihrer Infrastruktur. DSGVO-konform.",
+      "n8n in Deutschland hosten: open source Workflow Engine auf Ihrer Infrastruktur. DSGVO-konform.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
-    canonical: "/services/n8n-hosting",
+    canonical: "/n8n-hosting-deutschland",
   },
 };
 
@@ -56,13 +67,13 @@ const features = [
     iconSrc: "/icons/privacy.svg",
     title: "100% Datenkontrolle",
     description:
-      "Mit n8n Hosting Deutschland bleiben Ihre Daten auf Ihrer Infrastruktur. Volle Kontrolle über Sicherheit und n8n Datenschutz.",
+      "Beim Self-Hosting von n8n bleiben Ihre Daten auf Ihrer Infrastruktur. Volle Kontrolle über Sicherheit und Datenschutz.",
   },
   {
     iconSrc: "/icons/law-round.svg",
     title: "DSGVO-Konform",
     description:
-      "n8n Hosting Deutschland garantiert, dass Daten in Deutschland/EU bleiben. Einfache Einhaltung aller n8n Datenschutz Anforderungen.",
+      "Hosting in Deutschland garantiert, dass Ihre Daten in Deutschland/EU bleiben. Einfache Einhaltung aller Datenschutz-Anforderungen für n8n.",
   },
   {
     iconSrc: "/icons/return-of-investment.svg",
@@ -94,7 +105,7 @@ const deploymentOptions = [
   {
     title: "OnPremise Hosting",
     description:
-      "n8n Hosting Deutschland direkt auf Ihren eigenen Servern im Rechenzentrum. Maximale Kontrolle und n8n Datenschutz. Wir liefern fertige n8n-Vorlagen für den schnellen Start.",
+      "n8n direkt auf Ihren eigenen Servern in Deutschland hosten. Maximale Kontrolle und Datenschutz. Wir liefern fertige n8n-Vorlagen für den schnellen Start.",
     features: [
       "Keine Internet-Abhängigkeit für interne Workflows",
       "Integration mit Legacy-Systemen im eigenen Netzwerk",
@@ -106,7 +117,7 @@ const deploymentOptions = [
   {
     title: "Private Cloud Hosting",
     description:
-      "n8n Hosting Deutschland in Ihrer dedizierten Cloud-Umgebung auf AWS, Azure oder Google Cloud. Jedes n8n Beispiel aus unserer Praxis zeigt bewährte Architekturen.",
+      "n8n in Ihrer dedizierten Cloud-Umgebung in Deutschland betreiben – auf AWS, Azure oder Google Cloud. Jedes n8n Beispiel aus unserer Praxis zeigt bewährte Architekturen.",
     features: [
       "Flexible Skalierung und Auto-Scaling",
       "Keine Hardware-Wartung",
@@ -118,7 +129,7 @@ const deploymentOptions = [
   {
     title: "Hybrid Setup",
     description:
-      "Kombination aus OnPrem und Cloud für n8n Hosting Deutschland. Die open source Workflow Engine läuft in der Cloud, sensible Systeme bleiben on-premise.",
+      "Kombination aus OnPrem und Cloud, um n8n in Deutschland zu hosten. Die open source Workflow Engine läuft in der Cloud, sensible Systeme bleiben on-premise.",
     features: [
       "Best of both worlds",
       "VPN-Verbindung zwischen Umgebungen",
@@ -129,7 +140,13 @@ const deploymentOptions = [
   },
 ];
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   return (
     <>
       {/* Hero Section */}
@@ -141,10 +158,11 @@ export default function Page() {
               n8n Hosting Deutschland – Self-Hosted auf Ihrer Infrastruktur
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              n8n Hosting Deutschland bedeutet maximale Datenkontrolle und n8n
+              Self-Hosting von n8n bedeutet maximale Datenkontrolle und
               Datenschutz nach DSGVO. Als open source Workflow Engine lässt sich
               n8n auf Ihrer OnPrem- oder Cloud-Infrastruktur betreiben –
-              professionell konfiguriert und gewartet von Bluebatch.
+              professionell konfiguriert und gewartet von Bluebatch. Besonders
+              im Bereich DSGVO B2B setzen Unternehmen auf Self-Hosting.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Hosting anfragen</ContactButton>
@@ -165,12 +183,13 @@ export default function Page() {
       {/* Key Features Grid */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
-          <IntroBox.Headline>Warum n8n Hosting Deutschland und n8n Datenschutz?</IntroBox.Headline>
+          <IntroBox.Headline>Warum n8n in Deutschland hosten?</IntroBox.Headline>
           <IntroBox.Paragraph>
             n8n ist eine open source Workflow Engine, die Sie vollständig selbst
             betreiben können. Keine Vendor Lock-ins, keine Execution-Limits,
-            keine versteckten Kosten. Mit n8n Hosting Deutschland behalten Sie
-            die vollständige Kontrolle über Ihre Daten.
+            keine versteckten Kosten. Mit Self-Hosting von n8n behalten Sie
+            die vollständige Kontrolle über Ihre Daten – ein entscheidender
+            Vorteil für DSGVO B2B Anforderungen.
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -199,9 +218,9 @@ export default function Page() {
       {/* Deployment Options */}
       <ContentWrapper colorScheme="gradient-primary-alt">
         <IntroBox dark>
-          <IntroBox.Headline>n8n Hosting Deutschland: Deployment-Optionen und n8n-Vorlagen</IntroBox.Headline>
+          <IntroBox.Headline>Deployment-Optionen und n8n-Vorlagen für deutsches Hosting</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Flexible Lösungen für Ihr n8n Hosting Deutschland – inklusive
+            Flexible Lösungen, um n8n in Deutschland zu hosten – inklusive
             fertiger n8n-Vorlagen für den schnellen Start. Jedes n8n Beispiel
             aus unserer Praxis zeigt, wie Sie die open source Workflow Engine
             optimal einsetzen.

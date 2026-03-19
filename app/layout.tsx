@@ -6,6 +6,7 @@ import Footer from "@/components/layout/footer";
 import CookieConsent from "@/components/ui/cookie-consent";
 import { PostHogProvider } from "@/components/providers/posthog";
 import { getBlogPosts } from "@/lib/get-blog-posts";
+import { resolveHref } from "@/lib/get-canonical-path";
 import ContactModal from "@/components/contact/contact-modal";
 
 const geistSans = Geist({
@@ -34,6 +35,7 @@ export default async function RootLayout({
   const latestBlogPosts = allPosts.slice(0, 5).map((p) => ({
     title: p.title,
     slug: p.slug,
+    href: resolveHref(`/blog/${p.slug}`),
   }));
 
   return (

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { getRewriteOverrides } from "@/lib/get-rewrites";
-import { rewriteSiteConfig } from "./rewrite.site";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -22,12 +23,85 @@ import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 import { InternalLinkLabel } from "@/components/buttons/internal-link";
 
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/was-ist-n8n",
+  rewrites: [
+    {
+      source: "/n8n-automation",
+      preHeadline: "n8n Automation",
+      headline: "n8n Automation – Workflows automatisieren mit Open Source",
+      metaTitle: "n8n Automation – Workflow-Automatisierung | Bluebatch",
+      metaDescription:
+        "n8n Automation für Ihr Unternehmen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+      keywords: [
+        "n8n Automation",
+        "n8n Workflow Automation",
+        "Open Source Automation Tool",
+        "n8n Enterprise",
+        "Workflow Automation Platform",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/n8n-automations",
+      preHeadline: "n8n Automations",
+      headline: "n8n Automations – Geschäftsprozesse automatisieren",
+      metaTitle: "n8n Automations – Prozessautomatisierung | Bluebatch",
+      metaDescription:
+        "n8n Automations für komplexe Geschäftsprozesse. 1.200+ Integrationen, Visual Workflow Builder, self-hosted.",
+      keywords: [
+        "n8n Automations",
+        "n8n Business Automations",
+        "n8n Prozessautomatisierung",
+        "n8n Integrationen",
+        "Geschäftsprozesse automatisieren",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/n8n-workflow-automation",
+      preHeadline: "n8n Workflow Automation",
+      headline: "n8n Workflow Automation für den Mittelstand",
+      metaTitle: "n8n Workflow Automation – Mittelstand | Bluebatch",
+      metaDescription:
+        "n8n Workflow Automation für den Mittelstand. Komplexe Geschäftsprozesse visuell automatisieren – auf Ihrer eigenen Infrastruktur.",
+      keywords: [
+        "n8n Workflow Automation",
+        "Workflow Automation Mittelstand",
+        "n8n Visual Builder",
+        "Self-Hosted Workflow Automation",
+        "n8n Drag and Drop",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/workflow-automatisierung-n8n",
+      preHeadline: "Workflow-Automatisierung mit n8n",
+      headline: "Workflow-Automatisierung mit n8n",
+      metaTitle: "Workflow-Automatisierung mit n8n | Bluebatch",
+      metaDescription:
+        "Workflow-Automatisierung mit n8n. Von der ERP-Integration bis zur Dokumentenverarbeitung – alles automatisiert.",
+      keywords: [
+        "Workflow-Automatisierung n8n",
+        "n8n ERP Integration",
+        "n8n Dokumentenverarbeitung",
+        "Prozessautomatisierung n8n",
+        "n8n Agentur",
+        "Bluebatch",
+      ],
+    },
+    {
+      source: "/was-ist-n8n",
+    },
+  ],
+};
+
 const defaultMeta = {
-  title: "n8n Workflow-Automatisierung | Bluebatch",
+  title: "Was ist n8n? Die Open-Source Automatisierungsplattform | Bluebatch",
   description:
-    "n8n ist die Open-Source Workflow-Automatisierungsplattform mit 1.200+ Integrationen. Erfahren Sie, wie Bluebatch n8n für Ihr Unternehmen einsetzt.",
+    "Was ist n8n? Die Open-Source iPaaS-Plattform für Workflow-Automatisierung mit 1.200+ Integrationen. Erfahren Sie, wie Bluebatch n8n als Prozessautomatisierung Software einsetzt.",
   ogDescription:
-    "Die Open-Source Automatisierungsplattform für Enterprise-Workflows. Self-hosted, flexibel, skalierbar.",
+    "Was ist n8n? Die Open-Source iPaaS-Plattform für Enterprise-Workflows. Self-hosted, flexibel, skalierbar.",
 };
 
 export async function generateMetadata({
@@ -42,13 +116,15 @@ export async function generateMetadata({
   const description = overrides?.metaDescription ?? defaultMeta.description;
 
   const defaultKeywords = [
+    "was ist n8n",
     "n8n",
-    "n8n Automatisierung",
+    "iPaaS",
+    "iPaaS RPA",
+    "iPaaS Cloud Integration",
+    "iPaaS Integration",
+    "Prozessautomatisierung Software",
     "Workflow Automatisierung",
     "Open Source Automation",
-    "n8n Integrationen",
-    "Self-Hosted Automation",
-    "n8n Workflow Builder",
     "Bluebatch",
   ];
 
@@ -78,7 +154,7 @@ export async function generateMetadata({
       images: ["/images/bluebatch-social-cover.jpg"],
     },
     alternates: {
-      canonical: "/tools/automation-tools/n8n",
+      canonical: "/was-ist-n8n",
     },
   };
 }
@@ -98,9 +174,9 @@ const features = [
   },
   {
     icon: "🏠",
-    title: "Self-Hosted Option",
+    title: "Self-Hosted oder iPaaS Cloud Integration",
     description:
-      "Hosten Sie n8n auf Ihrer eigenen Infrastruktur. Volle Datenkontrolle, DSGVO-konform und keine Execution-Limits.",
+      "Hosten Sie n8n auf Ihrer eigenen Infrastruktur oder nutzen Sie die iPaaS Cloud Integration. Volle Datenkontrolle, DSGVO-konform und keine Execution-Limits.",
   },
   {
     icon: "💻",
@@ -151,21 +227,21 @@ const bluebatchServices = [
     title: "n8n Hosting",
     description:
       "Professionelles Hosting auf Ihrer Infrastruktur – OnPrem oder Cloud, DSGVO-konform.",
-    href: "/services/n8n-hosting",
+    href: "/n8n-hosting-deutschland",
   },
   {
     icon: "🔧",
     title: "Workflow-Wartung",
     description:
       "24/7 Monitoring, proaktive Updates und 99,9% Uptime SLA für Ihre n8n-Instanz.",
-    href: "/services/workflow-wartung",
+    href: "/workflow-wartung",
   },
   {
     icon: "💻",
     title: "Custom Nodes",
     description:
       "Maßgeschneiderte n8n Nodes für jede API und jedes System – professionell entwickelt.",
-    href: "/services/custom-nodes",
+    href: "/n8n-node",
   },
 ];
 
@@ -174,6 +250,8 @@ export default async function Page({
 }: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
 
@@ -187,11 +265,12 @@ export default async function Page({
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
               {overrides?.headline ??
-                "n8n – Die Open-Source Workflow-Automatisierung"}
+                "Was ist n8n? Die Open-Source Plattform für Prozessautomatisierung"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              n8n verbindet visuelle Prozessgestaltung mit der Flexibilität von
-              Code. Mit über 1.200 Integrationen automatisieren Sie komplexe
+              Was ist n8n? Eine leistungsstarke iPaaS-Plattform, die visuelle
+              Prozessgestaltung mit der Flexibilität von Code verbindet. Mit
+              über 1.200 Integrationen automatisieren Sie komplexe
               Geschäftsprozesse – auf Ihrer eigenen Infrastruktur oder in der
               Cloud.
             </Hero2ColumnDescription>
@@ -214,10 +293,11 @@ export default async function Page({
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>Features</IntroBox.PreHeadline>
-          <IntroBox.Headline>Warum n8n?</IntroBox.Headline>
+          <IntroBox.Headline>Warum n8n als iPaaS-Lösung?</IntroBox.Headline>
           <IntroBox.Paragraph>
-            n8n ist die führende Open-Source Alternative zu Zapier und Make –
-            mit voller Datenkontrolle und unbegrenzten Möglichkeiten.
+            n8n ist die führende Open-Source Prozessautomatisierung Software und
+            eine echte Alternative zu Zapier und Make – mit voller
+            Datenkontrolle und unbegrenzten Möglichkeiten für iPaaS Integration.
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -240,7 +320,7 @@ export default async function Page({
         <SimpleGrid cols={2} className="items-center gap-12">
           <div>
             <Typo.H2 className="mb-6">
-              Was kann man mit n8n automatisieren?
+              iPaaS RPA: Was kann man mit n8n automatisieren?
             </Typo.H2>
             <div className="space-y-6">
               {useCases.map((useCase, index) => (
