@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-bochum",
       preHeadline: "AI Workflows Bochum",
       headline: "AI Workflows & Automatisierung in Bochum",
-      metaTitle: "AI Workflows Bochum – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Bochum - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Bochum. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-bochum",
       preHeadline: "n8n Automation Bochum",
-      headline: "n8n Automation in Bochum – Workflows automatisieren",
+      headline: "n8n Automation in Bochum - Workflows automatisieren",
       metaTitle: "n8n Automation Bochum | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Bochum. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Bochum. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Bochum",
         "n8n Bochum",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-bochum",
       preHeadline: "n8n Bochum",
       headline: "n8n Agentur in Bochum",
-      metaTitle: "n8n Bochum – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Bochum - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Bochum. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Bochum und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-bochum",
       preHeadline: "Automation Bochum",
       headline: "Automation & Prozessoptimierung in Bochum",
-      metaTitle: "Automation Bochum – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Bochum - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Bochum. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-bochum",
       preHeadline: "IT Dienstleister Bochum",
-      headline: "IT Dienstleister in Bochum – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Bochum – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Bochum - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Bochum - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Bochum. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Bochum.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-bochum",
       preHeadline: "KI Beratung Bochum",
-      headline: "KI Beratung in Bochum – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Bochum – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Bochum - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Bochum - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Bochum. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

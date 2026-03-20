@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-augsburg",
       preHeadline: "AI Workflows Augsburg",
       headline: "AI Workflows & Automatisierung in Augsburg",
-      metaTitle: "AI Workflows Augsburg – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Augsburg - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Augsburg. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-augsburg",
       preHeadline: "n8n Automation Augsburg",
-      headline: "n8n Automation in Augsburg – Workflows automatisieren",
+      headline: "n8n Automation in Augsburg - Workflows automatisieren",
       metaTitle: "n8n Automation Augsburg | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Augsburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Augsburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Augsburg",
         "n8n Augsburg",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-augsburg",
       preHeadline: "n8n Augsburg",
       headline: "n8n Agentur in Augsburg",
-      metaTitle: "n8n Augsburg – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Augsburg - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Augsburg. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Augsburg und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-augsburg",
       preHeadline: "Automation Augsburg",
       headline: "Automation & Prozessoptimierung in Augsburg",
-      metaTitle: "Automation Augsburg – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Augsburg - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Augsburg. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-augsburg",
       preHeadline: "IT Dienstleister Augsburg",
-      headline: "IT Dienstleister in Augsburg – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Augsburg – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Augsburg - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Augsburg - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Augsburg. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Augsburg.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-augsburg",
       preHeadline: "KI Beratung Augsburg",
-      headline: "KI Beratung in Augsburg – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Augsburg – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Augsburg - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Augsburg - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Augsburg. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

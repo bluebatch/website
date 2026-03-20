@@ -162,7 +162,7 @@ export default async function Page({
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Professionelle Wartung Ihrer Workflows ist essenziell für stabile Automatisierung.
-              Ihre Workflows laufen – wir sorgen dafür, dass es so bleibt.
+              Ihre Workflows laufen - wir sorgen dafür, dass es so bleibt.
               Proaktives Monitoring, regelmäßige Updates und
               Performance-Optimierung. Fokussieren Sie sich auf Ihr Business,
               wir kümmern uns um die Technik.
@@ -187,7 +187,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <div className="text-center">
           <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
-            Workflows sind das Herzstück Ihrer Automatisierung – doch ohne
+            Workflows sind das Herzstück Ihrer Automatisierung - doch ohne
             kontinuierliche Wartung können sie schnell zum Risikofaktor werden.
             API-Änderungen, n8n-Updates oder steigende Datenvolumen führen zu
             Ausfällen und Inkonsistenzen. Mit unserem Service zur Wartung Ihrer Workflows bleiben
@@ -215,7 +215,7 @@ export default async function Page({
             Was umfasst die Wartung Ihrer Workflows?
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            Unsere Serviceverträge decken alle Aspekte der Workflow-Pflege ab –
+            Unsere Serviceverträge decken alle Aspekte der Workflow-Pflege ab -
             von der Überwachung bis zur Optimierung.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -239,7 +239,7 @@ export default async function Page({
                 <Typo.Paragraph className="text-gray-700 mb-6">
                   Wir übernehmen die technische Verantwortung für Ihre
                   n8n-Instanz. Ob in der Cloud oder auf Ihrer eigenen
-                  Infrastruktur (On-Premise) – wir sorgen für die Installation
+                  Infrastruktur (On-Premise) - wir sorgen für die Installation
                   von Sicherheits-Updates, das Patch-Management und die
                   Überwachung der Server-Ressourcen.
                 </Typo.Paragraph>
@@ -272,7 +272,7 @@ export default async function Page({
                 <Typo.Paragraph className="text-gray-700 mb-6">
                   Wir installieren einen speziellen „Monitoring-Agenten", der
                   all Ihre Workflows rund um die Uhr überwacht. Bei Fehlern
-                  werden wir sofort alarmiert – oft bevor Sie oder Ihre
+                  werden wir sofort alarmiert - oft bevor Sie oder Ihre
                   Mitarbeiter das Problem überhaupt bemerken.
                 </Typo.Paragraph>
                 <Typo.List>
@@ -416,7 +416,7 @@ export default async function Page({
                 <Typo.Paragraph className="text-gray-700 mb-6">
                   Sie erhalten eine monatliche Übersicht über die Erfolgsquote
                   Ihrer Workflows sowie eine Aufstellung der im Hintergrund
-                  durchgeführten Optimierungen – so wird der Wert Ihrer
+                  durchgeführten Optimierungen - so wird der Wert Ihrer
                   Automatisierung für Sie transparent.
                 </Typo.Paragraph>
                 <Typo.List>
@@ -505,7 +505,7 @@ export default async function Page({
         <IntroBox>
           <IntroBox.Headline>Servicevertrag für die Wartung Ihrer Workflows</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Der Preis richtet sich nach der Anzahl Ihrer Kundenworkflows – nicht
+            Der Preis richtet sich nach der Anzahl Ihrer Kundenworkflows - nicht
             nach technischen n8n Workflows. Ein Kundenworkflow wie
             &quot;Rechnungseingang&quot; kann aus mehreren n8n Workflows
             bestehen und wird als ein Workflow gezählt.

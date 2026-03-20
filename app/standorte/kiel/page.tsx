@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-kiel",
       preHeadline: "AI Workflows Kiel",
       headline: "AI Workflows & Automatisierung in Kiel",
-      metaTitle: "AI Workflows Kiel – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Kiel - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Kiel. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-kiel",
       preHeadline: "n8n Automation Kiel",
-      headline: "n8n Automation in Kiel – Workflows automatisieren",
+      headline: "n8n Automation in Kiel - Workflows automatisieren",
       metaTitle: "n8n Automation Kiel | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Kiel. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Kiel. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Kiel",
         "n8n Kiel",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-kiel",
       preHeadline: "n8n Kiel",
       headline: "n8n Agentur in Kiel",
-      metaTitle: "n8n Kiel – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Kiel - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Kiel. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Kiel und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-kiel",
       preHeadline: "Automation Kiel",
       headline: "Automation & Prozessoptimierung in Kiel",
-      metaTitle: "Automation Kiel – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Kiel - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Kiel. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-kiel",
       preHeadline: "IT Dienstleister Kiel",
-      headline: "IT Dienstleister in Kiel – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Kiel – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Kiel - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Kiel - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Kiel. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Kiel.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-kiel",
       preHeadline: "KI Beratung Kiel",
-      headline: "KI Beratung in Kiel – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Kiel – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Kiel - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Kiel - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Kiel. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

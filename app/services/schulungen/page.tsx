@@ -33,7 +33,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 export const metadata: Metadata = {
   title: "n8n Schulung & Workshops | Bluebatch",
   description:
-    "Professionelle Schulungen für n8n – für Ihr Team. Vor-Ort, Online oder Hybrid. Von Grundlagen bis Enterprise-Features.",
+    "Professionelle Schulungen für n8n - für Ihr Team. Vor-Ort, Online oder Hybrid. Von Grundlagen bis Enterprise-Features.",
   openGraph: {
     title: "Schulungen für n8n & Workshops | Bluebatch",
     description:
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Schulungen für n8n & Workshops | Bluebatch",
     description:
-      "Professionelle Schulungen für n8n – für Ihr Team. Vor-Ort, Online oder Hybrid.",
+      "Professionelle Schulungen für n8n - für Ihr Team. Vor-Ort, Online oder Hybrid.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -217,7 +217,7 @@ export default async function Page({
               Unsere n8n Schulung befähigt Ihr Team zur
               Workflow-Automatisierung. Praxisorientierte Trainings von
               Grundlagen bis Enterprise-Deployment, inklusive KI DSGVO Schulung.
-              Sie können jede Schulung für n8n oder einen KI Workshop buchen – Vor-Ort,
+              Sie können jede Schulung für n8n oder einen KI Workshop buchen - Vor-Ort,
               Online oder Hybrid, individuell auf Ihre Bedürfnisse zugeschnitten.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
@@ -236,9 +236,9 @@ export default async function Page({
       {/* Training Levels */}
       <ContentWrapper>
         <IntroBox>
-          <IntroBox.Headline>Schulung nach Level – n8n lernen</IntroBox.Headline>
+          <IntroBox.Headline>Schulung nach Level - n8n lernen</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Von Grundlagen bis Enterprise – jede Schulung für n8n wird individuell
+            Von Grundlagen bis Enterprise - jede Schulung für n8n wird individuell
             auf den Wissensstand Ihres Teams abgestimmt
           </IntroBox.Paragraph>
         </IntroBox>

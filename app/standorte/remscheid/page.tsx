@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-remscheid",
       preHeadline: "AI Workflows Remscheid",
       headline: "AI Workflows & Automatisierung in Remscheid",
-      metaTitle: "AI Workflows Remscheid – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Remscheid - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Remscheid. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-remscheid",
       preHeadline: "n8n Automation Remscheid",
-      headline: "n8n Automation in Remscheid – Workflows automatisieren",
+      headline: "n8n Automation in Remscheid - Workflows automatisieren",
       metaTitle: "n8n Automation Remscheid | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Remscheid. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Remscheid. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Remscheid",
         "n8n Remscheid",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-remscheid",
       preHeadline: "n8n Remscheid",
       headline: "n8n Agentur in Remscheid",
-      metaTitle: "n8n Remscheid – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Remscheid - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Remscheid. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Remscheid und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-remscheid",
       preHeadline: "Automation Remscheid",
       headline: "Automation & Prozessoptimierung in Remscheid",
-      metaTitle: "Automation Remscheid – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Remscheid - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Remscheid. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-remscheid",
       preHeadline: "IT Dienstleister Remscheid",
-      headline: "IT Dienstleister in Remscheid – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Remscheid – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Remscheid - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Remscheid - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Remscheid. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Remscheid.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-remscheid",
       preHeadline: "KI Beratung Remscheid",
-      headline: "KI Beratung in Remscheid – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Remscheid – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Remscheid - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Remscheid - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Remscheid. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

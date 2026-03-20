@@ -45,7 +45,7 @@ import Customer from "@/components/sections/customer/customer";
 export const pageConfig: PageConfig = {
   title: "Compliance-Überwachung & Fristenmanagement",
   description:
-    "Höchstüberlassungsdauer, Equal Pay und Tarifwerk 2026 automatisch überwachen – mit Echtzeit-Warnungen.",
+    "Höchstüberlassungsdauer, Equal Pay und Tarifwerk 2026 automatisch überwachen - mit Echtzeit-Warnungen.",
 };
 
 export const metadata: Metadata = {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   description:
     "Automatische Compliance-Überwachung für Personaldienstleister: Höchstüberlassungsdauer, Equal Pay, Branchenzuschläge und Tarifwerk 2026. 100% Fristeneinhaltung.",
   openGraph: {
-    title: "Compliance-Überwachung – Personaldienstleister | Bluebatch",
+    title: "Compliance-Überwachung - Personaldienstleister | Bluebatch",
     description:
       "AÜG-Compliance automatisch überwachen: Fristen, Equal Pay und Tarifwerk 2026.",
     type: "website",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Compliance-Überwachung – Personaldienstleister | Bluebatch",
+    title: "Compliance-Überwachung - Personaldienstleister | Bluebatch",
     description:
       "AÜG-Compliance automatisch überwachen: Fristen, Equal Pay und Tarifwerk 2026.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -107,7 +107,7 @@ export default function Page() {
           <BackgroundHero.Description>
             Höchstüberlassungsdauer nach § 1 Abs. 1b AÜG, Equal-Pay-Stichtage
             gemäß § 8 AÜG, Branchenzuschläge über 11 Branchen und das neue
-            einheitliche DGB/GVP-Tarifwerk 2026 – alles in Echtzeit überwacht
+            einheitliche DGB/GVP-Tarifwerk 2026 - alles in Echtzeit überwacht
             mit automatischen Eskalationsstufen und konkreten
             Handlungsvorschlägen.
           </BackgroundHero.Description>
@@ -128,7 +128,7 @@ export default function Page() {
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* Section 2: KpiCards (Danger Variant) – Das Risiko in Zahlen */}
+      {/* Section 2: KpiCards (Danger Variant) - Das Risiko in Zahlen */}
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Das Risiko</IntroBox.PreHeadline>
@@ -136,7 +136,7 @@ export default function Page() {
             Die Konsequenzen manueller Überwachung
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Verstöße gegen das AÜG ziehen empfindliche Strafen nach sich – von
+            Verstöße gegen das AÜG ziehen empfindliche Strafen nach sich - von
             Bußgeldern über Nachzahlungsansprüche bis zum Verlust der
             Überlassungserlaubnis. Und die meisten Personaldienstleister
             überwachen ihre Fristen noch manuell.
@@ -154,7 +154,7 @@ export default function Page() {
           <KpiCard
             value={18}
             suffix=" Monate"
-            subtitle="Höchstüberlassungsdauer – danach entsteht ein Arbeitsverhältnis beim Entleiher (§ 9 Abs. 1b AÜG)"
+            subtitle="Höchstüberlassungsdauer - danach entsteht ein Arbeitsverhältnis beim Entleiher (§ 9 Abs. 1b AÜG)"
             variant="danger"
           />
           <KpiCard
@@ -166,7 +166,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Section 3: Problem-Darstellung – Typischer Compliance-Alltag */}
+      {/* Section 3: Problem-Darstellung - Typischer Compliance-Alltag */}
       <ContentWrapper colorScheme="gray">
         <SimpleGrid cols={2} className="items-start gap-12">
           <div>
@@ -185,10 +185,10 @@ export default function Page() {
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Bei Unterbrechungen bis 3 Monate + 1 Tag laufen die Fristen
-                weiter – eine Berechnung, die in Excel regelmäßig falsch
+                weiter - eine Berechnung, die in Excel regelmäßig falsch
                 umgesetzt wird. Und: Die Agentur für Arbeit prüft bei
-                befristeter Erlaubnis jährlich, bei unbefristeter alle 3–5 Jahre
-                – oft stichprobenartig an 4–6 Arbeitnehmern.
+                befristeter Erlaubnis jährlich, bei unbefristeter alle 3-5 Jahre
+                - oft stichprobenartig an 4-6 Arbeitnehmern.
               </IntroBox.Subline>
             </IntroBox>
           </div>
@@ -198,7 +198,7 @@ export default function Page() {
                 <Typo.H3 className="mt-2!">Einsatz startet</Typo.H3>
                 <Typo.Paragraph>
                   Überlassungsdauer, Branchenzuschlags-Stufen und
-                  Equal-Pay-Frist beginnen gleichzeitig zu laufen – oft mit
+                  Equal-Pay-Frist beginnen gleichzeitig zu laufen - oft mit
                   unbekannten Voreinsatzzeiten.
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
@@ -206,7 +206,7 @@ export default function Page() {
                 <Typo.H3 className="mt-2!">Fristen laufen parallel</Typo.H3>
                 <Typo.Paragraph>
                   Branchenzuschläge in 6 Stufen über 15 Monate, Equal Pay nach 9
-                  bzw. 15 Monaten, Höchstüberlassung nach 18 Monaten – jede mit
+                  bzw. 15 Monaten, Höchstüberlassung nach 18 Monaten - jede mit
                   eigener Unterbrechungslogik.
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
@@ -230,7 +230,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Section 4: Lösung – Hero2Column */}
+      {/* Section 4: Lösung - Hero2Column */}
       <ContentWrapper>
         <Hero2Column>
           <Hero2ColumnTextColumn>
@@ -240,7 +240,7 @@ export default function Page() {
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Unsere Compliance Engine überwacht sämtliche AÜG-relevanten
-              Fristen automatisch – von der Höchstüberlassungsdauer über
+              Fristen automatisch - von der Höchstüberlassungsdauer über
               Equal-Pay-Stichtage bis zu den 6-stufigen
               Branchenzuschlags-Tabellen in allen 11 TV-BZ-Branchen. Bei jedem
               neuen Einsatz werden automatisch alle Compliance-Meilensteine
@@ -249,8 +249,8 @@ export default function Page() {
               Höchstüberlassungsdauer (18 Monate, bis 24 bei Tarifabweichung).
             </Hero2ColumnDescription>
             <Hero2ColumnDescription>
-              Das System berücksichtigt Voreinsatzzeiten – auch bei Wechsel des
-              Verleihers – und wendet die 3-Monats-Karenzregel korrekt an.
+              Das System berücksichtigt Voreinsatzzeiten - auch bei Wechsel des
+              Verleihers - und wendet die 3-Monats-Karenzregel korrekt an.
               Gestaffelte Warnungen eskalieren automatisch: von einer
               Info-E-Mail an den Disponenten (4 Monate vorher) über
               Slack/Teams-Alerts an den Compliance-Kanal bis zur kritischen
@@ -284,7 +284,7 @@ export default function Page() {
         </Hero2Column>
       </ContentWrapper>
 
-      {/* Section 5: Höchstüberlassungsdauer & Equal Pay – 2-Column (reversed) */}
+      {/* Section 5: Höchstüberlassungsdauer & Equal Pay - 2-Column (reversed) */}
       <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-start gap-12">
           <div className="relative aspect-video">
@@ -316,7 +316,7 @@ export default function Page() {
                 in Tagen
               </Typo.ListItem>
               <Typo.ListItem>
-                Automatische Anrechnung von Voreinsatzzeiten – auch bei Wechsel
+                Automatische Anrechnung von Voreinsatzzeiten - auch bei Wechsel
                 des Verleihers
               </Typo.ListItem>
               <Typo.ListItem>
@@ -356,7 +356,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Section 6: Tarifwerk 2026 – Dark Section */}
+      {/* Section 6: Tarifwerk 2026 - Dark Section */}
       <ContentWrapper colorScheme="primary-dark">
         <IntroBox dark>
           <IntroBox.PreHeadline>Tarifwerk 2026</IntroBox.PreHeadline>
@@ -366,7 +366,7 @@ export default function Page() {
           <IntroBox.Subline>
             Das bisherige Nebeneinander von BAP/DGB- und iGZ/DGB-Tarifverträgen
             endet. Ab 2026 gilt ein einheitliches Tarifwerk für die gesamte
-            Zeitarbeitsbranche mit rund 560.000 Beschäftigten – basierend auf
+            Zeitarbeitsbranche mit rund 560.000 Beschäftigten - basierend auf
             Entgeltrahmentarifvertrag (ERTV), Entgelttarifvertrag (ETV) und
             Manteltarifvertrag (MTV). Die Umstellung erfordert Anpassungen in
             allen Abrechnungssystemen.
@@ -379,7 +379,7 @@ export default function Page() {
             <Typo.Paragraph className="text-gray-300">
               Drei Tariferhöhungen in kurzer Folge: +2,99% ab 01.01.2026, +2,50%
               ab 01.09.2026 und +3,50% ab 01.04.2027. Die Entgeltgruppe EG1
-              steigt auf 14,96 €/h – deutlich über dem gesetzlichen Mindestlohn.
+              steigt auf 14,96 €/h - deutlich über dem gesetzlichen Mindestlohn.
               EG2 wird in EG2a und EG2b unterteilt. Unser System passt alle
               Entgeltsätze automatisch zu den Stichtagen an und meldet
               Abweichungen sofort an die Lohnbuchhaltung.
@@ -414,7 +414,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Section 7: Audit-fähige Compliance-Reports – 2-Column */}
+      {/* Section 7: Audit-fähige Compliance-Reports - 2-Column */}
       <ContentWrapper>
         <SimpleGrid cols={2} className="items-start gap-12">
           <div>
@@ -425,8 +425,8 @@ export default function Page() {
               </IntroBox.Headline>
               <IntroBox.Subline>
                 Die Agentur für Arbeit prüft bei befristeter AÜG-Erlaubnis
-                jährlich, bei unbefristeter Erlaubnis alle 3–5 Jahre. Bei der
-                Prüfung werden typischerweise 4–6 Arbeitnehmer stichprobenartig
+                jährlich, bei unbefristeter Erlaubnis alle 3-5 Jahre. Bei der
+                Prüfung werden typischerweise 4-6 Arbeitnehmer stichprobenartig
                 ausgewählt und vollständige Dokumentation angefordert:
                 Arbeitsverträge, Überlassungsverträge, Entgeltabrechnungen,
                 Equal-Pay-Auskünfte, Eingruppierungsnachweise und
@@ -440,7 +440,7 @@ export default function Page() {
               </Typo.ListItem>
               <Typo.ListItem>
                 Stichproben-Export: Komplette Dokumentation pro Arbeitnehmer auf
-                Knopfdruck – inkl. Voreinsatzzeiten,
+                Knopfdruck - inkl. Voreinsatzzeiten,
                 Branchenzuschlags-Berechnungen und Equal-Pay-Nachweise
               </Typo.ListItem>
               <Typo.ListItem>
@@ -449,7 +449,7 @@ export default function Page() {
               </Typo.ListItem>
               <Typo.ListItem>
                 Quartalsweise automatische Interne AÜG-Aktenrevision als
-                Prüfungsvorbereitung – 10 zufällige Arbeitnehmer werden geprüft,
+                Prüfungsvorbereitung - 10 zufällige Arbeitnehmer werden geprüft,
                 Mängel automatisch gemeldet
               </Typo.ListItem>
               <Typo.ListItem>
@@ -477,7 +477,7 @@ export default function Page() {
           </IntroBox.Headline>
           <IntroBox.Subline>
             Unsere Compliance Engine integriert sich nahtlos in die bestehende
-            IT-Landschaft von Personaldienstleistern – vom ERP über die
+            IT-Landschaft von Personaldienstleistern - vom ERP über die
             Lohnabrechnung bis zum Dokumentenmanagement.
           </IntroBox.Subline>
         </IntroBox>
@@ -501,7 +501,7 @@ export default function Page() {
               Compliance-Plattformen: IZS, VMS & Managed Compliance
             </Typo.H3>
             <Typo.Paragraph>
-              Anbindung an das IZS – Deutschlands führendes unabhängiges
+              Anbindung an das IZS - Deutschlands führendes unabhängiges
               Managed-Compliance-System (seit 2011). IZS verifiziert automatisch
               AÜ-Erlaubnisse, Sozialversicherungsbeiträge und BG-Beiträge mit
               Daten direkt von Krankenkassen und Berufsgenossenschaften.
@@ -544,7 +544,7 @@ export default function Page() {
           </IntroBox.Headline>
           <IntroBox.Subline>
             Mit n8n als Open-Source-Workflow-Engine automatisieren wir die
-            gesamte Compliance-Überwachung – von der täglichen Fristenprüfung
+            gesamte Compliance-Überwachung - von der täglichen Fristenprüfung
             über das monatliche Branchenzuschlag-Audit bis zur automatischen
             Equal-Pay-Auskunftsanforderung. Self-hosted auf Docker für maximale
             DSGVO-Konformität.
@@ -624,7 +624,7 @@ export default function Page() {
             <Typo.H3>Tariferhöhungs-Prüfung zu Stichtagen</Typo.H3>
             <Typo.Paragraph>
               Schedule Trigger zu den Stichtagen 01.01.2026, 01.09.2026 und
-              01.04.2027 → Alle aktiven Arbeitnehmer mit EG1–EG9 abrufen →
+              01.04.2027 → Alle aktiven Arbeitnehmer mit EG1-EG9 abrufen →
               Aktuelles Entgelt gegen neues Mindestentgelt prüfen.
             </Typo.Paragraph>
             <Typo.List>
@@ -655,7 +655,7 @@ export default function Page() {
         <IntroBox>
           <IntroBox.PreHeadline>ROI-Kalkulation</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            500–1.000% ROI durch Risikovermeidung
+            500-1.000% ROI durch Risikovermeidung
           </IntroBox.Headline>
           <IntroBox.Subline>
             Für einen Personaldienstleister mit 200+ gleichzeitigen Einsätzen
@@ -671,7 +671,7 @@ export default function Page() {
                 1 FTE für manuelle Fristenüberwachung @ 45.000 €/Jahr
               </ComparisonListItem>
               <ComparisonListItem>
-                Durchschnittlich 2–3 Fristversäumnisse pro Jahr
+                Durchschnittlich 2-3 Fristversäumnisse pro Jahr
                 (Höchstüberlassung, Equal Pay, Branchenzuschläge)
               </ComparisonListItem>
               <ComparisonListItem>
@@ -684,7 +684,7 @@ export default function Page() {
               </ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              Jährliches Risiko: 105.000–545.000 €
+              Jährliches Risiko: 105.000-545.000 €
             </ComparisonFooter>
           </BeforeCard>
 
@@ -716,13 +716,13 @@ export default function Page() {
         </ComparisonCard>
 
         <SavingsCard>
-          <SavingsBadge>ROI im ersten Jahr: 500–1.000%</SavingsBadge>
+          <SavingsBadge>ROI im ersten Jahr: 500-1.000%</SavingsBadge>
           <SavingsItems>
             <SavingsItem label="Risikovermeidung" highlight>
               bis 500.000 €
             </SavingsItem>
-            <SavingsItem label="Amortisation">1–2 Monate</SavingsItem>
-            <SavingsItem label="Fristversäumnisse">–100%</SavingsItem>
+            <SavingsItem label="Amortisation">1-2 Monate</SavingsItem>
+            <SavingsItem label="Fristversäumnisse">-100%</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>
@@ -745,7 +745,7 @@ export default function Page() {
               question:
                 "Wie aktuell sind die tariflichen Regelungen im System?",
               answer:
-                "Alle Tarifabschlüsse, gesetzlichen Änderungen und Branchenzuschlagstabellen werden innerhalb von 48 Stunden nach Veröffentlichung eingepflegt. Das einheitliche DGB/GVP-Tarifwerk 2026 (Entgeltrahmentarifvertrag, Entgelttarifvertrag und Manteltarifvertrag) ist vollständig integriert – inklusive der drei Lohnerhöhungsstufen (+2,99% ab 01.01.2026, +2,50% ab 01.09.2026, +3,50% ab 01.04.2027) und der neuen Eingruppierungsmatrix EG1–EG9. Auch die aktualisierten BA-Fachlichen Weisungen zum AÜG (Stand 01.10.2025) sind berücksichtigt.",
+                "Alle Tarifabschlüsse, gesetzlichen Änderungen und Branchenzuschlagstabellen werden innerhalb von 48 Stunden nach Veröffentlichung eingepflegt. Das einheitliche DGB/GVP-Tarifwerk 2026 (Entgeltrahmentarifvertrag, Entgelttarifvertrag und Manteltarifvertrag) ist vollständig integriert - inklusive der drei Lohnerhöhungsstufen (+2,99% ab 01.01.2026, +2,50% ab 01.09.2026, +3,50% ab 01.04.2027) und der neuen Eingruppierungsmatrix EG1-EG9. Auch die aktualisierten BA-Fachlichen Weisungen zum AÜG (Stand 01.10.2025) sind berücksichtigt.",
             },
             {
               question: "Was passiert bei einer drohenden Fristüberschreitung?",
@@ -756,19 +756,19 @@ export default function Page() {
               question:
                 "Werden kundenspezifische Regelungen und Branchentarifverträge berücksichtigt?",
               answer:
-                "Ja. Das System unterstützt abweichende Höchstüberlassungsdauern bis 24 Monate bei gültigem Tarifvertrag der Einsatzbranche oder Betriebsvereinbarung. Alle 11 Branchenzuschlagstarifverträge (TV BZ) sind hinterlegt – von Metall & Elektro (IG Metall, 3-Stufen-Modell seit 09/2023: +15% ab Tag 1, +50% ab 9. Monat, +65% ab 15. Monat) über Chemie (IGBCE, 6 Stufen nach Entgeltgruppe, bis +67%) bis Schienenverkehr (EVG). Kundenspezifische Einstellungen werden analog zur zvoove-Logik pro Kundenstamm hinterlegt.",
+                "Ja. Das System unterstützt abweichende Höchstüberlassungsdauern bis 24 Monate bei gültigem Tarifvertrag der Einsatzbranche oder Betriebsvereinbarung. Alle 11 Branchenzuschlagstarifverträge (TV BZ) sind hinterlegt - von Metall & Elektro (IG Metall, 3-Stufen-Modell seit 09/2023: +15% ab Tag 1, +50% ab 9. Monat, +65% ab 15. Monat) über Chemie (IGBCE, 6 Stufen nach Entgeltgruppe, bis +67%) bis Schienenverkehr (EVG). Kundenspezifische Einstellungen werden analog zur zvoove-Logik pro Kundenstamm hinterlegt.",
             },
             {
               question:
                 "Können wir Reports für Audits der Agentur für Arbeit generieren?",
               answer:
-                "Ja. Das System generiert auf Knopfdruck vollständige, auditfähige Reports für BA-Prüfungen. Der Standardablauf bei Verlängerungsanträgen – Einreichung einer Tabelle aller überlassenen Arbeitnehmer, Stichprobenauswahl von 4–6 Personen, Anforderung detaillierter Unterlagen – wird proaktiv vorbereitet. Pro Arbeitnehmer stehen alle erforderlichen Dokumente bereit: Arbeitsverträge (mit Schriftformnachweis), Überlassungsverträge, Einsatzmitteilungen, Entgeltabrechnungen, Equal-Pay-Auskünfte, Eingruppierungsnachweise, Fristenberechnungen und Voreinsatzzeiten-Dokumentation. Quartalsweise wird automatisch eine interne AÜG-Aktenrevision durchgeführt.",
+                "Ja. Das System generiert auf Knopfdruck vollständige, auditfähige Reports für BA-Prüfungen. Der Standardablauf bei Verlängerungsanträgen - Einreichung einer Tabelle aller überlassenen Arbeitnehmer, Stichprobenauswahl von 4-6 Personen, Anforderung detaillierter Unterlagen - wird proaktiv vorbereitet. Pro Arbeitnehmer stehen alle erforderlichen Dokumente bereit: Arbeitsverträge (mit Schriftformnachweis), Überlassungsverträge, Einsatzmitteilungen, Entgeltabrechnungen, Equal-Pay-Auskünfte, Eingruppierungsnachweise, Fristenberechnungen und Voreinsatzzeiten-Dokumentation. Quartalsweise wird automatisch eine interne AÜG-Aktenrevision durchgeführt.",
             },
             {
               question:
                 "Wie funktioniert die Integration mit unserer bestehenden Branchensoftware?",
               answer:
-                "Die Compliance Engine integriert sich über standardisierte Schnittstellen: zvoove One und Classic über REST/oData-API (API-Key aus dem zvoove Hub), DATEV über Lohnimportdatenservice für automatische Entgeltanpassungen, DocuWare für digitale Personalakten. n8n-Workflows laufen als self-hosted Docker-Container für maximale DSGVO-Konformität. Täglich werden aktive Einsätze, Personalstammdaten, Kundenstammdaten und Entgeltdaten synchronisiert. Die Einrichtung dauert typischerweise 2–4 Wochen inkl. Konfiguration kundenspezifischer Tarifabweichungen.",
+                "Die Compliance Engine integriert sich über standardisierte Schnittstellen: zvoove One und Classic über REST/oData-API (API-Key aus dem zvoove Hub), DATEV über Lohnimportdatenservice für automatische Entgeltanpassungen, DocuWare für digitale Personalakten. n8n-Workflows laufen als self-hosted Docker-Container für maximale DSGVO-Konformität. Täglich werden aktive Einsätze, Personalstammdaten, Kundenstammdaten und Entgeltdaten synchronisiert. Die Einrichtung dauert typischerweise 2-4 Wochen inkl. Konfiguration kundenspezifischer Tarifabweichungen.",
             },
             {
               question: "Was kostet ein Compliance-Verstoß konkret?",

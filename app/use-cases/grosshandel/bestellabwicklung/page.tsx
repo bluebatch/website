@@ -40,7 +40,7 @@ import SavingsCard, {
 export const pageConfig: PageConfig = {
   title: "Automatisierte Bestellabwicklung",
   description:
-    "Bestellungen automatisch erfassen, validieren und weiterleiten – ohne manuelle Eingriffe.",
+    "Bestellungen automatisch erfassen, validieren und weiterleiten - ohne manuelle Eingriffe.",
 };
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
@@ -49,9 +49,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-bestellaufnahme",
       preHeadline: "AI Bestellaufnahme",
       headline: "AI-gestützte Bestellaufnahme für den Großhandel",
-      metaTitle: "AI Bestellaufnahme – Bestellungen automatisch erfassen | Bluebatch",
+      metaTitle: "AI Bestellaufnahme - Bestellungen automatisch erfassen | Bluebatch",
       metaDescription:
-        "AI-gestützte Bestellaufnahme für den Großhandel. Bestellungen automatisch erfassen, validieren und weiterleiten – vollautomatisch.",
+        "AI-gestützte Bestellaufnahme für den Großhandel. Bestellungen automatisch erfassen, validieren und weiterleiten - vollautomatisch.",
       keywords: [
         "AI Bestellaufnahme",
         "KI Bestellungen erfassen",
@@ -66,9 +66,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       preHeadline: "Automatische Bestellaufnahme",
       headline: "Automatische Bestellaufnahme für den Großhandel",
       metaTitle:
-        "Automatische Bestellaufnahme – Großhandel | Bluebatch",
+        "Automatische Bestellaufnahme - Großhandel | Bluebatch",
       metaDescription:
-        "Automatische Bestellaufnahme für Großhändler. Von der Bestellung zur Auslieferung – 80-90% schnellere Bearbeitung.",
+        "Automatische Bestellaufnahme für Großhändler. Von der Bestellung zur Auslieferung - 80-90% schnellere Bearbeitung.",
       keywords: [
         "automatische Bestellaufnahme",
         "Bestellaufnahme automatisieren",
@@ -82,9 +82,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/bestellabwicklung-automatisieren",
       preHeadline: "Bestellabwicklung automatisieren",
       headline: "Bestellabwicklung automatisieren im Großhandel",
-      metaTitle: "Bestellabwicklung automatisieren – Großhandel | Bluebatch",
+      metaTitle: "Bestellabwicklung automatisieren - Großhandel | Bluebatch",
       metaDescription:
-        "Bestellabwicklung automatisieren für Großhändler. Bestellungen erfassen, validieren und weiterleiten – ohne manuelle Eingriffe.",
+        "Bestellabwicklung automatisieren für Großhändler. Bestellungen erfassen, validieren und weiterleiten - ohne manuelle Eingriffe.",
       keywords: [
         "Bestellabwicklung automatisieren",
         "Bestellprozess optimieren",
@@ -98,7 +98,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ki-bestellabwicklung",
       preHeadline: "KI-Bestellabwicklung",
       headline: "KI-gestützte Bestellabwicklung für den Großhandel",
-      metaTitle: "KI-Bestellabwicklung – Großhandel | Bluebatch",
+      metaTitle: "KI-Bestellabwicklung - Großhandel | Bluebatch",
       metaDescription:
         "KI-gestützte Bestellabwicklung für Großhändler. 80-90% schnellere Bearbeitung, 95%+ Auftragsgenauigkeit.",
       keywords: [
@@ -114,7 +114,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automatische-bestellabwicklung",
       preHeadline: "Automatische Bestellabwicklung",
       headline: "Automatische Bestellabwicklung für den Großhandel",
-      metaTitle: "Automatische Bestellabwicklung – Großhandel | Bluebatch",
+      metaTitle: "Automatische Bestellabwicklung - Großhandel | Bluebatch",
       metaDescription:
         "Automatische Bestellabwicklung für Großhändler. End-to-End Fulfillment von der Bestellung bis zur Auslieferung.",
       keywords: [
@@ -130,11 +130,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 const defaultMeta = {
-  title: "Bestellabwicklung – Großhandel | Bluebatch",
+  title: "Bestellabwicklung - Großhandel | Bluebatch",
   description:
-    "Wie Bluebatch die Bestellabwicklung im Großhandel automatisiert – von der Erfassung bis zur Auslieferung.",
+    "Wie Bluebatch die Bestellabwicklung im Großhandel automatisiert - von der Erfassung bis zur Auslieferung.",
   ogDescription:
-    "Von der Bestellung zur Auslieferung – vollautomatisch. 80-90% schnellere Bearbeitung.",
+    "Von der Bestellung zur Auslieferung - vollautomatisch. 80-90% schnellere Bearbeitung.",
 };
 
 export async function generateMetadata({
@@ -208,11 +208,11 @@ export default async function Page({
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
               {overrides?.headline ??
-                "Von der Bestellung zur Auslieferung – vollautomatisch"}
+                "Von der Bestellung zur Auslieferung - vollautomatisch"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Bestellungen werden validiert, an das Lager geroutet,
-              kommissioniert und versendet – alles orchestriert durch n8n.
+              kommissioniert und versendet - alles orchestriert durch n8n.
               80-90% schnellere Bearbeitung, 95%+ Auftragsgenauigkeit.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
@@ -408,7 +408,7 @@ export default async function Page({
             </IntroBox.Headline>
             <IntroBox.Subline>
               Die Automatisierung integriert sich mit Ihrem ERP, WMS und
-              Versanddienstleistern – ohne bestehende Systeme zu ersetzen.
+              Versanddienstleistern - ohne bestehende Systeme zu ersetzen.
             </IntroBox.Subline>
           </IntroBox>
 

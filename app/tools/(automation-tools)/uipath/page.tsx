@@ -65,10 +65,10 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              UiPath – der RPA-Marktführer für Desktop-Automatisierung
+              UiPath - der RPA-Marktführer für Desktop-Automatisierung
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              UiPath ist nicht irgendein Automatisierungstool – es ist die
+              UiPath ist nicht irgendein Automatisierungstool - es ist die
               weltweit führende Plattform für Robotic Process Automation. Aber
               RPA ist ein grundlegend anderer Ansatz als API-Automatisierung.
               Hier erfahren Sie ehrlich, was UiPath kann, was es kostet und wo
@@ -112,7 +112,7 @@ export default function Page() {
             <Typo.Paragraph textColor="muted" size="sm">
               Gegründet 2005 als &quot;DeskOver&quot; in Bukarest von Daniel
               Dines und Marius Tirca. 2015 Umbenennung zu UiPath, 2021
-              Börsengang an der NYSE (PATH) – eines der größten
+              Börsengang an der NYSE (PATH) - eines der größten
               Software-IPOs der US-Geschichte. Hauptsitz heute in New York,
               über 4.000 Mitarbeiter, 10.800+ Kunden weltweit. Daniel Dines
               ist seit Juni 2024 als CEO zurückgekehrt.
@@ -131,7 +131,7 @@ export default function Page() {
           <SimpleCard>
             <Typo.H3 className="mb-3">Marktposition</Typo.H3>
             <Typo.Paragraph textColor="muted" size="sm">
-              7-facher Gartner Leader für RPA mit ca. 34% Marktanteil – mit
+              7-facher Gartner Leader für RPA mit ca. 34% Marktanteil - mit
               großem Abstand Marktführer. 1,78 Milliarden € Annual Recurring
               Revenue (Q3 FY2026, +11% YoY). Der globale RPA-Markt lag 2024
               bei 3,8 Mrd. € und soll bis 2034 auf 211 Mrd. € wachsen.
@@ -147,7 +147,7 @@ export default function Page() {
               Benutzeroberflächen (Desktop-RPA). API-Tools automatisieren
               System-zu-System-Kommunikation. Wenn Ihre Software APIs bietet,
               ist API-Automatisierung schneller, stabiler und günstiger. UiPath
-              wird dann relevant, wenn es keine APIs gibt – bei
+              wird dann relevant, wenn es keine APIs gibt - bei
               Legacy-Systemen, Mainframes, Citrix oder alten
               Desktop-Anwendungen.
             </Typo.Paragraph>
@@ -163,7 +163,7 @@ export default function Page() {
             Stärken und Grenzen von UiPath
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            UiPath ist nicht ohne Grund Marktführer – aber es kommt mit realen
+            UiPath ist nicht ohne Grund Marktführer - aber es kommt mit realen
             Herausforderungen, die man vor einer Entscheidung kennen sollte.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -172,11 +172,11 @@ export default function Page() {
           <ProsCons.Pros>
             <ProsCons.Item
               title="Desktop- & GUI-Automatisierung"
-              description="UiPaths Kernkompetenz: Software-Roboter simulieren menschliche Klicks, Eingaben und Bildschirminteraktionen. Damit lassen sich Legacy-Systeme ohne APIs automatisieren – Citrix, Mainframes, SAP-GUI und alte Desktop-Anwendungen. Das unterscheidet UiPath grundlegend von API-basierten Tools."
+              description="UiPaths Kernkompetenz: Software-Roboter simulieren menschliche Klicks, Eingaben und Bildschirminteraktionen. Damit lassen sich Legacy-Systeme ohne APIs automatisieren - Citrix, Mainframes, SAP-GUI und alte Desktop-Anwendungen. Das unterscheidet UiPath grundlegend von API-basierten Tools."
             />
             <ProsCons.Item
               title="Computer Vision der 3. Generation"
-              description="KI-Module erkennen UI-Elemente visuell wie ein Mensch – auch wenn klassische Selektoren versagen. Besonders wertvoll für Remote-Desktop-Sitzungen, Citrix-Umgebungen und Anwendungen mit dynamischen Oberflächen."
+              description="KI-Module erkennen UI-Elemente visuell wie ein Mensch - auch wenn klassische Selektoren versagen. Besonders wertvoll für Remote-Desktop-Sitzungen, Citrix-Umgebungen und Anwendungen mit dynamischen Oberflächen."
             />
             <ProsCons.Item
               title="Document Understanding mit GenAI"
@@ -188,7 +188,7 @@ export default function Page() {
             />
             <ProsCons.Item
               title="Attended & Unattended Robots"
-              description="Attended Robots arbeiten neben dem Mitarbeiter am Desktop und werden manuell ausgelöst – ideal für Front-Office. Unattended Robots laufen autonom auf Servern, 24/7, für Back-Office-Aufgaben wie Rechnungsverarbeitung oder Datenabgleich."
+              description="Attended Robots arbeiten neben dem Mitarbeiter am Desktop und werden manuell ausgelöst - ideal für Front-Office. Unattended Robots laufen autonom auf Servern, 24/7, für Back-Office-Aufgaben wie Rechnungsverarbeitung oder Datenabgleich."
             />
             <ProsCons.Item
               title="Enterprise Governance & Compliance"
@@ -198,11 +198,11 @@ export default function Page() {
           <ProsCons.Cons>
             <ProsCons.Item
               title="Sehr hohe Kosten"
-              description="Unattended Robots kosten ab ca. 4.000,- €/Jahr pro Stück. Ein typischer Enterprise-Deal liegt bei 87.000,- €+/Jahr, breite Deployments schnell bei 200.000,- € – 500.000,- €+. Für KMU und Mittelstand ist UiPath schlicht überdimensioniert und zu teuer."
+              description="Unattended Robots kosten ab ca. 4.000,- €/Jahr pro Stück. Ein typischer Enterprise-Deal liegt bei 87.000,- €+/Jahr, breite Deployments schnell bei 200.000,- € - 500.000,- €+. Für KMU und Mittelstand ist UiPath schlicht überdimensioniert und zu teuer."
             />
             <ProsCons.Item
               title="Fragile UI-Selektoren"
-              description="Änderungen an Benutzeroberflächen – ein Windows-Update, ein neues SAP-Release, ein Browser-Upgrade – können Automatisierungen komplett zerstören. Selektoren müssen dann manuell neu geschrieben werden. Dieser Wartungsaufwand wird häufig unterschätzt."
+              description="Änderungen an Benutzeroberflächen - ein Windows-Update, ein neues SAP-Release, ein Browser-Upgrade - können Automatisierungen komplett zerstören. Selektoren müssen dann manuell neu geschrieben werden. Dieser Wartungsaufwand wird häufig unterschätzt."
             />
             <ProsCons.Item
               title=".NET-Abhängigkeit & steile Lernkurve"
@@ -218,7 +218,7 @@ export default function Page() {
             />
             <ProsCons.Item
               title="Overkill für API-Workflows"
-              description="Wenn Ihre Systeme moderne APIs bieten – CRM, ERP, Cloud-Services – brauchen Sie keine Desktop-RPA. UiPath ist dann wie ein Vorschlaghammer für einen Nagel. API-basierte Workflow-Tools erledigen denselben Job schneller, stabiler und für einen Bruchteil der Kosten."
+              description="Wenn Ihre Systeme moderne APIs bieten - CRM, ERP, Cloud-Services - brauchen Sie keine Desktop-RPA. UiPath ist dann wie ein Vorschlaghammer für einen Nagel. API-basierte Workflow-Tools erledigen denselben Job schneller, stabiler und für einen Bruchteil der Kosten."
             />
           </ProsCons.Cons>
         </ProsCons>
@@ -290,8 +290,8 @@ export default function Page() {
             </Typo.H3>
             <Typo.Paragraph textColor="muted" size="sm">
               Ab ca. 87.000,- €+/Jahr für breitere Deployments. Bei größeren
-              Organisationen schnell 200.000,- € – 500.000,- €+ jährlich. Dazu kommen
-              Implementierungskosten von 50.000,- € – 200.000,- €.
+              Organisationen schnell 200.000,- € - 500.000,- €+ jährlich. Dazu kommen
+              Implementierungskosten von 50.000,- € - 200.000,- €.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
@@ -325,7 +325,7 @@ export default function Page() {
             <Typo.H3 className="mb-3">AI Center & Document Understanding</Typo.H3>
             <Typo.Paragraph textColor="muted" size="sm">
               Das AI Center integriert Machine-Learning-Modelle direkt in
-              Workflows – inklusive Out-of-the-Box-Modelle, Custom Model
+              Workflows - inklusive Out-of-the-Box-Modelle, Custom Model
               Training und Integration von OpenAI, Azure AI und anderen
               LLM-Providern. Document Understanding (IXP) nutzt
               GenAI-Extraktion für intelligente Dokumentenverarbeitung und
@@ -416,7 +416,7 @@ export default function Page() {
           <IntroBox.Paragraph>
             UiPath ist ein Desktop-RPA-Tool. Der Vergleich mit API-basierten
             Automatisierungstools ist daher ein Vergleich verschiedener
-            Kategorien – aber genau diesen Vergleich sollten Sie anstellen,
+            Kategorien - aber genau diesen Vergleich sollten Sie anstellen,
             bevor Sie investieren.
           </IntroBox.Paragraph>
         </IntroBox>

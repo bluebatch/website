@@ -32,11 +32,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Wholesale AI für den Großhandel – Use Cases | Bluebatch",
+  title: "Wholesale AI für den Großhandel - Use Cases | Bluebatch",
   description:
     "Wholesale AI: Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung mit KI zu automatisieren.",
   openGraph: {
-    title: "Wholesale AI – Bluebatch Use Cases für den Großhandel",
+    title: "Wholesale AI - Bluebatch Use Cases für den Großhandel",
     description:
       "Wholesale AI: Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung mit KI zu automatisieren.",
     type: "website",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wholesale AI – Bluebatch Use Cases für den Großhandel",
+    title: "Wholesale AI - Bluebatch Use Cases für den Großhandel",
     description:
       "Wholesale AI: Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung mit KI zu automatisieren.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -68,14 +68,14 @@ const useCases = [
     slug: "auftragserfassung",
     title: "Auftragserfassung",
     description:
-      "Bestellungen aus E-Mails, PDFs, Faxen und Portalen automatisch erfassen. Unsere KI für den Großhandel extrahiert alle Daten, validiert gegen ERP und Lager – von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.",
+      "Bestellungen aus E-Mails, PDFs, Faxen und Portalen automatisch erfassen. Unsere KI für den Großhandel extrahiert alle Daten, validiert gegen ERP und Lager - von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.",
     image: "/images/order-capture.jpg",
   },
   {
     slug: "bestellabwicklung",
     title: "AI im Wholesale: Bestellabwicklung",
     description:
-      "Von der Bestellung zur Auslieferung – vollautomatisch. KI für den Großhandel orchestriert Validierung, Lager-Routing, Kommissionierung und Versand durch n8n. 80-90% schnellere Bearbeitung im Lead to Cash Prozess.",
+      "Von der Bestellung zur Auslieferung - vollautomatisch. KI für den Großhandel orchestriert Validierung, Lager-Routing, Kommissionierung und Versand durch n8n. 80-90% schnellere Bearbeitung im Lead to Cash Prozess.",
     image: "/images/order-processing.jpg",
   },
   {
@@ -89,7 +89,7 @@ const useCases = [
     slug: "invoice-bot",
     title: "Invoice-Bot",
     description:
-      "Eingangsrechnungen automatisch erfassen, prüfen und zur Freigabe weiterleiten. KI für den Großhandel extrahiert Beträge, Steuer und Metadaten – 80% weniger manueller Aufwand.",
+      "Eingangsrechnungen automatisch erfassen, prüfen und zur Freigabe weiterleiten. KI für den Großhandel extrahiert Beträge, Steuer und Metadaten - 80% weniger manueller Aufwand.",
     image: "/images/invoice-processing.jpg",
   },
   {
@@ -103,21 +103,21 @@ const useCases = [
     slug: "zertifikatspruefung-lieferanten",
     title: "Zertifikatsprüfung Lieferanten",
     description:
-      "ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. n8n überwacht Ablaufdaten, sendet Erinnerungen und validiert gegen Akkreditierungsstellen.",
+      "ISO, FSSC, Bio, HACCP - alle Zertifikate zentral verwaltet. n8n überwacht Ablaufdaten, sendet Erinnerungen und validiert gegen Akkreditierungsstellen.",
     image: "/images/certificate-check.jpg",
   },
   {
     slug: "angebots-bot",
     title: "Angebots-Bot",
     description:
-      "Von der Kundenanfrage zum professionellen Angebot in Minuten. AI im Wholesale übernimmt Preisabfrage, PDF-Generierung und Follow-up – 21x höhere Qualifizierungsrate.",
+      "Von der Kundenanfrage zum professionellen Angebot in Minuten. AI im Wholesale übernimmt Preisabfrage, PDF-Generierung und Follow-up - 21x höhere Qualifizierungsrate.",
     image: "/images/pricing-calculator.jpg",
   },
   {
     slug: "ai-automation-with-easybill",
     title: "KI-Automatisierung mit easybill",
     description:
-      "Rechnungen, Angebote und Kundendaten in easybill vollautomatisch verwalten. Von der Dokumentenerstellung über ZUGFeRD/XRechnung bis zum Mahnwesen – 80% weniger manuelle Buchhaltungsarbeit.",
+      "Rechnungen, Angebote und Kundendaten in easybill vollautomatisch verwalten. Von der Dokumentenerstellung über ZUGFeRD/XRechnung bis zum Mahnwesen - 80% weniger manuelle Buchhaltungsarbeit.",
     image: "/images/process-automation.jpg",
   },
 ];
@@ -140,7 +140,7 @@ export default async function Page({
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Mit Wholesale AI automatisieren wir die repetitiven Prozesse, die
-              Ihr Team ausbremsen – vom Lead to Cash Prozess über die
+              Ihr Team ausbremsen - vom Lead to Cash Prozess über die
               Auftragserfassung bis zur Rechnungsprüfung. Weniger manuelle
               Arbeit, mehr Zeit für strategische Aufgaben.
             </Hero2ColumnDescription>

@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-wolfsburg",
       preHeadline: "AI Workflows Wolfsburg",
       headline: "AI Workflows & Automatisierung in Wolfsburg",
-      metaTitle: "AI Workflows Wolfsburg – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Wolfsburg - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Wolfsburg. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-wolfsburg",
       preHeadline: "n8n Automation Wolfsburg",
-      headline: "n8n Automation in Wolfsburg – Workflows automatisieren",
+      headline: "n8n Automation in Wolfsburg - Workflows automatisieren",
       metaTitle: "n8n Automation Wolfsburg | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Wolfsburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Wolfsburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Wolfsburg",
         "n8n Wolfsburg",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-wolfsburg",
       preHeadline: "n8n Wolfsburg",
       headline: "n8n Agentur in Wolfsburg",
-      metaTitle: "n8n Wolfsburg – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Wolfsburg - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Wolfsburg. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Wolfsburg und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-wolfsburg",
       preHeadline: "Automation Wolfsburg",
       headline: "Automation & Prozessoptimierung in Wolfsburg",
-      metaTitle: "Automation Wolfsburg – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Wolfsburg - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Wolfsburg. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-wolfsburg",
       preHeadline: "IT Dienstleister Wolfsburg",
-      headline: "IT Dienstleister in Wolfsburg – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Wolfsburg – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Wolfsburg - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Wolfsburg - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Wolfsburg. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Wolfsburg.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-wolfsburg",
       preHeadline: "KI Beratung Wolfsburg",
-      headline: "KI Beratung in Wolfsburg – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Wolfsburg – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Wolfsburg - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Wolfsburg - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Wolfsburg. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

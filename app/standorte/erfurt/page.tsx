@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-erfurt",
       preHeadline: "AI Workflows Erfurt",
       headline: "AI Workflows & Automatisierung in Erfurt",
-      metaTitle: "AI Workflows Erfurt – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Erfurt - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Erfurt. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-erfurt",
       preHeadline: "n8n Automation Erfurt",
-      headline: "n8n Automation in Erfurt – Workflows automatisieren",
+      headline: "n8n Automation in Erfurt - Workflows automatisieren",
       metaTitle: "n8n Automation Erfurt | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Erfurt. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Erfurt. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Erfurt",
         "n8n Erfurt",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-erfurt",
       preHeadline: "n8n Erfurt",
       headline: "n8n Agentur in Erfurt",
-      metaTitle: "n8n Erfurt – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Erfurt - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Erfurt. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Erfurt und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-erfurt",
       preHeadline: "Automation Erfurt",
       headline: "Automation & Prozessoptimierung in Erfurt",
-      metaTitle: "Automation Erfurt – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Erfurt - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Erfurt. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-erfurt",
       preHeadline: "IT Dienstleister Erfurt",
-      headline: "IT Dienstleister in Erfurt – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Erfurt – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Erfurt - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Erfurt - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Erfurt. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Erfurt.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-erfurt",
       preHeadline: "KI Beratung Erfurt",
-      headline: "KI Beratung in Erfurt – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Erfurt – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Erfurt - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Erfurt - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Erfurt. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

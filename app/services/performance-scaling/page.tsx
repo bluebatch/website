@@ -232,7 +232,7 @@ export default async function Page({
               Die Performance von n8n ist entscheidend für skalierbare Automatisierung.
               Ihre Instanz laggt oder crashed? Wir lösen Performance-Probleme
               mit Queue Mode, Redis und optimierter Architektur. Von 23 auf
-              162 Requests/Sekunde – garantiert.
+              162 Requests/Sekunde - garantiert.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">
@@ -259,8 +259,8 @@ export default async function Page({
             Was als einfaches Automatisierungstool beginnt, stößt bei steigenden
             Anforderungen schnell an Grenzen. Langsame Executions, Memory-Fehler
             und System-Crashes beeinträchtigen die Performance von n8n erheblich. Doch mit der richtigen
-            Architektur – Redis Queue Mode, PostgreSQL und Container
-            Orchestrierung – skaliert n8n problemlos auf Enterprise-Level.
+            Architektur - Redis Queue Mode, PostgreSQL und Container
+            Orchestrierung - skaliert n8n problemlos auf Enterprise-Level.
             Auch im Bereich AI Acceleration & Workflows sorgt optimale
             n8n-Performance-Optimierung für schnellere Ergebnisse.
           </Typo.Paragraph>

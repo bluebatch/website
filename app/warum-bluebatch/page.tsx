@@ -23,7 +23,7 @@ import Icon from "@/components/ui/icon";
 export const metadata: Metadata = {
   title: "Warum Bluebatch? Enterprise IT-Experten, keine Agentur | Bluebatch",
   description:
-    "Wir sind keine n8n-Agentur. Wir sind Enterprise IT-Experten mit Development Background und tiefem Datenverständnis. Wir verstehen, wo Systeme welche Daten verarbeiten – für DSGVO-konforme Workflows.",
+    "Wir sind keine n8n-Agentur. Wir sind Enterprise IT-Experten mit Development Background und tiefem Datenverständnis. Wir verstehen, wo Systeme welche Daten verarbeiten - für DSGVO-konforme Workflows.",
   openGraph: {
     title: "Warum Bluebatch? Enterprise IT-Experten, keine Agentur",
     description:
@@ -276,7 +276,7 @@ export default function Page() {
             <Hero2ColumnDescription>
               Wir sind kein Marketing-Team mit n8n-Zugang. Wir sind Enterprise
               IT-Profis mit Development Background und tiefem Datenverständnis.
-              Wir verstehen, wo Systeme welche Daten verarbeiten – die Basis für
+              Wir verstehen, wo Systeme welche Daten verarbeiten - die Basis für
               DSGVO-konforme, stabile und performante n8n-Workflows.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
@@ -542,7 +542,7 @@ export default function Page() {
           <IntroBox.Paragraph>
             Wir verstehen Datenstrukturen und können einschätzen, wo Systeme
             welche Daten verarbeiten. Diese Expertise ermöglicht uns,
-            DSGVO-konforme Lösungen zu entwickeln – mit echter Data Residency,
+            DSGVO-konforme Lösungen zu entwickeln - mit echter Data Residency,
             Verschlüsselung und ISO 27001 Compliance. Hosting-Optionen:
             On-Premise, Private Cloud oder Managed Cloud.
           </IntroBox.Paragraph>
@@ -623,7 +623,7 @@ export default function Page() {
           <IntroBox.Headline>Bereit für echte IT-Expertise?</IntroBox.Headline>
           <IntroBox.Paragraph>
             Lassen Sie uns in einem unverbindlichen Gespräch klären, ob
-            Standard-Agentur-Lösungen ausreichen – oder ob Sie Enterprise
+            Standard-Agentur-Lösungen ausreichen - oder ob Sie Enterprise
             IT-Expertise brauchen.
           </IntroBox.Paragraph>
         </IntroBox>

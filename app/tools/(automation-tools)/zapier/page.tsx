@@ -91,13 +91,13 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Zapier – die größte Automatisierungsplattform, ehrlich bewertet
+              Zapier - die größte Automatisierungsplattform, ehrlich bewertet
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Zapier verbindet über 8.000 Apps und macht Automatisierung für
               jeden zugänglich. Gleichzeitig kämpfen viele Nutzer mit
               explodierenden Task-Kosten, DSGVO-Bedenken und fehlender
-              Flexibilität. Hier ist unsere ehrliche Einschätzung – mit echten
+              Flexibilität. Hier ist unsere ehrliche Einschätzung - mit echten
               Zahlen, konkreten Grenzen und klaren Alternativen.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
@@ -125,7 +125,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Überblick</IntroBox.PreHeadline>
           <IntroBox.Headline>Was ist Zapier?</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Die Geschichte hinter der Plattform – und warum das Geschäftsmodell
+            Die Geschichte hinter der Plattform - und warum das Geschäftsmodell
             wichtig ist
           </IntroBox.Paragraph>
         </IntroBox>
@@ -137,7 +137,7 @@ export default function Page() {
             bauten immer wieder die gleichen Integrationen für ihre Kunden und
             beschlossen, eine universelle Plattform dafür zu schaffen. 2012
             nahmen sie am Y Combinator teil und erhielten eine Seed-Finanzierung
-            von 1,4 Millionen Euro – die einzige Venture-Capital-Runde, die
+            von 1,4 Millionen Euro - die einzige Venture-Capital-Runde, die
             Zapier jemals aufgenommen hat.
           </Typo.Paragraph>
 
@@ -152,7 +152,7 @@ export default function Page() {
           </Typo.Paragraph>
 
           <Typo.Paragraph spacing="lg">
-            Das Kernkonzept sind sogenannte &quot;Zaps&quot; – automatisierte
+            Das Kernkonzept sind sogenannte &quot;Zaps&quot; - automatisierte
             Workflows, die aus einem Trigger (auslösendes Ereignis) und einer
             oder mehreren Actions (ausgeführte Aktionen) bestehen. Beispiel:
             &quot;Wenn ein neuer Lead in einem Facebook-Formular eingeht
@@ -164,7 +164,7 @@ export default function Page() {
           <Typo.Paragraph>
             Und genau hier liegt der entscheidende Punkt: Zapier rechnet nach
             Tasks ab, nicht nach Workflows. Jeder einzelne Aktionsschritt zählt.
-            Das Modell klingt zunächst großzügig – bis man durchrechnet, wie
+            Das Modell klingt zunächst großzügig - bis man durchrechnet, wie
             schnell bei Multi-Step-Zaps die Tasks aufgebraucht sind.
           </Typo.Paragraph>
         </div>
@@ -176,7 +176,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Pro & Contra</IntroBox.PreHeadline>
           <IntroBox.Headline>Stärken und Grenzen von Zapier</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Wo Zapier seine Berechtigung hat – und wo die Plattform an ihre
+            Wo Zapier seine Berechtigung hat - und wo die Plattform an ihre
             Grenzen stößt
           </IntroBox.Paragraph>
         </IntroBox>
@@ -185,11 +185,11 @@ export default function Page() {
           <ProsCons.Pros>
             <ProsCons.Item
               title="Größtes Integrations-Ökosystem"
-              description="Über 8.000 native App-Verbindungen – mehr als jede andere Plattform. Make kommt auf rund 3.000, n8n auf 400+ native Nodes. Wer viele verschiedene SaaS-Tools verbinden will, findet bei Zapier fast immer einen fertigen Konnektor."
+              description="Über 8.000 native App-Verbindungen - mehr als jede andere Plattform. Make kommt auf rund 3.000, n8n auf 400+ native Nodes. Wer viele verschiedene SaaS-Tools verbinden will, findet bei Zapier fast immer einen fertigen Konnektor."
             />
             <ProsCons.Item
               title="Flachste Lernkurve am Markt"
-              description="Zapier wurde für nicht-technische Nutzer gebaut. Ein einfacher Zap ist in 5 bis 15 Minuten erstellt, ohne eine Zeile Code. Die Oberfläche führt Schritt für Schritt durch den Prozess – ideal für Marketing-Teams, HR und Operations."
+              description="Zapier wurde für nicht-technische Nutzer gebaut. Ein einfacher Zap ist in 5 bis 15 Minuten erstellt, ohne eine Zeile Code. Die Oberfläche führt Schritt für Schritt durch den Prozess - ideal für Marketing-Teams, HR und Operations."
             />
             <ProsCons.Item
               title="AI Copilot für Zap-Erstellung"
@@ -197,7 +197,7 @@ export default function Page() {
             />
             <ProsCons.Item
               title="Tables & Interfaces inklusive"
-              description="Zapier bietet seit 2025/2026 eine integrierte No-Code-Datenbank (Tables) und einen Formular-Builder (Interfaces) in allen Plänen. Früher waren das kostenpflichtige Add-ons ab 20,- € pro Monat – jetzt ist beides enthalten."
+              description="Zapier bietet seit 2025/2026 eine integrierte No-Code-Datenbank (Tables) und einen Formular-Builder (Interfaces) in allen Plänen. Früher waren das kostenpflichtige Add-ons ab 20,- € pro Monat - jetzt ist beides enthalten."
             />
             <ProsCons.Item
               title="Ideal für nicht-technische Nutzer"
@@ -211,11 +211,11 @@ export default function Page() {
           <ProsCons.Cons>
             <ProsCons.Item
               title="Task-basierte Abrechnung wird teuer"
-              description="Jeder Aktionsschritt in einem Zap zählt als ein Task. Ein Zap mit 5 Schritten verbraucht 5 Tasks pro Ausführung. Bei 750 Tasks im Professional-Plan sind das nur 150 tatsächliche Workflow-Durchläufe pro Monat – weniger als 5 pro Tag. Das klingt nach viel, bis man es durchrechnet."
+              description="Jeder Aktionsschritt in einem Zap zählt als ein Task. Ein Zap mit 5 Schritten verbraucht 5 Tasks pro Ausführung. Bei 750 Tasks im Professional-Plan sind das nur 150 tatsächliche Workflow-Durchläufe pro Monat - weniger als 5 pro Tag. Das klingt nach viel, bis man es durchrechnet."
             />
             <ProsCons.Item
               title="Kein Self-Hosting möglich"
-              description="Zapier ist ausschließlich Cloud-basiert. Alle Daten – Kundendaten, API-Keys, Workflow-Logik – laufen über Zapier-Server in den USA. Es gibt keine On-Premise-Option, keine Möglichkeit, die Datenverarbeitung auf eigene Infrastruktur zu verlagern."
+              description="Zapier ist ausschließlich Cloud-basiert. Alle Daten - Kundendaten, API-Keys, Workflow-Logik - laufen über Zapier-Server in den USA. Es gibt keine On-Premise-Option, keine Möglichkeit, die Datenverarbeitung auf eigene Infrastruktur zu verlagern."
             />
             <ProsCons.Item
               title="DSGVO-Compliance problematisch"
@@ -227,11 +227,11 @@ export default function Page() {
             />
             <ProsCons.Item
               title="Keine Schleifen auf unteren Plänen"
-              description="Native Loops (foreach), Sub-Workflows und fortgeschrittene Verzweigungen sind bei Zapier eingeschränkt oder erst in höheren Plänen verfügbar. Wer Datensätze iterativ verarbeiten muss, stößt schnell an Grenzen – oder muss auf teure Workarounds zurückgreifen."
+              description="Native Loops (foreach), Sub-Workflows und fortgeschrittene Verzweigungen sind bei Zapier eingeschränkt oder erst in höheren Plänen verfügbar. Wer Datensätze iterativ verarbeiten muss, stößt schnell an Grenzen - oder muss auf teure Workarounds zurückgreifen."
             />
             <ProsCons.Item
               title="Vendor Lock-in und Export-Probleme"
-              description="Zapier-Workflows lassen sich nicht einfach exportieren oder auf andere Plattformen übertragen. Es gibt keinen offenen Standard für Zap-Definitionen. Wer wechseln will, muss jeden Workflow manuell neu aufbauen – oder einen Migrationsservice nutzen."
+              description="Zapier-Workflows lassen sich nicht einfach exportieren oder auf andere Plattformen übertragen. Es gibt keinen offenen Standard für Zap-Definitionen. Wer wechseln will, muss jeden Workflow manuell neu aufbauen - oder einen Migrationsservice nutzen."
             />
           </ProsCons.Cons>
         </ProsCons>
@@ -242,7 +242,7 @@ export default function Page() {
         <IntroBox>
           <IntroBox.PreHeadline>Preise</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Zapier Kosten – was Sie wirklich zahlen
+            Zapier Kosten - was Sie wirklich zahlen
           </IntroBox.Headline>
           <IntroBox.Paragraph>
             Die offiziellen Preise und die versteckte Rechnung dahinter
@@ -290,7 +290,7 @@ export default function Page() {
           </Typo.Paragraph>
           <Typo.Paragraph>
             Bei einem komplexeren Workflow mit 10 Schritten sinkt die Zahl auf
-            75 Ausführungen pro Monat – weniger als 3 pro Tag. Die automatische
+            75 Ausführungen pro Monat - weniger als 3 pro Tag. Die automatische
             Pay-Per-Task-Abrechnung bei Überschreitung kann die Monatsrechnung
             schnell verdoppeln oder verdreifachen.
           </Typo.Paragraph>
@@ -302,12 +302,12 @@ export default function Page() {
           </Typo.H3>
           <Typo.Paragraph textColor="muted" size="sm" className="mb-2">
             10 Workflows, je 5 Steps, 100 Runs pro Monat: Zapier ca. 103,- €
-            (Team Plan) vs. n8n ca. 10–15,- € (Serverkosten). Ersparnis: rund
+            (Team Plan) vs. n8n ca. 10-15,- € (Serverkosten). Ersparnis: rund
             85-90%.
           </Typo.Paragraph>
           <Typo.Paragraph textColor="muted" size="sm" className="mb-2">
             30 Workflows, je 8 Steps, 300 Runs pro Monat: Zapier ab 300,- €+
-            vs. n8n ca. 15–20,- €. Ersparnis: rund 93-95%.
+            vs. n8n ca. 15-20,- €. Ersparnis: rund 93-95%.
           </Typo.Paragraph>
           <Typo.Paragraph textColor="muted" size="sm">
             Selbst gehostetes n8n hat keine Task-Limits. Workflows laufen so
@@ -322,7 +322,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Künstliche Intelligenz</IntroBox.PreHeadline>
           <IntroBox.Headline>KI und Agentic AI bei Zapier</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Was die KI-Features tatsächlich leisten – und wo die Grenzen liegen
+            Was die KI-Features tatsächlich leisten - und wo die Grenzen liegen
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -336,7 +336,7 @@ export default function Page() {
               Sprache und kann Use Cases vorschlagen, Fehler diagnostizieren und
               Workflows optimieren. Zapier Central geht einen Schritt weiter:
               ein KI-Workspace, in dem man KI-Bots erstellen kann, die über
-              6.000+ Apps hinweg arbeiten – inklusive Chrome-Erweiterung für den
+              6.000+ Apps hinweg arbeiten - inklusive Chrome-Erweiterung für den
               Einsatz direkt im Browser.
             </Typo.Paragraph>
             <Typo.Paragraph textColor="muted" size="sm">
@@ -374,7 +374,7 @@ export default function Page() {
         <IntroBox>
           <IntroBox.PreHeadline>Zielgruppe</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Für wen eignet sich Zapier – und für wen nicht?
+            Für wen eignet sich Zapier - und für wen nicht?
           </IntroBox.Headline>
           <IntroBox.Paragraph>
             Eine ehrliche Einschätzung nach Branche und Anwendungsfall
@@ -386,7 +386,7 @@ export default function Page() {
             <IndustryFit.GoodItem title="Freelancer und Solopreneure">
               Einzelunternehmer, die einfache Workflows wie Lead-Erfassung,
               Social-Media-Posting oder Rechnungsbenachrichtigungen
-              automatisieren. Wenige Tasks, geringe Komplexität – hier ist das
+              automatisieren. Wenige Tasks, geringe Komplexität - hier ist das
               Preis-Leistungs-Verhältnis noch akzeptabel.
             </IndustryFit.GoodItem>
             <IndustryFit.GoodItem title="Kleine Marketing-Teams">
@@ -404,7 +404,7 @@ export default function Page() {
           </IndustryFit.Good>
           <IndustryFit.Poor>
             <IndustryFit.PoorItem title="Banken und Finanzdienstleister">
-              Sensible Finanzdaten auf US-Servern ohne Self-Hosting-Option – für
+              Sensible Finanzdaten auf US-Servern ohne Self-Hosting-Option - für
               regulierte Branchen ein No-Go. Weder DSGVO-konform noch mit
               BaFin-Anforderungen vereinbar.
             </IndustryFit.PoorItem>
@@ -429,7 +429,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Vergleich</IntroBox.PreHeadline>
           <IntroBox.Headline>Zapier im Vergleich</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Automatisierungsplattformen im direkten Vergleich – basierend auf
+            Automatisierungsplattformen im direkten Vergleich - basierend auf
             realen Erfahrungswerten und aktuellen Preisen (Stand: März 2026)
           </IntroBox.Paragraph>
         </IntroBox>

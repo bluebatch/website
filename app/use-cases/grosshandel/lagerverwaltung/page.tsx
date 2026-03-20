@@ -29,11 +29,11 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Lagerverwaltung – Großhandel | Bluebatch",
+  title: "Lagerverwaltung - Großhandel | Bluebatch",
   description:
-    "Wie Bluebatch die Lagerverwaltung im Großhandel automatisiert – Echtzeit-Bestände und automatische Nachbestellungen.",
+    "Wie Bluebatch die Lagerverwaltung im Großhandel automatisiert - Echtzeit-Bestände und automatische Nachbestellungen.",
   openGraph: {
-    title: "Lagerverwaltung – Großhandel | Bluebatch",
+    title: "Lagerverwaltung - Großhandel | Bluebatch",
     description:
       "Echtzeit-Bestandssynchronisation und KI-basierte Bedarfsprognosen für automatische Nachbestellungen.",
     type: "website",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lagerverwaltung – Großhandel | Bluebatch",
+    title: "Lagerverwaltung - Großhandel | Bluebatch",
     description:
       "Echtzeit-Bestandssynchronisation und KI-basierte Bedarfsprognosen für automatische Nachbestellungen.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -164,7 +164,7 @@ export default function Page() {
           <SimpleCard className="bg-red-50! border-red-100!">
             <Typo.H3 className="text-red-600">70-80%</Typo.H3>
             <Typo.Paragraph className="text-sm md:text-base text-gray-600 mt-2">
-              Typische Bestandsgenauigkeit – 20-30% Fehler bei manuellen
+              Typische Bestandsgenauigkeit - 20-30% Fehler bei manuellen
               Zählungen
             </Typo.Paragraph>
           </SimpleCard>
@@ -178,7 +178,7 @@ export default function Page() {
             So funktioniert intelligente Lagerverwaltung
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Vier automatisierte Module – von der Synchronisation zur proaktiven
+            Vier automatisierte Module - von der Synchronisation zur proaktiven
             Steuerung.
           </IntroBox.Subline>
         </IntroBox>

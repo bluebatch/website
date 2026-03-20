@@ -42,7 +42,7 @@ import SavingsCard, {
 export const pageConfig: PageConfig = {
   title: "Digitales Onboarding & Dokumentenmanagement",
   description:
-    "Vom AÜG-Vertrag bis zum Einsatzstart – volldigitales Onboarding mit e-Signatur und automatischer Dokumentenprüfung.",
+    "Vom AÜG-Vertrag bis zum Einsatzstart - volldigitales Onboarding mit e-Signatur und automatischer Dokumentenprüfung.",
 };
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   description:
     "Digitales Onboarding für Personaldienstleister: e-Signatur für AÜG-Verträge, automatische Dokumentenprüfung und Self-Service-Portal. 60% schnellere Einarbeitung.",
   openGraph: {
-    title: "Digitales Onboarding – Personaldienstleister | Bluebatch",
+    title: "Digitales Onboarding - Personaldienstleister | Bluebatch",
     description:
       "Volldigitales Onboarding für Zeitarbeitskräfte mit e-Signatur und automatischer Dokumentenprüfung.",
     type: "website",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digitales Onboarding – Personaldienstleister | Bluebatch",
+    title: "Digitales Onboarding - Personaldienstleister | Bluebatch",
     description:
       "Volldigitales Onboarding für Zeitarbeitskräfte mit e-Signatur und automatischer Dokumentenprüfung.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -97,7 +97,7 @@ export default function Page() {
             Digitales Onboarding
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
-            Vom Vertrag zum Einsatz –{" "}
+            Vom Vertrag zum Einsatz -{" "}
             <BackgroundHero.Highlight>
               komplett digital
             </BackgroundHero.Highlight>
@@ -106,7 +106,7 @@ export default function Page() {
             Digitale Vertragsunterschrift mit QES oder einfacher e-Signatur,
             KI-gestützte Dokumentenprüfung und Self-Service-Portal für
             Zeitarbeitskräfte. Keine Kurierfahrten, keine fehlenden Unterlagen,
-            kein Papierstau – auch nach BEG IV 2025 rechtssicher.
+            kein Papierstau - auch nach BEG IV 2025 rechtssicher.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Demo anfragen</ContactButton>
@@ -125,7 +125,7 @@ export default function Page() {
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* Section 2: Das Problem – Analoge Prozesse */}
+      {/* Section 2: Das Problem - Analoge Prozesse */}
       <ContentWrapper>
         <SimpleGrid cols={2} className="items-start gap-12">
           <div>
@@ -137,7 +137,7 @@ export default function Page() {
               <IntroBox.Subline>
                 Vor dem Bürokratieentlastungsgesetz IV (BEG IV) verlangte § 12
                 AÜG die strenge Schriftform für Arbeitnehmerüberlassungsverträge
-                – beide Vertragsparteien mussten die Vertragsurkunde
+                - beide Vertragsparteien mussten die Vertragsurkunde
                 eigenhändig unterschreiben. Kurierfahrten für Unterschriften,
                 fehlende Dokumente und unvollständige Personalakten verzögerten
                 den Einsatzstart um Tage. Bei Verstoß drohte
@@ -147,7 +147,7 @@ export default function Page() {
                 Coffreo beziffert die Einsparung durch Digitalisierung auf 1-4
                 Arbeitstage pro Monat. Gleichzeitig wünschen sich 93% der
                 Zeitarbeitnehmenden laut zvoove GVP Industry Pulse 2025 einen
-                festen persönlichen Ansprechpartner – digitale Prozesse
+                festen persönlichen Ansprechpartner - digitale Prozesse
                 schaffen den Freiraum dafür.
               </IntroBox.Subline>
             </IntroBox>
@@ -160,7 +160,7 @@ export default function Page() {
                 </Typo.H3>
                 <Typo.Paragraph>
                   AÜG-Vertrag per Hand ausfüllen, drucken und zur Unterschrift
-                  vorbereiten – oft in mehrfacher Ausfertigung.
+                  vorbereiten - oft in mehrfacher Ausfertigung.
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
               <TimelineAsStepsStep value={2}>
@@ -169,7 +169,7 @@ export default function Page() {
                 </Typo.H3>
                 <Typo.Paragraph>
                   Physischer Transport zur Unterschrift: Kurier, persönlicher
-                  Termin oder Postweg – bei kurzfristigen Einsätzen kaum
+                  Termin oder Postweg - bei kurzfristigen Einsätzen kaum
                   machbar.
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
@@ -179,7 +179,7 @@ export default function Page() {
                 </Typo.H3>
                 <Typo.Paragraph>
                   Personalausweis, SV-Nachweis, Krankenkassenbescheinigung,
-                  Steuer-ID und Qualifikationen einzeln einsammeln – oft per
+                  Steuer-ID und Qualifikationen einzeln einsammeln - oft per
                   Fax oder Kopie.
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
@@ -207,9 +207,9 @@ export default function Page() {
           </IntroBox.Headline>
           <IntroBox.Subline>
             Vom Vertragsabschluss über die Dokumentenerfassung bis zur
-            automatischen Einsatzinformation – jeder Schritt läuft
+            automatischen Einsatzinformation - jeder Schritt läuft
             automatisiert, KI-gestützt und nachvollziehbar. Seit dem BEG IV
-            (01.01.2025) genügt für AÜG-Verträge die Textform – doch wir
+            (01.01.2025) genügt für AÜG-Verträge die Textform - doch wir
             empfehlen weiterhin die qualifizierte elektronische Signatur (QES)
             für maximale Beweissicherheit.
           </IntroBox.Subline>
@@ -230,7 +230,7 @@ export default function Page() {
                 qualifizierter elektronischer Signatur (QES) oder einfacher
                 e-Signatur unterschrieben. Anbieter wie Skribble, DocuSign oder
                 sign-me (D-Trust/Bundesdruckerei) ermöglichen die rechtsgültige
-                Signatur per Smartphone – die QES ist der eigenhändigen
+                Signatur per Smartphone - die QES ist der eigenhändigen
                 Unterschrift gemäß § 126a BGB gleichgestellt. Seit BEG IV
                 genügt auch eine einfache elektronische Signatur (Textform §
                 126b BGB), aber für höchste Beweissicherheit bleibt die QES die
@@ -270,7 +270,7 @@ export default function Page() {
               </PhaseCardHeader>
               <PhaseCardDescription>
                 Hochgeladene Dokumente werden automatisch klassifiziert und
-                validiert – per GPT-4o Vision, ABBYY FlexiCapture oder Azure AI
+                validiert - per GPT-4o Vision, ABBYY FlexiCapture oder Azure AI
                 Document Intelligence. Die KI erkennt den Dokumenttyp
                 (Personalausweis, SV-Ausweis, Gesundheitszeugnis etc.),
                 extrahiert Name, Geburtsdatum und Gültigkeitsdatum und gleicht
@@ -284,14 +284,14 @@ export default function Page() {
             <PhaseCard>
               <PhaseCardHeader>
                 <PhaseCardTitle>
-                  Personalakte vollständig – Onboarding abgeschlossen
+                  Personalakte vollständig - Onboarding abgeschlossen
                 </PhaseCardTitle>
                 <PhaseCardBadge>Auto-Check</PhaseCardBadge>
               </PhaseCardHeader>
               <PhaseCardDescription>
                 Sobald alle Pflichtdokumente geprüft und archiviert sind, wird
                 die digitale Personalakte automatisch vervollständigt. Die
-                Dokumente werden revisionssicher gespeichert – in einem DMS wie
+                Dokumente werden revisionssicher gespeichert - in einem DMS wie
                 zvoove DMS+, d.velop documents oder DocuWare, alternativ in
                 einer strukturierten Cloud-Ablage (AWS S3, Google Drive). Der
                 Onboarding-Status im ERP-System (z.B. zvoove One) wird
@@ -329,7 +329,7 @@ export default function Page() {
           <IntroBox.Headline>Alle Dokumenttypen abgedeckt</IntroBox.Headline>
           <IntroBox.Subline>
             Von Pflichtdokumenten über bedingte Nachweise bis hin zu
-            branchenspezifischen Zertifikaten – das System erkennt, prüft und
+            branchenspezifischen Zertifikaten - das System erkennt, prüft und
             archiviert jeden Dokumenttyp automatisch. Die Checkliste ist pro
             Einsatztyp konfigurierbar.
           </IntroBox.Subline>
@@ -432,7 +432,7 @@ export default function Page() {
             Jeder Schritt, vollständig digital
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Vom ersten Vertrag bis zur Einsatzinformation – jeder
+            Vom ersten Vertrag bis zur Einsatzinformation - jeder
             Onboarding-Schritt läuft automatisiert und nachvollziehbar. Hier
             zeigen wir, wie jedes Modul im Detail funktioniert.
           </IntroBox.Subline>
@@ -450,23 +450,23 @@ export default function Page() {
             <SimpleGrid cols={2} className="items-center">
               <div>
                 <Typo.H3>
-                  Digitale Vertragsunterschrift – rechtssicher nach eIDAS
+                  Digitale Vertragsunterschrift - rechtssicher nach eIDAS
                 </Typo.H3>
                 <Typo.Paragraph>
                   AÜG-Verträge, Einsatzvereinbarungen und
-                  Zusatzvereinbarungen digital unterschreiben – rechtssicher und
+                  Zusatzvereinbarungen digital unterschreiben - rechtssicher und
                   in Minuten statt Tagen. Die qualifizierte elektronische
                   Signatur (QES) ist die höchste Stufe nach der EU-Verordnung
                   eIDAS und der eigenhändigen Unterschrift gemäß § 126a BGB
                   rechtlich gleichgestellt. Seit dem BEG IV (01.01.2025) genügt
-                  für AÜG-Verträge bereits die Textform – dennoch empfehlen
+                  für AÜG-Verträge bereits die Textform - dennoch empfehlen
                   Experten weiterhin die QES oder zumindest die fortgeschrittene
                   elektronische Signatur (FES) für höhere Beweissicherheit.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>
                     Drei Signatur-Level: EES (einfach), FES (fortgeschritten),
-                    QES (qualifiziert) – je nach Anforderung
+                    QES (qualifiziert) - je nach Anforderung
                   </Typo.ListItem>
                   <Typo.ListItem>
                     Anbieter-Integration: Skribble (Schweiz, europäischer
@@ -476,7 +476,7 @@ export default function Page() {
                   </Typo.ListItem>
                   <Typo.ListItem>
                     Identifizierung per VideoIdent (IDnow) oder
-                    Online-Ausweis (nPA) – einmalig, dann Smartphone-basierte
+                    Online-Ausweis (nPA) - einmalig, dann Smartphone-basierte
                     Freigabe per PIN/TAN
                   </Typo.ListItem>
                   <Typo.ListItem>
@@ -506,7 +506,7 @@ export default function Page() {
                   Eingereichte Dokumente werden automatisch klassifiziert, per
                   OCR ausgelesen und auf Vollständigkeit und Gültigkeit geprüft.
                   Die KI erkennt Personalausweise, SV-Ausweise,
-                  Gesundheitszeugnisse und Qualifikationsnachweise – und fordert
+                  Gesundheitszeugnisse und Qualifikationsnachweise - und fordert
                   fehlende Unterlagen selbstständig an. Amazon Textract und
                   Azure AI Document Intelligence bieten spezielle Modelle für
                   ID-Dokumente; ABBYY FlexiCapture liefert Enterprise-Genauigkeit
@@ -520,7 +520,7 @@ export default function Page() {
                   </Typo.ListItem>
                   <Typo.ListItem>
                     OCR und Datenextraktion: Name, Geburtsdatum,
-                    Dokumentennummer, Gültigkeitsdatum – mit GPT-4o Vision,
+                    Dokumentennummer, Gültigkeitsdatum - mit GPT-4o Vision,
                     ABBYY FlexiCapture, Mistral OCR oder OCRSpace
                   </Typo.ListItem>
                   <Typo.ListItem>
@@ -568,7 +568,7 @@ export default function Page() {
                   </Typo.ListItem>
                   <Typo.ListItem>
                     Echtzeit-Statusanzeige: Fortschrittsbalken zeigt den
-                    Onboarding-Status – welche Dokumente fehlen, was bereits
+                    Onboarding-Status - welche Dokumente fehlen, was bereits
                     geprüft ist
                   </Typo.ListItem>
                   <Typo.ListItem>
@@ -624,7 +624,7 @@ export default function Page() {
                   </Typo.ListItem>
                   <Typo.ListItem>
                     Parallele Benachrichtigung: Internes Team wird per
-                    Slack/Teams informiert – &quot;Mitarbeiter [Name] startet
+                    Slack/Teams informiert - &quot;Mitarbeiter [Name] startet
                     morgen bei [Entleiher]&quot;
                   </Typo.ListItem>
                 </Typo.List>
@@ -740,7 +740,7 @@ export default function Page() {
           </IntroBox.Headline>
           <IntroBox.Subline>
             Mit n8n als Workflow-Engine orchestrieren wir den gesamten
-            Onboarding-Prozess – von der Vertragserstellung über die
+            Onboarding-Prozess - von der Vertragserstellung über die
             Dokumentenprüfung bis zur automatischen Einsatzinformation. Hier
             sind die konkreten Workflows, die wir für Personaldienstleister
             umsetzen.
@@ -863,7 +863,7 @@ export default function Page() {
             Für einen Personaldienstleister mit 500+ neuen Zeitarbeitskräften
             pro Jahr und 3 internen Sachbearbeitern. Die geschätzte Entlastung
             durch die Textform-Änderung (BEG IV) beträgt laut Bundesregierung
-            ca. 30 Mio. EUR jährlich für die gesamte Branche – mit
+            ca. 30 Mio. EUR jährlich für die gesamte Branche - mit
             Automatisierung holen Sie noch deutlich mehr heraus.
           </IntroBox.Subline>
         </IntroBox>
@@ -939,7 +939,7 @@ export default function Page() {
               question:
                 "Ist die elektronische Signatur für AÜG-Verträge seit 2025 noch nötig?",
               answer:
-                "Seit dem 01.01.2025 hat das Bürokratieentlastungsgesetz IV (BEG IV) die Anforderungen an AÜG-Verträge gelockert: Statt Schriftform genügt nun die Textform (§ 126b BGB). Das bedeutet, dass Verträge per E-Mail, als PDF oder über ein Portal geschlossen werden können – eine eigenhändige Unterschrift oder QES ist nicht mehr zwingend erforderlich. Dennoch empfehlen viele Experten und Branchenlösungen wie compleet oder Skribble weiterhin die QES oder zumindest die fortgeschrittene elektronische Signatur (FES) für höhere Beweissicherheit und Manipulationsschutz. Wichtig: Befristungsabreden (§ 14 Abs. 4 TzBfG) erfordern weiterhin die Schriftform, ebenso Branchen nach § 2a Abs. 1 Schwarzarbeitsbekämpfungsgesetz (Baugewerbe, Gastronomie, Logistik, Fleischwirtschaft).",
+                "Seit dem 01.01.2025 hat das Bürokratieentlastungsgesetz IV (BEG IV) die Anforderungen an AÜG-Verträge gelockert: Statt Schriftform genügt nun die Textform (§ 126b BGB). Das bedeutet, dass Verträge per E-Mail, als PDF oder über ein Portal geschlossen werden können - eine eigenhändige Unterschrift oder QES ist nicht mehr zwingend erforderlich. Dennoch empfehlen viele Experten und Branchenlösungen wie compleet oder Skribble weiterhin die QES oder zumindest die fortgeschrittene elektronische Signatur (FES) für höhere Beweissicherheit und Manipulationsschutz. Wichtig: Befristungsabreden (§ 14 Abs. 4 TzBfG) erfordern weiterhin die Schriftform, ebenso Branchen nach § 2a Abs. 1 Schwarzarbeitsbekämpfungsgesetz (Baugewerbe, Gastronomie, Logistik, Fleischwirtschaft).",
             },
             {
               question:
@@ -951,7 +951,7 @@ export default function Page() {
               question:
                 "Wie funktioniert das Self-Service-Portal und welche Lösungen gibt es?",
               answer:
-                "Zeitarbeitskräfte erhalten einen persönlichen Zugang per Link oder App. Dort können sie Dokumente per Smartphone-Kamera hochladen, Stammdaten pflegen, Verträge unterschreiben und ihren Onboarding-Status in Echtzeit einsehen. Branchenübliche Lösungen sind die zvoove Work App (integriert in zvoove ERP mit Echtzeit-Datenfluss), Coffreo (elektronische Signaturen, automatisiertes Onboarding, sichere Archivierung) und Staffbase (interne Kommunikation mit Push-Benachrichtigungen). Alternativ lassen sich Custom-Portale mit React/Next.js und einem n8n-Webhook-Backend aufbauen – oder Sie nutzen den n8n Form Trigger als einfache Lösung ohne separates Frontend.",
+                "Zeitarbeitskräfte erhalten einen persönlichen Zugang per Link oder App. Dort können sie Dokumente per Smartphone-Kamera hochladen, Stammdaten pflegen, Verträge unterschreiben und ihren Onboarding-Status in Echtzeit einsehen. Branchenübliche Lösungen sind die zvoove Work App (integriert in zvoove ERP mit Echtzeit-Datenfluss), Coffreo (elektronische Signaturen, automatisiertes Onboarding, sichere Archivierung) und Staffbase (interne Kommunikation mit Push-Benachrichtigungen). Alternativ lassen sich Custom-Portale mit React/Next.js und einem n8n-Webhook-Backend aufbauen - oder Sie nutzen den n8n Form Trigger als einfache Lösung ohne separates Frontend.",
             },
             {
               question:

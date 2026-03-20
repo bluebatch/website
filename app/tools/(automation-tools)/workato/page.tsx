@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title:
       "Workato: Ehrliche Analyse, echte Kosten & Alternativen | Bluebatch",
     description:
-      "Workato: Enterprise iPaaS mit 15K–180K+ €/Jahr. Stärken, Grenzen und günstigere Alternativen.",
+      "Workato: Enterprise iPaaS mit 15K-180K+ €/Jahr. Stärken, Grenzen und günstigere Alternativen.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -70,7 +70,7 @@ const staerken = [
   {
     title: "On-Premises Agent (OPA)",
     description:
-      "Sicherer Zugriff auf lokale Systeme ohne eingehende Firewall-Änderungen – nur ausgehender Traffic auf Port 443. Läuft auf Windows, Linux, macOS und als Docker-Image. OPA-Groups ermöglichen Load Balancing und Hochverfügbarkeit für hybride Deployments.",
+      "Sicherer Zugriff auf lokale Systeme ohne eingehende Firewall-Änderungen - nur ausgehender Traffic auf Port 443. Läuft auf Windows, Linux, macOS und als Docker-Image. OPA-Groups ermöglichen Load Balancing und Hochverfügbarkeit für hybride Deployments.",
   },
   {
     title: "Embedded iPaaS",
@@ -80,7 +80,7 @@ const staerken = [
   {
     title: "Workato Genies (Agentic AI)",
     description:
-      "Vorgebaute KI-Agenten für Sales, IT, Security, HR und Customer Experience. Genies führen mehrstufige Geschäftsprozesse autonom aus – von Employee Onboarding bis Quote-to-Cash. Agent Studio ermöglicht das Erstellen eigener Genies.",
+      "Vorgebaute KI-Agenten für Sales, IT, Security, HR und Customer Experience. Genies führen mehrstufige Geschäftsprozesse autonom aus - von Employee Onboarding bis Quote-to-Cash. Agent Studio ermöglicht das Erstellen eigener Genies.",
   },
   {
     title: "Enterprise MCP-Plattform",
@@ -93,7 +93,7 @@ const probleme = [
   {
     title: "Extrem hohe Kosten",
     description:
-      "Einstiegspreise ab ca. 15.000,- €/Jahr, typische Enterprise-Deployments bei 50.000,- bis 180.000,- €+/Jahr. Dazu kommen Add-ons für Advanced Compliance, API Platform, Workbot, Data Monitoring und Bulk Data Processing. Der Faktor gegenüber Open-Source-Alternativen liegt bei 10–50x.",
+      "Einstiegspreise ab ca. 15.000,- €/Jahr, typische Enterprise-Deployments bei 50.000,- bis 180.000,- €+/Jahr. Dazu kommen Add-ons für Advanced Compliance, API Platform, Workbot, Data Monitoring und Bulk Data Processing. Der Faktor gegenüber Open-Source-Alternativen liegt bei 10-50x.",
   },
   {
     title: "Völlig intransparente Preisgestaltung",
@@ -118,7 +118,7 @@ const probleme = [
   {
     title: "Nicht für kleine Unternehmen",
     description:
-      "Preis, Komplexität und Mindestpaket (1 Million Tasks) übersteigen die Bedürfnisse von KMU und Startups deutlich. Workato ist für Fortune-500-Budgets konzipiert – für den Mittelstand gibt es bessere Optionen.",
+      "Preis, Komplexität und Mindestpaket (1 Million Tasks) übersteigen die Bedürfnisse von KMU und Startups deutlich. Workato ist für Fortune-500-Budgets konzipiert - für den Mittelstand gibt es bessere Optionen.",
   },
 ];
 
@@ -131,7 +131,7 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Workato – die teure Enterprise-iPaaS, ehrlich bewertet
+              Workato - die teure Enterprise-iPaaS, ehrlich bewertet
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Workato ist Gartner-Leader seit 7 Jahren, hat 12.000+ Kunden und
@@ -147,7 +147,7 @@ export default function Page() {
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
               Enterprise iPaaS &bull; 1.200+ Konnektoren &bull; Agentic AI
-              &bull; 15K–180K+ €/Jahr
+              &bull; 15K-180K+ €/Jahr
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
@@ -171,14 +171,14 @@ export default function Page() {
             Workato ist eine Enterprise-iPaaS-Plattform (Integration Platform as
             a Service), gegründet 2013 in Mountain View, Kalifornien. Die
             Gründer um CEO Vijay Tella bringen tiefe Enterprise-Integration-Erfahrung
-            mit – sie entwickelten zuvor BusinessWorks bei TIBCO, und Tella war
+            mit - sie entwickelten zuvor BusinessWorks bei TIBCO, und Tella war
             als Chief Strategy Officer bei Oracle für Fusion Middleware
             verantwortlich.
           </Typo.Paragraph>
           <Typo.Paragraph>
             Die Plattform orchestriert Workflows, Daten und KI-Agenten über
             1.200+ vorgebaute Konnektoren. Im Kern steht der{" "}
-            <strong>Recipe Builder</strong> – ein visueller Low-Code-Editor, in
+            <strong>Recipe Builder</strong> - ein visueller Low-Code-Editor, in
             dem Automatisierungen als &quot;Recipes&quot; erstellt werden.
             Trigger-Action-Modell, If/Else-Logik, Schleifen, Fehlerbehandlung
             und Sub-Recipes für wiederverwendbare Bausteine.
@@ -201,7 +201,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Pro & Contra</IntroBox.PreHeadline>
           <IntroBox.Headline>Stärken und Schwächen</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Was Workato für Enterprise-Kunden attraktiv macht – und wo die
+            Was Workato für Enterprise-Kunden attraktiv macht - und wo die
             Plattform an ihre Grenzen stößt.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -251,7 +251,7 @@ export default function Page() {
             <DataTable.Body>
               <DataTable.Row>
                 <DataTable.Cell bold>Starter (1 Mio. Tasks)</DataTable.Cell>
-                <DataTable.Cell bold>15.000,- € – 50.000,- €</DataTable.Cell>
+                <DataTable.Cell bold>15.000,- € - 50.000,- €</DataTable.Cell>
                 <DataTable.Cell>
                   Basispaket, begrenzte Konnektoren und Workspaces, keine
                   erweiterten Compliance-Features
@@ -260,7 +260,7 @@ export default function Page() {
               <DataTable.Row>
                 <DataTable.Cell bold>Mid-Market</DataTable.Cell>
                 <DataTable.Cell bold className="text-primary-700">
-                  50.000,- € – 120.000,- €
+                  50.000,- € - 120.000,- €
                 </DataTable.Cell>
                 <DataTable.Cell>
                   Mehrere Umgebungen, RBAC, On-Prem Agent, höhere
@@ -270,10 +270,10 @@ export default function Page() {
               <DataTable.Row>
                 <DataTable.Cell bold>Enterprise (5 Mio.+ Tasks)</DataTable.Cell>
                 <DataTable.Cell bold className="text-primary-700">
-                  120.000,- € – 180.000,- €+
+                  120.000,- € - 180.000,- €+
                 </DataTable.Cell>
                 <DataTable.Cell>
-                  Listenpreis ca. 180.000,- €, mit Rabatten 84.000,- € – 128.000,- €.
+                  Listenpreis ca. 180.000,- €, mit Rabatten 84.000,- € - 128.000,- €.
                   Advanced Compliance, API Platform, Bulk Data Processing
                 </DataTable.Cell>
               </DataTable.Row>
@@ -293,7 +293,7 @@ export default function Page() {
                   Angebot nur über Sales
                 </li>
                 <li>
-                  &bull; <strong>Vertragslaufzeit:</strong> Typisch 1–3 Jahre
+                  &bull; <strong>Vertragslaufzeit:</strong> Typisch 1-3 Jahre
                 </li>
                 <li>
                   &bull; <strong>Mengenrabatte:</strong> Bei höheren
@@ -322,7 +322,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Künstliche Intelligenz</IntroBox.PreHeadline>
           <IntroBox.Headline>KI und Agentic AI</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Workato investiert aggressiv in KI – von Copilots im Editor bis zu
+            Workato investiert aggressiv in KI - von Copilots im Editor bis zu
             autonomen Agenten, die ganze Geschäftsprozesse übernehmen.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -376,7 +376,7 @@ export default function Page() {
                 Workato ist im Bereich Agentic AI und Enterprise MCP aktuell
                 führend im iPaaS-Markt. Die KI-Features sind produktionsreif
                 und tief in die Plattform integriert. Aber: Sie sind Teil des
-                Gesamtpakets – und damit Teil der 50.000,- bis 180.000,- €+/Jahr, die
+                Gesamtpakets - und damit Teil der 50.000,- bis 180.000,- €+/Jahr, die
                 Workato kostet. Open-Source-Alternativen bieten vergleichbare
                 KI-Integration über OpenAI, Anthropic und LangChain-Nodes.
               </Typo.Paragraph>
@@ -390,7 +390,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Zielgruppe</IntroBox.PreHeadline>
           <IntroBox.Headline>Brancheneignung</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Für welche Unternehmen Workato wirklich Sinn macht – und wo das
+            Für welche Unternehmen Workato wirklich Sinn macht - und wo das
             Budget besser investiert wäre.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -445,7 +445,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Vergleich</IntroBox.PreHeadline>
           <IntroBox.Headline>Workato im Vergleich</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Wie sich Workato gegen n8n, Make und Zapier schlägt – mit Fokus
+            Wie sich Workato gegen n8n, Make und Zapier schlägt - mit Fokus
             auf die Kriterien, die Unternehmen bei der Entscheidung wirklich
             bewegen.
           </IntroBox.Paragraph>

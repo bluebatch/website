@@ -29,10 +29,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation",
       preHeadline: "n8n Automation",
-      headline: "n8n Automation – Workflows automatisieren mit Open Source",
-      metaTitle: "n8n Automation – Workflow-Automatisierung | Bluebatch",
+      headline: "n8n Automation - Workflows automatisieren mit Open Source",
+      metaTitle: "n8n Automation - Workflow-Automatisierung | Bluebatch",
       metaDescription:
-        "n8n Automation für Ihr Unternehmen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Ihr Unternehmen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation",
         "n8n Workflow Automation",
@@ -45,8 +45,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automations",
       preHeadline: "n8n Automations",
-      headline: "n8n Automations – Geschäftsprozesse automatisieren",
-      metaTitle: "n8n Automations – Prozessautomatisierung | Bluebatch",
+      headline: "n8n Automations - Geschäftsprozesse automatisieren",
+      metaTitle: "n8n Automations - Prozessautomatisierung | Bluebatch",
       metaDescription:
         "n8n Automations für komplexe Geschäftsprozesse. 1.200+ Integrationen, Visual Workflow Builder, self-hosted.",
       keywords: [
@@ -62,9 +62,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-workflow-automation",
       preHeadline: "n8n Workflow Automation",
       headline: "n8n Workflow Automation für den Mittelstand",
-      metaTitle: "n8n Workflow Automation – Mittelstand | Bluebatch",
+      metaTitle: "n8n Workflow Automation - Mittelstand | Bluebatch",
       metaDescription:
-        "n8n Workflow Automation für den Mittelstand. Komplexe Geschäftsprozesse visuell automatisieren – auf Ihrer eigenen Infrastruktur.",
+        "n8n Workflow Automation für den Mittelstand. Komplexe Geschäftsprozesse visuell automatisieren - auf Ihrer eigenen Infrastruktur.",
       keywords: [
         "n8n Workflow Automation",
         "Workflow Automation Mittelstand",
@@ -80,7 +80,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       headline: "Workflow-Automatisierung mit n8n",
       metaTitle: "Workflow-Automatisierung mit n8n | Bluebatch",
       metaDescription:
-        "Workflow-Automatisierung mit n8n. Von der ERP-Integration bis zur Dokumentenverarbeitung – alles automatisiert.",
+        "Workflow-Automatisierung mit n8n. Von der ERP-Integration bis zur Dokumentenverarbeitung - alles automatisiert.",
       keywords: [
         "Workflow-Automatisierung n8n",
         "n8n ERP Integration",
@@ -164,13 +164,13 @@ const features = [
     icon: "🎨",
     title: "Visual Workflow Builder",
     description:
-      "Erstellen Sie komplexe Workflows per Drag & Drop. Keine Programmierkenntnisse nötig – aber möglich, wenn gewünscht.",
+      "Erstellen Sie komplexe Workflows per Drag & Drop. Keine Programmierkenntnisse nötig - aber möglich, wenn gewünscht.",
   },
   {
     icon: "🔗",
     title: "1.200+ Integrationen",
     description:
-      "Verbinden Sie Hunderte von Apps und Services – von Slack und Teams über Salesforce bis zu beliebigen REST-APIs.",
+      "Verbinden Sie Hunderte von Apps und Services - von Slack und Teams über Salesforce bis zu beliebigen REST-APIs.",
   },
   {
     icon: "🏠",
@@ -226,7 +226,7 @@ const bluebatchServices = [
     icon: "🏢",
     title: "n8n Hosting",
     description:
-      "Professionelles Hosting auf Ihrer Infrastruktur – OnPrem oder Cloud, DSGVO-konform.",
+      "Professionelles Hosting auf Ihrer Infrastruktur - OnPrem oder Cloud, DSGVO-konform.",
     href: "/n8n-hosting-deutschland",
   },
   {
@@ -240,7 +240,7 @@ const bluebatchServices = [
     icon: "💻",
     title: "Custom Nodes",
     description:
-      "Maßgeschneiderte n8n Nodes für jede API und jedes System – professionell entwickelt.",
+      "Maßgeschneiderte n8n Nodes für jede API und jedes System - professionell entwickelt.",
     href: "/n8n-node",
   },
 ];
@@ -271,7 +271,7 @@ export default async function Page({
               Was ist n8n? Eine leistungsstarke iPaaS-Plattform, die visuelle
               Prozessgestaltung mit der Flexibilität von Code verbindet. Mit
               über 1.200 Integrationen automatisieren Sie komplexe
-              Geschäftsprozesse – auf Ihrer eigenen Infrastruktur oder in der
+              Geschäftsprozesse - auf Ihrer eigenen Infrastruktur oder in der
               Cloud.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
@@ -296,7 +296,7 @@ export default async function Page({
           <IntroBox.Headline>Warum n8n als iPaaS-Lösung?</IntroBox.Headline>
           <IntroBox.Paragraph>
             n8n ist die führende Open-Source Prozessautomatisierung Software und
-            eine echte Alternative zu Zapier und Make – mit voller
+            eine echte Alternative zu Zapier und Make - mit voller
             Datenkontrolle und unbegrenzten Möglichkeiten für iPaaS Integration.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -349,7 +349,7 @@ export default async function Page({
           <IntroBox.PreHeadline>Unsere Services</IntroBox.PreHeadline>
           <IntroBox.Headline>Bluebatch + n8n</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Als n8n-Experten bieten wir Ihnen das Komplettpaket – vom Hosting
+            Als n8n-Experten bieten wir Ihnen das Komplettpaket - vom Hosting
             über Wartung bis zur individuellen Entwicklung.
           </IntroBox.Paragraph>
         </IntroBox>

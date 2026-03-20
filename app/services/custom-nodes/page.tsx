@@ -42,11 +42,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 export const metadata: Metadata = {
   title: "n8n Node Entwicklung | Custom Nodes | Bluebatch",
   description:
-    "Professionelle Custom-Node-Entwicklung für n8n. TypeScript, Node.js, SDK – maßgeschneiderte Entwicklung und Wartung Ihrer Integrationen.",
+    "Professionelle Custom-Node-Entwicklung für n8n. TypeScript, Node.js, SDK - maßgeschneiderte Entwicklung und Wartung Ihrer Integrationen.",
   openGraph: {
     title: "Custom Nodes für n8n entwickeln | Bluebatch",
     description:
-      "Kein passender Node für Ihre App? Wir entwickeln Custom Nodes für n8n – für jede Integration.",
+      "Kein passender Node für Ihre App? Wir entwickeln Custom Nodes für n8n - für jede Integration.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Custom Node Development für n8n | Bluebatch",
-    description: "Maßgeschneiderte Nodes für n8n – für jede API und jedes System.",
+    description: "Maßgeschneiderte Nodes für n8n - für jede API und jedes System.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -270,12 +270,12 @@ export default async function Page({
           <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
             Ein individueller Node verbindet Ihre Systeme in n8n genau so, wie Sie
             es brauchen. Die n8n Community bietet über 400 fertige
-            Integrationen – doch für spezialisierte Geschäftsprozesse,
+            Integrationen - doch für spezialisierte Geschäftsprozesse,
             proprietäre APIs oder Legacy-Systeme reicht das oft nicht aus.
             Genau hier entwickeln wir Ihren Custom Node als maßgeschneiderte
             Integration, die perfekt auf Ihre Anforderungen zugeschnitten ist.
             Ob Sie KI Agenten erstellen oder einen eigenen Chatbot erstellen
-            Open Source – mit Custom Nodes schaffen wir die passende Grundlage.
+            Open Source - mit Custom Nodes schaffen wir die passende Grundlage.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>
@@ -427,7 +427,7 @@ export default async function Page({
           </div>
 
           <div>
-            <Typo.H2 className="mb-6">Authentifizierung – auch für einen eigenen Chatbot erstellen Open Source</Typo.H2>
+            <Typo.H2 className="mb-6">Authentifizierung - auch für einen eigenen Chatbot erstellen Open Source</Typo.H2>
             <div className="space-y-3">
               {authMethods.map((method, index) => (
                 <div

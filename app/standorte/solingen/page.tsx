@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-solingen",
       preHeadline: "AI Workflows Solingen",
       headline: "AI Workflows & Automatisierung in Solingen",
-      metaTitle: "AI Workflows Solingen – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Solingen - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Solingen. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-solingen",
       preHeadline: "n8n Automation Solingen",
-      headline: "n8n Automation in Solingen – Workflows automatisieren",
+      headline: "n8n Automation in Solingen - Workflows automatisieren",
       metaTitle: "n8n Automation Solingen | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Solingen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Solingen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Solingen",
         "n8n Solingen",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-solingen",
       preHeadline: "n8n Solingen",
       headline: "n8n Agentur in Solingen",
-      metaTitle: "n8n Solingen – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Solingen - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Solingen. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Solingen und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-solingen",
       preHeadline: "Automation Solingen",
       headline: "Automation & Prozessoptimierung in Solingen",
-      metaTitle: "Automation Solingen – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Solingen - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Solingen. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-solingen",
       preHeadline: "IT Dienstleister Solingen",
-      headline: "IT Dienstleister in Solingen – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Solingen – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Solingen - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Solingen - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Solingen. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Solingen.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-solingen",
       preHeadline: "KI Beratung Solingen",
-      headline: "KI Beratung in Solingen – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Solingen – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Solingen - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Solingen - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Solingen. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

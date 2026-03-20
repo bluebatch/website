@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title:
     "Tray.io (Tray.ai): Funktionen, Kosten, Grenzen & Vergleich | Bluebatch",
   description:
-    "Tray.io ehrlich bewertet: Enterprise-iPaaS mit Merlin AI, 600+ Konnektoren und 600M+ € Bewertung. Stärken, Schwächen, echte Preise (60K–120K+ €/Jahr) und Alternativen.",
+    "Tray.io ehrlich bewertet: Enterprise-iPaaS mit Merlin AI, 600+ Konnektoren und 600M+ € Bewertung. Stärken, Schwächen, echte Preise (60K-120K+ €/Jahr) und Alternativen.",
   openGraph: {
     title:
       "Tray.io (Tray.ai): Funktionen, Kosten, Grenzen & Vergleich | Bluebatch",
@@ -65,13 +65,13 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Tray.io – die Enterprise-iPaaS mit KI-Ambitionen
+              Tray.io - die Enterprise-iPaaS mit KI-Ambitionen
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Tray.io (seit 2024 Tray.ai) positioniert sich als
               &quot;Universal Automation Cloud&quot; für Enterprise-Integrationen.
               Die Plattform kombiniert iPaaS, KI-Agenten und Embedded
-              Integrations – zu Enterprise-Preisen. Hier erfahren Sie
+              Integrations - zu Enterprise-Preisen. Hier erfahren Sie
               ehrlich, was Tray kann, was es wirklich kostet und wo die
               Grenzen liegen.
             </Hero2ColumnDescription>
@@ -125,7 +125,7 @@ export default function Page() {
             <Typo.Paragraph textColor="muted" size="sm">
               Die &quot;Universal Automation Cloud&quot; vereint drei Bereiche:
               Agent Development (Merlin AI), Intelligent iPaaS (Low-Code
-              Workflow Builder mit 600–700+ Konnektoren) und Enterprise Core
+              Workflow Builder mit 600-700+ Konnektoren) und Enterprise Core
               (Governance, Sicherheit, Skalierung). Unterstützt API-led,
               event-driven und hybride Integrationsmuster.
             </Typo.Paragraph>
@@ -177,7 +177,7 @@ export default function Page() {
             />
             <ProsCons.Item
               title="Embedded iPaaS für SaaS-Unternehmen"
-              description="White-Label-Integrationen unter eigenem Branding anbieten. Über 60.000 End-Kunden nutzen Tray Embedded. SDK-Wizards für geführte In-Product-Integration. 1.025% Adoption-Wachstum – ein einzigartiges Angebot im iPaaS-Markt."
+              description="White-Label-Integrationen unter eigenem Branding anbieten. Über 60.000 End-Kunden nutzen Tray Embedded. SDK-Wizards für geführte In-Product-Integration. 1.025% Adoption-Wachstum - ein einzigartiges Angebot im iPaaS-Markt."
             />
             <ProsCons.Item
               title="Multi-Region Data Residency"
@@ -195,7 +195,7 @@ export default function Page() {
           <ProsCons.Cons>
             <ProsCons.Item
               title="Völlig intransparente Preise"
-              description="Keine öffentlichen Preise auf der Website. Branchenanalysen zeigen: realistisch 5.000,- € – 10.000,- €+/Monat, also 60.000,- € – 120.000,- €+ pro Jahr. Aggressive Preiserhöhungen bei Vertragsverlängerungen werden von Nutzern berichtet. Kein kostenloser Plan, keine Testmöglichkeit ohne Sales-Kontakt."
+              description="Keine öffentlichen Preise auf der Website. Branchenanalysen zeigen: realistisch 5.000,- € - 10.000,- €+/Monat, also 60.000,- € - 120.000,- €+ pro Jahr. Aggressive Preiserhöhungen bei Vertragsverlängerungen werden von Nutzern berichtet. Kein kostenloser Plan, keine Testmöglichkeit ohne Sales-Kontakt."
             />
             <ProsCons.Item
               title="Steile Lernkurve"
@@ -211,7 +211,7 @@ export default function Page() {
             />
             <ProsCons.Item
               title="Kein Self-Hosting möglich"
-              description="Tray.io ist ausschließlich als Cloud-SaaS verfügbar. Kein Self-Hosting, keine On-Premise-Option für die Plattform selbst. Für deutsche Unternehmen mit strengen Datenschutzanforderungen kann das ein K.O.-Kriterium sein – trotz der EU-Data-Residency-Option."
+              description="Tray.io ist ausschließlich als Cloud-SaaS verfügbar. Kein Self-Hosting, keine On-Premise-Option für die Plattform selbst. Für deutsche Unternehmen mit strengen Datenschutzanforderungen kann das ein K.O.-Kriterium sein - trotz der EU-Data-Residency-Option."
             />
             <ProsCons.Item
               title="Kleine Community & Vendor Lock-in"
@@ -254,7 +254,7 @@ export default function Page() {
               <DataTable.Cell bold>Team</DataTable.Cell>
               <DataTable.Cell>500.000</DataTable.Cell>
               <DataTable.Cell>20</DataTable.Cell>
-              <DataTable.Cell>ca. 5.000,- € – 7.500,- €</DataTable.Cell>
+              <DataTable.Cell>ca. 5.000,- € - 7.500,- €</DataTable.Cell>
             </DataTable.Row>
             <DataTable.Row>
               <DataTable.Cell bold>Enterprise</DataTable.Cell>
@@ -269,7 +269,7 @@ export default function Page() {
           <SimpleCard>
             <Typo.H3 className="mb-3 text-xl">Starter-Bereich</Typo.H3>
             <Typo.Paragraph textColor="muted" size="sm">
-              Realistisch 30.000,- € – 60.000,- €/Jahr für kleinere Teams.
+              Realistisch 30.000,- € - 60.000,- €/Jahr für kleinere Teams.
               Task-basierte Abrechnung: bei Überschreitung der
               inkludierten Credits werden On-Demand-Raten berechnet. Kein
               kostenloser Plan, keine Self-Service-Anmeldung.
@@ -278,10 +278,10 @@ export default function Page() {
           <SimpleCard>
             <Typo.H3 className="mb-3 text-xl">Enterprise-Bereich</Typo.H3>
             <Typo.Paragraph textColor="muted" size="sm">
-              Typisch 60.000,- € – 120.000,- €+ pro Jahr. Custom Pricing mit
+              Typisch 60.000,- € - 120.000,- €+ pro Jahr. Custom Pricing mit
               individueller Verhandlung. Jährliche Verträge sind Standard.
               Nutzer berichten von deutlichen Preiserhöhungen bei
-              Verlängerungen – besonders bei der Embedded-Preisgestaltung.
+              Verlängerungen - besonders bei der Embedded-Preisgestaltung.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard>
@@ -314,7 +314,7 @@ export default function Page() {
           <SimpleCard>
             <Typo.H3 className="mb-3">Merlin Agent Builder 2.0</Typo.H3>
             <Typo.Paragraph textColor="muted" size="sm">
-              No-Code KI-Agenten mit Smart Data Sources – automatische
+              No-Code KI-Agenten mit Smart Data Sources - automatische
               Aufbereitung und Vektorisierung von Unternehmensdaten, damit
               Agenten immer in relevanten, aktuellen Daten verankert sind.
               Enhanced Memory mit Sliding Context Windows ermöglicht
@@ -327,7 +327,7 @@ export default function Page() {
             <Typo.H3 className="mb-3">Multi-LLM & Flexibilität</Typo.H3>
             <Typo.Paragraph textColor="muted" size="sm">
               Unterstützung für OpenAI, Anthropic Claude, Google Gemini,
-              AWS Bedrock und Azure – kein Vendor Lock-in bei KI-Modellen.
+              AWS Bedrock und Azure - kein Vendor Lock-in bei KI-Modellen.
               Vector-native Architektur für Reasoning-basierte, adaptive
               Workflows. Anwendungsfälle: Kunden-Support-Agenten,
               Internal Knowledge Assistants, automatisierte Datenanalyse,
@@ -345,7 +345,7 @@ export default function Page() {
           <IntroBox.Paragraph>
             Tray.io richtet sich primär an US-zentrische
             Enterprise-Unternehmen. Die Plattform ist stark in bestimmten
-            Nischen – aber nicht für jeden geeignet.
+            Nischen - aber nicht für jeden geeignet.
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -381,7 +381,7 @@ export default function Page() {
               oft unzureichend.
             </IndustryFit.PoorItem>
             <IndustryFit.PoorItem title="KMU und Mittelstand">
-              Bei Kosten von 60.000,- € – 120.000,- €+/Jahr ist Tray für kleine und
+              Bei Kosten von 60.000,- € - 120.000,- €+/Jahr ist Tray für kleine und
               mittlere Unternehmen schlicht zu teuer. Die Plattform bietet
               keinen kostenlosen Plan und keine Einstiegspreise für kleinere
               Teams.

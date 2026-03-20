@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tools im Überblick | Bluebatch",
     description:
-      "Automatisierungs-Tools und Großhandel-Tools – wir beraten, migrieren und automatisieren.",
+      "Automatisierungs-Tools und Großhandel-Tools - wir beraten, migrieren und automatisieren.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tools im Überblick | Bluebatch",
     description:
-      "Automatisierungs-Tools und Großhandel-Tools – Beratung und Migration.",
+      "Automatisierungs-Tools und Großhandel-Tools - Beratung und Migration.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -112,7 +112,7 @@ const grosshandelTools = [
   {
     slug: "navision",
     title: "Navision",
-    description: "Microsoft Dynamics NAV / Business Central – ERP für den Mittelstand.",
+    description: "Microsoft Dynamics NAV / Business Central - ERP für den Mittelstand.",
     image: "/tools/ms-dynamics-nav.png",
   },
   {
@@ -130,7 +130,7 @@ const grosshandelTools = [
   {
     slug: "freshworks",
     title: "Freshworks",
-    description: "Freshdesk, Freshsales, Freshservice – Helpdesk, CRM & ITSM.",
+    description: "Freshdesk, Freshsales, Freshservice - Helpdesk, CRM & ITSM.",
     image: "/tools/freshworks.png",
   },
 ];
@@ -146,7 +146,7 @@ export default function Page() {
               Unsere Tools im Überblick
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Von n8n über Make und Zapier bis Navision und Freshworks – wir
+              Von n8n über Make und Zapier bis Navision und Freshworks - wir
               kennen alle Plattformen und beraten Sie unabhängig. Migration,
               Integration und Optimierung aus einer Hand.
             </Hero2ColumnDescription>
@@ -175,7 +175,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Automatisierung</IntroBox.PreHeadline>
           <IntroBox.Headline>Automatisierungs-Tools</IntroBox.Headline>
           <IntroBox.Subline>
-            Workflow-Plattformen, iPaaS und RPA – wir beraten, migrieren und
+            Workflow-Plattformen, iPaaS und RPA - wir beraten, migrieren und
             integrieren.
           </IntroBox.Subline>
         </IntroBox>
@@ -214,7 +214,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Großhandel & Business</IntroBox.PreHeadline>
           <IntroBox.Headline>Großhandel-Tools</IntroBox.Headline>
           <IntroBox.Subline>
-            ERP, Rechnungssoftware, Helpdesk und CRM – wir integrieren Ihre
+            ERP, Rechnungssoftware, Helpdesk und CRM - wir integrieren Ihre
             bestehenden Systeme in automatisierte Workflows.
           </IntroBox.Subline>
         </IntroBox>

@@ -60,7 +60,7 @@ const staerken = [
   {
     title: "Unschlagbare M365-Integration",
     description:
-      "Kein anderes Tool kommt an die native Tiefe heran: Teams Adaptive Cards, SharePoint List-Events, Outlook-Trigger, Dynamics 365 Dataverse und Power BI Alerts – alles nativ, ohne Custom-Konnektoren.",
+      "Kein anderes Tool kommt an die native Tiefe heran: Teams Adaptive Cards, SharePoint List-Events, Outlook-Trigger, Dynamics 365 Dataverse und Power BI Alerts - alles nativ, ohne Custom-Konnektoren.",
   },
   {
     title: "Kostenloser Einstieg mit M365",
@@ -85,7 +85,7 @@ const staerken = [
   {
     title: "Process Mining",
     description:
-      "Automatische Prozessanalyse mit Bottleneck-Erkennung, Rework Detection und ROI-Dashboards – direkt in der Plattform. Konkurriert mit Celonis, ist aber mit 5.000,- €/Monat/Tenant auch entsprechend teuer.",
+      "Automatische Prozessanalyse mit Bottleneck-Erkennung, Rework Detection und ROI-Dashboards - direkt in der Plattform. Konkurriert mit Celonis, ist aber mit 5.000,- €/Monat/Tenant auch entsprechend teuer.",
   },
 ];
 
@@ -103,7 +103,7 @@ const probleme = [
   {
     title: "6.000 API-Calls/Tag Limit",
     description:
-      "M365-Nutzer erhalten nur 6.000 API-Requests pro Tag, Standard-O365-User sogar nur 2.000 pro 24 Stunden. Bei datenintensiven Prozessen wird schnell gedrosselt – Flows schlagen dann einfach fehl.",
+      "M365-Nutzer erhalten nur 6.000 API-Requests pro Tag, Standard-O365-User sogar nur 2.000 pro 24 Stunden. Bei datenintensiven Prozessen wird schnell gedrosselt - Flows schlagen dann einfach fehl.",
   },
   {
     title: "Debugging ist eine Qual",
@@ -118,7 +118,7 @@ const probleme = [
   {
     title: "Lizenz-Dschungel",
     description:
-      "Premium, Process, Hosted RPA, AI Builder, Process Mining – jedes Feature hat seinen eigenen Preis. Die Gesamtkosten sind schwer vorherzusagen und steigen bei Skalierung überproportional.",
+      "Premium, Process, Hosted RPA, AI Builder, Process Mining - jedes Feature hat seinen eigenen Preis. Die Gesamtkosten sind schwer vorherzusagen und steigen bei Skalierung überproportional.",
   },
 ];
 
@@ -131,7 +131,7 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Microsoft Power Automate – ehrlich bewertet
+              Microsoft Power Automate - ehrlich bewertet
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Power Automate ist Microsofts Automatisierungsplattform mit Cloud
@@ -171,7 +171,7 @@ export default function Page() {
         <Typo.Paragraph>
           Microsoft Power Automate (früher Microsoft Flow) ist eine
           cloudbasierte Workflow-Automatisierungsplattform und Teil der
-          Microsoft Power Platform – neben Power Apps, Power BI, Power Pages und
+          Microsoft Power Platform - neben Power Apps, Power BI, Power Pages und
           Copilot Studio. Alle teilen sich Microsoft Dataverse als gemeinsame
           Datenschicht.
         </Typo.Paragraph>
@@ -188,7 +188,7 @@ export default function Page() {
           mit 12.000+ verfügbaren Aktionen, Gartner-Leader im Magic Quadrant für
           Enterprise Low-Code seit 7 Jahren in Folge, und Copilot-KI in
           praktisch jeder Funktion. Power Automate ist de facto die
-          Standard-Automatisierung für Microsoft-Shops – und genau da liegt
+          Standard-Automatisierung für Microsoft-Shops - und genau da liegt
           sowohl die größte Stärke als auch die größte Einschränkung.
         </Typo.Paragraph>
       </ContentWrapper>
@@ -201,7 +201,7 @@ export default function Page() {
             Stärken und Grenzen von Power Automate
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            Wo Microsoft Power Automate seine Stärken ausspielt – und wo die
+            Wo Microsoft Power Automate seine Stärken ausspielt - und wo die
             Grenzen liegen. Konkret und ehrlich.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -234,7 +234,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Preise</IntroBox.PreHeadline>
           <IntroBox.Headline>Kosten und Betrieb</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Die echten Preise von Power Automate – inklusive der Add-ons, die
+            Die echten Preise von Power Automate - inklusive der Add-ons, die
             Microsofts Marketing gerne verschweigt.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -291,7 +291,7 @@ export default function Page() {
               <DataTable.Cell bold>Process Mining</DataTable.Cell>
               <DataTable.Cell>5.000,- €/Tenant/Monat</DataTable.Cell>
               <DataTable.Cell>
-                Prozessanalyse und -optimierung – konkurriert mit Celonis
+                Prozessanalyse und -optimierung - konkurriert mit Celonis
               </DataTable.Cell>
             </DataTable.Row>
           </DataTable.Body>
@@ -302,15 +302,15 @@ export default function Page() {
           <ul className="space-y-2 text-sm text-gray-600">
             <li>
               &bull; Premium-Konnektoren (Salesforce, SAP, Oracle) erfordern die
-              15,- €/User/Monat-Lizenz – bei 50 Usern sind das 9.000,- €/Jahr nur für
+              15,- €/User/Monat-Lizenz - bei 50 Usern sind das 9.000,- €/Jahr nur für
               den Zugang
             </li>
             <li>
               &bull; SQL-Datenbank-Konnektoren wurden nachträglich von Standard
-              zu Premium umklassifiziert – plötzlich Mehrkosten
+              zu Premium umklassifiziert - plötzlich Mehrkosten
             </li>
             <li>
-              &bull; AI Builder mit 5 Units kostet 2.500,- €/Monat (30.000,- €/Jahr) –
+              &bull; AI Builder mit 5 Units kostet 2.500,- €/Monat (30.000,- €/Jahr) -
               vergleichbare KI-Integration über OpenAI API kostet einen
               Bruchteil
             </li>
@@ -373,7 +373,7 @@ export default function Page() {
             </Typo.H3>
             <Typo.Paragraph textColor="muted" size="sm">
               Power Automate-Flows lassen sich als Aktionen in Copilot Studio
-              einbinden – für KI-Agenten, die eigenständig Geschäftsprozesse
+              einbinden - für KI-Agenten, die eigenständig Geschäftsprozesse
               ausführen. Self-Healing UI Flows reparieren
               Desktop-Automatisierungen automatisch bei UI-Änderungen. Die
               Vision ist überzeugend, die Umsetzung noch im Aufbau.
@@ -388,7 +388,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Zielgruppe</IntroBox.PreHeadline>
           <IntroBox.Headline>Brancheneignung</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Für wen Power Automate die richtige Wahl ist – und für wen nicht.
+            Für wen Power Automate die richtige Wahl ist - und für wen nicht.
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -438,7 +438,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Vergleich</IntroBox.PreHeadline>
           <IntroBox.Headline>Power Automate im Vergleich</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Wie sich Power Automate gegen n8n, Make und Zapier schlägt – bei den
+            Wie sich Power Automate gegen n8n, Make und Zapier schlägt - bei den
             Kriterien, die in der Praxis zählen.
           </IntroBox.Paragraph>
         </IntroBox>

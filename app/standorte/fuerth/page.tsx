@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-fuerth",
       preHeadline: "AI Workflows Fürth",
       headline: "AI Workflows & Automatisierung in Fürth",
-      metaTitle: "AI Workflows Fürth – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Fürth - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Fürth. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-fuerth",
       preHeadline: "n8n Automation Fürth",
-      headline: "n8n Automation in Fürth – Workflows automatisieren",
+      headline: "n8n Automation in Fürth - Workflows automatisieren",
       metaTitle: "n8n Automation Fürth | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Fürth. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Fürth. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Fürth",
         "n8n Fürth",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-fuerth",
       preHeadline: "n8n Fürth",
       headline: "n8n Agentur in Fürth",
-      metaTitle: "n8n Fürth – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Fürth - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Fürth. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Fürth und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-fuerth",
       preHeadline: "Automation Fürth",
       headline: "Automation & Prozessoptimierung in Fürth",
-      metaTitle: "Automation Fürth – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Fürth - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Fürth. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-fuerth",
       preHeadline: "IT Dienstleister Fürth",
-      headline: "IT Dienstleister in Fürth – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Fürth – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Fürth - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Fürth - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Fürth. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Fürth.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-fuerth",
       preHeadline: "KI Beratung Fürth",
-      headline: "KI Beratung in Fürth – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Fürth – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Fürth - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Fürth - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Fürth. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

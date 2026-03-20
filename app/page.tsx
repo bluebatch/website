@@ -28,7 +28,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
   rewrites: [
     {
       source: "/n8n-automatisierung",
-      metaTitle: "n8n Automatisierung – Enterprise AI-Automation | Bluebatch",
+      metaTitle: "n8n Automatisierung - Enterprise AI-Automation | Bluebatch",
       metaDescription:
         "n8n Automatisierung für Ihr Unternehmen. KI Agentur für Workflow Engineering mit Enterprise-Fokus.",
       keywords: ["n8n Automatisierung", "n8n Workflow", "Bluebatch"],
@@ -36,7 +36,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-agentur",
       metaTitle:
-        "KI Agentur – n8n Automatisierung & Workflow Engineering | Bluebatch",
+        "KI Agentur - n8n Automatisierung & Workflow Engineering | Bluebatch",
       metaDescription:
         "Ihre KI Agentur für n8n Automatisierung. Enterprise-Workflows, Custom Nodes und AI-Agenten aus einer Hand.",
       keywords: ["KI Agentur", "KI Agentur Deutschland", "Bluebatch"],
@@ -44,7 +44,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ai-agentur",
       metaTitle:
-        "AI Agentur – n8n Automatisierung & Workflow Engineering | Bluebatch",
+        "AI Agentur - n8n Automatisierung & Workflow Engineering | Bluebatch",
       metaDescription:
         "Ihre AI Agentur für n8n Automatisierung. Enterprise-Workflows, Custom Nodes und AI-Agenten aus einer Hand.",
       keywords: ["AI Agentur", "AI Agentur Deutschland", "Bluebatch"],
@@ -53,9 +53,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Bluebatch – Automatisierung mit n8n | KI Agentur für Workflows",
+  title: "Bluebatch - Automatisierung mit n8n | KI Agentur für Workflows",
   description:
-    "Workflow-Automatisierung mit n8n vom Experten: Bluebatch ist Ihre KI Agentur für intelligente Prozessautomatisierung auf Enterprise-Niveau – live in nur 5 Tagen.",
+    "Workflow-Automatisierung mit n8n vom Experten: Bluebatch ist Ihre KI Agentur für intelligente Prozessautomatisierung auf Enterprise-Niveau - live in nur 5 Tagen.",
   keywords: [
     "Automatisierung mit n8n",
     "KI Agentur",
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Bluebatch" }],
   openGraph: {
-    title: "Bluebatch – Automatisierung mit n8n | KI Agentur",
+    title: "Bluebatch - Automatisierung mit n8n | KI Agentur",
     description:
-      "Workflow-Automatisierung mit n8n vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount – live in nur 5 Tagen.",
+      "Workflow-Automatisierung mit n8n vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount - live in nur 5 Tagen.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -86,15 +86,15 @@ export const metadata: Metadata = {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Bluebatch – Automatisierung mit n8n | KI Agentur",
+        alt: "Bluebatch - Automatisierung mit n8n | KI Agentur",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bluebatch – Automatisierung mit n8n | KI Agentur",
+    title: "Bluebatch - Automatisierung mit n8n | KI Agentur",
     description:
-      "Workflow-Automatisierung mit n8n vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount – live in nur 5 Tagen.",
+      "Workflow-Automatisierung mit n8n vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount - live in nur 5 Tagen.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   robots: {
@@ -130,7 +130,7 @@ export default function Home() {
           <BackgroundHero.Description>
             n8n Automatisierung vom Experten: Bluebatch automatisiert Ihre
             manuellen Backoffice-Prozesse mit intelligenten AI-Workflows auf
-            Enterprise-Niveau – live in nur 5 Tagen.
+            Enterprise-Niveau - live in nur 5 Tagen.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
@@ -173,7 +173,7 @@ export default function Home() {
               <IntroBox.Subline>
                 Bluebatch wurde gegründet, um diese Fehlallokation von
                 Humankapital zu beenden. Als KI Automatisierung Agentur bauen
-                wir keine klassische Software – durch Automatisierung mit n8n
+                wir keine klassische Software - durch Automatisierung mit n8n
                 erschaffen wir digitale Mitarbeiter. Unsere AI-Workflows
                 übernehmen die kognitive Routinearbeit, damit Ihre Teams wieder
                 das tun können, wofür sie eingestellt wurden.
@@ -251,7 +251,7 @@ export default function Home() {
             <Typo.Paragraph>
               Wir kennen den Unterschied zwischen einem Prototyp und einer
               geschäftskritischen Anwendung. Unsere Workflows sind darauf
-              ausgelegt, 24/7 reibungslos zu funktionieren – von der
+              ausgelegt, 24/7 reibungslos zu funktionieren - von der
               KI-Implementierung bis zum laufenden Betrieb.
             </Typo.Paragraph>
           </SimpleCard>
@@ -445,7 +445,7 @@ export default function Home() {
             />
             <CardShowcase.Content>
               <CardShowcase.Title>
-                Bewährte Patterns – Individuelle Umsetzung
+                Bewährte Patterns - Individuelle Umsetzung
               </CardShowcase.Title>
               <CardShowcase.Description>
                 Wir nutzen erprobte Blueprints für Belegverarbeitung und
@@ -551,7 +551,7 @@ export default function Home() {
           </IntroBox.Subline>
           <IntroBox.Paragraph>
             Bluebatch ist die Brücke zwischen Ihrer heutigen manuellen Arbeit
-            und einer skalierbaren Zukunft – powered by Workflow-Automatisierung
+            und einer skalierbaren Zukunft - powered by Workflow-Automatisierung
             über n8n.
           </IntroBox.Paragraph>
           <div>

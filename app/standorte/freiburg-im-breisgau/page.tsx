@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-freiburg-im-breisgau",
       preHeadline: "AI Workflows Freiburg im Breisgau",
       headline: "AI Workflows & Automatisierung in Freiburg im Breisgau",
-      metaTitle: "AI Workflows Freiburg im Breisgau – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Freiburg im Breisgau - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Freiburg im Breisgau. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-freiburg-im-breisgau",
       preHeadline: "n8n Automation Freiburg im Breisgau",
-      headline: "n8n Automation in Freiburg im Breisgau – Workflows automatisieren",
+      headline: "n8n Automation in Freiburg im Breisgau - Workflows automatisieren",
       metaTitle: "n8n Automation Freiburg im Breisgau | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Freiburg im Breisgau. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Freiburg im Breisgau. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Freiburg im Breisgau",
         "n8n Freiburg im Breisgau",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-freiburg-im-breisgau",
       preHeadline: "n8n Freiburg im Breisgau",
       headline: "n8n Agentur in Freiburg im Breisgau",
-      metaTitle: "n8n Freiburg im Breisgau – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Freiburg im Breisgau - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Freiburg im Breisgau. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Freiburg im Breisgau und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-freiburg-im-breisgau",
       preHeadline: "Automation Freiburg im Breisgau",
       headline: "Automation & Prozessoptimierung in Freiburg im Breisgau",
-      metaTitle: "Automation Freiburg im Breisgau – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Freiburg im Breisgau - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Freiburg im Breisgau. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-freiburg-im-breisgau",
       preHeadline: "IT Dienstleister Freiburg im Breisgau",
-      headline: "IT Dienstleister in Freiburg im Breisgau – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Freiburg im Breisgau – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Freiburg im Breisgau - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Freiburg im Breisgau - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Freiburg im Breisgau. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Freiburg im Breisgau.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-freiburg-im-breisgau",
       preHeadline: "KI Beratung Freiburg im Breisgau",
-      headline: "KI Beratung in Freiburg im Breisgau – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Freiburg im Breisgau – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Freiburg im Breisgau - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Freiburg im Breisgau - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Freiburg im Breisgau. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

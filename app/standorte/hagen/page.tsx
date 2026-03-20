@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-hagen",
       preHeadline: "AI Workflows Hagen",
       headline: "AI Workflows & Automatisierung in Hagen",
-      metaTitle: "AI Workflows Hagen – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Hagen - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Hagen. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-hagen",
       preHeadline: "n8n Automation Hagen",
-      headline: "n8n Automation in Hagen – Workflows automatisieren",
+      headline: "n8n Automation in Hagen - Workflows automatisieren",
       metaTitle: "n8n Automation Hagen | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Hagen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Hagen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Hagen",
         "n8n Hagen",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-hagen",
       preHeadline: "n8n Hagen",
       headline: "n8n Agentur in Hagen",
-      metaTitle: "n8n Hagen – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Hagen - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Hagen. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Hagen und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-hagen",
       preHeadline: "Automation Hagen",
       headline: "Automation & Prozessoptimierung in Hagen",
-      metaTitle: "Automation Hagen – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Hagen - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Hagen. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-hagen",
       preHeadline: "IT Dienstleister Hagen",
-      headline: "IT Dienstleister in Hagen – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Hagen – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Hagen - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Hagen - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Hagen. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Hagen.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-hagen",
       preHeadline: "KI Beratung Hagen",
-      headline: "KI Beratung in Hagen – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Hagen – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Hagen - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Hagen - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Hagen. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-krefeld",
       preHeadline: "AI Workflows Krefeld",
       headline: "AI Workflows & Automatisierung in Krefeld",
-      metaTitle: "AI Workflows Krefeld – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Krefeld - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Krefeld. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-krefeld",
       preHeadline: "n8n Automation Krefeld",
-      headline: "n8n Automation in Krefeld – Workflows automatisieren",
+      headline: "n8n Automation in Krefeld - Workflows automatisieren",
       metaTitle: "n8n Automation Krefeld | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Krefeld. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Krefeld. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Krefeld",
         "n8n Krefeld",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-krefeld",
       preHeadline: "n8n Krefeld",
       headline: "n8n Agentur in Krefeld",
-      metaTitle: "n8n Krefeld – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Krefeld - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Krefeld. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Krefeld und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-krefeld",
       preHeadline: "Automation Krefeld",
       headline: "Automation & Prozessoptimierung in Krefeld",
-      metaTitle: "Automation Krefeld – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Krefeld - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Krefeld. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-krefeld",
       preHeadline: "IT Dienstleister Krefeld",
-      headline: "IT Dienstleister in Krefeld – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Krefeld – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Krefeld - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Krefeld - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Krefeld. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Krefeld.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-krefeld",
       preHeadline: "KI Beratung Krefeld",
-      headline: "KI Beratung in Krefeld – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Krefeld – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Krefeld - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Krefeld - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Krefeld. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

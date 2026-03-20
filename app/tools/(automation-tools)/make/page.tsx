@@ -67,13 +67,13 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tool-Analyse</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Make – die visuelle Automatisierungsplattform, ehrlich betrachtet
+              Make - die visuelle Automatisierungsplattform, ehrlich betrachtet
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Make (ehemals Integromat) gehört zu den meistgenutzten
               No-Code-Automatisierungsplattformen weltweit. Aber was kann das
               Tool wirklich, wo liegen die Grenzen, und wann lohnt sich ein
-              Blick auf Alternativen? Eine fundierte Einordnung – ohne
+              Blick auf Alternativen? Eine fundierte Einordnung - ohne
               Marketing-Floskeln.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
@@ -82,7 +82,7 @@ export default function Page() {
               </ContactButton>
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
-              Seit 2013 am Markt – 2+ Mio. Nutzer – 3.000+ Integrationen
+              Seit 2013 am Markt - 2+ Mio. Nutzer - 3.000+ Integrationen
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
@@ -98,11 +98,11 @@ export default function Page() {
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>Überblick</IntroBox.PreHeadline>
-          <IntroBox.Headline>Was ist Make – und woher kommt es?</IntroBox.Headline>
+          <IntroBox.Headline>Was ist Make - und woher kommt es?</IntroBox.Headline>
         </IntroBox>
         <Typo.Paragraph>
           Make wurde 2013 in Prag unter dem Namen &quot;Integromat&quot;
-          gegründet – von sechs tschechischen Entwicklern rund um CTO Patrik
+          gegründet - von sechs tschechischen Entwicklern rund um CTO Patrik
           Simek. Die Idee: eine Plattform, auf der Nutzer ohne
           Programmierkenntnisse komplexe Automatisierungen zwischen
           verschiedenen Web-Diensten aufbauen können. Nicht als einfache
@@ -111,7 +111,7 @@ export default function Page() {
         </Typo.Paragraph>
         <Typo.Paragraph>
           Im Oktober 2020 wurde Integromat für über 100 Millionen US-Dollar von
-          Celonis übernommen – dem Münchner Process-Intelligence-Riesen mit
+          Celonis übernommen - dem Münchner Process-Intelligence-Riesen mit
           einer Bewertung von rund 7,7 Milliarden US-Dollar. Im Februar 2022
           folgte der offizielle Rebrand zu &quot;Make&quot;. Seitdem wird die
           Plattform als eigenständige Marke unter dem Celonis-Dach betrieben.
@@ -123,7 +123,7 @@ export default function Page() {
         <Typo.Paragraph>
           Make nennt seine Automatisierungen &quot;Szenarien&quot;. Im visuellen
           Editor verbinden Nutzer Module per Drag-and-Drop zu einem
-          Flussdiagramm. Jedes Modul repräsentiert eine Aktion – etwa &quot;Neue
+          Flussdiagramm. Jedes Modul repräsentiert eine Aktion - etwa &quot;Neue
           Zeile in Google Sheets erstellen&quot; oder &quot;E-Mail über Gmail
           senden&quot;. Zwischen den Modulen fließen Daten, die sich an jedem
           Punkt transformieren, filtern oder verzweigen lassen.
@@ -152,7 +152,7 @@ export default function Page() {
           <IntroBox.Headline>Stärken und Grenzen im Überblick</IntroBox.Headline>
           <IntroBox.Paragraph>
             Nicht alle Stärken sind gleich wichtig. Was Make in der Praxis
-            tatsächlich stark macht – und wo es an Grenzen stößt.
+            tatsächlich stark macht - und wo es an Grenzen stößt.
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -164,7 +164,7 @@ export default function Page() {
             />
             <ProsCons.Item
               title="Datentransformation ohne Code"
-              description="Router, Filter, Iteratoren, Aggregatoren, Text-Parser, Math-Funktionen, JSON- und XML-Verarbeitung – Make bietet ein reichhaltiges Werkzeugset für Datentransformationen, das weit über das hinausgeht, was Zapier oder Power Automate ohne Code ermöglichen. Wer Daten zwischen Systemen nicht nur verschieben, sondern wirklich umbauen muss, findet hier starke Bordmittel."
+              description="Router, Filter, Iteratoren, Aggregatoren, Text-Parser, Math-Funktionen, JSON- und XML-Verarbeitung - Make bietet ein reichhaltiges Werkzeugset für Datentransformationen, das weit über das hinausgeht, was Zapier oder Power Automate ohne Code ermöglichen. Wer Daten zwischen Systemen nicht nur verschieben, sondern wirklich umbauen muss, findet hier starke Bordmittel."
             />
             <ProsCons.Item
               title="Breites Integrations-Ökosystem"
@@ -180,17 +180,17 @@ export default function Page() {
             />
             <ProsCons.Item
               title="Robuste Fehlerbehandlung"
-              description="Error Handler mit Retry, Rollback, Break- und Commit-Direktiven geben Kontrolle darüber, wie ein Szenario auf Fehler reagiert. Die Break-Direktive pausiert einen Workflow und markiert ihn zur manuellen Prüfung – ein Feature, das in vielen Konkurrenzprodukten fehlt oder deutlich umständlicher umzusetzen ist."
+              description="Error Handler mit Retry, Rollback, Break- und Commit-Direktiven geben Kontrolle darüber, wie ein Szenario auf Fehler reagiert. Die Break-Direktive pausiert einen Workflow und markiert ihn zur manuellen Prüfung - ein Feature, das in vielen Konkurrenzprodukten fehlt oder deutlich umständlicher umzusetzen ist."
             />
           </ProsCons.Pros>
           <ProsCons.Cons>
             <ProsCons.Item
               title="Credits-Pricing wird bei Volumen teuer"
-              description="Seit August 2025 rechnet Make in Credits statt Operations ab. Jede Aktion – auch ein simpler Daten-Check, der nichts findet – verbraucht mindestens einen Credit. Ein Szenario mit 8 Modulen verbraucht 8 Credits pro Durchlauf. Bei 1.000 Durchläufen im Monat sind das 8.000 Credits – fast das gesamte Core-Plan-Budget von 10.000 Credits. AI-Module verbrauchen variabel noch mehr. Überschreitungen kosten ca. 10,- € pro 10.000 Credits."
+              description="Seit August 2025 rechnet Make in Credits statt Operations ab. Jede Aktion - auch ein simpler Daten-Check, der nichts findet - verbraucht mindestens einen Credit. Ein Szenario mit 8 Modulen verbraucht 8 Credits pro Durchlauf. Bei 1.000 Durchläufen im Monat sind das 8.000 Credits - fast das gesamte Core-Plan-Budget von 10.000 Credits. AI-Module verbrauchen variabel noch mehr. Überschreitungen kosten ca. 10,- € pro 10.000 Credits."
             />
             <ProsCons.Item
               title="Kein Self-Hosting möglich"
-              description="Make ist ausschließlich als Cloud-Dienst verfügbar. Es gibt keine Option, die Plattform auf eigener Infrastruktur zu betreiben. Für Unternehmen mit strengen Datenschutzanforderungen – etwa im Gesundheitswesen, bei Finanzdienstleistern oder im öffentlichen Sektor – ist das ein Ausschlusskriterium. Daten werden auf Make-Servern verarbeitet, auch wenn EU-Rechenzentren zur Verfügung stehen."
+              description="Make ist ausschließlich als Cloud-Dienst verfügbar. Es gibt keine Option, die Plattform auf eigener Infrastruktur zu betreiben. Für Unternehmen mit strengen Datenschutzanforderungen - etwa im Gesundheitswesen, bei Finanzdienstleistern oder im öffentlichen Sektor - ist das ein Ausschlusskriterium. Daten werden auf Make-Servern verarbeitet, auch wenn EU-Rechenzentren zur Verfügung stehen."
             />
             <ProsCons.Item
               title="Vendor Lock-In und Abhängigkeit"
@@ -219,7 +219,7 @@ export default function Page() {
           <IntroBox.Headline>Was Make wirklich kostet</IntroBox.Headline>
           <IntroBox.Paragraph>
             Seit August 2025 rechnet Make in Credits statt Operations. Die
-            Preistabelle sieht übersichtlich aus – aber die tatsächlichen Kosten
+            Preistabelle sieht übersichtlich aus - aber die tatsächlichen Kosten
             hängen stark davon ab, wie Szenarien gebaut sind.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -287,11 +287,11 @@ export default function Page() {
             </NumberedList.Item>
             <NumberedList.Item title="Modulanzahl multipliziert:">
               Ein Szenario mit 10 Modulen, das 1.000-mal im Monat läuft,
-              verbraucht 10.000 Credits – das gesamte Core-Plan-Budget für ein
+              verbraucht 10.000 Credits - das gesamte Core-Plan-Budget für ein
               einziges Szenario.
             </NumberedList.Item>
             <NumberedList.Item title="AI-Module kosten extra:">
-              Credits für AI-Aktionen werden variabel berechnet – basierend auf
+              Credits für AI-Aktionen werden variabel berechnet - basierend auf
               Token-Verbrauch, Dateigröße oder Seitenanzahl. Ein AI-Schritt kann
               5 bis 50+ Credits kosten.
             </NumberedList.Item>
@@ -307,9 +307,9 @@ export default function Page() {
             </Typo.H3>
             <Typo.Paragraph textColor="muted" size="sm">
               Bei n8n Self-Hosted zählt eine Workflow-Ausführung als eine
-              Execution – unabhängig davon, wie viele Nodes (Module) der
+              Execution - unabhängig davon, wie viele Nodes (Module) der
               Workflow enthält. Dasselbe Szenario mit 10 Schritten und 1.000
-              Durchläufen kostet bei n8n Self-Hosted exakt 1.000 Executions –
+              Durchläufen kostet bei n8n Self-Hosted exakt 1.000 Executions -
               bei Make 10.000 Credits. Zudem fallen bei Self-Hosting nur
               Infrastrukturkosten an (typischerweise 10,- bis 50,- €/Monat für
               einen VPS), ohne Volumen-Limits.
@@ -347,14 +347,14 @@ export default function Page() {
           </SimpleCard>
           <SimpleCard align="left">
             <Typo.H3 className="mb-2 text-base">
-              Maia – der konversationelle Builder
+              Maia - der konversationelle Builder
             </Typo.H3>
             <Typo.Paragraph textColor="muted" size="sm">
               Make entwickelt mit &quot;Maia&quot; einen KI-Assistenten, der
               Automatisierungen aus natürlichsprachlichen Beschreibungen
               generieren soll. Stand Anfang 2026 ist das Feature noch in der
               Entwicklung. Die Vision: &quot;Erstelle ein Szenario, das neue
-              Shopify-Bestellungen in Slack postet&quot; – und Maia baut das
+              Shopify-Bestellungen in Slack postet&quot; - und Maia baut das
               Szenario. In der Praxis funktioniert das bisher nur für einfache
               Abläufe zuverlässig.
             </Typo.Paragraph>
@@ -382,7 +382,7 @@ export default function Page() {
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Zielgruppe</IntroBox.PreHeadline>
-          <IntroBox.Headline>Für welche Branchen passt Make – und für welche nicht?</IntroBox.Headline>
+          <IntroBox.Headline>Für welche Branchen passt Make - und für welche nicht?</IntroBox.Headline>
           <IntroBox.Paragraph>
             Make ist kein Universalwerkzeug. In manchen Branchen entfaltet es
             seine Stärken voll, in anderen stößt es an harte Grenzen.
@@ -404,9 +404,9 @@ export default function Page() {
               Bestellverarbeitungszeit mit Make von 15 auf 1 Minute.
             </IndustryFit.GoodItem>
             <IndustryFit.GoodItem title="Freelancer und Solopreneure">
-              Wer als Einzelperson repetitive Aufgaben automatisieren will –
+              Wer als Einzelperson repetitive Aufgaben automatisieren will -
               etwa Rechnungsstellung, Kalender-Synchronisation oder
-              E-Mail-Workflows – findet in Makes Free-Plan einen guten Einstieg
+              E-Mail-Workflows - findet in Makes Free-Plan einen guten Einstieg
               ohne Kosten.
             </IndustryFit.GoodItem>
             <IndustryFit.GoodItem title="Operations- und RevOps-Teams">
@@ -431,7 +431,7 @@ export default function Page() {
             <IndustryFit.PoorItem title="Unternehmen mit hohem Automatisierungsvolumen">
               Wer zehntausende Workflow-Durchläufe pro Monat mit komplexen
               Szenarien hat, zahlt bei Make schnell vierstellige Monatsbeträge.
-              Die Credit-basierte Abrechnung skaliert überproportional – während
+              Die Credit-basierte Abrechnung skaliert überproportional - während
               Self-Hosted-Alternativen nur Infrastrukturkosten verursachen.
             </IndustryFit.PoorItem>
             <IndustryFit.PoorItem title="Entwickler-Teams mit Custom-Anforderungen">

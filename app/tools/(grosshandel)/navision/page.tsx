@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Microsoft Dynamics NAV (Navision) Automatisierung | Bluebatch",
     description:
-      "Navision-Prozesse automatisieren mit n8n – Aufträge, Rechnungen, Lagerbestände und mehr.",
+      "Navision-Prozesse automatisieren mit n8n - Aufträge, Rechnungen, Lagerbestände und mehr.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -57,7 +57,7 @@ const modules = [
     icon: "💰",
     title: "Finanzmanagement",
     description:
-      "Finanzbuchhaltung, Anlagenverwaltung, Cashflow-Prognosen und Budgetierung – das Herzstück jedes ERP-Systems.",
+      "Finanzbuchhaltung, Anlagenverwaltung, Cashflow-Prognosen und Budgetierung - das Herzstück jedes ERP-Systems.",
   },
   {
     icon: "📦",
@@ -157,7 +157,7 @@ export default function Page() {
           <IntroBox.Headline>Navision Module</IntroBox.Headline>
           <IntroBox.Paragraph>
             Microsoft Dynamics NAV bietet umfassende ERP-Funktionalität für den
-            Mittelstand – und jedes Modul lässt sich über n8n automatisieren.
+            Mittelstand - und jedes Modul lässt sich über n8n automatisieren.
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -207,7 +207,7 @@ export default function Page() {
           <TimelineAsStepsStep value={3}>
             <Typo.H3 className="mb-2">Workflow-Automatisierung</Typo.H3>
             <Typo.Paragraph textColor="muted">
-              Erstellung der automatisierten Workflows in n8n – von einfachen
+              Erstellung der automatisierten Workflows in n8n - von einfachen
               Datensynchronisationen bis zu komplexen Multi-System-Prozessen.
             </Typo.Paragraph>
           </TimelineAsStepsStep>

@@ -28,7 +28,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/automatische-rechnungspruefung",
       metaTitle:
-        "Automatische Rechnungsprüfung – 3-Wege-Matching | Bluebatch",
+        "Automatische Rechnungsprüfung - 3-Wege-Matching | Bluebatch",
       metaDescription:
         "Automatische Rechnungsprüfung mit 3-Wege-Matching für den Großhandel. OCR Rechnungserfassung, Workflow Rechnungseingang und intelligente Abgleichlogik.",
       keywords: [
@@ -42,11 +42,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Automatische Rechnungsprüfung: 3-Wege-Matching – Großhandel | Bluebatch",
+  title: "Automatische Rechnungsprüfung: 3-Wege-Matching - Großhandel | Bluebatch",
   description:
     "Automatische Rechnungsprüfung mit 3-Wege-Matching: Wie Bluebatch Großhändlern hilft, Rechnungen automatisch mit Bestellungen und Wareneingängen abzugleichen.",
   openGraph: {
-    title: "Automatische Rechnungsprüfung: 3-Wege-Matching – Großhandel | Bluebatch",
+    title: "Automatische Rechnungsprüfung: 3-Wege-Matching - Großhandel | Bluebatch",
     description:
       "Automatische Rechnungsprüfung: Abgleich von Bestellung, Wareneingang und Rechnung. Nie wieder manuelle Prüfung.",
     type: "website",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Automatische Rechnungsprüfung: 3-Wege-Matching – Großhandel | Bluebatch",
+    title: "Automatische Rechnungsprüfung: 3-Wege-Matching - Großhandel | Bluebatch",
     description:
       "Automatische Rechnungsprüfung mit 3-Wege-Matching. Nie wieder manuelle Prüfung.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -144,12 +144,12 @@ export default async function Page({
         <IntroBox>
           <IntroBox.PreHeadline>Das Problem</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Warum manuelle Rechnungsprüfung nicht skaliert – ohne Workflow
+            Warum manuelle Rechnungsprüfung nicht skaliert - ohne Workflow
             Rechnungseingang
           </IntroBox.Headline>
           <IntroBox.Subline>
             Finanzteams verbringen Stunden damit, Zeilen zwischen drei
-            Dokumenten zu vergleichen – fehleranfällig und zeitraubend. Ohne
+            Dokumenten zu vergleichen - fehleranfällig und zeitraubend. Ohne
             automatische Rechnungsprüfung bleibt der Prozess ein Engpass.
           </IntroBox.Subline>
         </IntroBox>
@@ -229,7 +229,7 @@ export default async function Page({
               </CardShowcase.Title>
               <CardShowcase.Description>
                 Rechnungen treffen per E-Mail oder Scan ein. Unsere OCR
-                Rechnungserfassung mit GPT-4 extrahiert alle relevanten Daten –
+                Rechnungserfassung mit GPT-4 extrahiert alle relevanten Daten -
                 unabhängig vom Dokumentformat. Die automatische Rechnungsprüfung
                 beginnt bereits bei der Erfassung.
               </CardShowcase.Description>
@@ -278,7 +278,7 @@ export default async function Page({
                 Genehmigte Rechnungen fließen durch den Workflow
                 Eingangsrechnungen automatisch ins ERP zur Buchung.
                 Skontofristen werden eingehalten, Duplikate erkannt und
-                blockiert – automatische Rechnungsprüfung von Anfang bis Ende.
+                blockiert - automatische Rechnungsprüfung von Anfang bis Ende.
               </CardShowcase.Description>
             </CardShowcase.Content>
           </CardShowcase.Item>
@@ -343,7 +343,7 @@ export default async function Page({
             {
               question: "Wie genau ist das automatische Matching?",
               answer:
-                "Das System erreicht 98%+ Genauigkeit bei Standard-Rechnungen. Es ist besonders stark bei exakten Vergleichen von SKUs, Mengen und Preisen. Für komplexe Vertragsinterpretationen bleibt menschliche Überprüfung wertvoll – daher kombinieren wir 75-85% automatische Verarbeitung mit Human-in-the-Loop für Ausnahmen.",
+                "Das System erreicht 98%+ Genauigkeit bei Standard-Rechnungen. Es ist besonders stark bei exakten Vergleichen von SKUs, Mengen und Preisen. Für komplexe Vertragsinterpretationen bleibt menschliche Überprüfung wertvoll - daher kombinieren wir 75-85% automatische Verarbeitung mit Human-in-the-Loop für Ausnahmen.",
             },
             {
               question: "Was passiert bei nicht-matchbaren Rechnungen?",

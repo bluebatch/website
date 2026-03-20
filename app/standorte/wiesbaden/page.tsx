@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-wiesbaden",
       preHeadline: "AI Workflows Wiesbaden",
       headline: "AI Workflows & Automatisierung in Wiesbaden",
-      metaTitle: "AI Workflows Wiesbaden – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Wiesbaden - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Wiesbaden. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-wiesbaden",
       preHeadline: "n8n Automation Wiesbaden",
-      headline: "n8n Automation in Wiesbaden – Workflows automatisieren",
+      headline: "n8n Automation in Wiesbaden - Workflows automatisieren",
       metaTitle: "n8n Automation Wiesbaden | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Wiesbaden. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Wiesbaden. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Wiesbaden",
         "n8n Wiesbaden",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-wiesbaden",
       preHeadline: "n8n Wiesbaden",
       headline: "n8n Agentur in Wiesbaden",
-      metaTitle: "n8n Wiesbaden – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Wiesbaden - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Wiesbaden. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Wiesbaden und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-wiesbaden",
       preHeadline: "Automation Wiesbaden",
       headline: "Automation & Prozessoptimierung in Wiesbaden",
-      metaTitle: "Automation Wiesbaden – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Wiesbaden - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Wiesbaden. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-wiesbaden",
       preHeadline: "IT Dienstleister Wiesbaden",
-      headline: "IT Dienstleister in Wiesbaden – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Wiesbaden – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Wiesbaden - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Wiesbaden - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Wiesbaden. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Wiesbaden.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-wiesbaden",
       preHeadline: "KI Beratung Wiesbaden",
-      headline: "KI Beratung in Wiesbaden – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Wiesbaden – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Wiesbaden - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Wiesbaden - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Wiesbaden. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

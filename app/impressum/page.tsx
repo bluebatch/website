@@ -3,7 +3,7 @@ import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 
 export const metadata: Metadata = {
-  title: "Impressum – Bluebatch",
+  title: "Impressum - Bluebatch",
   description: "Impressum und rechtliche Informationen zu Bluebatch.",
   robots: {
     index: false,
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: "/impressum",
   },
   openGraph: {
-    title: "Impressum – Bluebatch",
+    title: "Impressum - Bluebatch",
     description: "Impressum und rechtliche Informationen zu Bluebatch.",
   },
 };

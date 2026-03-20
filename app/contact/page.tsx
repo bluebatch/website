@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kontakt - Bluebatch",
     description:
-      "Anfrage senden oder Meeting buchen – wir beraten Sie zu KI-gestützter Workflow-Automatisierung.",
+      "Anfrage senden oder Meeting buchen - wir beraten Sie zu KI-gestützter Workflow-Automatisierung.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",

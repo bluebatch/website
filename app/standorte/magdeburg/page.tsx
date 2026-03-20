@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-magdeburg",
       preHeadline: "AI Workflows Magdeburg",
       headline: "AI Workflows & Automatisierung in Magdeburg",
-      metaTitle: "AI Workflows Magdeburg – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Magdeburg - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Magdeburg. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-magdeburg",
       preHeadline: "n8n Automation Magdeburg",
-      headline: "n8n Automation in Magdeburg – Workflows automatisieren",
+      headline: "n8n Automation in Magdeburg - Workflows automatisieren",
       metaTitle: "n8n Automation Magdeburg | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Magdeburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Magdeburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Magdeburg",
         "n8n Magdeburg",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-magdeburg",
       preHeadline: "n8n Magdeburg",
       headline: "n8n Agentur in Magdeburg",
-      metaTitle: "n8n Magdeburg – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Magdeburg - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Magdeburg. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Magdeburg und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-magdeburg",
       preHeadline: "Automation Magdeburg",
       headline: "Automation & Prozessoptimierung in Magdeburg",
-      metaTitle: "Automation Magdeburg – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Magdeburg - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Magdeburg. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-magdeburg",
       preHeadline: "IT Dienstleister Magdeburg",
-      headline: "IT Dienstleister in Magdeburg – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Magdeburg – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Magdeburg - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Magdeburg - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Magdeburg. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Magdeburg.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-magdeburg",
       preHeadline: "KI Beratung Magdeburg",
-      headline: "KI Beratung in Magdeburg – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Magdeburg – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Magdeburg - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Magdeburg - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Magdeburg. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

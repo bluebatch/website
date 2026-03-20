@@ -50,11 +50,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "n8n DATEV Integration – Jira Task Orchestration | Bluebatch",
+  title: "n8n DATEV Integration - Jira Task Orchestration | Bluebatch",
   description:
     "n8n DATEV Integration für automatisierte Aufgabenorchestrierung mit Jira. 99,9% Fristeneinhaltung für Steuerkanzleien.",
   openGraph: {
-    title: "n8n DATEV Integration – Jira Task Orchestration | Bluebatch",
+    title: "n8n DATEV Integration - Jira Task Orchestration | Bluebatch",
     description:
       "n8n DATEV Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
     type: "website",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "n8n DATEV Integration – Jira Task Orchestration | Bluebatch",
+    title: "n8n DATEV Integration - Jira Task Orchestration | Bluebatch",
     description:
       "n8n DATEV Synchronisation zwischen DATEV und Jira. Automatische Fristenüberwachung.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -146,7 +146,7 @@ export default async function Page({
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Jedes Fristversäumnis kostet durchschnittlich 500-2.000 € an
-                Säumniszuschlägen – plus Reputationsschaden und Haftungsrisiko.
+                Säumniszuschlägen - plus Reputationsschaden und Haftungsrisiko.
               </IntroBox.Subline>
             </IntroBox>
           </div>
@@ -394,7 +394,7 @@ export default async function Page({
             {
               question: "Wie sind die Mandantendaten geschützt?",
               answer:
-                "TLS 1.3 für alle Verbindungen, keine Speicherung von Steuerdaten in Cloud-Systemen (nur Referenzen/IDs). Rollenbasierte Berechtigungen in Jira, API-Keys mit minimalen Rechten, DSGVO-konforme Verarbeitung mit Hosting in deutschen Rechenzentren. Das Steuergeheimnis (§203 StGB) wird gewahrt – keine sensiblen Daten in Jira, nur Aufgabenbeschreibungen und Status.",
+                "TLS 1.3 für alle Verbindungen, keine Speicherung von Steuerdaten in Cloud-Systemen (nur Referenzen/IDs). Rollenbasierte Berechtigungen in Jira, API-Keys mit minimalen Rechten, DSGVO-konforme Verarbeitung mit Hosting in deutschen Rechenzentren. Das Steuergeheimnis (§203 StGB) wird gewahrt - keine sensiblen Daten in Jira, nur Aufgabenbeschreibungen und Status.",
             },
             {
               question: "Was passiert wenn die Automatisierung ausfällt?",

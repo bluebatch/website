@@ -1024,27 +1024,27 @@ export default async function Page({
                 <tbody>
                   <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">E-Mail</td>
-                    <td className="px-4 py-3">30–40 %</td>
+                    <td className="px-4 py-3">30-40 %</td>
                     <td className="px-4 py-3">stabil</td>
                   </tr>
                   <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">Telefon / Außendienst</td>
-                    <td className="px-4 py-3">20–30 %</td>
+                    <td className="px-4 py-3">20-30 %</td>
                     <td className="px-4 py-3">rückläufig</td>
                   </tr>
                   <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">EDI</td>
-                    <td className="px-4 py-3">15–25 %</td>
+                    <td className="px-4 py-3">15-25 %</td>
                     <td className="px-4 py-3">stabil bei Großkunden</td>
                   </tr>
                   <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">Webshop / Online-Portal</td>
-                    <td className="px-4 py-3">10–20 %</td>
+                    <td className="px-4 py-3">10-20 %</td>
                     <td className="px-4 py-3">stark wachsend</td>
                   </tr>
                   <tr className="border-b border-gray-100">
                     <td className="px-4 py-3">Fax</td>
-                    <td className="px-4 py-3">5–10 %</td>
+                    <td className="px-4 py-3">5-10 %</td>
                     <td className="px-4 py-3">rückläufig, aber hartnäckig</td>
                   </tr>
                 </tbody>

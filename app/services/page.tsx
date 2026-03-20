@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Implementierung von KI & Services | Bluebatch",
     description:
-      "KI erfolgreich implementieren – von KI Agenten Integration bis Prozess Automation, alle Services aus einer Hand.",
+      "KI erfolgreich implementieren - von KI Agenten Integration bis Prozess Automation, alle Services aus einer Hand.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -83,7 +83,7 @@ const services = [
     title: "n8n Hosting",
     shortDescription: "Self-Hosting auf Ihrer Infrastruktur",
     description:
-      "Professionelles n8n Hosting auf Ihrer eigenen Infrastruktur – OnPrem oder Cloud. Maximale Datenkontrolle, DSGVO-konform und kosteneffizient. Unbegrenzte Workflows ab €50/Monat.",
+      "Professionelles n8n Hosting auf Ihrer eigenen Infrastruktur - OnPrem oder Cloud. Maximale Datenkontrolle, DSGVO-konform und kosteneffizient. Unbegrenzte Workflows ab €50/Monat.",
     icon: "🏢",
     features: [
       "100% Datenkontrolle",
@@ -99,7 +99,7 @@ const services = [
     title: "Workflow-Wartung",
     shortDescription: "Servicevertrag mit 99,9% Uptime",
     description:
-      "Professionelle Wartung Ihrer n8n-Workflows. 24/7 Monitoring, proaktive Updates, Performance-Optimierung. Fokussieren Sie sich auf Ihr Business – wir kümmern uns um die Technik.",
+      "Professionelle Wartung Ihrer n8n-Workflows. 24/7 Monitoring, proaktive Updates, Performance-Optimierung. Fokussieren Sie sich auf Ihr Business - wir kümmern uns um die Technik.",
     icon: "🔧",
     features: [
       "24/7 Monitoring",
@@ -165,7 +165,7 @@ const benefits = [
     iconSrc: "/icons/handshake.svg",
     title: "Schnittstellen Management aus einer Hand",
     description:
-      "Von Hosting bis Scaling – alle n8n Services von einem Partner. Professionelles Schnittstellen Management, klare Verantwortung.",
+      "Von Hosting bis Scaling - alle n8n Services von einem Partner. Professionelles Schnittstellen Management, klare Verantwortung.",
   },
   {
     iconSrc: "/icons/enterprise.svg",
@@ -206,7 +206,7 @@ export default async function Page({
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Implementierung von KI vom Experten: Von KI Agenten Integration über
-              Schnittstellen Management bis zu Prozess Automation – wir sind
+              Schnittstellen Management bis zu Prozess Automation - wir sind
               Ihre Softwareentwicklung Firma für Enterprise n8n. Consulting
               Services IT aus einer Hand, made in Germany.
             </Hero2ColumnDescription>
@@ -236,7 +236,7 @@ export default async function Page({
         <IntroBox>
           <IntroBox.Headline>Unsere Services für KI Agenten Beratung</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Maßgeschneiderte Lösungen für jede Phase Ihrer KI-Integration –
+            Maßgeschneiderte Lösungen für jede Phase Ihrer KI-Integration -
             vom Prozesse aufsetzen über Systemintegration Beratung bis zur
             Enterprise-Skalierung.
           </IntroBox.Paragraph>

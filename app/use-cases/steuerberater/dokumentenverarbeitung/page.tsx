@@ -50,11 +50,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "KI Dokumentenmanagement – Steuerberater | Bluebatch",
+  title: "KI Dokumentenmanagement - Steuerberater | Bluebatch",
   description:
     "KI Dokumentenmanagement für Steuerberater: Belege und Dokumente automatisch verarbeiten mit OCR KI. 70% weniger manuelle Erfassung.",
   openGraph: {
-    title: "KI Dokumentenmanagement – Steuerberater | Bluebatch",
+    title: "KI Dokumentenmanagement - Steuerberater | Bluebatch",
     description:
       "KI Dokumentenmanagement: Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
     type: "website",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KI Dokumentenmanagement – Steuerberater | Bluebatch",
+    title: "KI Dokumentenmanagement - Steuerberater | Bluebatch",
     description:
       "KI Dokumentenmanagement: Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -112,7 +112,7 @@ export default async function Page({
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
             KI Dokumentenmanagement mit OCR KI für Klassifizierung, Datenextraktion und DATEV-Integration.
-            Von 3-4 Minuten auf 20 Sekunden pro Beleg – GoBD-konform.
+            Von 3-4 Minuten auf 20 Sekunden pro Beleg - GoBD-konform.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>

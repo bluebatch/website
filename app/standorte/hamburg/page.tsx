@@ -39,7 +39,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-hamburg",
       preHeadline: "AI Workflows Hamburg",
       headline: "AI Workflows & Automatisierung in Hamburg",
-      metaTitle: "AI Workflows Hamburg – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Hamburg - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Hamburg. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -52,10 +52,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-hamburg",
       preHeadline: "n8n Automation Hamburg",
-      headline: "n8n Automation in Hamburg – Workflows automatisieren",
+      headline: "n8n Automation in Hamburg - Workflows automatisieren",
       metaTitle: "n8n Automation Hamburg | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Hamburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Hamburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Hamburg",
         "n8n Hamburg",
@@ -67,7 +67,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-hamburg",
       preHeadline: "n8n Hamburg",
       headline: "n8n Agentur in Hamburg",
-      metaTitle: "n8n Hamburg – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Hamburg - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Hamburg. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Hamburg und Umgebung.",
       keywords: [
@@ -81,7 +81,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-hamburg",
       preHeadline: "Automation Hamburg",
       headline: "Automation & Prozessoptimierung in Hamburg",
-      metaTitle: "Automation Hamburg – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Hamburg - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Hamburg. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -94,8 +94,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-hamburg",
       preHeadline: "IT Dienstleister Hamburg",
-      headline: "IT Dienstleister in Hamburg – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Hamburg – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Hamburg - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Hamburg - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Hamburg. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Hamburg.",
       keywords: [
@@ -108,8 +108,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-hamburg",
       preHeadline: "KI Beratung Hamburg",
-      headline: "KI Beratung in Hamburg – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Hamburg – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Hamburg - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Hamburg - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Hamburg. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [
@@ -162,7 +162,7 @@ export async function generateMetadata({
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
   const title =
     overrides?.metaTitle ??
-    `KI Agentur Hamburg – Workflow-Automatisierung & Prozessoptimierung | Bluebatch`;
+    `KI Agentur Hamburg - Workflow-Automatisierung & Prozessoptimierung | Bluebatch`;
   const description =
     overrides?.metaDescription ??
     `Bluebatch ist Ihre KI Agentur Hamburg — Ihr Partner für Workflow-Automatisierung, n8n-Workflows, API-Integrationen und Prozessoptimierung für Unternehmen in Hamburg und Umgebung.`;
@@ -267,7 +267,7 @@ export default async function Page({
         <BackgroundHero.Headline>
           {overrides?.headline ?? (
             <>
-              KI Agentur Hamburg –{" "}
+              KI Agentur Hamburg -{" "}
               <BackgroundHero.Highlight>
                 Workflow-Automatisierung für die Hansestadt
               </BackgroundHero.Highlight>

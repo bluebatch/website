@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-gelsenkirchen",
       preHeadline: "AI Workflows Gelsenkirchen",
       headline: "AI Workflows & Automatisierung in Gelsenkirchen",
-      metaTitle: "AI Workflows Gelsenkirchen – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Gelsenkirchen - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Gelsenkirchen. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-gelsenkirchen",
       preHeadline: "n8n Automation Gelsenkirchen",
-      headline: "n8n Automation in Gelsenkirchen – Workflows automatisieren",
+      headline: "n8n Automation in Gelsenkirchen - Workflows automatisieren",
       metaTitle: "n8n Automation Gelsenkirchen | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Gelsenkirchen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Gelsenkirchen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Gelsenkirchen",
         "n8n Gelsenkirchen",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-gelsenkirchen",
       preHeadline: "n8n Gelsenkirchen",
       headline: "n8n Agentur in Gelsenkirchen",
-      metaTitle: "n8n Gelsenkirchen – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Gelsenkirchen - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Gelsenkirchen. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Gelsenkirchen und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-gelsenkirchen",
       preHeadline: "Automation Gelsenkirchen",
       headline: "Automation & Prozessoptimierung in Gelsenkirchen",
-      metaTitle: "Automation Gelsenkirchen – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Gelsenkirchen - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Gelsenkirchen. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-gelsenkirchen",
       preHeadline: "IT Dienstleister Gelsenkirchen",
-      headline: "IT Dienstleister in Gelsenkirchen – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Gelsenkirchen – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Gelsenkirchen - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Gelsenkirchen - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Gelsenkirchen. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Gelsenkirchen.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-gelsenkirchen",
       preHeadline: "KI Beratung Gelsenkirchen",
-      headline: "KI Beratung in Gelsenkirchen – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Gelsenkirchen – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Gelsenkirchen - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Gelsenkirchen - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Gelsenkirchen. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

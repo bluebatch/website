@@ -37,7 +37,7 @@ import Team, {
 } from "@/components/team/team";
 
 export const metadata: Metadata = {
-  title: "Team – Bluebatch | Die Menschen hinter der Automatisierung",
+  title: "Team - Bluebatch | Die Menschen hinter der Automatisierung",
   description:
     "Lernen Sie das Bluebatch Team kennen. Workflow-Experten und Automatisierungs-Profis, die Ihre Prozesse auf das nächste Level bringen.",
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "Enterprise AI",
   ],
   openGraph: {
-    title: "Team – Bluebatch",
+    title: "Team - Bluebatch",
     description:
       "Lernen Sie das Bluebatch Team kennen. Workflow-Experten und Automatisierungs-Profis.",
     type: "website",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Team – Bluebatch",
+    title: "Team - Bluebatch",
     description:
       "Lernen Sie das Bluebatch Team kennen. Workflow-Experten und Automatisierungs-Profis.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -121,7 +121,7 @@ export default function TeamPage() {
               <TeamDescription>
                 Mit einem unerschütterlichen Glauben an die Macht der
                 Automatisierung hat Max Bluebatch gegründet. Er verwandelt
-                komplexe Prozesse in elegante Workflows – und Kaffee in Code.
+                komplexe Prozesse in elegante Workflows - und Kaffee in Code.
               </TeamDescription>
               <TeamTags>
                 <TeamTag variant="primary">Entwickler</TeamTag>
@@ -269,7 +269,7 @@ export default function TeamPage() {
           <IntroBox.Headline>Was uns antreibt</IntroBox.Headline>
           <IntroBox.Subline>
             Wir glauben daran, dass Technologie Menschen befähigen sollte,
-            Großartiges zu leisten – nicht sie mit Routinearbeit zu belasten.
+            Großartiges zu leisten - nicht sie mit Routinearbeit zu belasten.
             Jeder automatisierte Prozess ist ein Stück zurückgewonnene Zeit für
             das, was wirklich zählt.
           </IntroBox.Subline>
@@ -361,7 +361,7 @@ export default function TeamPage() {
               <HiringType>Vollzeit / Teilzeit</HiringType>
               <HiringLocation>Remote / Hybrid</HiringLocation>
               <HiringDescription>
-                Du hältst den Laden am Laufen – von Rechnungsstellung über
+                Du hältst den Laden am Laufen - von Rechnungsstellung über
                 Vertragsmanagement bis hin zur Organisation interner Prozesse.
               </HiringDescription>
               <HiringRequirements>

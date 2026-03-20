@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-erlangen",
       preHeadline: "AI Workflows Erlangen",
       headline: "AI Workflows & Automatisierung in Erlangen",
-      metaTitle: "AI Workflows Erlangen – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Erlangen - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Erlangen. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-erlangen",
       preHeadline: "n8n Automation Erlangen",
-      headline: "n8n Automation in Erlangen – Workflows automatisieren",
+      headline: "n8n Automation in Erlangen - Workflows automatisieren",
       metaTitle: "n8n Automation Erlangen | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Erlangen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Erlangen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Erlangen",
         "n8n Erlangen",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-erlangen",
       preHeadline: "n8n Erlangen",
       headline: "n8n Agentur in Erlangen",
-      metaTitle: "n8n Erlangen – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Erlangen - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Erlangen. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Erlangen und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-erlangen",
       preHeadline: "Automation Erlangen",
       headline: "Automation & Prozessoptimierung in Erlangen",
-      metaTitle: "Automation Erlangen – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Erlangen - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Erlangen. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-erlangen",
       preHeadline: "IT Dienstleister Erlangen",
-      headline: "IT Dienstleister in Erlangen – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Erlangen – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Erlangen - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Erlangen - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Erlangen. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Erlangen.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-erlangen",
       preHeadline: "KI Beratung Erlangen",
-      headline: "KI Beratung in Erlangen – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Erlangen – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Erlangen - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Erlangen - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Erlangen. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

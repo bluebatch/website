@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-bremen",
       preHeadline: "AI Workflows Bremen",
       headline: "AI Workflows & Automatisierung in Bremen",
-      metaTitle: "AI Workflows Bremen – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Bremen - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Bremen. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-bremen",
       preHeadline: "n8n Automation Bremen",
-      headline: "n8n Automation in Bremen – Workflows automatisieren",
+      headline: "n8n Automation in Bremen - Workflows automatisieren",
       metaTitle: "n8n Automation Bremen | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Bremen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Bremen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Bremen",
         "n8n Bremen",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-bremen",
       preHeadline: "n8n Bremen",
       headline: "n8n Agentur in Bremen",
-      metaTitle: "n8n Bremen – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Bremen - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Bremen. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Bremen und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-bremen",
       preHeadline: "Automation Bremen",
       headline: "Automation & Prozessoptimierung in Bremen",
-      metaTitle: "Automation Bremen – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Bremen - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Bremen. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-bremen",
       preHeadline: "IT Dienstleister Bremen",
-      headline: "IT Dienstleister in Bremen – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Bremen – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Bremen - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Bremen - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Bremen. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Bremen.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-bremen",
       preHeadline: "KI Beratung Bremen",
-      headline: "KI Beratung in Bremen – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Bremen – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Bremen - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Bremen - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Bremen. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

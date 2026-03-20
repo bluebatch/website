@@ -35,11 +35,11 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Invoice-Bot – Großhandel | Bluebatch",
+  title: "Invoice-Bot - Großhandel | Bluebatch",
   description:
     "Wie Bluebatch Großhändlern hilft, Rechnungen automatisch zu erfassen, prüfen und zur Freigabe weiterzuleiten.",
   openGraph: {
-    title: "Invoice-Bot – Großhandel | Bluebatch",
+    title: "Invoice-Bot - Großhandel | Bluebatch",
     description:
       "Eingangsrechnungen automatisch erfassen und verarbeiten. 80% weniger manueller Aufwand.",
     type: "website",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Invoice-Bot – Großhandel | Bluebatch",
+    title: "Invoice-Bot - Großhandel | Bluebatch",
     description:
       "Eingangsrechnungen automatisch erfassen und verarbeiten. 80% weniger manueller Aufwand.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -125,7 +125,7 @@ export default function Page() {
             <Typo.H3>Maximale Skonto-Sicherheit</Typo.H3>
             <Typo.Paragraph>
               Keine Fristen mehr versäumen. Der Workflow erkennt Zahlungsziele
-              sofort und setzt Prioritäten für die Freigabe – nichts bleibt
+              sofort und setzt Prioritäten für die Freigabe - nichts bleibt
               liegen.
             </Typo.Paragraph>
           </SimpleCard>
@@ -162,7 +162,7 @@ export default function Page() {
             <Typo.H3 className="mt-2!">KI-gestützte Datenextraktion</Typo.H3>
             <Typo.Paragraph>
               Die KI liest Rechnungsnummer, Beträge, Steuersätze, Fälligkeiten
-              und Lieferantendaten aus – unabhängig vom Format oder Layout.
+              und Lieferantendaten aus - unabhängig vom Format oder Layout.
             </Typo.Paragraph>
           </TimelineAsStepsStep>
 
@@ -209,7 +209,7 @@ export default function Page() {
             <Typo.H3>Maximale Skonto-Sicherheit</Typo.H3>
             <Typo.Paragraph>
               Keine Fristen mehr versäumen. Der Workflow erkennt Zahlungsziele
-              sofort und setzt Prioritäten für die Freigabe – nichts bleibt
+              sofort und setzt Prioritäten für die Freigabe - nichts bleibt
               liegen.
             </Typo.Paragraph>
           </SimpleCard>
@@ -246,7 +246,7 @@ export default function Page() {
               <div>
                 <Typo.H3>End-to-End Automatisierung</Typo.H3>
                 <Typo.Paragraph>
-                  Der gesamte Rechnungsprozess läuft automatisch ab – von der
+                  Der gesamte Rechnungsprozess läuft automatisch ab - von der
                   Erfassung bis zur Buchung.
                 </Typo.Paragraph>
                 <Typo.List>
@@ -426,7 +426,7 @@ export default function Page() {
             <Typo.H3>Maximale Skonto-Sicherheit</Typo.H3>
             <Typo.Paragraph>
               Keine Fristen mehr versäumen. Der Workflow erkennt Zahlungsziele
-              sofort und setzt Prioritäten für die Freigabe – nichts bleibt
+              sofort und setzt Prioritäten für die Freigabe - nichts bleibt
               liegen.
             </Typo.Paragraph>
           </SimpleCard>

@@ -39,11 +39,11 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Mandantenkommunikation – Steuerberater | Bluebatch",
+  title: "Mandantenkommunikation - Steuerberater | Bluebatch",
   description:
     "Wie Bluebatch die Mandantenkommunikation für Steuerberater automatisiert. 70% weniger Routineanfragen.",
   openGraph: {
-    title: "Mandantenkommunikation – Steuerberater | Bluebatch",
+    title: "Mandantenkommunikation - Steuerberater | Bluebatch",
     description:
       "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen.",
     type: "website",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mandantenkommunikation – Steuerberater | Bluebatch",
+    title: "Mandantenkommunikation - Steuerberater | Bluebatch",
     description:
       "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -125,12 +125,12 @@ export default function Page() {
               </IntroBox.Headline>
               <IntroBox.Subline>
                 „Bis wann muss ich meine Unterlagen einreichen?" „Wie ist der
-                Stand meiner Steuererklärung?" – Standardfragen binden wertvolle
+                Stand meiner Steuererklärung?" - Standardfragen binden wertvolle
                 Fachkraft-Zeit.
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Das Einsammeln von Mandantenbelegen ist laut Branchenstudien das
-                größte Workflow-Problem – durchschnittlich 3-5 Erinnerungen pro
+                größte Workflow-Problem - durchschnittlich 3-5 Erinnerungen pro
                 Mandant.
               </IntroBox.Subline>
             </IntroBox>
@@ -140,7 +140,7 @@ export default function Page() {
               <TimelineAsStepsStep value={1}>
                 <Typo.H3 className="mt-2!">Anfrage eingeht</Typo.H3>
                 <Typo.Paragraph>
-                  Per E-Mail, Telefon oder Portal – oft zu Standardthemen
+                  Per E-Mail, Telefon oder Portal - oft zu Standardthemen
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
               <TimelineAsStepsStep value={2}>
@@ -191,7 +191,7 @@ export default function Page() {
                 <Typo.H3>KI-gestützter Chatbot</Typo.H3>
                 <Typo.Paragraph>
                   Automatische Beantwortung von Standardanfragen zu Fristen,
-                  Bearbeitungsstand und Beleganforderungen – 24/7 verfügbar.
+                  Bearbeitungsstand und Beleganforderungen - 24/7 verfügbar.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>
@@ -221,7 +221,7 @@ export default function Page() {
               <div>
                 <Typo.H3>Proaktive Fristenerinnerungen</Typo.H3>
                 <Typo.Paragraph>
-                  Automatische Benachrichtigungen vor wichtigen Abgabefristen –
+                  Automatische Benachrichtigungen vor wichtigen Abgabefristen -
                   gestaffelt nach Dringlichkeit.
                 </Typo.Paragraph>
                 <Typo.List>

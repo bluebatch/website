@@ -30,7 +30,7 @@ import IntroBox from "@/components/ui/intro-box";
 import { AnimatedNumber } from "@/components/cards/kpi-card";
 
 export const metadata: Metadata = {
-  title: "How We Do – Unser 6-Phasen-Prozess | Bluebatch",
+  title: "How We Do - Unser 6-Phasen-Prozess | Bluebatch",
   description:
     "Mit deutscher Engineering-Präzision und einem bewährten 6-Phasen-Framework automatisieren wir Ihre Backoffice-Prozesse. 98% On-Time Delivery, 200+ erfolgreiche Implementierungen.",
   keywords: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "Prozessautomatisierung",
   ],
   openGraph: {
-    title: "Unser 6-Phasen-Prozess – Bluebatch",
+    title: "Unser 6-Phasen-Prozess - Bluebatch",
     description:
       "Mit deutscher Engineering-Präzision und bewährtem Framework automatisieren wir Ihre Prozesse.",
     type: "website",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Unser 6-Phasen-Prozess – Bluebatch",
+    title: "Unser 6-Phasen-Prozess - Bluebatch",
     description:
       "Mit deutscher Engineering-Präzision und bewährtem Framework automatisieren wir Ihre Prozesse.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -134,7 +134,7 @@ const phases = [
   {
     number: 1,
     title: "Bedarfsworkshop",
-    timeframe: "Woche 1–2",
+    timeframe: "Woche 1-2",
     subtitle: "Umfassende Business-Analyse",
     description:
       'Wir identifizieren die "Low Hanging Fruits" und berechnen den echten ROI.',
@@ -147,7 +147,7 @@ const phases = [
   {
     number: 2,
     title: "Konzeption",
-    timeframe: "Woche 3–4",
+    timeframe: "Woche 3-4",
     subtitle: "Der strategische Blueprint",
     description:
       "Wir entwerfen die Architektur, bevor die erste Zeile Code geschrieben wird.",
@@ -160,18 +160,18 @@ const phases = [
   {
     number: 3,
     title: "Basis-Setup",
-    timeframe: "Woche 5–8",
+    timeframe: "Woche 5-8",
     subtitle: "Sichere Infrastruktur",
     description: "Wir schaffen die Umgebung, in der Ihre Daten sicher sind.",
     output:
       "n8n-Instanz mit Security, API-Verbindungen und Monitoring-Systemen.",
-    highlight: "Volle Datensouveränität – Ihre Daten bleiben in Ihrer Hoheit.",
+    highlight: "Volle Datensouveränität - Ihre Daten bleiben in Ihrer Hoheit.",
     highlightLabel: "Sicherheit",
   },
   {
     number: 4,
     title: "Umsetzung",
-    timeframe: "Woche 9–12",
+    timeframe: "Woche 9-12",
     subtitle: "Workflow-Entwicklung",
     description: "Hier erwecken wir Ihre digitalen Mitarbeiter zum Leben.",
     output:
@@ -183,7 +183,7 @@ const phases = [
   {
     number: 5,
     title: "Go-Live",
-    timeframe: "Woche 13–14",
+    timeframe: "Woche 13-14",
     subtitle: "Produktivstart mit Support",
     description:
       "Wir begleiten den Übergang in den Live-Betrieb und schulen Ihr Team.",
@@ -194,7 +194,7 @@ const phases = [
   {
     number: 6,
     title: "Betrieb",
-    timeframe: "Woche 15–16",
+    timeframe: "Woche 15-16",
     subtitle: "Kontinuierliche Verbesserung",
     description:
       "Ein Workflow ist ein lebendes System. Wir optimieren laufend.",
@@ -241,8 +241,8 @@ export default function HowWeDoPage() {
       <ContentWrapper colorScheme="gray-light">
         <div className="text-center mb-12">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Wir bringen die Prinzipien des deutschen Engineerings – Präzision,
-            Gründlichkeit und Systematik – in die Welt der KI-Automatisierung.
+            Wir bringen die Prinzipien des deutschen Engineerings - Präzision,
+            Gründlichkeit und Systematik - in die Welt der KI-Automatisierung.
             Kein &ldquo;Basteln&rdquo;, sondern robuste Workflows auf
             Enterprise-Niveau.
           </p>
@@ -391,7 +391,7 @@ export default function HowWeDoPage() {
           <blockquote className="text-lg md:text-xl text-gray-700 italic leading-relaxed">
             „Am Montagmorgen erhalten Sie einen Report, der Ihnen zeigt, wie
             viele tausend manuelle Klicks wir Ihrem Team letzte Woche erspart
-            haben. Im Call am Nachmittag besprechen wir kurz die Optimierungen –
+            haben. Im Call am Nachmittag besprechen wir kurz die Optimierungen -
             und danach können Sie das Thema wieder komplett uns überlassen."
           </blockquote>
         </div>

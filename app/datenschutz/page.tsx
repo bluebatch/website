@@ -3,7 +3,7 @@ import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung – Bluebatch",
+  title: "Datenschutzerklärung - Bluebatch",
   description:
     "Datenschutzerklärung und Informationen zum Umgang mit personenbezogenen Daten bei Bluebatch.",
   robots: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: "/datenschutz",
   },
   openGraph: {
-    title: "Datenschutzerklärung – Bluebatch",
+    title: "Datenschutzerklärung - Bluebatch",
     description:
       "Datenschutzerklärung und Informationen zum Umgang mit personenbezogenen Daten bei Bluebatch.",
   },
@@ -319,7 +319,7 @@ export default function Page() {
       </Typo.List>
       <Typo.Paragraph>
         Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt
-        haben, dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit
+        haben, dürfen diese Daten - von ihrer Speicherung abgesehen - nur mit
         Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung
         von Rechtsansprüchen oder zum Schutz der Rechte einer anderen
         natürlichen oder juristischen Person oder aus Gründen eines wichtigen
@@ -396,7 +396,7 @@ export default function Page() {
       <Typo.Paragraph>
         Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit.
         f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der
-        technisch fehlerfreien Darstellung und der Optimierung seiner Website –
+        technisch fehlerfreien Darstellung und der Optimierung seiner Website -
         hierzu müssen die Server-Log-Files erfasst werden.
       </Typo.Paragraph>
 
@@ -421,7 +421,7 @@ export default function Page() {
         bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung
         widerrufen oder der Zweck für die Datenspeicherung entfällt (z.B. nach
         abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche
-        Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.
+        Bestimmungen - insbesondere Aufbewahrungsfristen - bleiben unberührt.
       </Typo.Paragraph>
 
       <Typo.H3>Anfrage per E-Mail, Telefon oder Telefax</Typo.H3>
@@ -447,8 +447,8 @@ export default function Page() {
         bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur
         Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt
         (z.B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende
-        gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen
-        – bleiben unberührt.
+        gesetzliche Bestimmungen - insbesondere gesetzliche Aufbewahrungsfristen
+        - bleiben unberührt.
       </Typo.Paragraph>
 
       <Typo.H3>Verarbeiten von Daten (Kunden- und Vertragsdaten)</Typo.H3>
@@ -762,7 +762,7 @@ export default function Page() {
         dieser Website speichert, bevor diese sich das Video ansehen. Die
         Weitergabe von Daten an YouTube-Partner wird durch den erweiterten
         Datenschutzmodus hingegen nicht zwingend ausgeschlossen. So stellt
-        YouTube – unabhängig davon, ob Sie sich ein Video ansehen – eine
+        YouTube - unabhängig davon, ob Sie sich ein Video ansehen - eine
         Verbindung zum Google DoubleClick-Netzwerk her.
       </Typo.Paragraph>
       <Typo.Paragraph>

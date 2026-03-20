@@ -21,11 +21,11 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import InternalLink from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
-  title: "Steuerberater – Use Cases | Bluebatch",
+  title: "Steuerberater - Use Cases | Bluebatch",
   description:
     "Wie Bluebatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
   openGraph: {
-    title: "Steuerberater – Bluebatch Use Cases",
+    title: "Steuerberater - Bluebatch Use Cases",
     description:
       "Wie Bluebatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
     type: "website",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steuerberater – Bluebatch Use Cases",
+    title: "Steuerberater - Bluebatch Use Cases",
     description:
       "Wie Bluebatch Steuerberater bei Dokumentenverarbeitung, Mandantenkommunikation und DATEV-Integration unterstützt.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -57,7 +57,7 @@ const useCases = [
     slug: "dokumentenverarbeitung",
     title: "Dokumentenverarbeitung",
     description:
-      "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren. KI extrahiert relevante Daten und überträgt sie strukturiert – 70% weniger manuelle Erfassung.",
+      "Belege, Rechnungen und Steuerunterlagen automatisch erfassen und klassifizieren. KI extrahiert relevante Daten und überträgt sie strukturiert - 70% weniger manuelle Erfassung.",
     image: "/images/machine-learning.jpg",
   },
   {
@@ -71,7 +71,7 @@ const useCases = [
     slug: "datev-jira-task-orchestration",
     title: "DATEV-Jira Orchestration",
     description:
-      "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Aufgabenerstellung, Fristenüberwachung und Eskalations-Workflows – 99,9% Fristeneinhaltung.",
+      "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Aufgabenerstellung, Fristenüberwachung und Eskalations-Workflows - 99,9% Fristeneinhaltung.",
     image: "/images/datev-integration.jpg",
   },
 ];
@@ -87,7 +87,7 @@ export default function Page() {
               Automatisierung für Steuerberater
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Von der Dokumentenverarbeitung bis zur DATEV-Integration – wir
+              Von der Dokumentenverarbeitung bis zur DATEV-Integration - wir
               automatisieren die repetitiven Prozesse in Ihrer Kanzlei. Weniger
               Routine, mehr Zeit für echte Beratung.
             </Hero2ColumnDescription>

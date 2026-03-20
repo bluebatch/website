@@ -28,7 +28,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-muenchen",
       preHeadline: "AI Workflows München",
       headline: "AI Workflows & Automatisierung in München",
-      metaTitle: "AI Workflows München – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows München - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in München. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -41,10 +41,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-muenchen",
       preHeadline: "n8n Automation München",
-      headline: "n8n Automation in München – Workflows automatisieren",
+      headline: "n8n Automation in München - Workflows automatisieren",
       metaTitle: "n8n Automation München | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in München. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in München. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation München",
         "n8n München",
@@ -56,7 +56,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-muenchen",
       preHeadline: "n8n München",
       headline: "n8n Agentur in München",
-      metaTitle: "n8n München – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n München - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in München. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in München und Umgebung.",
       keywords: [
@@ -70,7 +70,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-muenchen",
       preHeadline: "Automation München",
       headline: "Automation & Prozessoptimierung in München",
-      metaTitle: "Automation München – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation München - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in München. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -83,8 +83,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-muenchen",
       preHeadline: "IT Dienstleister München",
-      headline: "IT Dienstleister in München – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister München – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in München - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister München - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in München. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in München.",
       keywords: [
@@ -97,8 +97,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-muenchen",
       preHeadline: "KI Beratung München",
-      headline: "KI Beratung in München – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung München – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in München - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung München - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in München. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [
@@ -145,7 +145,7 @@ export const metaCustom: CityMeta = {
 };
 
 const defaultMeta = {
-  title: `KI Agentur München – Workflow-Automatisierung & Prozessoptimierung | Bluebatch`,
+  title: `KI Agentur München - Workflow-Automatisierung & Prozessoptimierung | Bluebatch`,
   description: `Bluebatch ist Ihre KI Agentur München — Ihr Partner für Workflow-Automatisierung, n8n-Workflows, API-Integrationen und Prozessoptimierung für DAX-Konzerne, Tech-Giganten und Mittelständler.`,
 };
 
@@ -217,7 +217,7 @@ const muenchenFaqs = [
   {
     question: "Wie lange dauert die Implementierung?",
     answer:
-      "Erste produktive Workflows liefern wir in 1–2 Wochen. Komplexere Systeme mit mehreren API-Integrationen, KI-Komponenten und individuellen Nodes setzen wir in 4–8 Wochen um. In einem kostenlosen Erstgespräch analysieren wir Ihren konkreten Bedarf und geben Ihnen einen realistischen Zeitrahmen.",
+      "Erste produktive Workflows liefern wir in 1-2 Wochen. Komplexere Systeme mit mehreren API-Integrationen, KI-Komponenten und individuellen Nodes setzen wir in 4-8 Wochen um. In einem kostenlosen Erstgespräch analysieren wir Ihren konkreten Bedarf und geben Ihnen einen realistischen Zeitrahmen.",
   },
   {
     question: "Können bestehende Systeme wie SAP oder Salesforce integriert werden?",
@@ -262,7 +262,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI Agentur München –{" "}
+                KI Agentur München -{" "}
                 <BackgroundHero.Highlight>Automatisierung im Isar Valley</BackgroundHero.Highlight>
               </>
             )}

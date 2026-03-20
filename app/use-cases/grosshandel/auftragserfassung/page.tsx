@@ -49,7 +49,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-lastenheft",
       preHeadline: "AI Lastenheft",
       headline: "AI-gestützte Lastenheft-Erstellung für den Großhandel",
-      metaTitle: "AI Lastenheft – Anforderungen automatisch erfassen | Bluebatch",
+      metaTitle: "AI Lastenheft - Anforderungen automatisch erfassen | Bluebatch",
       metaDescription:
         "AI-gestützte Lastenheft-Erstellung für den Großhandel. Bestellungen und Anforderungen aus E-Mails, PDFs und Portalen automatisch erfassen.",
       keywords: [
@@ -66,9 +66,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       preHeadline: "AI Lastenheft erstellen",
       headline: "Lastenheft automatisch erstellen mit KI",
       metaTitle:
-        "AI Lastenheft erstellen – Großhandel | Bluebatch",
+        "AI Lastenheft erstellen - Großhandel | Bluebatch",
       metaDescription:
-        "Lastenheft automatisch erstellen mit KI. Anforderungen aus allen Kanälen erfassen, strukturieren und validieren – in Minuten statt Stunden.",
+        "Lastenheft automatisch erstellen mit KI. Anforderungen aus allen Kanälen erfassen, strukturieren und validieren - in Minuten statt Stunden.",
       keywords: [
         "AI Lastenheft erstellen",
         "Lastenheft Generator",
@@ -82,7 +82,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automatische-auftragserfassung",
       preHeadline: "Automatische Auftragserfassung",
       headline: "Automatische Auftragserfassung für den Großhandel",
-      metaTitle: "Automatische Auftragserfassung – Großhandel | Bluebatch",
+      metaTitle: "Automatische Auftragserfassung - Großhandel | Bluebatch",
       metaDescription:
         "Automatische Auftragserfassung für Großhändler. Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen und verarbeiten.",
       keywords: [
@@ -98,7 +98,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ki-auftragserfassung",
       preHeadline: "KI-Auftragserfassung",
       headline: "KI-gestützte Auftragserfassung für den Großhandel",
-      metaTitle: "KI-Auftragserfassung – Großhandel | Bluebatch",
+      metaTitle: "KI-Auftragserfassung - Großhandel | Bluebatch",
       metaDescription:
         "KI-gestützte Auftragserfassung für Großhändler. Bestelldaten automatisch extrahieren, validieren und ins ERP übertragen.",
       keywords: [
@@ -114,9 +114,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/auftraege-automatisch-erfassen",
       preHeadline: "Aufträge automatisch erfassen",
       headline: "Aufträge automatisch erfassen im Großhandel",
-      metaTitle: "Aufträge automatisch erfassen – Großhandel | Bluebatch",
+      metaTitle: "Aufträge automatisch erfassen - Großhandel | Bluebatch",
       metaDescription:
-        "Aufträge automatisch erfassen für Großhändler. Von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit – ohne manuelle Dateneingabe.",
+        "Aufträge automatisch erfassen für Großhändler. Von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit - ohne manuelle Dateneingabe.",
       keywords: [
         "Aufträge automatisch erfassen",
         "Auftragseingabe automatisieren",
@@ -134,11 +134,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 
 const defaultMeta = {
   title:
-    "Bestellung erfassen – Automatische Auftragserfassung im Großhandel | Bluebatch",
+    "Bestellung erfassen - Automatische Auftragserfassung im Großhandel | Bluebatch",
   description:
     "Bestellung erfassen leicht gemacht: Bluebatch automatisiert den Bestellprozess im Einkauf. Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen.",
   ogDescription:
-    "Bestellung erfassen aus E-Mails, PDFs und Portalen – automatisch und fehlerfrei.",
+    "Bestellung erfassen aus E-Mails, PDFs und Portalen - automatisch und fehlerfrei.",
 };
 
 export async function generateMetadata({
@@ -234,10 +234,10 @@ export default async function Page({
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Bestellung erfassen aus E-Mail, PDF, Fax, EDI oder Portal – n8n
+            Bestellung erfassen aus E-Mail, PDF, Fax, EDI oder Portal - n8n
             extrahiert alle Daten, validiert gegen ERP und Lager und erstellt
             den Auftrag. So optimieren Sie den gesamten Bestellprozess im
-            Einkauf – von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.
+            Einkauf - von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
@@ -266,7 +266,7 @@ export default async function Page({
               </IntroBox.Headline>
               <IntroBox.Subline>
                 Wer Bestellungen manuell erfassen muss, kennt die Fehlerrate von
-                10%+. Bei 10.000 Eingaben bedeutet das 1.000 Fehler – und jeder
+                10%+. Bei 10.000 Eingaben bedeutet das 1.000 Fehler - und jeder
                 B2B-Fehler kostet durchschnittlich 17.800 € zur Behebung.
               </IntroBox.Subline>
               <IntroBox.Subline>
@@ -310,9 +310,9 @@ export default async function Page({
       <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>Multi-Channel Intake</IntroBox.PreHeadline>
-          <IntroBox.Headline>Erfassung von Bestellungen aus allen Kanälen – ein System</IntroBox.Headline>
+          <IntroBox.Headline>Erfassung von Bestellungen aus allen Kanälen - ein System</IntroBox.Headline>
           <IntroBox.Subline>
-            Egal wie Ihre Kunden bestellen – der Workflow verarbeitet alle
+            Egal wie Ihre Kunden bestellen - der Workflow verarbeitet alle
             Formate einheitlich.
           </IntroBox.Subline>
         </IntroBox>

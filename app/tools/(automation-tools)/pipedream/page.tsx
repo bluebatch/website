@@ -64,7 +64,7 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Pipedream – starkes Developer-Tool mit unsicherer Zukunft
+              Pipedream - starkes Developer-Tool mit unsicherer Zukunft
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Pipedream ist eine code-native Automatisierungsplattform für
@@ -105,7 +105,7 @@ export default function Page() {
             Mit 2.800+ App-Integrationen und 10.000+ vorgefertigten Aktionen
             bietet Pipedream eine der größten Integrationsbibliotheken am
             Markt. Kritisch: Im November 2025 wurde Pipedream von Workday
-            übernommen. Die Plattform ist rein cloudbasiert – alle Daten
+            übernommen. Die Plattform ist rein cloudbasiert - alle Daten
             werden auf AWS us-east-1 in den USA verarbeitet. Self-Hosting ist
             nicht möglich. Für europäische Unternehmen mit DSGVO-Anforderungen
             ist das ein erhebliches Risiko.
@@ -119,7 +119,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Pro & Contra</IntroBox.PreHeadline>
           <IntroBox.Headline>Stärken und Schwächen von Pipedream</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Pipedream hat echte Stärken – besonders für reine
+            Pipedream hat echte Stärken - besonders für reine
             Entwickler-Teams, die Code-first arbeiten und keine EU-Datenresidenz
             benötigen. Aber die Workday-Übernahme und das Cloud-only-Modell schaffen Risiken,
             die Sie vor einer Entscheidung kennen sollten.
@@ -138,19 +138,19 @@ export default function Page() {
             />
             <ProsCons.Item
               title="Großzügiger Free-Tier für Entwickler"
-              description="Der kostenlose Plan bietet 100 Credits pro Monat, 3 aktive Workflows und unbegrenztes Testing. Entwicklung und Debugging kosten keine Credits – nur Produktions-Runs werden berechnet. Für Prototyping und kleine Projekte reicht das völlig."
+              description="Der kostenlose Plan bietet 100 Credits pro Monat, 3 aktive Workflows und unbegrenztes Testing. Entwicklung und Debugging kosten keine Credits - nur Produktions-Runs werden berechnet. Für Prototyping und kleine Projekte reicht das völlig."
             />
             <ProsCons.Item
               title="Connect für Embedded Integrations"
-              description="Pipedream Connect ermöglicht es SaaS-Unternehmen, Integrationen direkt in eigene Applikationen oder KI-Agenten einzubetten. Managed OAuth, Token-Verwaltung und über 10.000 Built-in-API-Operationen. Für SaaS-Builder ein starkes Feature – allerdings mit sichtbarem Pipedream-Branding beim Auth-Flow."
+              description="Pipedream Connect ermöglicht es SaaS-Unternehmen, Integrationen direkt in eigene Applikationen oder KI-Agenten einzubetten. Managed OAuth, Token-Verwaltung und über 10.000 Built-in-API-Operationen. Für SaaS-Builder ein starkes Feature - allerdings mit sichtbarem Pipedream-Branding beim Auth-Flow."
             />
             <ProsCons.Item
               title="Event-Driven und Serverless"
-              description="Pipedream basiert auf einer vollständig event-gesteuerten Architektur. Kein Polling – Events werden sofort verarbeitet. Serverlose Ausführung ohne Infrastruktur-Management, konfigurierbare Ressourcen pro Workflow und optionale Dedicated Workers für latenzempfindliche Ausführungen."
+              description="Pipedream basiert auf einer vollständig event-gesteuerten Architektur. Kein Polling - Events werden sofort verarbeitet. Serverlose Ausführung ohne Infrastruktur-Management, konfigurierbare Ressourcen pro Workflow und optionale Dedicated Workers für latenzempfindliche Ausführungen."
             />
             <ProsCons.Item
               title="MCP-Server für KI-Agenten"
-              description="Über 3.000 APIs sind als MCP-Server mit mehr als 10.000 Tools für KI-Agenten verfügbar. Der AI Agent Builder ermöglicht No-Code-Erstellung von KI-Agenten. Und weil Sie echten Code schreiben, können Sie jede KI-Bibliothek via npm nutzen – OpenAI, LangChain, Anthropic SDK und alles andere."
+              description="Über 3.000 APIs sind als MCP-Server mit mehr als 10.000 Tools für KI-Agenten verfügbar. Der AI Agent Builder ermöglicht No-Code-Erstellung von KI-Agenten. Und weil Sie echten Code schreiben, können Sie jede KI-Bibliothek via npm nutzen - OpenAI, LangChain, Anthropic SDK und alles andere."
             />
           </ProsCons.Pros>
           <ProsCons.Cons>
@@ -159,24 +159,24 @@ export default function Page() {
               description="Im November 2025 hat Workday Pipedream übernommen. Die Plattform wird voraussichtlich stärker auf Enterprise-KI-Agenten und Workday-spezifische Use Cases fokussiert. Ob das bestehende Preismodell, der Feature-Umfang oder die Zielgruppe bestehen bleiben, ist unklar. Viele Nutzer evaluieren bereits Alternativen."
             />
             <ProsCons.Item
-              title="Keine EU-Datenresidenz – nur US-Server"
+              title="Keine EU-Datenresidenz - nur US-Server"
               description="Alle Daten werden auf AWS us-east-1 in den USA verarbeitet und gespeichert. Es gibt kein EU-Rechenzentrum und keine Möglichkeit, Daten in Europa zu halten. Pipedream bezeichnet sich als DSGVO-konform, aber die US-Datenhaltung ist für viele europäische Unternehmen ein Compliance-Risiko."
             />
             <ProsCons.Item
-              title="Cloud-only – kein Self-Hosting möglich"
+              title="Cloud-only - kein Self-Hosting möglich"
               description="Pipedream bietet ausschließlich einen verwalteten Cloud-Service. Kein Self-Hosting, kein On-Premises-Deployment. Sie haben keine Kontrolle darüber, wo Ihre Daten verarbeitet werden. Im Gegensatz dazu ist n8n Self-Hosted kostenlos und läuft auf Ihrer eigenen Infrastruktur."
             />
             <ProsCons.Item
               title="Teuer bei Skalierung durch Credit-System"
-              description="1 Credit entspricht 30 Sekunden Rechenzeit bei 256 MB Speicher. Bei 1.000 Workflows täglich mit 60 Sekunden Laufzeit benötigen Sie bereits 60.000 Credits pro Monat – das erfordert den Business-Plan mit individueller Preisgestaltung. n8n Self-Hosted bietet unbegrenzte Ausführungen für 10 bis 30 Euro Infrastrukturkosten."
+              description="1 Credit entspricht 30 Sekunden Rechenzeit bei 256 MB Speicher. Bei 1.000 Workflows täglich mit 60 Sekunden Laufzeit benötigen Sie bereits 60.000 Credits pro Monat - das erfordert den Business-Plan mit individueller Preisgestaltung. n8n Self-Hosted bietet unbegrenzte Ausführungen für 10 bis 30 Euro Infrastrukturkosten."
             />
             <ProsCons.Item
-              title="Nur für Entwickler – Non-Tech-Teams ausgeschlossen"
+              title="Nur für Entwickler - Non-Tech-Teams ausgeschlossen"
               description="Pipedream ist fast ausschließlich auf technische Nutzer ausgerichtet. Marketing, Operations oder HR können ohne Programmierkenntnisse keine Workflows bauen. Für gemischte Teams, in denen Fachbereiche und Entwickler zusammenarbeiten, fehlt ein intuitiver visueller Builder."
             />
             <ProsCons.Item
               title="Unsichere Produkt-Roadmap nach Akquisition"
-              description="Workday plant, Pipedream als KI-Agent-Integrationsschicht für die eigenen 75+ Millionen Endnutzer zu positionieren. Das deutet auf eine Verschiebung weg von Indie-Developern hin zu Enterprise-Kunden. Workflows können nicht automatisch migriert werden – ein manueller Rebuild kostet geschätzt 2 bis 4 Stunden pro Workflow."
+              description="Workday plant, Pipedream als KI-Agent-Integrationsschicht für die eigenen 75+ Millionen Endnutzer zu positionieren. Das deutet auf eine Verschiebung weg von Indie-Developern hin zu Enterprise-Kunden. Workflows können nicht automatisch migriert werden - ein manueller Rebuild kostet geschätzt 2 bis 4 Stunden pro Workflow."
             />
           </ProsCons.Cons>
         </ProsCons>
@@ -190,7 +190,7 @@ export default function Page() {
           <IntroBox.Paragraph>
             Pipedream nutzt ein kreditbasiertes Abrechnungsmodell. 1 Credit
             entspricht 30 Sekunden Rechenzeit bei 256 MB Speicher. Nur
-            Produktions-Runs kosten Credits – Entwicklung und Testing sind
+            Produktions-Runs kosten Credits - Entwicklung und Testing sind
             kostenlos.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -215,7 +215,7 @@ export default function Page() {
               Jedes Workflow-Segment verbraucht Credits basierend auf Laufzeit
               und Speicherverbrauch. Ein 30-Sekunden-Workflow mit 256 MB kostet
               1 Credit. Ein 5-Minuten-Workflow kostet 10 Credits. Bei hohem
-              Volumen steigen die Kosten linear – es gibt keinen Mengenrabatt
+              Volumen steigen die Kosten linear - es gibt keinen Mengenrabatt
               auf den Standard-Plänen. Zum Vergleich: n8n Self-Hosted bietet
               unbegrenzte Ausführungen unabhängig von der Laufzeit. Bei
               1.000 Workflows täglich mit 60 Sekunden Laufzeit benötigen Sie
@@ -231,7 +231,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Künstliche Intelligenz</IntroBox.PreHeadline>
           <IntroBox.Headline>KI und Agentic AI</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Pipedream hat seit 2025 stark auf KI gesetzt – besonders nach der
+            Pipedream hat seit 2025 stark auf KI gesetzt - besonders nach der
             Workday-Übernahme, die explizit auf KI-Agenten abzielt.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -244,7 +244,7 @@ export default function Page() {
               KI-Agenten direkt in der Plattform. Über 3.000 APIs stehen als
               MCP-Server mit mehr als 10.000 Tools für KI-Agenten zur
               Verfügung. Multi-Modell-Support für OpenAI, Anthropic Claude und
-              Google Gemini. KI-Tokens sind in jedem Plan enthalten – von 2
+              Google Gemini. KI-Tokens sind in jedem Plan enthalten - von 2
               Millionen bis 50 Millionen Tokens je nach Plan.
             </Typo.Paragraph>
           </SimpleCard>
@@ -257,7 +257,7 @@ export default function Page() {
               Vorteil gegenüber visuellen Tools mit vorgefertigten KI-Nodes.
               Im Vergleich: n8n bietet tiefere native LangChain-Integration,
               Vector Store Nodes, Memory Nodes und die Möglichkeit, Self-Hosted
-              LLMs einzubinden – entscheidend für datensensible
+              LLMs einzubinden - entscheidend für datensensible
               Anwendungsfälle.
             </Typo.Paragraph>
           </SimpleCard>
@@ -273,7 +273,7 @@ export default function Page() {
           </IntroBox.Headline>
           <IntroBox.Paragraph>
             Pipedream ist kein Tool für jeden. Eine ehrliche Einschätzung,
-            für welche Szenarien es passt – und für welche nicht.
+            für welche Szenarien es passt - und für welche nicht.
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -317,7 +317,7 @@ export default function Page() {
             Pipedream vs. n8n im Direktvergleich
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            Die wichtigsten Unterschiede auf einen Blick – basierend auf
+            Die wichtigsten Unterschiede auf einen Blick - basierend auf
             öffentlich verfügbaren Daten vom März 2026.
           </IntroBox.Paragraph>
         </IntroBox>

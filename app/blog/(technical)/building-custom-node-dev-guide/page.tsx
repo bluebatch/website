@@ -88,7 +88,7 @@ export default function Page() {
             <Typo.Paragraph>
               Ob Sie ein Entwickler sind, der die Funktionen von n8n erweitern
               möchte, oder ein Business-Anwender, der eine spezifische
-              Integration benötigt – dieser Leitfaden führt Sie durch alles, was
+              Integration benötigt - dieser Leitfaden führt Sie durch alles, was
               Sie über die Erstellung von Custom Nodes wissen müssen.
             </Typo.Paragraph>
           </div>
@@ -980,7 +980,7 @@ export default function Page() {
             <Typo.Paragraph>
               Die Erstellung von Custom Nodes in n8n eröffnet endlose
               Möglichkeiten für Workflow-Automatisierung. Ob Sie einfache
-              API-Integrationen oder komplexe Geschäftslogik entwickeln – die
+              API-Integrationen oder komplexe Geschäftslogik entwickeln - die
               Flexibilität und Leistungsfähigkeit von Custom Nodes kann
               transformieren, wie Sie Daten und Prozesse handhaben.
             </Typo.Paragraph>

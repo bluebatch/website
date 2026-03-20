@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-herne",
       preHeadline: "AI Workflows Herne",
       headline: "AI Workflows & Automatisierung in Herne",
-      metaTitle: "AI Workflows Herne – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Herne - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Herne. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-herne",
       preHeadline: "n8n Automation Herne",
-      headline: "n8n Automation in Herne – Workflows automatisieren",
+      headline: "n8n Automation in Herne - Workflows automatisieren",
       metaTitle: "n8n Automation Herne | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Herne. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Herne. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Herne",
         "n8n Herne",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-herne",
       preHeadline: "n8n Herne",
       headline: "n8n Agentur in Herne",
-      metaTitle: "n8n Herne – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Herne - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Herne. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Herne und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-herne",
       preHeadline: "Automation Herne",
       headline: "Automation & Prozessoptimierung in Herne",
-      metaTitle: "Automation Herne – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Herne - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Herne. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-herne",
       preHeadline: "IT Dienstleister Herne",
-      headline: "IT Dienstleister in Herne – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Herne – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Herne - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Herne - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Herne. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Herne.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-herne",
       preHeadline: "KI Beratung Herne",
-      headline: "KI Beratung in Herne – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Herne – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Herne - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Herne - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Herne. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "KI-Bewerber-Screening Personaldienstleister | Bluebatch",
     description:
-      "Bewerbungen automatisch analysieren und Kandidaten intelligent matchen – für Personaldienstleister.",
+      "Bewerbungen automatisch analysieren und Kandidaten intelligent matchen - für Personaldienstleister.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -93,7 +93,7 @@ export default function Page() {
             KI-gestütztes CV-Parsing mit Textkernel-Niveau, automatische
             Skill-Extraktion nach ESCO-Taxonomie und semantisches Matching gegen
             Ihre offenen Positionen in zvoove, Bullhorn oder compleet. Von 15
-            Minuten auf unter 60 Sekunden pro Bewerbung – bei höherer
+            Minuten auf unter 60 Sekunden pro Bewerbung - bei höherer
             Trefferquote und DSGVO-konformer Verarbeitung.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -113,7 +113,7 @@ export default function Page() {
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* Section 2: KpiCard Grid – Das Problem in Zahlen */}
+      {/* Section 2: KpiCard Grid - Das Problem in Zahlen */}
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Das Problem</IntroBox.PreHeadline>
@@ -139,8 +139,8 @@ export default function Page() {
               variant="danger"
             />
             <Typo.Paragraph className="mt-4 text-sm text-gray-600">
-              Disponenten investieren durchschnittlich 15–20 Minuten pro
-              Bewerbung – für Sichten, Bewerten, manuelle Dateneingabe ins ATS
+              Disponenten investieren durchschnittlich 15-20 Minuten pro
+              Bewerbung - für Sichten, Bewerten, manuelle Dateneingabe ins ATS
               und den Abgleich mit offenen Stellen.
             </Typo.Paragraph>
           </div>
@@ -154,19 +154,19 @@ export default function Page() {
             <Typo.Paragraph className="mt-4 text-sm text-gray-600">
               85,6 % der Personalvermittler berichten von signifikant
               zunehmendem Ghosting. 27 % der Bewerber antworten nach
-              Unterlageneinreichung nicht mehr – oft wegen zu langer
+              Unterlageneinreichung nicht mehr - oft wegen zu langer
               Reaktionszeiten.
             </Typo.Paragraph>
           </div>
           <div>
             <KpiCard
               value={3}
-              suffix="–5 Tage"
+              suffix="-5 Tage"
               subtitle="Durchschnittliche Reaktionszeit"
               variant="danger"
             />
             <Typo.Paragraph className="mt-4 text-sm text-gray-600">
-              Im umkämpften Bewerbermarkt ist eine Reaktionszeit von 3–5 Tagen
+              Im umkämpften Bewerbermarkt ist eine Reaktionszeit von 3-5 Tagen
               viel zu langsam. Gute Kandidaten unterschreiben bei der
               Konkurrenz, bevor der Disponent zum Hörer greift.
             </Typo.Paragraph>
@@ -174,7 +174,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Section 3: CardShowcase – So funktioniert KI-Matching */}
+      {/* Section 3: CardShowcase - So funktioniert KI-Matching */}
       <ContentWrapper colorScheme="dark">
         <IntroBox dark>
           <IntroBox.PreHeadline>Der Workflow</IntroBox.PreHeadline>
@@ -208,7 +208,7 @@ export default function Page() {
                 JSON-Daten liefert: Name, Kontaktdaten, Berufserfahrung mit
                 Positionen und Zeiträumen, Ausbildung, Skills, Sprachkenntnisse
                 und Führerschein. Das Ergebnis ist vergleichbar mit
-                spezialisierten Parsern wie Textkernel oder CVlizer – in über 25
+                spezialisierten Parsern wie Textkernel oder CVlizer - in über 25
                 Sprachen, inklusive Deutsch, Polnisch, Rumänisch und Türkisch.
               </CardShowcase.Description>
             </CardShowcase.Content>
@@ -229,7 +229,7 @@ export default function Page() {
                 &bdquo;Schlosser&ldquo;, &bdquo;Industriemechaniker&ldquo; und
                 &bdquo;Metallfacharbeiter&ldquo; werden auf standardisierte
                 Begriffe gemappt. Der Workflow nutzt einen LLM-Prompt, der
-                ESCO-Codes zuordnet und verwandte Skills ergänzt – so entsteht
+                ESCO-Codes zuordnet und verwandte Skills ergänzt - so entsteht
                 eine einheitliche Skill-Sprache über alle Bewerber hinweg,
                 unabhängig von Herkunftsland und Sprachvariante.
               </CardShowcase.Description>
@@ -250,9 +250,9 @@ export default function Page() {
                 normalisierte Kandidatenprofil mit allen offenen Positionen aus
                 Ihrem ATS (zvoove, Bullhorn, compleet). Der n8n-Workflow ruft
                 offene Stellen per API ab, lässt den LLM eine
-                Passungsbewertung auf einer Skala von 1–10 berechnen – unter
+                Passungsbewertung auf einer Skala von 1-10 berechnen - unter
                 Berücksichtigung von Skills, Erfahrungsjahren,
-                Sprachkenntnissen, Standort und Verfügbarkeit – und sortiert die
+                Sprachkenntnissen, Standort und Verfügbarkeit - und sortiert die
                 Top-3-Matches heraus.
               </CardShowcase.Description>
             </CardShowcase.Content>
@@ -274,7 +274,7 @@ export default function Page() {
                 Matching-Score und einem Direktlink zum ATS-Profil. Parallel
                 wird eine automatische Eingangsbestätigung an den Bewerber
                 gesendet. Reagiert der Disponent nicht innerhalb von 2 Stunden,
-                folgt eine Erinnerung. So sinkt die Reaktionszeit von 3–5 Tagen
+                folgt eine Erinnerung. So sinkt die Reaktionszeit von 3-5 Tagen
                 auf unter 2 Stunden.
               </CardShowcase.Description>
             </CardShowcase.Content>
@@ -282,7 +282,7 @@ export default function Page() {
         </CardShowcase>
       </ContentWrapper>
 
-      {/* Section 4: 2-Column – Qualifikationslücken-Analyse */}
+      {/* Section 4: 2-Column - Qualifikationslücken-Analyse */}
       <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-center gap-12">
           <div>
@@ -311,7 +311,7 @@ export default function Page() {
                 und Schulungen
               </Typo.ListItem>
               <Typo.ListItem>
-                Tracking von Weiterbildungsfortschritten im ATS – sobald eine
+                Tracking von Weiterbildungsfortschritten im ATS - sobald eine
                 Qualifikation erworben wird, wird das Matching-Profil
                 automatisch aktualisiert
               </Typo.ListItem>
@@ -347,7 +347,7 @@ export default function Page() {
           <IntroBox.Subline>
             Personaldienstleister arbeiten mit einer Vielzahl spezialisierter
             Systeme. Unsere n8n-basierte Automatisierung fungiert als
-            Orchestrierungsschicht, die alle Systeme verbindet – ohne bestehende
+            Orchestrierungsschicht, die alle Systeme verbindet - ohne bestehende
             Workflows zu ersetzen.
           </IntroBox.Subline>
         </IntroBox>
@@ -363,7 +363,7 @@ export default function Page() {
             <Typo.Paragraph>
               Integration mit den führenden Branchenlösungen: zvoove (ehemals
               LANDWEHR L1, prosoft), Bullhorn, compleet, Mysolution, HR4YOU und
-              coveto. Kandidatenprofile werden bidirektional synchronisiert –
+              coveto. Kandidatenprofile werden bidirektional synchronisiert -
               über REST APIs mit OAuth 2.0 (Bullhorn) oder
               API-Key-Authentifizierung (zvoove).
             </Typo.Paragraph>
@@ -379,7 +379,7 @@ export default function Page() {
             <Typo.Paragraph>
               Unser Workflow erreicht LLM-basiert ein Parsing-Niveau vergleichbar
               mit Textkernel oder CVlizer. Für Kunden mit bestehenden Lizenzen
-              binden wir spezialisierte Parser direkt ein – inklusive Textkernel
+              binden wir spezialisierte Parser direkt ein - inklusive Textkernel
               Match mit ESCO-Skill-Ontologie (12.000+ Skill-Konzepte, 300.000+
               Synonyme).
             </Typo.Paragraph>
@@ -459,7 +459,7 @@ export default function Page() {
           </IntroBox.Headline>
           <IntroBox.Subline>
             n8n ist eine Open-Source-Workflow-Plattform, die wir auf Ihrem
-            eigenen Server in Deutschland hosten – vollständig DSGVO-konform,
+            eigenen Server in Deutschland hosten - vollständig DSGVO-konform,
             ohne Auftragsverarbeitung und ohne Pro-Execution-Kosten. Diese
             konkreten Workflows automatisieren Ihren Screening-Prozess
             Ende-zu-Ende.
@@ -484,7 +484,7 @@ export default function Page() {
               Bullhorn-API durchgeführt. Neue Kandidaten werden automatisch im
               ATS angelegt, gegen offene Positionen gematcht und nach
               Matching-Score priorisiert. Bei Score &gt;= 7 geht sofort eine
-              Slack-Benachrichtigung an den Disponenten; bei Score 4–6 wird der
+              Slack-Benachrichtigung an den Disponenten; bei Score 4-6 wird der
               Kandidat in den Talentpool aufgenommen; bei Score &lt; 4 wird ein
               Absage-Workflow ausgelöst. Parallel erhält der Bewerber eine
               automatische Eingangsbestätigung.
@@ -531,7 +531,7 @@ export default function Page() {
               bei &bdquo;Vorgestellt beim Kunden&ldquo; ein Status-Update nach 3
               Tagen, bei &bdquo;Absage&ldquo; eine personalisierte Absage-E-Mail
               mit anschließendem DSGVO-Lösch-Workflow nach 6 Monaten. So bleibt
-              jeder Bewerber informiert – ohne manuellen Aufwand für den
+              jeder Bewerber informiert - ohne manuellen Aufwand für den
               Disponenten.
             </Typo.Paragraph>
           </SimpleCard>
@@ -548,7 +548,7 @@ export default function Page() {
             <Typo.Paragraph>
               Zwei tägliche Schedule-Trigger: (1) Alle in den letzten 24 Stunden
               angelegten Kandidatenprofile werden abgerufen und deren Skills per
-              LLM gegen die ESCO-Taxonomie normalisiert – Synonyme werden auf
+              LLM gegen die ESCO-Taxonomie normalisiert - Synonyme werden auf
               Standard-Begriffe gemappt, verwandte Skills ergänzt, ESCO-Codes
               zugeordnet. Die normalisierten Daten werden ins ATS
               zurückgeschrieben. (2) Alle aktiven Überlassungsverträge werden
@@ -562,16 +562,16 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Section 8: ComparisonCard + SavingsCard – ROI-Kalkulation */}
+      {/* Section 8: ComparisonCard + SavingsCard - ROI-Kalkulation */}
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>ROI-Kalkulation</IntroBox.PreHeadline>
-          <IntroBox.Headline>300–500 % ROI im ersten Jahr</IntroBox.Headline>
+          <IntroBox.Headline>300-500 % ROI im ersten Jahr</IntroBox.Headline>
           <IntroBox.Subline>
             Berechnung für einen mittelgroßen Personaldienstleister mit 20
             Disponenten und 500+ Bewerbungseingängen pro Woche. Moderne
             Zeitarbeitssoftware mit KI-Screening kann Bearbeitungszeiten um
-            30–50 % reduzieren – hier sehen Sie, was das konkret bedeutet.
+            30-50 % reduzieren - hier sehen Sie, was das konkret bedeutet.
           </IntroBox.Subline>
         </IntroBox>
 
@@ -580,16 +580,16 @@ export default function Page() {
             <ComparisonHeadline>Vorher: Manuelles Screening</ComparisonHeadline>
             <ComparisonList>
               <ComparisonListItem>
-                5 FTE Screening-Aufwand @ 42.000 €/Jahr – Disponenten verbringen
+                5 FTE Screening-Aufwand @ 42.000 €/Jahr - Disponenten verbringen
                 den Großteil ihrer Zeit mit dem Sichten und Bewerten von
                 Lebensläufen statt mit Kundenbetreuung
               </ComparisonListItem>
               <ComparisonListItem>
-                15–20 Minuten pro Bewerbung für Sichten, manuelle Dateneingabe in
+                15-20 Minuten pro Bewerbung für Sichten, manuelle Dateneingabe in
                 zvoove/Bullhorn, Bewerten und Zuordnen zu offenen Stellen
               </ComparisonListItem>
               <ComparisonListItem>
-                3–5 Tage durchschnittliche Reaktionszeit – in dieser Zeit haben
+                3-5 Tage durchschnittliche Reaktionszeit - in dieser Zeit haben
                 27 % der Bewerber bereits aufgehört zu antworten (Ghosting)
               </ComparisonListItem>
             </ComparisonList>
@@ -602,16 +602,16 @@ export default function Page() {
             </ComparisonHeadline>
             <ComparisonList>
               <ComparisonListItem>
-                1 FTE für Exception Handling @ 42.000 €/Jahr – der Disponent
+                1 FTE für Exception Handling @ 42.000 €/Jahr - der Disponent
                 prüft nur noch KI-Vorschläge und führt persönliche Gespräche
               </ComparisonListItem>
               <ComparisonListItem>
-                Unter 60 Sekunden pro Bewerbung – vom E-Mail-Eingang über
+                Unter 60 Sekunden pro Bewerbung - vom E-Mail-Eingang über
                 CV-Parsing und Matching bis zur Disponent-Benachrichtigung per
                 Slack
               </ComparisonListItem>
               <ComparisonListItem>
-                Unter 2 Stunden Reaktionszeit – automatische Eingangsbestätigung
+                Unter 2 Stunden Reaktionszeit - automatische Eingangsbestätigung
                 sofort, Disponent kontaktiert Top-Kandidaten am selben Tag
               </ComparisonListItem>
             </ComparisonList>
@@ -620,13 +620,13 @@ export default function Page() {
         </ComparisonCard>
 
         <SavingsCard>
-          <SavingsBadge>ROI im ersten Jahr: 300–500 %</SavingsBadge>
+          <SavingsBadge>ROI im ersten Jahr: 300-500 %</SavingsBadge>
           <SavingsItems>
             <SavingsItem label="Jährliche Ersparnis" highlight>
               143.000 €
             </SavingsItem>
-            <SavingsItem label="Amortisation">2–3 Monate</SavingsItem>
-            <SavingsItem label="Reaktionszeit">–90 %</SavingsItem>
+            <SavingsItem label="Amortisation">2-3 Monate</SavingsItem>
+            <SavingsItem label="Reaktionszeit">-90 %</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>
@@ -639,35 +639,35 @@ export default function Page() {
               question:
                 "Wie genau ist das KI-Matching im Vergleich zu spezialisierten Tools wie Textkernel oder Bullhorn Search & Match?",
               answer:
-                "Unser LLM-basierter Matching-Ansatz erreicht nach einer Trainingsphase von 2–4 Wochen eine Match-Genauigkeit von 85–92 %. Im Gegensatz zu reinem Keyword-Matching versteht die KI semantische Zusammenhänge – sie erkennt, dass 'CNC-Fräsen' und 'CNC-Bearbeitung' verwandt sind, oder dass ein 'Schlosser' auch als 'Industriemechaniker' oder 'Metallfacharbeiter' gelistet sein kann. Die Genauigkeit verbessert sich kontinuierlich durch Feedback der Disponenten. Für Kunden, die bereits Textkernel- oder Bullhorn-Lizenzen besitzen, integrieren wir diese Tools als zusätzliche Matching-Engine in den n8n-Workflow.",
+                "Unser LLM-basierter Matching-Ansatz erreicht nach einer Trainingsphase von 2-4 Wochen eine Match-Genauigkeit von 85-92 %. Im Gegensatz zu reinem Keyword-Matching versteht die KI semantische Zusammenhänge - sie erkennt, dass 'CNC-Fräsen' und 'CNC-Bearbeitung' verwandt sind, oder dass ein 'Schlosser' auch als 'Industriemechaniker' oder 'Metallfacharbeiter' gelistet sein kann. Die Genauigkeit verbessert sich kontinuierlich durch Feedback der Disponenten. Für Kunden, die bereits Textkernel- oder Bullhorn-Lizenzen besitzen, integrieren wir diese Tools als zusätzliche Matching-Engine in den n8n-Workflow.",
             },
             {
               question:
                 "Welche Bewerbungsformate und -kanäle werden unterstützt?",
               answer:
-                "Der Workflow verarbeitet Bewerbungen aus allen gängigen Kanälen: E-Mail-Anhänge (PDF, Word, Bilder), Jobportal-Bewerbungen von StepStone, Indeed und Stellenanzeigen.de per API, Karriereseiten-Uploads per Webhook sowie WhatsApp-Bewerbungen über PitchYou. Das CV-Parsing erkennt Lebensläufe in über 25 Sprachen – besonders relevant für Personaldienstleister im Blue-Collar-Bereich, die häufig Bewerbungen in Polnisch, Rumänisch, Türkisch und weiteren Sprachen erhalten. Auch unstrukturierte Formate wie Freitext-E-Mails oder Fotos von handgeschriebenen Lebensläufen werden verarbeitet.",
+                "Der Workflow verarbeitet Bewerbungen aus allen gängigen Kanälen: E-Mail-Anhänge (PDF, Word, Bilder), Jobportal-Bewerbungen von StepStone, Indeed und Stellenanzeigen.de per API, Karriereseiten-Uploads per Webhook sowie WhatsApp-Bewerbungen über PitchYou. Das CV-Parsing erkennt Lebensläufe in über 25 Sprachen - besonders relevant für Personaldienstleister im Blue-Collar-Bereich, die häufig Bewerbungen in Polnisch, Rumänisch, Türkisch und weiteren Sprachen erhalten. Auch unstrukturierte Formate wie Freitext-E-Mails oder Fotos von handgeschriebenen Lebensläufen werden verarbeitet.",
             },
             {
               question:
                 "Wie erfolgt die Integration in unser bestehendes ATS-System (zvoove, Bullhorn, compleet)?",
               answer:
-                "Die Integration erfolgt über die REST APIs Ihrer Branchensoftware. Für zvoove nutzen wir die zvoove API mit API-Key-Authentifizierung für Kandidaten-CRUD, Positions-Abgleich und Matching. Für Bullhorn verwenden wir die REST API mit OAuth 2.0 für Kandidaten, Job-Submissions, Placements und File Attachments. Auch compleet, Mysolution (Salesforce-basiert), HR4YOU und coveto werden unterstützt. Die Kandidatenprofile werden bidirektional synchronisiert – Änderungen im ATS fließen automatisch ins Matching ein und umgekehrt. Die Einrichtung dauert typischerweise 1–2 Wochen.",
+                "Die Integration erfolgt über die REST APIs Ihrer Branchensoftware. Für zvoove nutzen wir die zvoove API mit API-Key-Authentifizierung für Kandidaten-CRUD, Positions-Abgleich und Matching. Für Bullhorn verwenden wir die REST API mit OAuth 2.0 für Kandidaten, Job-Submissions, Placements und File Attachments. Auch compleet, Mysolution (Salesforce-basiert), HR4YOU und coveto werden unterstützt. Die Kandidatenprofile werden bidirektional synchronisiert - Änderungen im ATS fließen automatisch ins Matching ein und umgekehrt. Die Einrichtung dauert typischerweise 1-2 Wochen.",
             },
             {
               question: "Ersetzt die KI den Disponenten?",
               answer:
-                "Nein – die KI übernimmt die zeitintensiven, repetitiven Aufgaben: CV-Parsing, Datenextraktion, Pre-Screening, Scoring, Duplikaterkennung, Eingangsbestätigungen und Follow-ups. Damit gewinnt der Disponent Zeit für die Aufgaben, die menschliches Urteilsvermögen erfordern: persönliche Bewerbungsgespräche, Beurteilung von Soft Skills und Cultural Fit, Beziehungsaufbau mit Kandidaten und Kunden, komplexe Gehaltsverhandlungen und strategische Kundenberatung. Die finale Kandidatenauswahl liegt immer beim Menschen. Laut Branchenstatistik setzen bereits 46 % der Personaldienstleister KI im Bewerbermatching oder Onboarding ein – als Unterstützung, nicht als Ersatz.",
+                "Nein - die KI übernimmt die zeitintensiven, repetitiven Aufgaben: CV-Parsing, Datenextraktion, Pre-Screening, Scoring, Duplikaterkennung, Eingangsbestätigungen und Follow-ups. Damit gewinnt der Disponent Zeit für die Aufgaben, die menschliches Urteilsvermögen erfordern: persönliche Bewerbungsgespräche, Beurteilung von Soft Skills und Cultural Fit, Beziehungsaufbau mit Kandidaten und Kunden, komplexe Gehaltsverhandlungen und strategische Kundenberatung. Die finale Kandidatenauswahl liegt immer beim Menschen. Laut Branchenstatistik setzen bereits 46 % der Personaldienstleister KI im Bewerbermatching oder Onboarding ein - als Unterstützung, nicht als Ersatz.",
             },
             {
               question: "Ist die Lösung DSGVO-konform?",
               answer:
-                "Ja. Alle n8n-Workflows werden auf Ihrem eigenen Server in Deutschland gehostet (z. B. Hetzner) – es findet keine Auftragsverarbeitung durch Dritte statt, und die Daten verlassen nicht die EU. Bewerberdaten abgelehnter Kandidaten werden automatisch nach 6 Monaten zur Löschung markiert (AGG-Klagefrist). Der Workflow protokolliert alle Verarbeitungsschritte für die Informationspflicht gegenüber Bewerbern. Technische und organisatorische Maßnahmen (TOM) wie Verschlüsselung und Zugriffskontrollen sind implementiert. Personaldienstleister tragen eine doppelte Verantwortung – für Bewerberdaten und Mitarbeiterdaten der Zeitarbeiter – und sind daher stärker von der DSGVO betroffen als andere Branchen.",
+                "Ja. Alle n8n-Workflows werden auf Ihrem eigenen Server in Deutschland gehostet (z. B. Hetzner) - es findet keine Auftragsverarbeitung durch Dritte statt, und die Daten verlassen nicht die EU. Bewerberdaten abgelehnter Kandidaten werden automatisch nach 6 Monaten zur Löschung markiert (AGG-Klagefrist). Der Workflow protokolliert alle Verarbeitungsschritte für die Informationspflicht gegenüber Bewerbern. Technische und organisatorische Maßnahmen (TOM) wie Verschlüsselung und Zugriffskontrollen sind implementiert. Personaldienstleister tragen eine doppelte Verantwortung - für Bewerberdaten und Mitarbeiterdaten der Zeitarbeiter - und sind daher stärker von der DSGVO betroffen als andere Branchen.",
             },
             {
               question:
                 "Was kostet die Lösung und wie schnell ist sie einsatzbereit?",
               answer:
-                "Die Kosten richten sich nach der Anzahl der Niederlassungen, dem Bewerbungsvolumen und den gewünschten Integrationen. Typischerweise amortisiert sich die Investition innerhalb von 2–3 Monaten. Die Basiseinrichtung (E-Mail-Trigger, CV-Parsing, LLM-Matching, ATS-Integration, Benachrichtigungen) ist in 2–4 Wochen produktiv. Erweiterte Workflows wie Jobportal-Monitoring, ESCO-Normalisierung und Fristenüberwachung werden im zweiten Schritt aktiviert. Anders als bei SaaS-Lösungen wie Zapier oder Make fallen keine Pro-Execution-Kosten an – Sie zahlen einen Festpreis für unbegrenzte Automatisierungen.",
+                "Die Kosten richten sich nach der Anzahl der Niederlassungen, dem Bewerbungsvolumen und den gewünschten Integrationen. Typischerweise amortisiert sich die Investition innerhalb von 2-3 Monaten. Die Basiseinrichtung (E-Mail-Trigger, CV-Parsing, LLM-Matching, ATS-Integration, Benachrichtigungen) ist in 2-4 Wochen produktiv. Erweiterte Workflows wie Jobportal-Monitoring, ESCO-Normalisierung und Fristenüberwachung werden im zweiten Schritt aktiviert. Anders als bei SaaS-Lösungen wie Zapier oder Make fallen keine Pro-Execution-Kosten an - Sie zahlen einen Festpreis für unbegrenzte Automatisierungen.",
             },
           ]}
         />

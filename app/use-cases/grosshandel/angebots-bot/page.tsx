@@ -46,9 +46,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-angebotserstellung",
       preHeadline: "AI Angebotserstellung",
       headline: "AI-gestützte Angebotserstellung für den Großhandel",
-      metaTitle: "AI Angebotserstellung – Automatisch & Intelligent | Bluebatch",
+      metaTitle: "AI Angebotserstellung - Automatisch & Intelligent | Bluebatch",
       metaDescription:
-        "AI-gestützte Angebotserstellung für den Großhandel. Automatische Preisberechnung, PDF-Generierung und Versand – in Minuten statt Stunden.",
+        "AI-gestützte Angebotserstellung für den Großhandel. Automatische Preisberechnung, PDF-Generierung und Versand - in Minuten statt Stunden.",
       keywords: [
         "AI Angebotserstellung",
         "KI Angebote erstellen",
@@ -63,9 +63,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       preHeadline: "Automatische Angebotserstellung",
       headline: "Automatische Angebotserstellung für den Großhandel",
       metaTitle:
-        "Automatische Angebotserstellung – Großhandel | Bluebatch",
+        "Automatische Angebotserstellung - Großhandel | Bluebatch",
       metaDescription:
-        "Automatische Angebotserstellung für Großhändler. Von der Kundenanfrage zum fertigen Angebot – vollautomatisch mit ERP-Integration.",
+        "Automatische Angebotserstellung für Großhändler. Von der Kundenanfrage zum fertigen Angebot - vollautomatisch mit ERP-Integration.",
       keywords: [
         "automatische Angebotserstellung",
         "Angebote automatisch erstellen",
@@ -80,7 +80,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       preHeadline: "Automatisierte Angebotserstellung",
       headline: "Automatisierte Angebotserstellung für den Großhandel",
       metaTitle:
-        "Automatisierte Angebotserstellung – Großhandel | Bluebatch",
+        "Automatisierte Angebotserstellung - Großhandel | Bluebatch",
       metaDescription:
         "Automatisierte Angebotserstellung für Großhändler. 70-90% schnellere Angebote, 21x höhere Qualifizierungsrate.",
       keywords: [
@@ -96,9 +96,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/angebote-automatisieren",
       preHeadline: "Angebote automatisieren",
       headline: "Angebote automatisieren im Großhandel",
-      metaTitle: "Angebote automatisieren – Großhandel | Bluebatch",
+      metaTitle: "Angebote automatisieren - Großhandel | Bluebatch",
       metaDescription:
-        "Angebote automatisieren für Großhändler. Kundenanfragen automatisch in professionelle Angebote umwandeln – mit ERP-Anbindung.",
+        "Angebote automatisieren für Großhändler. Kundenanfragen automatisch in professionelle Angebote umwandeln - mit ERP-Anbindung.",
       keywords: [
         "Angebote automatisieren",
         "Angebotsprozess optimieren",
@@ -112,7 +112,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/angebots-automatisierung",
       preHeadline: "Angebots-Automatisierung",
       headline: "Angebots-Automatisierung für den Großhandel",
-      metaTitle: "Angebots-Automatisierung – Großhandel | Bluebatch",
+      metaTitle: "Angebots-Automatisierung - Großhandel | Bluebatch",
       metaDescription:
         "Angebots-Automatisierung für Großhändler. 70-90% schnellere Erstellung, automatischer Versand und Follow-up.",
       keywords: [
@@ -128,9 +128,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ki-angebotserstellung",
       preHeadline: "KI-Angebotserstellung",
       headline: "KI-gestützte Angebotserstellung für den Großhandel",
-      metaTitle: "KI-Angebotserstellung – Großhandel | Bluebatch",
+      metaTitle: "KI-Angebotserstellung - Großhandel | Bluebatch",
       metaDescription:
-        "KI-gestützte Angebotserstellung für Großhändler. Anfragen analysieren, Preise berechnen, Angebote versenden – alles automatisch.",
+        "KI-gestützte Angebotserstellung für Großhändler. Anfragen analysieren, Preise berechnen, Angebote versenden - alles automatisch.",
       keywords: [
         "KI Angebotserstellung",
         "künstliche Intelligenz Angebote",
@@ -144,7 +144,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 const defaultMeta = {
-  title: "Angebots-Bot – Großhandel | Bluebatch",
+  title: "Angebots-Bot - Großhandel | Bluebatch",
   description:
     "Wie Bluebatch Großhändlern hilft, Angebote automatisch zu erstellen und zu versenden. 21x höhere Qualifizierungsrate.",
   ogDescription:
@@ -262,7 +262,7 @@ export default async function Page({
             <Hero2ColumnDescription>
               Leads, die innerhalb von 5 Minuten kontaktiert werden, haben eine
               21x höhere Qualifizierungsrate. Unser Angebots-Bot erstellt
-              professionelle Angebote in Minuten statt Stunden –
+              professionelle Angebote in Minuten statt Stunden -
               vollautomatisch.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
@@ -324,7 +324,7 @@ export default async function Page({
             So funktioniert der Angebots-Bot
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Vier automatisierte Schritte – von der Kundenanfrage zum versendeten
+            Vier automatisierte Schritte - von der Kundenanfrage zum versendeten
             Angebot.
           </IntroBox.Subline>
         </IntroBox>
@@ -398,21 +398,21 @@ export default async function Page({
             <SimpleCard className="bg-white/10! border-white/20! text-white">
               <Typo.H3 className="text-white!">CRM-Integration</Typo.H3>
               <Typo.Paragraph className="text-gray-300!">
-                HubSpot, Salesforce, Zoho, Microsoft Dynamics – automatische
+                HubSpot, Salesforce, Zoho, Microsoft Dynamics - automatische
                 Kundendaten und Opportunity-Updates.
               </Typo.Paragraph>
             </SimpleCard>
             <SimpleCard className="bg-white/10! border-white/20! text-white">
               <Typo.H3 className="text-white!">ERP-Anbindung</Typo.H3>
               <Typo.Paragraph className="text-gray-300!">
-                SAP, Odoo, NetSuite – Echtzeit-Preise, Verfügbarkeiten und
+                SAP, Odoo, NetSuite - Echtzeit-Preise, Verfügbarkeiten und
                 kundenspezifische Konditionen.
               </Typo.Paragraph>
             </SimpleCard>
             <SimpleCard className="bg-white/10! border-white/20! text-white">
               <Typo.H3 className="text-white!">E-Signatur</Typo.H3>
               <Typo.Paragraph className="text-gray-300!">
-                DocuSign, Adobe Sign – vom Angebot zur Unterschrift ohne
+                DocuSign, Adobe Sign - vom Angebot zur Unterschrift ohne
                 Medienbruch.
               </Typo.Paragraph>
             </SimpleCard>
@@ -447,7 +447,7 @@ export default async function Page({
             {
               question: "Was passiert bei telefonischen Anfragen?",
               answer:
-                "Sales-Mitarbeiter können den Workflow manuell auslösen – per Webformular oder CRM-Update. Die Automatisierung übernimmt dann für Preisabfrage, Kalkulation und Dokumentenerstellung. So profitiert jedes Angebot von der Automatisierung.",
+                "Sales-Mitarbeiter können den Workflow manuell auslösen - per Webformular oder CRM-Update. Die Automatisierung übernimmt dann für Preisabfrage, Kalkulation und Dokumentenerstellung. So profitiert jedes Angebot von der Automatisierung.",
             },
             {
               question: "Wie lange dauert die Einrichtung?",

@@ -109,7 +109,7 @@ export default function Page() {
           <BackgroundHero.Description>
             KI-gest&uuml;tzter WhatsApp-Chatbot f&uuml;r automatische
             Vorqualifizierung, Terminvereinbarung und mehrsprachige
-            Kommunikation. Reaktionszeit unter 5 Minuten statt 24 Stunden –
+            Kommunikation. Reaktionszeit unter 5 Minuten statt 24 Stunden -
             rund um die Uhr, in 25 Sprachen.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -129,13 +129,13 @@ export default function Page() {
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* Section 2: Hero2Column – Das Problem */}
+      {/* Section 2: Hero2Column - Das Problem */}
       <ContentWrapper>
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Das Problem</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline as="h2">
-              Bewerber warten – und wechseln zur Konkurrenz
+              Bewerber warten - und wechseln zur Konkurrenz
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Zeitarbeiter bewerben sich gleichzeitig bei mehreren
@@ -150,7 +150,7 @@ export default function Page() {
               Kommunikation: Eingangsbest&auml;tigungen, R&uuml;ckfragen zu
               Verf&uuml;gbarkeit und Schichtbereitschaft,
               Terminvereinbarungen per Telefon-Ping-Pong und manuelle
-              Status-Updates – immer wieder die gleichen Abl&auml;ufe,
+              Status-Updates - immer wieder die gleichen Abl&auml;ufe,
               f&uuml;r jeden einzelnen Bewerber.
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
@@ -163,7 +163,7 @@ export default function Page() {
         </Hero2Column>
       </ContentWrapper>
 
-      {/* Section 3: ComparisonCard – Vorher vs. Nachher */}
+      {/* Section 3: ComparisonCard - Vorher vs. Nachher */}
       <ContentWrapper colorScheme="gray">
         <IntroBox>
           <IntroBox.PreHeadline>Der Unterschied</IntroBox.PreHeadline>
@@ -184,13 +184,13 @@ export default function Page() {
                 3 FTE f&uuml;r Erst-Kommunikation @ 38.000 &euro;/Jahr
               </ComparisonListItem>
               <ComparisonListItem>
-                10–15 Minuten pro Bewerber-Kontakt manuell
+                10-15 Minuten pro Bewerber-Kontakt manuell
               </ComparisonListItem>
               <ComparisonListItem>
-                24–48 Stunden durchschnittliche Antwortzeit
+                24-48 Stunden durchschnittliche Antwortzeit
               </ComparisonListItem>
               <ComparisonListItem>
-                Kommunikation nur w&auml;hrend B&uuml;rozeiten (Mo–Fr 8–17
+                Kommunikation nur w&auml;hrend B&uuml;rozeiten (Mo-Fr 8-17
                 Uhr)
               </ComparisonListItem>
               <ComparisonListItem>
@@ -215,7 +215,7 @@ export default function Page() {
                 Sofortige Antwort durch KI-Chatbot in unter 5 Minuten
               </ComparisonListItem>
               <ComparisonListItem>
-                24/7-Erreichbarkeit – auch abends, am Wochenende und an
+                24/7-Erreichbarkeit - auch abends, am Wochenende und an
                 Feiertagen
               </ComparisonListItem>
               <ComparisonListItem>
@@ -233,7 +233,7 @@ export default function Page() {
         </ComparisonCard>
       </ContentWrapper>
 
-      {/* Section 4: SimpleGrid – Vier Kanäle, ein intelligenter Bot */}
+      {/* Section 4: SimpleGrid - Vier Kanäle, ein intelligenter Bot */}
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>
@@ -244,7 +244,7 @@ export default function Page() {
           </IntroBox.Headline>
           <IntroBox.Subline>
             Der KI-Chatbot kommuniziert &uuml;ber alle relevanten Kan&auml;le
-            und f&uuml;hrt Bewerber automatisch durch den gesamten Prozess –
+            und f&uuml;hrt Bewerber automatisch durch den gesamten Prozess -
             vom ersten Kontakt bis zum Termin. Alle Konversationen werden
             zentral im ATS-System zusammengef&uuml;hrt.
           </IntroBox.Subline>
@@ -264,7 +264,7 @@ export default function Page() {
               niedrigschwellig, kein Lebenslauf n&ouml;tig, Antwort in
               Sekunden. &Uuml;ber die WhatsApp Business API (360dialog oder
               Twilio) DSGVO-konform angebunden. PitchYou-Studien zeigen
-              Conversion Rates von 15–30 %, bis zu 75 % bei optimierten
+              Conversion Rates von 15-30 %, bis zu 75 % bei optimierten
               Flows.
             </Typo.Paragraph>
           </SimpleCard>
@@ -312,7 +312,7 @@ export default function Page() {
             />
             <Typo.H3>SMS-Fallback</Typo.H3>
             <Typo.Paragraph>
-              Erreicht auch Kandidaten ohne WhatsApp oder Smartphone-Zugang –
+              Erreicht auch Kandidaten ohne WhatsApp oder Smartphone-Zugang -
               besonders relevant f&uuml;r &auml;ltere Zielgruppen oder
               l&auml;ndliche Regionen. Automatische Terminerinnerungen und
               kurze Status-Updates per SMS als zuverl&auml;ssiger
@@ -322,7 +322,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Section 5: TimelineAsSteps – Der automatisierte Chat-Flow */}
+      {/* Section 5: TimelineAsSteps - Der automatisierte Chat-Flow */}
       <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>Der Prozess</IntroBox.PreHeadline>
@@ -330,8 +330,8 @@ export default function Page() {
             Der automatisierte Chat-Flow in 5 Schritten
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Vom ersten Kontakt bis zum Disponenten-Gespr&auml;ch –
-            vollautomatisch, DSGVO-konform und in 25 Sprachen. 70–80 % aller
+            Vom ersten Kontakt bis zum Disponenten-Gespr&auml;ch -
+            vollautomatisch, DSGVO-konform und in 25 Sprachen. 70-80 % aller
             Anfragen werden ohne menschliches Eingreifen bearbeitet.
           </IntroBox.Subline>
         </IntroBox>
@@ -380,7 +380,7 @@ export default function Page() {
                 <PhaseCardBadge>KI-gest&uuml;tzt</PhaseCardBadge>
               </PhaseCardHeader>
               <PhaseCardDescription>
-                Der Chatbot stellt 4–8 strukturierte Fragen, abgestimmt auf
+                Der Chatbot stellt 4-8 strukturierte Fragen, abgestimmt auf
                 das jeweilige Stellenprofil: Name, Wohnort/PLZ,
                 fr&uuml;hester Starttermin, Schichtbereitschaft,
                 Berufserfahrung, F&uuml;hrerschein, Sprachkenntnisse und
@@ -391,7 +391,7 @@ export default function Page() {
               </PhaseCardDescription>
               <PhaseCardDetails>
                 <PhaseCardDetailItem label="Fragen">
-                  4–8 pro Stellenprofil, dynamisch anpassbar
+                  4-8 pro Stellenprofil, dynamisch anpassbar
                 </PhaseCardDetailItem>
                 <PhaseCardDetailItem
                   label="Abschlussrate"
@@ -503,7 +503,7 @@ export default function Page() {
                   Verf&uuml;gbarkeit
                 </PhaseCardDetailItem>
                 <PhaseCardDetailItem label="Aufteilung" variant="highlight">
-                  70–80 % Bot autonom, 20–30 % menschliche Intervention
+                  70-80 % Bot autonom, 20-30 % menschliche Intervention
                 </PhaseCardDetailItem>
               </PhaseCardDetails>
             </PhaseCard>
@@ -532,14 +532,14 @@ export default function Page() {
                 per KI-basierter Language Detection und antwortet sofort in
                 der richtigen Sprache. Die &Uuml;bersetzung erfolgt
                 &uuml;ber die DeepL API f&uuml;r h&ouml;chste Qualit&auml;t
-                bei europ&auml;ischen Sprachen – besonders stark bei
+                bei europ&auml;ischen Sprachen - besonders stark bei
                 Polnisch und Rum&auml;nisch. Alle Antworten des Disponenten
                 werden automatisch r&uuml;ck&uuml;bersetzt.
               </IntroBox.Subline>
             </IntroBox>
             <Typo.List>
               <Typo.ListItem>
-                Automatische Spracherkennung – kein manuelles
+                Automatische Spracherkennung - kein manuelles
                 Ausw&auml;hlen n&ouml;tig
               </Typo.ListItem>
               <Typo.ListItem>
@@ -570,16 +570,16 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Section 7: SavingsCard – Ihre Ersparnis */}
+      {/* Section 7: SavingsCard - Ihre Ersparnis */}
       <ContentWrapper>
         <SavingsCard>
-          <SavingsBadge>ROI im ersten Jahr: 250–400 %</SavingsBadge>
+          <SavingsBadge>ROI im ersten Jahr: 250-400 %</SavingsBadge>
           <SavingsItems>
             <SavingsItem label="J&auml;hrliche Ersparnis" highlight>
               80.000 &euro;
             </SavingsItem>
-            <SavingsItem label="Amortisation">3–4 Monate</SavingsItem>
-            <SavingsItem label="Antwortzeit-Reduktion">–98 %</SavingsItem>
+            <SavingsItem label="Amortisation">3-4 Monate</SavingsItem>
+            <SavingsItem label="Antwortzeit-Reduktion">-98 %</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>
@@ -626,7 +626,7 @@ export default function Page() {
             />
             <Typo.H3>WhatsApp Business API (BSP)</Typo.H3>
             <Typo.Paragraph>
-              Nur die offizielle Business API ist DSGVO-konform – nicht die
+              Nur die offizielle Business API ist DSGVO-konform - nicht die
               regul&auml;re WhatsApp-App. Business Solution Provider in
               DACH: 360dialog (Berlin, g&uuml;nstig, Self-Service), Twilio
               (umfangreiche API, skalierbar), Superchat und Chatwerk mit
@@ -707,7 +707,7 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Section 9: n8n-Automatisierung – Konkrete Workflows */}
+      {/* Section 9: n8n-Automatisierung - Konkrete Workflows */}
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>n8n-Automatisierung</IntroBox.PreHeadline>
@@ -859,30 +859,30 @@ export default function Page() {
               question:
                 "Über welche Kanäle kommuniziert der Chatbot?",
               answer:
-                "Der Chatbot ist kanalübergreifend einsetzbar: WhatsApp Business API (über 360dialog oder Twilio DSGVO-konform), Website Live-Chat, E-Mail (IMAP-Trigger) und SMS als Fallback. WhatsApp ist dabei der dominante Kanal für Blue-Collar-Recruiting mit Conversion Rates von 15–30 %. Alle Konversationen werden zentral im ATS-System (zvoove, Bullhorn oder über Kombo als Unified API) zusammengeführt, sodass Disponenten den vollständigen Kommunikationsverlauf sehen.",
+                "Der Chatbot ist kanalübergreifend einsetzbar: WhatsApp Business API (über 360dialog oder Twilio DSGVO-konform), Website Live-Chat, E-Mail (IMAP-Trigger) und SMS als Fallback. WhatsApp ist dabei der dominante Kanal für Blue-Collar-Recruiting mit Conversion Rates von 15-30 %. Alle Konversationen werden zentral im ATS-System (zvoove, Bullhorn oder über Kombo als Unified API) zusammengeführt, sodass Disponenten den vollständigen Kommunikationsverlauf sehen.",
             },
             {
               question:
                 "Wie natürlich wirkt die KI-Kommunikation?",
               answer:
-                "Der Chatbot nutzt OpenAI GPT-4o als NLP-Backend und wird auf den Ton und Stil Ihres Unternehmens trainiert. Für die Vorqualifizierung werden strukturierte Fragen mit Multiple-Choice-Antworten eingesetzt (wie bei PitchYou bewährt), ergänzt durch freie Konversation für FAQ-Beantwortung. Bei komplexen oder emotionalen Anliegen, bei niedrigem Confidence Score oder auf expliziten Wunsch des Bewerbers wird automatisch an einen Disponenten übergeben – inklusive vollständigem Gesprächsverlauf und strukturiertem Kandidatendossier.",
+                "Der Chatbot nutzt OpenAI GPT-4o als NLP-Backend und wird auf den Ton und Stil Ihres Unternehmens trainiert. Für die Vorqualifizierung werden strukturierte Fragen mit Multiple-Choice-Antworten eingesetzt (wie bei PitchYou bewährt), ergänzt durch freie Konversation für FAQ-Beantwortung. Bei komplexen oder emotionalen Anliegen, bei niedrigem Confidence Score oder auf expliziten Wunsch des Bewerbers wird automatisch an einen Disponenten übergeben - inklusive vollständigem Gesprächsverlauf und strukturiertem Kandidatendossier.",
             },
             {
               question: "Ist die Lösung DSGVO-konform?",
               answer:
-                "Ja, vollständig. Die Rechtsgrundlage bilden Art. 6 Abs. 1 lit. b) DSGVO (vorvertragliche Maßnahmen) und § 26 BDSG (Beschäftigtendatenschutz). Konkret umgesetzt: Aktive Einwilligung per Opt-in-Button im Chat vor erster Datenerhebung, automatische Löschung nach 6 Monaten ohne Talentpool-Einwilligung, keine vollautomatischen Auswahlentscheidungen (Art. 22 DSGVO – finale Entscheidung immer durch Menschen), Audit-Trail aller Einwilligungen. WhatsApp-Kommunikation ausschließlich über die Business API (nicht die reguläre App). AV-Verträge mit allen Dienstleistern. Gemäß EU AI Act wird das System als Hochrisiko-KI im Bereich Beschäftigung eingestuft – alle zusätzlichen Compliance-Anforderungen werden erfüllt.",
+                "Ja, vollständig. Die Rechtsgrundlage bilden Art. 6 Abs. 1 lit. b) DSGVO (vorvertragliche Maßnahmen) und § 26 BDSG (Beschäftigtendatenschutz). Konkret umgesetzt: Aktive Einwilligung per Opt-in-Button im Chat vor erster Datenerhebung, automatische Löschung nach 6 Monaten ohne Talentpool-Einwilligung, keine vollautomatischen Auswahlentscheidungen (Art. 22 DSGVO - finale Entscheidung immer durch Menschen), Audit-Trail aller Einwilligungen. WhatsApp-Kommunikation ausschließlich über die Business API (nicht die reguläre App). AV-Verträge mit allen Dienstleistern. Gemäß EU AI Act wird das System als Hochrisiko-KI im Bereich Beschäftigung eingestuft - alle zusätzlichen Compliance-Anforderungen werden erfüllt.",
             },
             {
               question:
                 "Welche ATS-Systeme werden unterstützt?",
               answer:
-                "Native Integration mit zvoove (Marktführer Deutschland, 3.700+ Kunden) über die REST-API mit API-Key-Authentifizierung. Bullhorn über die vollständig dokumentierte REST API. Für alle weiteren ATS-Systeme (Personio, Greenhouse, SmartRecruiters, Oracle) nutzen wir Kombo als Unified API – eine API für alle Bewerbermanagementsysteme. Die Integration umfasst: Kandidatenanlage, Statusaktualisierung, Notizen und Dokumente anhängen, Kalender- und Dispositionstools synchronisieren.",
+                "Native Integration mit zvoove (Marktführer Deutschland, 3.700+ Kunden) über die REST-API mit API-Key-Authentifizierung. Bullhorn über die vollständig dokumentierte REST API. Für alle weiteren ATS-Systeme (Personio, Greenhouse, SmartRecruiters, Oracle) nutzen wir Kombo als Unified API - eine API für alle Bewerbermanagementsysteme. Die Integration umfasst: Kandidatenanlage, Statusaktualisierung, Notizen und Dokumente anhängen, Kalender- und Dispositionstools synchronisieren.",
             },
             {
               question:
                 "Wie funktioniert die mehrsprachige Kommunikation?",
               answer:
-                "Der Chatbot erkennt die Sprache des Bewerbers automatisch per KI-basierter Language Detection (OpenAI). Die Übersetzung erfolgt über die DeepL API, die besonders starke Ergebnisse bei europäischen Sprachen liefert – Polnisch, Rumänisch, Bulgarisch, Ungarisch und Türkisch. Insgesamt werden 25 Sprachen unterstützt. Zusätzlich routet das System automatisch an Disponenten mit passender Sprachkompetenz: Polnischsprachige Kandidaten werden an polnischsprachige Disponenten weitergeleitet. Alle Chatverläufe werden parallel auf Deutsch im ATS-System gespeichert.",
+                "Der Chatbot erkennt die Sprache des Bewerbers automatisch per KI-basierter Language Detection (OpenAI). Die Übersetzung erfolgt über die DeepL API, die besonders starke Ergebnisse bei europäischen Sprachen liefert - Polnisch, Rumänisch, Bulgarisch, Ungarisch und Türkisch. Insgesamt werden 25 Sprachen unterstützt. Zusätzlich routet das System automatisch an Disponenten mit passender Sprachkompetenz: Polnischsprachige Kandidaten werden an polnischsprachige Disponenten weitergeleitet. Alle Chatverläufe werden parallel auf Deutsch im ATS-System gespeichert.",
             },
             {
               question:

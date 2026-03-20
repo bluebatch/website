@@ -20,7 +20,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-cottbus",
       preHeadline: "AI Workflows Cottbus",
       headline: "AI Workflows & Automatisierung in Cottbus",
-      metaTitle: "AI Workflows Cottbus – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Cottbus - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Cottbus. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -33,10 +33,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-cottbus",
       preHeadline: "n8n Automation Cottbus",
-      headline: "n8n Automation in Cottbus – Workflows automatisieren",
+      headline: "n8n Automation in Cottbus - Workflows automatisieren",
       metaTitle: "n8n Automation Cottbus | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Cottbus. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Cottbus. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Cottbus",
         "n8n Cottbus",
@@ -48,7 +48,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-cottbus",
       preHeadline: "n8n Cottbus",
       headline: "n8n Agentur in Cottbus",
-      metaTitle: "n8n Cottbus – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Cottbus - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Cottbus. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Cottbus und Umgebung.",
       keywords: [
@@ -62,7 +62,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-cottbus",
       preHeadline: "Automation Cottbus",
       headline: "Automation & Prozessoptimierung in Cottbus",
-      metaTitle: "Automation Cottbus – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Cottbus - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Cottbus. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -75,8 +75,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-cottbus",
       preHeadline: "IT Dienstleister Cottbus",
-      headline: "IT Dienstleister in Cottbus – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Cottbus – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Cottbus - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Cottbus - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Cottbus. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Cottbus.",
       keywords: [
@@ -89,8 +89,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-cottbus",
       preHeadline: "KI Beratung Cottbus",
-      headline: "KI Beratung in Cottbus – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Cottbus – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Cottbus - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Cottbus - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Cottbus. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

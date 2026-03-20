@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-bielefeld",
       preHeadline: "AI Workflows Bielefeld",
       headline: "AI Workflows & Automatisierung in Bielefeld",
-      metaTitle: "AI Workflows Bielefeld – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Bielefeld - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Bielefeld. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-bielefeld",
       preHeadline: "n8n Automation Bielefeld",
-      headline: "n8n Automation in Bielefeld – Workflows automatisieren",
+      headline: "n8n Automation in Bielefeld - Workflows automatisieren",
       metaTitle: "n8n Automation Bielefeld | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Bielefeld. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Bielefeld. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Bielefeld",
         "n8n Bielefeld",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-bielefeld",
       preHeadline: "n8n Bielefeld",
       headline: "n8n Agentur in Bielefeld",
-      metaTitle: "n8n Bielefeld – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Bielefeld - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Bielefeld. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Bielefeld und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-bielefeld",
       preHeadline: "Automation Bielefeld",
       headline: "Automation & Prozessoptimierung in Bielefeld",
-      metaTitle: "Automation Bielefeld – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Bielefeld - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Bielefeld. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-bielefeld",
       preHeadline: "IT Dienstleister Bielefeld",
-      headline: "IT Dienstleister in Bielefeld – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Bielefeld – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Bielefeld - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Bielefeld - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Bielefeld. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Bielefeld.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-bielefeld",
       preHeadline: "KI Beratung Bielefeld",
-      headline: "KI Beratung in Bielefeld – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Bielefeld – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Bielefeld - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Bielefeld - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Bielefeld. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

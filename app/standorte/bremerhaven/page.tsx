@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-bremerhaven",
       preHeadline: "AI Workflows Bremerhaven",
       headline: "AI Workflows & Automatisierung in Bremerhaven",
-      metaTitle: "AI Workflows Bremerhaven – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Bremerhaven - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Bremerhaven. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-bremerhaven",
       preHeadline: "n8n Automation Bremerhaven",
-      headline: "n8n Automation in Bremerhaven – Workflows automatisieren",
+      headline: "n8n Automation in Bremerhaven - Workflows automatisieren",
       metaTitle: "n8n Automation Bremerhaven | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Bremerhaven. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Bremerhaven. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Bremerhaven",
         "n8n Bremerhaven",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-bremerhaven",
       preHeadline: "n8n Bremerhaven",
       headline: "n8n Agentur in Bremerhaven",
-      metaTitle: "n8n Bremerhaven – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Bremerhaven - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Bremerhaven. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Bremerhaven und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-bremerhaven",
       preHeadline: "Automation Bremerhaven",
       headline: "Automation & Prozessoptimierung in Bremerhaven",
-      metaTitle: "Automation Bremerhaven – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Bremerhaven - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Bremerhaven. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-bremerhaven",
       preHeadline: "IT Dienstleister Bremerhaven",
-      headline: "IT Dienstleister in Bremerhaven – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Bremerhaven – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Bremerhaven - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Bremerhaven - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Bremerhaven. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Bremerhaven.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-bremerhaven",
       preHeadline: "KI Beratung Bremerhaven",
-      headline: "KI Beratung in Bremerhaven – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Bremerhaven – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Bremerhaven - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Bremerhaven - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Bremerhaven. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

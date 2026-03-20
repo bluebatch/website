@@ -70,7 +70,7 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Freshworks – Customer Service & CRM automatisieren
+              Freshworks - Customer Service & CRM automatisieren
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Freshworks vereint Helpdesk, CRM, IT-Service-Management und
@@ -102,7 +102,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Plattform</IntroBox.PreHeadline>
           <IntroBox.Headline>Die Freshworks-Plattform</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Ein Unternehmen, sechs Produkte, eine gemeinsame Datenbasis – was
+            Ein Unternehmen, sechs Produkte, eine gemeinsame Datenbasis - was
             Freshworks von fragmentierten Tool-Landschaften unterscheidet.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -168,7 +168,7 @@ export default function Page() {
       {/* Freshdesk */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2 id="freshdesk" className="mb-6 scroll-mt-24">
-          Freshdesk – Helpdesk & Ticketing
+          Freshdesk - Helpdesk & Ticketing
         </Typo.H2>
 
         <Typo.Paragraph>
@@ -185,8 +185,8 @@ export default function Page() {
           zwischen Außendienst und Innendienst. Durch die
           Automatisierungsregeln (Dispatcher, Supervisor, Observer) lassen sich
           komplexe Routing-Logiken abbilden, ohne n8n zu benötigen. Wo
-          Freshdesk an seine Grenzen stößt – etwa bei ERP-Abfragen oder
-          Cross-System-Workflows – setzt n8n an.
+          Freshdesk an seine Grenzen stößt - etwa bei ERP-Abfragen oder
+          Cross-System-Workflows - setzt n8n an.
         </Typo.Paragraph>
 
         <Typo.H3 className="mt-8 mb-3">API-Details</Typo.H3>
@@ -205,7 +205,7 @@ export default function Page() {
           </div>
           <div className="flex items-start gap-3 rounded-lg bg-gray-50 p-3">
             <span className="shrink-0 rounded bg-gray-200 px-2 py-0.5 text-xs font-mono font-medium text-gray-700">Node</span>
-            <span className="text-sm"><code>n8n-nodes-base.freshdesk</code> – Ressourcen: Ticket, Contact</span>
+            <span className="text-sm"><code>n8n-nodes-base.freshdesk</code> - Ressourcen: Ticket, Contact</span>
           </div>
           <div className="flex items-start gap-3 rounded-lg bg-gray-50 p-3">
             <span className="shrink-0 rounded bg-gray-200 px-2 py-0.5 text-xs font-mono font-medium text-gray-700">Hook</span>
@@ -267,7 +267,7 @@ export default function Page() {
               Produktkategorie, Dringlichkeit und Sentiment analysiert. Die
               Ergebnisse werden als Tags und Custom Fields in Freshdesk
               geschrieben. Basierend auf den Tags routet n8n das Ticket an
-              spezialisierte Gruppen – z. B. technische Reklamationen an das
+              spezialisierte Gruppen - z. B. technische Reklamationen an das
               Produktmanagement, Lieferverzögerungen an die Logistik.
             </Typo.Paragraph>
           </TabContent>
@@ -277,7 +277,7 @@ export default function Page() {
       {/* Freshsales */}
       <ContentWrapper>
         <Typo.H2 id="freshsales" className="mb-6 scroll-mt-24">
-          Freshsales – CRM für den Vertrieb
+          Freshsales - CRM für den Vertrieb
         </Typo.H2>
 
         <Typo.Paragraph>
@@ -312,7 +312,7 @@ export default function Page() {
           </div>
           <div className="flex items-start gap-3 rounded-lg bg-gray-50 p-3">
             <span className="shrink-0 rounded bg-gray-200 px-2 py-0.5 text-xs font-mono font-medium text-gray-700">Node</span>
-            <span className="text-sm"><code>n8n-nodes-base.freshworksCrm</code> – Ressourcen: Account, Contact, Deal, Task, Note und weitere</span>
+            <span className="text-sm"><code>n8n-nodes-base.freshworksCrm</code> - Ressourcen: Account, Contact, Deal, Task, Note und weitere</span>
           </div>
         </div>
 
@@ -380,7 +380,7 @@ export default function Page() {
       {/* Freshservice */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2 id="freshservice" className="mb-6 scroll-mt-24">
-          Freshservice – IT-Service-Management
+          Freshservice - IT-Service-Management
         </Typo.H2>
 
         <Typo.Paragraph>
@@ -389,7 +389,7 @@ export default function Page() {
           (Configuration Management Database), Asset-Management mit
           Auto-Discovery und einem Service-Katalog für IT- und
           Non-IT-Anfragen. Im Großhandel dient Freshservice typischerweise der
-          internen IT – etwa für die Verwaltung von Kassensystemen,
+          internen IT - etwa für die Verwaltung von Kassensystemen,
           Lager-Scannern, ERP-Zugängen und VPN-Verbindungen.
         </Typo.Paragraph>
 
@@ -415,7 +415,7 @@ export default function Page() {
           </div>
           <div className="flex items-start gap-3 rounded-lg bg-gray-50 p-3">
             <span className="shrink-0 rounded bg-gray-200 px-2 py-0.5 text-xs font-mono font-medium text-gray-700">Node</span>
-            <span className="text-sm"><code>n8n-nodes-base.freshservice</code> – 15+ Ressourcen: Ticket, Change, Problem, Release, Agent, Asset, Requester, Department, Location und mehr</span>
+            <span className="text-sm"><code>n8n-nodes-base.freshservice</code> - 15+ Ressourcen: Ticket, Change, Problem, Release, Agent, Asset, Requester, Department, Location und mehr</span>
           </div>
         </div>
 
@@ -483,7 +483,7 @@ export default function Page() {
       {/* Freshchat */}
       <ContentWrapper>
         <Typo.H2 id="freshchat" className="mb-6 scroll-mt-24">
-          Freshchat – Messaging & Chatbots
+          Freshchat - Messaging & Chatbots
         </Typo.H2>
 
         <Typo.Paragraph>
@@ -491,7 +491,7 @@ export default function Page() {
           unterstützt WhatsApp, Facebook Messenger, Instagram, SMS, E-Mail,
           Google Business Messages und den eigenen Website-Chat. Besonders
           leistungsfähig ist der integrierte Bot-Builder, der über eine API
-          Library externe Datenquellen einbinden kann – etwa, um während eines
+          Library externe Datenquellen einbinden kann - etwa, um während eines
           Chatgesprächs den Bestellstatus aus Ihrem ERP zu lesen.
         </Typo.Paragraph>
 
@@ -530,7 +530,7 @@ export default function Page() {
               Bestellnummer im ERP nachschlägt und den aktuellen
               Lieferstatus, die Trackingnummer und das voraussichtliche
               Lieferdatum zurückgibt. Der Bot zeigt die Informationen direkt
-              im Chat an – ohne Agent-Beteiligung.
+              im Chat an - ohne Agent-Beteiligung.
             </Typo.Paragraph>
           </TabContent>
           <TabContent value="routing">
@@ -550,7 +550,7 @@ export default function Page() {
       {/* Freshmarketer */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2 id="freshmarketer" className="mb-6 scroll-mt-24">
-          Freshmarketer – Marketing-Automation
+          Freshmarketer - Marketing-Automation
         </Typo.H2>
 
         <Typo.Paragraph>
@@ -566,7 +566,7 @@ export default function Page() {
           Freshmarketer hat keinen nativen n8n-Node. Die Integration erfolgt
           über den HTTP-Request-Node. Die Stärke liegt in der Kombination mit
           Freshsales: Da beide Produkte auf derselben Neo-Plattform laufen,
-          können Marketing-Journeys direkt auf CRM-Events reagieren – etwa
+          können Marketing-Journeys direkt auf CRM-Events reagieren - etwa
           wenn ein Deal eine bestimmte Phase erreicht.
         </Typo.Paragraph>
 
@@ -792,7 +792,7 @@ export default function Page() {
 
         <Typo.Paragraph className="text-blue-100">
           Für n8n-Automatisierungen bedeutet das: Sie müssen Kontaktdaten
-          nicht zwischen Freshworks-Produkten synchronisieren – das erledigt
+          nicht zwischen Freshworks-Produkten synchronisieren - das erledigt
           die Plattform nativ. Stattdessen fokussiert sich die n8n-Integration
           auf die Brücke zu externen Systemen (ERP, Warenwirtschaft,
           Versanddienstleister) und auf cross-product Workflows, die
@@ -853,7 +853,7 @@ export default function Page() {
             So integrieren wir Ihre Freshworks-Plattform
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            Von der Bestandsaufnahme bis zum laufenden Betrieb – in vier
+            Von der Bestandsaufnahme bis zum laufenden Betrieb - in vier
             Schritten zur vollständigen Integration.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -879,7 +879,7 @@ export default function Page() {
               ein, konfigurieren die Authentifizierung (API-Key oder OAuth2 je
               nach Anwendungsfall), testen Rate Limits unter Last und setzen
               Webhook-Endpunkte in n8n auf. Für jeden Freshworks-Produkt wird
-              die Verbindung einzeln validiert – inkl. Fehlerhandling bei
+              die Verbindung einzeln validiert - inkl. Fehlerhandling bei
               429-Responses und automatischem Retry.
             </Typo.Paragraph>
           </TimelineAsStepsStep>

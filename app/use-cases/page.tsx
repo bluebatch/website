@@ -5,11 +5,11 @@ import Typo from "@/components/ui/typo";
 import { InternalLinkLabel } from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
-  title: "Use Cases – Bluebatch | Branchenlösungen für AI-Automation",
+  title: "Use Cases - Bluebatch | Branchenlösungen für AI-Automation",
   description:
     "Branchenlösungen für KI-Automatisierung: Großhandel, Steuerberater und Personaldienstleister. Entdecken Sie erprobte AI-Workflows für Ihre Branche.",
   openGraph: {
-    title: "Use Cases – Bluebatch",
+    title: "Use Cases - Bluebatch",
     description:
       "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, Personaldienstleister.",
     type: "website",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Use Cases – Bluebatch",
+    title: "Use Cases - Bluebatch",
     description:
       "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, Personaldienstleister.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -41,19 +41,19 @@ const topics = [
     href: "/wholesale-ai",
     title: "Großhandel",
     description:
-      "Bestellabwicklung und Lagerverwaltung automatisieren – für schnellere Prozesse und weniger Fehler.",
+      "Bestellabwicklung und Lagerverwaltung automatisieren - für schnellere Prozesse und weniger Fehler.",
   },
   {
     href: "/use-cases/steuerberater",
     title: "Steuerberater",
     description:
-      "Dokumentenverarbeitung und Mandantenkommunikation digitalisieren – für mehr Zeit und zufriedene Mandanten.",
+      "Dokumentenverarbeitung und Mandantenkommunikation digitalisieren - für mehr Zeit und zufriedene Mandanten.",
   },
   {
     href: "/use-cases/personaldienstleister",
     title: "Personaldienstleister",
     description:
-      "Bewerber-Screening, Onboarding und Compliance automatisieren – für schnellere Vermittlungen und null Bußgeldrisiko.",
+      "Bewerber-Screening, Onboarding und Compliance automatisieren - für schnellere Vermittlungen und null Bußgeldrisiko.",
   },
 ];
 

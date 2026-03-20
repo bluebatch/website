@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-goettingen",
       preHeadline: "AI Workflows Göttingen",
       headline: "AI Workflows & Automatisierung in Göttingen",
-      metaTitle: "AI Workflows Göttingen – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Göttingen - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Göttingen. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-goettingen",
       preHeadline: "n8n Automation Göttingen",
-      headline: "n8n Automation in Göttingen – Workflows automatisieren",
+      headline: "n8n Automation in Göttingen - Workflows automatisieren",
       metaTitle: "n8n Automation Göttingen | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Göttingen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Göttingen. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Göttingen",
         "n8n Göttingen",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-goettingen",
       preHeadline: "n8n Göttingen",
       headline: "n8n Agentur in Göttingen",
-      metaTitle: "n8n Göttingen – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Göttingen - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Göttingen. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Göttingen und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-goettingen",
       preHeadline: "Automation Göttingen",
       headline: "Automation & Prozessoptimierung in Göttingen",
-      metaTitle: "Automation Göttingen – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Göttingen - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Göttingen. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-goettingen",
       preHeadline: "IT Dienstleister Göttingen",
-      headline: "IT Dienstleister in Göttingen – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Göttingen – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Göttingen - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Göttingen - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Göttingen. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Göttingen.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-goettingen",
       preHeadline: "KI Beratung Göttingen",
-      headline: "KI Beratung in Göttingen – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Göttingen – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Göttingen - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Göttingen - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Göttingen. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

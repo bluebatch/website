@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "microtech ERP-Automatisierung mit n8n | Bluebatch",
     description:
-      "microtech ERP automatisieren – GraphQL API, PostgreSQL-Replikation, Auftragsimport und Multi-Channel-Bestandsabgleich via n8n.",
+      "microtech ERP automatisieren - GraphQL API, PostgreSQL-Replikation, Auftragsimport und Multi-Channel-Bestandsabgleich via n8n.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -67,13 +67,13 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              microtech ERP – Automatisierung per GraphQL und PostgreSQL
+              microtech ERP - Automatisierung per GraphQL und PostgreSQL
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               microtech ERP (ehemals BüroPlus) ist das Warenwirtschaftssystem
               für den deutschen Mittelstand. Wir automatisieren Ihre
               Auftragsverarbeitung, Bestandsführung und E-Commerce-Anbindung
-              über n8n – per GraphQL API oder SQL-Replikation nach PostgreSQL.
+              über n8n - per GraphQL API oder SQL-Replikation nach PostgreSQL.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">
@@ -150,13 +150,13 @@ export default function Page() {
           </Typo.Paragraph>
 
           <Typo.H3 className="mt-8 mb-3">
-            Drei Editionen – und warum die Enterprise-Edition entscheidend ist
+            Drei Editionen - und warum die Enterprise-Edition entscheidend ist
           </Typo.H3>
           <Typo.Paragraph>
             microtech ERP gibt es in drei Editionen: Basic, Core und Enterprise.
             Für Automatisierungsprojekte ist die Enterprise-Edition die
             relevante, denn nur sie bietet Zugriff auf die GraphQL API. Wer mit
-            Basic oder Core arbeitet, kann trotzdem automatisieren – allerdings
+            Basic oder Core arbeitet, kann trotzdem automatisieren - allerdings
             nur über die SQL-Replikation nach PostgreSQL, die ausschließlich
             Lesezugriff bietet. Schreibzugriff auf microtech-Daten von außen
             setzt die Enterprise-Edition voraus.
@@ -164,7 +164,7 @@ export default function Page() {
 
           <Typo.H3 className="mt-8 mb-3">Module und Aufbau</Typo.H3>
           <Typo.Paragraph>
-            Das Kernmodul ist die Warenwirtschaft – sie ist in jeder Edition
+            Das Kernmodul ist die Warenwirtschaft - sie ist in jeder Edition
             enthalten und umfasst Auftragsverarbeitung, Einkauf, Beschaffung,
             Lagerverwaltung und Adressverwaltung. Weitere Module sind optional
             zubuchbar:
@@ -243,7 +243,7 @@ export default function Page() {
               <Typo.Paragraph>
                 Das GraphQL-Schema verwendet die{" "}
                 <code className="bg-gray-100 px-1 rounded text-sm">tbl...</code>-Namenskonvention
-                für Tabellen – dieselbe Struktur, die auch intern in der
+                für Tabellen - dieselbe Struktur, die auch intern in der
                 microtech-Datenbank verwendet wird. Über die API sind sowohl Lese-
                 als auch Schreibzugriffe möglich, was sie zum einzigen Weg macht,
                 Daten programmatisch in microtech anzulegen oder zu ändern.
@@ -279,7 +279,7 @@ export default function Page() {
                 Die SQL-Replikation ist in allen Editionen verfügbar und repliziert
                 microtech-Tabellen in eine PostgreSQL-Datenbank. Das Ergebnis ist
                 eine lesbare Kopie der ERP-Daten, auf die externe Systeme direkt
-                per SQL zugreifen können – ideal für BI-Tools, Dashboards,
+                per SQL zugreifen können - ideal für BI-Tools, Dashboards,
                 Reporting und datengetriebene Automatisierungen.
               </Typo.Paragraph>
               <Typo.Paragraph>
@@ -325,7 +325,7 @@ export default function Page() {
                 gepflegt. ConnectBASE hatte ohnehin erhebliche Einschränkungen: Kein
                 Zugriff auf Dokumente oder Bilder, keine Löschoperationen und nur
                 eingeschränkte Erstellungsmöglichkeiten. Wir erwähnen es hier der
-                Vollständigkeit halber – für neue Projekte empfehlen wir
+                Vollständigkeit halber - für neue Projekte empfehlen wir
                 ausschließlich die GraphQL API oder die SQL-Replikation.
               </Typo.Paragraph>
               <a
@@ -358,7 +358,7 @@ export default function Page() {
             Konkrete Automatisierungen mit microtech
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            Keine abstrakten Versprechen – so sehen reale Workflows aus, die wir
+            Keine abstrakten Versprechen - so sehen reale Workflows aus, die wir
             für microtech-Kunden umsetzen.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -375,7 +375,7 @@ export default function Page() {
                 prüft die Bestelldaten, löst den Kunden im microtech-Adressstamm
                 auf (oder legt ihn automatisch an) und erstellt per GraphQL
                 Mutation einen Auftrag in microtech. Anschließend wird der
-                Lagerbestand aktualisiert und – je nach Konfiguration – automatisch
+                Lagerbestand aktualisiert und - je nach Konfiguration - automatisch
                 ein Lieferschein generiert. Das gesamte Verfahren dauert wenige
                 Sekunden und erspart die manuelle Erfassung, die bei
                 Multichannel-Händlern schnell Stunden pro Tag verschlingt.
@@ -396,7 +396,7 @@ export default function Page() {
                 bei Enterprise), vergleicht ihn mit den in Shopware, Amazon und eBay
                 hinterlegten Beständen und pusht Änderungen per API an die
                 jeweiligen Plattformen. Dadurch sind Bestände kanalübergreifend
-                nahezu in Echtzeit synchron – ohne dass jemand manuell Zahlen
+                nahezu in Echtzeit synchron - ohne dass jemand manuell Zahlen
                 abtippen muss.
               </Typo.Paragraph>
             </BoundlessImageCard.Content>
@@ -523,7 +523,7 @@ export default function Page() {
             So läuft ein microtech-Automatisierungsprojekt ab
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            Von der Bestandsaufnahme bis zum laufenden Betrieb – in fünf
+            Von der Bestandsaufnahme bis zum laufenden Betrieb - in fünf
             Schritten
           </IntroBox.Paragraph>
         </IntroBox>

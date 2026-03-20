@@ -98,7 +98,7 @@ export default function Page() {
               Problem. Besonders in gefragten Berufsfeldern sind Gehälter in den
               letzten Jahren deutlich gestiegen. Ein Budget, das auf alten Daten
               basiert, ist im Schnitt{" "}
-              <strong>10–20% unter dem Marktniveau</strong> — und damit nicht
+              <strong>10-20% unter dem Marktniveau</strong> — und damit nicht
               wettbewerbsfähig.
             </Typo.Paragraph>
             <Typo.Paragraph>

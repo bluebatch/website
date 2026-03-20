@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-paderborn",
       preHeadline: "AI Workflows Paderborn",
       headline: "AI Workflows & Automatisierung in Paderborn",
-      metaTitle: "AI Workflows Paderborn – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Paderborn - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Paderborn. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-paderborn",
       preHeadline: "n8n Automation Paderborn",
-      headline: "n8n Automation in Paderborn – Workflows automatisieren",
+      headline: "n8n Automation in Paderborn - Workflows automatisieren",
       metaTitle: "n8n Automation Paderborn | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Paderborn. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Paderborn. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Paderborn",
         "n8n Paderborn",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-paderborn",
       preHeadline: "n8n Paderborn",
       headline: "n8n Agentur in Paderborn",
-      metaTitle: "n8n Paderborn – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Paderborn - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Paderborn. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Paderborn und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-paderborn",
       preHeadline: "Automation Paderborn",
       headline: "Automation & Prozessoptimierung in Paderborn",
-      metaTitle: "Automation Paderborn – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Paderborn - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Paderborn. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-paderborn",
       preHeadline: "IT Dienstleister Paderborn",
-      headline: "IT Dienstleister in Paderborn – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Paderborn – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Paderborn - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Paderborn - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Paderborn. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Paderborn.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-paderborn",
       preHeadline: "KI Beratung Paderborn",
-      headline: "KI Beratung in Paderborn – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Paderborn – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Paderborn - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Paderborn - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Paderborn. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

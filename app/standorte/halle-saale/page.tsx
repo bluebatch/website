@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-halle-saale",
       preHeadline: "AI Workflows Halle (Saale)",
       headline: "AI Workflows & Automatisierung in Halle (Saale)",
-      metaTitle: "AI Workflows Halle (Saale) – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Halle (Saale) - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Halle (Saale). KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-halle-saale",
       preHeadline: "n8n Automation Halle (Saale)",
-      headline: "n8n Automation in Halle (Saale) – Workflows automatisieren",
+      headline: "n8n Automation in Halle (Saale) - Workflows automatisieren",
       metaTitle: "n8n Automation Halle (Saale) | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Halle (Saale). Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Halle (Saale). Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Halle (Saale)",
         "n8n Halle (Saale)",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-halle-saale",
       preHeadline: "n8n Halle (Saale)",
       headline: "n8n Agentur in Halle (Saale)",
-      metaTitle: "n8n Halle (Saale) – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Halle (Saale) - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Halle (Saale). Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Halle (Saale) und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-halle-saale",
       preHeadline: "Automation Halle (Saale)",
       headline: "Automation & Prozessoptimierung in Halle (Saale)",
-      metaTitle: "Automation Halle (Saale) – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Halle (Saale) - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Halle (Saale). Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-halle-saale",
       preHeadline: "IT Dienstleister Halle (Saale)",
-      headline: "IT Dienstleister in Halle (Saale) – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Halle (Saale) – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Halle (Saale) - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Halle (Saale) - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Halle (Saale). Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Halle (Saale).",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-halle-saale",
       preHeadline: "KI Beratung Halle (Saale)",
-      headline: "KI Beratung in Halle (Saale) – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Halle (Saale) – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Halle (Saale) - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Halle (Saale) - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Halle (Saale). Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

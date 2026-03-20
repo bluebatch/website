@@ -21,11 +21,11 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import InternalLink from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
-  title: "Personaldienstleister – Use Cases | Bluebatch",
+  title: "Personaldienstleister - Use Cases | Bluebatch",
   description:
     "Personaldienstleister Automatisierung: Bewerber-Screening, Chatbot-Recruiting, digitales Onboarding, AÜG-Compliance und Zeiterfassung. Jetzt Zeitarbeit digitalisieren.",
   openGraph: {
-    title: "Personaldienstleister – Bluebatch Use Cases",
+    title: "Personaldienstleister - Bluebatch Use Cases",
     description:
       "KI-Automatisierung für Personaldienstleister: Bewerber-Matching, Chatbot-Recruiting, digitales Onboarding, Compliance und Zeiterfassung.",
     type: "website",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Personaldienstleister – Bluebatch Use Cases",
+    title: "Personaldienstleister - Bluebatch Use Cases",
     description:
       "KI-Automatisierung für Personaldienstleister: Bewerber-Matching, Chatbot-Recruiting, digitales Onboarding, Compliance und Zeiterfassung.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -71,21 +71,21 @@ const useCases = [
     slug: "digitales-onboarding",
     title: "Digitales Onboarding & Dokumentenmanagement",
     description:
-      "Vom AÜG-Vertrag bis zum Einsatzstart – volldigitales Onboarding mit e-Signatur, automatischer Dokumentenprüfung und Self-Service-Portal. 60% schnellere Einarbeitung.",
+      "Vom AÜG-Vertrag bis zum Einsatzstart - volldigitales Onboarding mit e-Signatur, automatischer Dokumentenprüfung und Self-Service-Portal. 60% schnellere Einarbeitung.",
     image: "/images/document-automation.jpg",
   },
   {
     slug: "compliance-ueberwachung",
     title: "Compliance-Überwachung & Fristenmanagement",
     description:
-      "Höchstüberlassungsdauer, Equal Pay, Branchenzuschläge und das neue Tarifwerk 2026 – automatisch überwacht mit Echtzeit-Warnungen. 100% Fristeneinhaltung, null Bußgeldrisiko.",
+      "Höchstüberlassungsdauer, Equal Pay, Branchenzuschläge und das neue Tarifwerk 2026 - automatisch überwacht mit Echtzeit-Warnungen. 100% Fristeneinhaltung, null Bußgeldrisiko.",
     image: "/images/compliance-signs.jpg",
   },
   {
     slug: "zeiterfassung-abrechnung",
     title: "Zeiterfassung, Abrechnung & Rechnungsstellung",
     description:
-      "Von der mobilen Zeiterfassung über die tarifkonforme Lohnabrechnung bis zur automatischen Rechnungsstellung – durchgängig digital, ohne Medienbrüche. 90% weniger Abrechnungsfehler.",
+      "Von der mobilen Zeiterfassung über die tarifkonforme Lohnabrechnung bis zur automatischen Rechnungsstellung - durchgängig digital, ohne Medienbrüche. 90% weniger Abrechnungsfehler.",
     image: "/images/business-analytics.jpg",
   },
 ];
@@ -101,7 +101,7 @@ export default function Page() {
               Automatisierung für Personaldienstleister
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Von der Bewerberverwaltung bis zur Lohnabrechnung – wir
+              Von der Bewerberverwaltung bis zur Lohnabrechnung - wir
               automatisieren die repetitiven Prozesse in Ihrer
               Personaldienstleistung. Weniger Verwaltung, mehr Zeit für
               Kandidaten und Kunden.
@@ -132,7 +132,7 @@ export default function Page() {
             </Typo.H2>
             <Typo.Paragraph className="text-gray-600 mb-4">
               73% der Personaldienstleister sehen die Digitalisierung als
-              größte Herausforderung – aber nur 22% fühlen sich gut
+              größte Herausforderung - aber nur 22% fühlen sich gut
               aufgestellt. Das neue DGB/GVP-Tarifwerk ab 2026 erhöht die
               Anforderungen an Transparenz und digitale Nachvollziehbarkeit
               zusätzlich.

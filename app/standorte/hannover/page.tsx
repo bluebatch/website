@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-hannover",
       preHeadline: "AI Workflows Hannover",
       headline: "AI Workflows & Automatisierung in Hannover",
-      metaTitle: "AI Workflows Hannover – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Hannover - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Hannover. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-hannover",
       preHeadline: "n8n Automation Hannover",
-      headline: "n8n Automation in Hannover – Workflows automatisieren",
+      headline: "n8n Automation in Hannover - Workflows automatisieren",
       metaTitle: "n8n Automation Hannover | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Hannover. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Hannover. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Hannover",
         "n8n Hannover",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-hannover",
       preHeadline: "n8n Hannover",
       headline: "n8n Agentur in Hannover",
-      metaTitle: "n8n Hannover – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Hannover - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Hannover. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Hannover und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-hannover",
       preHeadline: "Automation Hannover",
       headline: "Automation & Prozessoptimierung in Hannover",
-      metaTitle: "Automation Hannover – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Hannover - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Hannover. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-hannover",
       preHeadline: "IT Dienstleister Hannover",
-      headline: "IT Dienstleister in Hannover – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Hannover – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Hannover - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Hannover - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Hannover. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Hannover.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-hannover",
       preHeadline: "KI Beratung Hannover",
-      headline: "KI Beratung in Hannover – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Hannover – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Hannover - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Hannover - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Hannover. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

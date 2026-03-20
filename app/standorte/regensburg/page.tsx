@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-regensburg",
       preHeadline: "AI Workflows Regensburg",
       headline: "AI Workflows & Automatisierung in Regensburg",
-      metaTitle: "AI Workflows Regensburg – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Regensburg - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Regensburg. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-regensburg",
       preHeadline: "n8n Automation Regensburg",
-      headline: "n8n Automation in Regensburg – Workflows automatisieren",
+      headline: "n8n Automation in Regensburg - Workflows automatisieren",
       metaTitle: "n8n Automation Regensburg | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Regensburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Regensburg. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Regensburg",
         "n8n Regensburg",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-regensburg",
       preHeadline: "n8n Regensburg",
       headline: "n8n Agentur in Regensburg",
-      metaTitle: "n8n Regensburg – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Regensburg - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Regensburg. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Regensburg und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-regensburg",
       preHeadline: "Automation Regensburg",
       headline: "Automation & Prozessoptimierung in Regensburg",
-      metaTitle: "Automation Regensburg – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Regensburg - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Regensburg. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-regensburg",
       preHeadline: "IT Dienstleister Regensburg",
-      headline: "IT Dienstleister in Regensburg – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Regensburg – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Regensburg - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Regensburg - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Regensburg. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Regensburg.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-regensburg",
       preHeadline: "KI Beratung Regensburg",
-      headline: "KI Beratung in Regensburg – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Regensburg – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Regensburg - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Regensburg - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Regensburg. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

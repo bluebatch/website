@@ -50,15 +50,15 @@ import ToolLink from "@/components/ui/tool-link";
 export const pageConfig: PageConfig = {
   title: "KI-Automatisierung mit easybill",
   description:
-    "Rechnungen, Angebote und Kundendaten in easybill vollautomatisch verwalten – mit n8n und KI.",
+    "Rechnungen, Angebote und Kundendaten in easybill vollautomatisch verwalten - mit n8n und KI.",
 };
 
 export const metadata: Metadata = {
-  title: "KI-Automatisierung mit easybill – Großhandel | Bluebatch",
+  title: "KI-Automatisierung mit easybill - Großhandel | Bluebatch",
   description:
-    "Wie Bluebatch Großhändlern hilft, easybill mit KI-gestützten n8n-Workflows zu automatisieren – von der Rechnungserstellung bis zum Mahnwesen.",
+    "Wie Bluebatch Großhändlern hilft, easybill mit KI-gestützten n8n-Workflows zu automatisieren - von der Rechnungserstellung bis zum Mahnwesen.",
   openGraph: {
-    title: "KI-Automatisierung mit easybill – Großhandel | Bluebatch",
+    title: "KI-Automatisierung mit easybill - Großhandel | Bluebatch",
     description:
       "Rechnungen, Angebote und Zahlungen in easybill vollautomatisch verwalten. 80% weniger manuelle Buchhaltungsarbeit.",
     type: "website",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KI-Automatisierung mit easybill – Großhandel | Bluebatch",
+    title: "KI-Automatisierung mit easybill - Großhandel | Bluebatch",
     description:
       "Rechnungen, Angebote und Zahlungen in easybill vollautomatisch verwalten. 80% weniger manuelle Buchhaltungsarbeit.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -92,7 +92,7 @@ const phases = [
     badge: "KI-Parsing",
     subtitle: "Multi-Channel Intake",
     description:
-      "Bestellungen per E-Mail, Webshop oder ERP werden automatisch erkannt. Die KI extrahiert Kunde, Positionen, Mengen und Lieferdaten – und legt den Auftrag in easybill an.",
+      "Bestellungen per E-Mail, Webshop oder ERP werden automatisch erkannt. Die KI extrahiert Kunde, Positionen, Mengen und Lieferdaten - und legt den Auftrag in easybill an.",
   },
   {
     number: 2,
@@ -100,7 +100,7 @@ const phases = [
     badge: "easybill API",
     subtitle: "Automatische Dokumentenerstellung",
     description:
-      "Auftragsbestätigungen, Lieferscheine und Rechnungen werden über die easybill REST-API erstellt, finalisiert und als PDF generiert – inklusive ZUGFeRD- oder XRechnung-Format.",
+      "Auftragsbestätigungen, Lieferscheine und Rechnungen werden über die easybill REST-API erstellt, finalisiert und als PDF generiert - inklusive ZUGFeRD- oder XRechnung-Format.",
   },
   {
     number: 3,
@@ -132,7 +132,7 @@ export default function Page() {
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Vom Auftragseingang über die Rechnungserstellung bis zum
-              Zahlungseingang – automatisieren Sie Ihren gesamten
+              Zahlungseingang - automatisieren Sie Ihren gesamten
               Dokumentenfluss in easybill mit n8n-Workflows und KI. 80% weniger
               manuelle Buchhaltungsarbeit.
             </Hero2ColumnDescription>
@@ -170,7 +170,7 @@ export default function Page() {
           <KpiCard
             value={3}
             suffix=" Sek."
-            subtitle="Von Auftrag zu Rechnung – vollautomatisch"
+            subtitle="Von Auftrag zu Rechnung - vollautomatisch"
             variant="default"
           />
           <KpiCard
@@ -228,7 +228,7 @@ export default function Page() {
             So automatisieren wir Ihre easybill-Prozesse
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Vier Schritte – vom Auftragseingang bis zum automatischen Mahnwesen,
+            Vier Schritte - vom Auftragseingang bis zum automatischen Mahnwesen,
             orchestriert durch n8n.
           </IntroBox.Subline>
         </IntroBox>
@@ -280,7 +280,7 @@ export default function Page() {
             <Typo.Paragraph>
               Automatische Erstellung von Rechnungen, Angeboten,
               Auftragsbestätigungen, Lieferscheinen und Gutschriften.
-              Finalisierung, PDF-Generierung und Versand per E-Mail – alles über
+              Finalisierung, PDF-Generierung und Versand per E-Mail - alles über
               die API.
             </Typo.Paragraph>
           </SimpleCard>
@@ -311,7 +311,7 @@ export default function Page() {
           <SimpleCard>
             <Typo.H3>E-Rechnung & Compliance</Typo.H3>
             <Typo.Paragraph>
-              ZUGFeRD 2.x und XRechnung 3.0 automatisch generieren – je nach
+              ZUGFeRD 2.x und XRechnung 3.0 automatisch generieren - je nach
               Kundentyp. Pflichtformat für B2G und zunehmend für B2B in
               Deutschland.
             </Typo.Paragraph>
@@ -365,7 +365,7 @@ export default function Page() {
             <ComparisonHeadline>Nachher: Automatisiert</ComparisonHeadline>
             <ComparisonList>
               <ComparisonListItem>
-                Sekunden pro Rechnung – vollautomatisch
+                Sekunden pro Rechnung - vollautomatisch
               </ComparisonListItem>
               <ComparisonListItem>
                 Unter 1% Fehlerrate durch API-Integration
@@ -402,7 +402,7 @@ export default function Page() {
             </IntroBox.Headline>
             <IntroBox.Subline>
               Wir verbinden easybill mit Ihrem ERP, CRM, Webshop und
-              Steuerberater – n8n orchestriert den Datenfluss.
+              Steuerberater - n8n orchestriert den Datenfluss.
             </IntroBox.Subline>
           </IntroBox>
 
@@ -496,7 +496,7 @@ export default function Page() {
             <SimpleCard className="h-full hover:border-primary-400 transition-colors">
               <Typo.H3>E-Rechnung mit easybill</Typo.H3>
               <Typo.Paragraph>
-                ZUGFeRD 2.x und XRechnung 3.0 – Pflichtformate ab 2025 für B2G,
+                ZUGFeRD 2.x und XRechnung 3.0 - Pflichtformate ab 2025 für B2G,
                 zunehmend Standard im B2B. Automatisiert per API.
               </Typo.Paragraph>
               <span className="text-primary-600 font-medium text-sm mt-2 inline-block">
@@ -524,12 +524,12 @@ export default function Page() {
               question:
                 "Unterstützt die Automatisierung E-Rechnungen (ZUGFeRD/XRechnung)?",
               answer:
-                "Ja, die easybill-API unterstützt die automatische Generierung von E-Rechnungen im ZUGFeRD 2.x (PDF/A-3 mit eingebettetem XML) und XRechnung 3.0 (reines XML) Format. Der Workflow setzt das richtige Format je nach Kundentyp automatisch – Pflichtformat für B2G und zunehmend Standard im B2B.",
+                "Ja, die easybill-API unterstützt die automatische Generierung von E-Rechnungen im ZUGFeRD 2.x (PDF/A-3 mit eingebettetem XML) und XRechnung 3.0 (reines XML) Format. Der Workflow setzt das richtige Format je nach Kundentyp automatisch - Pflichtformat für B2G und zunehmend Standard im B2B.",
             },
             {
               question: "Wie funktioniert das automatische Mahnwesen?",
               answer:
-                "Der n8n-Workflow überwacht alle offenen Rechnungen in easybill über die API. Bei Überschreiten des Zahlungsziels werden automatisch Mahnungen erstellt und versendet – mit eskalierenden Stufen (freundliche Erinnerung, 1. Mahnung, 2. Mahnung). Zahlungseingänge stoppen den Mahnprozess automatisch. Eskalation an das Team bei kritischen Fällen.",
+                "Der n8n-Workflow überwacht alle offenen Rechnungen in easybill über die API. Bei Überschreiten des Zahlungsziels werden automatisch Mahnungen erstellt und versendet - mit eskalierenden Stufen (freundliche Erinnerung, 1. Mahnung, 2. Mahnung). Zahlungseingänge stoppen den Mahnprozess automatisch. Eskalation an das Team bei kritischen Fällen.",
             },
             {
               question:
@@ -546,7 +546,7 @@ export default function Page() {
             {
               question: "Wie lange dauert die Implementierung?",
               answer:
-                "Phase 1 (1-2 Wochen): Rechnungsautomatisierung – Aufträge zu Rechnungen. Phase 2 (1-2 Wochen): Kunden- und Produktsynchronisation. Phase 3 (1-2 Wochen): Mahnwesen und Zahlungszuordnung. Phase 4 (1 Woche): DATEV-Export und Reporting. Gesamtdauer: 4-7 Wochen, mit schrittweiser Inbetriebnahme.",
+                "Phase 1 (1-2 Wochen): Rechnungsautomatisierung - Aufträge zu Rechnungen. Phase 2 (1-2 Wochen): Kunden- und Produktsynchronisation. Phase 3 (1-2 Wochen): Mahnwesen und Zahlungszuordnung. Phase 4 (1 Woche): DATEV-Export und Reporting. Gesamtdauer: 4-7 Wochen, mit schrittweiser Inbetriebnahme.",
             },
           ]}
         />

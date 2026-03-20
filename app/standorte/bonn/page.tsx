@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-bonn",
       preHeadline: "AI Workflows Bonn",
       headline: "AI Workflows & Automatisierung in Bonn",
-      metaTitle: "AI Workflows Bonn – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Bonn - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Bonn. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-bonn",
       preHeadline: "n8n Automation Bonn",
-      headline: "n8n Automation in Bonn – Workflows automatisieren",
+      headline: "n8n Automation in Bonn - Workflows automatisieren",
       metaTitle: "n8n Automation Bonn | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Bonn. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Bonn. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Bonn",
         "n8n Bonn",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-bonn",
       preHeadline: "n8n Bonn",
       headline: "n8n Agentur in Bonn",
-      metaTitle: "n8n Bonn – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Bonn - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Bonn. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Bonn und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-bonn",
       preHeadline: "Automation Bonn",
       headline: "Automation & Prozessoptimierung in Bonn",
-      metaTitle: "Automation Bonn – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Bonn - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Bonn. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-bonn",
       preHeadline: "IT Dienstleister Bonn",
-      headline: "IT Dienstleister in Bonn – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Bonn – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Bonn - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Bonn - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Bonn. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Bonn.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-bonn",
       preHeadline: "KI Beratung Bonn",
-      headline: "KI Beratung in Bonn – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Bonn – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Bonn - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Bonn - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Bonn. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

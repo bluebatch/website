@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-mannheim",
       preHeadline: "AI Workflows Mannheim",
       headline: "AI Workflows & Automatisierung in Mannheim",
-      metaTitle: "AI Workflows Mannheim – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Mannheim - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Mannheim. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-mannheim",
       preHeadline: "n8n Automation Mannheim",
-      headline: "n8n Automation in Mannheim – Workflows automatisieren",
+      headline: "n8n Automation in Mannheim - Workflows automatisieren",
       metaTitle: "n8n Automation Mannheim | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Mannheim. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Mannheim. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Mannheim",
         "n8n Mannheim",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-mannheim",
       preHeadline: "n8n Mannheim",
       headline: "n8n Agentur in Mannheim",
-      metaTitle: "n8n Mannheim – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Mannheim - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Mannheim. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Mannheim und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-mannheim",
       preHeadline: "Automation Mannheim",
       headline: "Automation & Prozessoptimierung in Mannheim",
-      metaTitle: "Automation Mannheim – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Mannheim - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Mannheim. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-mannheim",
       preHeadline: "IT Dienstleister Mannheim",
-      headline: "IT Dienstleister in Mannheim – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Mannheim – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Mannheim - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Mannheim - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Mannheim. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Mannheim.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-mannheim",
       preHeadline: "KI Beratung Mannheim",
-      headline: "KI Beratung in Mannheim – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Mannheim – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Mannheim - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Mannheim - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Mannheim. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Easybill Rechnungssoftware Automatisierung | Bluebatch",
     description:
-      "Easybill-Prozesse automatisieren – Rechnungen, Zahlungen und E-Commerce-Anbindung via n8n.",
+      "Easybill-Prozesse automatisieren - Rechnungen, Zahlungen und E-Commerce-Anbindung via n8n.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -84,7 +84,7 @@ const features = [
     icon: "🔌",
     title: "REST-API",
     description:
-      "Umfassende REST-API für die Integration mit beliebigen Systemen – ideal für n8n-Automatisierungen.",
+      "Umfassende REST-API für die Integration mit beliebigen Systemen - ideal für n8n-Automatisierungen.",
   },
   {
     icon: "🔒",
@@ -141,7 +141,7 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Easybill – Rechnungssoftware automatisieren
+              Easybill - Rechnungssoftware automatisieren
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Easybill ist die deutsche Cloud-Rechnungssoftware für KMU und
@@ -198,7 +198,7 @@ export default function Page() {
             So automatisieren wir Ihre Easybill-Prozesse
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            Von der API-Anbindung bis zum laufenden Betrieb – in vier Schritten
+            Von der API-Anbindung bis zum laufenden Betrieb - in vier Schritten
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -284,7 +284,7 @@ export default function Page() {
               <Typo.Paragraph textColor="muted" spacing="lg">
                 Erfahren Sie, wie wir für einen Großhändler die komplette
                 Rechnungsverarbeitung mit Easybill und n8n automatisiert
-                haben – inklusive KI-gestützter Dokumentenerkennung.
+                haben - inklusive KI-gestützter Dokumentenerkennung.
               </Typo.Paragraph>
               <InternalLinkLabel>Use-Case ansehen</InternalLinkLabel>
             </BoundlessImageCard.Content>

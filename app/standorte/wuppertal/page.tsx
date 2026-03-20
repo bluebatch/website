@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-wuppertal",
       preHeadline: "AI Workflows Wuppertal",
       headline: "AI Workflows & Automatisierung in Wuppertal",
-      metaTitle: "AI Workflows Wuppertal – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Wuppertal - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Wuppertal. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-wuppertal",
       preHeadline: "n8n Automation Wuppertal",
-      headline: "n8n Automation in Wuppertal – Workflows automatisieren",
+      headline: "n8n Automation in Wuppertal - Workflows automatisieren",
       metaTitle: "n8n Automation Wuppertal | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Wuppertal. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Wuppertal. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Wuppertal",
         "n8n Wuppertal",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-wuppertal",
       preHeadline: "n8n Wuppertal",
       headline: "n8n Agentur in Wuppertal",
-      metaTitle: "n8n Wuppertal – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Wuppertal - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Wuppertal. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Wuppertal und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-wuppertal",
       preHeadline: "Automation Wuppertal",
       headline: "Automation & Prozessoptimierung in Wuppertal",
-      metaTitle: "Automation Wuppertal – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Wuppertal - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Wuppertal. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-wuppertal",
       preHeadline: "IT Dienstleister Wuppertal",
-      headline: "IT Dienstleister in Wuppertal – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Wuppertal – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Wuppertal - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Wuppertal - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Wuppertal. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Wuppertal.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-wuppertal",
       preHeadline: "KI Beratung Wuppertal",
-      headline: "KI Beratung in Wuppertal – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Wuppertal – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Wuppertal - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Wuppertal - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Wuppertal. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

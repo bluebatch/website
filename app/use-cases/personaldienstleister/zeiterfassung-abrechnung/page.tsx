@@ -46,11 +46,11 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Zeiterfassung & Abrechnung – Personaldienstleister | Bluebatch",
+  title: "Zeiterfassung & Abrechnung - Personaldienstleister | Bluebatch",
   description:
     "Zeiterfassung und Lohnabrechnung für Personaldienstleister automatisieren: Mobile Stempeluhr, tarifkonforme Abrechnung. 90% weniger Fehler.",
   openGraph: {
-    title: "Zeiterfassung & Abrechnung – Personaldienstleister | Bluebatch",
+    title: "Zeiterfassung & Abrechnung - Personaldienstleister | Bluebatch",
     description:
       "Durchgängig digitale Zeiterfassung, Lohnabrechnung und Rechnungsstellung für Personaldienstleister.",
     type: "website",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zeiterfassung & Abrechnung – Personaldienstleister | Bluebatch",
+    title: "Zeiterfassung & Abrechnung - Personaldienstleister | Bluebatch",
     description:
       "Durchgängig digitale Zeiterfassung, Lohnabrechnung und Rechnungsstellung.",
     images: ["/images/bluebatch-social-cover.jpg"],
@@ -97,7 +97,7 @@ export default function Page() {
             Zeiterfassung & Abrechnung
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
-            Vom Stundenzettel zur Rechnung –{" "}
+            Vom Stundenzettel zur Rechnung -{" "}
             <BackgroundHero.Highlight>
               ohne Medienbruch
             </BackgroundHero.Highlight>
@@ -105,7 +105,7 @@ export default function Page() {
           <BackgroundHero.Description>
             Mobile Zeiterfassung per App oder Terminal, automatische
             Zuschlagsberechnung nach GVP/DGB-Tarifwerk, DATEV-Export per
-            Knopfdruck und ZUGFeRD-konforme Rechnungsstellung an Ihre Kunden –
+            Knopfdruck und ZUGFeRD-konforme Rechnungsstellung an Ihre Kunden -
             in einem durchgangigen digitalen Prozess ohne manuelle Ubertragung.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -138,7 +138,7 @@ export default function Page() {
             Papier-Stundenzettel vs. digitaler Prozess
           </IntroBox.Headline>
           <IntroBox.Subline>
-            22% aller Lohnabrechnungen in Deutschland sind fehlerhaft – in der
+            22% aller Lohnabrechnungen in Deutschland sind fehlerhaft - in der
             Zeitarbeit liegt die Quote aufgrund komplexer Zuschlagsregeln und
             Medienbruche noch hoher. 53% der Unternehmen mussten in den letzten
             funf Jahren Strafzahlungen wegen fehlerhafter Abrechnungen leisten.
@@ -160,7 +160,7 @@ export default function Page() {
                 Korrektur
               </ComparisonListItem>
               <ComparisonListItem>
-                5-8% Fehlerquote bei manueller Ubertragung – falsche Stunden,
+                5-8% Fehlerquote bei manueller Ubertragung - falsche Stunden,
                 vergessene Zuschage
               </ComparisonListItem>
               <ComparisonListItem>
@@ -168,7 +168,7 @@ export default function Page() {
                 nachverfolgt
               </ComparisonListItem>
               <ComparisonListItem>
-                Stundenbestatigung per Papier-Unterschrift – haufigster
+                Stundenbestatigung per Papier-Unterschrift - haufigster
                 Bottleneck fur verspatete Rechnungen
               </ComparisonListItem>
             </ComparisonList>
@@ -185,7 +185,7 @@ export default function Page() {
                 oder timeCard) mit GPS-Validierung
               </ComparisonListItem>
               <ComparisonListItem>
-                Unter 1 Minute pro Abrechnung – vollautomatische Verarbeitung
+                Unter 1 Minute pro Abrechnung - vollautomatische Verarbeitung
               </ComparisonListItem>
               <ComparisonListItem>
                 Unter 0,5% Fehlerquote durch regelbasierte Tarifvalidierung im
@@ -210,7 +210,7 @@ export default function Page() {
         <IntroBox>
           <IntroBox.PreHeadline>End-to-End-Prozess</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Der durchgangige digitale Prozess – von der Stempeluhr bis zur
+            Der durchgangige digitale Prozess - von der Stempeluhr bis zur
             ZUGFeRD-Rechnung
           </IntroBox.Headline>
           <IntroBox.Subline>
@@ -246,7 +246,7 @@ export default function Page() {
               </PhaseCardHeader>
               <PhaseCardDescription>
                 Der Kunde (Entleiher) pruft und bestatigt die geleisteten
-                Stunden digital – uber ein Kundenportal (z.B. zvoove Connect)
+                Stunden digital - uber ein Kundenportal (z.B. zvoove Connect)
                 oder per E-Mail-Freigabe-Link. Ohne Kundenbestatigung keine
                 Abrechnung. Die Automatisierung sendet automatische Erinnerungen
                 bei ausstehenden Freigaben und eskaliert nach konfigurierbarer
@@ -341,14 +341,14 @@ export default function Page() {
                 sind Arbeitgeber verpflichtet, ein System zur Erfassung von
                 Beginn und Ende der taglichen Arbeitszeit einzufuhren. Fur
                 Personaldienstleister gilt dies besonders: Als Arbeitgeber der
-                Zeitarbeitnehmer tragen sie die Verantwortung – unabhangig
+                Zeitarbeitnehmer tragen sie die Verantwortung - unabhangig
                 davon, an welchem Einsatzort der Mitarbeiter arbeitet.
               </IntroBox.Subline>
             </IntroBox>
             <Typo.List>
               <Typo.ListItem>
                 GPS-Geofencing: Standortvalidierung nur bei aktiver Buchung
-                innerhalb vordefinierter Einsatzorte – DSGVO-konform, keine
+                innerhalb vordefinierter Einsatzorte - DSGVO-konform, keine
                 dauerhafte Ortung
               </Typo.ListItem>
               <Typo.ListItem>
@@ -378,7 +378,7 @@ export default function Page() {
             Tarifvalidierung, Lohnabrechnung und Rechnungsstellung im Detail
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Drei Kernmodule, die nahtlos ineinandergreifen – jedes einzelne
+            Drei Kernmodule, die nahtlos ineinandergreifen - jedes einzelne
             spart Stunden an manueller Arbeit und eliminiert Fehlerquellen.
           </IntroBox.Subline>
         </IntroBox>
@@ -401,18 +401,18 @@ export default function Page() {
                   hinterlegten Tarifregeln. Nachtarbeit (23:00-06:00), Sonn- und
                   Feiertage sowie Branchenzuschlag-Stufen werden automatisch
                   erkannt und die korrekten Zuschlage berechnet. Der
-                  bundeslandspezifische Feiertagskalender ist integriert – kein
+                  bundeslandspezifische Feiertagskalender ist integriert - kein
                   manuelles Nachschlagen mehr.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>
                     Nachtarbeitszuschlag 25% (bzw. 20% bei regelmassiger
-                    Nachtarbeit), Sonntagszuschlag 50%, Feiertagszuschlag 100% –
+                    Nachtarbeit), Sonntagszuschlag 50%, Feiertagszuschlag 100% -
                     automatisch aus Stempelzeit berechnet
                   </Typo.ListItem>
                   <Typo.ListItem>
                     Branchenzuschlage nach TV BZ ME (Metall/Elektro), TV BZ
-                    Chemie und weiteren Branchen – Stufe wird aus der
+                    Chemie und weiteren Branchen - Stufe wird aus der
                     kumulierten Einsatzdauer ermittelt
                   </Typo.ListItem>
                   <Typo.ListItem>
@@ -441,12 +441,12 @@ export default function Page() {
             <SimpleGrid cols={2} className="items-center">
               <div>
                 <Typo.H3>
-                  DATEV-integrierte Lohnabrechnung – vom Bruttolohn bis zur
+                  DATEV-integrierte Lohnabrechnung - vom Bruttolohn bis zur
                   SV-Meldung
                 </Typo.H3>
                 <Typo.Paragraph>
                   Aus den validierten Bruttolohndaten generiert ein n8n-Workflow
-                  automatisch die DATEV-Exportdatei im ASCII-Format – mit
+                  automatisch die DATEV-Exportdatei im ASCII-Format - mit
                   korrektem Lohnarten-Mapping, Mandantennummer und
                   Beraternummer. Die Datei wird per SFTP an das
                   DATEV-Rechenzentrum ubertragen oder uber die DATEVconnect REST
@@ -456,7 +456,7 @@ export default function Page() {
                 <Typo.List>
                   <Typo.ListItem>
                     Export an DATEV LODAS oder Lohn und Gehalt im
-                    standardisierten ASCII-Format – alternativ uber DATEVconnect
+                    standardisierten ASCII-Format - alternativ uber DATEVconnect
                     Personalwirtschaft
                   </Typo.ListItem>
                   <Typo.ListItem>
@@ -489,7 +489,7 @@ export default function Page() {
             <SimpleGrid cols={2} className="items-center">
               <div>
                 <Typo.H3>
-                  ZUGFeRD-konforme Rechnungen – automatisch erstellt und
+                  ZUGFeRD-konforme Rechnungen - automatisch erstellt und
                   versendet
                 </Typo.H3>
                 <Typo.Paragraph>
@@ -498,7 +498,7 @@ export default function Page() {
                   EN16931 COMFORT). Das hybride PDF/A-3-Dokument enthalt sowohl
                   die visuelle Darstellung als auch eine eingebettete XML-Datei
                   fur die maschinelle Verarbeitung. Seit dem 01.01.2025 ist der
-                  Empfang von E-Rechnungen fur alle Unternehmen Pflicht – ab
+                  Empfang von E-Rechnungen fur alle Unternehmen Pflicht - ab
                   2028 auch der Versand.
                 </Typo.Paragraph>
                 <Typo.List>
@@ -509,7 +509,7 @@ export default function Page() {
                     Gewinnmarge
                   </Typo.ListItem>
                   <Typo.ListItem>
-                    Stapelverarbeitung: Hunderte Rechnungen in einem Lauf –
+                    Stapelverarbeitung: Hunderte Rechnungen in einem Lauf -
                     gruppiert nach Kunde, Auftrag und Rechnungsturnus
                     (wochentlich, 14-tagig, monatlich)
                   </Typo.ListItem>
@@ -632,13 +632,13 @@ export default function Page() {
           <IntroBox textCentered={false}>
             <IntroBox.PreHeadline>IT-Infrastruktur</IntroBox.PreHeadline>
             <IntroBox.Headline>
-              Die Tool-Landschaft in der Zeitarbeit – und wie wir sie verbinden
+              Die Tool-Landschaft in der Zeitarbeit - und wie wir sie verbinden
             </IntroBox.Headline>
             <IntroBox.Subline>
               Personaldienstleister arbeiten mit einer Vielzahl spezialisierter
               Systeme fur Zeiterfassung, Lohnabrechnung und Faktura. Unsere
               n8n-Automatisierung integriert sich nahtlos in Ihre bestehende
-              Infrastruktur – unabhangig davon, welche Kombination Sie
+              Infrastruktur - unabhangig davon, welche Kombination Sie
               einsetzen.
             </IntroBox.Subline>
           </IntroBox>

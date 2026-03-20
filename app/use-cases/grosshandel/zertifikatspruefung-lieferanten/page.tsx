@@ -23,13 +23,13 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Zertifikatsprüfung Lieferanten – Großhandel | Bluebatch",
+  title: "Zertifikatsprüfung Lieferanten - Großhandel | Bluebatch",
   description:
     "Wie Bluebatch Großhändlern hilft, Lieferantenzertifikate automatisch zu prüfen und Compliance sicherzustellen.",
   openGraph: {
-    title: "Zertifikatsprüfung Lieferanten – Großhandel | Bluebatch",
+    title: "Zertifikatsprüfung Lieferanten - Großhandel | Bluebatch",
     description:
-      "ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
+      "ISO, FSSC, Bio, HACCP - alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zertifikatsprüfung Lieferanten – Großhandel | Bluebatch",
+    title: "Zertifikatsprüfung Lieferanten - Großhandel | Bluebatch",
     description:
-      "ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
+      "ISO, FSSC, Bio, HACCP - alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -77,7 +77,7 @@ export default function Page() {
             prüfen und überwachen
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            ISO, FSSC, Bio, HACCP – alle Zertifikate zentral verwaltet. n8n
+            ISO, FSSC, Bio, HACCP - alle Zertifikate zentral verwaltet. n8n
             überwacht Ablaufdaten, sendet Erinnerungen und validiert gegen
             Akkreditierungsstellen. Nie wieder abgelaufene Zertifikate
             übersehen.

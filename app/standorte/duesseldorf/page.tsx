@@ -19,7 +19,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/ai-workflows-duesseldorf",
       preHeadline: "AI Workflows Düsseldorf",
       headline: "AI Workflows & Automatisierung in Düsseldorf",
-      metaTitle: "AI Workflows Düsseldorf – KI-Automatisierung | Bluebatch",
+      metaTitle: "AI Workflows Düsseldorf - KI-Automatisierung | Bluebatch",
       metaDescription:
         "AI Workflows für Unternehmen in Düsseldorf. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
       keywords: [
@@ -32,10 +32,10 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/n8n-automation-duesseldorf",
       preHeadline: "n8n Automation Düsseldorf",
-      headline: "n8n Automation in Düsseldorf – Workflows automatisieren",
+      headline: "n8n Automation in Düsseldorf - Workflows automatisieren",
       metaTitle: "n8n Automation Düsseldorf | Bluebatch",
       metaDescription:
-        "n8n Automation für Unternehmen in Düsseldorf. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen – self-hosted und DSGVO-konform.",
+        "n8n Automation für Unternehmen in Düsseldorf. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
       keywords: [
         "n8n Automation Düsseldorf",
         "n8n Düsseldorf",
@@ -47,7 +47,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/n8n-duesseldorf",
       preHeadline: "n8n Düsseldorf",
       headline: "n8n Agentur in Düsseldorf",
-      metaTitle: "n8n Düsseldorf – Workflow-Automatisierung | Bluebatch",
+      metaTitle: "n8n Düsseldorf - Workflow-Automatisierung | Bluebatch",
       metaDescription:
         "n8n Experten in Düsseldorf. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Düsseldorf und Umgebung.",
       keywords: [
@@ -61,7 +61,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
       source: "/automation-duesseldorf",
       preHeadline: "Automation Düsseldorf",
       headline: "Automation & Prozessoptimierung in Düsseldorf",
-      metaTitle: "Automation Düsseldorf – Prozessoptimierung | Bluebatch",
+      metaTitle: "Automation Düsseldorf - Prozessoptimierung | Bluebatch",
       metaDescription:
         "Automation für Unternehmen in Düsseldorf. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
       keywords: [
@@ -74,8 +74,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/it-dienstleister-duesseldorf",
       preHeadline: "IT Dienstleister Düsseldorf",
-      headline: "IT Dienstleister in Düsseldorf – Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Düsseldorf – Automatisierung | Bluebatch",
+      headline: "IT Dienstleister in Düsseldorf - Automatisierung & Digitalisierung",
+      metaTitle: "IT Dienstleister Düsseldorf - Automatisierung | Bluebatch",
       metaDescription:
         "Ihr IT Dienstleister in Düsseldorf. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Düsseldorf.",
       keywords: [
@@ -88,8 +88,8 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
     {
       source: "/ki-beratung-duesseldorf",
       preHeadline: "KI Beratung Düsseldorf",
-      headline: "KI Beratung in Düsseldorf – Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Düsseldorf – KI-Lösungen | Bluebatch",
+      headline: "KI Beratung in Düsseldorf - Künstliche Intelligenz für Ihr Unternehmen",
+      metaTitle: "KI Beratung Düsseldorf - KI-Lösungen | Bluebatch",
       metaDescription:
         "KI Beratung für Unternehmen in Düsseldorf. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
       keywords: [

@@ -129,7 +129,7 @@ export default function Page() {
               <strong>Fehlende Ausschlusskriterien im Bewerbungsprozess:</strong>{" "}
               Wenn jede Bewerbung ungefiltert im Posteingang landet, fehlt der
               erste Filter bereits am Eingang. Strukturierte Knockout-Fragen
-              könnten 60–70% der ungeeigneten Bewerbungen automatisch
+              könnten 60-70% der ungeeigneten Bewerbungen automatisch
               aussortieren — werden aber selten konsequent eingesetzt.
             </Typo.Paragraph>
             <Typo.Paragraph>
