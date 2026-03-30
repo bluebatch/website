@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -909,6 +910,18 @@ export default function Page() {
             </Typo.Paragraph>
           </TimelineAsStepsStep>
         </TimelineAsSteps>
+      </ContentWrapper>
+
+      {/* Weiterführende Informationen */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Weiterführende Informationen</IntroBox.Headline>
+        </IntroBox>
+        <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
+          Sie suchen Automatisierungslösungen? Erfahren Sie, wie wir{" "}
+          <Link href="/wholesale-ai" className="text-primary-500 hover:underline">KI-Workflows für den Großhandel</Link> umsetzen, oder informieren Sie sich über{" "}
+          <Link href="/ki-implementierung" className="text-primary-500 hover:underline">unsere Implementierungsservices</Link>.
+        </Typo.Paragraph>
       </ContentWrapper>
 
       {/* CTA */}

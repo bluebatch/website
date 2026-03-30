@@ -179,7 +179,7 @@ export default function Page() {
                     {useCase.description}
                   </Typo.Paragraph>
                   <InternalLink href={resolveHref(`/use-cases/personaldienstleister/${useCase.slug}`)}>
-                    Mehr erfahren
+                    {useCase.title}
                   </InternalLink>
                 </div>
                 <div className="relative aspect-video">
@@ -207,7 +207,7 @@ export default function Page() {
                     {useCase.description}
                   </Typo.Paragraph>
                   <InternalLink href={resolveHref(`/use-cases/personaldienstleister/${useCase.slug}`)}>
-                    Mehr erfahren
+                    {useCase.title}
                   </InternalLink>
                 </div>
               </>

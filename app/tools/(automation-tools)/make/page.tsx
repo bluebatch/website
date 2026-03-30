@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -457,6 +458,24 @@ export default function Page() {
         </IntroBox>
 
         <ToolComparisonTable currentTool="make" />
+      </ContentWrapper>
+
+      {/* Weiterführende Informationen */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Weiterführende Informationen</IntroBox.Headline>
+        </IntroBox>
+        <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
+          Sie möchten von Make zu einer Self-Hosted-Lösung wechseln? Erfahren Sie{" "}
+          <Link href="/was-ist-n8n" className="text-primary-500 hover:underline">
+            was n8n ist und wie es funktioniert
+          </Link>
+          , oder informieren Sie sich über{" "}
+          <Link href="/ki-implementierung" className="text-primary-500 hover:underline">
+            unsere Implementierungsservices
+          </Link>
+          .
+        </Typo.Paragraph>
       </ContentWrapper>
 
       {/* 9. CTA */}

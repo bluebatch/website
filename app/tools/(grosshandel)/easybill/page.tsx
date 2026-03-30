@@ -298,6 +298,18 @@ export default function Page() {
         </Link>
       </ContentWrapper>
 
+      {/* Weiterführende Informationen */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Weiterführende Informationen</IntroBox.Headline>
+        </IntroBox>
+        <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
+          Sie nutzen Easybill? Sehen Sie sich unseren{" "}
+          <Link href="/use-cases/grosshandel/ai-automation-with-easybill" className="text-primary-500 hover:underline">Use Case für Easybill-Automatisierung</Link> an, oder erfahren Sie mehr über unsere{" "}
+          <Link href="/ki-implementierung" className="text-primary-500 hover:underline">Implementierungsservices</Link>.
+        </Typo.Paragraph>
+      </ContentWrapper>
+
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>

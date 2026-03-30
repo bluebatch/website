@@ -16,6 +16,7 @@ export const blogTags: BlogTag[] = [
   { id: "custom-nodes", label: "Custom Nodes" },
   { id: "development", label: "Development" },
   { id: "recruiting", label: "Recruiting" },
+  { id: "security", label: "Sicherheit" },
 ];
 
 export type BlogTagId = (typeof blogTags)[number]["id"];

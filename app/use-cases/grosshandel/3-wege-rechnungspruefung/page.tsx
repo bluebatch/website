@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
+import Link from "next/link";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -331,6 +332,24 @@ export default async function Page({
             </Typo.Paragraph>
           </SimpleCard>
         </SimpleGrid>
+      </ContentWrapper>
+
+      {/* Weiterführende Informationen */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Weiterführende Informationen</IntroBox.Headline>
+        </IntroBox>
+        <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
+          Entdecken Sie{" "}
+          <Link href="/wholesale-ai" className="text-primary-500 hover:underline">
+            alle Großhandel Use Cases
+          </Link>
+          , oder erfahren Sie, wie unsere{" "}
+          <Link href="/bestellung-erfassen" className="text-primary-500 hover:underline">
+            automatische Auftragserfassung
+          </Link>{" "}
+          Ihren Bestellprozess beschleunigt.
+        </Typo.Paragraph>
       </ContentWrapper>
 
       <ContentWrapper noPadding bodyWidth="full">

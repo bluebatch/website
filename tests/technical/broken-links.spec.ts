@@ -4,7 +4,7 @@ import {
   BASE_URL,
   isInternalUrl,
   normalizePathname,
-} from "./helpers/crawl";
+} from "../helpers/crawl";
 
 test("no broken internal links (4xx/5xx)", async ({ page }) => {
   test.setTimeout(600_000);

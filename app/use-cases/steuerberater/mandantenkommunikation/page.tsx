@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -368,6 +369,24 @@ export default function Page() {
             <SavingsItem label="Amortisation">~6 Monate</SavingsItem>
           </SavingsItems>
         </SavingsCard>
+      </ContentWrapper>
+
+      {/* Verwandte Lösungen */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Verwandte Lösungen</IntroBox.Headline>
+        </IntroBox>
+        <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
+          Entdecken Sie{" "}
+          <Link href="/use-cases/steuerberater" className="text-primary-500 hover:underline">
+            alle Steuerberater Use Cases
+          </Link>
+          , oder erfahren Sie mehr über{" "}
+          <Link href="/ki-dokumentenmanagement" className="text-primary-500 hover:underline">
+            KI-Dokumentenverarbeitung
+          </Link>
+          .
+        </Typo.Paragraph>
       </ContentWrapper>
 
       <ContentWrapper noPadding bodyWidth="full">

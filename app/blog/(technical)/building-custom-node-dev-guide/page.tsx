@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
+import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import {
   BlogImage,
@@ -1018,6 +1019,24 @@ export default function Page() {
               Beginnen Sie noch heute mit der Entwicklung Ihrer Custom Nodes und
               erschließen Sie das volle Potenzial von n8n für Ihre spezifischen
               Anforderungen.
+            </Typo.Paragraph>
+          </div>
+
+          <Separator />
+
+          {/* Weiterführende Informationen */}
+          <div>
+            <Typo.H2>Weiterführende Informationen</Typo.H2>
+            <Typo.Paragraph className="text-gray-600">
+              Sie brauchen Unterstützung bei der Custom-Node-Entwicklung? Erfahren Sie mehr über{" "}
+              <Link href="/n8n-node" className="text-primary-500 hover:underline">
+                unseren Custom-Node-Service
+              </Link>
+              , oder informieren Sie sich über{" "}
+              <Link href="/ki-implementierung" className="text-primary-500 hover:underline">
+                unsere Implementierungsservices
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
         </BlogLayout.Content>

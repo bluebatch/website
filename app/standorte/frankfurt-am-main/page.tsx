@@ -1,121 +1,35 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import BackgroundHero from "@/components/heroes/background-hero";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import Typo from "@/components/ui/typo";
-import { CityLinksFromMeta } from "@/components/standorte/city-links";
-import type { CityMeta } from "@/lib/meta-custom";
-import type { RewriteSiteConfig } from "@/lib/get-rewrites";
-import { getRewriteOverrides } from "@/lib/get-rewrites";
-import StatsList from "@/components/ui/stats-list";
 import IntroBox from "@/components/ui/intro-box";
-import TabGroup, {
-  TabNavigation,
-  TabItem,
-  TabContent,
-} from "@/components/ui/tab-group";
-import SimpleGrid from "@/components/layout/simple-grid";
+import StatsList from "@/components/ui/stats-list";
+import BoundlessImageCard from "@/components/cards/boundless-image-card";
 import ComparisonCard, {
   BeforeCard,
   AfterCard,
   ComparisonHeadline,
   ComparisonList,
   ComparisonListItem,
-  ComparisonFooter,
 } from "@/components/cards/comparison-card";
-import BoundlessImageCard from "@/components/cards/boundless-image-card";
+import DataTable from "@/components/ui/data-table";
+import ProsCons from "@/components/sections/pros-cons";
 import { FaqContainer } from "@/components/ui/faqs";
+import { CityLinksFromMeta } from "@/components/standorte/city-links";
 import ContactButton from "@/components/buttons/contact-button";
+import type { CityMeta } from "@/lib/meta-custom";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
+import { getRewriteOverrides } from "@/lib/get-rewrites";
 
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/ki-agentur-frankfurt",
   rewrites: [
     {
-      source: "/ai-workflows-frankfurt-am-main",
-      preHeadline: "AI Workflows Frankfurt am Main",
-      headline: "AI Workflows & Automatisierung in Frankfurt am Main",
-      metaTitle: "AI Workflows Frankfurt am Main - KI-Automatisierung | Bluebatch",
-      metaDescription:
-        "AI Workflows für Unternehmen in Frankfurt am Main. KI-gestützte Automatisierung, intelligente Prozesse und Workflow-Optimierung von Bluebatch.",
-      keywords: [
-        "AI Workflows Frankfurt am Main",
-        "KI Automatisierung Frankfurt am Main",
-        "Workflow Automatisierung Frankfurt am Main",
-        "Bluebatch",
-      ],
-    },
-    {
-      source: "/n8n-automation-frankfurt-am-main",
-      preHeadline: "n8n Automation Frankfurt am Main",
-      headline: "n8n Automation in Frankfurt am Main - Workflows automatisieren",
-      metaTitle: "n8n Automation Frankfurt am Main | Bluebatch",
-      metaDescription:
-        "n8n Automation für Unternehmen in Frankfurt am Main. Open-Source Workflow-Automatisierung mit 1.200+ Integrationen - self-hosted und DSGVO-konform.",
-      keywords: [
-        "n8n Automation Frankfurt am Main",
-        "n8n Frankfurt am Main",
-        "Workflow Automation Frankfurt am Main",
-        "Bluebatch",
-      ],
-    },
-    {
-      source: "/n8n-frankfurt-am-main",
-      preHeadline: "n8n Frankfurt am Main",
-      headline: "n8n Agentur in Frankfurt am Main",
-      metaTitle: "n8n Frankfurt am Main - Workflow-Automatisierung | Bluebatch",
-      metaDescription:
-        "n8n Experten in Frankfurt am Main. Workflow-Automatisierung, API-Integrationen und Prozessoptimierung für Unternehmen in Frankfurt am Main und Umgebung.",
-      keywords: [
-        "n8n Frankfurt am Main",
-        "n8n Agentur Frankfurt am Main",
-        "n8n Beratung Frankfurt am Main",
-        "Bluebatch",
-      ],
-    },
-    {
-      source: "/automation-frankfurt-am-main",
-      preHeadline: "Automation Frankfurt am Main",
-      headline: "Automation & Prozessoptimierung in Frankfurt am Main",
-      metaTitle: "Automation Frankfurt am Main - Prozessoptimierung | Bluebatch",
-      metaDescription:
-        "Automation für Unternehmen in Frankfurt am Main. Geschäftsprozesse automatisieren, Effizienz steigern und Kosten senken mit Bluebatch.",
-      keywords: [
-        "Automation Frankfurt am Main",
-        "Prozessautomatisierung Frankfurt am Main",
-        "Workflow Automation Frankfurt am Main",
-        "Bluebatch",
-      ],
-    },
-    {
-      source: "/it-dienstleister-frankfurt-am-main",
-      preHeadline: "IT Dienstleister Frankfurt am Main",
-      headline: "IT Dienstleister in Frankfurt am Main - Automatisierung & Digitalisierung",
-      metaTitle: "IT Dienstleister Frankfurt am Main - Automatisierung | Bluebatch",
-      metaDescription:
-        "Ihr IT Dienstleister in Frankfurt am Main. Workflow-Automatisierung, Systemintegration und digitale Prozessoptimierung für Unternehmen in Frankfurt am Main.",
-      keywords: [
-        "IT Dienstleister Frankfurt am Main",
-        "IT Service Frankfurt am Main",
-        "Digitalisierung Frankfurt am Main",
-        "Bluebatch",
-      ],
-    },
-    {
-      source: "/ki-beratung-frankfurt-am-main",
-      preHeadline: "KI Beratung Frankfurt am Main",
-      headline: "KI Beratung in Frankfurt am Main - Künstliche Intelligenz für Ihr Unternehmen",
-      metaTitle: "KI Beratung Frankfurt am Main - KI-Lösungen | Bluebatch",
-      metaDescription:
-        "KI Beratung für Unternehmen in Frankfurt am Main. Künstliche Intelligenz, AI Agents und intelligente Automatisierung von Bluebatch.",
-      keywords: [
-        "KI Beratung Frankfurt am Main",
-        "KI Lösungen Frankfurt am Main",
-        "Künstliche Intelligenz Frankfurt am Main",
-        "Bluebatch",
-      ],
+      source: "/ki-agentur-frankfurt",
     },
   ],
 };
@@ -157,8 +71,10 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }): Promise<Metadata> {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
+
   const title =
     overrides?.metaTitle ??
     `Workflow-Automatisierung ${metaCustom.name} | Bluebatch`;
@@ -199,44 +115,41 @@ export async function generateMetadata({
       images: ["/images/bluebatch-social-cover.jpg"],
     },
     alternates: {
-      canonical: "/standorte/frankfurt-am-main",
+      canonical: "/ki-agentur-frankfurt",
     },
   };
 }
 
-const heroStats = [
-  { value: 80, suffix: " Mrd. €", label: "BIP Stadt" },
-  { value: 300, suffix: " Mrd. €", label: "BIP Metropolregion" },
-  { value: 642366, suffix: "", label: "Beschäftigte (Rekord)" },
-  { value: 120000, suffix: "+", label: "Finanzsektor-Beschäftigte" },
-  { value: 61.6, suffix: " Mio.", label: "Flughafen-Passagiere" },
-];
-
-const faqs = [
+const frankfurtFaqs = [
   {
-    question: "Ist n8n für den regulierten Finanzsektor geeignet?",
+    question: "Warum ist n8n besonders für Frankfurter Finanzinstitute geeignet?",
     answer:
-      "Ja. n8n kann self-hosted auf Ihrer eigenen Infrastruktur betrieben werden — keine Daten werden an Dritte übermittelt. Damit ist die Lösung ideal für BaFin- und EZB-regulierte Umgebungen, in denen Datensouveränität und Compliance oberste Priorität haben.",
+      "n8n kann self-hosted auf Ihrer eigenen Infrastruktur betrieben werden — keine Daten verlassen Ihr Rechenzentrum. In einer Stadt mit dreifacher regulatorischer Aufsicht durch EZB, BaFin und die neue AMLA ist das entscheidend. Self-Hosting bedeutet volle Datensouveränität, DSGVO-Konformität und die Möglichkeit, Compliance-Workflows direkt an regulatorische Anforderungen wie MiCA, DORA oder Basel IV anzupassen.",
   },
   {
-    question: "Können KI-Modelle in n8n-Workflows integriert werden?",
+    question: "Welche Compliance-Prozesse lassen sich mit n8n automatisieren?",
     answer:
-      "Ja. n8n unterstützt die Integration von OpenAI, Anthropic und lokal gehosteten KI-Modellen. So lassen sich KI-gestützte Dokumentenprüfung, automatische Klassifikation und intelligente Entscheidungsprozesse nahtlos in bestehende Workflows einbinden.",
+      "KYC-Prüfungen mit KI-gestützter Dokumentenanalyse, laufendes AML-Transaktionsmonitoring, automatische Verdachtsmeldungen, regulatorische Reportings an BaFin und EZB, AMLA-konforme Geldwäscheprüfungen und Sanktionslistenabgleiche in Echtzeit. Der globale RegTech-Markt wächst von 20,3 Mrd. auf 72,4 Mrd. USD bis 2032 — Automatisierung ist kein Nice-to-have mehr.",
   },
   {
-    question: "Wie schnell amortisiert sich die Investition?",
+    question: "Wie schnell amortisiert sich Compliance-Automatisierung?",
     answer:
-      "Im Finanzsektor liegt der typische ROI-Zeitraum bei 3 bis 6 Monaten — vor allem durch eingesparte Compliance-Stunden, reduzierte Fehlerkosten und beschleunigte Berichterstellung.",
+      "Im Frankfurter Finanzsektor liegt der typische ROI bei 3 bis 6 Monaten. Die größten Einsparungen entstehen durch reduzierte manuelle Compliance-Stunden, minimierte Fehlerkosten bei regulatorischen Meldungen und beschleunigte KYC-Onboarding-Prozesse. Bei einem durchschnittlichen Compliance-Mitarbeitergehalt in Frankfurt spart allein die Automatisierung einer KYC-Prüfung mehrere Stunden pro Vorgang.",
   },
   {
-    question: "Unterstützen Sie auch Unternehmen außerhalb Frankfurts?",
+    question: "Können bestehende Banksysteme an n8n angebunden werden?",
     answer:
-      "Selbstverständlich. Wir betreuen Unternehmen in der gesamten Rhein-Main-Region — von Darmstadt und Wiesbaden über Mainz bis Offenbach und darüber hinaus.",
+      "Ja. n8n bietet über 1.200 native Integrationen und lässt sich per REST-API, Webhooks oder Datenbank-Konnektoren an jedes System anbinden — ob SAP, Avaloq, Temenos, Finastra oder proprietäre Core-Banking-Systeme. Deutsche Bank setzt bereits auf 19.000 Tech-Mitarbeiter und KI-Partnerschaften; die technische Infrastruktur für Automatisierung ist in Frankfurt vorhanden.",
   },
   {
-    question: "Was passiert bei regulatorischen Änderungen?",
+    question: "Betreuen Sie auch Unternehmen außerhalb des Finanzsektors?",
     answer:
-      "n8n-Workflows lassen sich schnell anpassen. Neue regulatorische Anforderungen wie MiCA, DORA oder Basel IV können zügig in bestehende Automatisierungen implementiert werden, ohne den laufenden Betrieb zu unterbrechen.",
+      "Selbstverständlich. Frankfurt ist weit mehr als Banken: Die Messe Frankfurt erwirtschaftet 780 Mio. Euro Umsatz mit 98.000 Ausstellern, Sanofi beschäftigt 6.200 Mitarbeiter in Frankfurt, und der Flughafen bewegt 2,1 Mio. Tonnen Cargo jährlich. Wir automatisieren Prozesse in Pharma, Logistik, Beratung und Handel in der gesamten Rhein-Main-Region mit 5,94 Mio. Einwohnern.",
+  },
+  {
+    question: "Wie geht n8n mit regulatorischen Änderungen um?",
+    answer:
+      "n8n-Workflows lassen sich modular anpassen. Neue Regulierungen wie die AMLA-Verordnung (seit Juli 2025 in Frankfurt aktiv), MiCA für Krypto-Assets oder DORA für digitale Resilienz können in bestehende Automatisierungen integriert werden, ohne den laufenden Betrieb zu unterbrechen. Das ist ein entscheidender Vorteil gegenüber monolithischen Compliance-Systemen.",
   },
 ];
 
@@ -247,6 +160,7 @@ export default async function Page({
 }) {
   if (!metaCustom.publish) notFound();
 
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
   const params = await searchParams;
   const overrides = getRewriteOverrides(rewriteSiteConfig, params);
 
@@ -255,7 +169,7 @@ export default async function Page({
       {/* 1. BackgroundHero */}
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
-          imageSrc="/images/business-analytics.jpg"
+          imageSrc="/images/cities/frankfurt-am-main.jpg"
           overlayOpacity={0.8}
           opacityBackground="white"
         >
@@ -265,349 +179,288 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                Automatisierung für{" "}
+                KI Agentur Frankfurt —{" "}
                 <BackgroundHero.Highlight>
-                  Europas Finanzhauptstadt
+                  Compliance-Automatisierung für Europas Finanzhauptstadt
                 </BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Workflow-Automatisierung und KI-Lösungen für den Finanzsektor,
-            Logistik und die gesamte Rhein-Main-Region. Von
-            Compliance-Reporting bis Frachtabwicklung — wir automatisieren
-            Ihre geschäftskritischen Prozesse.
+            330+ Finanzinstitute, dreifache regulatorische Aufsicht durch EZB,
+            BaFin und AMLA, und Deutschlands höchstes BIP pro Kopf. Frankfurt
+            braucht Compliance-Automatisierung, die mit dem Regulierungstempo
+            Schritt hält, self-hosted, DSGVO-konform und auf Ihrer Infrastruktur.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
-            <ContactButton icon="chat">
-              Kostenlose Erstberatung vereinbaren
-            </ContactButton>
+            <ContactButton icon="chat">Beratung anfragen</ContactButton>
           </BackgroundHero.CallToAction>
           <BackgroundHero.Stats>
             <BackgroundHero.Stat
-              value={280}
-              suffix="+"
-              label="Finanzinstitute"
+              value={74.1}
+              suffix=" Mrd. €"
+              label="BIP Frankfurt"
               index={0}
             />
             <BackgroundHero.Stat
-              value={81000}
-              label="Flughafen-Beschäftigte"
+              value={330}
+              suffix="+"
+              label="Finanzinstitute"
               index={1}
             />
             <BackgroundHero.Stat
-              value={5.8}
-              suffix=" Mio."
-              label="Metropolregion"
+              value={2.1}
+              suffix=" Mio. t"
+              label="Cargo (Europas Nr. 1)"
               index={2}
             />
           </BackgroundHero.Stats>
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* 2. StatsList — Frankfurt in Zahlen */}
-      <ContentWrapper colorScheme="gradient-primary-dark">
-        <StatsList stats={heroStats} cols={5} />
+      {/* 2. StatsList — Horizontal stats bar */}
+      <ContentWrapper colorScheme="primary">
+        <StatsList
+          cols={4}
+          stats={[
+            { value: 74200, label: "Banker in Frankfurt" },
+            { value: 89400, label: "Beschäftigte Finanzbranche" },
+            { value: 780, suffix: " Mio. €", label: "Messe-Umsatz" },
+            { value: 700, suffix: "+", label: "Startups (TechQuartier)" },
+          ]}
+        />
       </ContentWrapper>
 
-      {/* 3. IntroBox */}
+      {/* 3. IntroBox + Banking Deep Dive */}
       <ContentWrapper bodyWidth="small">
-        <IntroBox size="small">
-          <IntroBox.PreHeadline>Mainhattan</IntroBox.PreHeadline>
+        <IntroBox>
+          <IntroBox.PreHeadline>
+            Dreifache Regulierung, maximaler Automatisierungsdruck
+          </IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Wo Compliance auf Innovation trifft
+            Wo EZB, BaFin und AMLA auf 330+ Institute treffen
           </IntroBox.Headline>
-          <IntroBox.Paragraph>
-            EZB, BaFin, AMLA — Frankfurt unterliegt den strengsten
-            regulatorischen Anforderungen Europas. Gleichzeitig ist die Stadt
-            offizieller FinTech-Hub mit über 700 Start-ups im TechQuartier und
-            beherbergt den weltweit größten Internet-Austauschknoten DE-CIX.
-            n8n verbindet Compliance-Automatisierung mit innovativer
-            Prozessgestaltung — self-hosted, DSGVO-konform und auf Ihrer
-            eigenen Infrastruktur.
-          </IntroBox.Paragraph>
+          <IntroBox.Subline>
+            Frankfurt ist der einzige Standort weltweit, an dem drei europäische
+            Aufsichtsbehörden gleichzeitig regulieren. Die Konsequenz für jedes
+            Institut am Main: exponentiell steigende Compliance-Last bei
+            gleichzeitigem Fachkräftemangel.
+          </IntroBox.Subline>
         </IntroBox>
+        <div className="mt-8 space-y-6">
+          <Typo.Paragraph>
+            Die Europäische Zentralbank überwacht direkt 113 systemrelevante
+            Bankengruppen in der Eurozone. Die BaFin beaufsichtigt zusätzlich
+            alle in Deutschland zugelassenen Finanzinstitute. Und seit Juli 2025
+            sitzt mit der AMLA die neue EU-Anti-Geldwäschebehörde ebenfalls in
+            Frankfurt, mit direkter Aufsicht über die 40 riskantesten
+            Finanzunternehmen Europas. Für die 330+ Institute am Main bedeutet
+            das: drei Meldeketten, drei Prüfungsrhythmen, drei
+            Dokumentationsstandards.
+          </Typo.Paragraph>
+          <Typo.Paragraph>
+            Die regulatorische Dichte macht manuelle Compliance untragbar.
+            KYC-Prüfungen, AML-Transaktionsmonitoring, Sanktionslistenabgleiche,
+            DORA-Meldungen für digitale Resilienz, MiCA-Anforderungen für
+            Krypto-Assets: Jede einzelne Vorschrift erzeugt Prozesse, die in
+            Summe ganze Abteilungen binden. Der globale RegTech-Markt wächst
+            von 20,3 Mrd. auf 72,4 Mrd. USD bis 2032, weil die
+            Automatisierung dieser Prozesse keine strategische Option mehr ist,
+            sondern operative Notwendigkeit.
+          </Typo.Paragraph>
+          <Typo.Paragraph>
+            n8n-Workflows automatisieren den gesamten Compliance-Zyklus:
+            KYC-Onboarding mit KI-gestützter Dokumentenanalyse, laufendes
+            AML-Monitoring in Echtzeit, automatische Sanktionslistenabgleiche
+            gegen EU-, UN- und OFAC-Listen, und regulatorische Reportings
+            direkt an BaFin, EZB und AMLA. Self-hosted auf Ihrer
+            Infrastruktur, ohne dass ein einziges Dokument Ihr Rechenzentrum
+            verlässt.
+          </Typo.Paragraph>
+        </div>
+        <div className="mt-10">
+          <BoundlessImageCard imagePosition="right">
+            <BoundlessImageCard.Image
+              src="/images/cities/banking-compliance.jpg"
+              alt="Compliance-Automatisierung für Frankfurter Finanzinstitute mit n8n"
+            />
+            <BoundlessImageCard.Content>
+              <Typo.H2>19.000 Tech-Mitarbeiter bei der Deutschen Bank, und Sie?</Typo.H2>
+              <Typo.Paragraph>
+                Die Deutsche Bank hat eine strategische Partnerschaft mit
+                IBM/watsonx für KI-gestützte Prozessautomatisierung geschlossen.
+                Was für Großbanken mit eigenen Entwicklungsteams gilt, müssen
+                mittelständische Finanzdienstleister, Steuerberater und
+                Wirtschaftsprüfer in der Rhein-Main-Region mit schlanken Tools
+                lösen. n8n ist genau dafür gebaut: Open-Source, self-hosted,
+                modular erweiterbar und ohne Vendor Lock-in.
+              </Typo.Paragraph>
+            </BoundlessImageCard.Content>
+          </BoundlessImageCard>
+        </div>
       </ContentWrapper>
 
-      {/* 4. TabGroup — Branchen im Fokus */}
+      {/* 4. DataTable — THE centerpiece */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2 className="text-center mb-8">
-          Branchen im Fokus: Frankfurts Wirtschaftsmotor
-        </Typo.H2>
-        <TabGroup defaultValue="finance">
-          <TabNavigation>
-            <TabItem value="finance">Finanzsektor</TabItem>
-            <TabItem value="logistik">Flughafen & Logistik</TabItem>
-            <TabItem value="messe">Messe Frankfurt</TabItem>
-            <TabItem value="fintech">FinTech & IT</TabItem>
-          </TabNavigation>
-
-          <TabContent value="finance">
-            <SimpleGrid cols={2} className="items-center">
-              <div>
-                <Typo.H3>280+ Finanzinstitute — das Herz Europas</Typo.H3>
-                <Typo.Paragraph>
-                  Frankfurt ist Sitz der Europäischen Zentralbank, der
-                  Deutschen Bundesbank und der neuen EU-Anti-Geldwäsche-Behörde
-                  AMLA. Über 120.000 Beschäftigte arbeiten im Finanzsektor —
-                  mehr als an jedem anderen Finanzstandort auf dem europäischen
-                  Festland. Seit dem Brexit verlagern immer mehr internationale
-                  Institute ihre europäischen Hauptsitze hierher.
-                </Typo.Paragraph>
-                <Typo.H4>n8n-Automatisierung im Finanzsektor:</Typo.H4>
-                <Typo.List>
-                  <li>
-                    Automatisierte KYC/AML-Prüfungen mit KI-gestützter
-                    Dokumentenanalyse
-                  </li>
-                  <li>
-                    Echtzeit-Compliance-Reporting an BaFin und EZB
-                  </li>
-                  <li>
-                    Regulatorische Meldungen für MiCA, DORA und Basel IV
-                  </li>
-                  <li>
-                    Automatisierte Risikoüberwachung und Transaktions-Monitoring
-                  </li>
-                </Typo.List>
-              </div>
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/business-professional.jpg"
-                  alt="Workflow-Automatisierung im Frankfurter Finanzsektor mit n8n und KI-gestützter Compliance"
-                  fill
-                  className="object-cover shadow-lg rounded-lg"
-                />
-              </div>
-            </SimpleGrid>
-          </TabContent>
-
-          <TabContent value="logistik">
-            <SimpleGrid cols={2} className="items-center">
-              <div>
-                <Typo.H3>
-                  Deutschlands größter Flughafen & 12.000+ Logistikfirmen
-                </Typo.H3>
-                <Typo.Paragraph>
-                  Der Frankfurter Flughafen ist die größte lokale Arbeitsstätte
-                  Deutschlands mit rund 81.000 Beschäftigten und über 61,6
-                  Millionen Passagieren im Jahr 2024. In der Rhein-Main-Region
-                  arbeiten rund 291.000 Beschäftigte in über 12.000
-                  Logistikunternehmen — ein Automatisierungspotenzial
-                  enormen Ausmaßes.
-                </Typo.Paragraph>
-                <Typo.H4>n8n-Automatisierung in der Logistik:</Typo.H4>
-                <Typo.List>
-                  <li>
-                    Automatisierte Frachtabwicklung und Zolldokumentation
-                  </li>
-                  <li>
-                    Intelligente Personalplanung und Schichtmanagement
-                  </li>
-                  <li>Vorausschauende Wartung durch IoT-Datenintegration</li>
-                  <li>
-                    Echtzeit-Tracking und automatisierte Statusmeldungen
-                  </li>
-                </Typo.List>
-              </div>
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/process-automation.jpg"
-                  alt="Prozessautomatisierung fuer Logistik und Frachtabwicklung am Frankfurter Flughafen"
-                  fill
-                  className="object-cover shadow-lg rounded-lg"
-                />
-              </div>
-            </SimpleGrid>
-          </TabContent>
-
-          <TabContent value="messe">
-            <SimpleGrid cols={2} className="items-center">
-              <div>
-                <Typo.H3>
-                  Die älteste Messe der Welt — seit 1240
-                </Typo.H3>
-                <Typo.Paragraph>
-                  Die Messe Frankfurt organisiert hunderte Veranstaltungen
-                  jährlich auf 366.637 m² Ausstellungsfläche in 11 Hallen.
-                  Mit bis zu 30.000 Ausstellern und 2,5 Millionen Besuchern
-                  pro Jahr ist sie einer der weltweit größten
-                  Messeveranstalter. Von der Buchmesse über die IAA bis
-                  Ambiente und Light+Building — jede Veranstaltung erfordert
-                  koordinierte Prozesse.
-                </Typo.Paragraph>
-                <Typo.H4>n8n-Automatisierung im Messewesen:</Typo.H4>
-                <Typo.List>
-                  <li>
-                    Automatisiertes Ausstellermanagement und Standplatzvergabe
-                  </li>
-                  <li>
-                    Digitale Lead-Erfassung und automatische CRM-Synchronisation
-                  </li>
-                  <li>
-                    Besucherregistrierung und personalisierte Kommunikation
-                  </li>
-                  <li>
-                    Nachbereitungs-Workflows für Follow-up und Auswertung
-                  </li>
-                </Typo.List>
-              </div>
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/trade-exhibition.jpg"
-                  alt="Digitale Automatisierung fuer Messe Frankfurt mit Ausstellermanagement und Lead-Erfassung"
-                  fill
-                  className="object-cover shadow-lg rounded-lg"
-                />
-              </div>
-            </SimpleGrid>
-          </TabContent>
-
-          <TabContent value="fintech">
-            <SimpleGrid cols={2} className="items-center">
-              <div>
-                <Typo.H3>
-                  FinTech-Hub Deutschland & DE-CIX
-                </Typo.H3>
-                <Typo.Paragraph>
-                  Frankfurt ist offizieller FinTech-Hub des
-                  Bundeswirtschaftsministeriums. Das TechQuartier beherbergt
-                  über 700 Start-ups und 50 akademische Innovatoren. Der DE-CIX
-                  ist der weltweit größte Internet-Austauschknoten, und die
-                  wachsende Rechenzentrumsbranche macht Frankfurt zu einem
-                  der wichtigsten IT-Infrastrukturstandorte Europas.
-                </Typo.Paragraph>
-                <Typo.H4>n8n-Automatisierung für FinTech & IT:</Typo.H4>
-                <Typo.List>
-                  <li>
-                    API-Integrationen für schnelle Skalierung neuer Services
-                  </li>
-                  <li>
-                    Automatisierte Datenverarbeitung und ETL-Pipelines
-                  </li>
-                  <li>
-                    Monitoring, Incident-Management und Alerting-Workflows
-                  </li>
-                  <li>
-                    Automatisierte Onboarding-Prozesse und KYC für FinTechs
-                  </li>
-                </Typo.List>
-              </div>
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/technology-integration.jpg"
-                  alt="FinTech-Automatisierung und API-Integration im Frankfurter TechQuartier"
-                  fill
-                  className="object-cover shadow-lg rounded-lg"
-                />
-              </div>
-            </SimpleGrid>
-          </TabContent>
-        </TabGroup>
+        <IntroBox>
+          <IntroBox.PreHeadline>Bankprozesse automatisieren</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Der Vergleich: Manuell vs. Automatisiert
+          </IntroBox.Headline>
+        </IntroBox>
+        <div className="mt-8">
+          <DataTable>
+            <DataTable.Head>
+              <DataTable.Row>
+                <DataTable.HeaderCell>Prozess</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Manuell</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Automatisiert</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Zeitersparnis</DataTable.HeaderCell>
+              </DataTable.Row>
+            </DataTable.Head>
+            <DataTable.Body>
+              <DataTable.Row>
+                <DataTable.Cell bold>KYC-Onboarding</DataTable.Cell>
+                <DataTable.Cell>5-10 Tage</DataTable.Cell>
+                <DataTable.Cell>4 Std.</DataTable.Cell>
+                <DataTable.Cell bold>~96 %</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Transaktionsüberwachung</DataTable.Cell>
+                <DataTable.Cell>8 Std./Tag</DataTable.Cell>
+                <DataTable.Cell>Echtzeit</DataTable.Cell>
+                <DataTable.Cell bold>100 %</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>BaFin-Meldung</DataTable.Cell>
+                <DataTable.Cell>3 Std./Bericht</DataTable.Cell>
+                <DataTable.Cell>15 Min.</DataTable.Cell>
+                <DataTable.Cell bold>~92 %</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Kontoabstimmung</DataTable.Cell>
+                <DataTable.Cell>2 Std./Tag</DataTable.Cell>
+                <DataTable.Cell>10 Min.</DataTable.Cell>
+                <DataTable.Cell bold>~92 %</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Rechnungseingang</DataTable.Cell>
+                <DataTable.Cell>15 Min./Rechnung</DataTable.Cell>
+                <DataTable.Cell>30 Sek.</DataTable.Cell>
+                <DataTable.Cell bold>~97 %</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Sanktionslisten-Check</DataTable.Cell>
+                <DataTable.Cell>45 Min.</DataTable.Cell>
+                <DataTable.Cell>3 Sek.</DataTable.Cell>
+                <DataTable.Cell bold>~99 %</DataTable.Cell>
+              </DataTable.Row>
+            </DataTable.Body>
+          </DataTable>
+        </div>
       </ContentWrapper>
 
-      {/* 5. ComparisonCard — Compliance: Manuell vs. Automatisiert */}
+      {/* 5. ComparisonCard — Vorher/Nachher Compliance */}
       <ContentWrapper>
-        <Typo.H2 className="text-center mb-8">
-          Compliance-Prozesse: Manuell vs. Automatisiert
-        </Typo.H2>
+        <IntroBox>
+          <IntroBox.PreHeadline>Der Unterschied</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Compliance-Prozesse: Vorher vs. Nachher
+          </IntroBox.Headline>
+        </IntroBox>
         <ComparisonCard>
           <BeforeCard>
-            <ComparisonHeadline>Manuelle Compliance</ComparisonHeadline>
+            <ComparisonHeadline>Vorher — Manuelle Compliance</ComparisonHeadline>
             <ComparisonList>
               <ComparisonListItem>
-                Excel-basierte Prüfprozesse mit hohem Fehlerrisiko
+                KYC-Onboarding dauert 5-10 Werktage pro Neukunde, bindet ganze Teams
               </ComparisonListItem>
               <ComparisonListItem>
-                Wochenlange Berichterstellung für regulatorische Meldungen
+                BaFin- und EZB-Meldungen werden in Excel zusammenkopiert und manuell validiert
               </ComparisonListItem>
               <ComparisonListItem>
-                Menschliche Fehler bei KYC-Prüfungen und Dokumentensichtung
+                Sanktionslistenabgleiche laufen als Batch-Job über Nacht, nicht in Echtzeit
               </ComparisonListItem>
               <ComparisonListItem>
-                Isolierte Datenquellen ohne zentrale Übersicht
+                Reaktive Compliance: Verstöße werden erst bei der nächsten Prüfung entdeckt
               </ComparisonListItem>
             </ComparisonList>
-            <ComparisonFooter>
-              Hohe Kosten, langsame Prozesse, Compliance-Risiken
-            </ComparisonFooter>
           </BeforeCard>
           <AfterCard>
-            <ComparisonHeadline>n8n-Automatisierung</ComparisonHeadline>
+            <ComparisonHeadline>Nachher — n8n-Automatisierung</ComparisonHeadline>
             <ComparisonList>
               <ComparisonListItem>
-                Regelbasierte automatische Prüfung in Echtzeit
+                KYC-Prüfung in unter 4 Stunden mit KI-gestützter Dokumentenanalyse und automatischer Risikoklassifizierung
               </ComparisonListItem>
               <ComparisonListItem>
-                Echtzeit-Reporting direkt an BaFin und EZB
+                Echtzeit-Reporting direkt aus dem Quellsystem an BaFin, EZB und AMLA, fehlerfrei und auditierbar
               </ComparisonListItem>
               <ComparisonListItem>
-                KI-gestützte Dokumentenprüfung mit automatischer Klassifikation
+                Kontinuierlicher Sanktionslistenabgleich gegen EU-, UN- und OFAC-Listen bei jeder Transaktion
               </ComparisonListItem>
               <ComparisonListItem>
-                Zentrales Datenmanagement über alle Systeme hinweg
+                Proaktive Alerts: Auffälligkeiten werden in Echtzeit erkannt und eskaliert, bevor sie zum Problem werden
               </ComparisonListItem>
             </ComparisonList>
-            <ComparisonFooter>
-              80% weniger manuelle Aufwände, minimierte Fehlerquote
-            </ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
       </ContentWrapper>
 
-      {/* 6. Prozess-Teaser */}
-      <ContentWrapper colorScheme="gray">
+      {/* 6. ProsCons — Self-Hosted vs. Cloud */}
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
-          <IntroBox.PreHeadline>Unser Prozess</IntroBox.PreHeadline>
+          <IntroBox.PreHeadline>Infrastruktur-Entscheidung</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Implementierung für Frankfurts Finanzwelt
+            Self-Hosted vs. Cloud für Frankfurter Finanzinstitute
           </IntroBox.Headline>
-          <IntroBox.Subline>
-            Banken, Versicherungen und FinTechs im Rhein-Main-Gebiet brauchen
-            Automatisierung mit höchsten Compliance-Standards — von
-            KYC/AML-Workflows bis zur regulatorischen Berichterstattung. Unser
-            bewährtes 6-Phasen-Framework ist genau dafür gebaut.
-          </IntroBox.Subline>
         </IntroBox>
-        <div className="mt-8 text-center">
-          <Link
-            href="/unser-prozess"
-            className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition-all hover:border-gray-400 hover:bg-gray-50 hover:shadow-sm"
-          >
-            Unser Prozess im Detail <span aria-hidden="true">&rarr;</span>
-          </Link>
+        <div className="mt-8">
+          <ProsCons>
+            <ProsCons.Pros>
+              <ProsCons.Item
+                title="Volle Datensouveränität"
+                description="Alle Daten bleiben in Ihrem eigenen Rechenzentrum. Keine Abhängigkeit von externen Cloud-Anbietern, keine Datenübertragung in Drittländer."
+              />
+              <ProsCons.Item
+                title="BaFin-konform ab Tag 1"
+                description="Self-Hosted n8n erfüllt die Anforderungen der BaFin an IT-Auslagerung und Datenverarbeitung, ohne aufwendige Cloud-Compliance-Prüfungen."
+              />
+              <ProsCons.Item
+                title="Keine US-Cloud-Abhängigkeit"
+                description="Kein CLOUD Act, kein FISA 702. Ihre Kundendaten, Transaktionsdaten und Compliance-Dokumente unterliegen ausschließlich deutschem und europäischem Recht."
+              />
+              <ProsCons.Item
+                title="Eigenes Rechenzentrum, volle Kontrolle"
+                description="Betrieb auf Ihrer bestehenden Infrastruktur oder bei einem deutschen Hosting-Anbieter. Volle Kontrolle über Updates, Backups und Zugriffsrechte."
+              />
+              <ProsCons.Item
+                title="AMLA-ready"
+                description="Die neue Anti-Geldwäschebehörde in Frankfurt stellt hohe Anforderungen an Datenzugriff und Audit-Trails. Self-Hosted n8n liefert lückenlose Nachvollziehbarkeit."
+              />
+            </ProsCons.Pros>
+            <ProsCons.Cons>
+              <ProsCons.Item
+                title="Daten in US-Cloud"
+                description="SaaS-Automatisierungstools wie Zapier oder Make.com speichern Workflow-Daten auf US-Servern. Für regulierte Finanzinstitute ein Compliance-Risiko."
+              />
+              <ProsCons.Item
+                title="Vendor Lock-in"
+                description="Proprietäre Plattformen binden Sie an einen Anbieter. Preiserhöhungen, Feature-Änderungen oder Abkündigungen treffen Sie ohne Ausweichmöglichkeit."
+              />
+              <ProsCons.Item
+                title="Keine Audit-Kontrolle"
+                description="Bei SaaS-Lösungen haben Sie keinen Zugriff auf Server-Logs, keine Kontrolle über Datenretention und können Auditoren keinen direkten Systemzugang gewähren."
+              />
+              <ProsCons.Item
+                title="Teurer bei Skalierung"
+                description="SaaS-Pricing basiert auf Ausführungen pro Monat. Bei tausenden täglichen Compliance-Checks, Buchungen und Abgleichen explodieren die Kosten schnell."
+              />
+            </ProsCons.Cons>
+          </ProsCons>
         </div>
       </ContentWrapper>
 
-      {/* 7. BoundlessImageCard — Die Rhein-Main-Region */}
-      <ContentWrapper>
-        <BoundlessImageCard imagePosition="left">
-          <BoundlessImageCard.Image
-            src="/images/partnership.jpg"
-            alt="Rhein-Main-Region als Wirtschaftsstandort mit 5,8 Millionen Einwohnern und starker Vernetzung"
-          />
-          <BoundlessImageCard.Content>
-            <Typo.H2>Die Rhein-Main-Region: Ihr Automatisierungspartner vor Ort</Typo.H2>
-            <Typo.Paragraph>
-              Frankfurt profitiert von starken Nachbarstädten mit
-              einzigartigen Kompetenzen: Darmstadt mit ESA, EUMETSAT und
-              der TU Darmstadt. Wiesbaden als hessische Landeshauptstadt
-              mit dem Statistischen Bundesamt (Destatis). Mainz mit dem
-              ZDF-Hauptsitz und BioNTech. Offenbach mit dem Deutschen
-              Wetterdienst und einer wachsenden Kreativwirtschaft.
-            </Typo.Paragraph>
-            <Typo.Paragraph>
-              Unsere Automatisierungslösungen bedienen die gesamte
-              Metropolregion mit ihren 5,8 Millionen Einwohnern und
-              über 2,3 Millionen Beschäftigten. Ob Sie in Frankfurt
-              selbst oder in einer der umliegenden Städte sitzen — wir
-              sind Ihr Partner für intelligente Prozessautomation.
-            </Typo.Paragraph>
-          </BoundlessImageCard.Content>
-        </BoundlessImageCard>
-      </ContentWrapper>
-
-      {/* 8. City Links */}
+      {/* 7. City Links */}
       <ContentWrapper colorScheme="gradient-night">
         <CityLinksFromMeta
           crossReference={metaCustom.crossReference}
@@ -615,14 +468,14 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 9. FAQs */}
-      <ContentWrapper colorScheme="gray-light">
-        <FaqContainer faqs={faqs}>
-          <FaqContainer.Headline>Häufige Fragen zur Automatisierung in Frankfurt</FaqContainer.Headline>
+      {/* 8. FAQ */}
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
+        <FaqContainer faqs={frankfurtFaqs}>
+          <FaqContainer.Headline>FAQ zur Compliance-Automatisierung in Frankfurt</FaqContainer.Headline>
         </FaqContainer>
       </ContentWrapper>
 
-      {/* 10. CTA */}
+      {/* 9. CTA */}
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>

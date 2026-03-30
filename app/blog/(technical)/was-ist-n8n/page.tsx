@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
+import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 
@@ -1286,6 +1287,24 @@ export default function Page() {  return (
               Da der Quellcode öffentlich ist (GitHub, 178K Stars), kann die
               Community das Projekt weiterführen. Das ist ein Vorteil gegenüber
               proprietären Tools, bei denen ein Shutdown das Ende bedeutet.
+            </Typo.Paragraph>
+          </div>
+
+          <Separator />
+
+          {/* Weiterführende Informationen */}
+          <div>
+            <Typo.H2>Weiterführende Informationen</Typo.H2>
+            <Typo.Paragraph className="text-gray-600">
+              Interessiert an n8n? Informieren Sie sich über{" "}
+              <Link href="/ki-implementierung" className="text-primary-500 hover:underline">
+                unsere n8n-Implementierungsservices
+              </Link>
+              , oder erfahren Sie mehr über{" "}
+              <Link href="/n8n-hosting-deutschland" className="text-primary-500 hover:underline">
+                n8n Hosting in Deutschland
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
         </BlogLayout.Content>

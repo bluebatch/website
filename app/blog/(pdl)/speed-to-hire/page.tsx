@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import IntroBox from "@/components/ui/intro-box";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 
@@ -500,6 +502,18 @@ export default function Page() {
           </BlogLayout.NavigationItem>
         </BlogLayout.Navigation>
       </BlogLayout>
+
+      {/* Weiterführende Informationen */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Weiterführende Informationen</IntroBox.Headline>
+        </IntroBox>
+        <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
+          Erfahren Sie mehr über unsere{" "}
+          <Link href="/use-cases/personaldienstleister" className="text-primary-500 hover:underline">Automatisierungslösungen für Personaldienstleister</Link>, oder sehen Sie sich unsere{" "}
+          <Link href="/ki-implementierung" className="text-primary-500 hover:underline">Implementierungsservices</Link> an.
+        </Typo.Paragraph>
+      </ContentWrapper>
     </>
   );
 }

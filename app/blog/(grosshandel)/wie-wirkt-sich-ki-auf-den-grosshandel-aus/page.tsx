@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
+import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 
@@ -709,6 +710,24 @@ export default function Page() {
               Dieser Artikel basiert auf aktuellen Branchenberichten von
               Gartner, Deloitte, McKinsey, Forrester, SAP, Microsoft und
               weiteren Quellen. Alle Daten wurden im Februar 2026 recherchiert.
+            </Typo.Paragraph>
+          </div>
+
+          <Separator />
+
+          {/* Weiterführende Informationen */}
+          <div>
+            <Typo.H2>Weiterführende Informationen</Typo.H2>
+            <Typo.Paragraph className="text-gray-600">
+              Sie möchten KI im Großhandel konkret umsetzen? Sehen Sie sich{" "}
+              <Link href="/wholesale-ai" className="text-primary-500 hover:underline">
+                unsere Großhandel Use Cases
+              </Link>{" "}
+              an, oder erfahren Sie mehr über{" "}
+              <Link href="/ki-implementierung" className="text-primary-500 hover:underline">
+                unsere Implementierungsservices
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
         </BlogLayout.Content>

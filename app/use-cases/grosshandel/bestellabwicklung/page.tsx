@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -439,6 +440,24 @@ export default async function Page({
             </SimpleCard>
           </SimpleGrid>
         </div>
+      </ContentWrapper>
+
+      {/* Verwandte Lösungen */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Verwandte Lösungen</IntroBox.Headline>
+        </IntroBox>
+        <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
+          Entdecken Sie{" "}
+          <Link href="/wholesale-ai" className="text-primary-500 hover:underline">
+            alle Großhandel Use Cases
+          </Link>
+          , oder erfahren Sie mehr über{" "}
+          <Link href="/automatische-rechnungspruefung" className="text-primary-500 hover:underline">
+            automatische Rechnungsprüfung
+          </Link>
+          .
+        </Typo.Paragraph>
       </ContentWrapper>
 
       <ContentWrapper noPadding bodyWidth="full">
