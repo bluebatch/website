@@ -1494,7 +1494,7 @@ N8N_LOG_LEVEL=info`}
               <p className="text-sm font-medium">
                 <strong>
                   <a
-                    href="https://bluebatch.de/kontakt"
+                    href="/contact"
                     className="text-primary-700 underline hover:text-primary-900"
                   >
                     Kostenloses Sicherheits-Audit anfragen
