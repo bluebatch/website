@@ -1,0 +1,134 @@
+{
+  "categories": {
+    "document": {
+      "label": "Dokumentenprüfung",
+      "description": "Rechnungen, Lieferscheine und Bestellungen automatisch prüfen und erfassen",
+      "icon": "FileCheck",
+      "defaults": {
+        "documentsPerMonth": 200,
+        "minutesBefore": 25,
+        "minutesAfter": 5,
+        "hourlyCostEur": 40,
+        "setupCostEur": 4000,
+        "mrrEur": 500,
+        "mrrBaseEur": 50
+      },
+      "sliders": {
+        "documentsPerMonth": {
+          "label": "Dokumente pro Monat",
+          "min": 20,
+          "max": 1000,
+          "step": 10
+        },
+        "minutesBefore": {
+          "label": "Bearbeitungszeit heute (Min.)",
+          "min": 5,
+          "max": 60,
+          "step": 1
+        },
+        "minutesAfter": {
+          "label": "Bearbeitungszeit mit KI (Min.)",
+          "min": 1,
+          "max": 30,
+          "step": 1
+        },
+        "hourlyCostEur": {
+          "label": "MA-Kosten / Stunde",
+          "min": 15,
+          "max": 80,
+          "step": 1,
+          "unit": "€"
+        }
+      }
+    },
+    "social-media-ads": {
+      "label": "Social Media Posts",
+      "description": "Content-Erstellung für Social Media mit KI beschleunigen und skalieren",
+      "icon": "Megaphone",
+      "defaults": {
+        "postsNow": 8,
+        "postsPlanned": 20,
+        "minutesPerPost": 120,
+        "minutesPerPostAfter": 30,
+        "hourlyCostEur": 40,
+        "setupCostEur": 12000,
+        "mrrEur": 500,
+        "mrrBaseEur": 50
+      },
+      "sliders": {
+        "postsNow": {
+          "label": "Aktuelle Posts / Monat",
+          "min": 1,
+          "max": 60,
+          "step": 1
+        },
+        "postsPlanned": {
+          "label": "Geplante Posts / Monat",
+          "min": 1,
+          "max": 120,
+          "step": 1
+        },
+        "minutesPerPost": {
+          "label": "Zeit pro Post heute (Min.)",
+          "min": 15,
+          "max": 300,
+          "step": 5
+        },
+        "minutesPerPostAfter": {
+          "label": "Zeit pro Post mit KI (Min.)",
+          "min": 5,
+          "max": 120,
+          "step": 5
+        },
+        "hourlyCostEur": {
+          "label": "MA-Kosten / Stunde",
+          "min": 15,
+          "max": 80,
+          "step": 1,
+          "unit": "€"
+        }
+      }
+    },
+    "service-requests": {
+      "label": "Service Requests",
+      "description": "Kundenanfragen schneller bearbeiten mit KI-gestützter Automatisierung",
+      "icon": "Headset",
+      "defaults": {
+        "requestsPerMonth": 300,
+        "minutesBefore": 20,
+        "minutesAfter": 5,
+        "hourlyCostEur": 35,
+        "setupCostEur": 4000,
+        "mrrEur": 500,
+        "mrrBaseEur": 50
+      },
+      "sliders": {
+        "requestsPerMonth": {
+          "label": "Requests / Monat",
+          "min": 20,
+          "max": 2000,
+          "step": 10
+        },
+        "minutesBefore": {
+          "label": "Bearbeitungszeit heute (Min.)",
+          "min": 5,
+          "max": 60,
+          "step": 1
+        },
+        "minutesAfter": {
+          "label": "Bearbeitungszeit mit KI (Min.)",
+          "min": 1,
+          "max": 30,
+          "step": 1
+        },
+        "hourlyCostEur": {
+          "label": "MA-Kosten / Stunde",
+          "min": 15,
+          "max": 80,
+          "step": 1,
+          "unit": "€"
+        }
+      }
+    }
+  }
+}

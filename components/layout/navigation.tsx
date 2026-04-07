@@ -153,6 +153,12 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
             description: "High-Performance Setup",
             href: "/n8n-performance",
           },
+          {
+            icon: "/icons/calculator.svg",
+            title: "ROI-Rechner",
+            description: "Lohnt sich Automatisierung?",
+            href: "/roi-rechner",
+          },
         ],
       },
       {
