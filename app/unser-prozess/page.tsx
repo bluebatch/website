@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -244,7 +245,10 @@ export default function HowWeDoPage() {
             Wir bringen die Prinzipien des deutschen Engineerings - Präzision,
             Gründlichkeit und Systematik - in die Welt der KI-Automatisierung.
             Kein &ldquo;Basteln&rdquo;, sondern robuste Workflows auf
-            Enterprise-Niveau.
+            Enterprise-Niveau, betrieben auf{" "}
+            <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">deutschem Hosting</Link>{" "}
+            mit langfristiger{" "}
+            <Link href="/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>.
           </p>
         </div>
 

@@ -3,6 +3,7 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
+import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 
@@ -26,14 +27,14 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 
 export const metadata: Metadata = {
   title:
-    "Digitalisierung Großhandel: 15 ausgewählte Use Cases | Bluebatch",
+    "Digitalisierung im Großhandel: 15 Use Cases mit ROI-Zahlen (2026)",
   description:
-    "15 konkrete KI-Workflow Use Cases für den Großhandel: Von automatisierter Auftragserfassung über Rechnungsprüfung bis CBAM-Compliance. Mit ROI-Zahlen und Praxisbeispielen.",
+    "15 konkrete KI-Workflow Use Cases für den Großhandel: Von Auftragserfassung über Rechnungsprüfung bis CBAM-Compliance. Mit ROI-Zahlen und Praxisbeispielen.",
   openGraph: {
     title:
-      "Digitalisierung Großhandel: 15 ausgewählte Use Cases",
+      "Digitalisierung im Großhandel: 15 Use Cases mit ROI-Zahlen (2026)",
     description:
-      "15 konkrete KI-Workflow Use Cases für den Großhandel: Von automatisierter Auftragserfassung über Rechnungsprüfung bis CBAM-Compliance. Mit ROI-Zahlen und Praxisbeispielen.",
+      "15 konkrete KI-Workflow Use Cases für den Großhandel: Von Auftragserfassung über Rechnungsprüfung bis CBAM-Compliance. Mit ROI-Zahlen und Praxisbeispielen.",
     type: "article",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
         url: "/blog/digitalisierung-grosshandel/hero.png",
         width: 1200,
         height: 630,
-        alt: "Digitalisierung Großhandel: 15 ausgewählte Use Cases",
+        alt: "Digitalisierung im Großhandel: 15 Use Cases mit ROI-Zahlen (2026)",
       },
     ],
   },
@@ -101,9 +102,10 @@ export default async function Page({
               ERP zu ersetzen.
             </Typo.Paragraph>
             <Typo.Paragraph>
-              Im Großhandel werden drei von vier Bestellungen noch manuell
-              erfasst, per E-Mail, PDF, Fax oder Telefon. Pro Auftrag vergehen
-              11 Minuten, die Fehlerquote liegt bei 4–7 %, und jede Korrektur
+              Im Großhandel werden drei von vier{" "}
+              <Link href="/bestellerfassung-automatisieren" className="text-primary-600 hover:underline">Bestellungen noch manuell erfasst</Link>,
+              per E-Mail, PDF, Fax oder Telefon. Pro Auftrag vergehen
+              11 Minuten, die Fehlerquote liegt bei 4-7 %, und jede Korrektur
               kostet Zeit, Geld und Kundenvertrauen. Gleichzeitig fehlen die
               Leute: 43.000 Arbeitsplätze hat der deutsche Großhandel allein im
               letzten Jahr verloren, 149.000 IT-Stellen sind unbesetzt. Die
@@ -118,7 +120,7 @@ export default async function Page({
               und CBAM-Compliance. Jeder Use Case funktioniert mit bestehenden
               ERP-Systemen, auch wenn diese keine moderne API haben. Kein
               ERP-Wechsel, kein KI-Team, kein Großprojekt, ein erster Proof of
-              Concept läuft in 1–2 Wochen.
+              Concept läuft in 1-2 Wochen.
             </Typo.Paragraph>
             <Typo.Paragraph>
               In diesem Whitepaper erfahren Sie:
@@ -218,8 +220,8 @@ export default async function Page({
                 ERP-Versionen mit robuster API-Integration.
               </Typo.ListItem>
               <Typo.ListItem>
-                <strong>60–80 %</strong> der IT-Budgets fließen in die reine
-                Wartung bestehender Systeme, nur 20–30 % bleiben für Innovation.
+                <strong>60-80 %</strong> der IT-Budgets fließen in die reine
+                Wartung bestehender Systeme, nur 20-30 % bleiben für Innovation.
               </Typo.ListItem>
             </Typo.List>
             <Typo.Paragraph>
@@ -281,12 +283,12 @@ export default async function Page({
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border-b">Fehlerrate</td>
-                    <td className="px-4 py-2 border-b">1–4 %</td>
+                    <td className="px-4 py-2 border-b">1-4 %</td>
                     <td className="px-4 py-2 border-b">&lt; 0,1 %</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border-b">Kosten pro Auftrag</td>
-                    <td className="px-4 py-2 border-b">50–400 €</td>
+                    <td className="px-4 py-2 border-b">50-400 €</td>
                     <td className="px-4 py-2 border-b">&lt; 20 % davon</td>
                   </tr>
                 </tbody>
@@ -299,7 +301,7 @@ export default async function Page({
             <Typo.Paragraph>
               <strong>Preislogik als Automatisierungsbremse.</strong>{" "}
               Ein mittelständischer Großhändler bewirtschaftet typischerweise
-              5.000–10.000 Kunden bei 20.000–100.000 Artikeln, mit individuellen
+              5.000-10.000 Kunden bei 20.000-100.000 Artikeln, mit individuellen
               Preiskonditionen je Kunde-Artikel-Kombination. Kundenspezifische
               Preise, Staffelpreise, Rahmenverträge, Boni und Aktionspreise
               machen eine vollständige Automatisierung ohne saubere
@@ -386,11 +388,13 @@ export default async function Page({
                 <strong>KI kann Datenprobleme selbst lösen.</strong>{" "}
                 Moderne LLMs können unstrukturierte Eingangsdaten (E-Mails,
                 PDFs, Faxe) interpretieren und in strukturierte Formate
-                überführen, genau dort, wo die größten Effizienzgewinne liegen.
+                überführen, genau dort, wo die größten Effizienzgewinne liegen,
+                etwa bei der{" "}
+                <Link href="/ki-angebote" className="text-primary-600 hover:underline">automatischen Angebotserstellung</Link>.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Der ROI ist messbar.</strong>{" "}
-                Von 11 auf 3 Minuten pro Auftrag, von 1–4 % auf &lt; 0,1 %
+                Von 11 auf 3 Minuten pro Auftrag, von 1-4 % auf &lt; 0,1 %
                 Fehlerrate, die Business Cases der folgenden 15 Use Cases
                 sprechen eine klare Sprache.
               </Typo.ListItem>
@@ -489,7 +493,7 @@ export default async function Page({
                     <td className="px-4 py-2 border-b">
                       Mehrere Quellen, LLM-Extraktion, ERP-Anbindung
                     </td>
-                    <td className="px-4 py-2 border-b">3.000–5.000 €</td>
+                    <td className="px-4 py-2 border-b">3.000-5.000 €</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border-b">Komplex</td>
@@ -497,7 +501,7 @@ export default async function Page({
                       Vision AI, mehrere Systeme, Human-in-the-Loop,
                       Speziallogik
                     </td>
-                    <td className="px-4 py-2 border-b">5.000–20.000 €</td>
+                    <td className="px-4 py-2 border-b">5.000-20.000 €</td>
                   </tr>
                 </tbody>
               </table>
@@ -575,13 +579,13 @@ export default async function Page({
                     <td className="px-4 py-2 border-b">
                       LLM-API (z. B. GPT-4o, Claude)
                     </td>
-                    <td className="px-4 py-2 border-b">20–200 €</td>
+                    <td className="px-4 py-2 border-b">20-200 €</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border-b">
                       n8n Hosting (Self-Hosted oder Cloud)
                     </td>
-                    <td className="px-4 py-2 border-b">20–100 €</td>
+                    <td className="px-4 py-2 border-b">20-100 €</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border-b">
@@ -718,8 +722,8 @@ export default async function Page({
             <Typo.H4>Ergebnisse</Typo.H4>
             <Typo.List>
               <Typo.ListItem>
-                <strong>90–96 % kürzere Angebotsdauer</strong>: Von 30–120
-                Minuten auf 2–5 Minuten pro Anfrage, bei komplexen Angeboten
+                <strong>90-96 % kürzere Angebotsdauer</strong>: Von 30-120
+                Minuten auf 2-5 Minuten pro Anfrage, bei komplexen Angeboten
                 mit vielen Positionen sogar von 2 Tagen auf 20 Minuten.
               </Typo.ListItem>
               <Typo.ListItem>
@@ -734,7 +738,7 @@ export default async function Page({
               <Typo.ListItem>
                 <strong>Fehlerquote unter 2 %</strong>: Falsche Preise,
                 veraltete SKUs und Kalkulationsfehler entfallen; klassische
-                manuelle Prozesse liegen bei 12–15 %.
+                manuelle Prozesse liegen bei 12-15 %.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Skalierbarkeit ohne Personalaufbau</strong>: Ein
@@ -745,7 +749,7 @@ export default async function Page({
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>ROI ab 400 % im ersten Jahr</strong>: Bei einer
-                Investition von 80.000–120.000 EUR jährlich für die
+                Investition von 80.000-120.000 EUR jährlich für die
                 n8n-LLM-Integration stehen sechsstellige
                 Personalkosteneinsparungen gegenüber.
               </Typo.ListItem>
@@ -932,7 +936,7 @@ export default async function Page({
             <Typo.H4>Ergebnisse</Typo.H4>
             <Typo.List>
               <Typo.ListItem>
-                <strong>20–30 % Bestandsreduzierung</strong>: Laut McKinsey und
+                <strong>20-30 % Bestandsreduzierung</strong>: Laut McKinsey und
                 Gartner sinken die gebundenen Lagerbestände durch KI-gestütztes
                 Demand Forecasting um ein Viertel bis ein Drittel, bei einem
                 Lagerbestand von 12 Mio. Euro werden bis zu 3 Mio. Euro
@@ -940,7 +944,7 @@ export default async function Page({
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>
-                  Lagerhaltungskosten um 20–30 % gesenkt
+                  Lagerhaltungskosten um 20-30 % gesenkt
                 </strong>: Die direkte Folge kleinerer, präziserer Bestände sind
                 messbar niedrigere Lagerkosten pro Jahr.
               </Typo.ListItem>
@@ -959,13 +963,13 @@ export default async function Page({
                 strategische Lieferantenentwicklung.
               </Typo.ListItem>
               <Typo.ListItem>
-                <strong>5–15 % niedrigere Beschaffungskosten</strong>:
+                <strong>5-15 % niedrigere Beschaffungskosten</strong>:
                 Automatische Bestellbündelung und optimierter
                 Bestellzeitpunkt nutzen Mengenrabatte konsequenter.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>ROI unter 12 Monaten</strong>: Implementierungskosten
-                von ca. 80.000–150.000 Euro stehen einem typischen Jahresnutzen
+                von ca. 80.000-150.000 Euro stehen einem typischen Jahresnutzen
                 von über 3 Mio. Euro gegenüber (Beispielrechnung: Großhändler,
                 80 Mio. Euro Umsatz).
               </Typo.ListItem>
@@ -1004,7 +1008,7 @@ export default async function Page({
             <Typo.List>
               <Typo.ListItem>
                 <strong>
-                  85–95 % der Avise werden vollautomatisch verarbeitet
+                  85-95 % der Avise werden vollautomatisch verarbeitet
                 </strong>
                 , ohne manuelle Berührung, unabhängig vom Eingangsformat.
               </Typo.ListItem>
@@ -1024,7 +1028,7 @@ export default async function Page({
                 Vollzeitstellen.
               </Typo.ListItem>
               <Typo.ListItem>
-                <strong>Fehlerquote fällt von 2–5 % auf unter 0,5 %</strong>,
+                <strong>Fehlerquote fällt von 2-5 % auf unter 0,5 %</strong>,
                 weniger Fehler in der Offene-Posten-Liste, weniger unnötige
                 Mahnungen, weniger Klärungsaufwand.
               </Typo.ListItem>
@@ -1240,7 +1244,7 @@ export default async function Page({
             <Typo.H4>Ergebnisse</Typo.H4>
             <Typo.List>
               <Typo.ListItem>
-                <strong>50–80 % kürzere Durchlaufzeit</strong>: Onboarding in 2
+                <strong>50-80 % kürzere Durchlaufzeit</strong>: Onboarding in 2
                 bis 5 Tagen statt 3 bis 6 Wochen, kritisch für saisonale
                 Beschaffung.
               </Typo.ListItem>
@@ -1249,7 +1253,7 @@ export default async function Page({
                 manueller Erfassung, konsistente Stammdaten von Anfang an.
               </Typo.ListItem>
               <Typo.ListItem>
-                <strong>60–75 % niedrigere Kosten</strong>: Von durchschnittlich
+                <strong>60-75 % niedrigere Kosten</strong>: Von durchschnittlich
                 800 EUR auf rund 200 EUR pro Lieferant; bei 200 neuen
                 Lieferanten pro Jahr entspricht das einer Einsparung von ca.
                 120.000 EUR jährlich.
@@ -1267,7 +1271,7 @@ export default async function Page({
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Entlastung des Einkaufsteams</strong>: Routineaufgaben
-                wie Dokumentenprüfung (bisher 4–8 Stunden pro Lieferant)
+                wie Dokumentenprüfung (bisher 4-8 Stunden pro Lieferant)
                 entfallen; Einkäufer konzentrieren sich auf strategische
                 Lieferantenbeziehungen.
               </Typo.ListItem>
@@ -1308,17 +1312,17 @@ export default async function Page({
             <Typo.H4>Ergebnisse</Typo.H4>
             <Typo.List>
               <Typo.ListItem>
-                <strong>70–80 % weniger manueller Aufwand</strong> bei der
+                <strong>70-80 % weniger manueller Aufwand</strong> bei der
                 Zertifikatsprüfung, der wöchentliche Compliance-Aufwand sinkt
                 von 7,5 Stunden auf unter 2 Stunden.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>90 % schnellere SVHC-Update-Prüfung</strong>: Was bisher
-                2–5 Arbeitstage kostete, erledigt der Workflow in 2–4 Stunden,
+                2-5 Arbeitstage kostete, erledigt der Workflow in 2-4 Stunden,
                 vollständig über das gesamte Sortiment.
               </Typo.ListItem>
               <Typo.ListItem>
-                <strong>100 % Abdeckung</strong> statt der typischen 80–90 %
+                <strong>100 % Abdeckung</strong> statt der typischen 80-90 %
                 bei manueller Verwaltung: Kein Ablaufdatum wird mehr
                 übersehen.
               </Typo.ListItem>
@@ -1329,11 +1333,11 @@ export default async function Page({
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>
-                  Netto-Ersparnis von 100.000–190.000 EUR pro Jahr
+                  Netto-Ersparnis von 100.000-190.000 EUR pro Jahr
                 </strong>{" "}
                 bei einem mittelständischen Großhändler mit 500 Lieferanten und
-                3.000 Produkten, bei Systemkosten von 12.000–18.000 EUR
-                jährlich entspricht das einem ROI von 500–1.000 % im ersten
+                3.000 Produkten, bei Systemkosten von 12.000-18.000 EUR
+                jährlich entspricht das einem ROI von 500-1.000 % im ersten
                 Jahr.
               </Typo.ListItem>
               <Typo.ListItem>
@@ -1390,24 +1394,24 @@ export default async function Page({
               <Typo.ListItem>
                 <strong>Höhere Lieferantenquote</strong>: Durch systematische,
                 mehrsprachige Kommunikation und automatische Erinnerungen
-                steigt die Antwortquote von unter 40 % auf 65–75 %.
+                steigt die Antwortquote von unter 40 % auf 65-75 %.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Fehlerquote unter 1 %</strong>: LLM-gestützte
                 Extraktion und automatische Validierung reduzieren
                 Übertragungsfehler gegenüber manueller Dateneingabe (typisch
-                2–5 %) deutlich, und damit das Sanktionsrisiko.
+                2-5 %) deutlich, und damit das Sanktionsrisiko.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>
                   Kostenvorteil gegenüber Standardsoftware
                 </strong>: Marktlösungen kosten ca. 20.000 EUR pro Jahr; die
                 n8n-basierte Lösung inklusive LLM-API-Kosten liegt bei ca.
-                2.000–4.000 EUR jährlich.
+                2.000-4.000 EUR jährlich.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>
-                  Netto-Ersparnis ca. 6.000–8.000 EUR/Jahr
+                  Netto-Ersparnis ca. 6.000-8.000 EUR/Jahr
                 </strong>{" "}
                 für einen mittelgroßen Großhändler (Personalkosten und
                 vermiedene Sanktionen, nach Abzug der
@@ -1524,7 +1528,7 @@ export default async function Page({
               Brief mit Fristsetzung und Hinweis auf Verzugszinsen, Stufe 3
               leitet automatisch an Inkasso oder Vertriebsleitung weiter.
               Rechtliche Pflichtangaben werden template-basiert ergänzt, der
-              Versand erfolgt per E-Mail (Stufe 0–2) oder per physischem
+              Versand erfolgt per E-Mail (Stufe 0-2) oder per physischem
               Brief-API (Stufe 3+). Zahlungseingänge aus dem ERP stoppen den
               Prozess in Echtzeit; ein wöchentliches Reporting liefert
               DSO-Entwicklung und Erfolgsquoten pro Mahnstufe.
@@ -1547,7 +1551,7 @@ export default async function Page({
               <Typo.ListItem>
                 <strong>
                   67 % niedrigere Prozesskosten pro Mahnkontakt
-                </strong>: von 8–12 EUR auf 2–3 EUR durch Wegfall manueller
+                </strong>: von 8-12 EUR auf 2-3 EUR durch Wegfall manueller
                 Vorgangsbearbeitung.
               </Typo.ListItem>
               <Typo.ListItem>
@@ -1567,7 +1571,7 @@ export default async function Page({
                 dem Kontext an, nicht dem Kalender.
               </Typo.ListItem>
               <Typo.ListItem>
-                <strong>ROI in 2–4 Monaten</strong>: Bei einem Großhändler mit
+                <strong>ROI in 2-4 Monaten</strong>: Bei einem Großhändler mit
                 20 Mio. EUR Jahresumsatz und 500 offenen Rechnungen pro Monat
                 ergibt sich ein jährlicher Gesamteffekt von rund 130.000 EUR,
                 bei Implementierungskosten unter 25.000 EUR einmalig.
@@ -1622,7 +1626,7 @@ export default async function Page({
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>
-                  60–80 % der Routineanfragen vollautomatisch bearbeitet
+                  60-80 % der Routineanfragen vollautomatisch bearbeitet
                 </strong>: Branchenbelege zeigen Automatisierungsquoten von
                 57 % (bei 95 % Genauigkeit, Kortical) bis über 85 % bei reinen
                 Standardanfragen.

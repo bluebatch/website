@@ -15,6 +15,7 @@ import Hero2Column, {
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import Link from "next/link";
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
@@ -261,8 +262,11 @@ export default async function Page({
             und System-Crashes beeinträchtigen die Performance von n8n erheblich. Doch mit der richtigen
             Architektur - Redis Queue Mode, PostgreSQL und Container
             Orchestrierung - skaliert n8n problemlos auf Enterprise-Level.
-            Auch im Bereich AI Acceleration & Workflows sorgt optimale
-            n8n-Performance-Optimierung für schnellere Ergebnisse.
+            Voraussetzung ist ein stabiles{" "}
+            <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">Hosting in Deutschland</Link>{" "}
+            und eine professionelle{" "}
+            <Link href="/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>,
+            damit auch nach dem Scaling alles zuverlässig läuft.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>

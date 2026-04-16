@@ -15,6 +15,7 @@ import Hero2Column, {
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import Link from "next/link";
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
@@ -524,7 +525,11 @@ export default async function Page({
           <Typo.H2 className="mb-6">Individuelle Angebote für Ihre Schulung</Typo.H2>
           <Typo.Paragraph className="text-gray-600 mb-8">
             Jede Schulung für n8n wird individuell auf Ihre Anforderungen, Ihr
-            Team und Ihre Use Cases zugeschnitten. Wir erstellen Ihnen ein
+            Team und Ihre Use Cases zugeschnitten. Teilnehmer lernen auch, wie{" "}
+            <Link href="/n8n-node" className="text-primary-600 hover:underline">Custom Nodes</Link>{" "}
+            entwickelt werden und wie die langfristige{" "}
+            <Link href="/workflow-wartung" className="text-primary-600 hover:underline">Wartung von Workflows</Link>{" "}
+            funktioniert. Wir erstellen Ihnen ein
             maßgeschneidertes Angebot basierend auf:
           </Typo.Paragraph>
 

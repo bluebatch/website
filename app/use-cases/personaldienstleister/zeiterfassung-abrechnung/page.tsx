@@ -139,10 +139,15 @@ export default function Page() {
             Papier-Stundenzettel vs. digitaler Prozess
           </IntroBox.Headline>
           <IntroBox.Subline>
-            22% aller Lohnabrechnungen in Deutschland sind fehlerhaft - in der
+            22% aller Lohnabrechnungen in Deutschland sind fehlerhaft, in der
             Zeitarbeit liegt die Quote aufgrund komplexer Zuschlagsregeln und
-            Medienbruche noch hoher. 53% der Unternehmen mussten in den letzten
-            funf Jahren Strafzahlungen wegen fehlerhafter Abrechnungen leisten.
+            Medienbrüche noch höher. 53% der Unternehmen mussten in den letzten
+            fünf Jahren Strafzahlungen wegen fehlerhafter Abrechnungen leisten.
+            Fehlerhafte Abrechnungen verzögern zudem die gesamte Prozesskette
+            und bremsen die{" "}
+            <Link href="/blog/speed-to-hire" className="text-primary-600 hover:underline">
+              Speed-to-Hire
+            </Link>.
           </IntroBox.Subline>
         </IntroBox>
 

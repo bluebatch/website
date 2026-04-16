@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Image from "next/image";
+import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
@@ -208,7 +209,10 @@ export default async function Page({
                 <Typo.H3>OCR KI für Eingangs- und Ausgangsrechnungen</Typo.H3>
                 <Typo.Paragraph>
                   Automatische Extraktion aller relevanten Daten per OCR KI: Datum, Betrag,
-                  Steuersätze (7%/19%), Rechnungsnummer, Lieferant.
+                  Steuersätze (7%/19%), Rechnungsnummer, Lieferant. Anschließend
+                  werden die Daten automatisch an{" "}
+                  <Link href="/n8n-datev" className="text-primary-600 hover:underline">DATEV</Link>{" "}
+                  übergeben.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>
@@ -239,7 +243,9 @@ export default async function Page({
                 <Typo.H3>Bank- und Kontoauszüge</Typo.H3>
                 <Typo.Paragraph>
                   Automatischer Abruf via FinTS/PSD2 und intelligente Zuordnung
-                  zu bestehenden Buchungen.
+                  zu bestehenden Buchungen. Die gesamte Verarbeitung läuft über{" "}
+                  <Link href="/digitalisierung-grosshandel" className="text-primary-600 hover:underline">KI-Workflows</Link>,
+                  die auch für andere Branchen einsetzbar sind.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>Automatische Bank-Integration</Typo.ListItem>

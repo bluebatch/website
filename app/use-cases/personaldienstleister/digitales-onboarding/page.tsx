@@ -148,8 +148,12 @@ export default function Page() {
                 Coffreo beziffert die Einsparung durch Digitalisierung auf 1-4
                 Arbeitstage pro Monat. Gleichzeitig wünschen sich 93% der
                 Zeitarbeitnehmenden laut zvoove GVP Industry Pulse 2025 einen
-                festen persönlichen Ansprechpartner - digitale Prozesse
-                schaffen den Freiraum dafür.
+                festen persönlichen Ansprechpartner. Wie stark analoge
+                Prozesse die{" "}
+                <Link href="/blog/speed-to-hire" className="text-primary-600 hover:underline">
+                  Speed-to-Hire
+                </Link>{" "}
+                ausbremsen, zeigt sich besonders bei kurzfristigen Einsätzen.
               </IntroBox.Subline>
             </IntroBox>
           </div>

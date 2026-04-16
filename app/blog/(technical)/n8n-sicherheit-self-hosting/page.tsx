@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
+import Link from "next/link";
+import ContactButton from "@/components/buttons/contact-button";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Typo from "@/components/ui/typo";
@@ -146,7 +148,9 @@ export default async function Page({
             <Typo.H3>Was passiert, wenn jemand reinkommt</Typo.H3>
             <Typo.Paragraph>
               Hier wird es richtig unangenehm. n8n ist keine isolierte App. Es
-              ist eine Integrationsplattform. Das heißt, in einer typischen
+              ist eine Integrationsplattform, die oft im{" "}
+              <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">Self-Hosting</Link>{" "}
+              betrieben wird. Das heißt, in einer typischen
               Installation findet ein Angreifer:
             </Typo.Paragraph>
             <Typo.Paragraph>
@@ -524,7 +528,9 @@ export default async function Page({
             <Typo.Paragraph>
               Die gute Nachricht: Netzwerk-Absicherung ist kein Raketenwissen.
               Wenn ihr Docker und ein paar Basics kennt, kriegt ihr das an einem
-              Nachmittag hin.
+              Nachmittag hin. Und mit einer professionellen{" "}
+              <Link href="/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>{" "}
+              bleibt eure Instanz auch langfristig sicher.
             </Typo.Paragraph>
 
             <BlogImage
@@ -1490,17 +1496,8 @@ N8N_LOG_LEVEL=info`}
               zeigen euch, wo ihr nachbessern müsst. Konfiguration, Netzwerk,
               DSGVO — alles in einem Check.
             </Typo.Paragraph>
-            <div className="bg-primary-50 border-l-4 border-primary-500 p-4 my-6">
-              <p className="text-sm font-medium">
-                <strong>
-                  <a
-                    href="/contact"
-                    className="text-primary-700 underline hover:text-primary-900"
-                  >
-                    Kostenloses Sicherheits-Audit anfragen
-                  </a>
-                </strong>
-              </p>
+            <div className="my-6">
+              <ContactButton>Kostenloses Sicherheits-Audit anfragen</ContactButton>
             </div>
           </div>
         </BlogLayout.Content>

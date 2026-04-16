@@ -137,10 +137,14 @@ export default function Page() {
             Die Konsequenzen manueller Überwachung
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Verstöße gegen das AÜG ziehen empfindliche Strafen nach sich - von
+            Verstöße gegen das AÜG ziehen empfindliche Strafen nach sich, von
             Bußgeldern über Nachzahlungsansprüche bis zum Verlust der
-            Überlassungserlaubnis. Und die meisten Personaldienstleister
-            überwachen ihre Fristen noch manuell.
+            Überlassungserlaubnis. Gleichzeitig verlängern manuelle
+            Compliance-Checks die{" "}
+            <Link href="/blog/speed-to-hire" className="text-primary-600 hover:underline">
+              Time-to-Hire
+            </Link>
+            {" "}erheblich.
           </IntroBox.Subline>
         </IntroBox>
 

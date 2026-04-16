@@ -14,6 +14,7 @@ import Hero2Column, {
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import Link from "next/link";
 import ContactButton from "@/components/buttons/contact-button";
 import Customer, { allLogos } from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
@@ -276,6 +277,10 @@ export default async function Page({
             Integration, die perfekt auf Ihre Anforderungen zugeschnitten ist.
             Ob Sie KI Agenten erstellen oder einen eigenen Chatbot erstellen
             Open Source - mit Custom Nodes schaffen wir die passende Grundlage.
+            Für den laufenden Betrieb empfehlen wir unsere{" "}
+            <Link href="/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>,
+            und für Teams, die selbst entwickeln wollen, unsere{" "}
+            <Link href="/n8n-schulung" className="text-primary-600 hover:underline">n8n-Schulungen</Link>.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>

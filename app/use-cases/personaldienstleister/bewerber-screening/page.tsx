@@ -688,6 +688,10 @@ export default function Page() {
           <Link href="/use-cases/personaldienstleister/bewerberkommunikation" className="text-primary-500 hover:underline">
             Bewerberkommunikation und Chatbot-Recruiting
           </Link>
+          . Lesen Sie auch unseren Blog-Beitrag{" "}
+          <Link href="/blog/speed-to-hire" className="text-primary-500 hover:underline">
+            Speed to Hire: Warum Ihre besten Kandidaten weg sind, bevor Sie anrufen
+          </Link>
           .
         </Typo.Paragraph>
       </ContentWrapper>

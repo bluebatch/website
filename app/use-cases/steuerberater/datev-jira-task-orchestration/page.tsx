@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Image from "next/image";
+import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
@@ -206,7 +207,9 @@ export default async function Page({
                 <Typo.H3>DATEV-Jira Synchronisation via n8n</Typo.H3>
                 <Typo.Paragraph>
                   Automatische Ticket-Erstellung bei neuen DATEV-Aufträgen.
-                  Status-Updates fließen in beide Richtungen.
+                  Status-Updates fließen in beide Richtungen. Die Workflows
+                  ergänzen sich optimal mit der{" "}
+                  <Link href="/ki-dokumentenmanagement" className="text-primary-600 hover:underline">KI-Dokumentenverarbeitung</Link>.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>
@@ -235,7 +238,9 @@ export default async function Page({
                 <Typo.H3>Intelligentes Fristenmanagement</Typo.H3>
                 <Typo.Paragraph>
                   Alle Steuerfristen zentral verwaltet mit automatischen
-                  Erinnerungen und Kalenderintegration.
+                  Erinnerungen und Kalenderintegration. Die n8n-Workflows laufen
+                  sicher auf{" "}
+                  <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">deutschem Hosting</Link>.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
+import Link from "next/link";
+import ContactButton from "@/components/buttons/contact-button";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Typo from "@/components/ui/typo";
@@ -114,7 +116,9 @@ export default async function Page({
             </Typo.Paragraph>
             <Typo.Paragraph>
               Das Problem: Jede einzelne Bestellung muss ein Mensch lesen,
-              verstehen und ins ERP tippen.
+              verstehen und ins ERP tippen. Wie sich das mit KI-Workflows ändern
+              lässt, zeigt auch unser Artikel zur{" "}
+              <Link href="/digitalisierung-grosshandel" className="text-primary-600 hover:underline">Digitalisierung im Großhandel</Link>.
             </Typo.Paragraph>
 
             <Typo.H3>Schritt für Schritt: So läuft eine Bestellung ab</Typo.H3>
@@ -608,7 +612,9 @@ export default async function Page({
               Die Technologie ist 2026 produktionsreif. 63 Prozent der
               Großhändler und Hersteller bewerten KI bereits als hoch relevant.
               Bis 2030 sollen es 85 Prozent sein. Die Frage ist nicht mehr ob,
-              sondern wann.
+              sondern wann. Neben der Bestellerfassung profitiert auch die{" "}
+              <Link href="/ki-angebote" className="text-primary-600 hover:underline">automatische Angebotserstellung</Link>{" "}
+              von diesen Fortschritten.
             </Typo.Paragraph>
           </div>
 
@@ -928,8 +934,8 @@ export default async function Page({
               <tbody>
                 <tr className="border-b border-gray-200">
                   <td className="p-3 font-medium">Monatliche Kosten</td>
-                  <td className="p-3">1.000–5.000 €/Monat</td>
-                  <td className="p-3">500–2.000 €/Monat</td>
+                  <td className="p-3">1.000-5.000 €/Monat</td>
+                  <td className="p-3">500-2.000 €/Monat</td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="p-3 font-medium">Preismodell</td>
@@ -1036,7 +1042,7 @@ export default async function Page({
             </Typo.Paragraph>
 
             <Typo.H3>
-              Phase 2: Pilotprojekt mit einem Kanal (Woche 2–4)
+              Phase 2: Pilotprojekt mit einem Kanal (Woche 2-4)
             </Typo.H3>
             <Typo.Paragraph>
               Nicht alles auf einmal. Fangt mit einem Kanal an.
@@ -1083,7 +1089,7 @@ export default async function Page({
             </Typo.Paragraph>
 
             <Typo.H3>
-              Phase 3: Rollout auf alle Kanäle (Woche 5–6)
+              Phase 3: Rollout auf alle Kanäle (Woche 5-6)
             </Typo.H3>
             <Typo.Paragraph>
               Wenn der E-Mail-Kanal stabil läuft, erweitert ihr den Workflow.
@@ -1118,7 +1124,7 @@ export default async function Page({
             </Typo.Paragraph>
 
             <Typo.H3>
-              Phase 4: Optimierung und Monitoring (Woche 7–8, dann laufend)
+              Phase 4: Optimierung und Monitoring (Woche 7-8, dann laufend)
             </Typo.H3>
             <Typo.Paragraph>
               Das System läuft. Jetzt geht es um Feinschliff und Überwachung.
@@ -1197,17 +1203,8 @@ export default async function Page({
               n8n-Workflow für euer Setup aussehen würde.
             </Typo.Paragraph>
 
-            <div className="bg-primary-50 border-l-4 border-primary-500 p-4 my-6">
-              <p className="text-sm font-medium">
-                <strong>
-                  <a
-                    href="/contact"
-                    className="text-primary-700 underline hover:text-primary-900"
-                  >
-                    Kostenlose Beratung buchen →
-                  </a>
-                </strong>
-              </p>
+            <div className="my-6">
+              <ContactButton>Kostenlose Beratung buchen</ContactButton>
             </div>
           </div>
         </BlogLayout.Content>

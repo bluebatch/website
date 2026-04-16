@@ -15,6 +15,7 @@ import Hero2Column, {
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import Link from "next/link";
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
@@ -189,7 +190,9 @@ export default async function Page({
             betreiben können. Keine Vendor Lock-ins, keine Execution-Limits,
             keine versteckten Kosten. Mit Self-Hosting von n8n behalten Sie
             die vollständige Kontrolle über Ihre Daten - ein entscheidender
-            Vorteil für DSGVO B2B Anforderungen.
+            Vorteil für DSGVO B2B Anforderungen. Mehr zum Thema Datenschutz
+            und Absicherung finden Sie unter{" "}
+            <Link href="/n8n-sicherheit" className="text-primary-600 hover:underline">n8n Sicherheit &amp; Self-Hosting</Link>.
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -338,8 +341,9 @@ export default async function Page({
                 </Typo.H4>
                 <p className="text-gray-600">
                   Prometheus & Grafana für vollständige Observability Ihrer
-                  n8n-Instanz. Jedes n8n Beispiel aus unserer Praxis enthält
-                  vorkonfigurierte n8n-Vorlagen für das Monitoring.
+                  n8n-Instanz. Zusammen mit unserer{" "}
+                  <Link href="/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>{" "}
+                  erhalten Sie vorkonfigurierte n8n-Vorlagen für das Monitoring.
                 </p>
               </div>
             </div>

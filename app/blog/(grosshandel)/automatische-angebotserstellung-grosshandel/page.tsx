@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
+import Link from "next/link";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Typo from "@/components/ui/typo";
@@ -328,7 +329,12 @@ export default async function Page({
               Kein neues ERP. Kein halbjähriges IT-Projekt. Sondern KI Angebote
               per Workflow, der eure bestehenden Systeme verbindet:
               E-Mail-Postfach, ERP, Preislisten, Kundendaten. Die Systeme
-              bleiben, nur der manuelle Prozess dazwischen fällt weg.
+              bleiben, nur der manuelle Prozess dazwischen fällt weg. Das
+              gleiche Prinzip funktioniert auch für die{" "}
+              <Link href="/bestellerfassung-automatisieren" className="text-primary-600 hover:underline">automatische Bestellerfassung</Link>{" "}
+              und die{" "}
+              <Link href="/digitalisierung-grosshandel" className="text-primary-600 hover:underline">Digitalisierung im Großhandel</Link>{" "}
+              insgesamt.
             </Typo.Paragraph>
 
             <BlogImage

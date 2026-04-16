@@ -727,6 +727,12 @@ export default function Page() {
               <Link href="/ki-implementierung" className="text-primary-500 hover:underline">
                 unsere Implementierungsservices
               </Link>
+              . Wie KI-gestützte Automatisierung auch in der
+              Personaldienstleistung Prozesse beschleunigt, zeigen wir am
+              Beispiel{" "}
+              <Link href="/blog/speed-to-hire" className="text-primary-500 hover:underline">
+                Speed-to-Hire
+              </Link>
               .
             </Typo.Paragraph>
           </div>

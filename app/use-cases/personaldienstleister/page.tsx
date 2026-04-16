@@ -216,6 +216,16 @@ export default function Page() {
         </ContentWrapper>
       ))}
 
+      <ContentWrapper>
+        <Typo.Paragraph className="text-gray-600">
+          Lesen Sie auch unseren Blog-Beitrag{" "}
+          <Link href="/blog/speed-to-hire" className="text-primary-500 hover:underline">
+            Speed to Hire: Warum Ihre besten Kandidaten weg sind, bevor Sie anrufen
+          </Link>
+          {" "}- drei n8n-Workflows, die Reaktionszeiten auf unter 3 Minuten senken.
+        </Typo.Paragraph>
+      </ContentWrapper>
+
       {/* Contact CTA */}
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />

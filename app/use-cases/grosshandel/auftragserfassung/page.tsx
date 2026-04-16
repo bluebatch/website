@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
@@ -332,7 +333,8 @@ export default async function Page({
                 <Typo.Paragraph>
                   Der häufigste Kanal: Kunden senden Bestellungen als PDF-Anhang
                   oder im E-Mail-Text. KI-gestützte Extraktion erkennt alle
-                  relevanten Daten.
+                  relevanten Daten. Mehr dazu im Blogartikel{" "}
+                  <Link href="/bestellerfassung-automatisieren" className="text-primary-600 hover:underline">Bestellerfassung automatisieren</Link>.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>
@@ -388,7 +390,9 @@ export default async function Page({
                 <Typo.H3>Web-Portal und B2B-Shop</Typo.H3>
                 <Typo.Paragraph>
                   Bestellungen aus Ihrem Kundenportal oder B2B-Shop werden per
-                  Webhook direkt in den Workflow übernommen.
+                  Webhook direkt in den Workflow übernommen. Auch die{" "}
+                  <Link href="/ki-angebote" className="text-primary-600 hover:underline">automatische Angebotserstellung</Link>{" "}
+                  lässt sich so nahtlos integrieren.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>Echtzeit-Webhook-Integration</Typo.ListItem>

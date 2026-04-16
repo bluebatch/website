@@ -15,6 +15,7 @@ import Hero2Column, {
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import Link from "next/link";
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
@@ -191,7 +192,9 @@ export default async function Page({
             kontinuierliche Wartung können sie schnell zum Risikofaktor werden.
             API-Änderungen, n8n-Updates oder steigende Datenvolumen führen zu
             Ausfällen und Inkonsistenzen. Mit unserem Service zur Wartung Ihrer Workflows bleiben
-            sie stabil, performant und zukunftssicher. Ein integrierter
+            sie stabil, performant und zukunftssicher. Ob Ihre Instanz auf{" "}
+            <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">eigenem Hosting in Deutschland</Link>{" "}
+            läuft oder in der Cloud - ein integrierter
             Schnittstellen Monitor erkennt Probleme, bevor sie Ihr Business beeinträchtigen.
           </Typo.Paragraph>
         </div>
@@ -384,8 +387,10 @@ export default async function Page({
                 </Typo.H3>
                 <Typo.Paragraph className="text-gray-700 mb-6">
                   Damit Ihre Automatisierungen auch bei wachsendem Datenvolumen
-                  stabil laufen, optimieren wir die Logik regelmäßig. Das
-                  verhindert Systemabstürze und schont Ihre Server-Ressourcen.
+                  stabil laufen, optimieren wir die Logik regelmäßig. Für
+                  größere Instanzen bieten wir zusätzlich{" "}
+                  <Link href="/n8n-performance" className="text-primary-600 hover:underline">Performance-Scaling</Link>,
+                  um Systemabstürze zu verhindern und Ihre Server-Ressourcen zu schonen.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>
