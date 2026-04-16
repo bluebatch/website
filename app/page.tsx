@@ -655,7 +655,7 @@ export default function Home() {
               gemeinsam die manuelle Ära beenden und Ihr Unternehmen auf
               „Autopilot" für Routineprozesse stellen.
             </IntroBox.Subline>
-            <div>
+            <div className="flex flex-col items-center gap-4">
               <ContactButton icon="chat">
                 Jetzt KI Readiness Check vereinbaren
               </ContactButton>
