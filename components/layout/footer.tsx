@@ -6,18 +6,19 @@ import Image from "next/image";
 export default function Footer() {
   const mainMenu = [
     { label: "Über uns", href: "/" },
+    { label: "Warum Bluebatch", href: "/warum-bluebatch" },
     { label: "Das Team", href: "/team" },
-    { label: "Services", href: "/ki-implementierung" },
-    { label: "Use Cases", href: "/use-cases" },
+    { label: "Unser Prozess", href: "/unser-prozess" },
     { label: "Blog", href: "/blog-workflow" },
   ];
 
   const servicesMenu = [
+    { label: "KI-Implementierung", href: "/ki-implementierung" },
     { label: "n8n Hosting", href: "/n8n-hosting-deutschland" },
     { label: "Workflow-Wartung", href: "/workflow-wartung" },
     { label: "Custom Nodes", href: "/n8n-node" },
-    { label: "Schulungen", href: "/n8n-schulung" },
-    { label: "Performance Scaling", href: "/n8n-performance" },
+    { label: "Zertifizierungen", href: "/ki-agentur-zertifizierung" },
+    { label: "ROI-Rechner", href: "/roi-rechner" },
   ];
 
   const productMenu = [

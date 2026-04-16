@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -301,7 +302,14 @@ export default function Page() {
             stabile, skalierbare Systeme. Agenturen nutzen Templates. Wir
             entwickeln Custom Nodes. Agenturen verstehen Prozesse. Wir verstehen
             Datenstrukturen und können einschätzen, wo Systeme welche Daten
-            verarbeiten.
+            verarbeiten. Unsere{" "}
+            <Link
+              href="/ki-agentur-zertifizierung"
+              className="text-primary-600 hover:underline"
+            >
+              Zertifizierungen und dokumentierten Prozesse
+            </Link>{" "}
+            machen das nachweisbar.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>

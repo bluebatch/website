@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
-import Link from "next/link";
 import { resolveHref } from "@/lib/get-canonical-path";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -238,7 +238,15 @@ export default async function Page({
           <IntroBox.Paragraph>
             Maßgeschneiderte Lösungen für jede Phase Ihrer KI-Integration -
             vom Prozesse aufsetzen über Systemintegration Beratung bis zur
-            Enterprise-Skalierung.
+            Enterprise-Skalierung. Als{" "}
+            <Link
+              href={resolveHref("/ki-agentur-zertifizierung")}
+              className="text-primary-600 hover:underline"
+            >
+              zertifizierte KI-Agentur
+            </Link>{" "}
+            arbeiten wir nach dokumentierten Prozessen und liefern
+            nachweisbare Qualität.
           </IntroBox.Paragraph>
         </IntroBox>
 
@@ -331,7 +339,7 @@ export default async function Page({
             Prozess Automation Ihrem Unternehmen am meisten helfen.
           </IntroBox.Paragraph>
         </IntroBox>
-        <div className="flex gap-4 justify-center">
+        <div className="flex flex-col items-center gap-4">
           <ContactButton size="lg">Kostenlose Beratung anfragen</ContactButton>
         </div>
       </ContentWrapper>

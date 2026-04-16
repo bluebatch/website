@@ -33,6 +33,12 @@ const uberUnsMenu = {
           description: "Wie wir arbeiten",
           href: "/unser-prozess",
         },
+        {
+          icon: "/icons/badge-check.svg",
+          title: "Zertifizierungen",
+          description: "Nachweisbare Qualität",
+          href: "/ki-agentur-zertifizierung",
+        },
       ],
     },
     {
