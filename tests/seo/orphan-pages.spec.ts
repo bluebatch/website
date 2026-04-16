@@ -112,5 +112,10 @@ test("Orphan Page Detection", async ({ page, ga4Data }) => {
   );
   reportScore("Orphan Pages", score, cfg.passThreshold, details);
   console.log(`\n${verdict(score, cfg.passThreshold)}`);
-  expect(score).toBeGreaterThanOrEqual(cfg.passThreshold);
+
+  // Hard fail: any sitemap page not reachable via internal links is a bug.
+  expect(
+    orphans,
+    `Found ${orphans.length} orphan page(s) — every sitemap URL must be reachable via internal links:\n${orphans.map((o) => `  - ${o.url}${o.hasTraffic ? ` (${o.sessions} sessions)` : ""}`).join("\n")}`,
+  ).toEqual([]);
 });
