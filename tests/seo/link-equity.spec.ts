@@ -32,6 +32,9 @@ test("Link Equity Distribution", async ({ page, ga4Data }) => {
   if (keyPages.length === 0) {
     console.log("\nNo key pages found from GA4 data (no pages with enough sessions).");
     console.log("Skipping link equity test — add GA4 credentials or lower minSessionsForKeyPage.");
+    reportScore("Link Equity", 100, cfg.passThreshold, [
+      "No key pages from GA4 (bridge unavailable or no page >= minSessionsForKeyPage)",
+    ]);
     return;
   }
 
