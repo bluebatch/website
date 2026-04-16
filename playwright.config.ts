@@ -10,6 +10,7 @@ export default defineConfig({
   reporter: [
     ["list"],
     ["./tests/reporters/markdown-reporter.ts"],
+    ["./tests/reporters/csv-reporter.ts"],
   ],
   use: {
     baseURL: BASE_URL,
