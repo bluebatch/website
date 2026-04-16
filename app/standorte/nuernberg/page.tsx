@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -243,8 +244,9 @@ export default async function Page({
           <Typo.Paragraph>
             Was ein n8n-Workflow ändert: Eine E-Mail mit Beleg trifft ein. OCR
             liest den Inhalt. KI kategorisiert Belegtyp, Lieferant und
-            Kostenstelle. Die Buchung geht automatisch ins DATEV-System. Der
-            Mandant bekommt eine Bestätigung. 30 Sekunden statt 5 Minuten. Kein
+            Kostenstelle. Die Buchung geht automatisch ins{" "}
+            <Link href="/n8n-datev" className="text-primary-600 hover:underline">DATEV-System</Link>.
+            Der Mandant bekommt eine Bestätigung. 30 Sekunden statt 5 Minuten. Kein
             Abtippen, kein Zuordnen, kein Hinterhertelefonieren.
           </Typo.Paragraph>
 

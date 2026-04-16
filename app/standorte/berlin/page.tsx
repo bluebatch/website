@@ -442,9 +442,11 @@ export default async function Page({
               modernes Innovations- und Wohnquartier verwandelt.
             </Typo.Paragraph>
             <Typo.Paragraph>
-              Diese Großprojekte erfordern modernste Automatisierung — von der
+              Diese Großprojekte erfordern modernste Automatisierung, von der
               Produktionssteuerung über Lieferketten-Management bis zur
-              Integration von IoT-Daten in Echtzeit-Workflows. Als Ihre Agentur für KI in Berlin setzen wir genau hier mit n8n-basierten Lösungen an.
+              Integration von IoT-Daten in Echtzeit-Workflows. Als Ihre Agentur für KI
+              in Berlin setzen wir genau hier mit n8n-basierten Lösungen an, gehostet auf{" "}
+              <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">deutscher Infrastruktur</Link>.
             </Typo.Paragraph>
           </BoundlessImageCard.Content>
         </BoundlessImageCard>

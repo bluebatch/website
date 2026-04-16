@@ -315,8 +315,11 @@ export default async function Page({
               n8n automatisiert Content-Workflows zwischen Redaktion,
               Produktion und Distribution. Cross-Channel-Publishing,
               automatisierte Metadaten-Pflege, Social-Media-Scheduling und
-              Rechtemanagement — Prozesse, die in Medienhäusern täglich
-              Stunden kosten, laufen mit n8n im Hintergrund.
+              Rechtemanagement, Prozesse, die in Medienhäusern täglich
+              Stunden kosten, laufen mit n8n im Hintergrund. Dafür bieten wir auch
+              professionelle{" "}
+              <Link href="/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>{" "}
+              an.
             </Typo.Paragraph>
           </BoundlessImageCard.Content>
         </BoundlessImageCard>

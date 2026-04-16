@@ -126,6 +126,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/standorte/wolfsburg",
   },
+  openGraph: {
+    title: `Workflow-Automatisierung ${metaCustom.name} | Bluebatch`,
+    description: `Bluebatch ist Ihr Partner für Workflow-Automatisierung und KI-Lösungen in ${metaCustom.name}. n8n-Workflows, API-Integrationen und Prozessoptimierung für Unternehmen in ${metaCustom.name} und Umgebung.`,
+    type: "website",
+    locale: "de_DE",
+    siteName: "Bluebatch",
+  },
 };
 
 export default function Page() {

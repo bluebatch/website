@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import BackgroundHero from "@/components/heroes/background-hero";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
@@ -301,7 +302,11 @@ export default async function Page({
               Zolldokumentation, Kapazitätsprognosen per KI und
               Echtzeit-Routing-Entscheidungen lassen sich mit
               n8n-Workflows abbilden, die APIs von Carriern,
-              Zollsystemen und ERP-Plattformen nahtlos verbinden.
+              Zollsystemen und ERP-Plattformen nahtlos verbinden. Dafür setzen
+              wir auf{" "}
+              <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">n8n-Hosting in Deutschland</Link>{" "}
+              mit professioneller{" "}
+              <Link href="/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>.
             </Typo.Paragraph>
           </BoundlessImageCard.Content>
         </BoundlessImageCard>

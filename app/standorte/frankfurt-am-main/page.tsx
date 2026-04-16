@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import BackgroundHero from "@/components/heroes/background-hero";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
@@ -273,9 +274,11 @@ export default async function Page({
             KYC-Onboarding mit KI-gestützter Dokumentenanalyse, laufendes
             AML-Monitoring in Echtzeit, automatische Sanktionslistenabgleiche
             gegen EU-, UN- und OFAC-Listen, und regulatorische Reportings
-            direkt an BaFin, EZB und AMLA. Self-hosted auf Ihrer
-            Infrastruktur, ohne dass ein einziges Dokument Ihr Rechenzentrum
-            verlässt.
+            direkt an BaFin, EZB und AMLA.{" "}
+            <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">Self-hosted auf Ihrer Infrastruktur</Link>,
+            ohne dass ein einziges Dokument Ihr Rechenzentrum verlässt.
+            Wie wir dabei vorgehen, erfahren Sie auf unserer Seite{" "}
+            <Link href="/unser-prozess" className="text-primary-600 hover:underline">Unser Prozess</Link>.
           </Typo.Paragraph>
         </div>
         <div className="mt-10">
