@@ -5,9 +5,20 @@ import { BackToOverview } from "../shared";
 import DocumentCalculator from "../(calculators)/document";
 
 export const metadata: Metadata = {
-  title: "ROI-Rechner: Dokumentenprüfung – Bluebatch",
+  title: "ROI-Rechner: Dokumentenprüfung - Bluebatch",
   description:
     "Berechne, wie viel du mit automatisierter Dokumentenprüfung sparst. Interaktiver ROI-Rechner für Rechnungen, Lieferscheine und Bestellungen.",
+  openGraph: {
+    title: "ROI-Rechner: Dokumentenprüfung - Bluebatch",
+    description:
+      "Berechne, wie viel du mit automatisierter Dokumentenprüfung sparst. Interaktiver ROI-Rechner für Rechnungen, Lieferscheine und Bestellungen.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "Bluebatch",
+  },
+  alternates: {
+    canonical: "/roi-rechner/document",
+  },
 };
 
 export default async function DocumentPage({
@@ -22,6 +33,7 @@ export default async function DocumentPage({
       <ContentWrapper isFirstSection colorScheme="gray-light">
         <div className="space-y-6">
           <BackToOverview />
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">ROI-Rechner: Dokumentenprüfung</h1>
           <DocumentCalculator initialParams={params} />
         </div>
       </ContentWrapper>

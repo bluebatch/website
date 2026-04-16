@@ -5,9 +5,20 @@ import { BackToOverview } from "../shared";
 import ServiceRequestsCalculator from "../(calculators)/service-requests";
 
 export const metadata: Metadata = {
-  title: "ROI-Rechner: Service Requests – Bluebatch",
+  title: "ROI-Rechner: Service Requests - Bluebatch",
   description:
     "Berechne, wie viel du mit automatisierter Bearbeitung von Kundenanfragen sparst. Interaktiver ROI-Rechner für Service Requests.",
+  openGraph: {
+    title: "ROI-Rechner: Service Requests - Bluebatch",
+    description:
+      "Berechne, wie viel du mit automatisierter Bearbeitung von Kundenanfragen sparst. Interaktiver ROI-Rechner für Service Requests.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "Bluebatch",
+  },
+  alternates: {
+    canonical: "/roi-rechner/service-requests",
+  },
 };
 
 export default async function ServiceRequestsPage({
@@ -22,6 +33,7 @@ export default async function ServiceRequestsPage({
       <ContentWrapper isFirstSection colorScheme="gray-light">
         <div className="space-y-6">
           <BackToOverview />
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">ROI-Rechner: Service Requests</h1>
           <ServiceRequestsCalculator initialParams={params} />
         </div>
       </ContentWrapper>

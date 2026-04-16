@@ -5,9 +5,20 @@ import { BackToOverview } from "../shared";
 import SocialMediaAdsCalculator from "../(calculators)/social-media-ads";
 
 export const metadata: Metadata = {
-  title: "ROI-Rechner: Social Media Ads – Bluebatch",
+  title: "ROI-Rechner: Social Media Ads - Bluebatch",
   description:
     "Berechne den ROI deiner Social Media Kampagnen. Interaktiver Rechner für Lead-Generierung, Conversion Funnel und ROAS.",
+  openGraph: {
+    title: "ROI-Rechner: Social Media Ads - Bluebatch",
+    description:
+      "Berechne den ROI deiner Social Media Kampagnen. Interaktiver Rechner für Lead-Generierung, Conversion Funnel und ROAS.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "Bluebatch",
+  },
+  alternates: {
+    canonical: "/roi-rechner/social-media-ads",
+  },
 };
 
 export default async function SocialMediaAdsPage({
@@ -22,6 +33,7 @@ export default async function SocialMediaAdsPage({
       <ContentWrapper isFirstSection colorScheme="gray-light">
         <div className="space-y-6">
           <BackToOverview />
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">ROI-Rechner: Social Media Ads</h1>
           <SocialMediaAdsCalculator initialParams={params} />
         </div>
       </ContentWrapper>
