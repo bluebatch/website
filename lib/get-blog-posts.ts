@@ -30,11 +30,14 @@ function getBlogDirs(): BlogDir[] {
   for (const entry of entries) {
     if (!entry.isDirectory()) continue;
 
+    if (entry.name.startsWith("_")) continue;
+
     if (entry.name.startsWith("(")) {
       // Route group — scan inside for actual blog directories
       const groupDir = path.join(blogDir, entry.name);
       const groupEntries = fs.readdirSync(groupDir, { withFileTypes: true });
       for (const sub of groupEntries) {
+        if (sub.name.startsWith("_")) continue;
         if (
           sub.isDirectory() &&
           fs.existsSync(path.join(groupDir, sub.name, "page.tsx"))
