@@ -1,12 +1,9 @@
-"use client";
-
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import ContactButton from "@/components/buttons/contact-button";
 import Button from "@/components/ui/button";
-import Image from "next/image";
+import NavigationMobile from "@/components/layout/navigation-mobile";
 
 const navIcons: Record<string, string[]> = {
   "/icons/phone.svg": [
@@ -14,9 +11,230 @@ const navIcons: Record<string, string[]> = {
   ],
   "/icons/factory.svg": [
     "M2 20a2 2 0 002 2h16a2 2 0 002-2V8l-7 5V8l-7 5V4a2 2 0 00-2-2H4a2 2 0 00-2 2z",
-    "M17 18h1", "M12 18h1", "M7 18h1",
+    "M17 18h1",
+    "M12 18h1",
+    "M7 18h1",
   ],
 };
+
+const uberUnsMenu = {
+  sections: [
+    {
+      items: [
+        {
+          icon: "/icons/award.svg",
+          title: "Warum Bluebatch?",
+          description: "Keine Agentur - IT-Experten",
+          href: "/warum-bluebatch",
+        },
+        {
+          icon: "/icons/workflow.svg",
+          title: "Unser Prozess",
+          description: "Wie wir arbeiten",
+          href: "/unser-prozess",
+        },
+      ],
+    },
+    {
+      items: [
+        {
+          icon: "/icons/people-group.svg",
+          title: "Das Team",
+          description: "lernen Sie uns kennen",
+          href: "/team",
+        },
+        {
+          icon: "/icons/phone.svg",
+          title: "Kontakt",
+          description: "Nehmen Sie Kontakt auf",
+          href: "/contact",
+        },
+      ],
+    },
+  ],
+};
+
+const servicesMenu = {
+  sections: [
+    {
+      title: "Services",
+      href: "/ki-implementierung",
+      items: [
+        {
+          icon: "/icons/server-minimalistic.svg",
+          title: "n8n Hosting",
+          description: "OnPrem oder Cloud",
+          href: "/n8n-hosting-deutschland",
+        },
+        {
+          icon: "/icons/monitor-camera.svg",
+          title: "Workflow-Wartung",
+          description: "24/7 Monitoring",
+          href: "/workflow-wartung",
+        },
+        {
+          icon: "/icons/puzzle.svg",
+          title: "Custom Nodes",
+          description: "Maßgeschneiderte Integrationen",
+          href: "/n8n-node",
+        },
+        {
+          icon: "/icons/academic-cap.svg",
+          title: "Schulungen",
+          description: "Workshops & Training",
+          href: "/n8n-schulung",
+        },
+        {
+          icon: "/icons/speedometer.svg",
+          title: "Performance Scaling",
+          description: "High-Performance Setup",
+          href: "/n8n-performance",
+        },
+        {
+          icon: "/icons/calculator.svg",
+          title: "ROI-Rechner",
+          description: "Lohnt sich Automatisierung?",
+          href: "/roi-rechner",
+        },
+      ],
+    },
+    {
+      title: "Automation",
+      href: "/tools",
+      items: [
+        {
+          title: "n8n",
+          description: "Workflow-Automatisierung",
+          href: "/was-ist-n8n",
+        },
+        {
+          title: "Make",
+          description: "Visueller Szenario-Builder",
+          href: "/tools/make",
+        },
+        {
+          title: "Zapier",
+          description: "No-Code Automatisierung",
+          href: "/tools/zapier",
+        },
+        {
+          title: "Power Automate",
+          description: "Microsoft-Automatisierung",
+          href: "/tools/power-automate",
+        },
+        {
+          title: "Alle Automation-Tools",
+          description: "Workato, UiPath, Tray.io u.m.",
+          href: "/tools",
+        },
+      ],
+    },
+    {
+      title: "Großhandel",
+      href: "/tools",
+      items: [
+        {
+          title: "Navision",
+          description: "Microsoft Dynamics ERP",
+          href: "/tools/navision",
+        },
+        {
+          title: "Easybill",
+          description: "Rechnungssoftware",
+          href: "/tools/easybill",
+        },
+      ],
+    },
+  ],
+};
+
+const useCasesMenu = {
+  topics: [
+    {
+      title: "Großhandel",
+      icon: "/icons/factory.svg",
+      href: "/wholesale-ai",
+      cases: [
+        { title: "Auftragserfassung", href: "/bestellung-erfassen" },
+        {
+          title: "Bestellabwicklung",
+          href: "/use-cases/grosshandel/bestellabwicklung",
+        },
+        {
+          title: "Lagerverwaltung",
+          href: "/use-cases/grosshandel/lagerverwaltung",
+        },
+        {
+          title: "Invoice-Bot",
+          href: "/use-cases/grosshandel/invoice-bot",
+        },
+        {
+          title: "3-Wege-Rechnungsprüfung",
+          href: "/automatische-rechnungspruefung",
+        },
+        {
+          title: "Zertifikatsprüfung Lieferanten",
+          href: "/use-cases/grosshandel/zertifikatspruefung-lieferanten",
+        },
+        {
+          title: "Angebots-Bot",
+          href: "/use-cases/grosshandel/angebots-bot",
+        },
+        {
+          title: "KI-Automation mit easybill",
+          href: "/use-cases/grosshandel/ai-automation-with-easybill",
+        },
+      ],
+    },
+    {
+      title: "Steuerberater",
+      icon: "/icons/calculator.svg",
+      href: "/use-cases/steuerberater",
+      cases: [
+        { title: "Dokumentenverarbeitung", href: "/ki-dokumentenmanagement" },
+        {
+          title: "Mandantenkommunikation",
+          href: "/use-cases/steuerberater/mandantenkommunikation",
+        },
+        { title: "DATEV-Jira Orchestration", href: "/n8n-datev" },
+      ],
+    },
+    {
+      title: "Personaldienstleister",
+      icon: "/icons/personal-connections.svg",
+      href: "/use-cases/personaldienstleister",
+      cases: [
+        {
+          title: "Bewerber-Screening",
+          href: "/use-cases/personaldienstleister/bewerber-screening",
+        },
+        {
+          title: "Bewerberkommunikation",
+          href: "/use-cases/personaldienstleister/bewerberkommunikation",
+        },
+        {
+          title: "Digitales Onboarding",
+          href: "/use-cases/personaldienstleister/digitales-onboarding",
+        },
+        {
+          title: "Compliance-Überwachung",
+          href: "/use-cases/personaldienstleister/compliance-ueberwachung",
+        },
+        {
+          title: "Zeiterfassung & Abrechnung",
+          href: "/use-cases/personaldienstleister/zeiterfassung-abrechnung",
+        },
+      ],
+    },
+  ],
+};
+
+const triggerClass =
+  "group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50";
+const triggerIconClass =
+  "w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors";
+const panelBase =
+  "hidden absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden";
 
 function NavIcon({ src, className }: { src: string; className?: string }) {
   const paths = navIcons[src];
@@ -51,7 +269,27 @@ function NavIcon({ src, className }: { src: string; className?: string }) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {paths.map((d, i) => <path key={i} d={d} />)}
+      {paths.map((d, i) => (
+        <path key={i} d={d} />
+      ))}
+    </svg>
+  );
+}
+
+function ChevronDown({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M19 9l-7 7-7-7"
+      />
     </svg>
   );
 }
@@ -61,276 +299,15 @@ interface NavigationProps {
 }
 
 export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 30) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Über uns - Cluster Menu
-  const uberUnsMenu = {
-    sections: [
-      {
-        items: [
-          {
-            icon: "/icons/award.svg",
-            title: "Warum Bluebatch?",
-            description: "Keine Agentur - IT-Experten",
-            href: "/warum-bluebatch",
-          },
-          {
-            icon: "/icons/workflow.svg",
-            title: "Unser Prozess",
-            description: "Wie wir arbeiten",
-            href: "/unser-prozess",
-          },
-        ],
-      },
-      {
-        items: [
-          {
-            icon: "/icons/people-group.svg",
-            title: "Das Team",
-            description: "lernen Sie uns kennen",
-            href: "/team",
-          },
-          {
-            icon: "/icons/phone.svg",
-            title: "Kontakt",
-            description: "Nehmen Sie Kontakt auf",
-            href: "/contact",
-          },
-        ],
-      },
-    ],
-  };
-
-  // Services & Tools - Cluster Menu
-  const servicesMenu = {
-    sections: [
-      {
-        title: "Services",
-        href: "/ki-implementierung",
-        items: [
-          {
-            icon: "/icons/server-minimalistic.svg",
-            title: "n8n Hosting",
-            description: "OnPrem oder Cloud",
-            href: "/n8n-hosting-deutschland",
-          },
-          {
-            icon: "/icons/monitor-camera.svg",
-            title: "Workflow-Wartung",
-            description: "24/7 Monitoring",
-            href: "/workflow-wartung",
-          },
-          {
-            icon: "/icons/puzzle.svg",
-            title: "Custom Nodes",
-            description: "Maßgeschneiderte Integrationen",
-            href: "/n8n-node",
-          },
-          {
-            icon: "/icons/academic-cap.svg",
-            title: "Schulungen",
-            description: "Workshops & Training",
-            href: "/n8n-schulung",
-          },
-          {
-            icon: "/icons/speedometer.svg",
-            title: "Performance Scaling",
-            description: "High-Performance Setup",
-            href: "/n8n-performance",
-          },
-          {
-            icon: "/icons/calculator.svg",
-            title: "ROI-Rechner",
-            description: "Lohnt sich Automatisierung?",
-            href: "/roi-rechner",
-          },
-        ],
-      },
-      {
-        title: "Automation",
-        href: "/tools",
-        items: [
-          {
-            title: "n8n",
-            description: "Workflow-Automatisierung",
-            href: "/was-ist-n8n",
-          },
-          {
-            title: "Make",
-            description: "Visueller Szenario-Builder",
-            href: "/tools/make",
-          },
-          {
-            title: "Zapier",
-            description: "No-Code Automatisierung",
-            href: "/tools/zapier",
-          },
-          {
-            title: "Power Automate",
-            description: "Microsoft-Automatisierung",
-            href: "/tools/power-automate",
-          },
-          {
-            title: "Alle Automation-Tools",
-            description: "Workato, UiPath, Tray.io u.m.",
-            href: "/tools",
-          },
-        ],
-      },
-      {
-        title: "Großhandel",
-        href: "/tools",
-        items: [
-          {
-            title: "Navision",
-            description: "Microsoft Dynamics ERP",
-            href: "/tools/navision",
-          },
-          {
-            title: "Easybill",
-            description: "Rechnungssoftware",
-            href: "/tools/easybill",
-          },
-        ],
-      },
-    ],
-  };
-
-  // Use-Cases - Cluster Menu
-  const useCasesMenu = {
-    topics: [
-      {
-        title: "Großhandel",
-        icon: "/icons/factory.svg",
-        href: "/wholesale-ai",
-        cases: [
-          {
-            title: "Auftragserfassung",
-            href: "/bestellung-erfassen",
-          },
-          {
-            title: "Bestellabwicklung",
-            href: "/use-cases/grosshandel/bestellabwicklung",
-          },
-          {
-            title: "Lagerverwaltung",
-            href: "/use-cases/grosshandel/lagerverwaltung",
-          },
-          {
-            title: "Invoice-Bot",
-            href: "/use-cases/grosshandel/invoice-bot",
-          },
-          {
-            title: "3-Wege-Rechnungsprüfung",
-            href: "/automatische-rechnungspruefung",
-          },
-          {
-            title: "Zertifikatsprüfung Lieferanten",
-            href: "/use-cases/grosshandel/zertifikatspruefung-lieferanten",
-          },
-          {
-            title: "Angebots-Bot",
-            href: "/use-cases/grosshandel/angebots-bot",
-          },
-          {
-            title: "KI-Automation mit easybill",
-            href: "/use-cases/grosshandel/ai-automation-with-easybill",
-          },
-        ],
-      },
-      {
-        title: "Steuerberater",
-        icon: "/icons/calculator.svg",
-        href: "/use-cases/steuerberater",
-        cases: [
-          {
-            title: "Dokumentenverarbeitung",
-            href: "/ki-dokumentenmanagement",
-          },
-          {
-            title: "Mandantenkommunikation",
-            href: "/use-cases/steuerberater/mandantenkommunikation",
-          },
-          {
-            title: "DATEV-Jira Orchestration",
-            href: "/n8n-datev",
-          },
-        ],
-      },
-      {
-        title: "Personaldienstleister",
-        icon: "/icons/personal-connections.svg",
-        href: "/use-cases/personaldienstleister",
-        cases: [
-          {
-            title: "Bewerber-Screening",
-            href: "/use-cases/personaldienstleister/bewerber-screening",
-          },
-          {
-            title: "Bewerberkommunikation",
-            href: "/use-cases/personaldienstleister/bewerberkommunikation",
-          },
-          {
-            title: "Digitales Onboarding",
-            href: "/use-cases/personaldienstleister/digitales-onboarding",
-          },
-          {
-            title: "Compliance-Überwachung",
-            href: "/use-cases/personaldienstleister/compliance-ueberwachung",
-          },
-          {
-            title: "Zeiterfassung & Abrechnung",
-            href: "/use-cases/personaldienstleister/zeiterfassung-abrechnung",
-          },
-        ],
-      },
-    ],
-  };
-
-  const itemVariants = {
-    hidden: { y: -20, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
-  };
-
   return (
-    <div
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "px-10 pt-3" : "px-8 pt-4"
-      }`}
-    >
-      <nav
-        className={`mx-auto bg-white/70 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200/50 transition-all duration-300 ${
-          isScrolled ? "max-w-5xl" : "max-w-6xl"
-        }`}
-      >
-        <div
-          className={`transition-all duration-300 ${
-            isScrolled ? "px-5 h-16" : "px-6 h-20"
-          }`}
-        >
+    <div className="nav-outer fixed top-0 left-0 right-0 z-50 px-8 pt-4">
+      <nav className="nav-shell relative mx-auto bg-white/70 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200/50 max-w-6xl">
+        <div className="nav-inset px-6 h-20">
           <div className="flex h-full items-center justify-between">
             {/* Logo */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={itemVariants}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="flex items-center"
+            <div
+              className="nav-fade-in flex items-center"
+              style={{ animationDelay: "100ms" }}
             >
               <Link href="/" className="flex items-center">
                 <Image
@@ -340,26 +317,18 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                   alt="Bluebatch Logo"
                 />
               </Link>
-            </motion.div>
+            </div>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-2">
-              {/* Über uns Dropdown - Cluster Menu */}
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={itemVariants}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                className="relative"
-                onMouseEnter={() => setActiveDropdown("about")}
-                onMouseLeave={() => setActiveDropdown(null)}
+              {/* Über uns */}
+              <div
+                className="nav-fade-in relative group/about"
+                style={{ animationDelay: "200ms" }}
               >
-                <Link
-                  href="/"
-                  className="group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
-                >
+                <Link href="/" className={triggerClass}>
                   <svg
-                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
+                    className={triggerIconClass}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -372,77 +341,53 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                     />
                   </svg>
                   Über uns
-                  <svg
-                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+                  <ChevronDown className={triggerIconClass} />
                 </Link>
 
-                {activeDropdown === "about" && (
-                  <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-[500px] bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
-                    onMouseEnter={() => setActiveDropdown("about")}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <div className="p-4 grid grid-cols-2 gap-6">
-                      {uberUnsMenu.sections.map((section, sectionIndex) => (
-                        <div key={sectionIndex}>
-                          <div className="space-y-2">
-                            {section.items.map((item, itemIndex) => (
-                              <Link
-                                key={itemIndex}
-                                href={item.href}
-                                className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
-                              >
-                                {"icon" in item && item.icon && (
-                                  <NavIcon
-                                    src={item.icon}
-                                    className="w-5 h-5 text-gray-700 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5"
-                                  />
-                                )}
-                                <div>
-                                  <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
-                                    {item.title}
-                                  </h5>
-                                  <p className="text-xs text-gray-500 mt-0.5">
-                                    {item.description}
-                                  </p>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </motion.div>
-
-              {/* Services Dropdown */}
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={itemVariants}
-                transition={{ duration: 0.4, delay: 0.25 }}
-                className="relative"
-                onMouseEnter={() => setActiveDropdown("services")}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <Link
-                  href="/tools"
-                  className="group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
+                <div
+                  className={`${panelBase} group-hover/about:block group-focus-within/about:block w-[500px]`}
                 >
+                  <div className="p-4 grid grid-cols-2 gap-6">
+                    {uberUnsMenu.sections.map((section, sectionIndex) => (
+                      <div key={sectionIndex}>
+                        <div className="space-y-2">
+                          {section.items.map((item, itemIndex) => (
+                            <Link
+                              key={itemIndex}
+                              href={item.href}
+                              className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                            >
+                              {"icon" in item && item.icon && (
+                                <NavIcon
+                                  src={item.icon}
+                                  className="w-5 h-5 text-gray-700 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5"
+                                />
+                              )}
+                              <div>
+                                <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
+                                  {item.title}
+                                </h5>
+                                <p className="text-xs text-gray-500 mt-0.5">
+                                  {item.description}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Tools */}
+              <div
+                className="nav-fade-in relative group/services"
+                style={{ animationDelay: "250ms" }}
+              >
+                <Link href="/tools" className={triggerClass}>
                   <svg
-                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
+                    className={triggerIconClass}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -455,83 +400,59 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                     />
                   </svg>
                   Tools
-                  <svg
-                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+                  <ChevronDown className={triggerIconClass} />
                 </Link>
 
-                {activeDropdown === "services" && (
-                  <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-[750px] bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
-                    onMouseEnter={() => setActiveDropdown("services")}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <div className="p-4 grid grid-cols-3 gap-6">
-                      {servicesMenu.sections.map((section, sectionIndex) => (
-                        <div key={sectionIndex}>
-                          <Link
-                            href={section.href}
-                            className="block font-bold text-gray-900 hover:text-primary-500 mb-3 text-sm uppercase tracking-wide transition-colors"
-                          >
-                            {section.title}
-                          </Link>
-                          <div className="space-y-2">
-                            {section.items.map((item, itemIndex) => (
-                              <Link
-                                key={itemIndex}
-                                href={item.href}
-                                className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
-                              >
-                                {"icon" in item && item.icon && (
-                                  <NavIcon
-                                    src={item.icon}
-                                    className="w-5 h-5 text-gray-700 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5"
-                                  />
-                                )}
-                                <div>
-                                  <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
-                                    {item.title}
-                                  </h5>
-                                  <p className="text-xs text-gray-500 mt-0.5">
-                                    {item.description}
-                                  </p>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </motion.div>
-
-              {/* Use-Cases Dropdown - Cluster Menu */}
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={itemVariants}
-                transition={{ duration: 0.4, delay: 0.3 }}
-                className="relative"
-                onMouseEnter={() => setActiveDropdown("usecases")}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <Link
-                  href="/use-cases"
-                  className="group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
+                <div
+                  className={`${panelBase} group-hover/services:block group-focus-within/services:block w-[750px]`}
                 >
+                  <div className="p-4 grid grid-cols-3 gap-6">
+                    {servicesMenu.sections.map((section, sectionIndex) => (
+                      <div key={sectionIndex}>
+                        <Link
+                          href={section.href}
+                          className="block font-bold text-gray-900 hover:text-primary-500 mb-3 text-sm uppercase tracking-wide transition-colors"
+                        >
+                          {section.title}
+                        </Link>
+                        <div className="space-y-2">
+                          {section.items.map((item, itemIndex) => (
+                            <Link
+                              key={itemIndex}
+                              href={item.href}
+                              className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                            >
+                              {"icon" in item && item.icon && (
+                                <NavIcon
+                                  src={item.icon}
+                                  className="w-5 h-5 text-gray-700 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5"
+                                />
+                              )}
+                              <div>
+                                <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
+                                  {item.title}
+                                </h5>
+                                <p className="text-xs text-gray-500 mt-0.5">
+                                  {item.description}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Use-Cases */}
+              <div
+                className="nav-fade-in relative group/usecases"
+                style={{ animationDelay: "300ms" }}
+              >
+                <Link href="/use-cases" className={triggerClass}>
                   <svg
-                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
+                    className={triggerIconClass}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -544,78 +465,54 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                     />
                   </svg>
                   Use-Cases
-                  <svg
-                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+                  <ChevronDown className={triggerIconClass} />
                 </Link>
 
-                {activeDropdown === "usecases" && (
-                  <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-[800px] bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
-                    onMouseEnter={() => setActiveDropdown("usecases")}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <div className="p-4 grid grid-cols-3 gap-6">
-                      {useCasesMenu.topics.map((topic, topicIndex) => (
-                        <div key={topicIndex}>
-                          <Link
-                            href={topic.href}
-                            className="flex items-center gap-2 mb-3 hover:text-primary-500 transition-colors group"
-                          >
-                            <NavIcon
-                              src={topic.icon}
-                              className="w-6 h-6 text-gray-700 group-hover:text-primary-500 transition-colors"
-                            />
-                            <h4 className="font-bold text-gray-900 group-hover:text-primary-500 text-sm uppercase tracking-wide">
-                              {topic.title}
-                            </h4>
-                          </Link>
-                          <div className="space-y-2">
-                            {topic.cases.map((caseItem, caseIndex) => (
-                              <Link
-                                key={caseIndex}
-                                href={caseItem.href}
-                                className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group"
-                              >
-                                <p className="text-sm font-medium text-gray-900 group-hover:text-primary-500">
-                                  {caseItem.title}
-                                </p>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </motion.div>
-
-              {/* Blog Dropdown */}
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={itemVariants}
-                transition={{ duration: 0.4, delay: 0.35 }}
-                className="relative"
-                onMouseEnter={() => setActiveDropdown("blog")}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <Link
-                  href="/blog-workflow"
-                  className="group flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium rounded-lg hover:bg-gray-50"
+                <div
+                  className={`${panelBase} group-hover/usecases:block group-focus-within/usecases:block w-[800px]`}
                 >
+                  <div className="p-4 grid grid-cols-3 gap-6">
+                    {useCasesMenu.topics.map((topic, topicIndex) => (
+                      <div key={topicIndex}>
+                        <Link
+                          href={topic.href}
+                          className="flex items-center gap-2 mb-3 hover:text-primary-500 transition-colors group"
+                        >
+                          <NavIcon
+                            src={topic.icon}
+                            className="w-6 h-6 text-gray-700 group-hover:text-primary-500 transition-colors"
+                          />
+                          <h4 className="font-bold text-gray-900 group-hover:text-primary-500 text-sm uppercase tracking-wide">
+                            {topic.title}
+                          </h4>
+                        </Link>
+                        <div className="space-y-2">
+                          {topic.cases.map((caseItem, caseIndex) => (
+                            <Link
+                              key={caseIndex}
+                              href={caseItem.href}
+                              className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                            >
+                              <p className="text-sm font-medium text-gray-900 group-hover:text-primary-500">
+                                {caseItem.title}
+                              </p>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Blog */}
+              <div
+                className="nav-fade-in relative group/blog"
+                style={{ animationDelay: "350ms" }}
+              >
+                <Link href="/blog-workflow" className={triggerClass}>
                   <svg
-                    className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
+                    className={triggerIconClass}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -629,27 +526,13 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                   </svg>
                   Blog
                   {latestBlogPosts.length > 0 && (
-                    <svg
-                      className="w-4 h-4 text-gray-700 group-hover:text-primary-500 transition-colors"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
+                    <ChevronDown className={triggerIconClass} />
                   )}
                 </Link>
 
-                {activeDropdown === "blog" && latestBlogPosts.length > 0 && (
+                {latestBlogPosts.length > 0 && (
                   <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 w-[400px] bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden"
-                    onMouseEnter={() => setActiveDropdown("blog")}
-                    onMouseLeave={() => setActiveDropdown(null)}
+                    className={`${panelBase} group-hover/blog:block group-focus-within/blog:block w-[400px]`}
                   >
                     <div className="p-3">
                       <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide px-2 mb-2">
@@ -669,7 +552,10 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                         ))}
                       </div>
                       <div className="border-t border-gray-100 mt-2 pt-2 px-2">
-                        <Button href="/blog-workflow" className="w-full text-xs py-1.5 px-3">
+                        <Button
+                          href="/blog-workflow"
+                          className="w-full text-xs py-1.5 px-3"
+                        >
                           Alle Artikel ansehen
                           <ArrowRight className="w-3.5 h-3.5" />
                         </Button>
@@ -677,169 +563,24 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                     </div>
                   </div>
                 )}
-              </motion.div>
+              </div>
             </div>
 
             {/* Right Side - Actions */}
             <div className="hidden lg:flex items-center gap-2">
-              {/* Search Icon */}
-              {/* <button className="p-2.5 text-gray-600 hover:text-gray-900 transition-colors rounded-lg hover:bg-gray-50">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button> */}
-
-              {/* Theme Toggle */}
-              {/* <button className="p-2.5 text-gray-600 hover:text-gray-900 transition-colors rounded-lg hover:bg-gray-50">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                  />
-                </svg>
-              </button> */}
-
-              {/* Get in Touch Button */}
               <ContactButton size="sm" showIcon={false}></ContactButton>
-
-              {/* Language Selector */}
-              {/* <button className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:text-gray-900 transition-colors font-medium rounded-lg hover:bg-gray-50">
-                <span className="text-xl">🇺🇸</span>
-                EN
-              </button> */}
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                {mobileMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
+            {/* Mobile Menu — client island */}
+            <NavigationMobile
+              useCasesTopics={useCasesMenu.topics.map((t) => ({
+                title: t.title,
+                icon: t.icon,
+                href: t.href,
+              }))}
+            />
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200">
-            <div className="px-4 py-4 space-y-1">
-              <Link
-                href="/"
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Über uns
-              </Link>
-              <Link
-                href="/ki-implementierung"
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                href="/tools"
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Tools
-              </Link>
-              <div className="pl-8 space-y-1">
-                <Link
-                  href="/tools"
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Automation-Tools
-                </Link>
-                <Link
-                  href="/tools"
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Großhandel-Tools
-                </Link>
-              </div>
-              <Link
-                href="/use-cases"
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Use-Cases
-              </Link>
-              <div className="pl-8 space-y-1">
-                {useCasesMenu.topics.map((topic, topicIndex) => (
-                  <Link
-                    key={topicIndex}
-                    href={topic.href}
-                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <NavIcon
-                      src={topic.icon}
-                      className="w-4.5 h-4.5 text-gray-500"
-                    />
-                    {topic.title}
-                  </Link>
-                ))}
-              </div>
-              <Link
-                href="/blog-workflow"
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </Link>
-
-              <div className="pt-2" onClick={() => setMobileMenuOpen(false)}>
-                <ContactButton
-                  showIcon={false}
-                  className="w-full justify-center"
-                >
-                  Kontakt
-                </ContactButton>
-              </div>
-            </div>
-          </div>
-        )}
       </nav>
     </div>
   );

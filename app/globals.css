@@ -97,3 +97,59 @@
 .animate-fadeIn {
   animation: fadeIn 0.2s ease-out;
 }
+
+/* Navigation — staggered entry fade (replaces framer-motion) */
+@keyframes nav-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-fade-in {
+  animation: nav-fade-in 0.4s ease-out both;
+}
+
+/* Navigation — scroll-driven shrink (replaces isScrolled JS).
+   Chrome 115+, Edge 115+, Firefox 136+. Safari falls back to the
+   non-scrolled (larger) state, which is fine. */
+@supports (animation-timeline: scroll()) {
+  @keyframes nav-shrink-outer {
+    to {
+      padding-left: 2.5rem;   /* px-10 */
+      padding-right: 2.5rem;
+      padding-top: 0.75rem;   /* pt-3 */
+    }
+  }
+  @keyframes nav-shrink-shell {
+    to {
+      max-width: 64rem;       /* max-w-5xl */
+    }
+  }
+  @keyframes nav-shrink-inset {
+    to {
+      padding-left: 1.25rem;  /* px-5 */
+      padding-right: 1.25rem;
+      height: 4rem;           /* h-16 */
+    }
+  }
+  .nav-outer {
+    animation: nav-shrink-outer linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 30px;
+  }
+  .nav-shell {
+    animation: nav-shrink-shell linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 30px;
+  }
+  .nav-inset {
+    animation: nav-shrink-inset linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 30px;
+  }
+}
