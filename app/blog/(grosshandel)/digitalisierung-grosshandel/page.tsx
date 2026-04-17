@@ -1595,6 +1595,14 @@ export default async function Page({
               KI übernimmt Rechnungskopien und Lieferstatus
             </Typo.H4>
 
+            <Typo.Paragraph>
+              Eine ausführliche Schritt-für-Schritt-Variante dieses Use Cases
+              mit Freshdesk-Integration findet ihr im Artikel zu{" "}
+              <Link href="/blog/ki-im-support-grosshandel" className="text-primary-600 hover:underline">
+                KI im Support für den Großhandel
+              </Link>.
+            </Typo.Paragraph>
+
             <Typo.H4>Technische Umsetzung</Typo.H4>
             <Typo.Paragraph>
               Der n8n-Workflow greift jede eingehende E-Mail ab, sobald sie den

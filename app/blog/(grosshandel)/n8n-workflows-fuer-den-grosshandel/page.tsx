@@ -376,7 +376,12 @@ export default function Page() {
               Automatisierung werfen wir in unserem Artikel zu{" "}
               <Link href="/blog/flexibilitaet-im-grosshandel-mit-n8n-workflows" className="text-primary-600 hover:underline">
                 Flexibilität im Großhandel mit n8n-Workflows
-              </Link>.
+              </Link>. Wer stattdessen im Kundenservice den größten Engpass
+              sieht, findet im Artikel zu{" "}
+              <Link href="/blog/ki-im-support-grosshandel" className="text-primary-600 hover:underline">
+                KI im Support für den Großhandel
+              </Link>{" "}
+              einen konkreten Einstieg mit Freshdesk und n8n.
             </Typo.Paragraph>
           </div>
 
