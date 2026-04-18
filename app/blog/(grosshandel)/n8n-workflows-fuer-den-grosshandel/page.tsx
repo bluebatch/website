@@ -105,7 +105,11 @@ export default function Page() {
               <Typo.ListItem>
                 <strong>ERP-Anbindung</strong> ohne Middleware. n8n spricht
                 REST, SOAP, ODBC und hat Community Nodes für die gängigen
-                ERP-Systeme.
+                ERP-Systeme. Wir haben die{" "}
+                <Link href="/blog/erp-workflows-automatisieren" className="text-primary-600 hover:underline">
+                  fünf wichtigsten ERP-Workflows für SAP, Dynamics NAV und microtech
+                </Link>
+                {" "}zusammengefasst.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>KI-Integration</strong> ist nativ eingebaut. Seit dem

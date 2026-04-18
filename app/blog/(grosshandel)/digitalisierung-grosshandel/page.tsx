@@ -452,6 +452,10 @@ export default async function Page({
               Die eigentliche Bauarbeit: Trigger einrichten, LLM-Prompts
               entwickeln, ERP-Anbindung konfigurieren, Validierungslogik
               aufsetzen, Fehlerbehandlung und Eskalationspfade definieren.
+              Konkrete Beispiele zeigen wir in unserem Überblick zu{" "}
+              <Link href="/blog/erp-workflows-automatisieren" className="text-primary-600 hover:underline">
+                ERP-Workflows für SAP, Dynamics NAV und microtech
+              </Link>.
             </Typo.Paragraph>
             <Typo.Paragraph>
               <strong>KI-Feinabstimmung.</strong>{" "}
