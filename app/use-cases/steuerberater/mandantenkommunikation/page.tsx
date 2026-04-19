@@ -381,9 +381,16 @@ export default function Page() {
           <Link href="/use-cases/steuerberater" className="text-primary-500 hover:underline">
             alle Steuerberater Use Cases
           </Link>
-          , oder erfahren Sie mehr über{" "}
+          , erfahren Sie mehr über{" "}
           <Link href="/ki-dokumentenmanagement" className="text-primary-500 hover:underline">
             KI-Dokumentenverarbeitung
+          </Link>{" "}
+          oder die{" "}
+          <Link
+            href="/use-cases/steuerberater/belegpruefung"
+            className="text-primary-500 hover:underline"
+          >
+            automatisierte Belegprüfung
           </Link>
           .
         </Typo.Paragraph>

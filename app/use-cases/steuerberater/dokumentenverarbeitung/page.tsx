@@ -388,6 +388,29 @@ export default async function Page({
         </SavingsCard>
       </ContentWrapper>
 
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Verwandte Lösungen</IntroBox.Headline>
+        </IntroBox>
+        <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
+          Der Schritt nach der Erfassung ist die{" "}
+          <Link
+            href="/use-cases/steuerberater/belegpruefung"
+            className="text-primary-500 hover:underline"
+          >
+            automatisierte Belegprüfung
+          </Link>
+          . Oder sehen Sie{" "}
+          <Link
+            href="/use-cases/steuerberater"
+            className="text-primary-500 hover:underline"
+          >
+            alle Steuerberater Use Cases
+          </Link>
+          .
+        </Typo.Paragraph>
+      </ContentWrapper>
+
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>

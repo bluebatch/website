@@ -74,6 +74,13 @@ const useCases = [
       "Bidirektionale Synchronisation zwischen DATEV und Jira. Automatische Aufgabenerstellung, Fristenüberwachung und Eskalations-Workflows - 99,9% Fristeneinhaltung.",
     image: "/images/datev-integration.jpg",
   },
+  {
+    slug: "belegpruefung",
+    title: "Belegprüfung automatisieren",
+    description:
+      "KI-gestützte Belegprüfung mit automatischer Datenextraktion, GoBD-konformer Archivierung und DATEV-Übergabe. 90% schnellere Prüfung, deutlich weniger Fehler.",
+    image: "/images/document-automation.jpg",
+  },
 ];
 
 export default function Page() {
@@ -95,7 +102,7 @@ export default function Page() {
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
-              3 erprobte Automatisierungslösungen für Steuerkanzleien
+              4 erprobte Automatisierungslösungen für Steuerkanzleien
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
