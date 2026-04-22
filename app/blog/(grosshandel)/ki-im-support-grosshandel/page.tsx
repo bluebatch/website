@@ -466,6 +466,14 @@ export default function Page() {
               unter sechs Monaten rechnet.
             </Typo.Paragraph>
             <Typo.Paragraph>
+              Wer die klassische Regel-Automatisierung hinter sich lassen und
+              autonome KI-Agenten einsetzen möchte, findet im Leitfaden zu{" "}
+              <Link href="/blog/agentic-ai-im-grosshandel" className="text-primary-600 hover:underline">
+                Agentic AI im Großhandel
+              </Link>{" "}
+              konkrete Praxisbeispiele.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
               Ihr wollt wissen, welche Support-Prozesse sich bei euch am
               schnellsten automatisieren lassen?{" "}
               <Link href="/contact" className="text-primary-600 hover:underline">

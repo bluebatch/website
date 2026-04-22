@@ -727,6 +727,10 @@ export default function Page() {
               <Link href="/ki-implementierung" className="text-primary-500 hover:underline">
                 unsere Implementierungsservices
               </Link>
+              . Einen tieferen Einstieg in autonome KI-Systeme geben wir in{" "}
+              <Link href="/blog/agentic-ai-im-grosshandel" className="text-primary-500 hover:underline">
+                Agentic AI im Großhandel
+              </Link>
               . Wie KI-gestützte Automatisierung auch in der
               Personaldienstleistung Prozesse beschleunigt, zeigen wir am
               Beispiel{" "}
