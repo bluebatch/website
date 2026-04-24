@@ -737,6 +737,11 @@ export default function Page() {
               <Link href="/blog/speed-to-hire" className="text-primary-500 hover:underline">
                 Speed-to-Hire
               </Link>
+              . Welche rechtlichen Anforderungen beim KI-Einsatz zu beachten
+              sind, beleuchten wir in{" "}
+              <Link href="/blog/dsgvo-konforme-ki-tools" className="text-primary-500 hover:underline">
+                DSGVO-konforme KI-Tools
+              </Link>
               .
             </Typo.Paragraph>
           </div>

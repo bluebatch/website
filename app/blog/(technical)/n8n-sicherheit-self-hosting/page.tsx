@@ -1102,6 +1102,18 @@ cap_drop:
               n8n-Instanz täglich tausende Kundendatensätze durch Workflows
               schleust, fallt ihr da rein.
             </Typo.Paragraph>
+            <Typo.Paragraph>
+              Welche KI-Tools ihr in den Workflows überhaupt rechtssicher
+              einsetzen dürft, haben wir in{" "}
+              <Link
+                href="/blog/dsgvo-konforme-ki-tools"
+                className="text-primary-600 hover:underline"
+              >
+                DSGVO-konforme KI-Tools
+              </Link>{" "}
+              im Detail verglichen. Die Auswahl entscheidet, ob AVV, EU-Hosting
+              oder Self-Hosting die saubere Lösung ist.
+            </Typo.Paragraph>
 
             <Typo.H3>72 Stunden: Die Meldepflicht bei einem Breach</Typo.H3>
             <Typo.Paragraph>
