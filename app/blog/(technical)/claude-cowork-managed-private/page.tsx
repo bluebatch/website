@@ -10,7 +10,7 @@ export const metaCustom: BlogMeta = {
   slug: "claude-cowork-managed-private",
   author: "Max Hänsel",
   date: "2026-04-24",
-  image: "/images/machine-learning.jpg",
+  image: "/blog/claude-cowork-managed-private/hero.png",
   tags: ["ki", "security", "automatisierung"] as BlogTagId[],
   publish: true,
 };
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/machine-learning.jpg",
+        url: "/blog/claude-cowork-managed-private/hero.png",
         width: 1200,
         height: 630,
         alt: "Amazon Bedrock und Claude Cowork managed private auf AWS",
@@ -65,7 +65,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/machine-learning.jpg"
+          src="/blog/claude-cowork-managed-private/hero.png"
           alt="Amazon Bedrock und Claude Cowork managed private auf AWS"
         />
       </BlogHero>
@@ -368,7 +368,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/compliance-signs.jpg"
+              src="/blog/claude-cowork-managed-private/managed-private-vs-saas.png"
               alt="Datenfluss managed private vs. SaaS bei Claude Cowork auf Amazon Bedrock"
               width={1200}
               height={675}
@@ -418,7 +418,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/technology-integration.jpg"
+              src="/blog/claude-cowork-managed-private/bedrock-architecture.png"
               alt="Architekturübersicht Claude Cowork mit Amazon Bedrock"
               width={1200}
               height={675}
@@ -614,7 +614,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/data-flow.jpg"
+              src="/blog/claude-cowork-managed-private/mcp-connectors.png"
               alt="MCP-Konnektoren zwischen Claude Cowork und Unternehmenssystemen"
               width={1200}
               height={675}

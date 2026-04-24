@@ -11,7 +11,7 @@ export const metaCustom: BlogMeta = {
   slug: "claude-cowork-vs-copilot-chatgpt",
   author: "Max Hänsel",
   date: "2026-04-24",
-  image: "/images/strategic-thinking.jpg",
+  image: "/blog/claude-cowork-vs-copilot-chatgpt/hero.png",
   tags: ["ki", "automatisierung"] as BlogTagId[],
   publish: true,
 };
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/strategic-thinking.jpg",
+        url: "/blog/claude-cowork-vs-copilot-chatgpt/hero.png",
         width: 1200,
         height: 630,
         alt: "Claude vs. ChatGPT vs. Copilot Vergleich 2026",
@@ -66,7 +66,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/strategic-thinking.jpg"
+          src="/blog/claude-cowork-vs-copilot-chatgpt/hero.png"
           alt="Vergleich Claude, ChatGPT und Microsoft Copilot für Unternehmen"
         />
       </BlogHero>
@@ -250,7 +250,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/team-collaboration.jpg"
+              src="/blog/claude-cowork-vs-copilot-chatgpt/architecture-comparison.png"
               alt="Architekturvergleich Claude, ChatGPT und Copilot"
               width={1200}
               height={675}
@@ -318,7 +318,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/compliance-signs.jpg"
+              src="/blog/claude-cowork-vs-copilot-chatgpt/datenschutz-matrix.png"
               alt="Datenschutz-Matrix für Enterprise-KI-Tools"
               width={1200}
               height={675}
@@ -494,7 +494,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/pricing-calculator.jpg"
+              src="/blog/claude-cowork-vs-copilot-chatgpt/kostenvergleich.png"
               alt="Kostenrechnung Claude, ChatGPT Enterprise und Copilot für 50 Nutzer"
               width={1200}
               height={675}
