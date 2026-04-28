@@ -382,7 +382,9 @@ export default async function Page({
                 <strong>Low-Code-Workflow-Tools.</strong>{" "}
                 Plattformen wie n8n, Make oder Power Automate ermöglichen
                 KI-Workflow-Automatisierung ohne tiefes Programmierwissen und
-                können Legacy-Systeme über Middleware anbinden.
+                können Legacy-Systeme über Middleware anbinden. Welches Tool zu
+                welchem Anwendungsfall passt, zeigt unser{" "}
+                <Link href="/blog/make-vs-n8n-vergleich" className="text-primary-600 hover:underline">direkter Vergleich n8n vs. Make</Link>.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>KI kann Datenprobleme selbst lösen.</strong>{" "}

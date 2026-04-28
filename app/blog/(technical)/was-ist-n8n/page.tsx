@@ -435,6 +435,14 @@ export default function Page() {  return (
             </Typo.List>
             <Typo.Paragraph>
               Bei komplexen Workflows wird der Kostenunterschied schnell massiv.
+              Wer den{" "}
+              <a
+                href="/blog/make-vs-n8n-vergleich"
+                className="text-bluebatch-link hover:underline"
+              >
+                direkten Vergleich n8n vs. Make in Tiefe
+              </a>{" "}
+              sehen will (Operations-Modell, Self-Hosting, KI-Knoten und reale Rechenbeispiele) findet hier die ausführliche Gegenüberstellung.
             </Typo.Paragraph>
 
             <Typo.H3>Wann welches Tool?</Typo.H3>
