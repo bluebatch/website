@@ -211,7 +211,7 @@ export default function Page() {
               Unternehmen mit strengen IT-Vorgaben ist das nicht Nice-to-have,
               sondern Pflicht. Mehr dazu in unserer{" "}
               <Link
-                href="/services/n8n-hosting"
+                href="/n8n-hosting-deutschland"
                 className="text-primary-500 hover:underline"
               >
                 n8n-Hosting-Seite
@@ -365,7 +365,7 @@ export default function Page() {
                 Sie mindestens eine technische Person im Team haben oder einen
                 externen Partner für{" "}
                 <Link
-                  href="/services/n8n-hosting"
+                  href="/n8n-hosting-deutschland"
                   className="text-primary-500 hover:underline"
                 >
                   Hosting

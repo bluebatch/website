@@ -281,7 +281,7 @@ export default function Page() {
               kein Risiko, dass Prompts in einem externen Trainingslauf landen.
               Mehr dazu in unserem Leitfaden zum{" "}
               <Link
-                href="/services/n8n-hosting"
+                href="/n8n-hosting-deutschland"
                 className="text-primary-600 hover:underline"
               >
                 n8n-Hosting in der EU

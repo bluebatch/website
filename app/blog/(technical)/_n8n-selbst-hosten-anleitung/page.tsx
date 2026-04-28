@@ -383,7 +383,7 @@ export default function Page() {
             <Typo.Paragraph>
               Wer den gesamten Betrieb nicht selbst stemmen will, findet mit
               unserem{" "}
-              <Link href="/services/n8n-hosting" className="text-primary-600 hover:underline">
+              <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">
                 Managed-n8n-Hosting
               </Link>{" "}
               eine Alternative, bei der Server-Härtung, Monitoring und Updates
