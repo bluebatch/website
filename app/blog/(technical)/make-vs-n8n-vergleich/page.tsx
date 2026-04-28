@@ -177,12 +177,12 @@ export default function Page() {
               Make fünfstellig pro Monat, bei n8n Self-Hosted zweistellig.
               Siehe dazu auch{" "}
               <Link
-                href="/blog/ist-n8n-kostenlos"
+                href="/blog/was-ist-n8n"
                 className="text-primary-500 hover:underline"
               >
-                Ist n8n kostenlos?
+                den Grundlagen-Beitrag zu n8n
               </Link>{" "}
-              für die Details.
+              für das Preismodell im Detail.
             </Typo.Paragraph>
           </div>
 
@@ -256,7 +256,7 @@ export default function Page() {
               Memory, Tools und mehreren Schritten sind in n8n mittlerweile
               First-Class-Citizens. Wer ein{" "}
               <Link
-                href="/blog/n8n-ki-agenten-erstellen"
+                href="/blog/agentic-ai-im-grosshandel"
                 className="text-primary-500 hover:underline"
               >
                 KI-Agenten-System aufbauen
