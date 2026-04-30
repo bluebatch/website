@@ -1,0 +1,29 @@
+{
+  "rendering_style": "infographic",
+  "ink_outlines": false,
+  "background_tone": "white",
+  "dominant_colors": [
+    "white",
+    "coral",
+    "blue",
+    "grey"
+  ],
+  "accent_color": "coral",
+  "accent_intensity": "strong",
+  "contrast_level": "high",
+  "mood": "informational",
+  "composition_type": "split",
+  "has_text": true,
+  "has_people": false,
+  "has_portraits": false,
+  "has_speed_lines": false,
+  "subject_category": "technology",
+  "color_temperature": "neutral",
+  "brightness_estimate": "very-bright",
+  "detail_level": "moderate",
+  "depth_of_field": "none",
+  "has_visible_hex_codes": false,
+  "has_leaked_metadata": false,
+  "has_typos": false,
+  "text_quality": "clean"
+}

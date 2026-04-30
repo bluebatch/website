@@ -1,0 +1,14 @@
+[
+  {
+    "filename": "preis-vergleich.png",
+    "score": 89,
+    "verdict": "PASS",
+    "attempts": 2
+  },
+  {
+    "filename": "self-hosting.png",
+    "score": 86,
+    "verdict": "PASS",
+    "attempts": 1
+  }
+]
