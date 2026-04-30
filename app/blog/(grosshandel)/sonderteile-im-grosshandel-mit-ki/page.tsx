@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Typo from "@/components/ui/typo";
-import { Separator, BlogLayout, BlogHero } from "@/components/blog";
+import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 
 export const metaCustom: BlogMeta = {
   slug: "sonderteile-im-grosshandel-mit-ki",
@@ -17,19 +17,20 @@ export const metaCustom: BlogMeta = {
 };
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
-  mainRewrite: "/sonderteile-grosshandel",
+  mainRewrite: "/angebotserstellung-sonderteile",
   rewrites: [
     {
-      source: "/sonderteile-grosshandel",
+      source: "/angebotserstellung-sonderteile",
       metaTitle:
-        "Sonderteile im Großhandel mit KI: Bestelleingang automatisieren | Bluebatch",
+        "Angebotserstellung Sonderteile: KI im Großhandel | Bluebatch",
       metaDescription:
-        "Wie Veredler-Großhändler Sonderteil-Anfragen aus PDF und Mail automatisch lesen, kalkulieren und in Sekunden zum Angebot machen. Praxisbeispiele aus Antriebs-, Schlauch- und Stahltechnik.",
+        "Angebotserstellung für Sonderteile im Großhandel mit KI: Kundenanfragen automatisch erfassen, Sonderteil-Kalkulation per Software, vom Kunden-PDF zum Angebot in Sekunden.",
       keywords: [
-        "Sonderteile Großhandel",
-        "Veredler Großhandel",
-        "Bestelleingang KI",
         "Angebotserstellung Sonderteile",
+        "Angebotserstellung Software",
+        "Sonderteile Großhandel",
+        "Sonderteil Kalkulation Software",
+        "Kundenanfrage automatisch erfassen",
         "Bluebatch",
       ],
     },
@@ -38,14 +39,14 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 
 export const metadata: Metadata = {
   title:
-    "Sonderteile im Großhandel mit KI: Wie Veredler den Bestelleingang automatisieren | Bluebatch",
+    "Angebotserstellung Sonderteile: KI-Software im Großhandel automatisieren | Bluebatch",
   description:
-    "Sonderteile sind das Margenherz im Veredler-Großhandel und gleichzeitig der größte Bremsblock im Innendienst. So nimmt KI Anfragen aus PDF und Mail entgegen, kalkuliert Konfektionsschritte und liefert das Angebot in Sekunden.",
+    "Angebotserstellung für Sonderteile im Großhandel ist heute der größte Bremsblock im Innendienst. So erfasst KI-Software Kundenanfragen automatisch, kalkuliert Sonderteile und liefert das Angebot in Sekunden statt Tagen.",
   openGraph: {
     title:
-      "Sonderteile im Großhandel mit KI: Wie Veredler den Bestelleingang automatisieren",
+      "Angebotserstellung Sonderteile: KI-Software im Großhandel automatisieren",
     description:
-      "Wie Veredler-Großhändler Sonderteil-Anfragen automatisiert kalkulieren und in Sekunden zum Angebot machen.",
+      "Sonderteile-Angebotserstellung mit KI: Kundenanfragen automatisch erfassen, Sonderteil-Kalkulation per Software, Angebot in Sekunden.",
     type: "article",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -54,12 +55,12 @@ export const metadata: Metadata = {
         url: "/images/order-capture.jpg",
         width: 1200,
         height: 630,
-        alt: "Sonderteile im Großhandel mit KI automatisieren",
+        alt: "Angebotserstellung Sonderteile mit KI im Großhandel",
       },
     ],
   },
   alternates: {
-    canonical: "/sonderteile-grosshandel",
+    canonical: "/angebotserstellung-sonderteile",
   },
 };
 
@@ -74,8 +75,8 @@ export default async function Page({
     <>
       <BlogHero>
         <BlogHero.Headline>
-          Sonderteile im Großhandel mit KI: Wie Veredler den Bestelleingang
-          automatisieren
+          Angebotserstellung Sonderteile: Wie Veredler-Großhändler den
+          Bestelleingang mit KI automatisieren
         </BlogHero.Headline>
 
         <BlogHero.Meta>
@@ -91,7 +92,7 @@ export default async function Page({
 
         <BlogHero.Image
           src="/images/order-capture.jpg"
-          alt="Sonderteile im Großhandel mit KI automatisieren"
+          alt="Angebotserstellung Sonderteile mit KI im Großhandel"
         />
       </BlogHero>
 
@@ -100,8 +101,9 @@ export default async function Page({
           {/* Intro */}
           <div className="prose prose-lg">
             <Typo.Paragraph>
-              Sonderteile sind das Margenherz im Veredler-Großhandel. Und
-              gleichzeitig der größte Bremsblock im Innendienst.
+              <strong>Angebotserstellung für Sonderteile</strong> ist im
+              Großhandel das Margenherz und gleichzeitig der größte Bremsblock
+              im Innendienst.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Wer Riemen ablängt und beschichtet, Wälzlager nach Kundenzeichnung
@@ -112,11 +114,13 @@ export default async function Page({
               Kalkulieren von Material plus Konfektionsschritten.
             </Typo.Paragraph>
             <Typo.Paragraph>
-              Genau dort setzt KI an. Dieser Artikel zeigt, wie Veredler-
-              Großhändler den Schritt vom Kunden-PDF zum kalkulierten Angebot
-              automatisieren, welche Anfragen-Typen sich heute schon zuverlässig
-              parsen lassen und warum das Engineering-Wissen der Innendienst-
-              Profis dabei nicht ersetzt, sondern geschützt wird.
+              Genau dort setzt eine{" "}
+              <strong>Angebotserstellungs-Software mit KI</strong> an. Dieser
+              Artikel zeigt, wie Veredler-Großhändler{" "}
+              <strong>Kundenanfragen automatisch erfassen</strong>, die{" "}
+              <strong>Sonderteil-Kalkulation per Software</strong> abbilden und
+              vom Kunden-PDF zum freigegebenen Angebot in Sekunden statt Tagen
+              kommen, ohne ihr Engineering-Wissen zu verlieren.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Inhalt:
@@ -201,6 +205,13 @@ export default async function Page({
               Industrie täglich braucht und sehr selten in Pressemitteilungen
               auftaucht.
             </Typo.Paragraph>
+
+            <BlogImage
+              src="/blog/sonderteile-im-grosshandel-mit-ki/veredelung-werkstatt.png"
+              alt="Veredelung im Großhandel: Riemen-Konfektion und Wälzlager-Engineering in einer mittelständischen Werkstatt"
+              width={1200}
+              height={800}
+            />
           </div>
 
           <Separator />
@@ -280,6 +291,13 @@ export default async function Page({
               brauchen mehr Innendienst. Mehr Innendienst gibt es aber nicht
               einfach so.
             </Typo.Paragraph>
+
+            <BlogImage
+              src="/blog/sonderteile-im-grosshandel-mit-ki/bestelleingang-prozesskette.png"
+              alt="Flowchart: 6-Schritte-Prozesskette der manuellen Sonderteil-Angebotserstellung von PDF-Anfrage bis Auftragsbestätigung mit Liegezeiten"
+              width={1200}
+              height={800}
+            />
           </div>
 
           <Separator />
@@ -317,6 +335,13 @@ export default async function Page({
               Genau hier wird Automatisierung von einem Effizienz-Hebel zur
               Überlebensfrage.
             </Typo.Paragraph>
+
+            <BlogImage
+              src="/blog/sonderteile-im-grosshandel-mit-ki/innendienst-erfahrung.png"
+              alt="Erfahrener Innendienst-Mitarbeiter im Veredler-Großhandel mit Sonderteil-Zeichnungen und Stücklisten am Schreibtisch"
+              width={1200}
+              height={800}
+            />
           </div>
 
           <Separator />
@@ -332,15 +357,25 @@ export default async function Page({
               etablierter KI- und Workflow-Technologie funktionieren.
             </Typo.Paragraph>
 
-            <Typo.H3>Hebel 1: Anfragen lesen</Typo.H3>
+            <BlogImage
+              src="/blog/sonderteile-im-grosshandel-mit-ki/drei-ki-hebel-workflow.png"
+              alt="Diagramm: Drei KI-Hebel im Bestelleingang — Kundenanfrage automatisch erfassen, Zeichnungen interpretieren, Sonderteil-Kalkulation wiederverwenden"
+              width={1200}
+              height={800}
+            />
+
+            <Typo.H3>
+              Hebel 1: Kundenanfrage automatisch erfassen
+            </Typo.H3>
             <Typo.Paragraph>
-              KI nimmt eingehende E-Mails plus Anhänge und extrahiert
-              strukturierte Daten: Kunden-Identität, gewünschte Artikel oder
-              Sonderteil-Beschreibungen, Mengen,{" "}
-              <strong>Konfigurations-Parameter</strong> wie Material, Länge,
-              Beschichtung, Toleranz und Norm. Was vorher 10 bis 30 Minuten
-              händisches Abtippen war, ist jetzt eine Vorschau-Maske, die der
-              Innendienst nur noch bestätigt oder korrigiert.
+              Eine KI-basierte{" "}
+              <strong>Angebotserstellung-Software</strong> nimmt eingehende
+              E-Mails plus Anhänge und extrahiert strukturierte Daten: Kunden-
+              Identität, gewünschte Artikel oder Sonderteil-Beschreibungen,
+              Mengen, <strong>Konfigurations-Parameter</strong> wie Material,
+              Länge, Beschichtung, Toleranz und Norm. Was vorher 10 bis 30
+              Minuten händisches Abtippen war, ist jetzt eine Vorschau-Maske,
+              die der Innendienst nur noch bestätigt oder korrigiert.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Wichtig dabei: Die KI rät nicht. Wenn ein Wert nicht eindeutig aus
@@ -365,12 +400,16 @@ export default async function Page({
               Vertrieb und Technik fällt weg.
             </Typo.Paragraph>
 
-            <Typo.H3>Hebel 3: Wiederholanfragen erkennen</Typo.H3>
+            <Typo.H3>
+              Hebel 3: Sonderteil-Kalkulation per Software wiederverwenden
+            </Typo.H3>
             <Typo.Paragraph>
-              Sonderteile sind nicht so selten Sonder, wie der Name vermuten
-              lässt. Viele Kunden bestellen über die Jahre dieselbe Konfiguration
-              wieder. Heute wird trotzdem jedes Mal neu kalkuliert, weil das
-              alte Angebot in einer Mail-Inbox vergraben ist.
+              Sonderteile im Großhandel sind nicht so selten Sonder, wie der
+              Name vermuten lässt. Viele Kunden bestellen über die Jahre
+              dieselbe Konfiguration wieder. Heute wird trotzdem jedes Mal neu
+              kalkuliert, weil das alte Angebot in einer Mail-Inbox vergraben
+              ist und die <strong>Sonderteil-Kalkulation als Software</strong>{" "}
+              nirgendwo systematisch abgelegt wurde.
             </Typo.Paragraph>
             <Typo.Paragraph>
               KI erkennt anhand der extrahierten Konfigurations-Parameter, ob
@@ -445,6 +484,13 @@ export default async function Page({
               Kalkulation oft mehr Zeit als die Fertigung selbst, genau dort
               spart der Workflow.
             </Typo.Paragraph>
+
+            <BlogImage
+              src="/blog/sonderteile-im-grosshandel-mit-ki/sortimente-collage.png"
+              alt="Sortiments-Collage: Riemen-Konfektion, Wälzlager-Engineering, Förderband-Vulkanisation, Stahl-Anarbeitung und Hydraulik-Konfektion im Veredler-Großhandel"
+              width={1200}
+              height={800}
+            />
           </div>
 
           <Separator />
