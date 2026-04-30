@@ -3,14 +3,14 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
-import { Separator, BlogLayout, BlogHero } from "@/components/blog";
+import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 import { resolveHref } from "@/lib/get-canonical-path";
 
 export const metaCustom: BlogMeta = {
   slug: "dsgvo-konforme-ki-tools",
   author: "Max Hänsel",
   date: "2026-04-24",
-  image: "/images/compliance-signs.jpg",
+  image: "/blog/dsgvo-konforme-ki-tools/hero.png",
   tags: ["ki", "datenschutz", "dsgvo", "automatisierung"] as BlogTagId[],
   publish: true,
 };
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/compliance-signs.jpg",
+        url: "/blog/dsgvo-konforme-ki-tools/hero.png",
         width: 1200,
         height: 630,
         alt: "DSGVO-konforme KI-Tools: Compliance und Datenschutz",
@@ -63,7 +63,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/compliance-signs.jpg"
+          src="/blog/dsgvo-konforme-ki-tools/hero.png"
           alt="DSGVO-konforme KI-Tools: Compliance und Datenschutz"
         />
       </BlogHero>
@@ -149,6 +149,13 @@ export default function Page() {
               mindestens die Eingaben und Ausgaben löschbar machen und darf
               keine personenbezogenen Daten dauerhaft im Modell ablegen.
             </Typo.Paragraph>
+
+            <BlogImage
+              src="/blog/dsgvo-konforme-ki-tools/konformitaets-kriterien.png"
+              alt="Fünf Kriterien für DSGVO-konforme KI-Tools: Datenstandort, AV-Vertrag, Datenminimierung, Transparenz, Dokumentation"
+              width={1200}
+              height={675}
+            />
           </div>
 
           <Separator />
@@ -259,6 +266,14 @@ export default function Page() {
             <Typo.H2 id="self-hosting-als-loesung">
               Self-Hosting als DSGVO-Lösung: Der Weg mit eigenem LLM
             </Typo.H2>
+
+            <BlogImage
+              src="/blog/dsgvo-konforme-ki-tools/self-hosting-architektur.png"
+              alt="Architektur-Vergleich: Cloud-LLM mit Datenexport in die USA versus Self-Hosted LLM in der eigenen Infrastruktur"
+              width={1200}
+              height={675}
+            />
+
             <Typo.Paragraph>
               Wenn die Daten das Unternehmen nicht verlassen, entfallen die
               meisten DSGVO-Probleme. Genau das macht Self-Hosting aktuell so
@@ -308,6 +323,13 @@ export default function Page() {
               KI-Einsatz führt über fünf Stationen. Die Reihenfolge spart
               nachträgliche Korrekturen.
             </Typo.Paragraph>
+
+            <BlogImage
+              src="/blog/dsgvo-konforme-ki-tools/5-schritte-roadmap.png"
+              alt="Roadmap zur DSGVO-konformen KI-Nutzung in fünf Schritten: Bestandsaufnahme, Use Cases priorisieren, Tool-Entscheidung, Governance, Technische Integration"
+              width={1200}
+              height={675}
+            />
 
             <Typo.H3>Schritt 1: Bestandsaufnahme</Typo.H3>
             <Typo.Paragraph>

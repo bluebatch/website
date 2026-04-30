@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "konformitaets-kriterien.png",
+    "score": 89,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "self-hosting-architektur.png",
+    "score": 84,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "5-schritte-roadmap.png",
+    "score": 85,
+    "verdict": "PASS",
+    "attempts": 2
+  }
+]
