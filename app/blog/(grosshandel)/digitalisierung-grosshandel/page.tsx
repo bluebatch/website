@@ -233,7 +233,15 @@ export default async function Page({
               E-Commerce-Umsatzes bei Herstellern. EDI wird nicht verschwinden,
               aber EDI allein reicht für KI-Workflows nicht aus.
               EDIFACT-Nachrichten sind statisch, batchbasiert und ohne
-              Echtzeit-Fähigkeit.
+              Echtzeit-Fähigkeit. Wer den{" "}
+              <Link
+                href="/blog/b2b-grosshandel-digitalisierung"
+                className="text-primary-600 hover:underline"
+              >
+                B2B-Großhandel als Ganzes digitalisieren will
+              </Link>
+              , muss EDI, Shop-Systeme und API-Integrationen parallel denken,
+              nicht hintereinander.
             </Typo.Paragraph>
 
             <Typo.H3>Datenqualität: Das unsichtbare Fundament fehlt</Typo.H3>

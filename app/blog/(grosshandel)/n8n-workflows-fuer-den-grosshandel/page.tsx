@@ -410,6 +410,15 @@ export default function Page() {
                 Möglichkeiten von KI und Automatisierung im Großhandel
               </Link>{" "}
               erfahren will, findet auf unserer Übersichtsseite alle Use Cases.
+              Workflows sind dabei nur ein Baustein, die strategische
+              Einbettung in eine{" "}
+              <Link
+                href="/blog/b2b-grosshandel-digitalisierung"
+                className="text-primary-600 hover:underline"
+              >
+                Digitalisierungs-Roadmap für den B2B-Großhandel
+              </Link>{" "}
+              klärt das Wo und Wann.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Ihr wollt wissen, welcher Workflow bei euch den größten Hebel
