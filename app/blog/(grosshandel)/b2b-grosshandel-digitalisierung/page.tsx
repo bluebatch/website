@@ -10,7 +10,7 @@ export const metaCustom: BlogMeta = {
   slug: "b2b-grosshandel-digitalisierung",
   author: "Max Hänsel",
   date: "2026-04-30",
-  image: "/images/digital-marketplace.jpg",
+  image: "/blog/b2b-grosshandel-digitalisierung/hero.png",
   tags: ["grosshandel", "digitalisierung", "automatisierung"] as BlogTagId[],
   publish: true,
 };
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/digital-marketplace.jpg",
+        url: "/blog/b2b-grosshandel-digitalisierung/hero.png",
         width: 1200,
         height: 630,
         alt: "B2B-Großhandel Digitalisierung",
@@ -63,7 +63,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/digital-marketplace.jpg"
+          src="/blog/b2b-grosshandel-digitalisierung/hero.png"
           alt="B2B-Großhandel Digitalisierung"
         />
       </BlogHero>
@@ -116,7 +116,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/wholesale-planning.jpg"
+              src="/blog/b2b-grosshandel-digitalisierung/vier-saeulen.png"
               alt="Die vier Säulen der B2B-Großhandel-Digitalisierung"
               width={1200}
               height={675}
@@ -265,7 +265,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/process-automation.jpg"
+              src="/blog/b2b-grosshandel-digitalisierung/praxisbausteine.png"
               alt="Praxisbausteine der B2B-Digitalisierung im Großhandel"
               width={1200}
               height={675}
@@ -394,7 +394,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/business-roadmap.jpg"
+              src="/blog/b2b-grosshandel-digitalisierung/roadmap-6-monate.png"
               alt="Roadmap für den Einstieg in die Digitalisierung im B2B-Großhandel"
               width={1200}
               height={675}
