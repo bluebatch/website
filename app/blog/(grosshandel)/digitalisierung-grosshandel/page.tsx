@@ -103,7 +103,7 @@ export default async function Page({
             </Typo.Paragraph>
             <Typo.Paragraph>
               Im Großhandel werden drei von vier{" "}
-              <Link href="/bestellerfassung-automatisieren" className="text-primary-600 hover:underline">Bestellungen noch manuell erfasst</Link>,
+              <Link href="/blog/bestellungen-erfassen-automatisieren" className="text-primary-600 hover:underline">Bestellungen noch manuell erfasst</Link>,
               per E-Mail, PDF, Fax oder Telefon. Pro Auftrag vergehen
               11 Minuten, die Fehlerquote liegt bei 4-7 %, und jede Korrektur
               kostet Zeit, Geld und Kundenvertrauen. Gleichzeitig fehlen die
@@ -400,7 +400,7 @@ export default async function Page({
                 PDFs, Faxe) interpretieren und in strukturierte Formate
                 überführen, genau dort, wo die größten Effizienzgewinne liegen,
                 etwa bei der{" "}
-                <Link href="/ki-angebote" className="text-primary-600 hover:underline">automatischen Angebotserstellung</Link>.
+                <Link href="/blog/automatische-angebotserstellung-grosshandel" className="text-primary-600 hover:underline">automatischen Angebotserstellung</Link>.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Der ROI ist messbar.</strong>{" "}
