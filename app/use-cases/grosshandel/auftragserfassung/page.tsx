@@ -334,7 +334,7 @@ export default async function Page({
                   Der häufigste Kanal: Kunden senden Bestellungen als PDF-Anhang
                   oder im E-Mail-Text. KI-gestützte Extraktion erkennt alle
                   relevanten Daten. Mehr dazu im Blogartikel{" "}
-                  <Link href="/blog/bestellungen-erfassen-automatisieren" className="text-primary-600 hover:underline">Bestellerfassung automatisieren</Link>.
+                  <Link href="/bestellerfassung-automatisieren" className="text-primary-600 hover:underline">Bestellerfassung automatisieren</Link>.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>
@@ -391,7 +391,7 @@ export default async function Page({
                 <Typo.Paragraph>
                   Bestellungen aus Ihrem Kundenportal oder B2B-Shop werden per
                   Webhook direkt in den Workflow übernommen. Auch die{" "}
-                  <Link href="/blog/automatische-angebotserstellung-grosshandel" className="text-primary-600 hover:underline">automatische Angebotserstellung</Link>{" "}
+                  <Link href="/ki-angebote" className="text-primary-600 hover:underline">automatische Angebotserstellung</Link>{" "}
                   lässt sich so nahtlos integrieren.
                 </Typo.Paragraph>
                 <Typo.List>

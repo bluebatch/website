@@ -290,7 +290,7 @@ export default function Page() {
               spart pro Angebot 10 bis 20 Minuten. Wie das konkret
               funktioniert, haben wir in einem{" "}
               <Link
-                href="/blog/automatische-angebotserstellung-grosshandel"
+                href="/ki-angebote"
                 className="text-primary-600 hover:underline"
               >
                 Praxisbeitrag zur automatischen Angebotserstellung

@@ -613,7 +613,7 @@ export default async function Page({
               Großhändler und Hersteller bewerten KI bereits als hoch relevant.
               Bis 2030 sollen es 85 Prozent sein. Die Frage ist nicht mehr ob,
               sondern wann. Neben der Bestellerfassung profitiert auch die{" "}
-              <Link href="/blog/automatische-angebotserstellung-grosshandel" className="text-primary-600 hover:underline">automatische Angebotserstellung</Link>{" "}
+              <Link href="/ki-angebote" className="text-primary-600 hover:underline">automatische Angebotserstellung</Link>{" "}
               von diesen Fortschritten.
             </Typo.Paragraph>
           </div>

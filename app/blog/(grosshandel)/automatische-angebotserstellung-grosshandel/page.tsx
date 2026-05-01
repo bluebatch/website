@@ -331,9 +331,9 @@ export default async function Page({
               E-Mail-Postfach, ERP, Preislisten, Kundendaten. Die Systeme
               bleiben, nur der manuelle Prozess dazwischen fällt weg. Das
               gleiche Prinzip funktioniert auch für die{" "}
-              <Link href="/blog/bestellungen-erfassen-automatisieren" className="text-primary-600 hover:underline">automatische Bestellerfassung</Link>{" "}
+              <Link href="/bestellerfassung-automatisieren" className="text-primary-600 hover:underline">automatische Bestellerfassung</Link>{" "}
               und die{" "}
-              <Link href="/blog/digitalisierung-grosshandel" className="text-primary-600 hover:underline">Digitalisierung im Großhandel</Link>{" "}
+              <Link href="/digitalisierung-grosshandel" className="text-primary-600 hover:underline">Digitalisierung im Großhandel</Link>{" "}
               insgesamt.
             </Typo.Paragraph>
 

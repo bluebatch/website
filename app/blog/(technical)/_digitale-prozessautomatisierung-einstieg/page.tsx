@@ -91,7 +91,7 @@ export default function Page() {
               auch von Fachabteilungen ohne Entwicklerteam bedienen. Die
               strategische Einordnung, warum das gerade für den Mittelstand
               relevant ist, findet ihr in unserem Beitrag zu{" "}
-              <Link href="/blog/digitalisierung-grosshandel" className="text-primary-600 hover:underline">
+              <Link href="/digitalisierung-grosshandel" className="text-primary-600 hover:underline">
                 Digitalisierung im Großhandel
               </Link>
               .

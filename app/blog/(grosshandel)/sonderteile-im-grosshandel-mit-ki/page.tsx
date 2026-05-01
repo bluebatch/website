@@ -584,14 +584,14 @@ export default async function Page({
             <Typo.Paragraph>
               Verwandte Themen:{" "}
               <Link
-                href="/blog/automatische-angebotserstellung-grosshandel"
+                href="/ki-angebote"
                 className="text-primary-600 hover:underline"
               >
                 Automatische Angebotserstellung im Großhandel
               </Link>
               ,{" "}
               <Link
-                href="/blog/bestellungen-erfassen-automatisieren"
+                href="/bestellerfassung-automatisieren"
                 className="text-primary-600 hover:underline"
               >
                 Bestellungen erfassen und automatisieren

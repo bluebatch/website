@@ -311,7 +311,7 @@ export default function Page() {
               ein Dienstleister, der den Server betreibt, Backups einspielt
               und Updates fährt. Die Sicherheits-Aspekte beim Self-Hosting
               vertiefen wir in unserem Beitrag zur{" "}
-              <Link href="/blog/n8n-sicherheit-self-hosting" className="text-primary-600 hover:underline">
+              <Link href="/n8n-sicherheit" className="text-primary-600 hover:underline">
                 n8n-Sicherheit beim Self-Hosting
               </Link>
               .
