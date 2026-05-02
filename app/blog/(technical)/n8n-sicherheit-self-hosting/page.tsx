@@ -150,7 +150,9 @@ export default async function Page({
               Hier wird es richtig unangenehm. n8n ist keine isolierte App. Es
               ist eine Integrationsplattform, die oft im{" "}
               <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">Self-Hosting</Link>{" "}
-              betrieben wird. Das heißt, in einer typischen
+              betrieben wird (siehe unsere{" "}
+              <Link href="/blog/n8n-selbst-hosten-anleitung" className="text-primary-600 hover:underline">Self-Hosting-Anleitung</Link>
+              ). Das heißt, in einer typischen
               Installation findet ein Angreifer:
             </Typo.Paragraph>
             <Typo.Paragraph>

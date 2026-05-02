@@ -1308,9 +1308,13 @@ export default function Page() {  return (
               <Link href="/ki-implementierung" className="text-primary-500 hover:underline">
                 unsere n8n-Implementierungsservices
               </Link>
-              , oder erfahren Sie mehr über{" "}
+              , erfahren Sie mehr über{" "}
               <Link href="/n8n-hosting-deutschland" className="text-primary-500 hover:underline">
                 n8n Hosting in Deutschland
+              </Link>{" "}
+              oder lesen Sie unsere{" "}
+              <Link href="/blog/n8n-selbst-hosten-anleitung" className="text-primary-500 hover:underline">
+                Anleitung zum Selbst-Hosten von n8n
               </Link>
               .
             </Typo.Paragraph>

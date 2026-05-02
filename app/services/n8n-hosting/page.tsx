@@ -192,7 +192,10 @@ export default async function Page({
             die vollständige Kontrolle über Ihre Daten - ein entscheidender
             Vorteil für DSGVO B2B Anforderungen. Mehr zum Thema Datenschutz
             und Absicherung finden Sie unter{" "}
-            <Link href="/n8n-sicherheit" className="text-primary-600 hover:underline">n8n Sicherheit &amp; Self-Hosting</Link>.
+            <Link href="/n8n-sicherheit" className="text-primary-600 hover:underline">n8n Sicherheit &amp; Self-Hosting</Link>;
+            eine konkrete Schritt-für-Schritt-Anleitung mit Docker Compose,
+            Postgres und Reverse Proxy gibt es im Beitrag{" "}
+            <Link href="/blog/n8n-selbst-hosten-anleitung" className="text-primary-600 hover:underline">n8n selbst hosten</Link>.
           </IntroBox.Paragraph>
         </IntroBox>
 
