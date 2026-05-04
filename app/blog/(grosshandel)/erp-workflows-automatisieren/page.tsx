@@ -301,7 +301,15 @@ export default function Page() {
               Benachrichtigung per E-Mail, Teams oder Slack. Optional
               wird direkt eine Purchase Order im ERP angelegt. Wer den
               Workflow mit KI kombiniert, kann Bedarfsprognosen
-              einbauen, die über einfache Meldebestände hinausgehen.
+              einbauen, die über einfache Meldebestände hinausgehen.{" "}
+              Wie ein solcher Agent in n8n konkret gebaut wird (mit
+              Tools, Memory und Guardrails), zeigt die Anleitung{" "}
+              <Link
+                href="/blog/n8n-ki-agenten-erstellen"
+                className="text-primary-600 hover:underline"
+              >
+                n8n KI-Agenten erstellen
+              </Link>.
             </Typo.Paragraph>
           </div>
 

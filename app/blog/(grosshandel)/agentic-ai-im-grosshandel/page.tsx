@@ -349,6 +349,17 @@ export default function Page() {
               </Typo.ListItem>
             </Typo.List>
             <Typo.Paragraph>
+              Wer den ersten eigenen Agenten konkret bauen will, findet in der
+              Schritt-für-Schritt-Anleitung{" "}
+              <Link
+                href="/blog/n8n-ki-agenten-erstellen"
+                className="text-primary-600 hover:underline"
+              >
+                n8n KI-Agenten erstellen
+              </Link>{" "}
+              ein Praxis-Setup mit Tools, Memory und Guardrails.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
               Ein entscheidender Vorteil von n8n: Alles läuft auf eurer eigenen
               Infrastruktur. Keine Kundendaten verlassen euer Unternehmen.
               Gerade für Großhändler, die mit sensiblen Preis- und Kundendaten
