@@ -215,24 +215,159 @@ export default function Page() {
               <Typo.ListItem>
                 <code>N8N_HOST</code> und <code>WEBHOOK_URL</code> auf die
                 öffentliche Domain setzen. Ohne korrekten WEBHOOK_URL laufen
-                externe Webhooks ins Leere.
+                externe Webhooks ins Leere, weil n8n in den per Mail
+                verschickten Webhook-URLs den Hostnamen aus dieser Variable
+                einsetzt.
               </Typo.ListItem>
               <Typo.ListItem>
-                <code>N8N_ENCRYPTION_KEY</code> als 32-stelligen Zufallswert
-                generieren und sichern. Ohne diesen Key lassen sich
-                Credentials nach einem Restore nicht entschlüsseln.
+                <code>N8N_ENCRYPTION_KEY</code>: der mit Abstand wichtigste
+                Wert. n8n verschlüsselt damit alle in der Datenbank
+                gespeicherten Credentials (API-Keys, OAuth-Tokens,
+                Datenbank-Passwörter, SMTP-Logins). Generiert wird er einmal
+                mit <code>openssl rand -hex 32</code>, dann fix in die{" "}
+                <code>.env</code> und in den Passwort-Manager (separat von der
+                Datenbank). Der Key darf sich <strong>nie</strong> ändern,
+                solange die Datenbank lebt.
               </Typo.ListItem>
               <Typo.ListItem>
-                <code>DB_TYPE=postgresdb</code> sowie die Postgres-Zugangsdaten.
-                SQLite ist für die ersten Tests okay, aber nicht für
-                Produktivlasten.
+                <code>DB_TYPE=postgresdb</code> sowie die Postgres-Zugangsdaten
+                (<code>DB_POSTGRESDB_HOST</code>,{" "}
+                <code>DB_POSTGRESDB_DATABASE</code>,{" "}
+                <code>DB_POSTGRESDB_USER</code>,{" "}
+                <code>DB_POSTGRESDB_PASSWORD</code>). SQLite ist für die
+                ersten Tests okay, aber nicht für Produktivlasten.
               </Typo.ListItem>
               <Typo.ListItem>
                 <code>N8N_BASIC_AUTH_ACTIVE=false</code> nur setzen, wenn
                 stattdessen der integrierte User-Management-Flow mit Owner-Konto
                 genutzt wird. Sonst steht die Instanz offen.
               </Typo.ListItem>
+              <Typo.ListItem>
+                <code>EXECUTIONS_DATA_PRUNE=true</code> und{" "}
+                <code>EXECUTIONS_DATA_MAX_AGE=336</code> (Stunden, also 14
+                Tage) verhindern, dass die Datenbank durch Execution-Logs
+                ungebremst wächst.
+              </Typo.ListItem>
+              <Typo.ListItem>
+                <code>GENERIC_TIMEZONE=Europe/Berlin</code> und{" "}
+                <code>TZ=Europe/Berlin</code> sorgen dafür, dass Cron- und
+                Schedule-Trigger der lokalen Zeit folgen.
+              </Typo.ListItem>
             </Typo.List>
+
+            <div className="my-6 rounded-lg border-l-4 border-red-500 bg-red-50 p-4">
+              <p className="font-semibold text-red-900">
+                ⚠️ Was passiert, wenn der N8N_ENCRYPTION_KEY verloren geht
+              </p>
+              <p className="mt-2 text-sm text-red-900">
+                Wer den Key verliert (zerstörter Server ohne Backup, fauler
+                Server-Reset, neu generierter Key beim Wiederaufsetzen), kann{" "}
+                <strong>keine einzige Credential mehr entschlüsseln</strong>.
+                Workflows laufen, aber jeder Schritt, der mit einem
+                API-Login, OAuth-Token oder Datenbank-Passwort arbeitet, scheitert
+                mit „failed to decrypt&ldquo;. Es gibt keinen Recovery-Pfad,
+                kein Re-Key-Tool, kein Master-Override. Die einzige Lösung:
+                <strong>jede Credential einzeln neu anlegen</strong>, also bei
+                jeder API neu authentifizieren, jedes OAuth neu durchklicken,
+                jedes Passwort neu eintippen. Bei einer ausgewachsenen
+                n8n-Instanz mit 30 bis 50 Credentials sind das schnell zwei
+                Tage Arbeit. Deshalb: Key getrennt vom Server-Backup im
+                Passwort-Manager, idealerweise auch ausgedruckt im Tresor.
+              </p>
+            </div>
+
+            <Typo.H3>Beispiel: docker-compose.yml</Typo.H3>
+            <Typo.Paragraph>
+              Drei Services: Caddy als Reverse Proxy mit automatischem
+              Let&apos;s Encrypt, n8n selbst, Postgres 16 als Datenbank. Alle
+              Secrets kommen aus der <code>.env</code>-Datei daneben.
+            </Typo.Paragraph>
+
+            <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 my-4 overflow-x-auto text-sm">
+              <code>
+{`# docker-compose.yml
+services:
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - n8n
+
+  n8n:
+    image: n8nio/n8n:latest
+    restart: unless-stopped
+    environment:
+      - N8N_HOST=\${N8N_HOST}
+      - N8N_PROTOCOL=https
+      - N8N_PORT=5678
+      - WEBHOOK_URL=https://\${N8N_HOST}/
+      - N8N_ENCRYPTION_KEY=\${N8N_ENCRYPTION_KEY}
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=\${POSTGRES_DB}
+      - DB_POSTGRESDB_USER=\${POSTGRES_USER}
+      - DB_POSTGRESDB_PASSWORD=\${POSTGRES_PASSWORD}
+      - GENERIC_TIMEZONE=Europe/Berlin
+      - TZ=Europe/Berlin
+      - EXECUTIONS_DATA_PRUNE=true
+      - EXECUTIONS_DATA_MAX_AGE=336
+      - N8N_LOG_LEVEL=info
+    volumes:
+      - n8n_data:/home/node/.n8n
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=\${POSTGRES_DB}
+      - POSTGRES_USER=\${POSTGRES_USER}
+      - POSTGRES_PASSWORD=\${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \${POSTGRES_USER} -d \${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  caddy_data:
+  caddy_config:
+  n8n_data:
+  postgres_data:`}
+              </code>
+            </pre>
+
+            <Typo.H3>Beispiel: .env</Typo.H3>
+            <Typo.Paragraph>
+              Diese Datei landet <strong>nie</strong> im Git-Repo. Berechtigung
+              auf <code>chmod 600</code>, Eigentümer Root.
+            </Typo.Paragraph>
+
+            <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 my-4 overflow-x-auto text-sm">
+              <code>
+{`# .env
+N8N_HOST=n8n.example.com
+
+# Mit \`openssl rand -hex 32\` einmalig generiert, NIE ändern:
+N8N_ENCRYPTION_KEY=ersetze-mich-durch-32-byte-hex
+
+POSTGRES_DB=n8n
+POSTGRES_USER=n8n
+POSTGRES_PASSWORD=ersetze-mich-durch-starkes-passwort`}
+              </code>
+            </pre>
 
             <Typo.H3>Volumes, die gesichert werden müssen</Typo.H3>
             <Typo.Paragraph>
@@ -318,6 +453,50 @@ export default function Page() {
               </Link>{" "}
               im Detail behandelt.
             </Typo.Paragraph>
+
+            <Typo.H3>Beispiel: Caddyfile mit TLS und Security-Headern</Typo.H3>
+            <Typo.Paragraph>
+              Caddy holt sich Let&apos;s-Encrypt-Zertifikate vollautomatisch,
+              erneuert sie selbst und leitet HTTP auf HTTPS um. Diese
+              Konfiguration packt zusätzlich die wichtigsten Security-Header
+              dazu.
+            </Typo.Paragraph>
+
+            <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 my-4 overflow-x-auto text-sm">
+              <code>
+{`# Caddyfile
+{
+  email admin@example.com
+}
+
+n8n.example.com {
+  reverse_proxy n8n:5678 {
+    # WebSocket-Support für n8n-Editor und Live-Logs
+    flush_interval -1
+  }
+
+  header {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options    "nosniff"
+    X-Frame-Options           "SAMEORIGIN"
+    Referrer-Policy           "strict-origin-when-cross-origin"
+    Permissions-Policy        "camera=(), microphone=(), geolocation=()"
+    -Server
+  }
+
+  # Optional: Bots, die nichts auf der Instanz zu suchen haben, früh abweisen
+  @bots header_regexp User-Agent "(?i)(crawler|spider|bot)"
+  respond @bots 403
+
+  encode zstd gzip
+}`}
+              </code>
+            </pre>
+            <Typo.Paragraph>
+              Wichtig: Die <code>WEBHOOK_URL</code> in der n8n-Compose muss
+              exakt mit dem Caddy-Hostnamen übereinstimmen, sonst weichen die
+              Webhook-URLs in Test- und Live-Modus voneinander ab.
+            </Typo.Paragraph>
           </div>
 
           <Separator />
@@ -343,6 +522,122 @@ export default function Page() {
               width={1200}
               height={675}
             />
+
+            <Typo.H3>Backup-Skript: täglich per Cron</Typo.H3>
+            <Typo.Paragraph>
+              Das folgende Skript läuft auf dem Docker-Host (nicht im
+              n8n-Container), zieht einen sauberen <code>pg_dump</code>{" "}
+              direkt aus dem Postgres-Container, sichert das n8n-Volume mit
+              allen Workflow-Definitionen und tagged das Ganze mit Zeitstempel.
+            </Typo.Paragraph>
+
+            <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 my-4 overflow-x-auto text-sm">
+              <code>
+{`#!/usr/bin/env bash
+# /opt/n8n/backup.sh — täglich per Cron, z.B. 0 2 * * *
+set -euo pipefail
+
+STACK_DIR="/opt/n8n"
+BACKUP_DIR="/var/backups/n8n"
+TS="$(date +%F_%H-%M)"
+KEEP_DAYS=14
+
+cd "$STACK_DIR"
+mkdir -p "$BACKUP_DIR"
+
+# 1) Postgres-Dump aus dem laufenden Container (konsistent, keine Downtime)
+docker compose exec -T postgres \\
+  pg_dump -U "$POSTGRES_USER" -d "$POSTGRES_DB" \\
+    --no-owner --clean --if-exists \\
+  | gzip -9 > "$BACKUP_DIR/n8n-db-$TS.sql.gz"
+
+# 2) n8n-Volume (Workflows, Custom Nodes, Logs)
+docker run --rm \\
+  -v n8n_data:/source:ro \\
+  -v "$BACKUP_DIR":/target \\
+  alpine \\
+  tar czf "/target/n8n-volume-$TS.tar.gz" -C /source .
+
+# 3) Old backups aufräumen
+find "$BACKUP_DIR" -name "n8n-*" -mtime +$KEEP_DAYS -delete
+
+# 4) Optional: verschlüsselt nach S3-kompatiblem Storage hochladen
+# rclone copy "$BACKUP_DIR" remote-s3:n8n-backups/$(hostname) \\
+#   --include "n8n-*-$TS.*"
+
+echo "Backup OK: $TS"`}
+              </code>
+            </pre>
+            <Typo.Paragraph>
+              Wichtig: Die <code>POSTGRES_USER</code>- und{" "}
+              <code>POSTGRES_DB</code>-Variablen werden über die Cron-Umgebung
+              oder einen <code>source /opt/n8n/.env</code> am Skript-Anfang
+              eingelesen. Eintragen in die Crontab am einfachsten über{" "}
+              <code>crontab -e</code> als Root.
+            </Typo.Paragraph>
+
+            <Typo.H3>Restore-Skript: vom Tar+SQL zurück in den Stack</Typo.H3>
+            <Typo.Paragraph>
+              Restore ist der Punkt, an dem Backups beweisen müssen, dass sie
+              echt sind. Routine: einmal pro Quartal in einer{" "}
+              <strong>frischen VM</strong> komplett durchspielen, vom leeren
+              Docker bis zum laufenden n8n. Das deckt fehlende Files, falsche
+              Postgres-Versionen und vor allem den Encryption-Key-Loss vor dem
+              Ernstfall auf.
+            </Typo.Paragraph>
+
+            <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 my-4 overflow-x-auto text-sm">
+              <code>
+{`#!/usr/bin/env bash
+# /opt/n8n/restore.sh — Restore von Datum: ./restore.sh 2026-04-30_02-00
+set -euo pipefail
+
+if [ -z "\${1:-}" ]; then
+  echo "Usage: $0 <YYYY-MM-DD_HH-MM>"
+  exit 1
+fi
+
+TS="$1"
+STACK_DIR="/opt/n8n"
+BACKUP_DIR="/var/backups/n8n"
+DB_FILE="$BACKUP_DIR/n8n-db-$TS.sql.gz"
+VOL_FILE="$BACKUP_DIR/n8n-volume-$TS.tar.gz"
+
+[ -f "$DB_FILE" ]  || { echo "Missing: $DB_FILE";  exit 1; }
+[ -f "$VOL_FILE" ] || { echo "Missing: $VOL_FILE"; exit 1; }
+
+cd "$STACK_DIR"
+
+# 1) Stack stoppen, damit nichts in die DB schreibt
+docker compose stop n8n
+
+# 2) DB wiederherstellen (Postgres bleibt up, n8n ist gestoppt)
+gunzip -c "$DB_FILE" \\
+  | docker compose exec -T postgres \\
+      psql -U "$POSTGRES_USER" -d "$POSTGRES_DB"
+
+# 3) n8n-Volume austauschen (Inhalt löschen, neu entpacken)
+docker run --rm \\
+  -v n8n_data:/target \\
+  -v "$BACKUP_DIR":/source:ro \\
+  alpine \\
+  sh -c "rm -rf /target/* /target/.[!.]* && tar xzf /source/n8n-volume-$TS.tar.gz -C /target"
+
+# 4) Stack wieder starten
+docker compose up -d n8n
+
+echo "Restore OK: $TS"
+echo "Prüfen: Login, Credentials, ein Workflow manuell ausführen."`}
+              </code>
+            </pre>
+            <Typo.Paragraph>
+              Nach jedem Restore sollte man unbedingt einen Workflow mit
+              externer Credential manuell ausführen, um zu verifizieren, dass
+              der Encryption-Key noch passt. Wenn dort „failed to decrypt&ldquo;
+              auftaucht, hat der wiederhergestellte Stack einen anderen
+              Encryption-Key als die Datenbank, und die Credentials sind
+              effektiv unbrauchbar.
+            </Typo.Paragraph>
 
             <Typo.H3>Update-Strategie</Typo.H3>
             <Typo.Paragraph>
