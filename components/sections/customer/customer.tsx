@@ -30,17 +30,13 @@ const allLogos = [
     scale: "xs" as const,
   },
   {
-    src: "/customer/Lufthansa-Logo.wine.png",
-    alt: "Lufthansa",
-    scale: "xs" as const,
-  },
-  {
     src: "/customer/Schwarz-Gruppe_Lidl_Kaufland_Logo_9.2019.svg.png",
     alt: "Schwarz Gruppe",
     scale: "lg" as const,
   },
   { src: "/customer/edeka.png", alt: "Edeka", scale: "md" as const },
   { src: "/customer/images.png", alt: "Partner", scale: "lg" as const },
+  { src: "/customer/steinbach.webp", alt: "Steinbach", scale: "lg" as const },
 ];
 
 interface CustomerProps {

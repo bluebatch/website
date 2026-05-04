@@ -18,7 +18,6 @@ import {
   GlassCardDescription,
   GlassCardArrow,
 } from "@/components/cards/glass-card";
-import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import LatestBlogPosts from "@/components/sections/latest-blog-posts";
 import CardShowcase from "@/components/cards/card-showcase";
 import Customer from "@/components/sections/customer/customer";
