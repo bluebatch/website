@@ -9,7 +9,7 @@ export const metaCustom: BlogMeta = {
   slug: "n8n-selbst-hosten-anleitung",
   author: "Max Hänsel",
   date: "2026-05-02",
-  image: "/images/technology-integration.jpg",
+  image: "/blog/n8n-selbst-hosten-anleitung/hero.png",
   tags: ["n8n", "security", "development"] as BlogTagId[],
   publish: true,
 };
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/technology-integration.jpg",
+        url: "/blog/n8n-selbst-hosten-anleitung/hero.png",
         width: 1200,
         height: 630,
         alt: "n8n selbst hosten: Architektur und Setup",
@@ -62,7 +62,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/technology-integration.jpg"
+          src="/blog/n8n-selbst-hosten-anleitung/hero.png"
           alt="n8n selbst hosten: Architektur und Setup"
         />
       </BlogHero>
@@ -110,7 +110,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/workflow-planning.jpg"
+              src="/blog/n8n-selbst-hosten-anleitung/cloud-vs-self-hosting.png"
               alt="Entscheidungsmatrix Cloud vs. Self-Hosting für n8n"
               width={1200}
               height={675}
@@ -204,7 +204,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/process-mapping.jpg"
+              src="/blog/n8n-selbst-hosten-anleitung/docker-compose-architektur.png"
               alt="Docker Compose Architektur für n8n Self-Hosting"
               width={1200}
               height={675}
@@ -338,7 +338,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/data-flow.jpg"
+              src="/blog/n8n-selbst-hosten-anleitung/backup-strategie.png"
               alt="Backup- und Restore-Strategie für n8n"
               width={1200}
               height={675}

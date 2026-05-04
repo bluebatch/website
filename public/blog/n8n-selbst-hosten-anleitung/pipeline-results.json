@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "cloud-vs-self-hosting.png",
+    "score": 87,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "docker-compose-architektur.png",
+    "score": 81,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "backup-strategie.png",
+    "score": 82,
+    "verdict": "PASS",
+    "attempts": 1
+  }
+]
