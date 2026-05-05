@@ -1316,6 +1316,11 @@ export default function Page() {  return (
               <Link href="/blog/n8n-selbst-hosten-anleitung" className="text-primary-500 hover:underline">
                 Anleitung zum Selbst-Hosten von n8n
               </Link>
+              . Wer noch grundsätzlich überlegt, in welchem Tool-Segment ein
+              iPaaS wie n8n eigentlich sitzt, findet die Einordnung in unserem{" "}
+              <Link href="/blog/digitale-prozessautomatisierung-einstieg" className="text-primary-500 hover:underline">
+                Einstiegsguide zur digitalen Prozessautomatisierung
+              </Link>
               .
             </Typo.Paragraph>
           </div>

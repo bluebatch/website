@@ -392,7 +392,10 @@ export default async function Page({
                 KI-Workflow-Automatisierung ohne tiefes Programmierwissen und
                 können Legacy-Systeme über Middleware anbinden. Welches Tool zu
                 welchem Anwendungsfall passt, zeigt unser{" "}
-                <Link href="/blog/make-vs-n8n-vergleich" className="text-primary-600 hover:underline">direkter Vergleich n8n vs. Make</Link>.
+                <Link href="/blog/make-vs-n8n-vergleich" className="text-primary-600 hover:underline">direkter Vergleich n8n vs. Make</Link>. Eine
+                grundsätzliche Einordnung dieser Werkzeuggattung gegenüber
+                klassischen BPM-Suiten und RPA findet ihr im{" "}
+                <Link href="/blog/digitale-prozessautomatisierung-einstieg" className="text-primary-600 hover:underline">Einstiegsguide zur digitalen Prozessautomatisierung</Link>.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>KI kann Datenprobleme selbst lösen.</strong>{" "}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
+import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 import ToolLink from "@/components/ui/tool-link";
@@ -730,7 +731,13 @@ export default function Page() {
               mehr wert als ein Digitalisierungsprojekt, das seit zwei Jahren in
               der Schublade liegt. Und die Einstiegshürde ist realistisch: KMU
               berichten von ROI-Zeiten zwischen drei und zwölf Monaten bei
-              Prozessen mit hoher Wiederholrate.
+              Prozessen mit hoher Wiederholrate. Wie ein erster Pilotprozess in
+              vier Wochen aussieht, vom Scoping bis zum Produktivbetrieb,
+              skizziert unser{" "}
+              <Link href="/blog/digitale-prozessautomatisierung-einstieg" className="text-primary-600 hover:underline">
+                Einstiegsguide zur digitalen Prozessautomatisierung
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Was kommt als nächstes? Die Entwicklung geht schneller als
