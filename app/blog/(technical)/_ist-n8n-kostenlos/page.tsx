@@ -9,7 +9,7 @@ export const metaCustom: BlogMeta = {
   slug: "ist-n8n-kostenlos",
   author: "Max Hänsel",
   date: "2026-05-07",
-  image: "/images/pricing-calculator.jpg",
+  image: "/blog/ist-n8n-kostenlos/hero.png",
   tags: ["n8n", "automatisierung"] as BlogTagId[],
   publish: true,
 };
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/pricing-calculator.jpg",
+        url: "/blog/ist-n8n-kostenlos/hero.png",
         width: 1200,
         height: 630,
         alt: "Ist n8n kostenlos Pricing Übersicht",
@@ -61,7 +61,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/pricing-calculator.jpg"
+          src="/blog/ist-n8n-kostenlos/hero.png"
           alt="Ist n8n kostenlos Pricing Übersicht"
         />
       </BlogHero>
@@ -102,7 +102,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/cost-savings.jpg"
+              src="/blog/ist-n8n-kostenlos/self-hosting-costs.png"
               alt="n8n Self-Hosting Community Edition kostenlos"
               width={1200}
               height={675}
@@ -171,7 +171,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/business-roadmap.jpg"
+              src="/blog/ist-n8n-kostenlos/cloud-pricing-tiers.png"
               alt="n8n Cloud Pricing Pläne im Vergleich"
               width={1200}
               height={675}
@@ -281,7 +281,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/strategic-thinking.jpg"
+              src="/blog/ist-n8n-kostenlos/decision-tree.png"
               alt="n8n Variante auswählen Entscheidungsmatrix"
               width={1200}
               height={675}
