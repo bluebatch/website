@@ -9,7 +9,7 @@ export const metaCustom: BlogMeta = {
   slug: "digitale-prozessautomatisierung-einstieg",
   author: "Max Hänsel",
   date: "2026-05-05",
-  image: "/images/process-automation.jpg",
+  image: "/blog/digitale-prozessautomatisierung-einstieg/hero.png",
   tags: ["automatisierung", "n8n", "ki"] as BlogTagId[],
   publish: true,
 };
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/process-automation.jpg",
+        url: "/blog/digitale-prozessautomatisierung-einstieg/hero.png",
         width: 1200,
         height: 630,
         alt: "Digitale Prozessautomatisierung Einstieg",
@@ -62,7 +62,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/process-automation.jpg"
+          src="/blog/digitale-prozessautomatisierung-einstieg/hero.png"
           alt="Digitale Prozessautomatisierung Einstieg"
         />
       </BlogHero>
@@ -154,7 +154,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/digital-workflow.jpg"
+              src="/blog/digitale-prozessautomatisierung-einstieg/warum-jetzt-einsteigen.png"
               alt="Digitale Prozessautomatisierung im Mittelstand"
               width={1200}
               height={675}
@@ -239,7 +239,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/process-mapping.jpg"
+              src="/blog/digitale-prozessautomatisierung-einstieg/tool-auswahl-bpm-vs-ipaas.png"
               alt="Tool-Auswahl für digitale Prozessautomatisierung"
               width={1200}
               height={675}
@@ -345,7 +345,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/business-roadmap.jpg"
+              src="/blog/digitale-prozessautomatisierung-einstieg/stolpersteine-pilot.png"
               alt="Stolpersteine bei digitaler Prozessautomatisierung"
               width={1200}
               height={675}
