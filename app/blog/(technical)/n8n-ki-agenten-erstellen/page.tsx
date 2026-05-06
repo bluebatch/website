@@ -9,7 +9,7 @@ export const metaCustom: BlogMeta = {
   slug: "n8n-ki-agenten-erstellen",
   author: "Max Hänsel",
   date: "2026-05-04",
-  image: "/images/machine-learning.jpg",
+  image: "/blog/n8n-ki-agenten-erstellen/hero.png",
   tags: ["n8n", "ki", "automatisierung", "development"] as BlogTagId[],
   publish: true,
 };
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/machine-learning.jpg",
+        url: "/blog/n8n-ki-agenten-erstellen/hero.png",
         width: 1200,
         height: 630,
         alt: "n8n KI-Agenten erstellen",
@@ -62,7 +62,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/machine-learning.jpg"
+          src="/blog/n8n-ki-agenten-erstellen/hero.png"
           alt="n8n KI-Agenten erstellen"
         />
       </BlogHero>
@@ -169,7 +169,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/digital-workflow.jpg"
+              src="/blog/n8n-ki-agenten-erstellen/agent-architektur.png"
               alt="Architektur eines n8n KI-Agent-Workflows"
               width={1200}
               height={675}
@@ -283,7 +283,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/data-flow.jpg"
+              src="/blog/n8n-ki-agenten-erstellen/daten-triage-vector-memory.png"
               alt="Daten-Triage mit einem KI-Agent in n8n"
               width={1200}
               height={675}
@@ -348,7 +348,7 @@ export default function Page() {
             </Typo.Paragraph>
 
             <BlogImage
-              src="/images/process-mapping.jpg"
+              src="/blog/n8n-ki-agenten-erstellen/chatbot-mit-tool.png"
               alt="Tools, Prompts und Guardrails für n8n KI-Agenten"
               width={1200}
               height={675}
