@@ -1,25 +1,7 @@
 [
   {
-    "filename": "hero.png",
-    "score": 85,
-    "verdict": "PASS",
-    "attempts": 2
-  },
-  {
-    "filename": "warum-jetzt-einsteigen.png",
-    "score": 85,
-    "verdict": "PASS",
-    "attempts": 1
-  },
-  {
     "filename": "tool-auswahl-bpm-vs-ipaas.png",
-    "score": 94,
-    "verdict": "PASS",
-    "attempts": 1
-  },
-  {
-    "filename": "stolpersteine-pilot.png",
-    "score": 93,
+    "score": 84,
     "verdict": "PASS",
     "attempts": 1
   }
