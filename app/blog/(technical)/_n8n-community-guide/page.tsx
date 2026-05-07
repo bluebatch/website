@@ -9,7 +9,7 @@ export const metaCustom: BlogMeta = {
   slug: "n8n-community-guide",
   author: "Max Hänsel",
   date: "2026-05-12",
-  image: "/images/team-collaboration.jpg",
+  image: "/blog/n8n-community-guide/hero.png",
   tags: ["n8n", "automatisierung"] as BlogTagId[],
   publish: true,
 };
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/team-collaboration.jpg",
+        url: "/blog/n8n-community-guide/hero.png",
         width: 1200,
         height: 630,
         alt: "n8n Community Übersicht",
@@ -60,7 +60,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/team-collaboration.jpg"
+          src="/blog/n8n-community-guide/hero.png"
           alt="n8n Community: Forum, GitHub, Templates, Discord"
         />
       </BlogHero>
@@ -101,7 +101,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/communication-tools.jpg"
+              src="/blog/n8n-community-guide/forum-overview.png"
               alt="n8n Community Forum als zentrale Anlaufstelle"
               width={1200}
               height={675}
@@ -189,7 +189,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/digital-workflow.jpg"
+              src="/blog/n8n-community-guide/contribution-funnel.png"
               alt="n8n Workflow-Templates als Lernhilfe"
               width={1200}
               height={675}
@@ -277,7 +277,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/strategic-thinking.jpg"
+              src="/blog/n8n-community-guide/resources-grid.png"
               alt="n8n Community Best Practices für Forum-Anfragen"
               width={1200}
               height={675}
