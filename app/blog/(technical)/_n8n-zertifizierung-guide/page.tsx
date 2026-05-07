@@ -9,7 +9,7 @@ export const metaCustom: BlogMeta = {
   slug: "n8n-zertifizierung-guide",
   author: "Max Hänsel",
   date: "2026-05-10",
-  image: "/images/certificate-check.jpg",
+  image: "/blog/n8n-zertifizierung-guide/hero.png",
   tags: ["n8n", "automatisierung"] as BlogTagId[],
   publish: true,
 };
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/certificate-check.jpg",
+        url: "/blog/n8n-zertifizierung-guide/hero.png",
         width: 1200,
         height: 630,
         alt: "n8n Zertifizierung Übersicht",
@@ -60,7 +60,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/certificate-check.jpg"
+          src="/blog/n8n-zertifizierung-guide/hero.png"
           alt="n8n Zertifizierung Übersicht"
         />
       </BlogHero>
@@ -101,7 +101,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/training-seminar.jpg"
+              src="/blog/n8n-zertifizierung-guide/exam-structure.png"
               alt="n8n Zertifizierungsprogramm Foundations und Builder"
               width={1200}
               height={675}
@@ -192,7 +192,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/machine-learning.jpg"
+              src="/blog/n8n-zertifizierung-guide/learning-path.png"
               alt="n8n Builder Certification Custom Nodes und KI-Agenten"
               width={1200}
               height={675}
@@ -296,7 +296,7 @@ export default function Page() {
             </Typo.H2>
 
             <BlogImage
-              src="/images/business-roadmap.jpg"
+              src="/blog/n8n-zertifizierung-guide/roi-certification.png"
               alt="n8n Zertifizierung Entscheidungshilfe Wann lohnt sie sich"
               width={1200}
               height={675}
