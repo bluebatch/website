@@ -9,7 +9,7 @@ export const metaCustom: BlogMeta = {
   slug: "n8n-vs-zapier-vergleich",
   author: "Max Hänsel",
   date: "2026-05-08",
-  image: "/images/technology-integration.jpg",
+  image: "/blog/n8n-vs-zapier-vergleich/hero.png",
   tags: ["n8n", "automatisierung"] as BlogTagId[],
   publish: true,
 };
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/technology-integration.jpg",
+        url: "/blog/n8n-vs-zapier-vergleich/hero.png",
         width: 1200,
         height: 630,
         alt: "n8n vs Zapier Workflow-Automatisierung im Vergleich",
@@ -59,7 +59,7 @@ export default function Page() {
         </BlogHero.Meta>
 
         <BlogHero.Image
-          src="/images/technology-integration.jpg"
+          src="/blog/n8n-vs-zapier-vergleich/hero.png"
           alt="n8n vs Zapier Workflow-Automatisierung im Vergleich"
         />
       </BlogHero>
@@ -153,7 +153,7 @@ export default function Page() {
               Dimension 1: Preis und Skalierungs-Ökonomie
             </Typo.H2>
             <BlogImage
-              src="/images/cost-savings.jpg"
+              src="/blog/n8n-vs-zapier-vergleich/pricing-comparison.png"
               alt="Preis-Vergleich n8n und Zapier"
             />
             <Typo.Paragraph>
@@ -213,7 +213,7 @@ export default function Page() {
               Dimension 2: Self-Hosting und Datenhoheit
             </Typo.H2>
             <BlogImage
-              src="/images/compliance-signs.jpg"
+              src="/blog/n8n-vs-zapier-vergleich/feature-radar.png"
               alt="Self-Hosting und Datenhoheit bei n8n"
             />
             <Typo.Paragraph>
@@ -378,7 +378,7 @@ export default function Page() {
               Entscheidungsframework: Welches Tool für welches Szenario?
             </Typo.H2>
             <BlogImage
-              src="/images/strategic-thinking.jpg"
+              src="/blog/n8n-vs-zapier-vergleich/decision-framework.png"
               alt="Entscheidungsframework für Workflow-Tools"
             />
             <Typo.Paragraph>
