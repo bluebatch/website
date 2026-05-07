@@ -305,7 +305,10 @@ export default function Page() {  return (
                       Self-Hosting
                     </td>
                     <td className="px-4 py-2 border-b border-gray-100">
-                      Ja, kostenlos
+                      Ja,{" "}
+                      <Link href="/blog/ist-n8n-kostenlos" className="text-primary-500 hover:underline">
+                        kostenlos
+                      </Link>
                     </td>
                     <td className="px-4 py-2 border-b border-gray-100">Nein</td>
                     <td className="px-4 py-2 border-b border-gray-100">Nein</td>

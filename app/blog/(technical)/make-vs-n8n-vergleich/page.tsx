@@ -175,14 +175,14 @@ export default function Page() {
               im Monat, unabhängig von Workflow-Anzahl oder Execution-Volumen.
               Wer 100 Workflows mit Millionen Operationen fährt, zahlt bei
               Make fünfstellig pro Monat, bei n8n Self-Hosted zweistellig.
-              Siehe dazu auch{" "}
+              Alle Kosten und Tarife im Detail stehen in unserem{" "}
               <Link
-                href="/blog/was-ist-n8n"
+                href="/blog/ist-n8n-kostenlos"
                 className="text-primary-500 hover:underline"
               >
-                den Grundlagen-Beitrag zu n8n
-              </Link>{" "}
-              für das Preismodell im Detail.
+                Artikel zu den n8n-Kosten
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 
