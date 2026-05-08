@@ -64,6 +64,11 @@ function applyConsent(prefs: ConsentPreferences) {
       page_title: document.title,
     });
   }
+
+  // Notify other consent-gated trackers (e.g. Meta Pixel)
+  window.dispatchEvent(
+    new CustomEvent("bluebatch:consent-update", { detail: prefs })
+  );
 }
 
 function savePreferences(prefs: ConsentPreferences) {

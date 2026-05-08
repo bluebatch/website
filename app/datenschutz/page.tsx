@@ -677,33 +677,50 @@ export default function Page() {
         dieser Website eingeschränkt sein.
       </Typo.Paragraph>
 
-      <Typo.H3>Facebook Pixel</Typo.H3>
+      <Typo.H3>Meta Pixel (ehemals Facebook Pixel)</Typo.H3>
       <Typo.Paragraph>
-        Unsere Website nutzt zur Konversionsmessung das Besucheraktions-Pixel
-        von Facebook, Facebook Inc., 1601 S. California Ave, Palo Alto, CA
-        94304, USA (&bdquo;Facebook&ldquo;).
+        Unsere Website nutzt zur Reichweiten- und Konversionsmessung das
+        Besucheraktions-Pixel (&bdquo;Meta Pixel&ldquo;) der Meta Platforms
+        Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland
+        (&bdquo;Meta&ldquo;). Pixel-ID: 1312732710788403.
       </Typo.Paragraph>
       <Typo.Paragraph>
-        So kann das Verhalten der Seitenbesucher nachverfolgt werden, nachdem
-        diese durch Klick auf eine Facebook-Werbeanzeige auf die Website des
-        Anbieters weitergeleitet wurden. Dadurch können die Wirksamkeit der
-        Facebook-Werbeanzeigen für statistische und Marktforschungszwecke
-        ausgewertet werden und zukünftige Werbemaßnahmen optimiert werden.
+        Das Meta Pixel wird ausschließlich nach Ihrer ausdrücklichen
+        Einwilligung in der Kategorie &bdquo;Marketing&ldquo; unseres
+        Cookie-Banners geladen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO
+        (Einwilligung) sowie § 25 Abs. 1 TTDSG. Sie können Ihre Einwilligung
+        jederzeit über die Cookie-Einstellungen mit Wirkung für die Zukunft
+        widerrufen.
+      </Typo.Paragraph>
+      <Typo.Paragraph>
+        Mit Hilfe des Meta Pixels kann das Verhalten der Seitenbesucher
+        nachverfolgt werden, nachdem diese durch Klick auf eine Werbeanzeige auf
+        Facebook oder Instagram auf die Website des Anbieters weitergeleitet
+        wurden. So können die Wirksamkeit der Werbeanzeigen für statistische und
+        Marktforschungszwecke ausgewertet und zukünftige Werbemaßnahmen
+        optimiert werden.
       </Typo.Paragraph>
       <Typo.Paragraph>
         Die erhobenen Daten sind für uns als Betreiber dieser Website anonym,
         wir können keine Rückschlüsse auf die Identität der Nutzer ziehen. Die
-        Daten werden aber von Facebook gespeichert und verarbeitet, sodass eine
-        Verbindung zum jeweiligen Nutzerprofil möglich ist und Facebook die
-        Daten für eigene Werbezwecke, entsprechend der
-        Facebook-Datenverwendungsrichtlinie verwenden kann. Dadurch kann
-        Facebook das Schalten von Werbeanzeigen auf Seiten von Facebook sowie
-        außerhalb von Facebook ermöglichen. Diese Verwendung der Daten kann von
-        uns als Seitenbetreiber nicht beeinflusst werden.
+        Daten werden aber von Meta gespeichert und verarbeitet, sodass eine
+        Verbindung zum jeweiligen Nutzerprofil möglich ist und Meta die Daten
+        für eigene Werbezwecke entsprechend der Meta-Datenrichtlinie verwenden
+        kann. Dadurch kann Meta das Schalten von Werbeanzeigen auf Seiten von
+        Facebook und Instagram sowie außerhalb dieser Dienste ermöglichen. Diese
+        Verwendung der Daten kann von uns als Seitenbetreiber nicht beeinflusst
+        werden.
       </Typo.Paragraph>
       <Typo.Paragraph>
-        In den Datenschutzhinweisen von Facebook finden Sie weitere Hinweise zum
-        Schutz Ihrer Privatsphäre: https://www.facebook.com/about/privacy/.
+        Eine Übermittlung von Daten in die USA kann nicht ausgeschlossen werden.
+        Meta ist unter dem EU-US Data Privacy Framework zertifiziert; die
+        Datenübermittlung erfolgt zudem auf Grundlage der
+        EU-Standardvertragsklauseln nach Art. 46 Abs. 2 lit. c DSGVO.
+      </Typo.Paragraph>
+      <Typo.Paragraph>
+        In den Datenschutzhinweisen von Meta finden Sie weitere Informationen
+        zum Schutz Ihrer Privatsphäre:
+        https://www.facebook.com/about/privacy/.
       </Typo.Paragraph>
       <Typo.Paragraph>
         Sie können außerdem die Remarketing-Funktion &bdquo;Custom
@@ -712,9 +729,9 @@ export default function Page() {
         deaktivieren. Dazu müssen Sie bei Facebook angemeldet sein.
       </Typo.Paragraph>
       <Typo.Paragraph>
-        Wenn Sie kein Facebook Konto besitzen, können Sie nutzungsbasierte
-        Werbung von Facebook auf der Website der European Interactive Digital
-        Advertising Alliance deaktivieren:
+        Wenn Sie kein Meta-Konto besitzen, können Sie nutzungsbasierte Werbung
+        von Meta auf der Website der European Interactive Digital Advertising
+        Alliance deaktivieren:
         http://www.youronlinechoices.com/de/praferenzmanagement/.
       </Typo.Paragraph>
 
