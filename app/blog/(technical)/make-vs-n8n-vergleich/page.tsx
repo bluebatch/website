@@ -418,7 +418,15 @@ export default function Page() {
               >
                 n8n-Workflows für den Großhandel
               </Link>{" "}
-              konkrete Anwendungsbeispiele. Oder sprechen Sie uns direkt an,
+              konkrete Anwendungsbeispiele. Und falls Zapier statt Make auf
+              Ihrem Radar steht, liefert unser{" "}
+              <Link
+                href="/blog/n8n-vs-zapier-vergleich"
+                className="text-primary-500 hover:underline"
+              >
+                n8n-vs-Zapier-Vergleich
+              </Link>{" "}
+              die passende Entscheidungshilfe. Oder sprechen Sie uns direkt an,
               wenn Sie Ihren Stack vor dem ersten großen Rollout sauber
               planen wollen.
             </Typo.Paragraph>

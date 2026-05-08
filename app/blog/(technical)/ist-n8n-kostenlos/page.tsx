@@ -189,6 +189,10 @@ export default function Page() {
               <Link href="/blog/make-vs-n8n-vergleich" className="text-primary-600 hover:underline">
                 Make-vs-n8n-Vergleich
               </Link>
+              , den Vergleich mit Zapier in unserem{" "}
+              <Link href="/blog/n8n-vs-zapier-vergleich" className="text-primary-600 hover:underline">
+                n8n-vs-Zapier-Vergleich
+              </Link>
               .
             </Typo.Paragraph>
 
