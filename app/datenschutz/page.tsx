@@ -823,30 +823,6 @@ export default function Page() {
         findet dabei nicht statt.
       </Typo.Paragraph>
 
-      <Typo.H3>Terminvereinbarung via Calendly</Typo.H3>
-      <Typo.Paragraph>
-        Zur einfachen, schnellen und unkomplizierten Terminvereinbarung setzen
-        wir das Tool Calendly ein. Die Nutzung von Calendly erfolgt zur
-        Verbesserung unserer Dienstleistung für bestehende und neue Mandanten.
-        Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f
-        DSGVO dar.
-      </Typo.Paragraph>
-      <Typo.Paragraph>
-        Bei der Verwendung des Tools werden von Ihnen persönliche Daten wie
-        Name, E-Mail-Adresse und Telefonnummer abgefragt. Sie haben außerdem die
-        Möglichkeit, Ihr Anliegen darzustellen und uns weitere Informationen zur
-        Verfügung zu stellen. Wenn Sie das Tool nutzen, werden Ihre Angaben aus
-        dem Anfrageformular inklusive der von Ihnen dort angegebenen
-        Informationen gespeichert und selbstverständlich im Internet übertragen.
-        Die Verarbeitung der eingegebenen Daten erfolgt ausschließlich auf
-        Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
-      </Typo.Paragraph>
-      <Typo.Paragraph>
-        Für den Umgang mit den durch Verwendung von Calendly erfassten Daten
-        gilt diese Datenschutzerklärung sowie die Datenschutzerklärung des
-        Anbieters. Die Datenschutzerklärung von Calendly finden Sie unter:
-        https://calendly.com/pages/privacy
-      </Typo.Paragraph>
     </ContentWrapper>
   );
 }
