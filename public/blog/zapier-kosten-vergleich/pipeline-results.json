@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "hero.png",
+    "score": 91,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "pricing-table.png",
+    "score": 94,
+    "verdict": "PASS",
+    "attempts": 3
+  },
+  {
+    "filename": "cost-scenarios.png",
+    "score": 91,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "break-even.png",
+    "score": 93,
+    "verdict": "PASS",
+    "attempts": 2
+  }
+]
