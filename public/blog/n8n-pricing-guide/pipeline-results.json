@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "hero.png",
+    "score": 92,
+    "verdict": "PASS",
+    "attempts": 2
+  },
+  {
+    "filename": "cloud-tiers.png",
+    "score": 85,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "execution-model.png",
+    "score": 92,
+    "verdict": "PASS",
+    "attempts": 2
+  },
+  {
+    "filename": "tco-comparison.png",
+    "score": -1,
+    "verdict": "FAIL",
+    "attempts": 0
+  }
+]

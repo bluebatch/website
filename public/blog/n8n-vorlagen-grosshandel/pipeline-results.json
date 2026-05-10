@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "hero",
+    "score": 93,
+    "verdict": "PASS",
+    "attempts": 2
+  },
+  {
+    "filename": "preislisten-import",
+    "score": 87,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "auftragsbestaetigung",
+    "score": 87,
+    "verdict": "PASS",
+    "attempts": 2
+  }
+]

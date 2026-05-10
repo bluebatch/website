@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "hero.png",
+    "score": 85,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "workflow-complexity.png",
+    "score": 92,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "pricing-scenarios.png",
+    "score": 85,
+    "verdict": "PASS",
+    "attempts": 3
+  },
+  {
+    "filename": "decision-guide.png",
+    "score": 75,
+    "verdict": "MARGINAL",
+    "attempts": 1
+  }
+]

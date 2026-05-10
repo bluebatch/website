@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "hero.png",
+    "score": 93,
+    "verdict": "PASS",
+    "attempts": 2
+  },
+  {
+    "filename": "self-hosting-costs.png",
+    "score": -1,
+    "verdict": "FAIL",
+    "attempts": 0
+  },
+  {
+    "filename": "cloud-pricing-tiers.png",
+    "score": 92,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "decision-tree.png",
+    "score": 94,
+    "verdict": "PASS",
+    "attempts": 1
+  }
+]

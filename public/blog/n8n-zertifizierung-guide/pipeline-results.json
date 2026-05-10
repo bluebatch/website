@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "hero.png",
+    "score": 93,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "exam-structure.png",
+    "score": 94,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "learning-path.png",
+    "score": 94,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "roi-certification.png",
+    "score": -1,
+    "verdict": "FAIL",
+    "attempts": 0
+  }
+]

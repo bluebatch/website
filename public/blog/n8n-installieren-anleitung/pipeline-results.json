@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "hero.png",
+    "score": 75,
+    "verdict": "MARGINAL",
+    "attempts": 3
+  },
+  {
+    "filename": "installation-methods.png",
+    "score": 91,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "first-workflow.png",
+    "score": 93,
+    "verdict": "PASS",
+    "attempts": 2
+  },
+  {
+    "filename": "local-to-production.png",
+    "score": 93,
+    "verdict": "PASS",
+    "attempts": 1
+  }
+]
