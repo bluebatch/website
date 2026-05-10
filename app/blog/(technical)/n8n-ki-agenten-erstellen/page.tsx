@@ -152,7 +152,12 @@ export default function Page() {
               Version sitzt, sollte vor dem Agent-Projekt das Update einplanen.
               Besonders wichtig: Die Tool-Integration wurde in den letzten
               Versionen mehrfach umgebaut, und ältere Tutorials zeigen teils
-              veraltete Node-Strukturen.
+              veraltete Node-Strukturen. Teams, die ihre n8n-Kompetenz formalisieren
+              wollen, finden im{" "}
+              <Link href="/blog/n8n-zertifizierung-guide" className="text-primary-600 hover:underline">
+                n8n Zertifizierungs-Guide
+              </Link>{" "}
+              den passenden Lernpfad.
             </Typo.Paragraph>
           </div>
 

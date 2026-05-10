@@ -285,6 +285,15 @@ export default async function KiAgenturZertifizierungPage({
                   Sicherheitsarchitektur
                 </Link>{" "}
                 für n8n Self-Hosting garantiert maximale Datenkontrolle.
+                Wie der Zertifizierungsprozess für n8n konkret aussieht,
+                zeigt unser{" "}
+                <Link
+                  href={resolveHref("/blog/n8n-zertifizierung-guide")}
+                  className="text-primary-600 hover:underline"
+                >
+                  n8n Zertifizierungs-Guide
+                </Link>
+                .
               </Typo.Paragraph>
               <Link href={resolveHref("/n8n-sicherheit")}>
                 <InternalLinkLabel>

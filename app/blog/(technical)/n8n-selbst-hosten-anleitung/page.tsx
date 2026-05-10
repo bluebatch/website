@@ -691,7 +691,12 @@ echo "Prüfen: Login, Credentials, ein Workflow manuell ausführen."`}
               </Link>{" "}
               eine Alternative, bei der Server-Härtung, Monitoring und Updates
               extern laufen, die Daten aber in einem deutschen Rechenzentrum
-              bleiben.
+              bleiben. Für den Nachweis professioneller n8n-Kompetenz lohnt sich
+              zudem ein Blick in unseren{" "}
+              <Link href="/blog/n8n-zertifizierung-guide" className="text-primary-600 hover:underline">
+                n8n Zertifizierungs-Guide
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 
