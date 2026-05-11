@@ -11,7 +11,71 @@ import Script from "next/script";
 import { ContactChannel } from "./contact-channel";
 import ContactChannelCards from "./contact-channel-cards";
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 type ModalType = "form" | "meeting" | "channels" | null;
+
+function readCookie(name: string): string | undefined {
+  if (typeof document === "undefined") return undefined;
+  const match = document.cookie.match(
+    new RegExp("(?:^|;\\s*)" + name + "=([^;]+)"),
+  );
+  return match?.[1];
+}
+
+function trackMeetingBooked(args: {
+  email?: string;
+  firstName?: string;
+  lastName?: string;
+}) {
+  if (typeof window === "undefined") return;
+
+  const eventId =
+    typeof crypto !== "undefined" && "randomUUID" in crypto
+      ? crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+
+  // Meta Pixel + CAPI (deduped via shared eventId). Gated on fbq existence,
+  // which already gates on marketing consent in meta-pixel.tsx.
+  if (typeof window.fbq === "function") {
+    window.fbq(
+      "track",
+      "Contact",
+      { content_name: "Book Meeting" },
+      { eventID: eventId },
+    );
+
+    void fetch("/api/fb-events", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        eventId,
+        eventName: "Contact",
+        contentName: "Book Meeting",
+        email: args.email,
+        firstName: args.firstName,
+        lastName: args.lastName,
+        eventSourceUrl: window.location.href,
+        fbc: readCookie("_fbc"),
+        fbp: readCookie("_fbp"),
+      }),
+    }).catch(() => {
+      // swallow — we don't surface ad-tracking errors to the user
+    });
+  }
+
+  // GA4 — Consent Mode in cookie-consent.tsx decides what actually gets sent
+  if (typeof window.gtag === "function") {
+    window.gtag("event", "meeting_booked", {
+      event_category: "engagement",
+      event_label: "Book Meeting",
+    });
+  }
+}
 
 interface ContactModalContextProps {
   activeModal: ModalType;
@@ -150,6 +214,19 @@ export default function ContactModal({ children }: { children: ReactNode }) {
         strategy="afterInteractive"
       />
 
+      {/* HubSpot Meetings container — always in DOM so the embed script picks it up on initial scan */}
+      <div className="fixed -left-[9999px] aria-hidden">
+        <div
+          id="hs-meeting-frame"
+          className="meetings-iframe-container"
+          data-src="https://meetings-eu1.hubspot.com/haensel?embed=true"
+        />
+      </div>
+      <Script
+        src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
+        strategy="afterInteractive"
+      />
+
       {/* Modal Overlay */}
       <div
         className={`fixed inset-0 z-[100] flex items-end md:items-center justify-center transition-all duration-200 overscroll-none ${
@@ -263,12 +340,6 @@ function FormPortal() {
 }
 
 function MeetingIframe({ active }: { active: boolean }) {
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    if (active) setLoaded(false);
-  }, [active]);
-
   useEffect(() => {
     const handler = (event: MessageEvent) => {
       let originHost = "";
@@ -322,6 +393,10 @@ function MeetingIframe({ active }: { active: boolean }) {
             {}) as Record<string, unknown>;
         const email =
           typeof guest.email === "string" ? guest.email : undefined;
+        const firstName =
+          typeof guest.firstName === "string" ? guest.firstName : undefined;
+        const lastName =
+          typeof guest.lastName === "string" ? guest.lastName : undefined;
 
         console.log("[meeting-booked]", { email, guest, payload });
         window.dispatchEvent(
@@ -329,6 +404,8 @@ function MeetingIframe({ active }: { active: boolean }) {
             detail: { email, guest, payload },
           }),
         );
+
+        trackMeetingBooked({ email, firstName, lastName });
       }
     };
     window.addEventListener("message", handler);
@@ -336,24 +413,16 @@ function MeetingIframe({ active }: { active: boolean }) {
   }, []);
 
   return (
-    <div className={`${active ? "block" : "hidden"} relative`}>
-      {active && !loaded && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-          <div className="w-10 h-10 border-4 border-primary-200 border-t-primary-600 rounded-full animate-spin" />
-          <span className="text-sm text-gray-500">
-            Kalender wird geladen...
-          </span>
-        </div>
-      )}
-      {active && (
-        <iframe
-          src="https://meetings-eu1.hubspot.com/haensel?embed=true"
-          className={`w-full border-0 transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"}`}
-          style={{ minHeight: 780 }}
-          title="Meeting buchen"
-          onLoad={() => setLoaded(true)}
-        />
-      )}
-    </div>
+    <div
+      className={`${active ? "block" : "hidden"} relative`}
+      style={{ minHeight: 780 }}
+      ref={(node) => {
+        if (!node) return;
+        const frame = document.getElementById("hs-meeting-frame");
+        if (frame && !node.contains(frame)) {
+          node.appendChild(frame);
+        }
+      }}
+    />
   );
 }
