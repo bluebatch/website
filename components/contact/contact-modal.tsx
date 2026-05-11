@@ -271,32 +271,65 @@ function MeetingIframe({ active }: { active: boolean }) {
 
   useEffect(() => {
     const handler = (event: MessageEvent) => {
-      let originHost: string;
+      let originHost = "";
       try {
         originHost = new URL(event.origin).hostname;
       } catch {
-        return;
-      }
-      if (!originHost.endsWith(".hubspot.com")) return;
-
-      const data = event.data;
-      if (!data || typeof data !== "object" || !data.meetingBookSucceeded) {
-        return;
+        // non-URL origin (e.g. "null") — keep originHost empty
       }
 
-      const payload = data.meetingsPayload ?? {};
-      const guest =
-        payload.bookingResponse?.postResponse?.contact ??
-        payload.formGuestInfo ??
-        {};
-      const email: string | undefined = guest.email;
+      let data: unknown = event.data;
+      if (typeof data === "string") {
+        try {
+          data = JSON.parse(data);
+        } catch {
+          // leave as string
+        }
+      }
 
-      console.log("[meeting-booked]", { email, guest, payload });
-      window.dispatchEvent(
-        new CustomEvent("bluebatch:meeting-booked", {
-          detail: { email, guest, payload },
-        }),
-      );
+      const isHubSpot = originHost.endsWith(".hubspot.com");
+      const looksRelevant =
+        isHubSpot ||
+        (typeof data === "object" &&
+          data !== null &&
+          JSON.stringify(data).toLowerCase().includes("meeting"));
+
+      if (!looksRelevant) return;
+
+      console.log("[meeting-iframe:message]", {
+        origin: event.origin,
+        data,
+      });
+
+      if (
+        typeof data === "object" &&
+        data !== null &&
+        (data as { meetingBookSucceeded?: boolean }).meetingBookSucceeded
+      ) {
+        const payload =
+          (data as { meetingsPayload?: Record<string, unknown> })
+            .meetingsPayload ?? {};
+        const bookingResponse =
+          (payload as { bookingResponse?: Record<string, unknown> })
+            .bookingResponse ?? {};
+        const postResponse =
+          (bookingResponse as { postResponse?: Record<string, unknown> })
+            .postResponse ?? {};
+        const guest =
+          ((postResponse as { contact?: Record<string, unknown> }).contact ??
+            (payload as { formGuestInfo?: Record<string, unknown> })
+              .formGuestInfo ??
+            {}) as Record<string, unknown>;
+        const email =
+          typeof guest.email === "string" ? guest.email : undefined;
+
+        console.log("[meeting-booked]", { email, guest, payload });
+        window.dispatchEvent(
+          new CustomEvent("bluebatch:meeting-booked", {
+            detail: { email, guest, payload },
+          }),
+        );
+      }
     };
     window.addEventListener("message", handler);
     return () => window.removeEventListener("message", handler);
