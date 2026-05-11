@@ -25,13 +25,13 @@ export default function Page() {
 
       <Typo.H3>Angaben gemäß § 5 TMG</Typo.H3>
       <Typo.Paragraph>
-        oseven GmbH <br />
+        Bluebatch GmbH <br />
         Im Zwergfeld 13 <br />
         90427 Nürnberg
       </Typo.Paragraph>
 
       <Typo.Paragraph>
-        Handelsregister: HRB 43513 <br />
+        Handelsregister: HRB 45918 <br />
         Registergericht: Amtsgericht Nürnberg
       </Typo.Paragraph>
 
@@ -49,7 +49,7 @@ export default function Page() {
       <Typo.Paragraph>
         Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:
         <br />
-        DE406003610
+        [noch nicht erteilt]
       </Typo.Paragraph>
 
       <Typo.H2>Streitschlichtung</Typo.H2>
