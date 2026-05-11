@@ -42,7 +42,7 @@ export default function Page() {
       <Typo.Paragraph>
         Telefon: +49(0)163-4412159
         <br />
-        E-Mail: max@oseven.de
+        E-Mail: max@bluebatch.io
       </Typo.Paragraph>
 
       <Typo.H3>Umsatzsteuer</Typo.H3>
