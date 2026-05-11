@@ -1,0 +1,32 @@
+[
+  {
+    "filename": "hero.png",
+    "score": 94,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "n8n-starten.png",
+    "score": 85,
+    "verdict": "PASS",
+    "attempts": 2
+  },
+  {
+    "filename": "oberflaeche.png",
+    "score": 85,
+    "verdict": "PASS",
+    "attempts": 2
+  },
+  {
+    "filename": "erster-workflow.png",
+    "score": 89,
+    "verdict": "PASS",
+    "attempts": 2
+  },
+  {
+    "filename": "fehlerbehandlung.png",
+    "score": 91,
+    "verdict": "PASS",
+    "attempts": 2
+  }
+]
