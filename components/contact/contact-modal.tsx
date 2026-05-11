@@ -269,6 +269,39 @@ function MeetingIframe({ active }: { active: boolean }) {
     if (active) setLoaded(false);
   }, [active]);
 
+  useEffect(() => {
+    const handler = (event: MessageEvent) => {
+      let originHost: string;
+      try {
+        originHost = new URL(event.origin).hostname;
+      } catch {
+        return;
+      }
+      if (!originHost.endsWith(".hubspot.com")) return;
+
+      const data = event.data;
+      if (!data || typeof data !== "object" || !data.meetingBookSucceeded) {
+        return;
+      }
+
+      const payload = data.meetingsPayload ?? {};
+      const guest =
+        payload.bookingResponse?.postResponse?.contact ??
+        payload.formGuestInfo ??
+        {};
+      const email: string | undefined = guest.email;
+
+      console.log("[meeting-booked]", { email, guest, payload });
+      window.dispatchEvent(
+        new CustomEvent("bluebatch:meeting-booked", {
+          detail: { email, guest, payload },
+        }),
+      );
+    };
+    window.addEventListener("message", handler);
+    return () => window.removeEventListener("message", handler);
+  }, []);
+
   return (
     <div className={`${active ? "block" : "hidden"} relative`}>
       {active && !loaded && (
