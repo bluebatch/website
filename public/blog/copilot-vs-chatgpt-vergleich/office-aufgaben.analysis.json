@@ -1,0 +1,29 @@
+{
+  "rendering_style": "flat-vector",
+  "ink_outlines": false,
+  "background_tone": "off-white",
+  "dominant_colors": [
+    "blue",
+    "white",
+    "light-blue",
+    "red-orange"
+  ],
+  "accent_color": "#FF6B4A",
+  "accent_intensity": "moderate",
+  "contrast_level": "medium",
+  "mood": "clean",
+  "composition_type": "centered",
+  "has_text": false,
+  "has_people": false,
+  "has_portraits": false,
+  "has_speed_lines": false,
+  "subject_category": "technology",
+  "color_temperature": "neutral",
+  "brightness_estimate": "bright",
+  "detail_level": "minimal",
+  "depth_of_field": "none",
+  "has_visible_hex_codes": false,
+  "has_leaked_metadata": false,
+  "has_typos": false,
+  "text_quality": "no-text"
+}
