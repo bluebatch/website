@@ -1,26 +1,8 @@
 [
   {
-    "filename": "hero.png",
-    "score": -1,
-    "verdict": "FAIL",
-    "attempts": 0
-  },
-  {
-    "filename": "pricing-comparison.png",
-    "score": -1,
-    "verdict": "FAIL",
-    "attempts": 0
-  },
-  {
-    "filename": "feature-radar.png",
+    "filename": "decision-framework.png",
     "score": 85,
     "verdict": "PASS",
-    "attempts": 1
-  },
-  {
-    "filename": "decision-framework.png",
-    "score": 93,
-    "verdict": "PASS",
-    "attempts": 1
+    "attempts": 2
   }
 ]

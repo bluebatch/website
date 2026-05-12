@@ -1,26 +1,8 @@
 [
   {
-    "filename": "hero.png",
-    "score": 81,
-    "verdict": "PASS",
-    "attempts": 1
-  },
-  {
-    "filename": "forum-overview.png",
-    "score": -1,
-    "verdict": "FAIL",
-    "attempts": 0
-  },
-  {
-    "filename": "contribution-funnel.png",
-    "score": 85,
-    "verdict": "PASS",
-    "attempts": 2
-  },
-  {
     "filename": "resources-grid.png",
-    "score": 85,
-    "verdict": "PASS",
-    "attempts": 1
+    "score": 72,
+    "verdict": "MARGINAL",
+    "attempts": 3
   }
 ]

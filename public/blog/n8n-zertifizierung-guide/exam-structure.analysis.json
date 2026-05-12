@@ -1,28 +1,28 @@
 {
-  "rendering_style": "comic-book-editorial",
+  "rendering_style": "infographic",
   "ink_outlines": true,
-  "background_tone": "dark-navy",
+  "background_tone": "white",
   "dominant_colors": [
-    "dark-blue",
-    "blue-grey",
-    "orange"
+    "white",
+    "blue",
+    "grey"
   ],
-  "accent_color": "orange",
-  "accent_intensity": "strong",
-  "contrast_level": "high",
-  "mood": "energetic",
+  "accent_color": "blue",
+  "accent_intensity": "moderate",
+  "contrast_level": "medium",
+  "mood": "informational",
   "composition_type": "centered",
-  "has_text": false,
+  "has_text": true,
   "has_people": false,
   "has_portraits": false,
-  "has_speed_lines": true,
+  "has_speed_lines": false,
   "subject_category": "abstract-data",
-  "color_temperature": "cool",
-  "brightness_estimate": "dark",
-  "detail_level": "detailed",
+  "color_temperature": "neutral",
+  "brightness_estimate": "very-bright",
+  "detail_level": "moderate",
   "depth_of_field": "none",
   "has_visible_hex_codes": false,
   "has_leaked_metadata": false,
   "has_typos": false,
-  "text_quality": "no-text"
+  "text_quality": "clean"
 }
