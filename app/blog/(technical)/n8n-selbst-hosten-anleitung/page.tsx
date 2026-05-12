@@ -719,7 +719,14 @@ echo "Prüfen: Login, Credentials, ein Workflow manuell ausführen."`}
             <Typo.Paragraph>
               Zwei Fehler sind die teuersten: Kein Backup-Plan und kein
               Update-Rhythmus. Beide lassen sich mit klaren Routinen vermeiden.
-              Der Rest ist Handwerk.
+              Der Rest ist Handwerk. Bei konkreten Fragen zum Setup hilft die{" "}
+              <Link
+                href="/blog/n8n-community-guide"
+                className="text-primary-600 hover:underline"
+              >
+                n8n Community
+              </Link>{" "}
+              mit Forum, GitHub und Templates weiter.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Ihr überlegt, n8n im eigenen Rechenzentrum oder bei einem

@@ -1197,7 +1197,15 @@ export default function Page() {  return (
               ist der zweitgrößte Markt. Es gibt mittlerweile mehrere
               spezialisierte n8n-Agenturen im DACH-Raum (z.B. Wemakefuture,
               Flowmondo, n8n-agentur.de) und eine aktive Community mit
-              regelmäßigen Meetups.
+              regelmäßigen Meetups. Einen Überblick über alle Kanäle gibt
+              unser{" "}
+              <Link
+                href="/blog/n8n-community-guide"
+                className="text-primary-600 hover:underline"
+              >
+                n8n Community Guide
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Namhafte deutsche Unternehmen setzen bereits auf n8n: StepStone

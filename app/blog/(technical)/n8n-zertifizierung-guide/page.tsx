@@ -375,7 +375,14 @@ export default function Page() {
                 <strong>Community-Forum und Templates.</strong> Im offiziellen
                 Forum tauschen sich Tausende Builder aus. Templates aus dem
                 Workflow-Marketplace sind eine gute Vorlage, um typische
-                Muster zu studieren.
+                Muster zu studieren. Mehr dazu im{" "}
+                <Link
+                  href="/blog/n8n-community-guide"
+                  className="text-primary-600 hover:underline"
+                >
+                  Community-Guide
+                </Link>
+                .
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Eigene Pet-Projekte.</strong> Drei bis fünf eigene

@@ -391,8 +391,15 @@ export default function Page() {
               ihr es selbst betreibt. Die Software kostet nichts, die
               Lizenz erlaubt den internen Einsatz ohne Limit, und die
               Community Edition deckt fast alle Mittelstands-Anforderungen
-              ab. Was Geld kostet, sind die Posten drumherum: Server,
-              Wartung, API-Calls externer Dienste.
+              ab — und die{" "}
+              <Link
+                href="/blog/n8n-community-guide"
+                className="text-primary-600 hover:underline"
+              >
+                n8n Community
+              </Link>{" "}
+              hilft kostenlos bei Fragen weiter. Was Geld kostet, sind die
+              Posten drumherum: Server, Wartung, API-Calls externer Dienste.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Wer keinen Aufwand für Server-Betrieb haben will, zahlt ab
