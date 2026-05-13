@@ -73,8 +73,9 @@ export default async function BlogPage({
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/team-collaboration.jpg"
+              src="/images/workflow-automation-hub.jpg"
               type="image"
+              alt="Modern automation operations hub with connected workflow energy streams"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
