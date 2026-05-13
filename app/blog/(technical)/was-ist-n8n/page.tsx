@@ -81,7 +81,10 @@ export default function Page() {  return (
               wobei die 8 für die acht Buchstaben dazwischen steht.
             </Typo.Paragraph>
             <Typo.Paragraph>
-              Gegründet 2019 von Jan Oberhauser in Berlin, hat sich n8n in
+              Gegründet 2019 von Jan Oberhauser in{" "}
+              <Link href="/ki-agentur-berlin" className="text-primary-600 hover:underline">
+                Berlin
+              </Link>, hat sich n8n in
               wenigen Jahren zu einem der am schnellsten wachsenden
               Automation-Tools weltweit entwickelt. Im Oktober 2025 erreichte
               das Unternehmen eine Bewertung von 2,5 Milliarden Dollar, mit

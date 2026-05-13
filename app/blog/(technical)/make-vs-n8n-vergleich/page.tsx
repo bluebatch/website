@@ -118,7 +118,11 @@ export default function Page() {
 
             <Typo.H3>n8n: Das Open-Source-Kraftpaket</Typo.H3>
             <Typo.Paragraph>
-              n8n (gesprochen "en-eight-en") ist 2019 in Berlin gestartet und
+              n8n (gesprochen "en-eight-en") ist 2019 in{" "}
+              <Link href="/ki-agentur-berlin" className="text-primary-600 hover:underline">
+                Berlin
+              </Link>{" "}
+              gestartet und
               hat einen anderen Kern-Gedanken: Workflows sollen dir gehören,
               nicht dem Anbieter. Der Code ist auf GitHub, du kannst n8n selbst
               hosten, modifizieren und weitergeben. Gleichzeitig gibt es eine

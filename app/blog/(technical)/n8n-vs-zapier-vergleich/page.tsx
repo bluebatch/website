@@ -74,7 +74,11 @@ export default function Page() {
               Zapier ist das ältere, bekanntere Werkzeug. Wer 2026 zum ersten
               Mal mit Workflow-Automatisierung in Berührung kommt, landet fast
               automatisch dort. n8n ist die jüngere, technisch tiefere
-              Alternative aus Berlin und gewinnt vor allem in europäischen
+              Alternative aus{" "}
+              <Link href="/ki-agentur-berlin" className="text-primary-600 hover:underline">
+                Berlin
+              </Link>{" "}
+              und gewinnt vor allem in europäischen
               Mittelstands- und Tech-Teams rasant Anteile. Die Frage ist nicht
               akademisch: Sobald die ersten Workflows produktiv laufen,
               wechselt man später nur noch unter Schmerzen.
