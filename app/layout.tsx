@@ -6,6 +6,7 @@ import Footer from "@/components/layout/footer";
 import CookieConsent from "@/components/ui/cookie-consent";
 import { PostHogProvider } from "@/components/providers/posthog";
 import MetaPixel from "@/components/marketing/meta-pixel";
+import HubSpotTracking from "@/components/marketing/hubspot-tracking";
 import { getBlogPosts } from "@/lib/get-blog-posts";
 import { resolveHref } from "@/lib/get-canonical-path";
 import ContactModal from "@/components/contact/contact-modal";
@@ -53,6 +54,7 @@ export default async function RootLayout({
             <Footer />
             <CookieConsent />
             <MetaPixel />
+            <HubSpotTracking />
           </ContactModal>
         </PostHogProvider>
       </body>
