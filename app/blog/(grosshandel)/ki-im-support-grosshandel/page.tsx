@@ -471,7 +471,11 @@ export default function Page() {
               <Link href="/blog/agentic-ai-im-grosshandel" className="text-primary-600 hover:underline">
                 Agentic AI im Großhandel
               </Link>{" "}
-              konkrete Praxisbeispiele.
+              konkrete Praxisbeispiele. Einen breiten Überblick über alle
+              Digitalisierungshebel bietet unser Guide zur{" "}
+              <Link href="/digitalisierung-grosshandel" className="text-primary-600 hover:underline">
+                Digitalisierung im Großhandel
+              </Link>.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Ihr wollt wissen, welche Support-Prozesse sich bei euch am

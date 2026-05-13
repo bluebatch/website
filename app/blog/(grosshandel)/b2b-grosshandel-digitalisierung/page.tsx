@@ -109,7 +109,13 @@ export default function Page() {
               Die vier Säulen der B2B-Großhandel-Digitalisierung
             </Typo.H2>
             <Typo.Paragraph>
-              Digitalisierung im B2B-Großhandel ist kein Projekt, sondern
+              <Link
+                href="/digitalisierung-grosshandel"
+                className="text-primary-600 hover:underline"
+              >
+                Digitalisierung im B2B-Großhandel
+              </Link>{" "}
+              ist kein Projekt, sondern
               vier parallele Baustellen. Wer nur eine davon angeht, baut eine
               halbe Lösung. Die vier Säulen decken gemeinsam das komplette
               Geschäftsmodell ab, vom ersten Kundenkontakt bis zur Nachlieferung.
