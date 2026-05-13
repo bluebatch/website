@@ -150,8 +150,11 @@ export default function Page() {
             <Typo.H3>2. Automatisierte Auftragsabwicklung</Typo.H3>
             <Typo.Paragraph>
               Der Shop ist nur der sichtbare Teil. Dahinter müssen
-              Bestellungen, Aufträge, Lieferpapiere und Rechnungen ohne
-              manuelle Zwischenschritte durchlaufen. Viele B2B-Kunden
+              Bestellungen, Aufträge, Lieferpapiere und{" "}
+              <Link href={resolveHref("/automatische-rechnungspruefung")} className="text-primary-600 hover:underline">
+                Rechnungen
+              </Link>{" "}
+              ohne manuelle Zwischenschritte durchlaufen. Viele B2B-Kunden
               bestellen weiterhin per E-Mail, PDF oder EDI, nicht über den
               Shop. Diese Bestellkanäle müssen genauso automatisch ins ERP
               laufen wie Shop-Bestellungen.

@@ -340,7 +340,11 @@ export default function Page() {
                 <Typo.H3>3-Wege-Matching</Typo.H3>
                 <Typo.Paragraph>
                   Automatischer Abgleich von Rechnung, Bestellung und
-                  Wareneingang.
+                  Wareneingang. Unsere{" "}
+                  <Link href="/automatische-rechnungspruefung" className="text-primary-500 hover:underline">
+                    automatische Rechnungsprüfung
+                  </Link>{" "}
+                  erkennt Abweichungen sofort.
                 </Typo.Paragraph>
                 <Typo.List>
                   <Typo.ListItem>

@@ -141,7 +141,10 @@ export default async function Page({
             <Hero2ColumnDescription>
               Mit Wholesale AI automatisieren wir die repetitiven Prozesse, die
               Ihr Team ausbremsen - vom Lead to Cash Prozess über die
-              Auftragserfassung bis zur Rechnungsprüfung. Weniger manuelle
+              Auftragserfassung bis zur{" "}
+              <Link href={resolveHref("/automatische-rechnungspruefung")} className="text-primary-600 hover:underline">
+                Rechnungsprüfung
+              </Link>. Weniger manuelle
               Arbeit, mehr Zeit für strategische Aufgaben.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
