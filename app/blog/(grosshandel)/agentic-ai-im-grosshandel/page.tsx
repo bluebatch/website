@@ -262,7 +262,14 @@ export default function Page() {
               Produkt A kauft, aber nie das ergänzende Produkt B, erstellt der
               Agent ein personalisiertes Angebot. Wenn ein Neukunde in den
               ersten Wochen überdurchschnittlich viel bestellt, empfiehlt der
-              Agent ein Rahmenvertragsangebot.
+              Agent ein Rahmenvertragsangebot. Wie ein solcher{" "}
+              <Link
+                href="/use-cases/grosshandel/angebots-bot"
+                className="text-primary-600 hover:underline"
+              >
+                Angebots-Bot im Großhandel
+              </Link>{" "}
+              konkret arbeitet, zeigt unser Use Case.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Das ist kein Science-Fiction, sondern die logische Erweiterung

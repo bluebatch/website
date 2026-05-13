@@ -350,7 +350,14 @@ export default function Page() {
                 zwei Drittel ihrer Arbeitszeit mit nicht-kundenbezogenen
                 Tätigkeiten
               </strong>
-              : Daten pflegen, Angebote schreiben, Bestellungen nachverfolgen,
+              : Daten pflegen,{" "}
+              <Link
+                href="/use-cases/grosshandel/angebots-bot"
+                className="text-primary-600 hover:underline"
+              >
+                Angebote schreiben
+              </Link>
+              , Bestellungen nachverfolgen,
               internen Abstimmungen. Außendienstler sitzen durchschnittlich{" "}
               <strong>21 Stunden pro Woche im Auto</strong>.
             </Typo.Paragraph>

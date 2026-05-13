@@ -603,6 +603,13 @@ export default async function Page({
               >
                 ERP-Workflows automatisieren
               </Link>
+              ,{" "}
+              <Link
+                href="/use-cases/grosshandel/angebots-bot"
+                className="text-primary-600 hover:underline"
+              >
+                Angebots-Bot für den Großhandel
+              </Link>
               .
             </Typo.Paragraph>
           </div>
