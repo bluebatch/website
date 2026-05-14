@@ -3,7 +3,8 @@ import { motion, useInView, useSpring, useTransform } from "framer-motion";
 import { useRef, useEffect, useState, ReactNode } from "react";
 
 interface KpiCardProps {
-  value: number;
+  value?: number;
+  valueText?: string;
   prefix?: string;
   suffix?: string;
   subtitle: string;
@@ -71,6 +72,7 @@ const variantStyles = {
 
 export default function KpiCard({
   value,
+  valueText,
   prefix,
   suffix,
   subtitle,
@@ -88,7 +90,15 @@ export default function KpiCard({
       className={`border flex flex-col items-center justify-center text-center p-6 shadow-md ${styles.card} ${className}`}
     >
       <div className={`text-4xl md:text-5xl font-bold mb-2 ${styles.value}`}>
-        <AnimatedNumber value={value} prefix={prefix} suffix={suffix} />
+        {valueText !== undefined ? (
+          valueText
+        ) : (
+          <AnimatedNumber
+            value={value ?? 0}
+            prefix={prefix}
+            suffix={suffix}
+          />
+        )}
       </div>
       <p className="text-sm md:text-base text-gray-600">{subtitle}</p>
     </motion.div>

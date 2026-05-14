@@ -197,12 +197,34 @@ const useCasesMenu = {
       icon: "/icons/calculator.svg",
       href: "/use-cases/steuerberater",
       cases: [
-        { title: "Dokumentenverarbeitung", href: "/ki-dokumentenmanagement" },
+        {
+          title: "Belegprüfung",
+          href: "/use-cases/steuerberater/belegpruefung",
+        },
+        {
+          title: "Dokumentenverarbeitung",
+          href: "/use-cases/steuerberater/dokumentenverarbeitung",
+        },
         {
           title: "Mandantenkommunikation",
           href: "/use-cases/steuerberater/mandantenkommunikation",
         },
-        { title: "DATEV-Jira Orchestration", href: "/n8n-datev" },
+        {
+          title: "DATEV-Jira Orchestration",
+          href: "/use-cases/steuerberater/datev-jira-task-orchestration",
+        },
+        {
+          title: "E-Rechnung-Verarbeitung",
+          href: "/use-cases/steuerberater/e-rechnung-verarbeitung",
+        },
+        {
+          title: "Mandanten-Onboarding",
+          href: "/use-cases/steuerberater/mandanten-onboarding",
+        },
+        {
+          title: "KI-Jahresabschluss",
+          href: "/use-cases/steuerberater/jahresabschluss-ki",
+        },
       ],
     },
     {

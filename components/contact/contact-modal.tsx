@@ -27,7 +27,11 @@ function readCookie(name: string): string | undefined {
   return match?.[1];
 }
 
-function trackMeetingBooked(args: {
+function trackConversion(args: {
+  metaEventName: "Contact" | "Lead";
+  metaContentName: string;
+  gaEventName: string;
+  gaLabel: string;
   email?: string;
   firstName?: string;
   lastName?: string;
@@ -44,8 +48,8 @@ function trackMeetingBooked(args: {
   if (typeof window.fbq === "function") {
     window.fbq(
       "track",
-      "Contact",
-      { content_name: "Book Meeting" },
+      args.metaEventName,
+      { content_name: args.metaContentName },
       { eventID: eventId },
     );
 
@@ -54,8 +58,8 @@ function trackMeetingBooked(args: {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         eventId,
-        eventName: "Contact",
-        contentName: "Book Meeting",
+        eventName: args.metaEventName,
+        contentName: args.metaContentName,
         email: args.email,
         firstName: args.firstName,
         lastName: args.lastName,
@@ -70,9 +74,9 @@ function trackMeetingBooked(args: {
 
   // GA4 — Consent Mode in cookie-consent.tsx decides what actually gets sent
   if (typeof window.gtag === "function") {
-    window.gtag("event", "meeting_booked", {
+    window.gtag("event", args.gaEventName, {
       event_category: "engagement",
-      event_label: "Book Meeting",
+      event_label: args.gaLabel,
     });
   }
 }
@@ -147,6 +151,91 @@ export default function ContactModal({ children }: { children: ReactNode }) {
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [activeModal]);
+
+  useEffect(() => {
+    const handler = (event: MessageEvent) => {
+      let originHost = "";
+      try {
+        originHost = new URL(event.origin).hostname;
+      } catch {
+        // not a URL origin
+      }
+      const isHsForms =
+        originHost.endsWith(".hsforms.net") ||
+        originHost.endsWith(".hsforms.com") ||
+        originHost.endsWith(".hubspot.com");
+
+      let data: unknown = event.data;
+      if (typeof data === "string") {
+        try {
+          data = JSON.parse(data);
+        } catch {
+          // leave as string
+        }
+      }
+
+      const dataStr =
+        typeof data === "object" && data !== null ? JSON.stringify(data) : "";
+      const looksForm =
+        dataStr.toLowerCase().includes("form") ||
+        dataStr.toLowerCase().includes("submit");
+
+      if (!isHsForms && !looksForm) return;
+
+      console.log("[hs-form:message]", { origin: event.origin, data });
+
+      // Best-effort detection of a form submit across both legacy and new
+      // HubSpot Forms embeds.
+      if (typeof data !== "object" || data === null) return;
+      const d = data as Record<string, unknown>;
+      const evtName =
+        (typeof d.eventName === "string" && d.eventName) ||
+        (typeof d.type === "string" && d.type) ||
+        "";
+      const isSubmit =
+        evtName === "onFormSubmitted" ||
+        evtName === "hs-form-submitted" ||
+        evtName === "hsFormSubmitted" ||
+        evtName === "FORM_SUBMITTED" ||
+        (typeof evtName === "string" &&
+          evtName.toLowerCase().includes("submit"));
+      if (!isSubmit) return;
+
+      const inner = (d.data ?? d.payload ?? {}) as Record<string, unknown>;
+      const values = (inner.submissionValues ??
+        inner.values ??
+        inner.fields ??
+        inner) as Record<string, unknown>;
+      const pick = (...keys: string[]): string | undefined => {
+        for (const k of keys) {
+          const v = values[k];
+          if (typeof v === "string" && v) return v;
+        }
+        return undefined;
+      };
+      const email = pick("email", "Email", "0-1/email");
+      const firstName = pick("firstname", "firstName", "0-1/firstname");
+      const lastName = pick("lastname", "lastName", "0-1/lastname");
+
+      console.log("[contact-form-submitted]", {
+        email,
+        firstName,
+        lastName,
+        values,
+      });
+      trackConversion({
+        metaEventName: "Lead",
+        metaContentName: "Contact Form",
+        gaEventName: "contact_form_submitted",
+        gaLabel: "Contact Form",
+        email,
+        firstName,
+        lastName,
+      });
+    };
+    window.addEventListener("message", handler);
+    return () => window.removeEventListener("message", handler);
+  }, []);
 
   const openForm = () => {
     if (activeModal === "channels") setCameFromChannels(true);
@@ -405,7 +494,15 @@ function MeetingIframe({ active }: { active: boolean }) {
           }),
         );
 
-        trackMeetingBooked({ email, firstName, lastName });
+        trackConversion({
+          metaEventName: "Contact",
+          metaContentName: "Book Meeting",
+          gaEventName: "meeting_booked",
+          gaLabel: "Book Meeting",
+          email,
+          firstName,
+          lastName,
+        });
       }
     };
     window.addEventListener("message", handler);
