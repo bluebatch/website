@@ -41,6 +41,7 @@ import IntroBox from "@/components/ui/intro-box";
 import Customer from "@/components/sections/customer/customer";
 import SavingsCard, {
   SavingsBadge,
+  SavingsBadgeHighlight,
   SavingsItems,
   SavingsItem,
 } from "@/components/cards/savings-card";
@@ -574,13 +575,16 @@ export default function Page() {
       {/* Section 7: SavingsCard - Ihre Ersparnis */}
       <ContentWrapper>
         <SavingsCard>
-          <SavingsBadge>ROI im ersten Jahr: 250-400 %</SavingsBadge>
+          <SavingsBadge>
+            Amortisation in{" "}
+            <SavingsBadgeHighlight>3-4</SavingsBadgeHighlight> Monaten
+          </SavingsBadge>
           <SavingsItems>
-            <SavingsItem label="J&auml;hrliche Ersparnis" highlight>
-              80.000 &euro;
+            <SavingsItem label="Setup einmalig">18.000 €</SavingsItem>
+            <SavingsItem label="Betrieb pro Monat">1.500 €</SavingsItem>
+            <SavingsItem label="Ersparnis pro Monat" highlight>
+              6.600 €
             </SavingsItem>
-            <SavingsItem label="Amortisation">3-4 Monate</SavingsItem>
-            <SavingsItem label="Antwortzeit-Reduktion">-98 %</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>

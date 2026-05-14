@@ -34,6 +34,7 @@ import IntroBox from "@/components/ui/intro-box";
 import Customer from "@/components/sections/customer/customer";
 import SavingsCard, {
   SavingsBadge,
+  SavingsBadgeHighlight,
   SavingsItems,
   SavingsItem,
 } from "@/components/cards/savings-card";
@@ -389,13 +390,16 @@ export default async function Page({
         </ComparisonCard>
 
         <SavingsCard>
-          <SavingsBadge>Automatisierte Bestellabwicklung</SavingsBadge>
+          <SavingsBadge>
+            Amortisation in{" "}
+            <SavingsBadgeHighlight>2-3</SavingsBadgeHighlight> Monaten
+          </SavingsBadge>
           <SavingsItems>
-            <SavingsItem label="Jährliche Ersparnis" highlight>
-              390.000 €+
+            <SavingsItem label="Setup einmalig">60.000 €</SavingsItem>
+            <SavingsItem label="Betrieb pro Monat">5.000 €</SavingsItem>
+            <SavingsItem label="Ersparnis pro Monat" highlight>
+              32.500 €
             </SavingsItem>
-            <SavingsItem label="Amortisation">2-3 Monate</SavingsItem>
-            <SavingsItem label="Weniger manuelle Arbeit">85%</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>

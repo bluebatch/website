@@ -37,6 +37,7 @@ import ComparisonCard, {
 } from "@/components/cards/comparison-card";
 import SavingsCard, {
   SavingsBadge,
+  SavingsBadgeHighlight,
   SavingsItems,
   SavingsItem,
 } from "@/components/cards/savings-card";
@@ -382,13 +383,16 @@ export default function Page() {
         </ComparisonCard>
 
         <SavingsCard>
-          <SavingsBadge>easybill-Automatisierung</SavingsBadge>
+          <SavingsBadge>
+            Amortisation in{" "}
+            <SavingsBadgeHighlight>2-3</SavingsBadgeHighlight> Monaten
+          </SavingsBadge>
           <SavingsItems>
-            <SavingsItem label="Jährliche Ersparnis" highlight>
-              120.000 €+
+            <SavingsItem label="Setup einmalig">18.000 €</SavingsItem>
+            <SavingsItem label="Betrieb pro Monat">2.000 €</SavingsItem>
+            <SavingsItem label="Ersparnis pro Monat" highlight>
+              10.000 €
             </SavingsItem>
-            <SavingsItem label="Amortisation">2-3 Monate</SavingsItem>
-            <SavingsItem label="Weniger manuelle Arbeit">80%</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>

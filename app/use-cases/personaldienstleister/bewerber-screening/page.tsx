@@ -21,6 +21,7 @@ import ComparisonCard, {
 } from "@/components/cards/comparison-card";
 import SavingsCard, {
   SavingsBadge,
+  SavingsBadgeHighlight,
   SavingsItems,
   SavingsItem,
 } from "@/components/cards/savings-card";
@@ -621,13 +622,16 @@ export default function Page() {
         </ComparisonCard>
 
         <SavingsCard>
-          <SavingsBadge>ROI im ersten Jahr: 300-500 %</SavingsBadge>
+          <SavingsBadge>
+            Amortisation in{" "}
+            <SavingsBadgeHighlight>2-3</SavingsBadgeHighlight> Monaten
+          </SavingsBadge>
           <SavingsItems>
-            <SavingsItem label="Jährliche Ersparnis" highlight>
-              143.000 €
+            <SavingsItem label="Setup einmalig">22.000 €</SavingsItem>
+            <SavingsItem label="Betrieb pro Monat">2.000 €</SavingsItem>
+            <SavingsItem label="Ersparnis pro Monat" highlight>
+              11.900 €
             </SavingsItem>
-            <SavingsItem label="Amortisation">2-3 Monate</SavingsItem>
-            <SavingsItem label="Reaktionszeit">-90 %</SavingsItem>
           </SavingsItems>
         </SavingsCard>
       </ContentWrapper>

@@ -23,11 +23,22 @@ interface ItemsContainerProps {
 
 export function SavingsBadge({ children }: BadgeProps) {
   return (
-    <div className="bg-primary-950 px-6 py-4 text-center border-b-2 border-secondary-500">
-      <span className="text-base md:text-lg font-bold text-white uppercase tracking-wider">
+    <div className="bg-primary-950 px-6 py-5 text-center border-b-2 border-secondary-500">
+      <div className="text-xs md:text-sm font-semibold text-white uppercase tracking-widest">
         {children}
-      </span>
+      </div>
     </div>
+  );
+}
+
+interface HighlightProps {
+  children: ReactNode;
+}
+export function SavingsBadgeHighlight({ children }: HighlightProps) {
+  return (
+    <span className="inline-block px-2 align-middle text-3xl md:text-5xl font-extrabold tracking-tight text-secondary-400 normal-case leading-none">
+      {children}
+    </span>
   );
 }
 
@@ -66,7 +77,7 @@ export default function SavingsCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
-      className={`mt-8 bg-gradient-to-br from-primary-800 via-primary-900 to-primary-950 overflow-hidden shadow-xl ${className}`}
+      className={`bg-gradient-to-br from-primary-800 via-primary-900 to-primary-950 overflow-hidden shadow-xl ${className}`}
     >
       {children}
     </motion.div>
