@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
-import BackgroundHero from "@/components/heroes/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/layout/simple-grid";
+import SimpleCard from "@/components/cards/simple-card";
+import KpiCard from "@/components/cards/kpi-card";
+import StatsLeadHero from "@/components/heroes/stats-lead-hero";
+import WorkflowDiagram from "@/components/sections/workflow-diagram";
 import ComparisonCard, {
   BeforeCard,
   AfterCard,
@@ -15,38 +18,41 @@ import ComparisonCard, {
   ComparisonListItem,
   ComparisonFooter,
 } from "@/components/cards/comparison-card";
-import TimelineAsSteps, {
-  TimelineAsStepsStep,
-} from "@/components/ui/timeline-as-steps";
-import TabGroup, {
-  TabNavigation,
-  TabItem,
-  TabContent,
-} from "@/components/ui/tab-group";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { FaqContainer } from "@/components/ui/faqs";
 import IntroBox from "@/components/ui/intro-box";
-import Customer from "@/components/sections/customer/customer";
-import SavingsCard, {
-  SavingsBadge,
-  SavingsItems,
-  SavingsItem,
-} from "@/components/cards/savings-card";
+import ProsCons from "@/components/sections/pros-cons";
 
 export const pageConfig: PageConfig = {
-  title: "Mandantenkommunikation",
+  title: "KI-Mandantenkommunikation",
   description:
-    "Mandantenanfragen automatisiert beantworten und Dokumentenaustausch vereinfachen.",
+    "Routine-Mandantenanfragen automatisch beantworten, Fristen monitoren, Belege strukturiert nachfordern.",
+};
+
+const defaultMeta = {
+  title: "KI-Mandantenkommunikation für Kanzleien | Bluebatch",
+  description:
+    "Routine-Mailanfragen kosten 3-5 h/Tag pro Sachbearbeiter. KI klärt FAQ, Fristen und Belegnachforderungen, Belegrücklauf 8 Wo auf 3 Wo.",
+  ogDescription:
+    "KI-Mandantenkommunikation: Routineanfragen, Fristen-Monitor und Belegkampagnen automatisch.",
 };
 
 export const metadata: Metadata = {
-  title: "Mandantenkommunikation - Steuerberater | Bluebatch",
-  description:
-    "Wie Bluebatch die Mandantenkommunikation für Steuerberater automatisiert. 70% weniger Routineanfragen.",
+  title: defaultMeta.title,
+  description: defaultMeta.description,
+  keywords: [
+    "KI Mandantenkommunikation",
+    "ki mandantenkommunikation",
+    "mandantenmanagement automatisieren",
+    "ki mandantenmanagement",
+    "mandantenportal automatisierung",
+    "ki mandanten",
+    "Steuerkanzlei Automatisierung",
+    "Bluebatch",
+  ],
   openGraph: {
-    title: "Mandantenkommunikation - Steuerberater | Bluebatch",
-    description:
-      "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen.",
+    title: defaultMeta.title,
+    description: defaultMeta.ogDescription,
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -55,15 +61,14 @@ export const metadata: Metadata = {
         url: "/images/bluebatch-social-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Bluebatch Mandantenkommunikation",
+        alt: "Bluebatch KI-Mandantenkommunikation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mandantenkommunikation - Steuerberater | Bluebatch",
-    description:
-      "KI-Chatbot für Routineanfragen, proaktive Fristenerinnerungen und automatisierte Belegkampagnen.",
+    title: defaultMeta.title,
+    description: defaultMeta.ogDescription,
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -71,360 +76,473 @@ export const metadata: Metadata = {
   },
 };
 
-const stats = [
-  { value: 70, suffix: "%", label: "Weniger Routineanfragen" },
-  { value: 24, suffix: "/7", label: "Erreichbarkeit" },
-  { value: 50, suffix: "%", label: "Schnellere Belegsammlung" },
+const personas = [
+  {
+    title: "Fristen-Anfragen",
+    image: "/images/mandantenkommunikation/persona-fristen.png",
+    intro:
+      "Wann ist die nächste USt-VA fällig? Habt ihr die ESt schon abgegeben?",
+    dialog:
+      "Die KI zieht den aktuellen DATEV-Fristenkalender, die letzten eingereichten Unterlagen und antwortet konkret mit Datum, Status und nächstem Schritt.",
+    example:
+      "Mandant: ‚Wann muss ich was für Q4 abgeben?‘ \nKI: ‚Eure USt-VA Q4 ist am 10.02. fällig. Ich brauche bis 03.02. noch die Eingangsrechnungen Dezember.‘",
+  },
+  {
+    title: "Belegnachforderungen",
+    image: "/images/mandantenkommunikation/persona-belege.png",
+    intro:
+      "Welche Belege fehlen für den Jahresabschluss? Wo lade ich die hoch?",
+    dialog:
+      "Soll-Ist-Abgleich gegen DATEV-Belegtransfer, personalisierte Liste pro Mandant, Upload-Link direkt ins Portal mit automatischer Bestätigung.",
+    example:
+      "KI: ‚Für den JA 2025 fehlen: Bankauszüge Q4, Lohnjournal Dezember, Inventarliste. Hier ist dein Upload-Link.‘",
+  },
+  {
+    title: "Status-Abfragen",
+    image: "/images/mandantenkommunikation/persona-status.png",
+    intro:
+      "Wie weit ist meine ESt? Ist meine USt-VA schon raus?",
+    dialog:
+      "Live-Status aus DATEV Eigenorganisation und dem Mandantenportal, mit Zeitstempel und nächstem Bearbeitungsschritt.",
+    example:
+      "KI: ‚Eure USt-VA Oktober ist am 12.11. ans Finanzamt gegangen, Quittung liegt im Portal.‘",
+  },
+];
+
+const belegkampagneSteps = [
+  {
+    nr: "01",
+    title: "Soll-Ist-Abgleich gegen DATEV",
+    desc: "Cron-Job vergleicht den DATEV-Belegtransfer-Eingang pro Mandant mit dem Soll-Bestand: USt-VA-Belege, Lohnunterlagen, Bank-Auszüge, Spesen. Was fehlt, landet auf einer Liste.",
+  },
+  {
+    nr: "02",
+    title: "Personalisierte Mandanten-Mail",
+    desc: "Pro Mandant wird eine individuelle Mail generiert, mit konkreter Liste, Bezug auf den letzten Monat und einem Upload-Link, der direkt in den richtigen Portal-Ordner führt.",
+  },
+  {
+    nr: "03",
+    title: "Upload und Auto-Bestätigung",
+    desc: "Mandant lädt Belege per Portal oder schickt sie per Mail-Anhang zurück. Der Workflow nimmt sie auf, dankt automatisch und schließt den Eintrag in der offenen Liste.",
+  },
+  {
+    nr: "04",
+    title: "Eskalation nach 14 und 7 Tagen",
+    desc: "Kein Eingang? Auto-Reminder geht nach 14 Tagen, ein zweiter nach 7 Tagen vor der Frist. Bei Nichtreaktion landet ein Task beim zuständigen Sachbearbeiter.",
+  },
+  {
+    nr: "05",
+    title: "Kampagnen-Reporting",
+    desc: "Pro Mandantenklasse wird ausgewertet, wer wie schnell reagiert. Die Kanzlei sieht auf einen Blick, welche Mandanten den Rücklauf bremsen, und kann zielgerichtet nachhaken.",
+  },
 ];
 
 export default function Page() {
   return (
     <>
-      <ContentWrapper isFirstSection noPadding>
-        <BackgroundHero
-          imageSrc="/images/client-portal.jpg"
-          overlayOpacity={0.8}
-          opacityBackground="white"
-        >
-          <BackgroundHero.TopLabel>
-            Mandantenkommunikation
-          </BackgroundHero.TopLabel>
-          <BackgroundHero.Headline>
-            Routineanfragen{" "}
-            <BackgroundHero.Highlight>automatisch</BackgroundHero.Highlight>{" "}
-            beantworten
-          </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            KI-gestützter Chatbot für Standardfragen, proaktive
-            Fristenerinnerungen und automatisierte Belegkampagnen. Mehr Zeit für
-            echte Beratung.
-          </BackgroundHero.Description>
-          <BackgroundHero.CallToAction>
-            <ContactButton icon="chat">Demo anfragen</ContactButton>
-          </BackgroundHero.CallToAction>
-          <BackgroundHero.Stats>
-            {stats.map((stat, index) => (
-              <BackgroundHero.Stat
-                key={stat.label}
-                value={stat.value}
-                suffix={stat.suffix}
-                label={stat.label}
-                index={index}
-              />
-            ))}
-          </BackgroundHero.Stats>
-        </BackgroundHero>
-      </ContentWrapper>
+      {/* 1. HERO — StatsLeadHero */}
+      <StatsLeadHero>
+        <StatsLeadHero.PreHeadline>
+          Use Case Steuerberater
+        </StatsLeadHero.PreHeadline>
+        <StatsLeadHero.Headline>
+          KI Mandantenkommunikation für Steuerkanzleien
+        </StatsLeadHero.Headline>
+        <StatsLeadHero.Description>
+          Routine-Anfragen, Belegnachforderungen und Fristen-Reminder laufen
+          automatisch über einen n8n-Workflow mit RAG auf der Mandantenakte.
+          Sachbearbeiter sparen 3 bis 5 Stunden pro Tag, Mandanten bekommen
+          rund um die Uhr eine Antwort.
+        </StatsLeadHero.Description>
+        <StatsLeadHero.Cta>
+          <ContactButton icon="chat">Demo anfragen</ContactButton>
+        </StatsLeadHero.Cta>
+        <StatsLeadHero.Stats>
+          <KpiCard value={60} suffix=" %" subtitle="Weniger Routineanfragen" />
+          <KpiCard
+            valueText="3 Wochen"
+            subtitle="Belegrücklauf, statt vorher 8 Wochen"
+          />
+          <KpiCard value={24} suffix=" / 7" subtitle="Erreichbarkeit" />
+        </StatsLeadHero.Stats>
+        <StatsLeadHero.Media
+          src="/images/mandantenkommunikation/hero-side-visual.png"
+          alt="Mandantin am Smartphone, KI-Antwort mit Häkchen"
+        />
+      </StatsLeadHero>
 
-      <ContentWrapper>
-        <SimpleGrid cols={2} className="items-center gap-12">
-          <div>
-            <IntroBox textCentered={false}>
-              <IntroBox.PreHeadline>Das Problem</IntroBox.PreHeadline>
-              <IntroBox.Headline>
-                60-70% der Anfragen sind Routine
-              </IntroBox.Headline>
-              <IntroBox.Subline>
-                „Bis wann muss ich meine Unterlagen einreichen?" „Wie ist der
-                Stand meiner Steuererklärung?" - Standardfragen binden wertvolle
-                Fachkraft-Zeit.
-              </IntroBox.Subline>
-              <IntroBox.Subline>
-                Das Einsammeln von Mandantenbelegen ist laut Branchenstudien das
-                größte Workflow-Problem - durchschnittlich 3-5 Erinnerungen pro
-                Mandant.
-              </IntroBox.Subline>
-            </IntroBox>
-          </div>
-          <div>
-            <TimelineAsSteps>
-              <TimelineAsStepsStep value={1}>
-                <Typo.H3 className="mt-2!">Anfrage eingeht</Typo.H3>
-                <Typo.Paragraph>
-                  Per E-Mail, Telefon oder Portal - oft zu Standardthemen
-                </Typo.Paragraph>
-              </TimelineAsStepsStep>
-              <TimelineAsStepsStep value={2}>
-                <Typo.H3 className="mt-2!">Recherche nötig</Typo.H3>
-                <Typo.Paragraph>
-                  Status im System nachschauen, Fristen prüfen
-                </Typo.Paragraph>
-              </TimelineAsStepsStep>
-              <TimelineAsStepsStep value={3}>
-                <Typo.H3 className="mt-2!">Antwort verfassen</Typo.H3>
-                <Typo.Paragraph>
-                  Oft ähnliche Antworten für gleiche Fragen
-                </Typo.Paragraph>
-              </TimelineAsStepsStep>
-              <TimelineAsStepsStep value={4} isLast>
-                <Typo.H3 className="mt-2!">Nachfassen</Typo.H3>
-                <Typo.Paragraph>
-                  Wiederholte Erinnerungen für fehlende Belege
-                </Typo.Paragraph>
-              </TimelineAsStepsStep>
-            </TimelineAsSteps>
-          </div>
-        </SimpleGrid>
-      </ContentWrapper>
-
-      <ContentWrapper colorScheme="gray">
+      {/* 2. PERSONA-CARDS — Was die KI für dich beantwortet */}
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
-          <IntroBox.PreHeadline>Automatisierung</IntroBox.PreHeadline>
+          <IntroBox.PreHeadline>Was die KI übernimmt</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Vier Säulen der Kommunikationsautomatisierung
+            Drei Anfragetypen, die 60 Prozent deines Postfachs ausmachen
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Ein integriertes System für alle Kommunikationsanforderungen.
+            Fristen, Belege, Status. Diese drei Cluster sind in jeder Kanzlei
+            die Routine-Treiber. Die KI antwortet konkret, weil sie aus DATEV
+            und der Mandantenakte zieht, nicht aus einem generischen
+            FAQ-Bestand.
           </IntroBox.Subline>
         </IntroBox>
 
-        <TabGroup defaultValue="chatbot">
-          <TabNavigation>
-            <TabItem value="chatbot">KI-Chatbot</TabItem>
-            <TabItem value="fristen">Fristenerinnerung</TabItem>
-            <TabItem value="belege">Belegkampagnen</TabItem>
-            <TabItem value="status">Status-Updates</TabItem>
-          </TabNavigation>
-
-          <TabContent value="chatbot">
-            <SimpleGrid cols={2} className="items-center">
-              <div>
-                <Typo.H3>KI-gestützter Chatbot</Typo.H3>
-                <Typo.Paragraph>
-                  Automatische Beantwortung von Standardanfragen zu Fristen,
-                  Bearbeitungsstand und Beleganforderungen - 24/7 verfügbar.
-                </Typo.Paragraph>
-                <Typo.List>
-                  <Typo.ListItem>
-                    Echtzeit-Zugriff auf Mandantenakte
-                  </Typo.ListItem>
-                  <Typo.ListItem>
-                    Dynamische Fristen- und Statusauskunft
-                  </Typo.ListItem>
-                  <Typo.ListItem>
-                    Eskalation zu Mitarbeitern bei komplexen Fragen
-                  </Typo.ListItem>
-                </Typo.List>
+        <SimpleGrid cols={3} className="mt-12">
+          {personas.map((persona) => (
+            <SimpleCard key={persona.title} align="left">
+              <SimpleCard.Image
+                src={persona.image}
+                alt={persona.title}
+                size="lg"
+              />
+              <h3 className="mt-4 text-xl font-bold text-gray-900 md:text-2xl">
+                {persona.title}
+              </h3>
+              <p className="mt-3 text-sm font-medium text-gray-500">
+                {persona.intro}
+              </p>
+              <p className="mt-4 flex-1 text-base leading-relaxed text-gray-700">
+                {persona.dialog}
+              </p>
+              <div className="mt-6 rounded-xl bg-gray-50 p-4 text-sm italic leading-relaxed text-gray-700">
+                {persona.example.split("\n").map((line, i) => (
+                  <p key={i} className={i > 0 ? "mt-2" : ""}>
+                    {line}
+                  </p>
+                ))}
               </div>
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/digital-workflow.jpg"
-                  alt="KI-Chatbot"
-                  fill
-                  className="object-cover shadow-lg rounded-lg"
-                />
-              </div>
-            </SimpleGrid>
-          </TabContent>
-
-          <TabContent value="fristen">
-            <SimpleGrid cols={2} className="items-center">
-              <div>
-                <Typo.H3>Proaktive Fristenerinnerungen</Typo.H3>
-                <Typo.Paragraph>
-                  Automatische Benachrichtigungen vor wichtigen Abgabefristen -
-                  gestaffelt nach Dringlichkeit.
-                </Typo.Paragraph>
-                <Typo.List>
-                  <Typo.ListItem>
-                    30, 14, 7, 3 Tage Vorlauf-Erinnerungen
-                  </Typo.ListItem>
-                  <Typo.ListItem>
-                    Individuelle Präferenzen (E-Mail, SMS, Portal)
-                  </Typo.ListItem>
-                  <Typo.ListItem>Automatische Eskalationskette</Typo.ListItem>
-                </Typo.List>
-              </div>
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/team-meeting.jpg"
-                  alt="Fristenerinnerung"
-                  fill
-                  className="object-cover shadow-lg rounded-lg"
-                />
-              </div>
-            </SimpleGrid>
-          </TabContent>
-
-          <TabContent value="belege">
-            <SimpleGrid cols={2} className="items-center">
-              <div>
-                <Typo.H3>Automatisierte Belegkampagnen</Typo.H3>
-                <Typo.Paragraph>
-                  Strukturierte Dokumentensammlung mit dynamischen Checklisten
-                  und intelligenter Nachverfolgung.
-                </Typo.Paragraph>
-                <Typo.List>
-                  <Typo.ListItem>
-                    Personalisierte Checklisten je Mandantentyp
-                  </Typo.ListItem>
-                  <Typo.ListItem>
-                    Automatische Tracking bei Upload
-                  </Typo.ListItem>
-                  <Typo.ListItem>
-                    Gezielte Erinnerungen für fehlende Belege
-                  </Typo.ListItem>
-                </Typo.List>
-              </div>
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/client-communication.jpg"
-                  alt="Belegkampagnen"
-                  fill
-                  className="object-cover shadow-lg rounded-lg"
-                />
-              </div>
-            </SimpleGrid>
-          </TabContent>
-
-          <TabContent value="status">
-            <SimpleGrid cols={2} className="items-center">
-              <div>
-                <Typo.H3>Automatische Status-Updates</Typo.H3>
-                <Typo.Paragraph>
-                  Mandanten erhalten proaktive Benachrichtigungen bei wichtigen
-                  Meilensteinen ihrer Steuerangelegenheiten.
-                </Typo.Paragraph>
-                <Typo.List>
-                  <Typo.ListItem>
-                    Bearbeitungsstart und Fertigstellung
-                  </Typo.ListItem>
-                  <Typo.ListItem>
-                    Einreichung beim Finanzamt bestätigt
-                  </Typo.ListItem>
-                  <Typo.ListItem>
-                    Bescheid eingegangen mit nächsten Schritten
-                  </Typo.ListItem>
-                </Typo.List>
-              </div>
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/communication-tools.jpg"
-                  alt="Status-Updates"
-                  fill
-                  className="object-cover shadow-lg rounded-lg"
-                />
-              </div>
-            </SimpleGrid>
-          </TabContent>
-        </TabGroup>
+            </SimpleCard>
+          ))}
+        </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper noPadding bodyWidth="full">
-        <Customer />
-      </ContentWrapper>
-
-      <ContentWrapper>
+      {/* 3. WORKFLOW-DIAGRAMM — Branching */}
+      <ContentWrapper colorScheme="white" bodyWidth="small">
         <IntroBox>
-          <IntroBox.PreHeadline>ROI-Kalkulation</IntroBox.PreHeadline>
-          <IntroBox.Headline>96% ROI im ersten Jahr</IntroBox.Headline>
+          <IntroBox.PreHeadline>Workflow</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Mail-Eingang, Klassifikation, drei Pfade
+          </IntroBox.Headline>
           <IntroBox.Subline>
-            Für eine mittelgroße Kanzlei mit 500 Mandanten:
+            Jede eingehende Mail wird vom LLM klassifiziert und automatisch in
+            einen der drei Pfade geroutet. Mensch wird nur gebraucht, wenn die
+            KI eskaliert oder ein Sachbearbeiter freigibt.
+          </IntroBox.Subline>
+        </IntroBox>
+
+        <WorkflowDiagram variant="branching">
+          <WorkflowDiagram.Trigger
+            title="Mail-Eingang"
+            subtitle="Outlook, Portal, WhatsApp"
+          />
+          <WorkflowDiagram.Branch label="RAG-Antwort" tone="primary">
+            Routine-Klassen wie Status, Fristen, FAQ. Antwort wird aus DATEV
+            und Mandantenakte generiert, optional über Approval-Queue.
+          </WorkflowDiagram.Branch>
+          <WorkflowDiagram.Branch label="Belegkampagne" tone="secondary">
+            Fehlende Belege werden über Auto-Reminder eingetrieben, Upload-Link
+            führt direkt ins Portal mit Auto-Bestätigung.
+          </WorkflowDiagram.Branch>
+          <WorkflowDiagram.Branch label="Eskalation" tone="cta">
+            Fachliche Anfragen, negative Sentiments oder rechtliche Themen
+            werden mit SLA-Timer an den zuständigen Sachbearbeiter geroutet.
+          </WorkflowDiagram.Branch>
+          <WorkflowDiagram.Sink
+            title="Sync in CRM / DATEV"
+            subtitle="Status, Task, Audit-Trail"
+          />
+        </WorkflowDiagram>
+      </ContentWrapper>
+
+      {/* 4. BELEGKAMPAGNEN-WORKFLOW — IntroBox + 5 alternierende Steps */}
+      <ContentWrapper colorScheme="gradient-cool" bodyWidth="small">
+        <IntroBox>
+          <IntroBox.PreHeadline>Belegkampagnen-Workflow</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            So treibt die KI Belege ein, ohne dass dein Team nachhakt
+          </IntroBox.Headline>
+          <IntroBox.Subline>
+            Belegnachforderung ist der Nummer-eins-Engpass in Kanzleien.
+            Bluebatch macht daraus eine mass-personalisierte Kampagne, die den
+            Rücklauf von acht auf drei Wochen drückt.
+          </IntroBox.Subline>
+        </IntroBox>
+
+        <div className="mt-10">
+          <div className="relative mb-12 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
+            <Image
+              src="/images/mandantenkommunikation/belegkampagne-flow.png"
+              alt="Belegkampagne: eine Steuerberaterin, viele Mandanten-Avatare, automatischer Mail-Flow"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 60vw, 100vw"
+            />
+          </div>
+
+          <div className="space-y-10 md:space-y-14">
+            {belegkampagneSteps.map((step, idx) => {
+              const reversed = idx % 2 === 1;
+              return (
+                <div
+                  key={step.nr}
+                  className={`grid grid-cols-1 items-center gap-6 md:gap-10 ${
+                    reversed
+                      ? "md:grid-cols-[1fr_120px]"
+                      : "md:grid-cols-[120px_1fr]"
+                  }`}
+                >
+                  <div
+                    className={`flex md:justify-center ${
+                      reversed ? "md:order-2" : ""
+                    }`}
+                  >
+                    <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white text-2xl font-bold text-primary-600 shadow-md">
+                      {step.nr}
+                    </div>
+                  </div>
+                  <div
+                    className={`rounded-2xl border border-gray-200 bg-white p-6 shadow-sm md:p-8 ${
+                      reversed ? "md:order-1" : ""
+                    }`}
+                  >
+                    <h3 className="text-xl font-bold text-gray-900 md:text-2xl">
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 text-base leading-relaxed text-gray-700">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </ContentWrapper>
+
+      {/* 5. COMPARISON CARD — Vorher / Nachher */}
+      <ContentWrapper colorScheme="white">
+        <IntroBox>
+          <IntroBox.PreHeadline>Vorher / Nachher</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Wie sich der Kanzleialltag mit KI-Mandantenmanagement verändert
+          </IntroBox.Headline>
+          <IntroBox.Subline>
+            Konkret, was sich zwischen Outlook-Chaos und orchestriertem
+            n8n-Workflow unterscheidet, auf Ebene von Sachbearbeiter,
+            Belegrücklauf, Fristen und Mandanten-Erlebnis.
           </IntroBox.Subline>
         </IntroBox>
 
         <ComparisonCard className="mt-10">
           <BeforeCard>
-            <ComparisonHeadline>Vorher: Manuell</ComparisonHeadline>
+            <ComparisonHeadline>
+              Vorher: Outlook-Postfach, manuell
+            </ComparisonHeadline>
             <ComparisonList>
               <ComparisonListItem>
-                2 Mitarbeiter für Kommunikation @ 50.000 €/Jahr
+                Sachbearbeiter klärt täglich 3 bis 5 h Routine-Mails
               </ComparisonListItem>
               <ComparisonListItem>
-                Überstunden in Spitzenzeiten: 10.000 €/Jahr
+                Belegrücklauf 8 bis 12 Wochen, 3 bis 5 Erinnerungen pro Mandant
               </ComparisonListItem>
               <ComparisonListItem>
-                Verpasste Mandate durch langsame Reaktion: ~20.000 €/Jahr
-              </ComparisonListItem>
-            </ComparisonList>
-            <ComparisonFooter>Gesamt: ~130.000 €/Jahr</ComparisonFooter>
-          </BeforeCard>
-
-          <AfterCard>
-            <ComparisonHeadline>Nachher: Automatisiert</ComparisonHeadline>
-            <ComparisonList>
-              <ComparisonListItem>
-                1 Mitarbeiter für komplexe Beratung @ 50.000 €/Jahr
+                Fristen-Tracking in Excel und Outlook-Kalender,
+                Fristverletzungen regelmäßig
               </ComparisonListItem>
               <ComparisonListItem>
-                Automatisierungsplattform: 6.000 €/Jahr
+                Mandant wartet im Schnitt 1 bis 2 Werktage auf eine Antwort
               </ComparisonListItem>
               <ComparisonListItem>
-                Einmalige Implementierung: 25.000 € (auf Jahr 1 angerechnet)
+                Status-Auskunft ‚Wie weit ist mein JA?‘ nur per Mail oder
+                Telefon
               </ComparisonListItem>
             </ComparisonList>
             <ComparisonFooter>
-              Jahr 1: ~81.000 € | Ab Jahr 2: ~56.000 €/Jahr
+              Effekt: überlastete Sachbearbeiter, frustrierte Mandanten
+            </ComparisonFooter>
+          </BeforeCard>
+
+          <AfterCard>
+            <ComparisonHeadline>
+              Nachher: n8n, LLM und RAG auf Mandantenakte
+            </ComparisonHeadline>
+            <ComparisonList>
+              <ComparisonListItem>
+                60 bis 70 Prozent der Routine wird automatisch (mit Approval)
+                beantwortet
+              </ComparisonListItem>
+              <ComparisonListItem>
+                Belegrücklauf 2 bis 4 Wochen durch personalisierte
+                Belegkampagnen
+              </ComparisonListItem>
+              <ComparisonListItem>
+                Fristen-Monitor mit Auto-Reminder, Fristverletzungen minus 90
+                Prozent
+              </ComparisonListItem>
+              <ComparisonListItem>
+                Mandant bekommt 24/7 sofort eine Antwort, Status jederzeit im
+                Portal sichtbar
+              </ComparisonListItem>
+              <ComparisonListItem>
+                Sachbearbeiter prüft pro Antwort 15 Sekunden, Beratungszeit
+                steigt spürbar
+              </ComparisonListItem>
+            </ComparisonList>
+            <ComparisonFooter>
+              Effekt: Mandanten-NPS plus 15 bis 25 Punkte, Sachbearbeiter
+              wieder entlastet
             </ComparisonFooter>
           </AfterCard>
         </ComparisonCard>
-
-        <SavingsCard>
-          <SavingsBadge>ROI im ersten Jahr: 96%</SavingsBadge>
-          <SavingsItems>
-            <SavingsItem label="Ersparnis Jahr 1" highlight>
-              49.000 €
-            </SavingsItem>
-            <SavingsItem label="Ab Jahr 2">74.000 €/Jahr</SavingsItem>
-            <SavingsItem label="Amortisation">~6 Monate</SavingsItem>
-          </SavingsItems>
-        </SavingsCard>
       </ContentWrapper>
 
-      {/* Verwandte Lösungen */}
-      <ContentWrapper>
+      {/* 6. WARUM BLUEBATCH — ProsCons */}
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox>
-          <IntroBox.Headline>Verwandte Lösungen</IntroBox.Headline>
+          <IntroBox.PreHeadline>Warum Bluebatch</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Bluebatch vs. TaxDome, DrMailo und DATEV-Standard
+          </IntroBox.Headline>
+          <IntroBox.Subline>
+            Was unseren Ansatz für ki mandanten unterscheidet, wenn deutsche
+            Steuer-FAQ, DATEV-Integration und Berufsgeheimnis nicht
+            verhandelbar sind.
+          </IntroBox.Subline>
         </IntroBox>
-        <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
-          Entdecken Sie{" "}
-          <Link href="/use-cases/steuerberater" className="text-primary-500 hover:underline">
-            alle Steuerberater Use Cases
-          </Link>
-          , erfahren Sie mehr über{" "}
-          <Link href="/ki-dokumentenmanagement" className="text-primary-500 hover:underline">
-            KI-Dokumentenverarbeitung
-          </Link>{" "}
-          oder die{" "}
-          <Link
-            href="/use-cases/steuerberater/belegpruefung"
-            className="text-primary-500 hover:underline"
-          >
-            automatisierte Belegprüfung
-          </Link>
-          .
-        </Typo.Paragraph>
+
+        <ProsCons className="mt-10">
+          <ProsCons.Pros>
+            <ProsCons.Item
+              title="Deutsche Steuer-FAQ, deutscher Tonfall"
+              description="Templates und LLM-Prompts sind auf deutsches Steuerrecht und deinen Kanzlei-Tonfall trainiert, nicht aus dem US-Markt importiert wie bei TaxDome."
+            />
+            <ProsCons.Item
+              title="RAG auf der echten Mandantenakte"
+              description="Antworten beziehen sich auf konkrete DATEV-Stände, offene Fristen und eingereichte Belege, nicht auf generische Wissensbasis. Konkret statt floskelhaft."
+            />
+            <ProsCons.Item
+              title="Multi-Channel: Mail, Portal, WhatsApp"
+              description="Ein Workflow für alle Kanäle. Mandanten wählen, wo sie schreiben, du behältst alles im selben System."
+            />
+            <ProsCons.Item
+              title="Berufsgeheimnis-Hosting in DE"
+              description="On-Premise oder gehostet in Frankfurt, AVV mit deutschem Vertragspartner, kein Sub-Sub-DPA über drei US-Töchter."
+            />
+            <ProsCons.Item
+              title="DATEV-Statussynchronisation"
+              description="Bidirektional gegen DATEV Eigenorganisation comfort und DATEV-Belegtransfer, kein paralleles Datensilo wie bei reinen Mail-Tools."
+            />
+          </ProsCons.Pros>
+
+          <ProsCons.Cons>
+            <ProsCons.Item
+              title="TaxDome und KanzleiDrive"
+              description="Mandantenportale mit Chat, aber englisch-getrieben, schwache deutsche Steuer-FAQ und KI-Funktionen rudimentär."
+              side="cons"
+            />
+            <ProsCons.Item
+              title="DrMailo"
+              description="KI-Mail-Assistent für Kanzleien, aber kein End-to-End-Flow für Belegkampagnen, Fristen-Monitor und Portal-Chatbot."
+              side="cons"
+            />
+            <ProsCons.Item
+              title="DATEV ‚Meine Steuern‘"
+              description="Mandanten-App vorhanden, aber ohne Chatbot-Layer, ohne Klassifikator, ohne automatische Belegkampagnen."
+              side="cons"
+            />
+            <ProsCons.Item
+              title="Generische US-SaaS-Chatbots"
+              description="Intercom, Drift und Co. kennen keinen DATEV-Stand, keinen Belegtransfer und keine USt-VA-Frist. Müssen pro Anfrage neu zum Sachbearbeiter eskalieren."
+              side="cons"
+            />
+          </ProsCons.Cons>
+        </ProsCons>
       </ContentWrapper>
 
-      <ContentWrapper noPadding bodyWidth="full">
-        <ConsultationCtaDefault />
+      {/* 7. CROSS-SELL */}
+      <ContentWrapper colorScheme="white" bodyWidth="small">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-gray-50 p-8 text-center md:p-10">
+          <Typo.H3>Mandantenportal als Teil eines größeren Stacks</Typo.H3>
+          <Typo.Paragraph>
+            Die Mandantenkommunikation läuft selten isoliert. Belegprüfung,
+            DATEV-Task-Sync und Dokumentenverarbeitung greifen direkt in den
+            selben Workflow, deshalb betreuen wir alle drei Stränge aus einem
+            Guss.
+          </Typo.Paragraph>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/use-cases/steuerberater/belegpruefung"
+              className="inline-flex items-center gap-2 rounded-full border border-primary-600 px-5 py-2 text-sm font-semibold text-primary-700 transition hover:bg-primary-50"
+            >
+              KI-Belegerfassung
+            </Link>
+            <Link
+              href="/use-cases/steuerberater/datev-jira-task-orchestration"
+              className="inline-flex items-center gap-2 rounded-full border border-primary-600 px-5 py-2 text-sm font-semibold text-primary-700 transition hover:bg-primary-50"
+            >
+              DATEV-Jira-Sync
+            </Link>
+            <Link
+              href="/use-cases/steuerberater/dokumentenverarbeitung"
+              className="inline-flex items-center gap-2 rounded-full border border-primary-600 px-5 py-2 text-sm font-semibold text-primary-700 transition hover:bg-primary-50"
+            >
+              KI-Dokumentenverarbeitung
+            </Link>
+          </div>
+        </div>
       </ContentWrapper>
 
-      <ContentWrapper>
+      {/* 8. FAQ */}
+      <ContentWrapper colorScheme="gray-light">
         <FaqContainer
           faqs={[
             {
-              question: "Gibt der KI-Chatbot steuerliche Beratung?",
+              question:
+                "Wie verhindert ihr, dass die KI rechtsverbindliche Aussagen macht?",
               answer:
-                "Nein, der Chatbot ist für organisatorische Anfragen konzipiert: Fristen, Bearbeitungsstand, Beleganforderungen. Er greift auf verifizierte Kanzleidaten zu. Bei fachlichen Steuerfragen wird automatisch an einen Sachbearbeiter eskaliert. Jede Antwort kann mit einem Disclaimer versehen werden.",
+                "Der Klassifikator trennt Routine (Status, Fristen, FAQ) strikt von fachlichen Steuerfragen. Routine-Antworten enthalten verifizierte Daten aus DATEV und der Mandantenakte, fachliche Anfragen werden automatisch an den zuständigen Sachbearbeiter eskaliert, ohne dass die KI einen Vorschlag formuliert. Jede Antwort kann mit einem Disclaimer versehen werden und durchläuft optional die Approval-Queue, bevor sie an den Mandanten geht.",
             },
             {
-              question: "Wie funktioniert die DATEV-Anbindung?",
+              question:
+                "Wie funktioniert mandantenportal automatisierung mit DATEV?",
               answer:
-                "Über mehrere Wege: HTTP-Requests an DATEV-Schnittstellen, Dateiaustausch im DATEV-Format, oder Tools wie TaxDome als Brücke. Für tiefere Integration sind Middleware-Lösungen wie DATEVconnect verfügbar. Die konkrete Strategie wird im Implementierungsprojekt definiert.",
+                "Wir setzen auf bidirektionale Sync-Pfade: HTTP-Requests an die DATEV-Schnittstellen, Dateiaustausch über DATEV-Belegtransfer und ergänzend Middleware wie DATEVconnect für tiefere Integration. Der Mandantenportal-Chatbot zieht Status, Fristen und Belegrückstände live aus DATEV, schreibt aber nichts zurück, ohne dass ein Sachbearbeiter freigegeben hat. Konkrete Schnittstelle wird im Audit der ersten Woche entschieden.",
             },
             {
-              question: "Was passiert bei falsch klassifizierten Anfragen?",
+              question:
+                "Kann der Chatbot auch komplexe Rückfragen zur Steuererklärung beantworten?",
               answer:
-                "Mehrere Sicherheitsnetze: Bei unsicherer Klassifizierung wird automatisch eskaliert. Mandanten können jederzeit 'Mit Mitarbeiter sprechen' wählen. Fehlklassifizierungen werden markiert und verbessern das Modell. Bei kritischen Themen geht automatisch eine Kopie an den Sachbearbeiter.",
+                "Nein, und das ist Absicht. Steuerberatung bleibt bei deinen Mitarbeitern. Der Chatbot beantwortet organisatorische und prozessbezogene Fragen: ‚Welche Belege fehlen noch?‘, ‚Wie ist der Stand meiner ESt?‘, ‚Bis wann muss ich was einreichen?‘. Sobald die Anfrage fachlich wird oder eine bestimmte Confidence-Schwelle unterschritten ist, wird automatisch an einen Sachbearbeiter eskaliert.",
             },
             {
-              question: "Wie ist der Datenschutz gewährleistet?",
+              question:
+                "Wie funktioniert die Belegkampagne, woher weiß der Workflow, was fehlt?",
               answer:
-                "DSGVO-konform: Datenminimierung, Hosting in DE/EU, TLS-Verschlüsselung, Auftragsverarbeitungsverträge, automatisches Löschkonzept, vollständige Audit-Trails. Bei Self-Hosting volle Kontrolle über alle Daten in der Kanzlei-Infrastruktur. Berufsgeheimnis wird durch entsprechende Verträge gewahrt.",
+                "Der Workflow gleicht die im DATEV-Belegtransfer hochgeladenen Belege mit dem Soll-Bestand pro Mandant ab: USt-VA-Belege pro Monat, Lohnunterlagen, Bank-Auszüge, Spesen, Eingangsrechnungen. Was fehlt, wird in einer personalisierten Liste pro Mandant verschickt, mit Upload-Link ins Portal und Erinnerungs-Eskalation nach 14 und 7 Tagen. Beim Upload wird der Eintrag automatisch geschlossen.",
+            },
+            {
+              question:
+                "Was passiert, wenn ein Mandant emotional oder aufgebracht schreibt?",
+              answer:
+                "Der Klassifikator hat eine eigene Sentiment-Stufe. Negative oder eskalative Mails (etwa Beschwerde wegen Verspätungszuschlag, Drohung mit Kanzlei-Wechsel, emotionale Sprache) werden nicht automatisch beantwortet, sondern als ‚Sachbearbeiter sofort‘ markiert, dem zuständigen Berater zugewiesen und mit SLA-Timer überwacht. Die KI bereitet eine sachliche Vorlage, der Mensch antwortet.",
+            },
+            {
+              question: "Können wir den Sprachstil pro Kanzlei anpassen?",
+              answer:
+                "Ja. Wir nehmen 20 bis 30 echte Antwortbeispiele deiner Kanzlei, leiten daraus Tonfall, Anredeformen, typische Formulierungen und Signatur ab. Die LLM-Templates werden darauf gefittet, neue Mitarbeiter schreiben automatisch im Kanzlei-Stil. Auf Wunsch differenzieren wir den Tonfall pro Mandantenklasse, etwa formeller für Beirats-Mandate, lockerer für Existenzgründer.",
+            },
+            {
+              question:
+                "Wie sind DSGVO, Berufsgeheimnis und Mandantengeheimnis geschützt?",
+              answer:
+                "Datenminimierung, Hosting in Deutschland (Frankfurt) oder On-Premise in der Kanzlei-Infrastruktur, TLS-Verschlüsselung, Auftragsverarbeitungsvertrag mit deutschem Vertragspartner, automatisches Lösch- und Aufbewahrungskonzept, vollständige Audit-Trails pro Mandant. LLM-Calls laufen über Privacy-LLM-Setup ohne Trainings-Opt-in. Das Berufsgeheimnis nach § 203 StGB wird vertraglich gewahrt.",
             },
           ]}
         />
+      </ContentWrapper>
+
+      {/* 9. FINAL CTA */}
+      <ContentWrapper noPadding bodyWidth="full">
+        <ConsultationCtaDefault />
       </ContentWrapper>
     </>
   );

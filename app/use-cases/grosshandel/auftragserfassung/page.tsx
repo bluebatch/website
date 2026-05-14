@@ -32,9 +32,15 @@ import CustomerReference, {
 } from "@/components/sections/customer-reference";
 import SavingsCard, {
   SavingsBadge,
+  SavingsBadgeHighlight,
   SavingsItems,
   SavingsItem,
 } from "@/components/cards/savings-card";
+import RoiCalculation, {
+  RoiAssumption,
+  RoiRow,
+  RoiTotal,
+} from "@/components/sections/roi-calculation";
 
 export const pageConfig: PageConfig = {
   title: "Auftragserfassung",
@@ -906,20 +912,43 @@ export default async function Page({
           </AfterCard>
         </ComparisonCard>
 
-        <SavingsCard>
-          <SavingsBadge>~ 50 % Kostensenkung</SavingsBadge>
-          <SavingsItems>
-            <SavingsItem label="Jährliche Ersparnis" highlight>
-              ~ 115.000 €
-            </SavingsItem>
-            <SavingsItem label="Amortisation">~ 1 Monat</SavingsItem>
-            <SavingsItem label="Personal-Aufwand">−50 %</SavingsItem>
-          </SavingsItems>
-        </SavingsCard>
+        <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
+          <SavingsCard>
+            <SavingsBadge>
+              Amortisation in{" "}
+              <SavingsBadgeHighlight>~ 1</SavingsBadgeHighlight> Monat
+            </SavingsBadge>
+            <SavingsItems>
+              <SavingsItem label="Setup einmalig">10.000 €</SavingsItem>
+              <SavingsItem label="Betrieb pro Monat">1.000 €</SavingsItem>
+              <SavingsItem label="Ersparnis pro Monat" highlight>
+                9.800 €
+              </SavingsItem>
+            </SavingsItems>
+          </SavingsCard>
+
+          <RoiCalculation>
+            <RoiAssumption>
+              20.000 Bestellungen pro Jahr, im Schnitt 14 Min Ersparnis pro
+              Bestellung
+            </RoiAssumption>
+            <RoiRow label="Minuten gespart pro Bestellung">14 Min</RoiRow>
+            <RoiRow label="Stundensatz Innendienst">28 € / h</RoiRow>
+            <RoiRow label="Ersparnis pro Bestellung" highlight>
+              6,50 €
+            </RoiRow>
+            <RoiRow label="Jahresersparnis (20.000 × 6,50 €)">130.000 €</RoiRow>
+            <RoiRow label="Im Schnitt pro Monat (130.000 € / 12)">
+              10.800 €
+            </RoiRow>
+            <RoiRow label="Betrieb pro Monat">− 1.000 €</RoiRow>
+            <RoiTotal label="Netto pro Monat">9.800 €</RoiTotal>
+          </RoiCalculation>
+        </div>
 
         <div className="mt-8 text-center">
           <Link
-            href="/roi-rechner/document"
+            href="/roi-rechner/document?docs=1700&before=24&after=10&hourly=28&tier=medium&setup=10000&maint=1000"
             className="inline-flex items-center gap-2 rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-primary-700"
           >
             Eigenes ROI mit dem Calculator berechnen
