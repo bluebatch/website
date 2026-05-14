@@ -69,7 +69,7 @@ const useCases = [
     title: "Auftragserfassung",
     description:
       "Bestellungen aus E-Mails, PDFs, Faxen und Portalen automatisch erfassen. Unsere KI für den Großhandel extrahiert alle Daten, validiert gegen ERP und Lager - von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.",
-    image: "/images/order-capture.jpg",
+    image: "/images/auftragserfassung/hero.png",
   },
   {
     slug: "bestellabwicklung",
@@ -90,7 +90,7 @@ const useCases = [
     title: "Invoice-Bot",
     description:
       "Eingangsrechnungen automatisch erfassen, prüfen und zur Freigabe weiterleiten. KI für den Großhandel extrahiert Beträge, Steuer und Metadaten - 80% weniger manueller Aufwand.",
-    image: "/images/invoice-processing.jpg",
+    image: "/images/invoice/invoice-end-to-end-process.jpg",
   },
   {
     slug: "3-wege-rechnungspruefung",
@@ -168,57 +168,42 @@ export default async function Page({
         <Customer />
       </ContentWrapper>
 
-      {/* Use Cases with alternating layout */}
-      {useCases.map((useCase, index) => (
-        <ContentWrapper
-          key={useCase.slug}
-          colorScheme={index % 2 === 1 ? "gray-light" : undefined}
-        >
-          <SimpleGrid cols={2} className="items-center gap-12">
-            {index % 2 === 0 ? (
-              <>
-                <div>
-                  <Typo.H2 className="mb-4">{useCase.title}</Typo.H2>
-                  <Typo.Paragraph className="text-gray-600 mb-6">
-                    {useCase.description}
-                  </Typo.Paragraph>
-                  <InternalLink href={resolveHref(`/use-cases/grosshandel/${useCase.slug}`)}>
-                    {useCase.title}
-                  </InternalLink>
-                </div>
-                <div className="relative aspect-video">
-                  <Image
-                    src={useCase.image}
-                    alt={useCase.title}
-                    fill
-                    className="object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="relative aspect-video">
-                  <Image
-                    src={useCase.image}
-                    alt={useCase.title}
-                    fill
-                    className="object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-                <div>
-                  <Typo.H2 className="mb-4">{useCase.title}</Typo.H2>
-                  <Typo.Paragraph className="text-gray-600 mb-6">
-                    {useCase.description}
-                  </Typo.Paragraph>
-                  <InternalLink href={resolveHref(`/use-cases/grosshandel/${useCase.slug}`)}>
-                    {useCase.title}
-                  </InternalLink>
-                </div>
-              </>
-            )}
-          </SimpleGrid>
-        </ContentWrapper>
-      ))}
+      {/* Use Cases with alternating layout — Mobile: Headline → Text → Link → Image (50% centred) */}
+      {useCases.map((useCase, index) => {
+        const imageRight = index % 2 === 0;
+        return (
+          <ContentWrapper
+            key={useCase.slug}
+            colorScheme={index % 2 === 1 ? "gray-light" : undefined}
+          >
+            <SimpleGrid cols={2} className="items-center gap-8 md:gap-12">
+              <div className={imageRight ? "" : "md:order-2"}>
+                <Typo.H2 className="mb-4">{useCase.title}</Typo.H2>
+                <Typo.Paragraph className="text-gray-600 mb-6">
+                  {useCase.description}
+                </Typo.Paragraph>
+                <InternalLink
+                  href={resolveHref(`/use-cases/grosshandel/${useCase.slug}`)}
+                >
+                  {useCase.title}
+                </InternalLink>
+              </div>
+              <div
+                className={`relative aspect-video mx-auto w-1/2 md:w-full ${
+                  imageRight ? "" : "md:order-1"
+                }`}
+              >
+                <Image
+                  src={useCase.image}
+                  alt={useCase.title}
+                  fill
+                  className="object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            </SimpleGrid>
+          </ContentWrapper>
+        );
+      })}
 
       {/* Contact CTA */}
       <ContentWrapper noPadding bodyWidth="full">
