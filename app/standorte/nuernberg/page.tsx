@@ -246,7 +246,7 @@ export default async function Page({
             Was ein n8n-Workflow ändert: Eine E-Mail mit Beleg trifft ein. OCR
             liest den Inhalt. KI kategorisiert Belegtyp, Lieferant und
             Kostenstelle. Die Buchung geht automatisch ins{" "}
-            <Link href="/n8n-datev" className="text-primary-600 hover:underline">DATEV-System</Link>.
+            <Link href="/use-cases/steuerberater/datev-jira-task-orchestration" className="text-primary-600 hover:underline">DATEV-System</Link>.
             Der Mandant bekommt eine Bestätigung. 30 Sekunden statt 5 Minuten. Kein
             Abtippen, kein Zuordnen, kein Hinterhertelefonieren.
           </Typo.Paragraph>

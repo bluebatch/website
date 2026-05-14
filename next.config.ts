@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
         destination: "/tools/:slug*",
         permanent: true,
       },
+      // Legacy short URL → DATEV use-case page
+      {
+        source: "/n8n-datev",
+        destination: "/use-cases/steuerberater/datev-jira-task-orchestration",
+        permanent: true,
+      },
     ];
   },
 
