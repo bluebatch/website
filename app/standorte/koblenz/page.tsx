@@ -145,7 +145,7 @@ export async function generateMetadata({
     "KI-Agentur in Koblenz | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Wehrtechnik- und Mittelstand-Automatisierung in Koblenz: n8n-Workflows für BAAINBw-Zulieferer, Stabilus, ZF Active Safety, Schottel, Novelis und CompuGroup Medical – BAFA-, ITAR- und NCS-konform.";
+    "Wehrtechnik- und Mittelstand-Automatisierung in Koblenz: n8n-Workflows für BAAINBw-Zulieferer, Stabilus, ZF Active Safety, Schottel, Novelis und CompuGroup Medical - BAFA-, ITAR- und NCS-konform.";
 
   return {
     title,
@@ -186,19 +186,19 @@ export async function generateMetadata({
 
 const koblenzFaqs = [
   {
-    question: "Wir liefern an BAAINBw – wie automatisiert ihr Vergabe- und Compliance-Workflows?",
+    question: "Wir liefern an BAAINBw - wie automatisiert ihr Vergabe- und Compliance-Workflows?",
     answer:
       "Self-hosted on-premise, mit Anbindung an SAP S/4HANA und das Vergabeportal des Bundes (eVergabe). Wir bauen Workflows für VgV-/UVgO-konforme Angebote, NATO-Codifizierungs-Meldungen (NCS, Stock Numbers), BAFA-Exportkontroll-Anträge und Sicherheitsüberprüfungen nach SÜG, mit Vier-Augen-Freigaben und vollständigem Audit-Trail.",
   },
   {
     question: "Hilft n8n im Sondervermögen-Bundeswehr-Tempo?",
     answer:
-      "Genau dafür. Mit dem Sondervermögen Bundeswehr und der NATO-Aufrüstung verlangt BAAINBw deutlich höhere Liefer- und Prüfgeschwindigkeit. Wir automatisieren Pre-Approval-Checks für US-ITAR und EU-Dual-Use, NATO-Stock-Number-Pflege, IUID-Markierung und VS-NfD-konforme Doku-Workflows – mit Slack- oder MS-Teams-Eskalationen.",
+      "Genau dafür. Mit dem Sondervermögen Bundeswehr und der NATO-Aufrüstung verlangt BAAINBw deutlich höhere Liefer- und Prüfgeschwindigkeit. Wir automatisieren Pre-Approval-Checks für US-ITAR und EU-Dual-Use, NATO-Stock-Number-Pflege, IUID-Markierung und VS-NfD-konforme Doku-Workflows - mit Slack- oder MS-Teams-Eskalationen.",
   },
   {
     question: "Was bringt n8n bei Stabilus und ZF Active Safety im Automotive-Wandel?",
     answer:
-      "Stabilus ist Weltmarktführer für Gasfedern (rund 1,1 Mrd. EUR Umsatz), ZF Active Safety produziert Bremssysteme in Koblenz. Wir automatisieren EDI nach VDA-4905, Catena-X-PCF, IATF-16949-konforme APQP-/PPAP-Doku, Reklamationsmanagement und das Lieferanten-Onboarding – on-premise und auditfest.",
+      "Stabilus ist Weltmarktführer für Gasfedern (rund 1,1 Mrd. EUR Umsatz), ZF Active Safety produziert Bremssysteme in Koblenz. Wir automatisieren EDI nach VDA-4905, Catena-X-PCF, IATF-16949-konforme APQP-/PPAP-Doku, Reklamationsmanagement und das Lieferanten-Onboarding - on-premise und auditfest.",
   },
   {
     question: "Hilft das bei CompuGroup Medical und Gesundheits-IT?",
@@ -239,7 +239,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Koblenz –{" "}
+                KI-Agentur in Koblenz -{" "}
                 Wehrtechnik und Automotive{" "}
                 <BackgroundHero.Highlight>am Deutschen Eck</BackgroundHero.Highlight>
               </>
@@ -248,7 +248,7 @@ export default async function Page({
           <BackgroundHero.Description>
             BAAINBw, Stabilus, ZF Active Safety, CompuGroup Medical und
             Schottel prägen den Koblenzer Arbeitsmarkt. Wir automatisieren
-            Vergabe-, ITAR- und Catena-X-Workflows mit self-hosted n8n –
+            Vergabe-, ITAR- und Catena-X-Workflows mit self-hosted n8n -
             BAFA-, NCS- und ISO-27001-konform.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -280,7 +280,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            BAAINBw, Stabilus, ZF, CompuGroup – Beschaffung, Automotive und Health-IT
+            BAAINBw, Stabilus, ZF, CompuGroup - Beschaffung, Automotive und Health-IT
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo das Beschaffungsamt der Bundeswehr auf Weltmarktführer-Mittelstand trifft
@@ -296,8 +296,8 @@ export default async function Page({
         </IntroBox>
         <div className="mt-8 space-y-6">
           <Typo.Paragraph>
-            Das BAAINBw – Bundesamt für Ausrüstung, Informationstechnik und
-            Nutzung der Bundeswehr – ist eine der größten zivilen Bundesbehörden
+            Das BAAINBw - Bundesamt für Ausrüstung, Informationstechnik und
+            Nutzung der Bundeswehr - ist eine der größten zivilen Bundesbehörden
             in Rheinland-Pfalz mit rund 4.400 Beschäftigten und verantwortet
             zweistellige Milliardenvolumen pro Jahr. Mit dem Sondervermögen
             Bundeswehr und der NATO-Aufrüstung sollen Materialbeschaffung
@@ -306,7 +306,7 @@ export default async function Page({
             automatisieren: BAFA-Exportkontrolle, ITAR-Pre-Approval, NATO-
             Codifizierung (NCS), Stock-Number-Pflege, IUID-Markierung und
             Sicherheitsüberprüfungen nach SÜG. Daneben sitzen in Koblenz das
-            Streitkräfteamt und die WTD 41 – eine seltene Konzentration von
+            Streitkräfteamt und die WTD 41 - eine seltene Konzentration von
             Wehrtechnik-Beschaffung an einem Standort.
           </Typo.Paragraph>
           <Typo.Paragraph>
@@ -345,7 +345,7 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                Bundeswehr beschleunigt Beschaffung – was machen Zulieferer?
+                Bundeswehr beschleunigt Beschaffung - was machen Zulieferer?
               </Typo.H2>
               <Typo.Paragraph>
                 BAAINBw und Bundeswehr fahren das Tempo hoch. Wehrtechnische
@@ -359,7 +359,7 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 4. DataTable – Wehrtechnik-/Automotive-Vergleich */}
+      {/* 4. DataTable - Wehrtechnik-/Automotive-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>

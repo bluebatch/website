@@ -179,29 +179,29 @@ export async function generateMetadata({
 
 const herneFaqs = [
   {
-    question: "Kelvion steuert weltweit 75+ Länder – wie automatisieren wir Multi-Site-Konzernprozesse?",
+    question: "Kelvion steuert weltweit 75+ Länder - wie automatisieren wir Multi-Site-Konzernprozesse?",
     answer:
       "Kelvion und ähnliche globale Mittelständler brauchen Multi-Site-ERP-Konsolidierung, Multi-Currency-Buchhaltung, Konzern-Reporting nach IFRS und einheitliches Lieferanten-Management. n8n verbindet SAP-, Dynamics- und MES-Instanzen verschiedener Tochtergesellschaften zu einer Pipeline.",
   },
   {
-    question: "Stadtwerke Herne fällt unter KRITIS – ist n8n MaKo- und BSI-tauglich?",
+    question: "Stadtwerke Herne fällt unter KRITIS - ist n8n MaKo- und BSI-tauglich?",
     answer:
       "Ja. Marktkommunikation MaKo 2024, EDIFACT-Nachrichten an Netzbetreiber und Lieferanten, Smart-Meter-Rollout-Steuerung und BSI-Meldepflichten laufen auf self-hosted n8n. BSI-Grundschutz-konform, mit Härtung nach CIS-Benchmarks und WORM-Audit-Trail.",
   },
   {
-    question: "Logistik im Herz des Reviers – wie automatisieren wir ATLAS, EDI und Frachtbriefe?",
+    question: "Logistik im Herz des Reviers - wie automatisieren wir ATLAS, EDI und Frachtbriefe?",
     answer:
       "Hochfrequenz-Logistik braucht ATLAS-Zoll, EDIFACT/EANCOM-Anbindung an Verlader und LEH, automatische CMR-Erfassung und Gefahrgut-Doku. n8n koppelt TMS, WMS, ERP und Carrier-APIs zu durchgängigen Sendungs-Workflows.",
   },
   {
-    question: "Glasfaser-Ausbau ermöglicht Cloud – wie helfen Workflows in der Migration?",
+    question: "Glasfaser-Ausbau ermöglicht Cloud - wie helfen Workflows in der Migration?",
     answer:
-      "Mit FTTH/FTTB können auch Herner Mittelständler von On-Premise auf Cloud migrieren. n8n hilft bei hybriden Übergangsphasen: alte ERPs lokal, neue SaaS in der Cloud, gemeinsame Workflows zwischen beiden Welten – ohne Big-Bang-Migration.",
+      "Mit FTTH/FTTB können auch Herner Mittelständler von On-Premise auf Cloud migrieren. n8n hilft bei hybriden Übergangsphasen: alte ERPs lokal, neue SaaS in der Cloud, gemeinsame Workflows zwischen beiden Welten - ohne Big-Bang-Migration.",
   },
   {
-    question: "Klinik-Verbünde Ev. Krankenhaus + St. Anna – welche Workflows entlasten das Personal?",
+    question: "Klinik-Verbünde Ev. Krankenhaus + St. Anna - welche Workflows entlasten das Personal?",
     answer:
-      "DRG-Abrechnung mit Kostenträgern, KIS-ePA-Integration, Materialwirtschaft nach MDR und Personal-Planung. AI Agents klassifizieren Eingangsbefunde, extrahieren Daten und füllen Vorlagen vor – wichtig bei Personalmangel in Pflege und Verwaltung.",
+      "DRG-Abrechnung mit Kostenträgern, KIS-ePA-Integration, Materialwirtschaft nach MDR und Personal-Planung. AI Agents klassifizieren Eingangsbefunde, extrahieren Daten und füllen Vorlagen vor - wichtig bei Personalmangel in Pflege und Verwaltung.",
   },
 ];
 
@@ -232,14 +232,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Herne –{" "}
+                KI-Agentur in Herne -{" "}
                 von der Zechenstadt zum{" "}
                 <BackgroundHero.Highlight>Glasfaser-Hub im Ruhrherz</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus Kohle und RAG wurde Kelvion-HQ, Glasfaser-Vorzeigestadt und Logistik-Drehscheibe. Wir automatisieren genau die Workflows, die ein Standort im Herzen des Ruhrgebiets braucht – Multi-Site-Konzernsteuerung, KRITIS-MaKo und ATLAS-Zoll.
+            Aus Kohle und RAG wurde Kelvion-HQ, Glasfaser-Vorzeigestadt und Logistik-Drehscheibe. Wir automatisieren genau die Workflows, die ein Standort im Herzen des Ruhrgebiets braucht - Multi-Site-Konzernsteuerung, KRITIS-MaKo und ATLAS-Zoll.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Herne besprechen</ContactButton>
@@ -275,7 +275,7 @@ export default async function Page({
             Was passiert mit den Prozessen, wenn aus Zeche Maschinenbau und Logistik wird?
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Herne hat den Bergbau-Abschied lange hinter sich – und ist heute Synonym für die zweite Phase des Strukturwandels. Kelvion baut von hier aus Wärmeübertrager für 75+ Länder, Distributionszentren liefern für ALDI und H.D.S., Stadtwerke Herne meistern MaKo und KRITIS, der Glasfaserausbau macht die Stadt zur IT-affinen Mittelstands-Adresse. Jede dieser Säulen hat eigene Prozess-Pains.
+            Herne hat den Bergbau-Abschied lange hinter sich - und ist heute Synonym für die zweite Phase des Strukturwandels. Kelvion baut von hier aus Wärmeübertrager für 75+ Länder, Distributionszentren liefern für ALDI und H.D.S., Stadtwerke Herne meistern MaKo und KRITIS, der Glasfaserausbau macht die Stadt zur IT-affinen Mittelstands-Adresse. Jede dieser Säulen hat eigene Prozess-Pains.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
@@ -285,12 +285,12 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/herne.jpg"
-            alt="Kelvion-HQ und Glasfaser-Hub Herne – Strukturwandel"
+            alt="Kelvion-HQ und Glasfaser-Hub Herne - Strukturwandel"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Kelvion & Glasfaser-Stadt – wo Kohle war, ist heute globaler Maschinenbau</Typo.H2>
+            <Typo.H2>Kelvion & Glasfaser-Stadt - wo Kohle war, ist heute globaler Maschinenbau</Typo.H2>
             <Typo.Paragraph>
-              Kelvion liefert Wärmeübertrager in 75+ Länder, gesteuert aus Herne. Parallel macht der FTTH-Ausbau die Stadt zur attraktiven Adresse für IT-affine Mittelständler. Globale Konzernsteuerung, Cloud-Migrationen und KRITIS-konforme Versorgungs-Workflows: alles Felder für n8n. Wir verbinden diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Kelvion liefert Wärmeübertrager in 75+ Länder, gesteuert aus Herne. Parallel macht der FTTH-Ausbau die Stadt zur attraktiven Adresse für IT-affine Mittelständler. Globale Konzernsteuerung, Cloud-Migrationen und KRITIS-konforme Versorgungs-Workflows: alles Felder für n8n. Wir verbinden diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -303,12 +303,12 @@ export default async function Page({
 
       {/* 3. ProsCons */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Herne hinter sich gelassen hat – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Herne hinter sich gelassen hat - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
-                title="Kohle-Erbe – Bergbau seit den 1980ern in Auflösung"
+                title="Kohle-Erbe - Bergbau seit den 1980ern in Auflösung"
                 description="Klassische Zechenstadt mit RAG-Folgen, Brachflächen-Konversion und Altlast-Sanierung über Jahrzehnte."
               />
               <ProsCons.Item
@@ -317,25 +317,25 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Strukturschwacher Stadtteil, Fachkräftekonkurrenz"
-                description="Im Ruhrherz konkurrieren Dortmund, Bochum, Essen und Gelsenkirchen um dieselben Fachkräfte – Herner KMU müssen aufholen."
+                description="Im Ruhrherz konkurrieren Dortmund, Bochum, Essen und Gelsenkirchen um dieselben Fachkräfte - Herner KMU müssen aufholen."
               />
               <ProsCons.Item
                 title="On-Premise-Altsysteme im Mittelstand"
-                description="Viele KMU sitzen auf 15-20 Jahre alten ERP-/CRM-Insellösungen – Migration auf Cloud/SaaS überfällig, aber risikobehaftet."
+                description="Viele KMU sitzen auf 15-20 Jahre alten ERP-/CRM-Insellösungen - Migration auf Cloud/SaaS überfällig, aber risikobehaftet."
               />
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
                 title="Kelvion Holding (5.250 Konzernbeschäftigte, HQ Herne)"
-                description="Globaler Wärmeübertrager-Anbieter für Industrie, Energie, Kälte- und Klimatechnik – wachsend durch Akquisitionen, mit massivem Workflow-Bedarf."
+                description="Globaler Wärmeübertrager-Anbieter für Industrie, Energie, Kälte- und Klimatechnik - wachsend durch Akquisitionen, mit massivem Workflow-Bedarf."
               />
               <ProsCons.Item
-                title="Glasfaser-Stadt – konsequenter FTTH/FTTB-Ausbau"
+                title="Glasfaser-Stadt - konsequenter FTTH/FTTB-Ausbau"
                 description="Herne treibt Glasfaser systematisch voran und positioniert sich als IT-affiner Mittelstands-Standort im Ruhrgebiet."
               />
               <ProsCons.Item
                 title="Logistik im 500-km-Radius zu einem Drittel der EU-Bevölkerung"
-                description="A2/A40/A43 plus Rhein-Herne-Kanal, Distributionszentren von ALDI, Westfalia und Imperial – 1.000+ neue Jobs in den letzten Jahren."
+                description="A2/A40/A43 plus Rhein-Herne-Kanal, Distributionszentren von ALDI, Westfalia und Imperial - 1.000+ neue Jobs in den letzten Jahren."
               />
               <ProsCons.Item
                 title="Stadtwerke Herne & zwei Klinikverbünde"
@@ -350,7 +350,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Herne heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">

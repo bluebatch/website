@@ -183,27 +183,27 @@ export async function generateMetadata({
 
 const hallesaaleFaqs = [
   {
-    question: "Chemiepark Leuna mit 100+ Unternehmen – wie automatisieren wir REACH, CLP und Störfall-Doku?",
+    question: "Chemiepark Leuna mit 100+ Unternehmen - wie automatisieren wir REACH, CLP und Störfall-Doku?",
     answer:
-      "REACH-Registrierungen, CLP-Kennzeichnung in 25+ Sprachen, ADR/RID-Gefahrgut, Störfallverordnung und IED-Industrie-Emissionsberichte sind hochkomplex. n8n verbindet SAP, EHS-Software, Behörden-Schnittstellen (REACH-IT, ELER) und Sicherheits-Audit-Datenbanken – auditfest und self-hosted.",
+      "REACH-Registrierungen, CLP-Kennzeichnung in 25+ Sprachen, ADR/RID-Gefahrgut, Störfallverordnung und IED-Industrie-Emissionsberichte sind hochkomplex. n8n verbindet SAP, EHS-Software, Behörden-Schnittstellen (REACH-IT, ELER) und Sicherheits-Audit-Datenbanken - auditfest und self-hosted.",
   },
   {
-    question: "Wasserstoff-Projekte (Total Leuna, Refhyne) – welche Workflows helfen bei Förder- und Genehmigungs-Pipeline?",
+    question: "Wasserstoff-Projekte (Total Leuna, Refhyne) - welche Workflows helfen bei Förder- und Genehmigungs-Pipeline?",
     answer:
       "Grüner Wasserstoff in Leuna verlangt Genehmigungs-Workflows über mehrere Behördenebenen (BImSchG, BNetzA, Bezirksregierung), Förder-Reporting (IPCEI, BMWK) und H2-Herkunftsnachweise (CertifHy, RED-II). n8n strukturiert mehrjährige Projekt-Lifecycles.",
   },
   {
-    question: "MDR-Hörfunkzentrum & Mitteldeutsches Druck- und Verlagshaus – welche Workflows lohnen sich?",
+    question: "MDR-Hörfunkzentrum & Mitteldeutsches Druck- und Verlagshaus - welche Workflows lohnen sich?",
     answer:
       "Print-/Web-/Audio-/Video-Workflow-Integration, Redaktionssysteme, Rechte-Clearing, Werbevermarktung und Vertriebslogistik der MZ-Tageszeitung. n8n verbindet CMS, DAM, Rechtemanagement und Anzeigen-Systeme.",
   },
   {
-    question: "Universitätsklinikum Halle (3.900 MA) – welche Workflows entlasten Versorgung und Forschung?",
+    question: "Universitätsklinikum Halle (3.900 MA) - welche Workflows entlasten Versorgung und Forschung?",
     answer:
-      "DRG-Abrechnung, Drittmittel-Reporting der Forschungsprojekte, Ethikkommissionen, eCRF und KIS-ePA-Integration. AI Agents klassifizieren Befunde und unterstützen klinische Studien-Logistik – wichtig bei Personalmangel.",
+      "DRG-Abrechnung, Drittmittel-Reporting der Forschungsprojekte, Ethikkommissionen, eCRF und KIS-ePA-Integration. AI Agents klassifizieren Befunde und unterstützen klinische Studien-Logistik - wichtig bei Personalmangel.",
   },
   {
-    question: "Strukturwandel-Förderung Kohleausstieg – wie dokumentieren wir Mittelverwendung?",
+    question: "Strukturwandel-Förderung Kohleausstieg - wie dokumentieren wir Mittelverwendung?",
     answer:
       "Strukturstärkungsgesetz Kohleregionen verlangt Nachweise zu Meilensteinen, Kofinanzierung, CO2-Effekten und Beschäftigungszielen. n8n sammelt Daten aus ERP, Projektmanagement und Energie-Monitoring und meldet automatisch an STBA und EU-EFRE.",
   },
@@ -236,14 +236,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Halle (Saale) –{" "}
+                KI-Agentur in Halle (Saale) -{" "}
                 Tor zum Mitteldeutschen Chemiedreieck und{" "}
                 <BackgroundHero.Highlight>Wasserstoff-Hub</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus DDR-Schwerindustrie wurde Chemiepark Leuna mit 100+ Unternehmen, Universitätsklinikum, MDR-Hörfunkzentrale und Wasserstoff-Pilot. Wir automatisieren genau die Workflows, die ein mitteldeutsches Industrie-Zentrum braucht – REACH, H2-Herkunftsnachweise und Redaktions-Pipelines.
+            Aus DDR-Schwerindustrie wurde Chemiepark Leuna mit 100+ Unternehmen, Universitätsklinikum, MDR-Hörfunkzentrale und Wasserstoff-Pilot. Wir automatisieren genau die Workflows, die ein mitteldeutsches Industrie-Zentrum braucht - REACH, H2-Herkunftsnachweise und Redaktions-Pipelines.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Halle besprechen</ContactButton>
@@ -279,7 +279,7 @@ export default async function Page({
             Was passiert mit den Prozessen, wenn aus DDR-Schwerindustrie ein Wasserstoff-Hub wird?
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Halle ist die größte Stadt Sachsen-Anhalts und Tor zum Mitteldeutschen Chemiedreieck (Halle-Merseburg-Bitterfeld) – Deutschlands größtem geschlossenen Chemiecluster. Auf 13 km² arbeiten im Chemiepark Leuna 100+ Unternehmen aus 10 Nationen. Daneben wachsen Universitätsklinikum, MDR-Hörfunkzentrale, Mitteldeutsches Druck- und Verlagshaus und Wasserstoff-Pilotprojekte. Jede dieser Säulen hat eigene Prozess-Pains.
+            Halle ist die größte Stadt Sachsen-Anhalts und Tor zum Mitteldeutschen Chemiedreieck (Halle-Merseburg-Bitterfeld) - Deutschlands größtem geschlossenen Chemiecluster. Auf 13 km² arbeiten im Chemiepark Leuna 100+ Unternehmen aus 10 Nationen. Daneben wachsen Universitätsklinikum, MDR-Hörfunkzentrale, Mitteldeutsches Druck- und Verlagshaus und Wasserstoff-Pilotprojekte. Jede dieser Säulen hat eigene Prozess-Pains.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
@@ -292,9 +292,9 @@ export default async function Page({
             alt="Chemiepark Leuna und Wasserstoff-Hub Halle"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Chemiepark Leuna & Wasserstoff-Hub – wo Buna war, fließt heute grüner H2</Typo.H2>
+            <Typo.H2>Chemiepark Leuna & Wasserstoff-Hub - wo Buna war, fließt heute grüner H2</Typo.H2>
             <Typo.Paragraph>
-              Aus dem ehemaligen DDR-Chemie-Erbe wurde mit InfraLeuna eine Industrie-Infrastruktur, die 100+ Chemieunternehmen aus 10 Nationen anzieht – jetzt mit Total Leuna, Refhyne und Linde als Wasserstoff-Pionieren. Quartiers- und Anlagen-Management bedeutet: REACH, CSRD, H2-Herkunftsnachweise, IPCEI-Reporting. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Aus dem ehemaligen DDR-Chemie-Erbe wurde mit InfraLeuna eine Industrie-Infrastruktur, die 100+ Chemieunternehmen aus 10 Nationen anzieht - jetzt mit Total Leuna, Refhyne und Linde als Wasserstoff-Pionieren. Quartiers- und Anlagen-Management bedeutet: REACH, CSRD, H2-Herkunftsnachweise, IPCEI-Reporting. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -309,7 +309,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Halle heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -344,7 +344,7 @@ export default async function Page({
 
       {/* 3. ProsCons */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Halle hinter sich lässt – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Halle hinter sich lässt - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
@@ -353,7 +353,7 @@ export default async function Page({
                 description="Klassische Buna-/Leuna-Chemie der DDR-Zeit ist verschwunden, riesige Brachflächen wurden in 20+ Jahren mühsam saniert und neu vermarktet."
               />
               <ProsCons.Item
-                title="Strukturschwacher Osten – Fachkräftekonkurrenz mit Leipzig"
+                title="Strukturschwacher Osten - Fachkräftekonkurrenz mit Leipzig"
                 description="Halle steht in direkter Konkurrenz zu Leipzig um Fachkräfte, gleichzeitig kämpft die Stadt mit Bevölkerungsschwund und Sparzwang."
               />
               <ProsCons.Item
@@ -367,16 +367,16 @@ export default async function Page({
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
-                title="Chemiepark Leuna – 100+ Unternehmen, 13 km², 10 Nationen"
-                description="Deutschlands größtes geschlossenes Chemiecluster, mit Domo, Linde, Total, UPM und Dow – plus 'Chemiepark Leuna 3' im Aufbau für Bioökonomie."
+                title="Chemiepark Leuna - 100+ Unternehmen, 13 km², 10 Nationen"
+                description="Deutschlands größtes geschlossenes Chemiecluster, mit Domo, Linde, Total, UPM und Dow - plus 'Chemiepark Leuna 3' im Aufbau für Bioökonomie."
               />
               <ProsCons.Item
                 title="Wasserstoff-Hub mit Total Leuna, Refhyne und Linde"
-                description="Grüne H2-Großprojekte, IPCEI-Förderung, neue Pipelines – das Chemiedreieck wird Deutschlands wichtigste Wasserstoff-Demonstrationsregion."
+                description="Grüne H2-Großprojekte, IPCEI-Förderung, neue Pipelines - das Chemiedreieck wird Deutschlands wichtigste Wasserstoff-Demonstrationsregion."
               />
               <ProsCons.Item
                 title="Martin-Luther-Universität + Uniklinikum (5.000 + 3.900 MA)"
-                description="Traditionsreiche Universität mit Pharmazie- und Chemie-Forschung, Universitätsklinikum als regionaler Versorger – plus IWH und Fraunhofer-Institute."
+                description="Traditionsreiche Universität mit Pharmazie- und Chemie-Forschung, Universitätsklinikum als regionaler Versorger - plus IWH und Fraunhofer-Institute."
               />
               <ProsCons.Item
                 title="MDR-Hörfunkzentrale und Medienstandort"

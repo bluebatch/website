@@ -191,27 +191,27 @@ export async function generateMetadata({
 
 const mannheimFaqs = [
   {
-    question: "Roche Diagnostics – passt n8n in eine GxP/IVDR-Welt?",
+    question: "Roche Diagnostics - passt n8n in eine GxP/IVDR-Welt?",
     answer:
-      "Ja. Roche Diagnostics ist der weltweit größte Diagnostik-Standort. QMS, IVDR-Konformität, technische Dokumentation, Service-Workflows und Marktüberwachung werden mit n8n und Veeva Vault verbunden – auditfest und mit voller Mandantentrennung.",
+      "Ja. Roche Diagnostics ist der weltweit größte Diagnostik-Standort. QMS, IVDR-Konformität, technische Dokumentation, Service-Workflows und Marktüberwachung werden mit n8n und Veeva Vault verbunden - auditfest und mit voller Mandantentrennung.",
   },
   {
-    question: "John Deere, Daimler Truck – wie helfen wir Landmaschinen-/Nutzfahrzeug-CPQ?",
+    question: "John Deere, Daimler Truck - wie helfen wir Landmaschinen-/Nutzfahrzeug-CPQ?",
     answer:
-      "John Deere investierte 80 Mio. EUR in robotische Lackierung. CPQ, Precision-Farming-Daten, autonomes Fahren, After-Sales und Ersatzteilversorgung werden mit n8n und SAP Service Cloud orchestriert – inklusive ISOBUS-/CAN-Daten.",
+      "John Deere investierte 80 Mio. EUR in robotische Lackierung. CPQ, Precision-Farming-Daten, autonomes Fahren, After-Sales und Ersatzteilversorgung werden mit n8n und SAP Service Cloud orchestriert - inklusive ISOBUS-/CAN-Daten.",
   },
   {
-    question: "MVV Energie und Wärmewende – welche Use-Cases?",
+    question: "MVV Energie und Wärmewende - welche Use-Cases?",
     answer:
-      "Smart-Meter-Rollout, Tarifwechsel, Netzanschluss-Prozesse, Wasserstoff-Workflows, BNetzA-Reporting und Bilanzkreis-Daten werden mit n8n abgebildet – ergänzt um Kundenkommunikation und Förderprogramm-Anbindung.",
+      "Smart-Meter-Rollout, Tarifwechsel, Netzanschluss-Prozesse, Wasserstoff-Workflows, BNetzA-Reporting und Bilanzkreis-Daten werden mit n8n abgebildet - ergänzt um Kundenkommunikation und Förderprogramm-Anbindung.",
   },
   {
-    question: "SAP Walldorf-Ökosystem – wie passt n8n daneben?",
+    question: "SAP Walldorf-Ökosystem - wie passt n8n daneben?",
     answer:
-      "SAP ist Backbone, n8n ist der schlanke Orchestrator drumherum. Wir bauen Workflows, die SAP S/4HANA, BTP und SuccessFactors mit Microsoft 365, HubSpot, Slack und Document AI verbinden – ohne mit SAP-Welten zu konkurrieren.",
+      "SAP ist Backbone, n8n ist der schlanke Orchestrator drumherum. Wir bauen Workflows, die SAP S/4HANA, BTP und SuccessFactors mit Microsoft 365, HubSpot, Slack und Document AI verbinden - ohne mit SAP-Welten zu konkurrieren.",
   },
   {
-    question: "Mannheimer Hafen – wie automatisieren wir Trimodal-Logistik?",
+    question: "Mannheimer Hafen - wie automatisieren wir Trimodal-Logistik?",
     answer:
       "Zweitgrößter Binnenhafen Deutschlands. Trimodal-Tracking (Schiene, Schiff, Lkw), Zoll-Workflows (ATLAS, NCTS), Slot-Management und CBAM-Reporting werden in n8n End-to-End orchestriert.",
   },
@@ -249,7 +249,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Mannheim –{" "}
+                KI-Agentur in Mannheim -{" "}
                 Rhein-Neckar-Cluster aus Pharma, Landmaschinen und{" "}
                 <BackgroundHero.Highlight>SAP</BackgroundHero.Highlight>
               </>
@@ -258,7 +258,7 @@ export default async function Page({
           <BackgroundHero.Description>
             Roche Diagnostics, John Deere, Daimler Truck, MVV Energie,
             Universitätsklinikum, Siemens, ABB, SAP-Achse Walldorf,
-            BASF-Achse Ludwigshafen, Mannheimer Hafen – Mannheim ist das
+            BASF-Achse Ludwigshafen, Mannheimer Hafen - Mannheim ist das
             industrielle Herz der Metropolregion Rhein-Neckar. Wir bauen
             n8n-Workflows für Pharma-Compliance, Landmaschinen-CPQ,
             Energiewende und Trimodal-Logistik.
@@ -295,16 +295,16 @@ export default async function Page({
         <BoundlessImageCard imagePosition="left">
           <BoundlessImageCard.Image
             src="/images/cities/mannheim.jpg"
-            alt="Mannheim Rhein-Neckar – n8n-Workflows für Pharma, Landmaschinen und Energie"
+            alt="Mannheim Rhein-Neckar - n8n-Workflows für Pharma, Landmaschinen und Energie"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Rhein-Neckar-Cluster – Heidelberg, Walldorf, Ludwigshafen in 30 Minuten</Typo.H2>
+            <Typo.H2>Rhein-Neckar-Cluster - Heidelberg, Walldorf, Ludwigshafen in 30 Minuten</Typo.H2>
             <Typo.Paragraph>
-              Der typische Mannheimer Mittelständler (50–1.000 MA) liefert
+              Der typische Mannheimer Mittelständler (50-1.000 MA) liefert
               an BASF, Roche, John Deere oder Daimler. Diese Großkunden
               verlangen Lieferanten-Portale, EDI, Audit-Dokumentation und
               CSRD-Reporting. Wir helfen Mittelständlern, mit schlanken
-              n8n-Workflows diese Anforderungen zu erfüllen – ohne eigene
+              n8n-Workflows diese Anforderungen zu erfüllen - ohne eigene
               Großorganisation aufbauen zu müssen.
             </Typo.Paragraph>
             <div className="mt-4">
@@ -344,7 +344,7 @@ export default async function Page({
         <Typo.H2>Mannheimer Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
           Roche steuert anders als John Deere, MVV anders als der Hafen.
-          Wir bauen für jeden Cluster die passenden n8n-Bausteine – vom
+          Wir bauen für jeden Cluster die passenden n8n-Bausteine - vom
           IVDR-Dossier bis zur Trimodal-Tracking-Pipeline.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -352,11 +352,11 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <FlaskConical className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Roche Diagnostics – weltgrößter Diagnostik-Standort</Typo.H3>
+            <Typo.H3>Roche Diagnostics - weltgrößter Diagnostik-Standort</Typo.H3>
             <Typo.Paragraph>
               8.500 Beschäftigte in Mannheim. QMS, IVDR-Konformität,
               technische Dokumentation, Marktüberwachung und Service-
-              Workflows werden mit n8n und Veeva Vault verbunden –
+              Workflows werden mit n8n und Veeva Vault verbunden -
               auditfest und mit Mandantentrennung pro Produktlinie.
             </Typo.Paragraph>
           </SimpleCard>
@@ -364,7 +364,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Wheat className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>John Deere &amp; Daimler Truck – Landmaschinen &amp; Nutzfahrzeuge</Typo.H3>
+            <Typo.H3>John Deere &amp; Daimler Truck - Landmaschinen &amp; Nutzfahrzeuge</Typo.H3>
             <Typo.Paragraph>
               John Deere Europa-Hauptsitz, Daimler-Truck-Werk Mannheim mit
               3.500 Beschäftigten. CPQ-Konfiguration, Precision Farming,
@@ -376,7 +376,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Zap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>MVV Energie – größter Arbeitgeber Mannheims</Typo.H3>
+            <Typo.H3>MVV Energie - größter Arbeitgeber Mannheims</Typo.H3>
             <Typo.Paragraph>
               6.500 Beschäftigte, kommunaler Versorger mit Wasserstoff-
               und Wärmenetz-Ausbau. Smart-Meter-Rollout, Tarifwechsel,
@@ -392,7 +392,7 @@ export default async function Page({
             <Typo.Paragraph>
               Eine der dichtesten SAP-Beratungsszenen Deutschlands. Wir
               bauen n8n als schlanken Orchestrator um SAP S/4HANA, BTP
-              und SuccessFactors herum – ergänzt um Microsoft 365,
+              und SuccessFactors herum - ergänzt um Microsoft 365,
               HubSpot, Slack und Document AI.
             </Typo.Paragraph>
           </SimpleCard>
@@ -400,7 +400,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Truck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Mannheimer Hafen – zweitgrößter Binnenhafen Deutschlands</Typo.H3>
+            <Typo.H3>Mannheimer Hafen - zweitgrößter Binnenhafen Deutschlands</Typo.H3>
             <Typo.Paragraph>
               Intermodale Containerterminals, Rangierbahnhof und
               Hafen-Slots. Trimodal-Tracking (Schiene, Schiff, Lkw),
@@ -430,7 +430,7 @@ export default async function Page({
           <Typo.Paragraph>
             Mannheim sitzt mitten im innovationsstärksten Raum Europas:
             Heidelberg (DKFZ, EMBL), Walldorf (SAP), Ludwigshafen (BASF),
-            Karlsruhe (KIT) – alle in 30 Minuten erreichbar. Roche
+            Karlsruhe (KIT) - alle in 30 Minuten erreichbar. Roche
             Diagnostics ist hier weltweit größter Diagnostik-Standort,
             John Deere Europa-Hauptsitz, MVV der größte kommunale
             Energieversorger der Region. 58,3 Mrd. EUR kumulierter Umsatz

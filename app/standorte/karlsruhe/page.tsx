@@ -184,27 +184,27 @@ export async function generateMetadata({
 
 const karlsruheFaqs = [
   {
-    question: "dm-drogerie markt und dmTECH – passt n8n in einen 4.000-Filialen-Konzern?",
+    question: "dm-drogerie markt und dmTECH - passt n8n in einen 4.000-Filialen-Konzern?",
     answer:
       "Ja. dm betreibt über 4.000 Märkte in Europa, dmTECH ist eine der größten Inhouse-ITs Deutschlands. Wir bauen n8n-Workflows auf der Lieferantenseite (Markenartikler, Eigenmarken): EDI, Spezifikationen, Listungs-Workflows und Promotion-Daten ergänzen die dmTECH-Plattform.",
   },
   {
-    question: "CyberForum, KASTEL – wie hilft n8n bei NIS2 und DORA?",
+    question: "CyberForum, KASTEL - wie hilft n8n bei NIS2 und DORA?",
     answer:
       "NIS2-Workflows (Meldepflichten, Incident-Response), DORA für Finanz-IT, ISO 27001, BSI-Grundschutz, Sicherheitsaudits und Risikoanalysen sind klassische n8n-Felder. Wir docken an SIEM-Systeme (Splunk, Elastic, Wazuh) und Ticket-Plattformen an.",
   },
   {
-    question: "EnBW – wie automatisieren wir Energiewende-Workflows?",
+    question: "EnBW - wie automatisieren wir Energiewende-Workflows?",
     answer:
-      "Smart-Meter-Rollout, Netzanschlüsse für Solar/Wind/Wallboxen, Marktkommunikation (MaKo, MaBiS), BNetzA-Vorgaben und CSRD-Reporting werden in n8n-Pipelines abgebildet – inklusive Kundenservice-Anbindung.",
+      "Smart-Meter-Rollout, Netzanschlüsse für Solar/Wind/Wallboxen, Marktkommunikation (MaKo, MaBiS), BNetzA-Vorgaben und CSRD-Reporting werden in n8n-Pipelines abgebildet - inklusive Kundenservice-Anbindung.",
   },
   {
-    question: "1&1, IONOS, United Internet – wie skaliert n8n Hosting-Operations?",
+    question: "1&1, IONOS, United Internet - wie skaliert n8n Hosting-Operations?",
     answer:
       "Multi-Tenant-Onboarding, Abrechnung, Provisioning, eIDAS- und DSGVO-Workflows sind massiv volumig. n8n orchestriert Customer-Lifecycle, Mandanten-Migrationen und Compliance-Reporting parallel zu bestehenden Hosting-Plattformen.",
   },
   {
-    question: "KIT – wie schaffen wir Drittmittel-Reporting für 400 Mio. EUR?",
+    question: "KIT - wie schaffen wir Drittmittel-Reporting für 400 Mio. EUR?",
     answer:
       "Antragstellung, Mittelverwendung, Reporting an BMBF, DFG, EU (Horizon) und industrielle Förderprogramme sind extrem dokumentationsintensiv. Wir bauen Workflow-Plattformen, die KIT-Großforschung und Hochschullehre parallel bedienen.",
   },
@@ -242,7 +242,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Karlsruhe –{" "}
+                KI-Agentur in Karlsruhe -{" "}
                 KIT, CyberForum und{" "}
                 <BackgroundHero.Highlight>Software-Cluster Südwest</BackgroundHero.Highlight>
               </>
@@ -251,7 +251,7 @@ export default async function Page({
           <BackgroundHero.Description>
             KIT, FZI, Fraunhofer IOSB, CyberForum, dm-drogerie markt mit
             dmTECH, EnBW, 1&amp;1, IONOS, United Internet, Bundesverfassungsgericht,
-            BGH – Karlsruhe ist Hauptstadt der IT-Sicherheit und Sitz der
+            BGH - Karlsruhe ist Hauptstadt der IT-Sicherheit und Sitz der
             Residenz des Rechts. Wir bauen n8n-Workflows für Omnichannel-
             Handel, Cybersecurity-Compliance, Energiewende und
             Drittmittel-Forschung.
@@ -286,7 +286,7 @@ export default async function Page({
         <Typo.H2>Karlsruher Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
           dm steuert anders als das KIT, EnBW anders als IONOS. Wir bauen
-          für jeden Cluster die passenden n8n-Bausteine – vom Promotion-
+          für jeden Cluster die passenden n8n-Bausteine - vom Promotion-
           Listing bis zum NIS2-Incident-Workflow.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -299,14 +299,14 @@ export default async function Page({
               4.000+ Märkte in Europa, dmTECH mit 1.200+ Beschäftigten.
               Lieferantenseite (Markenartikler, Eigenmarken), EDI,
               Spezifikationen, Listungs- und Promotion-Workflows werden
-              mit n8n abgebildet – ergänzend zur dmTECH-Plattform.
+              mit n8n abgebildet - ergänzend zur dmTECH-Plattform.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
             <SimpleCard.Icon color="white" background="primary-gradient">
               <ShieldCheck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>CyberForum, KASTEL, Fraunhofer SIT – Cybersecurity-Cluster</Typo.H3>
+            <Typo.H3>CyberForum, KASTEL, Fraunhofer SIT - Cybersecurity-Cluster</Typo.H3>
             <Typo.Paragraph>
               Deutschlands Hauptstadt für IT-Sicherheit. NIS2-Meldepflichten,
               DORA für Finanz-IT, ISO 27001, BSI-Grundschutz, Sicherheits-
@@ -318,11 +318,11 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Zap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>EnBW – Energieversorger mit Sitz in Karlsruhe</Typo.H3>
+            <Typo.H3>EnBW - Energieversorger mit Sitz in Karlsruhe</Typo.H3>
             <Typo.Paragraph>
               Smart-Meter-Rollout, Netzanschlüsse für Solar/Wind/Wallboxen,
               BNetzA-Reporting, MaKo-/MaBiS-Pipelines und CSRD-Reporting
-              werden in n8n End-to-End abgebildet – mit Anbindung an
+              werden in n8n End-to-End abgebildet - mit Anbindung an
               Kundenservice-Plattformen.
             </Typo.Paragraph>
           </SimpleCard>
@@ -330,7 +330,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cpu className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>1&amp;1, IONOS, United Internet – Hosting-Champions</Typo.H3>
+            <Typo.H3>1&amp;1, IONOS, United Internet - Hosting-Champions</Typo.H3>
             <Typo.Paragraph>
               Millionen Kunden-Mandanten, Onboarding, Provisioning,
               Abrechnung, eIDAS- und DSGVO-Compliance laufen massiv-volumig.
@@ -342,7 +342,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <GraduationCap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>KIT, FZI, Fraunhofer IOSB – Forschungs-Cluster</Typo.H3>
+            <Typo.H3>KIT, FZI, Fraunhofer IOSB - Forschungs-Cluster</Typo.H3>
             <Typo.Paragraph>
               KIT mit 9.800 Beschäftigten und 400 Mio. EUR Drittmittel
               jährlich. Antragstellung, Mittelverwendung, Reporting an
@@ -354,7 +354,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Landmark className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>BVerfG, BGH – Residenz des Rechts</Typo.H3>
+            <Typo.H3>BVerfG, BGH - Residenz des Rechts</Typo.H3>
             <Typo.Paragraph>
               Bundesverfassungsgericht, Bundesgerichtshof, Bundesanwaltschaft.
               Rund um sie siedeln sich Kanzleien, Verlage und juristische
@@ -370,15 +370,15 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/karlsruhe.jpg"
-            alt="Karlsruhe Software-Cluster Südwest – n8n-Workflows für IT, Cybersecurity und Forschung"
+            alt="Karlsruhe Software-Cluster Südwest - n8n-Workflows für IT, Cybersecurity und Forschung"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Silicon Valley für Enterprise-Software – Karlsruhe baut Workflows ein</Typo.H2>
+            <Typo.H2>Silicon Valley für Enterprise-Software - Karlsruhe baut Workflows ein</Typo.H2>
             <Typo.Paragraph>
               Das Software-Cluster Südwest umfasst 134.000 Beschäftigte in
               11.000 Firmen. Im "Silicon Valley für Enterprise-Software"
               entstehen kontinuierlich Startups. Diese benötigen schnell
-              Finanzbuchhaltung, Compliance, HR-Workflows – ohne eigene
+              Finanzbuchhaltung, Compliance, HR-Workflows - ohne eigene
               IT-Teams. Wir helfen Spin-offs und etablierten IT-Häusern
               gleichermaßen, mit n8n als gemeinsamem Rückgrat zu skalieren.
             </Typo.Paragraph>

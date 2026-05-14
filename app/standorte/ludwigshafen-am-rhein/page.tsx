@@ -147,7 +147,7 @@ export async function generateMetadata({
     "KI-Agentur in Ludwigshafen | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Chemie- und Pharma-Automatisierung in Ludwigshafen: n8n-Workflows für BASF-Zulieferer, AbbVie und Mittelstand im Verbund – REACH-, GxP- und Gefahrgut-konform, self-hosted.";
+    "Chemie- und Pharma-Automatisierung in Ludwigshafen: n8n-Workflows für BASF-Zulieferer, AbbVie und Mittelstand im Verbund - REACH-, GxP- und Gefahrgut-konform, self-hosted.";
 
   return {
     title,
@@ -188,7 +188,7 @@ export async function generateMetadata({
 
 const ludwigshafenamrheinFaqs = [
   {
-    question: "Wir sind BASF-Verbundpartner – wie integriert ihr n8n in unsere SAP-Welt?",
+    question: "Wir sind BASF-Verbundpartner - wie integriert ihr n8n in unsere SAP-Welt?",
     answer:
       "Self-hosted on-premise mit Anbindung an SAP S/4HANA über IDocs und OData. Wir decken Rahmenvertrags-Abrufe, Verbund-Bestellungen, Anlagen-Lifecycle und HSE-Dokumentation ab, mit vollem Audit-Trail. Catena-X- und Verbund-EDI-Pflichten lassen sich genauso abbilden wie REACH-Anhang-XVII-Reports.",
   },
@@ -200,7 +200,7 @@ const ludwigshafenamrheinFaqs = [
   {
     question: "Lässt sich Gefahrgut-Dokumentation im Rheinhafen Ludwigshafen automatisieren?",
     answer:
-      "Ja. Wir verbinden ADN-, RID- und ADR-Pflichtdaten aus SAP TM oder ATLAS-Zoll mit n8n-Workflows. Multimodal-Trackings, CMR-Frachtbriefe und CBAM-Reports laufen automatisch – inklusive der Sicherheitsdatenblätter nach GHS für die BASF-eigene Hafenflotte.",
+      "Ja. Wir verbinden ADN-, RID- und ADR-Pflichtdaten aus SAP TM oder ATLAS-Zoll mit n8n-Workflows. Multimodal-Trackings, CMR-Frachtbriefe und CBAM-Reports laufen automatisch - inklusive der Sicherheitsdatenblätter nach GHS für die BASF-eigene Hafenflotte.",
   },
   {
     question: "Was bringt n8n bei der CO2-Bilanzierung und ESG-Reporting?",
@@ -208,7 +208,7 @@ const ludwigshafenamrheinFaqs = [
       "BASF, Pfalzwerke und TWL investieren in Wasserstoff und CCS. Wir aggregieren Energiedaten aus SCADA, ERP und Marktkommunikations-EDIFACT zu CSRD-konformen Reports. ESRS E1 (Klima), EU-ETS-Meldungen und CBAM-Berichte werden zentral und auditfest erzeugt.",
   },
   {
-    question: "Wir sind Mittelständler mit 200 MA im BASF-Verbund – lohnt sich das überhaupt?",
+    question: "Wir sind Mittelständler mit 200 MA im BASF-Verbund - lohnt sich das überhaupt?",
     answer:
       "Gerade dann. Wer aus den BASF-Rahmenverträgen fliegt, weil EDI-Anbindung fehlt, verliert sofort Millionenumsatz. Wir bauen die EDIFACT-, IDoc- und Catena-X-Schnittstellen zum Festpreis, on-premise in eurem deutschen Rechenzentrum, in 4 bis 8 Wochen produktiv.",
   },
@@ -241,7 +241,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Ludwigshafen –{" "}
+                KI-Agentur in Ludwigshafen -{" "}
                 Chemie- und Pharma-Automatisierung im{" "}
                 <BackgroundHero.Highlight>BASF-Verbund</BackgroundHero.Highlight>
               </>
@@ -250,7 +250,7 @@ export default async function Page({
           <BackgroundHero.Description>
             BASF, AbbVie, TWL und Pfalzwerke prägen den Ludwigshafener
             Arbeitsmarkt. Wir automatisieren Verbund-, GxP- und Energie-Workflows
-            mit self-hosted n8n – REACH-, GAMP-5- und ADR-konform.
+            mit self-hosted n8n - REACH-, GAMP-5- und ADR-konform.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">
@@ -282,13 +282,13 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            BASF, AbbVie, TWL – Verbund-Prozesse im weltgrößten Chemiewerk
+            BASF, AbbVie, TWL - Verbund-Prozesse im weltgrößten Chemiewerk
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo der Verbund-Gedanke auf Pharma-GxP und Energiewende trifft
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Ludwigshafen ist die BASF-Stadt – und gleichzeitig zweitgrößter
+            Ludwigshafen ist die BASF-Stadt - und gleichzeitig zweitgrößter
             globaler F&E-Standort von AbbVie. Verbundproduktion, GxP-Pharma
             und Energiewende-Anforderungen liegen hier in einem einzigen
             Industrieareal. Wer als Zulieferer im Spiel bleiben will, muss
@@ -300,7 +300,7 @@ export default async function Page({
             Das BASF-Stammwerk auf rund 10 km² ist das weltgrößte zusammenhängende
             Chemiewerk, mit etwa 200 Produktionsanlagen, über 2.000 Kilometern
             Rohrleitungen und rund 33.000 Beschäftigten am Standort. Das
-            Verbund-Konzept – integrierte Stoffströme zwischen den Anlagen –
+            Verbund-Konzept - integrierte Stoffströme zwischen den Anlagen -
             ist Weltbenchmark der Prozessindustrie und erzwingt einen
             engmaschigen EDI-Datenaustausch mit hunderten Zulieferern: vom
             Engineering-Dienstleister über Wartungsbetriebe bis zu
@@ -313,7 +313,7 @@ export default async function Page({
             F&E-Standort mit rund 1.900 Beschäftigten, mit Forschungstradition
             seit Knoll/Abbott. GxP-Compliance, FDA-Audits, EudraVigilance-Meldungen
             und klinisches Datenmanagement nach 21 CFR Part 11 und Annex 11
-            sind Pflicht – und ziehen das gleiche Anforderungsniveau bei
+            sind Pflicht - und ziehen das gleiche Anforderungsniveau bei
             Verpackern, Labordienstleistern und Engineering-Betrieben nach sich.
             Mittelständler ohne validierte Workflows haben hier keine Chance.
           </Typo.Paragraph>
@@ -338,7 +338,7 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                BASF baut KI-Teams für Predictive Maintenance – was machen Zulieferer?
+                BASF baut KI-Teams für Predictive Maintenance - was machen Zulieferer?
               </Typo.H2>
               <Typo.Paragraph>
                 BASF betreibt eigene Data-Science- und KI-Teams für
@@ -346,7 +346,7 @@ export default async function Page({
                 Engineering, Wartung, Logistik und Mess-/Steuerungstechnik
                 brauchen einen anderen Hebel: schlanke Workflows, die SAP S/4HANA,
                 das BASF-Lieferantenportal und ihre eigene Disposition ohne
-                manuelle Doppelerfassung verbinden – self-hosted, on-premise,
+                manuelle Doppelerfassung verbinden - self-hosted, on-premise,
                 modular erweiterbar.
               </Typo.Paragraph>
             </BoundlessImageCard.Content>
@@ -354,7 +354,7 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 4. DataTable – Verbund-Prozesse */}
+      {/* 4. DataTable - Verbund-Prozesse */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>

@@ -168,7 +168,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/remscheid.jpg", width: 1200, height: 630, alt: "Remscheid – Stadt der 1000 Werkzeuge und Heimat von Vaillant" }],
+      images: [{ url: "/images/cities/remscheid.jpg", width: 1200, height: 630, alt: "Remscheid - Stadt der 1000 Werkzeuge und Heimat von Vaillant" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/remscheid.jpg"] },
     alternates: { canonical: "/ki-agentur-remscheid" },
@@ -177,17 +177,17 @@ export async function generateMetadata({
 
 const remscheidFaqs = [
   {
-    question: "Vaillant-Fachhandwerker – wie hilft Automatisierung bei BAFA/KfW?",
+    question: "Vaillant-Fachhandwerker - wie hilft Automatisierung bei BAFA/KfW?",
     answer:
       "Workflows orchestrieren Förderanträge, technische Unterlagen, Bestellfreigaben und Verwendungsnachweise zwischen Handwerker-Portal, ERP, BAFA-Schnittstelle und Kundenakte. Die Antragsbearbeitung verkürzt sich von Wochen auf Tage.",
   },
   {
     question: "Knipex- oder Stahlwille-Händler: was bringt n8n konkret?",
     answer:
-      "Händler-Onboarding mit MOQ-Verträgen, EAN-Pflege via PIM, automatische Marketing-Asset-Verteilung und Bestellabwicklung – inklusive Marktschutz-Logik für Premium-Marken. Reduziert manuelle Vertriebs-Innendienst-Last spürbar.",
+      "Händler-Onboarding mit MOQ-Verträgen, EAN-Pflege via PIM, automatische Marketing-Asset-Verteilung und Bestellabwicklung - inklusive Marktschutz-Logik für Premium-Marken. Reduziert manuelle Vertriebs-Innendienst-Last spürbar.",
   },
   {
-    question: "Wir sind Werkzeug-Mittelstand – wo lohnt sich KI zuerst?",
+    question: "Wir sind Werkzeug-Mittelstand - wo lohnt sich KI zuerst?",
     answer:
       "Bei Angebotskalkulation für Sonderwerkzeuge (CPQ), bei automatischer Lieferanten-Sanktionslisten-Prüfung und bei der Reklamations-Klassifikation mit AI Agents. Drei Bereiche, die Innendienst entlasten.",
   },
@@ -197,7 +197,7 @@ const remscheidFaqs = [
       "Ja. Werkstoffprüfberichte, Härteprüfungen, Toleranzmessungen und Audit-Reports werden in revisionssicheren n8n-Workflows orchestriert. Anbindung an MES, ERP und QM-Spezial-Tools wie CAQ AG inklusive.",
   },
   {
-    question: "After-Sales mit 50.000+ Fachhandwerkern – wie skaliert das?",
+    question: "After-Sales mit 50.000+ Fachhandwerkern - wie skaliert das?",
     answer:
       "AI-Agent-Vorklassifikation für eingehende Service-Tickets, automatische Ersatzteil-Bestellung mit Verfügbarkeitsprüfung und Garantie-Workflow mit Vier-Augen-Freigabe. Wir reduzieren die Bearbeitungszeit pro Ticket um 50-70 %.",
   },
@@ -222,10 +222,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Remscheid – Stadt der 1000 Werkzeuge"}
+              {overrides?.preHeadline ?? "Standort Remscheid - Stadt der 1000 Werkzeuge"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Remscheid – für Werkzeugindustrie und Vaillant-Heizungstechnik"}
+              {overrides?.headline ?? "KI-Agentur in Remscheid - für Werkzeugindustrie und Vaillant-Heizungstechnik"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Knipex, Stahlwille, Stabila, Hazet und Vaillant prägen Remscheid. Wir bauen Workflows für ISO-9001-konforme Werkzeug-Fertigung, Heizungs-Wärmepumpen-Förderprogramme (BAFA/KfW) und händlernahe CPQ-Pipelines.
@@ -239,22 +239,22 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/remscheid.jpg"
-              alt="Remscheid – Stadt der 1000 Werkzeuge und Heimat von Vaillant"
+              alt="Remscheid - Stadt der 1000 Werkzeuge und Heimat von Vaillant"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Remscheider Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
           <NumberedList>
             <NumberedList.Item title="Vaillant und die Wärmepumpen-Energiewende:">
-              Vaillant beschäftigt 14.000 Menschen weltweit, davon 2.500+ in Remscheid. Heizungswechsel mit BAFA-/KfW-Förderung erfordert lückenlose Antrags-, Bestell- und Installations-Dokumentation – vom Fachhandwerker bis zur Fördergeld-Auszahlung.
+              Vaillant beschäftigt 14.000 Menschen weltweit, davon 2.500+ in Remscheid. Heizungswechsel mit BAFA-/KfW-Förderung erfordert lückenlose Antrags-, Bestell- und Installations-Dokumentation - vom Fachhandwerker bis zur Fördergeld-Auszahlung.
             </NumberedList.Item>
             <NumberedList.Item title="Premium-Werkzeug-Fachhandel mit über 100 Ländern:">
-              Knipex (Zangen), Stahlwille (Drehmoment-Tools), Stabila (Wasserwaagen), Hazet (Werkstattausrüstung) – Premium-Marken mit globalem Fachhandels-Vertrieb. Händler-Onboarding, MOQ-Verträge und EAN-Pflege sind komplexe Workflow-Themen.
+              Knipex (Zangen), Stahlwille (Drehmoment-Tools), Stabila (Wasserwaagen), Hazet (Werkstattausrüstung) - Premium-Marken mit globalem Fachhandels-Vertrieb. Händler-Onboarding, MOQ-Verträge und EAN-Pflege sind komplexe Workflow-Themen.
             </NumberedList.Item>
             <NumberedList.Item title="ISO-9001- und Fachhandwerks-Qualitätsanforderungen:">
               Werkzeuge für Profihandwerker unterliegen DIN/ISO-Prüfvorschriften. Werkstoffprüfberichte, Härteprüfungen und Toleranzmessungen werden in QM-Pipelines dokumentiert.
@@ -282,7 +282,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Remscheider Werkzeug- und Heizungs-Unternehmen</Typo.H2>
         <SimpleGrid cols={2}>
@@ -325,17 +325,17 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Remscheid – seit 1867 "Stadt der 1000 Werkzeuge"
+            Remscheid - seit 1867 "Stadt der 1000 Werkzeuge"
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Werkzeuge weltweit Fachhandelsstandards setzen und Wärmepumpen die Energiewende tragen, müssen Workflows hochpräzise sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Knipex, Stahlwille und Stabila gehören zu den Premium-Marken im professionellen Werkzeugmarkt. Vaillant ist Europas führender Heizungshersteller. Beide Welten verlangen spezialisierte Workflows – für Händler-Pipelines, BAFA/KfW-Förderdokumentation und After-Sales-Service.
+            Knipex, Stahlwille und Stabila gehören zu den Premium-Marken im professionellen Werkzeugmarkt. Vaillant ist Europas führender Heizungshersteller. Beide Welten verlangen spezialisierte Workflows - für Händler-Pipelines, BAFA/KfW-Förderdokumentation und After-Sales-Service.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>

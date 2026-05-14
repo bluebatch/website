@@ -171,7 +171,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/reutlingen.jpg", width: 1200, height: 630, alt: "Reutlingen – Bosch Halbleiter, Hugo Boss und Maschinenbau" }],
+      images: [{ url: "/images/cities/reutlingen.jpg", width: 1200, height: 630, alt: "Reutlingen - Bosch Halbleiter, Hugo Boss und Maschinenbau" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/reutlingen.jpg"] },
     alternates: { canonical: "/ki-agentur-reutlingen" },
@@ -182,7 +182,7 @@ const reutlingenFaqs = [
   {
     question: "Bosch-Halbleiter-Zulieferer: wie hilft Automatisierung?",
     answer:
-      "Lieferanten-Qualifizierung, Reinraum-Logs nach ISO 14644, ESD-Compliance und FAB-Service-Workflows in n8n-Pipelines. Anbindung an SAP, MES und FAB-Compliance-Tools – verkürzt Lieferanten-Onboarding spürbar.",
+      "Lieferanten-Qualifizierung, Reinraum-Logs nach ISO 14644, ESD-Compliance und FAB-Service-Workflows in n8n-Pipelines. Anbindung an SAP, MES und FAB-Compliance-Tools - verkürzt Lieferanten-Onboarding spürbar.",
   },
   {
     question: "Outlet-City-Mittelstand: was bringt n8n im Premium-Fashion?",
@@ -192,7 +192,7 @@ const reutlingenFaqs = [
   {
     question: "Stoll-/KARL-MAYER-Umfeld: wie helfen Workflows beim Globalexport?",
     answer:
-      "After-Sales-Tickets, Ersatzteil-Bestellungen und ITAR-/EAR-Klassifikation in n8n-Pipelines. SAP GTS, BAFA-ELAN-K2 und Field-Service-Apps integriert – reduziert After-Sales-Bearbeitungszeit um 50-70 %.",
+      "After-Sales-Tickets, Ersatzteil-Bestellungen und ITAR-/EAR-Klassifikation in n8n-Pipelines. SAP GTS, BAFA-ELAN-K2 und Field-Service-Apps integriert - reduziert After-Sales-Bearbeitungszeit um 50-70 %.",
   },
   {
     question: "Wir sind Reutlinger Hidden Champion: wo lohnt sich KI zuerst?",
@@ -202,7 +202,7 @@ const reutlingenFaqs = [
   {
     question: "Hochschule Reutlingen-Kooperation: wie helfen Workflows?",
     answer:
-      "Bei internationalen Partnerschaften, Dual-Degree-Programmen und industrienaher Forschung. Anbindung an HISinOne, SAP CO und Industriepartner-Verträge – plus Visa-Workflows mit Auslandsbehörden.",
+      "Bei internationalen Partnerschaften, Dual-Degree-Programmen und industrienaher Forschung. Anbindung an HISinOne, SAP CO und Industriepartner-Verträge - plus Visa-Workflows mit Auslandsbehörden.",
   },
 ];
 
@@ -225,10 +225,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Reutlingen – zwischen Stuttgart und Tübingen"}
+              {overrides?.preHeadline ?? "Standort Reutlingen - zwischen Stuttgart und Tübingen"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Reutlingen – für Bosch Halbleiter, Hugo Boss-Region und Maschinenbau"}
+              {overrides?.headline ?? "KI-Agentur in Reutlingen - für Bosch Halbleiter, Hugo Boss-Region und Maschinenbau"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Bosch betreibt in Reutlingen die größte Halbleiter-Fab Europas, Hugo Boss-Hauptsitz Metzingen ist nah, Stoll baut Strickmaschinen weltweit. Wir bauen Workflows für Halbleiter-FAB-Lieferanten, Fashion-Outlet-Logistik und Maschinenbau-Compliance.
@@ -242,13 +242,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/reutlingen.jpg"
-              alt="Reutlingen – Bosch Halbleiter, Hugo Boss und Maschinenbau"
+              alt="Reutlingen - Bosch Halbleiter, Hugo Boss und Maschinenbau"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Reutlinger Halbleiter, Fashion und Maschinenbau</Typo.H2>
         <SimpleGrid cols={2}>
@@ -291,7 +291,7 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Reutlinger Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -315,11 +315,11 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Reutlingen – Europas größte Halbleiter-Fab vor Ort
+            Reutlingen - Europas größte Halbleiter-Fab vor Ort
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Bosch Halbleiter für 8-Zoll- und 12-Zoll-Wafer produziert und Hugo Boss in Metzingen 60 Mio. Outlet-Besucher empfängt, müssen Workflows global skalieren

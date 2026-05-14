@@ -167,7 +167,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/rostock.jpg", width: 1200, height: 630, alt: "Rostock – Hafenstadt und MV Werften an der Ostsee" }],
+      images: [{ url: "/images/cities/rostock.jpg", width: 1200, height: 630, alt: "Rostock - Hafenstadt und MV Werften an der Ostsee" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/rostock.jpg"] },
     alternates: { canonical: "/ki-agentur-rostock" },
@@ -176,7 +176,7 @@ export async function generateMetadata({
 
 const rostockFaqs = [
   {
-    question: "AIDA-Lieferant oder -Partner – wie hilft Automatisierung?",
+    question: "AIDA-Lieferant oder -Partner - wie hilft Automatisierung?",
     answer:
       "Bei Multi-Markt-Buchungspipelines, Lieferanten-Onboarding, Bordversorgungs-Logistik und After-Sales. n8n verbindet Buchungs-Systeme, Bordsysteme, Concierge und CRM zu durchgängigen Pipelines mit revisionssicherem Audit-Trail.",
   },
@@ -198,7 +198,7 @@ const rostockFaqs = [
   {
     question: "Uni Rostock und IOW: wie skaliert Drittmittel-Reporting?",
     answer:
-      "DFG-, BMBF- und EU-Förderprojekte mit Zeiterfassung, Verwendungsnachweis und Quartals-Reports. Anbindung an SAP CO, easy-Online, ECAS und Forschungsdatenbanken wie PANGAEA – mit revisionssicherem Audit-Trail.",
+      "DFG-, BMBF- und EU-Förderprojekte mit Zeiterfassung, Verwendungsnachweis und Quartals-Reports. Anbindung an SAP CO, easy-Online, ECAS und Forschungsdatenbanken wie PANGAEA - mit revisionssicherem Audit-Trail.",
   },
 ];
 
@@ -221,10 +221,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Rostock – Hanse- und Hafenstadt"}
+              {overrides?.preHeadline ?? "Standort Rostock - Hanse- und Hafenstadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Rostock – für Hafen, Marine, AIDA und Universität"}
+              {overrides?.headline ?? "KI-Agentur in Rostock - für Hafen, Marine, AIDA und Universität"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Rostock ist Mecklenburg-Vorpommerns größter Hafen, Heimat von AIDA Cruises, einer Marine-Tradition und der ältesten Universität im Ostseeraum (seit 1419). Wir bauen Workflows für maritime Logistik, Kreuzfahrt-Operations und Tourismus.
@@ -238,17 +238,17 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/rostock.jpg"
-              alt="Rostock – Hafenstadt und MV Werften an der Ostsee"
+              alt="Rostock - Hafenstadt und MV Werften an der Ostsee"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Rostock – seit 1419 Universitätsstadt an der Ostsee
+            Rostock - seit 1419 Universitätsstadt an der Ostsee
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo AIDA Reisen für 70 Märkte buchbar macht und Liebherr Marine 24/7-Service liefert, müssen Workflows global skalieren
@@ -272,7 +272,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Rostocker Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -296,7 +296,7 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Rostocker Hafen, Kreuzfahrt und Forschung</Typo.H2>
         <SimpleGrid cols={2}>

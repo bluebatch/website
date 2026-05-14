@@ -176,7 +176,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/bielefeld.jpg", width: 1200, height: 630, alt: "Bielefeld – Dr. Oetker, Schüco und Bertelsmann-Region" }],
+      images: [{ url: "/images/cities/bielefeld.jpg", width: 1200, height: 630, alt: "Bielefeld - Dr. Oetker, Schüco und Bertelsmann-Region" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/bielefeld.jpg"] },
     alternates: { canonical: "/standorte/bielefeld" },
@@ -192,12 +192,12 @@ const bielefeldFaqs = [
   {
     question: "Schüco- oder Fassadenbau-Mittelstand: was bringt n8n bei CE?",
     answer:
-      "CE-Konformität nach EN 14351, Energieausweis-Workflows und BIM-Pipelines (Allplan, Revit, Solibri). Anbindung an SAP, PLM und KfW-Förderportale – inklusive automatischer Konformitätserklärungen.",
+      "CE-Konformität nach EN 14351, Energieausweis-Workflows und BIM-Pipelines (Allplan, Revit, Solibri). Anbindung an SAP, PLM und KfW-Förderportale - inklusive automatischer Konformitätserklärungen.",
   },
   {
     question: "Bertelsmann-Konzern-Tochter: wie hilft Multi-Branchen-Konsolidierung?",
     answer:
-      "Multi-Branchen-ERP-Konsolidierung zwischen SAP, Dynamics, Sage. Monatsabschluss-, IC-Abstimmungs- und Reporting-Workflows an Lucanet oder SAP BPC – verkürzt Closing-Zeit um 40-60 %.",
+      "Multi-Branchen-ERP-Konsolidierung zwischen SAP, Dynamics, Sage. Monatsabschluss-, IC-Abstimmungs- und Reporting-Workflows an Lucanet oder SAP BPC - verkürzt Closing-Zeit um 40-60 %.",
   },
   {
     question: "Bethel- oder Diakonie-Träger: kann n8n Pflege-HR abbilden?",
@@ -230,10 +230,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Bielefeld – Ostwestfälischer Mittelstands-Hub"}
+              {overrides?.preHeadline ?? "Standort Bielefeld - Ostwestfälischer Mittelstands-Hub"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Bielefeld – für Dr. Oetker, Schüco und Bertelsmann-Region"}
+              {overrides?.headline ?? "KI-Agentur in Bielefeld - für Dr. Oetker, Schüco und Bertelsmann-Region"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Dr. Oetker fertigt Lebensmittel für 40 Länder, Schüco ist Welt-Marktführer für Aluminium-Fassaden, Bertelsmann (Gütersloh) prägt die Medienlandschaft und Bethel ist Deutschlands größte diakonische Einrichtung. Wir bauen Workflows für Lebensmittel-HACCP, Fassadenbau-CE und Medien-Rechte.
@@ -247,7 +247,7 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/bielefeld.jpg"
-              alt="Bielefeld – Dr. Oetker, Schüco und Bertelsmann-Region"
+              alt="Bielefeld - Dr. Oetker, Schüco und Bertelsmann-Region"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
@@ -266,7 +266,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Bielefelder Lebensmittel, Bau und Medien</Typo.H2>
         <SimpleGrid cols={2}>
@@ -309,28 +309,28 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Bielefeld – Ostwestfälisches Familien-Unternehmer-Cluster
+            Bielefeld - Ostwestfälisches Familien-Unternehmer-Cluster
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Dr. Oetker Backmischungen für 40 Länder fertigt und Schüco Aluminium-Fassaden global liefert, sind Workflows der Rückgrat-Code
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Dr. Oetker (12.000 weltweit), Schüco (5.500 weltweit), Bertelsmann-Konzern (Region Gütersloh, 145.000 weltweit), Bethel (16.500 MA, Deutschlands größte diakonische Einrichtung) – Bielefeld und Ostwestfalen-Lippe vereinen Lebensmittel, Baustoff, Medien und Sozialwirtschaft.
+            Dr. Oetker (12.000 weltweit), Schüco (5.500 weltweit), Bertelsmann-Konzern (Region Gütersloh, 145.000 weltweit), Bethel (16.500 MA, Deutschlands größte diakonische Einrichtung) - Bielefeld und Ostwestfalen-Lippe vereinen Lebensmittel, Baustoff, Medien und Sozialwirtschaft.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Bielefelder Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
           <NumberedList>
             <NumberedList.Item title="Dr. Oetker und HACCP-Lebensmittel-Pipelines:">
-              Dr. Oetker fertigt Backmischungen, Pizza und Pudding für 40+ Länder. HACCP, IFS Food, Charge-Rückverfolgung, Allergen-Management und Bio-Zertifizierung sind Pflicht – mit Audit-Trail für IFS-Audits.
+              Dr. Oetker fertigt Backmischungen, Pizza und Pudding für 40+ Länder. HACCP, IFS Food, Charge-Rückverfolgung, Allergen-Management und Bio-Zertifizierung sind Pflicht - mit Audit-Trail für IFS-Audits.
             </NumberedList.Item>
             <NumberedList.Item title="Schüco und Fassadenbau-CE-Konformität:">
               Schüco ist Weltmarktführer für Aluminium-Fenster und -Fassaden, gefragt von Skyscrapern in Dubai bis Berlin. CE-Konformität nach EN 14351, Energieausweis-Workflows und BIM-Pipelines sind Themen.

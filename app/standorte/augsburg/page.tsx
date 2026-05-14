@@ -171,7 +171,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/augsburg.jpg", width: 1200, height: 630, alt: "Augsburg – KUKA Robotics, MAN und Premium AEROTEC" }],
+      images: [{ url: "/images/cities/augsburg.jpg", width: 1200, height: 630, alt: "Augsburg - KUKA Robotics, MAN und Premium AEROTEC" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/augsburg.jpg"] },
     alternates: { canonical: "/standorte/augsburg" },
@@ -182,7 +182,7 @@ const augsburgFaqs = [
   {
     question: "KUKA-Zulieferer oder -Integrator: wie hilft Automatisierung?",
     answer:
-      "Lieferanten-Onboarding, ROS-Integration, IATF/AS9100-Compliance und Wartungs-Workflows für 100+ Länder. Anbindung an SAP, MES und Field-Service-Apps – verkürzt After-Sales-Bearbeitungszeit um 50-70 %.",
+      "Lieferanten-Onboarding, ROS-Integration, IATF/AS9100-Compliance und Wartungs-Workflows für 100+ Länder. Anbindung an SAP, MES und Field-Service-Apps - verkürzt After-Sales-Bearbeitungszeit um 50-70 %.",
   },
   {
     question: "MAN-Truck-Zulieferer: was bringt IATF-Automatisierung?",
@@ -197,7 +197,7 @@ const augsburgFaqs = [
   {
     question: "Uni Augsburg / Quanten-Cluster: wie hilft Drittmittel-Automatisierung?",
     answer:
-      "DFG-, BMBF- und EU-Horizon-Projekte mit Industriepartnern in n8n-Pipelines. Anbindung an HISinOne, SAP CO, easy-Online und Patent-Datenbanken – plus Industriepartnerschafts-Verträge.",
+      "DFG-, BMBF- und EU-Horizon-Projekte mit Industriepartnern in n8n-Pipelines. Anbindung an HISinOne, SAP CO, easy-Online und Patent-Datenbanken - plus Industriepartnerschafts-Verträge.",
   },
   {
     question: "Wir sind Augsburger Mittelstand: wo lohnt sich KI zuerst?",
@@ -225,10 +225,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Augsburg – Fugger-Stadt und Robotik-Cluster"}
+              {overrides?.preHeadline ?? "Standort Augsburg - Fugger-Stadt und Robotik-Cluster"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Augsburg – für KUKA, MAN, Premium AEROTEC und Fugger-Erbe"}
+              {overrides?.headline ?? "KI-Agentur in Augsburg - für KUKA, MAN, Premium AEROTEC und Fugger-Erbe"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               KUKA ist Weltmarktführer für Industrieroboter, MAN baut Lkw und Busse, Premium AEROTEC fertigt Airbus-Strukturkomponenten und die UNESCO-Welterbe-Wassermanagementsystem prägt die Stadt. Wir bauen Workflows für Robotik-Integration, Truck-IATF und Aerospace-AS9100.
@@ -242,7 +242,7 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/augsburg.jpg"
-              alt="Augsburg – KUKA Robotics, MAN und Premium AEROTEC"
+              alt="Augsburg - KUKA Robotics, MAN und Premium AEROTEC"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
@@ -261,22 +261,22 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Augsburg – 800 Jahre Wirtschaft mit Fugger-Erbe
+            Augsburg - 800 Jahre Wirtschaft mit Fugger-Erbe
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo KUKA Roboter für 100+ Länder fertigt und Premium AEROTEC Airbus-Komponenten in 0,01 mm Toleranz liefert, müssen Workflows Aerospace-präzise sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            KUKA (Augsburg-Hauptsitz, 14.000 weltweit), MAN Truck & Bus, Premium AEROTEC (Airbus-Strukturen), Universität Augsburg und das UNESCO-Welterbe-Wassermanagementsystem – Augsburg vereint Robotik, Truck, Aerospace und Forschung in der drittgrößten Stadt Bayerns.
+            KUKA (Augsburg-Hauptsitz, 14.000 weltweit), MAN Truck & Bus, Premium AEROTEC (Airbus-Strukturen), Universität Augsburg und das UNESCO-Welterbe-Wassermanagementsystem - Augsburg vereint Robotik, Truck, Aerospace und Forschung in der drittgrößten Stadt Bayerns.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Augsburger Robotik, Truck und Aerospace</Typo.H2>
         <SimpleGrid cols={2}>
@@ -319,7 +319,7 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Augsburger Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">

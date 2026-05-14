@@ -187,29 +187,29 @@ export async function generateMetadata({
 
 const heidelbergFaqs = [
   {
-    question: "Heidelberg Materials – wie hilft n8n bei CSRD und CBAM?",
+    question: "Heidelberg Materials - wie hilft n8n bei CSRD und CBAM?",
     answer:
-      "Baustoffe sind extrem CO2-intensiv. CSRD-Datenpipelines, CBAM-Compliance, CO2-Bilanzen pro Werk, Multi-Currency-Buchhaltung in dutzenden Ländern und ESG-Reporting werden mit n8n auditfest abgebildet – ergänzend zu SAP S/4HANA.",
+      "Baustoffe sind extrem CO2-intensiv. CSRD-Datenpipelines, CBAM-Compliance, CO2-Bilanzen pro Werk, Multi-Currency-Buchhaltung in dutzenden Ländern und ESG-Reporting werden mit n8n auditfest abgebildet - ergänzend zu SAP S/4HANA.",
   },
   {
-    question: "Heidelberger Druckmaschinen wandelt sich zum Service-Anbieter – wie passt n8n?",
+    question: "Heidelberger Druckmaschinen wandelt sich zum Service-Anbieter - wie passt n8n?",
     answer:
-      "SaaS-Subscription-Management, Predictive Maintenance über IoT-Daten, Ersatzteil-eCommerce, globale Servicelogistik und Field-Service-Apps werden mit n8n und SAP Service Cloud verzahnt – inklusive 40 %+ Weltmarktanteil im Offset-Geschäft.",
+      "SaaS-Subscription-Management, Predictive Maintenance über IoT-Daten, Ersatzteil-eCommerce, globale Servicelogistik und Field-Service-Apps werden mit n8n und SAP Service Cloud verzahnt - inklusive 40 %+ Weltmarktanteil im Offset-Geschäft.",
   },
   {
-    question: "DKFZ, EMBL, BioRN – passt n8n in Pharma- und Biotech-Forschung?",
+    question: "DKFZ, EMBL, BioRN - passt n8n in Pharma- und Biotech-Forschung?",
     answer:
       "Ja. GxP-, EMA- und FDA-Konformität, klinische Studien, eCRF-Daten, GMP-Audits, Sortenschutz und IP-Management werden mit n8n und Veeva Vault verbunden. Spin-offs aus DKFZ und Uni profitieren von schlanken, regulatorisch konformen Workflows.",
   },
   {
-    question: "Universitätsklinikum – 17.500 Mitarbeitende, wie hilft KI?",
+    question: "Universitätsklinikum - 17.500 Mitarbeitende, wie hilft KI?",
     answer:
-      "DRG-Abrechnung, Drittmittel-Reporting (BMBF, EU, DFG), Ethikkommissionen, MDR-Compliance und Patientenkommunikation werden mit n8n und KI-gestützter Klassifikation entlastet – unter Personalmangel und Sparzwang.",
+      "DRG-Abrechnung, Drittmittel-Reporting (BMBF, EU, DFG), Ethikkommissionen, MDR-Compliance und Patientenkommunikation werden mit n8n und KI-gestützter Klassifikation entlastet - unter Personalmangel und Sparzwang.",
   },
   {
-    question: "SAP-Region Heidelberg/Walldorf – wie ergänzen wir SAP-Stacks?",
+    question: "SAP-Region Heidelberg/Walldorf - wie ergänzen wir SAP-Stacks?",
     answer:
-      "Während SAP- und IT-Konzerne hoch digitalisiert arbeiten, bleibt der klassische Mittelstand (Mechanik, Lebensmittel, Logistik, Bau) zurück. Wir bauen n8n als schlanken Orchestrator um SAP S/4HANA und BTP herum – ohne mit SAP-Welten zu konkurrieren.",
+      "Während SAP- und IT-Konzerne hoch digitalisiert arbeiten, bleibt der klassische Mittelstand (Mechanik, Lebensmittel, Logistik, Bau) zurück. Wir bauen n8n als schlanken Orchestrator um SAP S/4HANA und BTP herum - ohne mit SAP-Welten zu konkurrieren.",
   },
   {
     question: "Welche Phasen erwarten uns bei einer Implementierung?",
@@ -245,7 +245,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Heidelberg –{" "}
+                KI-Agentur in Heidelberg -{" "}
                 Pharma, Druckmaschinen und{" "}
                 <BackgroundHero.Highlight>älteste Uni Deutschlands</BackgroundHero.Highlight>
               </>
@@ -254,7 +254,7 @@ export default async function Page({
           <BackgroundHero.Description>
             Heidelberg Materials, Heidelberger Druckmaschinen, DKFZ, EMBL,
             Universitätsklinikum, Universität Heidelberg, Springer Nature,
-            BioRN-Cluster – Heidelberg ist Wissenschafts-Hotspot und
+            BioRN-Cluster - Heidelberg ist Wissenschafts-Hotspot und
             DAX-/MDAX-Standort zugleich. Wir bauen n8n-Workflows für
             CSRD/CBAM, Pharma-Compliance, klinische Forschung und
             Druckmaschinen-Service.
@@ -290,7 +290,7 @@ export default async function Page({
         <Typo.Paragraph>
           Heidelberg Materials steuert anders als das DKFZ, der Uni-Klinikum
           anders als Heidelberger Druckmaschinen. Wir bauen für jeden
-          Cluster die passenden n8n-Bausteine – von CO2-Bilanz bis zur
+          Cluster die passenden n8n-Bausteine - von CO2-Bilanz bis zur
           Pharmakovigilanz-Pipeline.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -298,7 +298,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Building2 className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Heidelberg Materials – weltgrößter Baustoffhersteller</Typo.H3>
+            <Typo.H3>Heidelberg Materials - weltgrößter Baustoffhersteller</Typo.H3>
             <Typo.Paragraph>
               51.000 Konzernbeschäftigte in dutzenden Ländern, Zement,
               Beton, Zuschlagstoffe. CSRD-Datenpipelines, CBAM-Compliance,
@@ -310,7 +310,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cog className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Heidelberger Druckmaschinen – 40 % Weltmarktanteil</Typo.H3>
+            <Typo.H3>Heidelberger Druckmaschinen - 40 % Weltmarktanteil</Typo.H3>
             <Typo.Paragraph>
               Transformation vom Maschinenbau zum SaaS-/Service-Anbieter.
               Subscription-Management, Predictive Maintenance, IoT-Daten
@@ -322,7 +322,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <FlaskConical className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>DKFZ, EMBL, BioRN – Pharma &amp; Biotech-Cluster</Typo.H3>
+            <Typo.H3>DKFZ, EMBL, BioRN - Pharma &amp; Biotech-Cluster</Typo.H3>
             <Typo.Paragraph>
               Größtes deutsches Krebsforschungszentrum, europäisches
               Molekularbiologielabor, 100+ Biotech-Unternehmen. GxP/EMA/FDA,
@@ -346,11 +346,11 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <GraduationCap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Universität Heidelberg – älteste Uni Deutschlands</Typo.H3>
+            <Typo.H3>Universität Heidelberg - älteste Uni Deutschlands</Typo.H3>
             <Typo.Paragraph>
               32.178 Studierende, 6.633 internationale. Bewerbungs-,
               Prüfungs-, Visa- und Wohnungsprozesse werden mit n8n digital
-              orchestriert – inklusive Drittmittel-Verwaltung und
+              orchestriert - inklusive Drittmittel-Verwaltung und
               Forschungs-Industrie-Kooperationen.
             </Typo.Paragraph>
           </SimpleCard>
@@ -358,11 +358,11 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cpu className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>SAP-Region Heidelberg/Walldorf – IT-Mittelstand</Typo.H3>
+            <Typo.H3>SAP-Region Heidelberg/Walldorf - IT-Mittelstand</Typo.H3>
             <Typo.Paragraph>
               SAP-Konzerne arbeiten hoch digitalisiert, der klassische
               Mittelstand bleibt zurück. Wir bauen n8n als schlanken
-              Orchestrator um SAP S/4HANA und BTP herum – ergänzt um
+              Orchestrator um SAP S/4HANA und BTP herum - ergänzt um
               Microsoft 365, HubSpot und Document AI.
             </Typo.Paragraph>
           </SimpleCard>
@@ -415,10 +415,10 @@ export default async function Page({
         <BoundlessImageCard imagePosition="left">
           <BoundlessImageCard.Image
             src="/images/cities/heidelberg.jpg"
-            alt="Heidelberg Wissenschaft und Industrie – n8n-Workflows für Pharma, Baustoffe und Druckmaschinen"
+            alt="Heidelberg Wissenschaft und Industrie - n8n-Workflows für Pharma, Baustoffe und Druckmaschinen"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>BioRN, DKFZ und 17.500 Klinik-Mitarbeitende – Heidelberg automatisiert Forschung</Typo.H2>
+            <Typo.H2>BioRN, DKFZ und 17.500 Klinik-Mitarbeitende - Heidelberg automatisiert Forschung</Typo.H2>
             <Typo.Paragraph>
               Universität, DKFZ und EMBL wickeln zusammen Hunderte Millionen
               Euro Forschungsförderung ab. Mittelverwendung, Audits und

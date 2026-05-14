@@ -192,29 +192,29 @@ export async function generateMetadata({
 
 const dortmundFaqs = [
   {
-    question: "Signal Iduna, Continentale, DAS – wie hilft n8n bei Schaden- und Vertriebsprozessen?",
+    question: "Signal Iduna, Continentale, DAS - wie hilft n8n bei Schaden- und Vertriebsprozessen?",
     answer:
-      "Signal Iduna meldet 393 Mio. EUR Rekord-Vertriebsergebnis. Dunkelverarbeitung von Schadensfällen, KI-gestützte Risikoprüfung, Provisionsabrechnung mit Maklern und IDD-konformes Vermittler-Tracking werden in n8n auditfest abgebildet – BaFin/MaRisk/VAIT-tauglich.",
+      "Signal Iduna meldet 393 Mio. EUR Rekord-Vertriebsergebnis. Dunkelverarbeitung von Schadensfällen, KI-gestützte Risikoprüfung, Provisionsabrechnung mit Maklern und IDD-konformes Vermittler-Tracking werden in n8n auditfest abgebildet - BaFin/MaRisk/VAIT-tauglich.",
   },
   {
-    question: "Fraunhofer IML ist hier zuhause – wie passt n8n zur Logistikforschung?",
+    question: "Fraunhofer IML ist hier zuhause - wie passt n8n zur Logistikforschung?",
     answer:
       "Sehr gut. Yard-Management, Routenoptimierung, Lieferanten-EDI, KI-basierte Forecasts und autonome Intralogistik-Daten werden in n8n orchestriert. Wir machen Forschungsprototypen aus dem Digital Hub Logistics für mittelständische Speditionen industrietauglich.",
   },
   {
-    question: "Wilo, KHS – wie automatisieren wir Maschinenbau-Service?",
+    question: "Wilo, KHS - wie automatisieren wir Maschinenbau-Service?",
     answer:
       "Wartungsverträge, IoT-Daten ausgelieferter Anlagen, Ersatzteilbestellungen, Garantie-Workflows und CPQ-Konfigurationen sind klassische After-Sales-Felder. Wir docken an SAP Service Cloud, IoT-Plattformen und Hersteller-Portale an.",
   },
   {
-    question: "Adesso, Materna – wir sind IT-Beratung in Dortmund, brauchen wir n8n?",
+    question: "Adesso, Materna - wir sind IT-Beratung in Dortmund, brauchen wir n8n?",
     answer:
       "Ja. Time Tracking, Projektabrechnung, Vertragsverwaltung, Resource-Forecasting und Ausschreibungs-Workflows sind selbst in IT-Häusern oft fragmentiert. n8n verbindet Jira, Confluence, DATEV, HubSpot und LinkedIn Sales Navigator zu einem schlanken Backoffice.",
   },
   {
-    question: "Klinikum Dortmund und Maximalversorgung – passt n8n unter Pflege-Druck?",
+    question: "Klinikum Dortmund und Maximalversorgung - passt n8n unter Pflege-Druck?",
     answer:
-      "Ja. DRG-Kodierung, MDK-Prüfungen, Patientenkommunikation, OP-Planung und Abrechnung sind mit n8n und KI-gestützter Klassifikation effizient zu orchestrieren – ohne in die Kern-KIS-Systeme einzugreifen.",
+      "Ja. DRG-Kodierung, MDK-Prüfungen, Patientenkommunikation, OP-Planung und Abrechnung sind mit n8n und KI-gestützter Klassifikation effizient zu orchestrieren - ohne in die Kern-KIS-Systeme einzugreifen.",
   },
   {
     question: "Welche Phasen erwarten uns bei einer Implementierung?",
@@ -250,7 +250,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Dortmund –{" "}
+                KI-Agentur in Dortmund -{" "}
                 Versicherungs-Hub, Logistik-Forschung und{" "}
                 <BackgroundHero.Highlight>IT-Cluster</BackgroundHero.Highlight>
               </>
@@ -258,7 +258,7 @@ export default async function Page({
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
             Signal Iduna, Continentale, Adesso, Materna, Wilo, KHS, TU Dortmund
-            mit Fraunhofer IML, Klinikum Dortmund – aus der einstigen
+            mit Fraunhofer IML, Klinikum Dortmund - aus der einstigen
             Stahl-Stadt wurde der zweitgrößte Versicherungsstandort
             Deutschlands. Wir bauen n8n-Workflows für Versicherungs-IT,
             Logistik-Forschungstransfer und Maschinenbau-Service.
@@ -293,7 +293,7 @@ export default async function Page({
         <Typo.H2>Dortmunder Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
           Signal Iduna steuert anders als Wilo, Fraunhofer IML anders als
-          Adesso. Wir bauen für jeden Cluster die passenden n8n-Bausteine –
+          Adesso. Wir bauen für jeden Cluster die passenden n8n-Bausteine -
           vom Schadenakten-OCR bis zum IoT-Service-Workflow.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -301,7 +301,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <ShieldCheck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Signal Iduna, Continentale, DAS – Versicherungs-Hub</Typo.H3>
+            <Typo.H3>Signal Iduna, Continentale, DAS - Versicherungs-Hub</Typo.H3>
             <Typo.Paragraph>
               Nach München zweitgrößter Versicherungsstandort Deutschlands.
               Signal Iduna mit 11.000 Konzernbeschäftigten meldet
@@ -314,19 +314,19 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Truck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Fraunhofer IML, Digital Hub Logistics – Logistik-Hauptstadt</Typo.H3>
+            <Typo.H3>Fraunhofer IML, Digital Hub Logistics - Logistik-Hauptstadt</Typo.H3>
             <Typo.Paragraph>
               Deutsche Hauptstadt der Logistikforschung. Wir machen
               Yard-Management, Routenoptimierung, Lieferanten-EDI,
               KI-Forecasts und autonome Intralogistik aus IML-Prototypen
-              industrietauglich – für Speditionen und Kontraktlogistiker.
+              industrietauglich - für Speditionen und Kontraktlogistiker.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cpu className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Adesso, Materna, akquinet – IT-Beratungs-Cluster</Typo.H3>
+            <Typo.H3>Adesso, Materna, akquinet - IT-Beratungs-Cluster</Typo.H3>
             <Typo.Paragraph>
               Ca. 10.000 Beschäftigte in der Dortmunder IT-Beratung. Time
               Tracking, Projektabrechnung, Resource-Forecasting,
@@ -339,7 +339,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cog className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Wilo, KHS, Murtfeldt – Maschinenbau-Hidden-Champions</Typo.H3>
+            <Typo.H3>Wilo, KHS, Murtfeldt - Maschinenbau-Hidden-Champions</Typo.H3>
             <Typo.Paragraph>
               Wilo (Pumpen), KHS (Abfüllanlagen) und ostwestfälische
               Mittelständler bedienen globale Service-Märkte. CPQ,
@@ -352,7 +352,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <GraduationCap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>TU Dortmund – Mikrosystemtechnik &amp; Forschung</Typo.H3>
+            <Typo.H3>TU Dortmund - Mikrosystemtechnik &amp; Forschung</Typo.H3>
             <Typo.Paragraph>
               Mit 33.000 Studierenden und 6.700 Beschäftigten plus dem
               TechnologiePark mit 300 Firmen rund um Sensorik und
@@ -369,7 +369,7 @@ export default async function Page({
               5.500 Beschäftigte im größten kommunalen Klinikbetrieb
               Westfalens. DRG-Kodierung, MDK-Prüfungen, Patientenkommunikation,
               OP-Planung und Abrechnung werden unter Personalmangel mit
-              KI-gestützten Workflows entlastet – ohne KIS-Eingriff.
+              KI-gestützten Workflows entlastet - ohne KIS-Eingriff.
             </Typo.Paragraph>
           </SimpleCard>
         </SimpleGrid>
@@ -387,7 +387,7 @@ export default async function Page({
             der dichtesten IT-Beratungs-Cluster Deutschlands mit Adesso,
             Materna und akquinet. Gleichzeitig wachsen Hidden Champions wie
             Wilo und KHS global. Diese Vielfalt erzeugt sehr unterschiedliche
-            Automatisierungs-Use-Cases – wir kennen sie alle.
+            Automatisierungs-Use-Cases - wir kennen sie alle.
           </Typo.Paragraph>
         </IntroBox>
       </ContentWrapper>
@@ -397,10 +397,10 @@ export default async function Page({
         <BoundlessImageCard imagePosition="left">
           <BoundlessImageCard.Image
             src="/images/cities/dortmund.jpg"
-            alt="Dortmund Strukturwandel – Versicherung, Logistik und IT-Beratung mit n8n"
+            alt="Dortmund Strukturwandel - Versicherung, Logistik und IT-Beratung mit n8n"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Vom Stahlwerk zum Digital Hub – Dortmund automatisiert weiter</Typo.H2>
+            <Typo.H2>Vom Stahlwerk zum Digital Hub - Dortmund automatisiert weiter</Typo.H2>
             <Typo.Paragraph>
               Phoenix-See, Hoesch-Areal und Westfalenhütte zeigen, wie tief
               Dortmunds Wandel geht. Heute prägen Signal Iduna, Fraunhofer

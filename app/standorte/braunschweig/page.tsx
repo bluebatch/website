@@ -182,27 +182,27 @@ export async function generateMetadata({
 
 const braunschweigFaqs = [
   {
-    question: "VW Group Components – weltgrößte Achsfertigung, wie passt n8n zu Tier-1?",
+    question: "VW Group Components - weltgrößte Achsfertigung, wie passt n8n zu Tier-1?",
     answer:
       "5.700 Beschäftigte fertigen Achsen, Lenkungen, Kunststoff. JIT/JIS-Abrufe, EDI/VDA-Belege, IATF-16949-Doku, Catena-X-Datenraum-Anbindung und PowerCo-Salzgitter-Konnektivität für Batterie-Komponenten werden mit n8n abgebildet.",
   },
   {
-    question: "Volkswagen Financial Services – wie hilft n8n in Auto-Banking und Mobility?",
+    question: "Volkswagen Financial Services - wie hilft n8n in Auto-Banking und Mobility?",
     answer:
-      "VWFS mit 5.500 Beschäftigten in Braunschweig ist Bank und Mobility-Anbieter zugleich. KYC, Onboarding, Vertragsmanagement, Kreditprüfung und Schadenabwicklung werden mit n8n und RPA orchestriert – inklusive Händler- und Partner-Integration.",
+      "VWFS mit 5.500 Beschäftigten in Braunschweig ist Bank und Mobility-Anbieter zugleich. KYC, Onboarding, Vertragsmanagement, Kreditprüfung und Schadenabwicklung werden mit n8n und RPA orchestriert - inklusive Händler- und Partner-Integration.",
   },
   {
-    question: "DLR, PTB, HZI – wie automatisieren wir Forschungsdaten?",
+    question: "DLR, PTB, HZI - wie automatisieren wir Forschungsdaten?",
     answer:
       "Drittmittel-Verwaltung, Projektzeit-Erfassung, Berichtswesen an BMBF und EU, Patentmanagement und Veröffentlichungs-Workflows sind dokumentationsintensiv. Wir bauen n8n-Pipelines, die Forschungs-Standardabläufe wie DLR-Forschungsflughafen-Logistik mit ERP verzahnen.",
   },
   {
-    question: "New Yorker – globale Modelogistik, wie passt n8n?",
+    question: "New Yorker - globale Modelogistik, wie passt n8n?",
     answer:
-      "Über 1.100 Filialen in 47 Ländern. Saisonale Kollektionen, Lieferantenmanagement, Filialnachschub und E-Commerce-Integration werden mit n8n End-to-End orchestriert – inklusive Multi-Country-Compliance und Etikettierungs-Workflows.",
+      "Über 1.100 Filialen in 47 Ländern. Saisonale Kollektionen, Lieferantenmanagement, Filialnachschub und E-Commerce-Integration werden mit n8n End-to-End orchestriert - inklusive Multi-Country-Compliance und Etikettierungs-Workflows.",
   },
   {
-    question: "Zulieferer-Druck auf der Achse Braunschweig-Wolfsburg-Salzgitter – was bringt n8n?",
+    question: "Zulieferer-Druck auf der Achse Braunschweig-Wolfsburg-Salzgitter - was bringt n8n?",
     answer:
       "Volkswagen reduziert Standortkapazitäten und fordert Kostensenkungen. Tier-1- und Tier-2-Mittelständler müssen Bestellung, Lieferplanabrufe (EDI/JIS), Qualitätsdokumentation und Kostenanalysen automatisieren. Wir bauen schlanke Workflows ohne SAP-Großprojekt.",
   },
@@ -240,7 +240,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Braunschweig –{" "}
+                KI-Agentur in Braunschweig -{" "}
                 VW Forschung, DLR-Luftfahrt und{" "}
                 <BackgroundHero.Highlight>Europas F&amp;E-Region</BackgroundHero.Highlight>
               </>
@@ -249,7 +249,7 @@ export default async function Page({
           <BackgroundHero.Description>
             VW Group Components, VW Financial Services, TU Braunschweig,
             DLR-Forschungsflughafen, PTB, HZI, New Yorker, Klinikum
-            Braunschweig – Braunschweig hat den europaweit höchsten Anteil
+            Braunschweig - Braunschweig hat den europaweit höchsten Anteil
             F&amp;E-Beschäftigter (10 % der Erwerbstätigen). Wir bauen
             n8n-Workflows für VW-Tier-1, Auto-Banking, Luftfahrtforschung
             und Modelogistik.
@@ -286,13 +286,13 @@ export default async function Page({
           <Typo.H2>Warum Braunschweig eine spezialisierte KI-Agentur braucht</Typo.H2>
           <Typo.Paragraph>
             Braunschweig ist eine der forschungsintensivsten Regionen der EU
-            – höchster F&amp;E-Anteil Europas. Volkswagen Group Components
+            - höchster F&amp;E-Anteil Europas. Volkswagen Group Components
             betreibt hier die weltgrößte zusammenhängende Achsfertigung, VW
             Financial Services steuert den globalen Auto-Bank- und
             Mobility-Konzern, DLR und PTB sind nationale Spitzeneinrichtungen.
             New Yorker exportiert Mode in 47 Länder, das HZI forscht in
             Infektionsmedizin. Diese Vielfalt erzeugt sehr unterschiedliche
-            Automatisierungs-Use-Cases – wir kennen sie alle.
+            Automatisierungs-Use-Cases - wir kennen sie alle.
           </Typo.Paragraph>
         </IntroBox>
       </ContentWrapper>
@@ -325,7 +325,7 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/braunschweig.jpg"
-            alt="Braunschweig VW Components, DLR und New Yorker – n8n-Workflows für Forschung und Industrie"
+            alt="Braunschweig VW Components, DLR und New Yorker - n8n-Workflows für Forschung und Industrie"
           />
           <BoundlessImageCard.Content>
             <Typo.H2>VW-Transformation, DLR-Forschung und New-Yorker-Mode parallel</Typo.H2>
@@ -352,14 +352,14 @@ export default async function Page({
         <Typo.Paragraph>
           VW Group Components steuert anders als das DLR, VWFS anders als
           New Yorker. Wir bauen für jeden Cluster die passenden
-          n8n-Bausteine – vom JIS-Abruf bis zum Drittmittel-Reporting.
+          n8n-Bausteine - vom JIS-Abruf bis zum Drittmittel-Reporting.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
           <SimpleCard align="left">
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Car className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>VW Group Components – weltgrößte Achsfertigung</Typo.H3>
+            <Typo.H3>VW Group Components - weltgrößte Achsfertigung</Typo.H3>
             <Typo.Paragraph>
               5.700 Beschäftigte, Achsen, Lenkungen, Kunststoff, Transformation
               zum Batterie-Komponenten-Zentrum. JIT/JIS, EDI/VDA, IATF 16949,
@@ -375,7 +375,7 @@ export default async function Page({
             <Typo.Paragraph>
               5.500 Beschäftigte in Braunschweig. KYC, Vertragsmanagement,
               Kreditprüfung, Schadenabwicklung und Händler-/Partner-
-              Integration werden mit n8n und RPA orchestriert – inklusive
+              Integration werden mit n8n und RPA orchestriert - inklusive
               Mobility-Workflow-Anbindung.
             </Typo.Paragraph>
           </SimpleCard>
@@ -383,7 +383,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Plane className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>DLR-Forschungsflughafen, NFL – Luftfahrtforschung</Typo.H3>
+            <Typo.H3>DLR-Forschungsflughafen, NFL - Luftfahrtforschung</Typo.H3>
             <Typo.Paragraph>
               DLR-Standort mit niedersächsischem Forschungszentrum für
               Luftfahrt. Drittmittel-Verwaltung, EU-Reporting, Versuchsdaten-
@@ -395,7 +395,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <GraduationCap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>TU Braunschweig, PTB, HZI – Forschungs-Cluster</Typo.H3>
+            <Typo.H3>TU Braunschweig, PTB, HZI - Forschungs-Cluster</Typo.H3>
             <Typo.Paragraph>
               Älteste technische Universität Deutschlands, PTB als nationales
               Metrologie-Institut, Helmholtz-Zentrum für Infektionsforschung.
@@ -407,7 +407,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <ShoppingBag className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>New Yorker – globale Modelogistik</Typo.H3>
+            <Typo.H3>New Yorker - globale Modelogistik</Typo.H3>
             <Typo.Paragraph>
               7.000 Beschäftigte am Hauptsitz, 1.100+ Filialen in 47 Ländern.
               Saisonale Kollektionen, Lieferantenmanagement, Filialnachschub,

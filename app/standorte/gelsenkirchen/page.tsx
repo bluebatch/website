@@ -186,29 +186,29 @@ export async function generateMetadata({
 
 const gelsenkirchenFaqs = [
   {
-    question: "Vivawest verwaltet 120.000 Wohnungen – wie automatisieren wir Mieter-Workflows in dieser Größenordnung?",
+    question: "Vivawest verwaltet 120.000 Wohnungen - wie automatisieren wir Mieter-Workflows in dieser Größenordnung?",
     answer:
-      "Vivawest hat eigene Plattformen. Für regionale Wohnungsverwalter und Vivawest-Tochtergesellschaften bauen wir dieselben Bausteine: Mieterportal, Reparatur-Ticketing via WhatsApp/E-Mail in CAFM-Systeme, Nebenkostenabrechnung, Modernisierungs-Kommunikation – mit Anbindung an Wodis, Domus, GES, immowelt und immoscout.",
+      "Vivawest hat eigene Plattformen. Für regionale Wohnungsverwalter und Vivawest-Tochtergesellschaften bauen wir dieselben Bausteine: Mieterportal, Reparatur-Ticketing via WhatsApp/E-Mail in CAFM-Systeme, Nebenkostenabrechnung, Modernisierungs-Kommunikation - mit Anbindung an Wodis, Domus, GES, immowelt und immoscout.",
   },
   {
-    question: "Gelsenwasser fällt unter KRITIS – wie sicher ist n8n für Versorger?",
+    question: "Gelsenwasser fällt unter KRITIS - wie sicher ist n8n für Versorger?",
     answer:
       "Self-hosted, BSI-Grundschutz-konform deploybar, mit Härtung nach CIS-Benchmarks. KRITIS-Meldepflichten ans BSI laufen automatisiert, mit unveränderlichem WORM-Audit-Trail. Wir trennen Workflows nach Schutzbedarfsklassen und betreiben separate n8n-Instanzen für IT/OT.",
   },
   {
-    question: "ROLLER hat deutschlandweit Filialen – wie orchestrieren wir EDI und Filialdaten?",
+    question: "ROLLER hat deutschlandweit Filialen - wie orchestrieren wir EDI und Filialdaten?",
     answer:
       "ROLLER, Möbel-Großhändler und Filialisten brauchen EDI-Anbindung an Lieferanten, automatische Filial-Disposition, Bestandssync zwischen Filialen und ZE-Lager und Reklamations-Workflows. n8n verbindet ERP (z.B. Microsoft Dynamics), Filial-Systeme und EDIFACT/EANCOM-Partner.",
   },
   {
-    question: "Strukturwandel-Fördermittel (RAG-Stiftung, Strukturstärkungsgesetz) – wie dokumentieren wir das?",
+    question: "Strukturwandel-Fördermittel (RAG-Stiftung, Strukturstärkungsgesetz) - wie dokumentieren wir das?",
     answer:
       "Fördermittel verlangen detaillierte Mittelverwendung, Meilensteine, CO2-Einsparungen und Verwendungsnachweise. n8n sammelt Daten aus ERP, Energiemonitoring und Projektmanagement, generiert die Nachweise und versendet sie an Bezirksregierung Münster und Förderbanken.",
   },
   {
-    question: "St. Augustinus Klinik-Holding – welche Workflows helfen im Krankenhausverbund?",
+    question: "St. Augustinus Klinik-Holding - welche Workflows helfen im Krankenhausverbund?",
     answer:
-      "Mehrstandort-Klinikgruppen brauchen einheitliche Patientenaufnahme, gemeinsame Beschaffung, DRG-Abrechnung und MDR-Konformität bei Medizinprodukten. n8n verbindet KIS, ePA, Materialwirtschaft und Kostenträger – ideal bei knappem Pflegepersonal.",
+      "Mehrstandort-Klinikgruppen brauchen einheitliche Patientenaufnahme, gemeinsame Beschaffung, DRG-Abrechnung und MDR-Konformität bei Medizinprodukten. n8n verbindet KIS, ePA, Materialwirtschaft und Kostenträger - ideal bei knappem Pflegepersonal.",
   },
 ];
 
@@ -239,14 +239,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Gelsenkirchen –{" "}
+                KI-Agentur in Gelsenkirchen -{" "}
                 von der Zechenstadt zum{" "}
                 <BackgroundHero.Highlight>Energiewende-Labor</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus Zeche und RAG wurde Vivawest-HQ, Gelsenwasser, ROLLER-Möbelimperium und Solarpark Scholven. Wir automatisieren genau die Workflows, die eine Stadt nach dem Bergbau braucht – Wohnungs-Disposition, KRITIS-Reporting und Filial-EDI.
+            Aus Zeche und RAG wurde Vivawest-HQ, Gelsenwasser, ROLLER-Möbelimperium und Solarpark Scholven. Wir automatisieren genau die Workflows, die eine Stadt nach dem Bergbau braucht - Wohnungs-Disposition, KRITIS-Reporting und Filial-EDI.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Gelsenkirchen besprechen</ContactButton>
@@ -276,12 +276,12 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/gelsenkirchen.jpg"
-            alt="Solarpark Scholven – Strukturwandel in Gelsenkirchen"
+            alt="Solarpark Scholven - Strukturwandel in Gelsenkirchen"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Solarpark Scholven – wo Kraftwerk war, wächst heute Photovoltaik</Typo.H2>
+            <Typo.H2>Solarpark Scholven - wo Kraftwerk war, wächst heute Photovoltaik</Typo.H2>
             <Typo.Paragraph>
-              Das ehemalige Kohlekraftwerks- und Bergbau-Areal Scholven beherbergt heute einen der größten städtischen Solarparks, daneben Wasserstoff-Erprobung und neue Industrie-Ansiedlungen. Quartiers- und Anlagenmanagement bedeutet: Fördermittelanträge, Genehmigungs-Workflows mit Bezirksregierung Münster, Energie-Reporting an die BNetzA. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Das ehemalige Kohlekraftwerks- und Bergbau-Areal Scholven beherbergt heute einen der größten städtischen Solarparks, daneben Wasserstoff-Erprobung und neue Industrie-Ansiedlungen. Quartiers- und Anlagenmanagement bedeutet: Fördermittelanträge, Genehmigungs-Workflows mit Bezirksregierung Münster, Energie-Reporting an die BNetzA. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -302,7 +302,7 @@ export default async function Page({
             Was passiert mit den Prozessen, wenn die letzte Zeche geht?
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Gelsenkirchen hat 2018 mit dem Ende der RAG-Förderung die letzte Zeche der Region verloren – und mit Vivawest, Gelsenwasser, ROLLER und St. Augustinus neue Säulen aufgebaut. Auf Halden wachsen Solarparks, im Bestand modernisieren Wohnungsgesellschaften Hunderttausende Wohnungen unter CSRD- und GEG-Druck. Jede dieser Säulen hat eigene Prozess-Pains.
+            Gelsenkirchen hat 2018 mit dem Ende der RAG-Förderung die letzte Zeche der Region verloren - und mit Vivawest, Gelsenwasser, ROLLER und St. Augustinus neue Säulen aufgebaut. Auf Halden wachsen Solarparks, im Bestand modernisieren Wohnungsgesellschaften Hunderttausende Wohnungen unter CSRD- und GEG-Druck. Jede dieser Säulen hat eigene Prozess-Pains.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
@@ -311,7 +311,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Gelsenkirchen heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -329,7 +329,7 @@ export default async function Page({
             </SimpleCard.Icon>
             <Typo.H3>KRITIS & Versorgung</Typo.H3>
             <Typo.Paragraph>
-              Gelsenwasser, Stadtwerke und Energiewende-Projekte – sensible Versorgungsdaten. n8n self-hosted, audit-fest und BSI-Grundschutz-tauglich, mit Schnittstellen zu IT/OT-Welt.
+              Gelsenwasser, Stadtwerke und Energiewende-Projekte - sensible Versorgungsdaten. n8n self-hosted, audit-fest und BSI-Grundschutz-tauglich, mit Schnittstellen zu IT/OT-Welt.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
@@ -344,14 +344,14 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 3. ProsCons – Was war, was kommt */}
+      {/* 3. ProsCons - Was war, was kommt */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Gelsenkirchen hinter sich gelassen hat – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Gelsenkirchen hinter sich gelassen hat - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
-                title="Ende der RAG-Förderung 2018 – Steinkohle Geschichte"
+                title="Ende der RAG-Förderung 2018 - Steinkohle Geschichte"
                 description="Über Jahrzehnte der größte Arbeitgeber der Stadt, mit der letzten Zeche brach die komplette Lieferkette für Bergbau-Zulieferer weg."
               />
               <ProsCons.Item
@@ -364,21 +364,21 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="FC Schalke 04 in finanzieller Dauerkrise"
-                description="Aus Bundesliga abgestiegen, Sponsoring- und Hospitality-Erlöse unter Druck – ein wirtschaftlicher Anker wankt."
+                description="Aus Bundesliga abgestiegen, Sponsoring- und Hospitality-Erlöse unter Druck - ein wirtschaftlicher Anker wankt."
               />
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
-                title="Vivawest – größtes privates Wohnungsunternehmen NRWs"
+                title="Vivawest - größtes privates Wohnungsunternehmen NRWs"
                 description="120.000+ Wohnungen, Konzernzentrale in Gelsenkirchen, massive Modernisierungs- und Digitalisierungsoffensive unter GEG und CSRD."
               />
               <ProsCons.Item
-                title="Gelsenwasser AG – KRITIS-Versorger mit 1.580 Mitarbeitern"
+                title="Gelsenwasser AG - KRITIS-Versorger mit 1.580 Mitarbeitern"
                 description="Überregionaler Wasserversorger mit kommunalen Beteiligungen, BSI-Meldepflichten und Energie-Diversifikation."
               />
               <ProsCons.Item
-                title="ROLLER – Konzernzentrale mit 6.000 Beschäftigten"
-                description="Deutschlandweiter Möbel-Filialist mit komplexer ERP-, EDI- und Filial-Disposition – Digitalisierung-Vorbild im Möbelhandel."
+                title="ROLLER - Konzernzentrale mit 6.000 Beschäftigten"
+                description="Deutschlandweiter Möbel-Filialist mit komplexer ERP-, EDI- und Filial-Disposition - Digitalisierung-Vorbild im Möbelhandel."
               />
               <ProsCons.Item
                 title="Solarpark Scholven & Wasserstoff-Pilote auf Halden"

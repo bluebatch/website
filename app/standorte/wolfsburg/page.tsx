@@ -143,7 +143,7 @@ export async function generateMetadata({
     "KI-Agentur in Wolfsburg | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Automotive-Automatisierung am Konzernsitz der Volkswagen AG: n8n-Workflows für VW-Zulieferer, Volkswagen Financial Services, CARIAD und den Trinity-Hochlauf – IATF-16949-, Catena-X- und VDA-konform.";
+    "Automotive-Automatisierung am Konzernsitz der Volkswagen AG: n8n-Workflows für VW-Zulieferer, Volkswagen Financial Services, CARIAD und den Trinity-Hochlauf - IATF-16949-, Catena-X- und VDA-konform.";
 
   return {
     title,
@@ -184,7 +184,7 @@ export async function generateMetadata({
 
 const wolfsburgFaqs = [
   {
-    question: "Wir sind VW-Tier-1 in Wolfsburg – wie integriert ihr n8n in unsere JIS-Welt?",
+    question: "Wir sind VW-Tier-1 in Wolfsburg - wie integriert ihr n8n in unsere JIS-Welt?",
     answer:
       "Self-hosted on-premise, mit Anbindung an SAP S/4HANA, das VW-Group-Supplier-Portal und Catena-X-Datenräume. Wir decken VDA-4905-EDIFACT-Abrufe für Golf, Tiguan und Trinity ab, IATF-16949-konforme APQP/PPAP-Doku und Quality-Notifications via Asset Administration Shell.",
   },
@@ -204,7 +204,7 @@ const wolfsburgFaqs = [
       "Ja, das ist genau unser Fall. Trinity läuft auf der SSP-Plattform mit Batteriezellen aus Salzgitter. Wir bauen Workflows für Lieferanten-Onboarding nach Catena-X, PCF-Berechnung pro Bauteil, Quality-Gates und die Kommunikation zwischen Stammwerk Wolfsburg, Komponentenwerken und CARIAD-Software.",
   },
   {
-    question: "Wir sind 300-MA-Zulieferer in Gifhorn – lohnt sich das?",
+    question: "Wir sind 300-MA-Zulieferer in Gifhorn - lohnt sich das?",
     answer:
       "Gerade dann. Bei jeder Schicht-Anpassung im Stammwerk müsst ihr die JIS-Sequenzierung neu kalibrieren. Wer aus den VW-Rahmenverträgen fliegt, weil EDI- oder Catena-X-Anbindung fehlt, verliert sofort Jahresumsatz im Millionenbereich. Wir bauen das zum Festpreis in 4 bis 8 Wochen produktiv.",
   },
@@ -237,7 +237,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Wolfsburg –{" "}
+                KI-Agentur in Wolfsburg -{" "}
                 Automotive-Automatisierung am{" "}
                 <BackgroundHero.Highlight>VW-Konzernsitz</BackgroundHero.Highlight>
               </>
@@ -246,7 +246,7 @@ export default async function Page({
           <BackgroundHero.Description>
             Volkswagen, VW Financial Services und CARIAD prägen den Wolfsburger
             Arbeitsmarkt. Wir automatisieren JIS-, Catena-X- und
-            CARIAD-Workflows mit self-hosted n8n – IATF-16949-, ASPICE- und
+            CARIAD-Workflows mit self-hosted n8n - IATF-16949-, ASPICE- und
             DORA-konform.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -278,7 +278,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Volkswagen, CARIAD, VW Financial Services – Mono-Industrie unter Druck
+            Volkswagen, CARIAD, VW Financial Services - Mono-Industrie unter Druck
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo der größte europäische Autokonzern um seine Zukunft kämpft
@@ -297,12 +297,12 @@ export default async function Page({
             Fahrzeugfabriken der Welt: über 6 km² Werksfläche, 1,6 km² bebaute
             Hallenfläche, 75 km Werkstraßen, 60 km Werkschienen und rund
             61.000 Beschäftigte am Standort. Hier laufen Golf, Tiguan, Touran
-            und ab 2026 der VW Trinity vom Band – das Elektro-Flaggschiff
+            und ab 2026 der VW Trinity vom Band - das Elektro-Flaggschiff
             auf der SSP-Plattform mit Batteriezellen aus Salzgitter und
             CO2-armem Stahl. Hunderte Tier-1- und Tier-2-Zulieferer arbeiten
             in JIS-Sequenzierung direkt im Werksgelände oder in unmittelbarer
             Nähe. Bei jeder Schicht-Anpassung müssen Prozesse neu kalibriert
-            werden – ohne EDIFACT-, Catena-X- und IATF-16949-konforme Workflows
+            werden - ohne EDIFACT-, Catena-X- und IATF-16949-konforme Workflows
             ist das schlicht nicht beherrschbar.
           </Typo.Paragraph>
           <Typo.Paragraph>
@@ -339,7 +339,7 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                VW investiert Milliarden in CARIAD – was machen Mittelständler im Werk?
+                VW investiert Milliarden in CARIAD - was machen Mittelständler im Werk?
               </Typo.H2>
               <Typo.Paragraph>
                 VW und CARIAD bauen massive Software-Teams auf. Mittelständische
@@ -366,7 +366,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 4. DataTable – Automotive-Vergleich */}
+      {/* 4. DataTable - Automotive-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>

@@ -145,7 +145,7 @@ export async function generateMetadata({
     "KI-Agentur in Saarbrücken | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "KI-, Automotive- und Stahl-Automatisierung in Saarbrücken: n8n-Workflows für ZF, Ford-Werk Saarlouis, Dillinger Hütte, Saarstahl und Forschungspartner DFKI/CISPA – IATF-, CBAM- und CSRD-konform.";
+    "KI-, Automotive- und Stahl-Automatisierung in Saarbrücken: n8n-Workflows für ZF, Ford-Werk Saarlouis, Dillinger Hütte, Saarstahl und Forschungspartner DFKI/CISPA - IATF-, CBAM- und CSRD-konform.";
 
   return {
     title,
@@ -186,9 +186,9 @@ export async function generateMetadata({
 
 const saarbrueckenFaqs = [
   {
-    question: "Wir sind ZF-Zulieferer in Saarbrücken – wie integriert ihr n8n in unsere Welt?",
+    question: "Wir sind ZF-Zulieferer in Saarbrücken - wie integriert ihr n8n in unsere Welt?",
     answer:
-      "Self-hosted on-premise, mit Anbindung an SAP S/4HANA, das ZF-Lieferantenportal und Catena-X-Datenräume. Wir decken JIT-Workflows für Automatikgetriebe-Komponenten, IATF-16949-konforme APQP-/PPAP-Doku und die Transformation in Richtung E-Antriebe ab – inklusive PCF-Berechnung für die Catena-X-Use-Cases.",
+      "Self-hosted on-premise, mit Anbindung an SAP S/4HANA, das ZF-Lieferantenportal und Catena-X-Datenräume. Wir decken JIT-Workflows für Automatikgetriebe-Komponenten, IATF-16949-konforme APQP-/PPAP-Doku und die Transformation in Richtung E-Antriebe ab - inklusive PCF-Berechnung für die Catena-X-Use-Cases.",
   },
   {
     question: "Hilft n8n im Ford-Werk Saarlouis bei der Transformation?",
@@ -206,9 +206,9 @@ const saarbrueckenFaqs = [
       "Das DFKI ist die weltweit größte Forschungseinrichtung für angewandte KI, CISPA das führende IT-Sicherheits-Helmholtz-Zentrum Europas. Wir übersetzen DFKI-KI-Modelle in produktive n8n-Workflows in Unternehmen, mit CISPA-getesteten Sicherheitsmustern. Anbindung an On-Premise-LLMs, Anomaliedetektion und automatisierte Sicherheitsanalysen.",
   },
   {
-    question: "Wir machen Grenz-Pendler-Geschäft Frankreich/Luxemburg – hilft das?",
+    question: "Wir machen Grenz-Pendler-Geschäft Frankreich/Luxemburg - hilft das?",
     answer:
-      "Genau dort. Cross-Border-Abrechnung, mehrsprachige Kommunikation und drei Steuer- bzw. Sozialversicherungssysteme erzeugen Chaos. Wir automatisieren Lohnabrechnung, A1-Bescheinigungen, Cross-Border-Rechnungsstellung und Vertragsmanagement zwischen DE, FR und LU – mit Anbindung an DATEV und ADP-Schnittstellen.",
+      "Genau dort. Cross-Border-Abrechnung, mehrsprachige Kommunikation und drei Steuer- bzw. Sozialversicherungssysteme erzeugen Chaos. Wir automatisieren Lohnabrechnung, A1-Bescheinigungen, Cross-Border-Rechnungsstellung und Vertragsmanagement zwischen DE, FR und LU - mit Anbindung an DATEV und ADP-Schnittstellen.",
   },
 ];
 
@@ -239,7 +239,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Saarbrücken –{" "}
+                KI-Agentur in Saarbrücken -{" "}
                 KI-Spitzenforschung trifft Stahl und{" "}
                 <BackgroundHero.Highlight>Automotive</BackgroundHero.Highlight>
               </>
@@ -248,7 +248,7 @@ export default async function Page({
           <BackgroundHero.Description>
             DFKI, ZF, Ford Saarlouis, Dillinger Hütte und Saarstahl prägen
             das Saarland. Wir automatisieren IATF-, CBAM- und
-            Cross-Border-Workflows mit self-hosted n8n – DSGVO-konform
+            Cross-Border-Workflows mit self-hosted n8n - DSGVO-konform
             und auditfest.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -277,7 +277,7 @@ export default async function Page({
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* 4. DataTable – Stahl-/Automotive-Vergleich */}
+      {/* 4. DataTable - Stahl-/Automotive-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>
@@ -337,14 +337,14 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            ZF, Ford, Dillinger Hütte – Strukturwandel zwischen Kohle, Stahl und KI
+            ZF, Ford, Dillinger Hütte - Strukturwandel zwischen Kohle, Stahl und KI
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Spitzen-KI auf Stahltransformation und Automotive-Wandel trifft
           </IntroBox.Headline>
           <IntroBox.Subline>
             Saarbrücken vereint zwei extreme Welten: weltweit führende
-            KI-Forschung im DFKI und CISPA – und klassische Schwerindustrie
+            KI-Forschung im DFKI und CISPA - und klassische Schwerindustrie
             mit ZF, Ford, Dillinger Hütte und Saarstahl. Die Region steht
             mitten im Strukturwandel zwischen Kohle-/Stahl-Erbe und Tech-Zukunft.
           </IntroBox.Subline>
@@ -357,12 +357,12 @@ export default async function Page({
             zu E-Antrieben ist hier so direkt spürbar wie nirgendwo sonst.
             Bosch in Homburg fertigt mit rund 4.600 Beschäftigten Diesel-
             Komponenten und baut auf Elektronik um. Ford-Werk Saarlouis verliert
-            2025 die Focus-Produktion und sucht nach Investoren – BYD Sealion
+            2025 die Focus-Produktion und sucht nach Investoren - BYD Sealion
             war zwischenzeitlich im Gespräch. Dillinger Hütte mit rund 5.100
             Beschäftigten produziert Grobbleche für Schiffbau, Pipelines und
             Windenergie, Saarstahl mit 3.900 Beschäftigten in Völklingen
             Walzdraht für Automotive. Hochöfen sollen auf wasserstoffbasierte
-            Direktreduktion umgestellt werden – das größte industrielle
+            Direktreduktion umgestellt werden - das größte industrielle
             Transformationsprojekt der Region.
           </Typo.Paragraph>
           <Typo.Paragraph>
@@ -373,14 +373,14 @@ export default async function Page({
             Saarlandes mit 2.600 Beschäftigten gehört zu den Top-Adressen für
             Informatik. ZF betreibt sein Technologiezentrum direkt auf dem
             Saarbrücker Universitätscampus, eng verzahnt mit DFKI für
-            KI-Anwendungen in Fahrzeugtechnik. Diese Nähe ist einzigartig –
+            KI-Anwendungen in Fahrzeugtechnik. Diese Nähe ist einzigartig -
             und bietet Mittelständlern direkten Zugang zu KI-Spitzenforschung.
           </Typo.Paragraph>
           <Typo.Paragraph>
             Dazu kommt die Grenzregion: Saarbrücken liegt im Schnittpunkt zu
             Frankreich, Luxemburg und Belgien. Cross-Border-Abrechnung,
             A1-Bescheinigungen, drei Steuer- und Sozialversicherungssysteme,
-            mehrsprachige Kommunikation – alles im Tagesgeschäft. Strukturhilfen
+            mehrsprachige Kommunikation - alles im Tagesgeschäft. Strukturhilfen
             für ostdeutsche Standorte gibt es nicht, das Saarland muss durch
             Effizienz wachsen. Wie wir die Implementierung in sechs Phasen
             ausrollen, beschreiben wir auf{" "}
@@ -398,7 +398,7 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                ZF kooperiert mit DFKI – was machen Saarländer Mittelständler?
+                ZF kooperiert mit DFKI - was machen Saarländer Mittelständler?
               </Typo.H2>
               <Typo.Paragraph>
                 ZF und DFKI bauen gemeinsam KI-Anwendungen für Fahrzeugtechnik.

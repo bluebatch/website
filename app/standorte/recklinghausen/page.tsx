@@ -189,22 +189,22 @@ export async function generateMetadata({
 
 const recklinghausenFaqs = [
   {
-    question: "Vestische Straßenbahnen elektrifizieren ihre Busflotte – welche Workflows brauchen wir?",
+    question: "Vestische Straßenbahnen elektrifizieren ihre Busflotte - welche Workflows brauchen wir?",
     answer:
-      "E-Bus-Flotten brauchen Ladeplanung, Fahrer-Disposition, Werkstatt-Workflows und Echtzeit-Fahrgastinformation. n8n verbindet Depot-Management, IBIS, Echtzeit-PV, ITCS und EFM-Systeme – inklusive Schnittstelle zum Verkehrsverbund Rhein-Ruhr (VRR).",
+      "E-Bus-Flotten brauchen Ladeplanung, Fahrer-Disposition, Werkstatt-Workflows und Echtzeit-Fahrgastinformation. n8n verbindet Depot-Management, IBIS, Echtzeit-PV, ITCS und EFM-Systeme - inklusive Schnittstelle zum Verkehrsverbund Rhein-Ruhr (VRR).",
   },
   {
-    question: "Vivawest hat hier seinen Schwerpunkt – welche Wohnungs-Workflows können wir automatisieren?",
+    question: "Vivawest hat hier seinen Schwerpunkt - welche Wohnungs-Workflows können wir automatisieren?",
     answer:
       "Mieter-Onboarding, Schadensmanagement via Hausmeister-App, Heizkostenabrechnung nach Heizkostenverordnung, Modernisierungs-Kommunikation und CSRD-Reporting. Wir koppeln Wodis, GES und Domus an Mieter-Portale und WhatsApp.",
   },
   {
-    question: "Knappschaft Kliniken kämpfen mit Personalmangel – wo entlastet KI?",
+    question: "Knappschaft Kliniken kämpfen mit Personalmangel - wo entlastet KI?",
     answer:
-      "Patientenaufnahme, ePA-Befüllung, DRG-Abrechnung mit Kostenträgern und Pflegedokumentation sind die Engpässe. AI Agents klassifizieren Eingangspost, extrahieren Befunde und füllen Vorlagen vor – wichtig in Krankenhäusern mit knappem Pflegepersonal.",
+      "Patientenaufnahme, ePA-Befüllung, DRG-Abrechnung mit Kostenträgern und Pflegedokumentation sind die Engpässe. AI Agents klassifizieren Eingangspost, extrahieren Befunde und füllen Vorlagen vor - wichtig in Krankenhäusern mit knappem Pflegepersonal.",
   },
   {
-    question: "Kreis Recklinghausen ist der bevölkerungsreichste Landkreis Deutschlands – was leistet n8n in der Verwaltung?",
+    question: "Kreis Recklinghausen ist der bevölkerungsreichste Landkreis Deutschlands - was leistet n8n in der Verwaltung?",
     answer:
       "OZG-konforme Bürger-Self-Services, automatisches Routing von Anträgen an Sachgebiete, KI-Triage von Bürgeranfragen und Aktenführung im DMS. Wir integrieren etablierte Fachverfahren (z.B. AKDB, civento) ohne Big-Bang-Migration.",
   },
@@ -242,14 +242,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Recklinghausen –{" "}
+                KI-Agentur in Recklinghausen -{" "}
                 vom Bergbau-Vest zum{" "}
                 <BackgroundHero.Highlight>bevölkerungsreichsten Landkreis Deutschlands</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus 500.000 Bergleuten und der Zeche Auguste Victoria wurde Vivawest-Bestand, Knappschaft-Klinik-Verbund und Vestische-E-Bus-Flotte. Wir automatisieren genau die Workflows, die das Vest nach 2015 braucht – ÖPNV-Disposition, Mieter-Workflows und Bürger-Self-Services.
+            Aus 500.000 Bergleuten und der Zeche Auguste Victoria wurde Vivawest-Bestand, Knappschaft-Klinik-Verbund und Vestische-E-Bus-Flotte. Wir automatisieren genau die Workflows, die das Vest nach 2015 braucht - ÖPNV-Disposition, Mieter-Workflows und Bürger-Self-Services.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Recklinghausen besprechen</ContactButton>
@@ -284,20 +284,20 @@ export default async function Page({
             Was passiert mit den Prozessen, wenn 500.000 Bergleute Geschichte sind?
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Recklinghausen ist Kreisstadt des bevölkerungsreichsten Landkreises Deutschlands – und Erbe einer ehemaligen Bergbau-Region, in der 2015 mit der Zeche Auguste Victoria in Marl die letzte Förderung endete. Die Vestische elektrifiziert ihre Busflotte, Vivawest modernisiert 120.000 Wohnungen unter GEG-Druck, Knappschaft Kliniken kämpfen mit Pflege-Personalmangel. Jede dieser Säulen hat eigene Prozess-Pains.
+            Recklinghausen ist Kreisstadt des bevölkerungsreichsten Landkreises Deutschlands - und Erbe einer ehemaligen Bergbau-Region, in der 2015 mit der Zeche Auguste Victoria in Marl die letzte Förderung endete. Die Vestische elektrifiziert ihre Busflotte, Vivawest modernisiert 120.000 Wohnungen unter GEG-Druck, Knappschaft Kliniken kämpfen mit Pflege-Personalmangel. Jede dieser Säulen hat eigene Prozess-Pains.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 3. ProsCons – Was war, was kommt */}
+      {/* 3. ProsCons - Was war, was kommt */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was das Vest hinter sich gelassen hat – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was das Vest hinter sich gelassen hat - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
                 title="Zeche Auguste Victoria geschlossen (2015)"
-                description="Letzte Steinkohleförderung des Vests in Marl beendet – Ende einer Ära mit zur Blütezeit 500.000 Bergleuten im Vest."
+                description="Letzte Steinkohleförderung des Vests in Marl beendet - Ende einer Ära mit zur Blütezeit 500.000 Bergleuten im Vest."
               />
               <ProsCons.Item
                 title="BMW-Reifenwerk und alte Industrie unter Druck"
@@ -309,13 +309,13 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Letzter Straßenbahnbetrieb bereits 1982 eingestellt"
-                description="Die Vestische musste komplett auf Bus umstellen – heute steht die nächste Transformation an: Elektrifizierung der gesamten Flotte."
+                description="Die Vestische musste komplett auf Bus umstellen - heute steht die nächste Transformation an: Elektrifizierung der gesamten Flotte."
               />
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
-                title="Vestische Straßenbahnen – größtes kommunales Busunternehmen im VRR"
-                description="994 Beschäftigte, deckt das gesamte Vest, Bottrop und Nord-Gelsenkirchen ab – jetzt mit E-Bus-Ausbau und Echtzeit-Daten."
+                title="Vestische Straßenbahnen - größtes kommunales Busunternehmen im VRR"
+                description="994 Beschäftigte, deckt das gesamte Vest, Bottrop und Nord-Gelsenkirchen ab - jetzt mit E-Bus-Ausbau und Echtzeit-Daten."
               />
               <ProsCons.Item
                 title="Vivawest mit Regionalschwerpunkt im Vest"
@@ -323,11 +323,11 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Knappschaft Kliniken & Prosper-Hospital"
-                description="Bergbau-Erbe als Klinikverbund: ca. 1.500 Beschäftigte Knappschaftskrankenhaus, ca. 1.200 Prosper – Versorgung einer alternden Region."
+                description="Bergbau-Erbe als Klinikverbund: ca. 1.500 Beschäftigte Knappschaftskrankenhaus, ca. 1.200 Prosper - Versorgung einer alternden Region."
               />
               <ProsCons.Item
                 title="Bevölkerungsreichster Landkreis Deutschlands"
-                description="615.000 Einwohner im Kreis Recklinghausen, Verwaltung mit 2.000 Mitarbeitern – Bürger-Workflows in Großstadt-Dimension."
+                description="615.000 Einwohner im Kreis Recklinghausen, Verwaltung mit 2.000 Mitarbeitern - Bürger-Workflows in Großstadt-Dimension."
               />
             </ProsCons.Pros>
           </ProsCons>
@@ -339,12 +339,12 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/recklinghausen.jpg"
-            alt="Vestische E-Bus-Depot Recklinghausen – Transformation des ÖPNV"
+            alt="Vestische E-Bus-Depot Recklinghausen - Transformation des ÖPNV"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Vestische E-Bus-Depot – wo Diesel war, lädt heute der Akku</Typo.H2>
+            <Typo.H2>Vestische E-Bus-Depot - wo Diesel war, lädt heute der Akku</Typo.H2>
             <Typo.Paragraph>
-              Die Vestische elektrifiziert schrittweise ihre Flotte. Aus dem klassischen Diesel-Depot wird ein Hochleistungs-Ladestandort mit Lastmanagement, Werkstatt-Workflows für Hochvolt-Technik und neuen Schnittstellen zur Stadtwerke-Energieversorgung. n8n verbindet Depot-Management, ITCS, EFM und Echtzeit-PV zu einer Pipeline – ein Use-Case, den wir mehrfach gebaut haben.
+              Die Vestische elektrifiziert schrittweise ihre Flotte. Aus dem klassischen Diesel-Depot wird ein Hochleistungs-Ladestandort mit Lastmanagement, Werkstatt-Workflows für Hochvolt-Technik und neuen Schnittstellen zur Stadtwerke-Energieversorgung. n8n verbindet Depot-Management, ITCS, EFM und Echtzeit-PV zu einer Pipeline - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -359,7 +359,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n im Vest heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">

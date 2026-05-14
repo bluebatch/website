@@ -182,27 +182,27 @@ export async function generateMetadata({
 
 const chemnitzFaqs = [
   {
-    question: "VW-Motorenwerk fertigt Verbrenner – wie automatisieren wir die Transformation zu E-Antrieb?",
+    question: "VW-Motorenwerk fertigt Verbrenner - wie automatisieren wir die Transformation zu E-Antrieb?",
     answer:
       "720.000 Verbrenner-Motoren in 2024, mit Verbrenner-Aus 2035 muss das Werk Kapazitäten umlenken. Zulieferer brauchen Stücklisten-Migration, IMDS-Anpassung, neue IATF-Audits und Lieferanten-Onboarding. n8n koppelt SAP, PLM, MES und VW-Lieferanten-Portale zu einer Pipeline.",
   },
   {
-    question: "Niles-Simmons-Hegenscheidt & Werkzeugmaschinenbau – welche Service-Workflows lohnen sich?",
+    question: "Niles-Simmons-Hegenscheidt & Werkzeugmaschinenbau - welche Service-Workflows lohnen sich?",
     answer:
-      "Globale Service-Tickets, Ersatzteil-Logistik, Wartungsverträge und Garantie-Abwicklung. n8n verbindet Field-Service-Apps, ERP und Kunden-Portale – wichtig im Wettbewerb mit chinesischen und japanischen Werkzeugmaschinen-Herstellern.",
+      "Globale Service-Tickets, Ersatzteil-Logistik, Wartungsverträge und Garantie-Abwicklung. n8n verbindet Field-Service-Apps, ERP und Kunden-Portale - wichtig im Wettbewerb mit chinesischen und japanischen Werkzeugmaschinen-Herstellern.",
   },
   {
-    question: "Silicon-Saxony-Ausläufer – wie schaffen wir Halbleiter-Compliance als Mittelständler?",
+    question: "Silicon-Saxony-Ausläufer - wie schaffen wir Halbleiter-Compliance als Mittelständler?",
     answer:
-      "TSMC, Infineon und GlobalFoundries in Dresden saugen Zulieferer aus dem ganzen Cluster, bis nach Chemnitz. n8n hilft bei Onboarding-Workflows: ISO 9001, AS9100-Light, Automotive-Qualifikationen, RoHS/REACH – wichtig, um in den Halbleiter-Lieferantenpool zu kommen.",
+      "TSMC, Infineon und GlobalFoundries in Dresden saugen Zulieferer aus dem ganzen Cluster, bis nach Chemnitz. n8n hilft bei Onboarding-Workflows: ISO 9001, AS9100-Light, Automotive-Qualifikationen, RoHS/REACH - wichtig, um in den Halbleiter-Lieferantenpool zu kommen.",
   },
   {
-    question: "Klinikum Chemnitz mit 13 Tochtergesellschaften – wie konsolidieren wir 7.000-MA-Verbund?",
+    question: "Klinikum Chemnitz mit 13 Tochtergesellschaften - wie konsolidieren wir 7.000-MA-Verbund?",
     answer:
       "Konzern-Reporting, MDK-Prüfungen, DRG-Kodierung und Personaleinsatzplanung über 13 Töchter sind klassisches RPA-Feld. n8n synchronisiert KIS, Materialwirtschaft, HR und Kostenträger zu konsolidierten Konzern-Dashboards.",
   },
   {
-    question: "Kulturhauptstadt-Erbe 2025 – wie laufen Förder- und Quartiers-Workflows?",
+    question: "Kulturhauptstadt-Erbe 2025 - wie laufen Förder- und Quartiers-Workflows?",
     answer:
       "Aus der Kulturhauptstadt-Bewerbung sind Förder-, Bau- und Quartiers-Projekte entstanden. n8n hält Fördermittel-Nachweise, EU-Reporting, Subventions-Doku und Investorenkommunikation auditfest und automatisch versendet.",
   },
@@ -235,14 +235,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Chemnitz –{" "}
+                KI-Agentur in Chemnitz -{" "}
                 vom Sächsischen Manchester zum{" "}
                 <BackgroundHero.Highlight>Silicon-Saxony-Ausläufer</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus Textil-Tradition und Werkzeugmaschinen-Schwergewicht wurde VW-Motorenwerk, MEMS-Cluster und Kulturhauptstadt 2025. Wir automatisieren genau die Workflows, die ein sächsischer Industriestandort im Wandel braucht – Verbrenner-zu-Elektro, Werkzeugmaschinen-Service und Halbleiter-Onboarding.
+            Aus Textil-Tradition und Werkzeugmaschinen-Schwergewicht wurde VW-Motorenwerk, MEMS-Cluster und Kulturhauptstadt 2025. Wir automatisieren genau die Workflows, die ein sächsischer Industriestandort im Wandel braucht - Verbrenner-zu-Elektro, Werkzeugmaschinen-Service und Halbleiter-Onboarding.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Chemnitz besprechen</ContactButton>
@@ -271,7 +271,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Chemnitz heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -312,9 +312,9 @@ export default async function Page({
             alt="VW-Motorenwerk und Werkzeugmaschinen-Cluster Chemnitz"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>VW-Motorenwerk & Werkzeugmaschinen-Cluster – wo Textil war, fertigt heute die Welt</Typo.H2>
+            <Typo.H2>VW-Motorenwerk & Werkzeugmaschinen-Cluster - wo Textil war, fertigt heute die Welt</Typo.H2>
             <Typo.Paragraph>
-              Aus dem ehemaligen Textil-Manchester wurde Werkzeugmaschinen-Welthauptstadt und VW-Motorenwerk. Heute kommt die nächste Welle: E-Antrieb statt Verbrenner, MEMS-Zulieferung statt Schwerindustrie. Beide Welten brauchen End-to-End-Workflows – Lieferanten-Onboarding, Service-Pipelines, IATF-Audit-Trails. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Aus dem ehemaligen Textil-Manchester wurde Werkzeugmaschinen-Welthauptstadt und VW-Motorenwerk. Heute kommt die nächste Welle: E-Antrieb statt Verbrenner, MEMS-Zulieferung statt Schwerindustrie. Beide Welten brauchen End-to-End-Workflows - Lieferanten-Onboarding, Service-Pipelines, IATF-Audit-Trails. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -335,24 +335,24 @@ export default async function Page({
             Was passiert mit den Prozessen, wenn aus Verbrenner-Motoren E-Antriebe und MEMS werden?
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Chemnitz hat seine Textil- und Schwerindustrie-Vergangenheit hinter sich und ist heute Sachsens drittgrößte Stadt mit einem der traditionsreichsten Werkzeugmaschinen-Cluster Europas. Das VW-Motorenwerk fertigt Verbrenner – ein auslaufendes Geschäft. Niles-Simmons-Hegenscheidt baut Schwerstwerkzeugmaschinen in alle Welt, der TSMC-/Infineon-Boom in Dresden saugt Zulieferer bis Chemnitz, das Klinikum konsolidiert 13 Töchter. Jede dieser Säulen hat eigene Prozess-Pains.
+            Chemnitz hat seine Textil- und Schwerindustrie-Vergangenheit hinter sich und ist heute Sachsens drittgrößte Stadt mit einem der traditionsreichsten Werkzeugmaschinen-Cluster Europas. Das VW-Motorenwerk fertigt Verbrenner - ein auslaufendes Geschäft. Niles-Simmons-Hegenscheidt baut Schwerstwerkzeugmaschinen in alle Welt, der TSMC-/Infineon-Boom in Dresden saugt Zulieferer bis Chemnitz, das Klinikum konsolidiert 13 Töchter. Jede dieser Säulen hat eigene Prozess-Pains.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
       {/* 3. ProsCons */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Chemnitz hinter sich gelassen hat – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Chemnitz hinter sich gelassen hat - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
                 title="VW-Motorenwerk im Verbrenner-Auslauf"
-                description="Seit 1988 über 20 Mio. Motoren produziert, mit dem politisch beschlossenen Verbrenner-Aus 2035 muss sich das Werk komplett neu erfinden – 1.800 Beschäftigte unter Transformations-Druck."
+                description="Seit 1988 über 20 Mio. Motoren produziert, mit dem politisch beschlossenen Verbrenner-Aus 2035 muss sich das Werk komplett neu erfinden - 1.800 Beschäftigte unter Transformations-Druck."
               />
               <ProsCons.Item
                 title="Werkzeugmaschinenbau unter Asien-Konkurrenzdruck"
-                description="Niles-Simmons-Hegenscheidt und andere Werkzeugmaschinen-Hersteller kämpfen mit intensiver Konkurrenz aus China und Japan – Margenerosion zwingt zur Digitalisierung."
+                description="Niles-Simmons-Hegenscheidt und andere Werkzeugmaschinen-Hersteller kämpfen mit intensiver Konkurrenz aus China und Japan - Margenerosion zwingt zur Digitalisierung."
               />
               <ProsCons.Item
                 title="Höchste Altersdurchschnitte deutscher Großstädte"
@@ -360,25 +360,25 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Textil-Industrie längst Geschichte"
-                description="'Sächsisches Manchester' verlor seine Textil-Schwergewichte über Jahrzehnte – heute nur noch Spezial-/Composites-Reste der einst dominierenden Industrie."
+                description="'Sächsisches Manchester' verlor seine Textil-Schwergewichte über Jahrzehnte - heute nur noch Spezial-/Composites-Reste der einst dominierenden Industrie."
               />
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
                 title="Klinikum Chemnitz mit 13 Töchtern (ca. 7.000 MA)"
-                description="Sachsens drittgrößtes Krankenhaus, Konzern-Verbund mit 13 Tochterfirmen – Klinik-Workflow-Champion mit komplexer Konsolidierungs-Anforderung."
+                description="Sachsens drittgrößtes Krankenhaus, Konzern-Verbund mit 13 Tochterfirmen - Klinik-Workflow-Champion mit komplexer Konsolidierungs-Anforderung."
               />
               <ProsCons.Item
-                title="Niles-Simmons-Hegenscheidt – Weltmarktführer Schwerstwerkzeugmaschinen"
-                description="1.500 MA, plus Starrag-Heckert und Union Werkzeugmaschinen – Chemnitz ist DAS Zentrum für Schwerstwerkzeugmaschinen weltweit."
+                title="Niles-Simmons-Hegenscheidt - Weltmarktführer Schwerstwerkzeugmaschinen"
+                description="1.500 MA, plus Starrag-Heckert und Union Werkzeugmaschinen - Chemnitz ist DAS Zentrum für Schwerstwerkzeugmaschinen weltweit."
               />
               <ProsCons.Item
                 title="Silicon-Saxony-Ausläufer mit MEMS und Sensorik"
-                description="TSMC, Infineon und GlobalFoundries in Dresden saugen Zulieferer aus dem ganzen Cluster bis Chemnitz – Spitzencluster MERGE, ICM-Forschung."
+                description="TSMC, Infineon und GlobalFoundries in Dresden saugen Zulieferer aus dem ganzen Cluster bis Chemnitz - Spitzencluster MERGE, ICM-Forschung."
               />
               <ProsCons.Item
                 title="TU Chemnitz + Kulturhauptstadt Europas 2025"
-                description="2.300 MA an TU Chemnitz mit Schwerpunkten Leichtbau, Fahrzeugtechnik, Robotik – plus Sichtbarkeit und Förderkulisse aus Kulturhauptstadt-Programm."
+                description="2.300 MA an TU Chemnitz mit Schwerpunkten Leichtbau, Fahrzeugtechnik, Robotik - plus Sichtbarkeit und Förderkulisse aus Kulturhauptstadt-Programm."
               />
             </ProsCons.Pros>
           </ProsCons>

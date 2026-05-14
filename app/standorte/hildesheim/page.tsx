@@ -165,7 +165,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/hildesheim.jpg", width: 1200, height: 630, alt: "Hildesheim – Bosch, KWS Saat und VW-Zulieferer-Achse" }],
+      images: [{ url: "/images/cities/hildesheim.jpg", width: 1200, height: 630, alt: "Hildesheim - Bosch, KWS Saat und VW-Zulieferer-Achse" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/hildesheim.jpg"] },
     alternates: { canonical: "/standorte/hildesheim" },
@@ -191,7 +191,7 @@ const hildesheimFaqs = [
   {
     question: "Uni Hildesheim oder HAWK: wie skaliert Drittmittel-Reporting?",
     answer:
-      "DFG-, BMBF- und EU-Förderprojekte mit Zeiterfassung, Verwendungsnachweis und Quartalsreports. Anbindung an HISinOne, SAP CO und easy-Online – spart spürbar Verwaltungsoverhead.",
+      "DFG-, BMBF- und EU-Förderprojekte mit Zeiterfassung, Verwendungsnachweis und Quartalsreports. Anbindung an HISinOne, SAP CO und easy-Online - spart spürbar Verwaltungsoverhead.",
   },
   {
     question: "Wir sind Hildesheimer Mittelstand: wo lohnt sich KI zuerst?",
@@ -219,10 +219,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Hildesheim – Industrie- und Domstadt"}
+              {overrides?.preHeadline ?? "Standort Hildesheim - Industrie- und Domstadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Hildesheim – für Bosch E-Mobility, KWS Saat und VW-Zulieferung"}
+              {overrides?.headline ?? "KI-Agentur in Hildesheim - für Bosch E-Mobility, KWS Saat und VW-Zulieferung"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Bosch Hildesheim transformiert sich zur E-Mobility-Achse, KWS Saat ist Welt-Marktführer für Zuckerrüben-Saatgut und die VW-Zulieferer-Industrie ist Region-prägend. Wir bauen Workflows für Bosch-Lieferanten-Pipelines, IATF-Compliance und Saatgut-Forschung.
@@ -236,7 +236,7 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/hildesheim.jpg"
-              alt="Hildesheim – Bosch, KWS Saat und VW-Zulieferer-Achse"
+              alt="Hildesheim - Bosch, KWS Saat und VW-Zulieferer-Achse"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
@@ -255,7 +255,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Hildesheimer Industrie und Forschung</Typo.H2>
         <SimpleGrid cols={2}>
@@ -298,7 +298,7 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Hildesheimer Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -316,23 +316,23 @@ export default async function Page({
               Mariendom und St. Michaeliskirche sind UNESCO-Welterbe. Tourismus-Workflows, mehrsprachige Ticketing-Pipelines und Group-Bookings (China, Italien) sind regionale Themen.
             </NumberedList.Item>
             <NumberedList.Item title="VW-Zulieferung Wolfsburg und Niedersachsen-Achse:">
-              Hildesheim ist Teil der VW-Zulieferer-Achse Wolfsburg–Hannover–Hildesheim–Salzgitter. EDI-Anbindung an Covisint, OPS-AT, IATF-16949 und JIS-/JIT-Lieferpipelines.
+              Hildesheim ist Teil der VW-Zulieferer-Achse Wolfsburg-Hannover-Hildesheim-Salzgitter. EDI-Anbindung an Covisint, OPS-AT, IATF-16949 und JIS-/JIT-Lieferpipelines.
             </NumberedList.Item>
           </NumberedList>
         </div>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Hildesheim – Industrie zwischen Hannover und Salzgitter
+            Hildesheim - Industrie zwischen Hannover und Salzgitter
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Bosch zur Wasserstoff-Brennstoffzelle umrüstet und KWS Saat weltweit Zuckerrüben-Saatgut liefert, müssen Workflows transformation-fest sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Bosch mit über 4.500 Beschäftigten in Hildesheim, KWS Saat mit 5.700 weltweit, Blaupunkt-Erbe und tradi­tionelle VW-Zulieferung – Hildesheim befindet sich mitten in der E-Mobility-Transformation. Workflows für Bosch-Lieferanten-Pipelines, Energiewende-Förderung und Saatgut-Compliance sind die zentralen Themen.
+            Bosch mit über 4.500 Beschäftigten in Hildesheim, KWS Saat mit 5.700 weltweit, Blaupunkt-Erbe und tradi­tionelle VW-Zulieferung - Hildesheim befindet sich mitten in der E-Mobility-Transformation. Workflows für Bosch-Lieferanten-Pipelines, Energiewende-Förderung und Saatgut-Compliance sind die zentralen Themen.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>

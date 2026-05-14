@@ -186,27 +186,27 @@ export async function generateMetadata({
 
 const krefeldFaqs = [
   {
-    question: "Chempark Krefeld-Uerdingen – wie automatisieren wir REACH, CSRD und Anlagensicherheit?",
+    question: "Chempark Krefeld-Uerdingen - wie automatisieren wir REACH, CSRD und Anlagensicherheit?",
     answer:
-      "Covestro, Lanxess und Bayer im Chempark unterliegen REACH, CLP, Störfallverordnung, IED, ADR/RID und CSRD. n8n verbindet SAP, EHS-Software, Behörden-Schnittstellen (REACH-IT, ELER) und Sicherheitsaudit-Datenbanken – auditfest, self-hosted und mit BSI-Grundschutz.",
+      "Covestro, Lanxess und Bayer im Chempark unterliegen REACH, CLP, Störfallverordnung, IED, ADR/RID und CSRD. n8n verbindet SAP, EHS-Software, Behörden-Schnittstellen (REACH-IT, ELER) und Sicherheitsaudit-Datenbanken - auditfest, self-hosted und mit BSI-Grundschutz.",
   },
   {
-    question: "Outokumpu Nirosta in Krefeld – welche Workflows brauchen Edelstahl-Hersteller?",
+    question: "Outokumpu Nirosta in Krefeld - welche Workflows brauchen Edelstahl-Hersteller?",
     answer:
-      "Werkstoffzeugnisse EN 10204 3.1/3.2, IATF 16949 für Auto-Kunden, CBAM-Reporting, Chargenrückverfolgung und Versand-EDI mit OEMs. n8n koppelt PLM, MES, SAP und Kunden-Portale – wichtig im Wettbewerb mit Asien.",
+      "Werkstoffzeugnisse EN 10204 3.1/3.2, IATF 16949 für Auto-Kunden, CBAM-Reporting, Chargenrückverfolgung und Versand-EDI mit OEMs. n8n koppelt PLM, MES, SAP und Kunden-Portale - wichtig im Wettbewerb mit Asien.",
   },
   {
-    question: "Siempelkamp baut Pressen weltweit – welche Service-Workflows lohnen sich?",
+    question: "Siempelkamp baut Pressen weltweit - welche Service-Workflows lohnen sich?",
     answer:
-      "Weltmarktführer Holzwerkstoff-Pressen plus Guss- und Nukleartechnik – Engineering-to-Order, CPQ, weltweiter Service mit Field-Force, Ersatzteil-Logistik, Inbetriebnahme-Reports. n8n verbindet PLM, ERP, Service-Apps und IoT-Sensorik der Anlagen.",
+      "Weltmarktführer Holzwerkstoff-Pressen plus Guss- und Nukleartechnik - Engineering-to-Order, CPQ, weltweiter Service mit Field-Force, Ersatzteil-Logistik, Inbetriebnahme-Reports. n8n verbindet PLM, ERP, Service-Apps und IoT-Sensorik der Anlagen.",
   },
   {
-    question: "Rheinhafen Krefeld als trimodaler Knoten – wie automatisieren wir Hafen-Logistik?",
+    question: "Rheinhafen Krefeld als trimodaler Knoten - wie automatisieren wir Hafen-Logistik?",
     answer:
-      "ATLAS-Zoll, EDIFACT/EANCOM, intermodaler Umschlag zwischen Wasser, Bahn und LKW, Gefahrgut-Doku für Chemie-Transporte und Sendungsverfolgung. n8n koppelt TOS, TMS, WMS und Carrier-APIs – plus EDI mit Chempark-Logistik.",
+      "ATLAS-Zoll, EDIFACT/EANCOM, intermodaler Umschlag zwischen Wasser, Bahn und LKW, Gefahrgut-Doku für Chemie-Transporte und Sendungsverfolgung. n8n koppelt TOS, TMS, WMS und Carrier-APIs - plus EDI mit Chempark-Logistik.",
   },
   {
-    question: "Helios Klinikum Krefeld – welche Workflows entlasten Klinikpersonal?",
+    question: "Helios Klinikum Krefeld - welche Workflows entlasten Klinikpersonal?",
     answer:
       "Patientenaufnahme, KIS-ePA-Integration, DRG-Abrechnung mit Kostenträgern, MDR-Doku für Medizinprodukte und Personaleinsatzplanung. AI Agents klassifizieren Eingangsbefunde und Aufnahmedokumente.",
   },
@@ -239,14 +239,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Krefeld –{" "}
+                KI-Agentur in Krefeld -{" "}
                 von der Samt- und Seidenstadt zum{" "}
                 <BackgroundHero.Highlight>Chempark-Cluster</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus historischer Textilstadt wurde Chempark Krefeld-Uerdingen (Covestro/Lanxess/Bayer), Outokumpu Nirosta und Siempelkamp-HQ. Wir automatisieren genau die Workflows, die ein niederrheinischer Chemie- und Edelstahl-Standort im Wandel braucht – REACH, EN 10204 und globaler Anlagenbau-Service.
+            Aus historischer Textilstadt wurde Chempark Krefeld-Uerdingen (Covestro/Lanxess/Bayer), Outokumpu Nirosta und Siempelkamp-HQ. Wir automatisieren genau die Workflows, die ein niederrheinischer Chemie- und Edelstahl-Standort im Wandel braucht - REACH, EN 10204 und globaler Anlagenbau-Service.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Krefeld besprechen</ContactButton>
@@ -276,7 +276,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Krefeld heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -285,7 +285,7 @@ export default async function Page({
             </SimpleCard.Icon>
             <Typo.H3>Chemie & Kunststoffe</Typo.H3>
             <Typo.Paragraph>
-              REACH/CLP, Störfallverordnung, IED-Emissionen, ADR/RID-Gefahrgut, CSRD und EHS-Compliance für Chempark-Anrainer – self-hosted und BSI-konform.
+              REACH/CLP, Störfallverordnung, IED-Emissionen, ADR/RID-Gefahrgut, CSRD und EHS-Compliance für Chempark-Anrainer - self-hosted und BSI-konform.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
@@ -332,9 +332,9 @@ export default async function Page({
             alt="Chempark Krefeld-Uerdingen und Edelstahl"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Chempark Uerdingen & Outokumpu – wo Seide war, fließen heute Polymere und Edelstahl</Typo.H2>
+            <Typo.H2>Chempark Uerdingen & Outokumpu - wo Seide war, fließen heute Polymere und Edelstahl</Typo.H2>
             <Typo.Paragraph>
-              Aus der historischen Samt- und Seidenstadt wurde Krefeld zum Chemie-Cluster mit einem Drittel der NRW-Chemieproduktion, dazu Outokumpu-Edelstahl und Siempelkamp-Anlagenbau. Quartiers- und Anlagen-Management bedeutet: REACH, IED, CBAM, IATF-Audits und globaler Anlagenbau-Service. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Aus der historischen Samt- und Seidenstadt wurde Krefeld zum Chemie-Cluster mit einem Drittel der NRW-Chemieproduktion, dazu Outokumpu-Edelstahl und Siempelkamp-Anlagenbau. Quartiers- und Anlagen-Management bedeutet: REACH, IED, CBAM, IATF-Audits und globaler Anlagenbau-Service. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -347,17 +347,17 @@ export default async function Page({
 
       {/* 3. ProsCons */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Krefeld hinter sich lässt – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Krefeld hinter sich lässt - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
                 title="Textilindustrie weitgehend Geschichte"
-                description="Aus der historischen 'Samt- und Seidenstadt' sind nur noch technische Textilien und Distribution geblieben – klassische Webereien und Konfektion längst verschwunden."
+                description="Aus der historischen 'Samt- und Seidenstadt' sind nur noch technische Textilien und Distribution geblieben - klassische Webereien und Konfektion längst verschwunden."
               />
               <ProsCons.Item
                 title="Strukturelle Krise 2024 laut IHK"
-                description="Rückläufige Industrieumsätze, steigende Arbeitslosigkeit – Energiekosten und Asien-Konkurrenz belasten Chemie, Edelstahl und Anlagenbau gleichzeitig."
+                description="Rückläufige Industrieumsätze, steigende Arbeitslosigkeit - Energiekosten und Asien-Konkurrenz belasten Chemie, Edelstahl und Anlagenbau gleichzeitig."
               />
               <ProsCons.Item
                 title="ThyssenKrupp/Outokumpu-Tradition unter Druck"
@@ -365,21 +365,21 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Bayer-Restrukturierung wirkt bis Krefeld"
-                description="Bayer-Konzern-Umbau und Pharma/Crop-Science-Sparmaßnahmen reichen bis Krefeld – Personal-Reduzierungen und Standort-Konsolidierungen."
+                description="Bayer-Konzern-Umbau und Pharma/Crop-Science-Sparmaßnahmen reichen bis Krefeld - Personal-Reduzierungen und Standort-Konsolidierungen."
               />
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
-                title="Chempark Krefeld-Uerdingen (8.500 MA) – Ein Drittel NRW-Chemieproduktion"
-                description="Einer der größten Chemieparks Europas: Covestro (Polymere), Lanxess (Spezialchemie), Bayer – plus Currenta als Standortbetreiber."
+                title="Chempark Krefeld-Uerdingen (8.500 MA) - Ein Drittel NRW-Chemieproduktion"
+                description="Einer der größten Chemieparks Europas: Covestro (Polymere), Lanxess (Spezialchemie), Bayer - plus Currenta als Standortbetreiber."
               />
               <ProsCons.Item
-                title="Outokumpu Nirosta – einer der größten Edelstahl-Produzenten Europas"
-                description="2.000 MA in Krefeld, traditionsreich aus thyssenkrupp-Erbe – Edelstahl-Champion mit Auto- und Spezial-Anwendungen."
+                title="Outokumpu Nirosta - einer der größten Edelstahl-Produzenten Europas"
+                description="2.000 MA in Krefeld, traditionsreich aus thyssenkrupp-Erbe - Edelstahl-Champion mit Auto- und Spezial-Anwendungen."
               />
               <ProsCons.Item
-                title="Siempelkamp – Weltmarktführer Holzwerkstoff-Pressen"
-                description="1.500 MA, plus Aktivitäten in Guss- und Nukleartechnik – globaler Anlagenbauer mit komplexem Engineering-to-Order."
+                title="Siempelkamp - Weltmarktführer Holzwerkstoff-Pressen"
+                description="1.500 MA, plus Aktivitäten in Guss- und Nukleartechnik - globaler Anlagenbauer mit komplexem Engineering-to-Order."
               />
               <ProsCons.Item
                 title="Trimodaler Rheinhafen + Helios Klinikum (2.500 MA)"

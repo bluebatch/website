@@ -175,7 +175,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/paderborn.jpg", width: 1200, height: 630, alt: "Paderborn – Diebold Nixdorf, Benteler und Heinz-Nixdorf-Erbe" }],
+      images: [{ url: "/images/cities/paderborn.jpg", width: 1200, height: 630, alt: "Paderborn - Diebold Nixdorf, Benteler und Heinz-Nixdorf-Erbe" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/paderborn.jpg"] },
     alternates: { canonical: "/ki-agentur-paderborn" },
@@ -191,7 +191,7 @@ const paderbornFaqs = [
   {
     question: "Benteler-Zulieferer: was bringt IATF-Automatisierung konkret?",
     answer:
-      "PPAP-Pakete, EDI-Anbindung an Covisint und OEM-Portale, JIS-/JIT-Lieferpipelines und 8D-Reports. SAP QM, MES und PLM integriert – reduziert manuelle PPAP-Erstellung um 60-80 %.",
+      "PPAP-Pakete, EDI-Anbindung an Covisint und OEM-Portale, JIS-/JIT-Lieferpipelines und 8D-Reports. SAP QM, MES und PLM integriert - reduziert manuelle PPAP-Erstellung um 60-80 %.",
   },
   {
     question: "dSPACE-Umfeld: kann n8n HiL-Validierung unterstützen?",
@@ -229,10 +229,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Paderborn – IT- und Engineering-Hub Ostwestfalen"}
+              {overrides?.preHeadline ?? "Standort Paderborn - IT- und Engineering-Hub Ostwestfalen"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Paderborn – für Diebold Nixdorf, Benteler und dSPACE"}
+              {overrides?.headline ?? "KI-Agentur in Paderborn - für Diebold Nixdorf, Benteler und dSPACE"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Diebold Nixdorf (Geldautomaten, POS-Systeme), Benteler-Automotive, dSPACE als HiL-Simulation-Marktführer und das Heinz-Nixdorf-Erbe machen Paderborn zum IT- und Engineering-Hub. Wir bauen Workflows für Banken-POS, IATF-Automotive und HiL-Validierung.
@@ -246,28 +246,28 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/paderborn.jpg"
-              alt="Paderborn – Diebold Nixdorf, Benteler und Heinz-Nixdorf-Erbe"
+              alt="Paderborn - Diebold Nixdorf, Benteler und Heinz-Nixdorf-Erbe"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Paderborn – Heinz-Nixdorf-Stadt und IT-Hochburg Ostwestfalen
+            Paderborn - Heinz-Nixdorf-Stadt und IT-Hochburg Ostwestfalen
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Diebold Nixdorf Geldautomaten weltweit wartet und dSPACE HiL-Simulationen für ADAS liefert, müssen Workflows IT- und Automotive-fest sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Diebold Nixdorf (10.000+ MA Region), Benteler (28.000 weltweit), dSPACE als HiL-Simulation-Marktführer, Universität Paderborn (s-lab, SICP) und Heinz-Nixdorf-MuseumsForum – Paderborn vereint Banken-IT, Automotive und HiL-Validierung in einer Dichte, die spezialisierte Workflows verlangt.
+            Diebold Nixdorf (10.000+ MA Region), Benteler (28.000 weltweit), dSPACE als HiL-Simulation-Marktführer, Universität Paderborn (s-lab, SICP) und Heinz-Nixdorf-MuseumsForum - Paderborn vereint Banken-IT, Automotive und HiL-Validierung in einer Dichte, die spezialisierte Workflows verlangt.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Paderborner IT und Automotive</Typo.H2>
         <SimpleGrid cols={2}>
@@ -323,7 +323,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Paderborner Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">

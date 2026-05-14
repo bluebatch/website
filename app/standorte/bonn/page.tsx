@@ -190,27 +190,27 @@ export async function generateMetadata({
 
 const bonnFaqs = [
   {
-    question: "DHL Group automatisiert weltweit – wie binden Mittelständler an Track & Trace an?",
+    question: "DHL Group automatisiert weltweit - wie binden Mittelständler an Track & Trace an?",
     answer:
       "DHL hat 594.000 Beschäftigte global. Zulieferer, IT-Dienstleister, Frachtmakler und Versandkunden müssen EDI, API, Track & Trace und Customs Clearance modernisieren. n8n verbindet DHL-APIs, eigene WMS- und ERP-Systeme End-to-End.",
   },
   {
-    question: "Deutsche Telekom – wie hilft n8n Geschäftspartnern und Resellern?",
+    question: "Deutsche Telekom - wie hilft n8n Geschäftspartnern und Resellern?",
     answer:
-      "Die Telekom investiert in KI-Plattformen (Frag Magenta, T-AI) und reduziert klassische Serviceberatung. Verträge, Tarife, Rechnungen und Provisionen werden mit n8n automatisch verarbeitet – inklusive Anbindung an Telekom-Portale und Reseller-Systeme.",
+      "Die Telekom investiert in KI-Plattformen (Frag Magenta, T-AI) und reduziert klassische Serviceberatung. Verträge, Tarife, Rechnungen und Provisionen werden mit n8n automatisch verarbeitet - inklusive Anbindung an Telekom-Portale und Reseller-Systeme.",
   },
   {
-    question: "Bundesbehörden und OZG – passt n8n in den Public Sector?",
+    question: "Bundesbehörden und OZG - passt n8n in den Public Sector?",
     answer:
       "Aktenführung, Formularverarbeitung, IT-Konsolidierung und KI-gestützte Sachbearbeitung sind klassische OZG-Themen. Für BMVg, BMG, BMU, BSI und BWI bieten wir n8n self-hosted in deutschen Rechenzentren mit BSI-Grundschutz-konformer Konfiguration.",
   },
   {
-    question: "UN und GIZ – wie hilft n8n bei mehrsprachigen Workflows?",
+    question: "UN und GIZ - wie hilft n8n bei mehrsprachigen Workflows?",
     answer:
       "Über 1.000 UN-Beschäftigte und Hunderte zugehörige Organisationen brauchen mehrsprachige Korrespondenz, Übersetzungs- und Compliance-Workflows. UN-Procurement, Spendenmanagement und Geber-Reporting werden mit n8n und KI-Übersetzung orchestriert.",
   },
   {
-    question: "Postbank-Integration in Deutsche Bank – wie unterstützt n8n Migrationen?",
+    question: "Postbank-Integration in Deutsche Bank - wie unterstützt n8n Migrationen?",
     answer:
       "IT-System-Migrationen, Vertragsanpassungen und Kundenkommunikation laufen seit Jahren. RPA und Workflow-Automatisierung mit n8n übernehmen wiederkehrende Aufgaben, ohne in Kern-Banken-IT einzugreifen.",
   },
@@ -248,7 +248,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Bonn –{" "}
+                KI-Agentur in Bonn -{" "}
                 DHL, Telekom, Bundesbehörden und{" "}
                 <BackgroundHero.Highlight>UN-Standort</BackgroundHero.Highlight>
               </>
@@ -256,7 +256,7 @@ export default async function Page({
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
             DHL Group, Deutsche Telekom, Postbank, 18 Bundesbehörden, 20+
-            UN-Organisationen, Universitätsklinikum, GIZ, BWI, BSI –
+            UN-Organisationen, Universitätsklinikum, GIZ, BWI, BSI -
             die ehemalige Bundeshauptstadt ist heute einer der
             internationalsten Standorte Deutschlands. Wir bauen
             n8n-Workflows für DHL-Logistik, Telekom-Services,
@@ -293,7 +293,7 @@ export default async function Page({
         <Typo.H2>Bonner Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
           DHL steuert anders als die Telekom, das BMVg anders als die UN.
-          Wir bauen für jeden Cluster die passenden n8n-Bausteine – vom
+          Wir bauen für jeden Cluster die passenden n8n-Bausteine - vom
           Track-&-Trace-Workflow bis zur mehrsprachigen UN-Korrespondenz.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -301,7 +301,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Truck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>DHL Group – größter Logistikkonzern der Welt</Typo.H3>
+            <Typo.H3>DHL Group - größter Logistikkonzern der Welt</Typo.H3>
             <Typo.Paragraph>
               594.000 Beschäftigte global, 9.000 in Bonn. Track & Trace, EDI,
               API, Customs Clearance und Hub-Workflows werden mit n8n
@@ -313,12 +313,12 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cpu className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Deutsche Telekom – T-Systems, Cisco, Microsoft</Typo.H3>
+            <Typo.H3>Deutsche Telekom - T-Systems, Cisco, Microsoft</Typo.H3>
             <Typo.Paragraph>
               16.500 Telekom-Beschäftigte in Bonn. Die Telekom investiert
               in Frag-Magenta-/T-AI-Plattformen. Geschäftspartner und
               Reseller müssen Verträge, Tarife, Rechnungen und Provisionen
-              automatisieren – n8n verbindet Telekom-Portale mit eigenen
+              automatisieren - n8n verbindet Telekom-Portale mit eigenen
               Systemen.
             </Typo.Paragraph>
           </SimpleCard>
@@ -326,7 +326,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Landmark className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>18 Bundesbehörden – BMVg, BMG, BMU, BSI, BWI</Typo.H3>
+            <Typo.H3>18 Bundesbehörden - BMVg, BMG, BMU, BSI, BWI</Typo.H3>
             <Typo.Paragraph>
               OZG-Umsetzung, Aktenführung, Formularverarbeitung, IT-
               Konsolidierung und KI-gestützte Sachbearbeitung sind zentrale
@@ -338,7 +338,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Building2 className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>UN-Standort &amp; GIZ – internationale Organisationen</Typo.H3>
+            <Typo.H3>UN-Standort &amp; GIZ - internationale Organisationen</Typo.H3>
             <Typo.Paragraph>
               Über 1.000 UN-Beschäftigte plus GIZ und dena. Mehrsprachige
               Korrespondenz, Übersetzungs-Workflows, UN-Procurement,
@@ -417,10 +417,10 @@ export default async function Page({
         <BoundlessImageCard imagePosition="left">
           <BoundlessImageCard.Image
             src="/images/cities/bonn.jpg"
-            alt="Bonn DHL, Telekom und UN-Standort – n8n-Workflows für Logistik, IT und Public Sector"
+            alt="Bonn DHL, Telekom und UN-Standort - n8n-Workflows für Logistik, IT und Public Sector"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>OZG, DHL und KI bei der Telekom – Bonn als Workflow-Knotenpunkt</Typo.H2>
+            <Typo.H2>OZG, DHL und KI bei der Telekom - Bonn als Workflow-Knotenpunkt</Typo.H2>
             <Typo.Paragraph>
               Onlinezugangsgesetz und Konjunkturpaket Digitale Verwaltung
               treiben enorme Anforderungen in den Bonner Bundesbehörden.

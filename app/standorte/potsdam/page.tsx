@@ -169,7 +169,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/potsdam.jpg", width: 1200, height: 630, alt: "Potsdam – HPI, Babelsberg-Filmstudios und Wissenschaftsstadt" }],
+      images: [{ url: "/images/cities/potsdam.jpg", width: 1200, height: 630, alt: "Potsdam - HPI, Babelsberg-Filmstudios und Wissenschaftsstadt" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/potsdam.jpg"] },
     alternates: { canonical: "/ki-agentur-potsdam" },
@@ -198,9 +198,9 @@ const potsdamFaqs = [
       "Ja. DFG-, BMBF- und EU-Horizon-Projekte mit Zeiterfassung, Verwendungsnachweis und Quartalsreports. Anbindung an SAP CO, easy-Online, ECAS und DataCite für Forschungsdaten-Publikation.",
   },
   {
-    question: "Pendler nach Berlin – wie skalieren HR-Workflows?",
+    question: "Pendler nach Berlin - wie skalieren HR-Workflows?",
     answer:
-      "Hybrid-Work-Verträge, A1-Bescheinigungen und tarifrechtliche Brandenburg-Spezifika in HR-Pipelines. Anbindung an SAP HCM, Workday und Active Directory – inklusive Onboarding für SAP-/Berlin-Achse.",
+      "Hybrid-Work-Verträge, A1-Bescheinigungen und tarifrechtliche Brandenburg-Spezifika in HR-Pipelines. Anbindung an SAP HCM, Workday und Active Directory - inklusive Onboarding für SAP-/Berlin-Achse.",
   },
 ];
 
@@ -223,10 +223,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Potsdam – Wissenschafts- und Filmstadt"}
+              {overrides?.preHeadline ?? "Standort Potsdam - Wissenschafts- und Filmstadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Potsdam – für HPI, Babelsberg und SAP-Achse Berlin"}
+              {overrides?.headline ?? "KI-Agentur in Potsdam - für HPI, Babelsberg und SAP-Achse Berlin"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Hasso-Plattner-Institut (HPI) ist Deutschlands führendes IT-Engineering-Institut, Studios Babelsberg sind Europas größtes Filmstudio und der Wissenschaftsstandort verbindet AWI, GFZ und MPI. Wir bauen Workflows für IT-Forschung, Film-Produktionsmanagement und Wissenschaftsverwaltung.
@@ -240,13 +240,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/potsdam.jpg"
-              alt="Potsdam – HPI, Babelsberg-Filmstudios und Wissenschaftsstadt"
+              alt="Potsdam - HPI, Babelsberg-Filmstudios und Wissenschaftsstadt"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Potsdamer Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -261,7 +261,7 @@ export default async function Page({
               RBB Hauptsitz, ARD-Stargate und Medienproduktion in Babelsberg. Rechte-Verwaltung, Sendeauftrag-Reporting und GVK-Konvergenz mit anderen ARD-Anstalten gehören in spezialisierte Pipelines.
             </NumberedList.Item>
             <NumberedList.Item title="Max-Planck-, AWI- und GFZ-Forschungs-Cluster:">
-              PIK (Klimafolgen), GFZ (Geoforschung), AWI (Polarforschung) und MPI Kolloid-/Grenzflächenforschung – Drittmittel-Volumen in 9-stelliger Höhe pro Jahr. ECAS, easy-Online, DataCite und Forschungsdaten-Management sind Pipeline-Themen.
+              PIK (Klimafolgen), GFZ (Geoforschung), AWI (Polarforschung) und MPI Kolloid-/Grenzflächenforschung - Drittmittel-Volumen in 9-stelliger Höhe pro Jahr. ECAS, easy-Online, DataCite und Forschungsdaten-Management sind Pipeline-Themen.
             </NumberedList.Item>
             <NumberedList.Item title="Brandenburg-Berlin-Pendler-Effekt:">
               Hohe Pendlerzahl nach Berlin und SAP/Berlin-Achse. Hybrid-Work-Verträge, A1-Bescheinigungen und tarifrechtliche Brandenburg-Spezifika sind HR-Workflow-Themen.
@@ -283,11 +283,11 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Potsdam – Wissenschaftsstadt mit Babelsberg-Erbe
+            Potsdam - Wissenschaftsstadt mit Babelsberg-Erbe
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Hasso-Plattner KI-Forschung antreibt und Babelsberg Hollywood-Produktionen abwickelt, müssen Workflows technologie- und kreativ-spezifisch sein
@@ -298,7 +298,7 @@ export default async function Page({
         </IntroBox>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Potsdamer IT-Forschung, Film und Wissenschaft</Typo.H2>
         <SimpleGrid cols={2}>

@@ -137,7 +137,7 @@ export async function generateMetadata({
   const title = overrides?.metaTitle ?? "KI-Agentur in Ingolstadt | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Automotive- und Defence-Automatisierung in Ingolstadt: n8n-Workflows für Audi-Zulieferer, Ceconomy/MediaMarktSaturn und Airbus Defence and Space – IATF-16949-, Catena-X- und ITAR-konform.";
+    "Automotive- und Defence-Automatisierung in Ingolstadt: n8n-Workflows für Audi-Zulieferer, Ceconomy/MediaMarktSaturn und Airbus Defence and Space - IATF-16949-, Catena-X- und ITAR-konform.";
 
   return {
     title,
@@ -178,7 +178,7 @@ export async function generateMetadata({
 
 const ingolstadtFaqs = [
   {
-    question: "Wir sind Audi-Tier-1 in Ingolstadt – wie integriert ihr n8n in unsere JIS-Welt?",
+    question: "Wir sind Audi-Tier-1 in Ingolstadt - wie integriert ihr n8n in unsere JIS-Welt?",
     answer:
       "Self-hosted on-premise mit Anbindung an Audi-Catena-X-Datenräume, EDIFACT-Abrufe nach VDA 4905 und das Audi-Lieferantenportal. Wir decken JIT/JIS-Sequenzierung für das Q6 e-tron- und A6 e-tron-Hochlauf-Programm ab, mit IATF-16949-konformer APQP-Doku und PPAP-Freigaben.",
   },
@@ -198,9 +198,9 @@ const ingolstadtFaqs = [
       "Im Defence-Umfeld arbeiten wir ausschließlich im VS-NfD-Bereich oder darunter und docken an SAP S/4HANA, IBM Maximo und die NATO-Codifizierungs-Systeme (NCS) an. Exportkontrolle nach AWG, US-ITAR und EU-Dual-Use wird als Pre-Approval-Gate vor jeder Bestellung automatisiert geprüft. Sicherheitsüberprüfungen nach SÜG laufen mit Vier-Augen-Freigaben.",
   },
   {
-    question: "Wir sind 200-MA-Maschinenbauer im Raum Eichstätt – lohnt sich das?",
+    question: "Wir sind 200-MA-Maschinenbauer im Raum Eichstätt - lohnt sich das?",
     answer:
-      "Gerade dann. Wer aus den Audi-Rahmenverträgen fliegt, weil VDA-4905-EDI oder Catena-X-Anbindung fehlt, verliert sofort Millionenumsatz. Wir bauen die EDI- und JIS-Schnittstellen zum Festpreis, in 4 bis 8 Wochen produktiv – on-premise in eurem deutschen Rechenzentrum.",
+      "Gerade dann. Wer aus den Audi-Rahmenverträgen fliegt, weil VDA-4905-EDI oder Catena-X-Anbindung fehlt, verliert sofort Millionenumsatz. Wir bauen die EDI- und JIS-Schnittstellen zum Festpreis, in 4 bis 8 Wochen produktiv - on-premise in eurem deutschen Rechenzentrum.",
   },
 ];
 
@@ -231,7 +231,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Ingolstadt –{" "}
+                KI-Agentur in Ingolstadt -{" "}
                 Premium-Automotive und Defence{" "}
                 <BackgroundHero.Highlight>an der Donau</BackgroundHero.Highlight>
               </>
@@ -271,7 +271,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Audi, Ceconomy, Airbus Defence – drei Welten an der Donau
+            Audi, Ceconomy, Airbus Defence - drei Welten an der Donau
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Premium-EV-Hochlauf auf Elektronikhandel und Defence trifft
@@ -287,14 +287,14 @@ export default async function Page({
         <div className="mt-8 space-y-6">
           <Typo.Paragraph>
             Audi beschäftigt rund 40.000 Mitarbeiter in der Region und hat
-            2024 am Standort Ingolstadt 336.783 Fahrzeuge produziert – Q2,
+            2024 am Standort Ingolstadt 336.783 Fahrzeuge produziert - Q2,
             A3, Q6 e-tron und A6 e-tron. Mit dem angekündigten Stellenabbau
             von 7.500 Stellen weltweit läuft gleichzeitig der Premium-EV-Hochlauf
             an. Hunderte Tier-1- und Tier-2-Zulieferer arbeiten in JIT/JIS-Anbindung,
             kommunizieren über VDA-4905-EDIFACT und müssen seit kurzem
             Catena-X-Datenräume bedienen: Traceability nach AAS, PCF-Berechnung
             pro Bauteil, Quality-Notifications. Wer hier nicht digital
-            lieferfähig ist, fliegt aus dem Lieferantenpool – und das geht
+            lieferfähig ist, fliegt aus dem Lieferantenpool - und das geht
             schnell, wenn Audi unter Margendruck auf chinesische Konkurrenz reagiert.
           </Typo.Paragraph>
           <Typo.Paragraph>
@@ -306,7 +306,7 @@ export default async function Page({
             sauber laufen müssen. In Manching betreibt Airbus Defence and
             Space die Eurofighter-Endmontage, Hensoldt liefert Sensorik,
             KMW Wehrtechnik. Mit dem Sondervermögen Bundeswehr und der NATO-
-            Aufrüstung steigen Produktionsfrequenzen drastisch – und damit
+            Aufrüstung steigen Produktionsfrequenzen drastisch - und damit
             der Druck auf ITAR-, AWG- und EU-Dual-Use-konforme Workflows.
           </Typo.Paragraph>
           <Typo.Paragraph>
@@ -330,7 +330,7 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                Audi treibt Catena-X – was machen Tier-2 und Tier-3?
+                Audi treibt Catena-X - was machen Tier-2 und Tier-3?
               </Typo.H2>
               <Typo.Paragraph>
                 Audi betreibt eigene Data-Science- und KI-Teams und prescht
@@ -345,7 +345,7 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 4. DataTable – Automotive-Vergleich */}
+      {/* 4. DataTable - Automotive-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>

@@ -141,7 +141,7 @@ export async function generateMetadata({
   const title = overrides?.metaTitle ?? "KI-Agentur in Darmstadt | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Pharma-, Raumfahrt- und Cybersecurity-Automatisierung in Darmstadt: n8n-Workflows für Merck KGaA, ESA-ESOC, EUMETSAT, Software AG und ATHENE – GxP-, ESA-OPS- und ISO-27001-konform.";
+    "Pharma-, Raumfahrt- und Cybersecurity-Automatisierung in Darmstadt: n8n-Workflows für Merck KGaA, ESA-ESOC, EUMETSAT, Software AG und ATHENE - GxP-, ESA-OPS- und ISO-27001-konform.";
 
   return {
     title,
@@ -182,7 +182,7 @@ export async function generateMetadata({
 
 const darmstadtFaqs = [
   {
-    question: "Wir liefern an Merck KGaA – wie deckt n8n GxP für das älteste Pharma-Unternehmen der Welt ab?",
+    question: "Wir liefern an Merck KGaA - wie deckt n8n GxP für das älteste Pharma-Unternehmen der Welt ab?",
     answer:
       "Self-hosted, on-premise, mit Anbindung an Veeva Vault, TrackWise und SAP S/4HANA. Wir bauen Workflows für Studien-, Chargen- und Pharmakovigilanz-Doku nach 21 CFR Part 11, Annex 11 und ICH-GCP. Marktzulassungs-Workflows an FDA, EMA und MHRA laufen versioniert und auditfest, mit elektronischer Signatur und vollem Audit-Trail.",
   },
@@ -202,7 +202,7 @@ const darmstadtFaqs = [
       "ATHENE arbeitet mit über 600 Forschern an KI-getriebenem Threat Hunting und Compliance-Automatisierung. Wir packen diese Forschung in produktive n8n-Workflows: automatisierte SBOM-Erzeugung, Sicherheitslücken-Triage und ISO-27001-konformes Vorfallsmanagement, mit Anbindung an SIEM-Systeme wie Splunk oder Elastic.",
   },
   {
-    question: "Wir sind ENTEGA- oder Stadtwerks-IT – lässt sich Marktkommunikation automatisieren?",
+    question: "Wir sind ENTEGA- oder Stadtwerks-IT - lässt sich Marktkommunikation automatisieren?",
     answer:
       "Ja. Smart-Meter-Rollout, dynamische Tarife, EDIFACT-MAKO (Marktkommunikation Strom/Gas), Heizkostenverordnung und CO2-Bepreisung sind klassische RPA-/Workflow-Felder. Wir docken an SAP IS-U, robotron und kVASy an, mit automatisiertem Klärfall-Management für UTILMD, MSCONS und ORDERS.",
   },
@@ -235,7 +235,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Darmstadt –{" "}
+                KI-Agentur in Darmstadt -{" "}
                 Wissenschaftsstadt zwischen Merck, ESA und{" "}
                 <BackgroundHero.Highlight>Cybersecurity</BackgroundHero.Highlight>
               </>
@@ -245,7 +245,7 @@ export default async function Page({
             Merck KGaA, ESA-ESOC, Software AG und ATHENE prägen die
             Wissenschaftsstadt Darmstadt. Wir automatisieren GxP-,
             Mission-Operations- und Cybersecurity-Workflows mit self-hosted
-            n8n – 21 CFR Part 11-, ESA-OPS- und ISO-27001-konform.
+            n8n - 21 CFR Part 11-, ESA-OPS- und ISO-27001-konform.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">
@@ -285,7 +285,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 4. DataTable – Pharma-/Cybersecurity-Vergleich */}
+      {/* 4. DataTable - Pharma-/Cybersecurity-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>
@@ -345,7 +345,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Merck, ESA-ESOC, Software AG, ATHENE – Pharma trifft Raumfahrt trifft Cybersecurity
+            Merck, ESA-ESOC, Software AG, ATHENE - Pharma trifft Raumfahrt trifft Cybersecurity
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo das älteste Pharma-Unternehmen der Welt auf europäische Missions-Kontrolle trifft
@@ -371,7 +371,7 @@ export default async function Page({
             Annex 11 sind hochgradig formularlastig und prädestiniert für
             Workflow- und KI-Automatisierung. Merck selbst investiert
             intensiv in eigene Digital-Assistenten und automatisierte
-            Lab-Workflows – Zulieferer und Engineering-Dienstleister müssen
+            Lab-Workflows - Zulieferer und Engineering-Dienstleister müssen
             dasselbe Niveau halten.
           </Typo.Paragraph>
           <Typo.Paragraph>
@@ -410,14 +410,14 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                Merck baut KI-Lab-Assistenten – was machen Zulieferer und Mittelstand?
+                Merck baut KI-Lab-Assistenten - was machen Zulieferer und Mittelstand?
               </Typo.H2>
               <Typo.Paragraph>
                 Merck investiert in eigene Digital-Assistenten und
                 Lab-Automation. Mittelständische Pharma-Engineering-Dienstleister,
                 Verpacker und IT-Häuser brauchen einen pragmatischen Hebel:
                 schlanke n8n-Workflows zwischen Veeva Vault, SAP und Merck-
-                Lieferantenportal – self-hosted, modular, ohne Vendor Lock-in.
+                Lieferantenportal - self-hosted, modular, ohne Vendor Lock-in.
               </Typo.Paragraph>
             </BoundlessImageCard.Content>
           </BoundlessImageCard>

@@ -165,7 +165,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/goettingen.jpg", width: 1200, height: 630, alt: "Göttingen – Sartorius, Ottobock und Wissenschaftsstadt" }],
+      images: [{ url: "/images/cities/goettingen.jpg", width: 1200, height: 630, alt: "Göttingen - Sartorius, Ottobock und Wissenschaftsstadt" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/goettingen.jpg"] },
     alternates: { canonical: "/standorte/goettingen" },
@@ -191,7 +191,7 @@ const goettingenFaqs = [
   {
     question: "MPI-Forscher: kann n8n Drittmittel-Reporting abbilden?",
     answer:
-      "Ja. DFG-, BMBF- und EU-Horizon-Projekte mit Zeiterfassung, Verwendungsnachweis und Quartalsreports. Anbindung an SAP CO, easy-Online, ECAS und DataCite – plus Tierschutz-Workflows für DPZ.",
+      "Ja. DFG-, BMBF- und EU-Horizon-Projekte mit Zeiterfassung, Verwendungsnachweis und Quartalsreports. Anbindung an SAP CO, easy-Online, ECAS und DataCite - plus Tierschutz-Workflows für DPZ.",
   },
   {
     question: "UMG-Translationsprojekt: wie helfen Workflows?",
@@ -219,10 +219,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Göttingen – Stadt, die Wissen schafft"}
+              {overrides?.preHeadline ?? "Standort Göttingen - Stadt, die Wissen schafft"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Göttingen – für Sartorius, Ottobock und Bioprozess-Cluster"}
+              {overrides?.headline ?? "KI-Agentur in Göttingen - für Sartorius, Ottobock und Bioprozess-Cluster"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Sartorius ist DAX-Konzern für Bioprozess-Technologie, Ottobock Weltmarktführer für Prothetik, KWS Saat einer der größten Saatgut-Hersteller und die Universität Göttingen Nobelpreisträger-Schmiede. Wir bauen Workflows für Bioprozess-Compliance, MDR-Prothetik und Saatgut-Forschung.
@@ -236,13 +236,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/goettingen.jpg"
-              alt="Göttingen – Sartorius, Ottobock und Wissenschaftsstadt"
+              alt="Göttingen - Sartorius, Ottobock und Wissenschaftsstadt"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Göttinger Biotech, MedTech und Forschung</Typo.H2>
         <SimpleGrid cols={2}>
@@ -285,22 +285,22 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Göttingen – Stadt der 47 Nobelpreisträger
+            Göttingen - Stadt der 47 Nobelpreisträger
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Sartorius Bioreaktoren für Biontech fertigt und Ottobock Prothetik weltweit liefert, müssen Workflows Pharma-präzise sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Sartorius (DAX-30, 13.000 Mitarbeiter), Ottobock (8.000 weltweit), KWS Saat (5.700 weltweit) und Universität Göttingen mit dem UMG-Klinikum – diese Mischung aus DAX-Biotech, MDR-MedTech und Agrar-Forschung verlangt branchenspezifische Pipelines.
+            Sartorius (DAX-30, 13.000 Mitarbeiter), Ottobock (8.000 weltweit), KWS Saat (5.700 weltweit) und Universität Göttingen mit dem UMG-Klinikum - diese Mischung aus DAX-Biotech, MDR-MedTech und Agrar-Forschung verlangt branchenspezifische Pipelines.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Göttinger Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">

@@ -166,7 +166,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/erfurt.jpg", width: 1200, height: 630, alt: "Erfurt – X-FAB Halbleiter und Thüringer Logistik-Drehkreuz" }],
+      images: [{ url: "/images/cities/erfurt.jpg", width: 1200, height: 630, alt: "Erfurt - X-FAB Halbleiter und Thüringer Logistik-Drehkreuz" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/erfurt.jpg"] },
     alternates: { canonical: "/standorte/erfurt" },
@@ -177,7 +177,7 @@ const erfurtFaqs = [
   {
     question: "X-FAB-Zulieferer: wie hilft Automatisierung?",
     answer:
-      "Lieferanten-Qualifizierung, Reinraum-Logs nach ISO 14644, ITAR-/EAR-Klassifikation und FAB-Service-Workflows in n8n-Pipelines. Anbindung an SAP, MES und FAB-Compliance-Tools – verkürzt Lieferanten-Onboarding spürbar.",
+      "Lieferanten-Qualifizierung, Reinraum-Logs nach ISO 14644, ITAR-/EAR-Klassifikation und FAB-Service-Workflows in n8n-Pipelines. Anbindung an SAP, MES und FAB-Compliance-Tools - verkürzt Lieferanten-Onboarding spürbar.",
   },
   {
     question: "MDR- oder Medien-Zulieferer: was bringt n8n?",
@@ -187,7 +187,7 @@ const erfurtFaqs = [
   {
     question: "E-Commerce-Logistik: wie helfen Workflows beim Fulfillment?",
     answer:
-      "Lager-Pick-Workflows, Versanddienstleister-Integration (DHL, Hermes, GLS), KI-gestützte Retouren-Klassifikation und Bestandsführung. Anbindung an Lager-WMS und ERP – reduziert Retouren-Bearbeitung um 40-60 %.",
+      "Lager-Pick-Workflows, Versanddienstleister-Integration (DHL, Hermes, GLS), KI-gestützte Retouren-Klassifikation und Bestandsführung. Anbindung an Lager-WMS und ERP - reduziert Retouren-Bearbeitung um 40-60 %.",
   },
   {
     question: "Bauerfeind- oder MedTech-Mittelstand: kann n8n MDR abbilden?",
@@ -220,10 +220,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Erfurt – Thüringer Landeshauptstadt"}
+              {overrides?.preHeadline ?? "Standort Erfurt - Thüringer Landeshauptstadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Erfurt – für X-FAB Halbleiter, MDR und Zalando-Logistik"}
+              {overrides?.headline ?? "KI-Agentur in Erfurt - für X-FAB Halbleiter, MDR und Zalando-Logistik"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               X-FAB betreibt eine der größten Foundries für Spezial-Halbleiter, MDR ist Thüringens Rundfunkanstalt, Zalando-Logistikzentrum versendet Millionen Pakete und CARITAS-Krankenhaus prägt die Gesundheitsbranche. Wir bauen Workflows für Halbleiter-FAB, Medien-Rechte und Logistik.
@@ -237,28 +237,28 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/erfurt.jpg"
-              alt="Erfurt – X-FAB Halbleiter und Thüringer Logistik-Drehkreuz"
+              alt="Erfurt - X-FAB Halbleiter und Thüringer Logistik-Drehkreuz"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Erfurt – Halbleiter-, Medien- und Logistik-Hub Mitteldeutschland
+            Erfurt - Halbleiter-, Medien- und Logistik-Hub Mitteldeutschland
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo X-FAB Spezial-Halbleiter für die Welt fertigt und Zalando Millionen Pakete täglich versendet, sind Workflows die Lebensader
           </IntroBox.Headline>
           <IntroBox.Subline>
-            X-FAB Erfurt (1.700 MA), MDR Hauptsitz, Zalando-Logistikzentrum, Bauerfeind (Medizintechnik), Knauf, CARITAS-Krankenhaus – Erfurt vereint Halbleiter-, Medien-, Logistik- und Gesundheits-Cluster. Diese Mischung verlangt branchenspezifische Pipelines.
+            X-FAB Erfurt (1.700 MA), MDR Hauptsitz, Zalando-Logistikzentrum, Bauerfeind (Medizintechnik), Knauf, CARITAS-Krankenhaus - Erfurt vereint Halbleiter-, Medien-, Logistik- und Gesundheits-Cluster. Diese Mischung verlangt branchenspezifische Pipelines.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Erfurter Halbleiter, Medien und Logistik</Typo.H2>
         <SimpleGrid cols={2}>
@@ -314,7 +314,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Erfurter Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">

@@ -181,12 +181,12 @@ export async function generateMetadata({
 
 const salzgitterFaqs = [
   {
-    question: "SALCOS bringt grünen Stahl ab 2025 – wie automatisieren wir CBAM und H2-Herkunftsnachweise?",
+    question: "SALCOS bringt grünen Stahl ab 2025 - wie automatisieren wir CBAM und H2-Herkunftsnachweise?",
     answer:
-      "Über 2 Mrd. € Investition in wasserstoffbasierte Direktreduktion verlangen end-to-end Datenflüsse: H2-Lieferverträge, CertifHy/RED-II-Nachweise, CBAM-Reporting an DEHSt, EU-Emissionshandel (ETS) und Lieferanten-Tracking. n8n verbindet Energiezähler, Stromherkunfts-Register, SAP und EHS-Software – auditfest und self-hosted.",
+      "Über 2 Mrd. € Investition in wasserstoffbasierte Direktreduktion verlangen end-to-end Datenflüsse: H2-Lieferverträge, CertifHy/RED-II-Nachweise, CBAM-Reporting an DEHSt, EU-Emissionshandel (ETS) und Lieferanten-Tracking. n8n verbindet Energiezähler, Stromherkunfts-Register, SAP und EHS-Software - auditfest und self-hosted.",
   },
   {
-    question: "VW-Motorenwerk im Verbrenner-Auslauf – welche Workflows brauchen die Transformation?",
+    question: "VW-Motorenwerk im Verbrenner-Auslauf - welche Workflows brauchen die Transformation?",
     answer:
       "1,5 Mio. Motoren/Jahr werden über die nächsten Jahre auf Elektro umgestellt. Workflows für Produktions-Hochlauf neuer Linien, Qualifizierungs-Tracking von Mitarbeitern, Tier-1-Lieferanten-Wechsel und JIT/JIS-Anbindung an Wolfsburg sind Pflicht.",
   },
@@ -196,14 +196,14 @@ const salzgitterFaqs = [
       "Zellfertigung verlangt MES-Anbindung mit lückenloser Chargenrückverfolgung, EHS-Workflows für Lithium und Lösemittel, Predictive Maintenance für Trocknungsanlagen und Lieferanten-Onboarding für kritische Rohstoffe (Lithium, Kobalt, Nickel). n8n koppelt MES, SAP, Qualität und Behörden zu einer Pipeline.",
   },
   {
-    question: "Tier-1-Zulieferer für VW und MAN – wie erfüllen wir IATF 16949 und JIS-Anforderungen?",
+    question: "Tier-1-Zulieferer für VW und MAN - wie erfüllen wir IATF 16949 und JIS-Anforderungen?",
     answer:
       "IATF-konforme Audit-Trails, JIS-EDI über DELJIT/DELFOR, Werkstoffzeugnisse 3.1/3.2, IMDS-Datenpflege für VW. n8n automatisiert die Pflege dieser Standards gegen Konzern-Portale und vermeidet Lieferanten-Rauswurf.",
   },
   {
-    question: "Salzgitter AG Stahlhandel weltweit – wie automatisieren wir Sanktionsprüfung und Zoll?",
+    question: "Salzgitter AG Stahlhandel weltweit - wie automatisieren wir Sanktionsprüfung und Zoll?",
     answer:
-      "Weltweiter Stahlhandel mit ATLAS/NCTS, Sanktionsprüfung (DPL, EU-Konsolidiert), ITAR-Vorgaben und Trade Compliance. n8n verbindet SAP GTS, ATLAS und Sanktionslisten-APIs – mit lückenlosem Audit-Trail.",
+      "Weltweiter Stahlhandel mit ATLAS/NCTS, Sanktionsprüfung (DPL, EU-Konsolidiert), ITAR-Vorgaben und Trade Compliance. n8n verbindet SAP GTS, ATLAS und Sanktionslisten-APIs - mit lückenlosem Audit-Trail.",
   },
 ];
 
@@ -234,14 +234,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Salzgitter –{" "}
+                KI-Agentur in Salzgitter -{" "}
                 vom Hochofen zum{" "}
                 <BackgroundHero.Highlight>grünen Stahl- und Batterie-Cluster</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Salzgitter AG investiert 2 Mrd. € in SALCOS für klimaneutralen Stahl, VW baut hier eine der größten Gigafactories Europas, MAN fertigt Achsen. Wir automatisieren genau die Workflows, die ein Industriecluster im Wandel braucht – CBAM, IATF und Zell-MES.
+            Salzgitter AG investiert 2 Mrd. € in SALCOS für klimaneutralen Stahl, VW baut hier eine der größten Gigafactories Europas, MAN fertigt Achsen. Wir automatisieren genau die Workflows, die ein Industriecluster im Wandel braucht - CBAM, IATF und Zell-MES.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Salzgitter besprechen</ContactButton>
@@ -268,42 +268,42 @@ export default async function Page({
 
       {/* 3. ProsCons */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Salzgitter hinter sich lässt – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Salzgitter hinter sich lässt - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
                 title="Klassische Hochöfen vor dem Aus"
-                description="Bis Ende des Jahrzehnts werden die Hochöfen schrittweise stillgelegt – Generationen-altes Stahlkocher-Know-how muss in DRI- und H2-Welt überführt werden."
+                description="Bis Ende des Jahrzehnts werden die Hochöfen schrittweise stillgelegt - Generationen-altes Stahlkocher-Know-how muss in DRI- und H2-Welt überführt werden."
               />
               <ProsCons.Item
                 title="VW-Motorenwerk verliert Verbrenner-Geschäft"
-                description="1,5 Mio. Verbrennungsmotoren/Jahr – mit dem politisch beschlossenen Verbrenner-Aus 2035 muss sich das zweitgrößte Motorenwerk der Welt komplett neu erfinden."
+                description="1,5 Mio. Verbrennungsmotoren/Jahr - mit dem politisch beschlossenen Verbrenner-Aus 2035 muss sich das zweitgrößte Motorenwerk der Welt komplett neu erfinden."
               />
               <ProsCons.Item
-                title="Bosch Mahle Turbo Systems – Turbolader-Geschäft im Auslauf"
+                title="Bosch Mahle Turbo Systems - Turbolader-Geschäft im Auslauf"
                 description="Spezial-Turbolader für Verbrenner-Motoren verlieren langfristig Markt, 500 Beschäftigte am Standort unter Transformations-Druck."
               />
               <ProsCons.Item
                 title="Fachkräftekonkurrenz mit Wolfsburg, Braunschweig, Hannover"
-                description="Industriemechaniker, Verfahrenstechniker und Elektroniker sind Mangelberufe – Salzgitter konkurriert mit den anderen niedersächsischen Industrie-Schwergewichten."
+                description="Industriemechaniker, Verfahrenstechniker und Elektroniker sind Mangelberufe - Salzgitter konkurriert mit den anderen niedersächsischen Industrie-Schwergewichten."
               />
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
-                title="Salzgitter AG mit SALCOS – Modellregion klimaneutraler Stahl"
+                title="Salzgitter AG mit SALCOS - Modellregion klimaneutraler Stahl"
                 description="2+ Mrd. € Investition, CO2-armer Stahl ab Ende 2025 an VW, eines der größten Dekarbonisierungs-Projekte der europäischen Industrie."
               />
               <ProsCons.Item
-                title="PowerCo SE – VW-Batterietochter mit 40-GWh-Gigafactory"
-                description="Hauptsitz in Salzgitter, geplanter Hochlauf bis 2027 – eine der größten Batteriezellfabriken Europas im Aufbau."
+                title="PowerCo SE - VW-Batterietochter mit 40-GWh-Gigafactory"
+                description="Hauptsitz in Salzgitter, geplanter Hochlauf bis 2027 - eine der größten Batteriezellfabriken Europas im Aufbau."
               />
               <ProsCons.Item
                 title="MAN Truck & Bus (2.500 MA) im Nutzfahrzeug-Wandel"
-                description="Achsen- und Komponentenfertigung für die nächste Generation E-Trucks und H2-LKW – strategisch zentral für VW Trinity und VW-Nfz-Strategie."
+                description="Achsen- und Komponentenfertigung für die nächste Generation E-Trucks und H2-LKW - strategisch zentral für VW Trinity und VW-Nfz-Strategie."
               />
               <ProsCons.Item
-                title="Salzgitter Flachstahl – 4,7 Mio. t/3,6 Mrd. € Umsatz (2024)"
+                title="Salzgitter Flachstahl - 4,7 Mio. t/3,6 Mrd. € Umsatz (2024)"
                 description="Hauptverwendung Auto-Industrie und Bauwesen, mit klarer Leitkundenstrategie für CO2-armen Stahl."
               />
             </ProsCons.Pros>
@@ -319,9 +319,9 @@ export default async function Page({
             alt="SALCOS und PowerCo Gigafactory Salzgitter"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>SALCOS & PowerCo – wo Hochofen war, fließt heute Wasserstoff und Lithium</Typo.H2>
+            <Typo.H2>SALCOS & PowerCo - wo Hochofen war, fließt heute Wasserstoff und Lithium</Typo.H2>
             <Typo.Paragraph>
-              Die Salzgitter AG ersetzt klassische Hochöfen durch H2-Direktreduktion und liefert ab Ende 2025 grünen Stahl an VW. Wenige Kilometer entfernt baut PowerCo eine Gigafactory für 40 GWh Zellkapazität. Beide Welten brauchen End-to-End-Workflows – CO2-Tracking, MES-Chargen, IATF-Audit-Trails. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Die Salzgitter AG ersetzt klassische Hochöfen durch H2-Direktreduktion und liefert ab Ende 2025 grünen Stahl an VW. Wenige Kilometer entfernt baut PowerCo eine Gigafactory für 40 GWh Zellkapazität. Beide Welten brauchen End-to-End-Workflows - CO2-Tracking, MES-Chargen, IATF-Audit-Trails. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -342,7 +342,7 @@ export default async function Page({
             Was passiert mit den Prozessen, wenn aus Hochofen H2-Direktreduktion und aus Verbrenner Zelle wird?
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Salzgitter erlebt die historischste Doppel-Transformation eines deutschen Industriestandorts: Die Salzgitter AG ersetzt ihre klassischen Hochöfen durch wasserstoffbasierte Direktreduktion (SALCOS, 2+ Mrd. €), VW wandelt sein größtes Motorenwerk weltweit Richtung Elektroantrieb und baut über PowerCo eine 40-GWh-Gigafactory. MAN, Bosch Mahle Turbo, Alstom – alle hängen an dieser Transformation. Jede dieser Säulen hat eigene Prozess-Pains.
+            Salzgitter erlebt die historischste Doppel-Transformation eines deutschen Industriestandorts: Die Salzgitter AG ersetzt ihre klassischen Hochöfen durch wasserstoffbasierte Direktreduktion (SALCOS, 2+ Mrd. €), VW wandelt sein größtes Motorenwerk weltweit Richtung Elektroantrieb und baut über PowerCo eine 40-GWh-Gigafactory. MAN, Bosch Mahle Turbo, Alstom - alle hängen an dieser Transformation. Jede dieser Säulen hat eigene Prozess-Pains.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
@@ -351,7 +351,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Salzgitter heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -360,7 +360,7 @@ export default async function Page({
             </SimpleCard.Icon>
             <Typo.H3>Grüner Stahl & SALCOS</Typo.H3>
             <Typo.Paragraph>
-              H2-Lieferverträge, CertifHy/RED-II-Nachweise, CBAM, EU-ETS, Lieferanten-Onboarding für DRI – auditfeste Daten-Pipelines aus Energie, SAP und EHS.
+              H2-Lieferverträge, CertifHy/RED-II-Nachweise, CBAM, EU-ETS, Lieferanten-Onboarding für DRI - auditfeste Daten-Pipelines aus Energie, SAP und EHS.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">

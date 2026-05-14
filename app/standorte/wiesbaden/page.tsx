@@ -145,7 +145,7 @@ export async function generateMetadata({
     overrides?.metaTitle ?? "KI-Agentur in Wiesbaden | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Versicherungs- und Behörden-Automatisierung in Wiesbaden: n8n-Workflows für R+V, SV SparkassenVersicherung, HELABA, BKA und Destatis – DSGVO-konform und self-hosted.";
+    "Versicherungs- und Behörden-Automatisierung in Wiesbaden: n8n-Workflows für R+V, SV SparkassenVersicherung, HELABA, BKA und Destatis - DSGVO-konform und self-hosted.";
 
   return {
     title,
@@ -187,14 +187,14 @@ const wiesbadenFaqs = [
       "Aktenführung, Statistikproduktion und nachgelagerte Berichts-Workflows werden automatisiert, ohne Verlassen der BSI-Grundschutz-zertifizierten Infrastruktur. Über 1.200 Konnektoren (eGovernment-APIs, Fachverfahren, OZG-Schnittstellen) lassen sich anbinden, ohne Vendor Lock-in.",
   },
   {
-    question: "Wir sind Dyckerhoff oder Henkell – haben wir denselben Use-Case wie Versicherer?",
+    question: "Wir sind Dyckerhoff oder Henkell - haben wir denselben Use-Case wie Versicherer?",
     answer:
       "Nein. Für Henkell-Freixenet automatisieren wir Sekt-Etikettierungs- und Steuerprozesse (Branntweinsteuer, Mehrwegpflicht-Reporting), für Dyckerhoff den Zement-Versand mit DACH-Zollformularen. Branche bestimmt die Workflows, das n8n-Fundament bleibt gleich.",
   },
   {
     question: "Müssen wir Open-Source-Workflows selbst hosten oder hostet ihr?",
     answer:
-      "Beides möglich. Größere Versicherer und Behörden hosten on-premise – wir liefern Installation, Hardening, Backup-Strategie. Mittelstand und Kommunen entscheiden sich häufig für ein managed Setup in einem deutschen ISO-27001-Rechenzentrum unter unserer Verwaltung.",
+      "Beides möglich. Größere Versicherer und Behörden hosten on-premise - wir liefern Installation, Hardening, Backup-Strategie. Mittelstand und Kommunen entscheiden sich häufig für ein managed Setup in einem deutschen ISO-27001-Rechenzentrum unter unserer Verwaltung.",
   },
 ];
 
@@ -225,7 +225,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Wiesbaden –{" "}
+                KI-Agentur in Wiesbaden -{" "}
                 Versicherungs-Automatisierung{" "}
                 <BackgroundHero.Highlight>am Rhein</BackgroundHero.Highlight>
               </>
@@ -234,7 +234,7 @@ export default async function Page({
           <BackgroundHero.Description>
             R+V, SV SparkassenVersicherung, HELABA, BKA und Destatis prägen den
             Wiesbadener Arbeitsmarkt. Wir automatisieren Schadens-, Compliance-
-            und Bürger-Workflows mit self-hosted n8n – BaFin-, MaRisk- und
+            und Bürger-Workflows mit self-hosted n8n - BaFin-, MaRisk- und
             DORA-konform.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -263,7 +263,7 @@ export default async function Page({
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* 4. DataTable – Versicherungs-Vergleich */}
+      {/* 4. DataTable - Versicherungs-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>
@@ -286,7 +286,7 @@ export default async function Page({
             <DataTable.Body>
               <DataTable.Row>
                 <DataTable.Cell bold>KYC-Vermittler-Onboarding</DataTable.Cell>
-                <DataTable.Cell>3–5 Tage</DataTable.Cell>
+                <DataTable.Cell>3-5 Tage</DataTable.Cell>
                 <DataTable.Cell>2 Std.</DataTable.Cell>
                 <DataTable.Cell bold>~94 %</DataTable.Cell>
               </DataTable.Row>
@@ -336,14 +336,14 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            R+V, SV, HELABA – plus Bundesbehörden im selben Quadrat
+            R+V, SV, HELABA - plus Bundesbehörden im selben Quadrat
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Versicherungs-Compliance auf BSI-Grundschutz trifft
           </IntroBox.Headline>
           <IntroBox.Subline>
             Wiesbaden vereint zwei Welten: privatwirtschaftliche Versicherer,
-            die unter BaFin, MaRisk und DORA stehen – und Bundesbehörden, die
+            die unter BaFin, MaRisk und DORA stehen - und Bundesbehörden, die
             unter BSI-Grundschutz und OZG-Folgegesetz operieren. Beide brauchen
             dieselbe Lösung: auditfeste, dokumentierte Workflows ohne Datenfluss
             nach außen.
@@ -356,7 +356,7 @@ export default async function Page({
             Wiesbaden und schreibt allein in Schaden und Unfall mehr als
             6 Milliarden Euro Prämienvolumen. SV SparkassenVersicherung führt
             die Tradition der Nassauischen Brandversicherungsanstalt von 1806
-            fort – Deutschlands älteste Versicherung. Beide stehen vor
+            fort - Deutschlands älteste Versicherung. Beide stehen vor
             derselben Realität: bis zu 70 Prozent ihrer Backoffice-Prozesse
             sind automatisierbar, von Antragsprüfung über Risiko-Assessment
             bis Schadenbearbeitung. Insurtechs setzen genau dort an.
@@ -365,7 +365,7 @@ export default async function Page({
             Parallel dazu sitzen in Wiesbaden das Bundeskriminalamt (rund
             8.000 Mitarbeiter), das Statistische Bundesamt (rund 2.700) und
             die Landesregierung Hessens. OZG-Folgegesetz, eAkte und KI-Strategie
-            des Bundes erzwingen Workflow-Automatisierung – mit der Auflage,
+            des Bundes erzwingen Workflow-Automatisierung - mit der Auflage,
             dass keine Daten das BSI-Grundschutz-zertifizierte Rechenzentrum
             verlassen. Genau dafür ist self-hosted n8n gebaut: Open-Source,
             on-premise, modular erweiterbar.
@@ -391,14 +391,14 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                R+V investiert in KI – was machen Wiesbadener Makler?
+                R+V investiert in KI - was machen Wiesbadener Makler?
               </Typo.H2>
               <Typo.Paragraph>
                 Große Versicherer bauen eigene Data-Science-Teams auf.
                 Maklerorganisationen, Vermittlerpools, Schadenregulierer und
                 der Wiesbadener Versicherungs-Mittelstand brauchen einen
                 anderen Hebel: leichtgewichtige Workflows, die KYC-Antragsprüfung,
-                Provisionsabrechnung und Schadenmeldung automatisieren – ohne
+                Provisionsabrechnung und Schadenmeldung automatisieren - ohne
                 eigenes IT-Großprojekt. Self-hosted, deutsches Rechenzentrum,
                 modular erweiterbar.
               </Typo.Paragraph>

@@ -146,7 +146,7 @@ export async function generateMetadata({
     "KI-Agentur in Magdeburg | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Maschinenbau- und Energie-Automatisierung in Magdeburg: n8n-Workflows für FAM, SKET, ABB/Hitachi Energy, ENERCON, Deutsche Bahn und das Wasserstraßenkreuz – CPQ-, ATLAS-Zoll- und CSRD-konform.";
+    "Maschinenbau- und Energie-Automatisierung in Magdeburg: n8n-Workflows für FAM, SKET, ABB/Hitachi Energy, ENERCON, Deutsche Bahn und das Wasserstraßenkreuz - CPQ-, ATLAS-Zoll- und CSRD-konform.";
 
   return {
     title,
@@ -187,9 +187,9 @@ export async function generateMetadata({
 
 const magdeburgFaqs = [
   {
-    question: "Wir sind 200-MA-Maschinenbauer wie FAM oder SKET – wie hilft uns n8n im China-Wettbewerb?",
+    question: "Wir sind 200-MA-Maschinenbauer wie FAM oder SKET - wie hilft uns n8n im China-Wettbewerb?",
     answer:
-      "Der schnellste Hebel sind CPQ-Workflows (Configure-Price-Quote): Angebotskalkulation, variantenreiche Stücklisten und Engineering-Konfiguration zwischen CAD/PLM und SAP S/4HANA. Wir docken an Siemens NX, Autodesk Vault und proAlpha an, mit automatischer Stückliste, Material-Disposition und Kalkulation – Angebote in Stunden statt Tagen.",
+      "Der schnellste Hebel sind CPQ-Workflows (Configure-Price-Quote): Angebotskalkulation, variantenreiche Stücklisten und Engineering-Konfiguration zwischen CAD/PLM und SAP S/4HANA. Wir docken an Siemens NX, Autodesk Vault und proAlpha an, mit automatischer Stückliste, Material-Disposition und Kalkulation - Angebote in Stunden statt Tagen.",
   },
   {
     question: "Was bringt n8n bei ABB/Hitachi Energy und ENERCON für die Wasserstoff-Wende?",
@@ -240,7 +240,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Magdeburg –{" "}
+                KI-Agentur in Magdeburg -{" "}
                 Maschinenbau und Logistik{" "}
                 <BackgroundHero.Highlight>am Wasserstraßenkreuz</BackgroundHero.Highlight>
               </>
@@ -249,7 +249,7 @@ export default async function Page({
           <BackgroundHero.Description>
             Deutsche Bahn, ABB/Hitachi Energy, ENERCON und der Maschinenbau
             (FAM, SKET) prägen Magdeburg. Wir automatisieren CPQ-,
-            ATLAS-Zoll- und OZG-Workflows mit self-hosted n8n – DSGVO-konform
+            ATLAS-Zoll- und OZG-Workflows mit self-hosted n8n - DSGVO-konform
             und BSI-Grundschutz-tauglich.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -278,7 +278,7 @@ export default async function Page({
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* 4. DataTable – Maschinenbau-Vergleich */}
+      {/* 4. DataTable - Maschinenbau-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>
@@ -351,7 +351,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            DB, ABB, ENERCON, FAM/SKET – Maschinenbau-Erbe trifft Energiewende
+            DB, ABB, ENERCON, FAM/SKET - Maschinenbau-Erbe trifft Energiewende
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Schwermaschinenbau auf Wasserstraßenkreuz und Strukturwandel trifft
@@ -395,7 +395,7 @@ export default async function Page({
           </Typo.Paragraph>
           <Typo.Paragraph>
             Hinzu kommt die Landesregierung Sachsen-Anhalts mit Landtag,
-            Ministerien und Stadtverwaltung – OZG 2.0, eAkte und
+            Ministerien und Stadtverwaltung - OZG 2.0, eAkte und
             FIT-Connect-Anbindung sind Pflichtthemen, gerade in einem
             Bundesland mit demografischem Schrumpfen. Die Otto-von-Guericke-
             Universität mit etwa 3.000 Beschäftigten und der Hochschule
@@ -417,7 +417,7 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                China baut Schwermaschinen günstiger – was machen Magdeburger Mittelständler?
+                China baut Schwermaschinen günstiger - was machen Magdeburger Mittelständler?
               </Typo.H2>
               <Typo.Paragraph>
                 Großkonzerne investieren in eigene KI-Teams. Magdeburger

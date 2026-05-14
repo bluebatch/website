@@ -188,29 +188,29 @@ export async function generateMetadata({
 
 const hannoverFaqs = [
   {
-    question: "Wir sind VW-Nutzfahrzeuge-Zulieferer – wie hilft n8n bei ID. Buzz und Transporter-Anlauf?",
+    question: "Wir sind VW-Nutzfahrzeuge-Zulieferer - wie hilft n8n bei ID. Buzz und Transporter-Anlauf?",
     answer:
       "JIT-/JIS-Bestellabrufe, EDI/VDA-4905/4906-Belege, Catena-X-Datenraum-Anbindung und Lieferketten-Compliance (LkSG) sind klassische n8n-Workflows. Wir docken an SAP-Mandanten, Jaggaer und VW-Lieferantenportale an.",
   },
   {
-    question: "Continental im Konzernumbau – passt n8n zu CSRD und Trennungs-IT?",
+    question: "Continental im Konzernumbau - passt n8n zu CSRD und Trennungs-IT?",
     answer:
       "Sehr gut. Stammdatenbereinigung, getrennte ERP-Mandanten, ESG-Reporting nach ESRS und Tochter-Konsolidierung sind workflow-intensiv. n8n verbindet SAP, Oracle, Workday und CSRD-Tools wie SAP SCT oder Workiva auditfest.",
   },
   {
-    question: "Talanx/HDI, VHV, Swiss Life – welche Versicherungs-Use-Cases?",
+    question: "Talanx/HDI, VHV, Swiss Life - welche Versicherungs-Use-Cases?",
     answer:
       "Schadenakten-Klassifikation, Maklerprovisionen, Vertragsmanagement, KYC-Onboarding, IDD-Vermittler-Tracking, BaFin- und VAIT-Meldungen werden auditfest abgebildet. Wir kennen die typischen Bestandsführungssysteme und Schaden-IT der Hannoverschen Versicherer.",
   },
   {
-    question: "TUI – wie hilft n8n bei Buchungen, Stornos und Provisionen?",
+    question: "TUI - wie hilft n8n bei Buchungen, Stornos und Provisionen?",
     answer:
       "Multi-Currency, Multi-Sprache, Hotel-/Flug-/Kreuzfahrt-Datenflüsse, Stornoabwicklung und Reisebüro-Provisionen werden in einer Plattform orchestriert. Wir integrieren mit GDS-Systemen, Amadeus, Travelport und SAP-Backoffice.",
   },
   {
-    question: "Hannover Messe und Agritechnica – können wir Eventlogistik automatisieren?",
+    question: "Hannover Messe und Agritechnica - können wir Eventlogistik automatisieren?",
     answer:
-      "Ja. Standbuchung, Akkreditierung, internationale Zollabwicklung, Hotelkooperationen, Aussteller-Onboarding und Sponsoren-Reporting laufen als End-to-End-Workflows – auch bei den klassischen Anmelde-Spitzen vor der Messe.",
+      "Ja. Standbuchung, Akkreditierung, internationale Zollabwicklung, Hotelkooperationen, Aussteller-Onboarding und Sponsoren-Reporting laufen als End-to-End-Workflows - auch bei den klassischen Anmelde-Spitzen vor der Messe.",
   },
   {
     question: "Welche Phasen erwarten uns bei einer Implementierung?",
@@ -246,7 +246,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Hannover –{" "}
+                KI-Agentur in Hannover -{" "}
                 Messe-Hauptstadt, Automotive und{" "}
                 <BackgroundHero.Highlight>Versicherungs-Hub</BackgroundHero.Highlight>
               </>
@@ -254,7 +254,7 @@ export default async function Page({
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
             Volkswagen Nutzfahrzeuge, Continental, TUI, Talanx/HDI, VHV,
-            Hannover Rück, Sennheiser, MHH – Hannover bündelt Industrie,
+            Hannover Rück, Sennheiser, MHH - Hannover bündelt Industrie,
             Tourismus und Versicherungswirtschaft. Wir bauen n8n-Workflows
             für Tier-1-Lieferanten, CSRD-Reporting, Schadenprozesse und
             Eventlogistik der Weltleitmesse.
@@ -290,7 +290,7 @@ export default async function Page({
         <Typo.H2>Hannoversche Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
           VW Nutzfahrzeuge steuert anders als Talanx, TUI anders als die MHH.
-          Wir bauen für jeden Cluster die passenden n8n-Bausteine – vom
+          Wir bauen für jeden Cluster die passenden n8n-Bausteine - vom
           EDI/VDA-Beleg bis zum Maklerprovisions-Workflow.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -298,11 +298,11 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Truck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>VW Nutzfahrzeuge – Stöcken, Transporter und ID. Buzz</Typo.H3>
+            <Typo.H3>VW Nutzfahrzeuge - Stöcken, Transporter und ID. Buzz</Typo.H3>
             <Typo.Paragraph>
               15.000 Beschäftigte fertigen T7, Crafter und ID. Buzz. Für
               Zulieferer bauen wir JIT-/JIS-Workflows, EDI/VDA-4905/4906/4913,
-              Catena-X-Konnektoren und LkSG-Reporting – auf SAP S/4HANA,
+              Catena-X-Konnektoren und LkSG-Reporting - auf SAP S/4HANA,
               Jaggaer und VW-Lieferantenportale abgestimmt.
             </Typo.Paragraph>
           </SimpleCard>
@@ -310,7 +310,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cog className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Continental – Trennung, CSRD und Transformation</Typo.H3>
+            <Typo.H3>Continental - Trennung, CSRD und Transformation</Typo.H3>
             <Typo.Paragraph>
               41,4 Mrd. EUR Umsatz, tiefgreifender Konzernumbau, Trennung von
               Geschäftsbereichen. Wir bauen Workflows für getrennte
@@ -322,7 +322,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <ShieldCheck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Talanx/HDI, VHV, Hannover Rück – Versicherungsmetropole</Typo.H3>
+            <Typo.H3>Talanx/HDI, VHV, Hannover Rück - Versicherungsmetropole</Typo.H3>
             <Typo.Paragraph>
               Nach Köln und München drittgrößter Versicherungsstandort
               Deutschlands. Schadenakten-Klassifikation, KYC-Onboarding,
@@ -334,7 +334,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Plane className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>TUI – globale touristische Lieferkette</Typo.H3>
+            <Typo.H3>TUI - globale touristische Lieferkette</Typo.H3>
             <Typo.Paragraph>
               20,7 Mrd. EUR Umsatz, Flüge, Hotels, Kreuzfahrten und Reisebüros
               in dutzenden Ländern. Buchungs-, Stornierungs-, Reklamations- und
@@ -346,7 +346,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Building2 className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Hannover Messe, Agritechnica, EMO – Eventwirtschaft</Typo.H3>
+            <Typo.H3>Hannover Messe, Agritechnica, EMO - Eventwirtschaft</Typo.H3>
             <Typo.Paragraph>
               Weltleitmessen mit zehntausenden Ausstellern und Akkreditierungs-
               Spitzen. Standbuchung, internationale Zollabwicklung, Aussteller-
@@ -416,10 +416,10 @@ export default async function Page({
         <BoundlessImageCard imagePosition="left">
           <BoundlessImageCard.Image
             src="/images/cities/hannover.jpg"
-            alt="Hannover Messe und VW Nutzfahrzeuge – n8n-Workflows für Tier-1-Lieferanten und Eventlogistik"
+            alt="Hannover Messe und VW Nutzfahrzeuge - n8n-Workflows für Tier-1-Lieferanten und Eventlogistik"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>ID. Buzz, CSRD und Hannover Messe – jeder Schritt erzeugt Daten</Typo.H2>
+            <Typo.H2>ID. Buzz, CSRD und Hannover Messe - jeder Schritt erzeugt Daten</Typo.H2>
             <Typo.Paragraph>
               Volkswagen Nutzfahrzeuge fährt parallel Verbrenner- und
               E-Plattformen hoch, Continental zerlegt sich in

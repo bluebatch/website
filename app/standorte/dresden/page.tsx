@@ -183,27 +183,27 @@ export async function generateMetadata({
 
 const dresdenFaqs = [
   {
-    question: "Infineon, GlobalFoundries, TSMC/ESMC – passt n8n in die Halbleiterfertigung?",
+    question: "Infineon, GlobalFoundries, TSMC/ESMC - passt n8n in die Halbleiterfertigung?",
     answer:
       "Ja. SEMI-Standards, ISO/IEC 14001, Automotive-Qualifikationen (IATF 16949 für Wafer in Automotive), MES-Datenflüsse und Yield-Reporting werden mit n8n und KI-gestützter Klassifikation orchestriert. Wir kennen die typischen Stacks der Dresdner Fabs.",
   },
   {
-    question: "EU Chips Act und US-Exportkontrolle – wie unterstützt n8n Dual-Use?",
+    question: "EU Chips Act und US-Exportkontrolle - wie unterstützt n8n Dual-Use?",
     answer:
       "BAFA-Anbindung, Endverbleibserklärungen, Sanktionslistenabgleich, ITAR-Prüfungen, EU-Dual-Use- und China-Restrictions sind n8n-Standardworkflows. Auditfest, mandantengetrennt und mit voller Nachvollziehbarkeit.",
   },
   {
-    question: "Reinraum-Service-Mittelstand – wir warten Halbleiter-Anlagen, wie hilft n8n?",
+    question: "Reinraum-Service-Mittelstand - wir warten Halbleiter-Anlagen, wie hilft n8n?",
     answer:
-      "Servicetechniker-Einsatzplanung, Anlagen-Wartungsverträge, Ersatzteil-Workflows, Reinraum-Klima-Daten und Chemikalien-Bestellungen für Fabs werden mit n8n und SAP Service Cloud verbunden – inklusive Field-Service-App-Anbindung.",
+      "Servicetechniker-Einsatzplanung, Anlagen-Wartungsverträge, Ersatzteil-Workflows, Reinraum-Klima-Daten und Chemikalien-Bestellungen für Fabs werden mit n8n und SAP Service Cloud verbunden - inklusive Field-Service-App-Anbindung.",
   },
   {
-    question: "TU Dresden Exzellenzcluster – wie helfen wir bei Drittmittel-Reporting?",
+    question: "TU Dresden Exzellenzcluster - wie helfen wir bei Drittmittel-Reporting?",
     answer:
       "Hunderte Millionen EUR Drittmittel pro Jahr, Förderpflichten an BMBF, EU (Horizon), DFG und GRC sind extrem dokumentationsintensiv. Wir bauen Workflow-Plattformen für Antragstellung, Mittelverwendung, Audits und Berichtspflichten.",
   },
   {
-    question: "VW Gläserne Manufaktur, Bauboom – wie bleibt Dresden skalierbar?",
+    question: "VW Gläserne Manufaktur, Bauboom - wie bleibt Dresden skalierbar?",
     answer:
       "Mit dem Hochlauf von ID.3-Kleinserien, dem TSMC-Greenfield und Hunderten Industrieansiedlungen wachsen Bauleitplanung, Genehmigungen und Personalbeschaffung enorm. n8n-Workflows skalieren Onboarding, Behördenkommunikation und Lieferanten-Qualifizierung.",
   },
@@ -241,7 +241,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Dresden –{" "}
+                KI-Agentur in Dresden -{" "}
                 Silicon Saxony und{" "}
                 <BackgroundHero.Highlight>Europas Halbleiter-Hauptstadt</BackgroundHero.Highlight>
               </>
@@ -249,7 +249,7 @@ export default async function Page({
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
             Infineon, GlobalFoundries, Bosch Sensortec, TSMC/ESMC ab 2027,
-            TU Dresden, 10 Fraunhofer-Institute, VW Gläserne Manufaktur –
+            TU Dresden, 10 Fraunhofer-Institute, VW Gläserne Manufaktur -
             jeder dritte in Europa produzierte Chip stammt aus Sachsen.
             Wir bauen n8n-Workflows für Halbleiter-Compliance,
             Reinraum-Service, Exzellenz-Forschung und Industrie-Greenfield.
@@ -286,14 +286,14 @@ export default async function Page({
         <Typo.Paragraph>
           Infineon steuert anders als die TU Dresden, der Reinraum-Service
           anders als VW. Wir bauen für jeden Cluster die passenden
-          n8n-Bausteine – von SEMI-Standards bis zur Drittmittel-Pipeline.
+          n8n-Bausteine - von SEMI-Standards bis zur Drittmittel-Pipeline.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
           <SimpleCard align="left">
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cpu className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Infineon, GlobalFoundries, Bosch, TSMC/ESMC – Halbleiter-Fabs</Typo.H3>
+            <Typo.H3>Infineon, GlobalFoundries, Bosch, TSMC/ESMC - Halbleiter-Fabs</Typo.H3>
             <Typo.Paragraph>
               Die fünf größten Halbleiterfabriken Europas auf engstem Raum.
               Wir bauen Workflows für SEMI-Standards, ISO/IEC 14001,
@@ -318,7 +318,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <GraduationCap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>TU Dresden – Exzellenzuniversität mit 31.000 Studierenden</Typo.H3>
+            <Typo.H3>TU Dresden - Exzellenzuniversität mit 31.000 Studierenden</Typo.H3>
             <Typo.Paragraph>
               Drittmittel-Verwaltung, Förderanträge an BMBF/EU/DFG/GRC,
               Patentmanagement, Spin-off-Begleitung und Industrie-
@@ -330,7 +330,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Car className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>VW Gläserne Manufaktur – E-Mobility-Greenfield</Typo.H3>
+            <Typo.H3>VW Gläserne Manufaktur - E-Mobility-Greenfield</Typo.H3>
             <Typo.Paragraph>
               ID.3-Kleinserien und Sondermodelle in hochintegrierter
               digitaler Fertigung. Ideales Vorbild für Digital-Twin-
@@ -342,7 +342,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <FlaskConical className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Photonik, MEMS, Sensorik – Fraunhofer-Cluster</Typo.H3>
+            <Typo.H3>Photonik, MEMS, Sensorik - Fraunhofer-Cluster</Typo.H3>
             <Typo.Paragraph>
               Fraunhofer IPMS, Bosch Sensortec und ca. 80 Photonik-Firmen.
               F&amp;E-zu-Industrie-Transfer, Patent-Workflows, EU-Förderprojekte
@@ -369,10 +369,10 @@ export default async function Page({
         <BoundlessImageCard imagePosition="left">
           <BoundlessImageCard.Image
             src="/images/cities/dresden.jpg"
-            alt="Silicon Saxony Dresden – n8n-Workflows für Halbleiter, Reinraum-Service und Exzellenzforschung"
+            alt="Silicon Saxony Dresden - n8n-Workflows für Halbleiter, Reinraum-Service und Exzellenzforschung"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>25 Mrd. EUR Investitionen – Dresden braucht skalierbare Workflows</Typo.H2>
+            <Typo.H2>25 Mrd. EUR Investitionen - Dresden braucht skalierbare Workflows</Typo.H2>
             <Typo.Paragraph>
               Allein die drei großen Fab-Erweiterungen bewegen über 25 Mrd. EUR
               und 2.000+ neue Stellen. Personalbeschaffung, Onboarding,

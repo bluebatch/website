@@ -172,7 +172,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/neuss.jpg", width: 1200, height: 630, alt: "Neuss – 3M, Pierburg und Rheinhafen-Logistik" }],
+      images: [{ url: "/images/cities/neuss.jpg", width: 1200, height: 630, alt: "Neuss - 3M, Pierburg und Rheinhafen-Logistik" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/neuss.jpg"] },
     alternates: { canonical: "/ki-agentur-neuss" },
@@ -198,7 +198,7 @@ const neussFaqs = [
   {
     question: "Rheinhafen-Spedition: wie skalieren Zoll-Workflows?",
     answer:
-      "Containerterminal-, ATLAS-Zoll-, Gefahrgut- und EDI-Workflows mit Reedereien und DB Cargo. Anbindung an DAKOSY, HHLA und Hafenbetreiber – reduziert manuelle Zoll-Bearbeitung um 60-80 %.",
+      "Containerterminal-, ATLAS-Zoll-, Gefahrgut- und EDI-Workflows mit Reedereien und DB Cargo. Anbindung an DAKOSY, HHLA und Hafenbetreiber - reduziert manuelle Zoll-Bearbeitung um 60-80 %.",
   },
   {
     question: "Wir sind Neusser Mittelstand: wo lohnt sich KI zuerst?",
@@ -226,10 +226,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Neuss – Quirinusstadt am Rhein"}
+              {overrides?.preHeadline ?? "Standort Neuss - Quirinusstadt am Rhein"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Neuss – für 3M, Pierburg, Hydro Aluminium und Logistik"}
+              {overrides?.headline ?? "KI-Agentur in Neuss - für 3M, Pierburg, Hydro Aluminium und Logistik"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               3M Deutschland-Hauptsitz, Pierburg-Antriebstechnik (Rheinmetall), Hydro Aluminium und der Rheinhafen Neuss prägen den Standort. Wir bauen Workflows für US-Konzern-Compliance, IATF-Automotive-Zulieferung und multimodale Hafen-Logistik.
@@ -243,13 +243,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/neuss.jpg"
-              alt="Neuss – 3M, Pierburg und Rheinhafen-Logistik"
+              alt="Neuss - 3M, Pierburg und Rheinhafen-Logistik"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Neusser Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -273,7 +273,7 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Neusser Industrie und Logistik</Typo.H2>
         <SimpleGrid cols={2}>
@@ -316,17 +316,17 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Neuss – 3M-Deutschland-Hauptsitz und Rheinhafen-Drehkreuz
+            Neuss - 3M-Deutschland-Hauptsitz und Rheinhafen-Drehkreuz
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo 3M Deutschland US-Konzern-Reporting und Pierburg IATF-Audits abarbeiten, müssen Workflows global synchronisiert sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            3M-Deutschland-Hauptsitz, Pierburg (Rheinmetall-Konzern), Hydro Aluminium und der zweitgrößte deutsche Binnenhafen – Neuss ist Industrie- und Logistik-Drehkreuz im Rheinland. US-SOX, IATF und Hafen-Zoll sind die zentralen Workflow-Themen.
+            3M-Deutschland-Hauptsitz, Pierburg (Rheinmetall-Konzern), Hydro Aluminium und der zweitgrößte deutsche Binnenhafen - Neuss ist Industrie- und Logistik-Drehkreuz im Rheinland. US-SOX, IATF und Hafen-Zoll sind die zentralen Workflow-Themen.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>

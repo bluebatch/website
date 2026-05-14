@@ -146,7 +146,7 @@ export async function generateMetadata({
     "KI-Agentur in Mainz | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Biotech- und Pharma-Automatisierung in Mainz: GxP-konforme n8n-Workflows für BioNTech-Zulieferer, Schott, Boehringer-Ingelheim-Achse und Universitätsmedizin – self-hosted und auditfest.";
+    "Biotech- und Pharma-Automatisierung in Mainz: GxP-konforme n8n-Workflows für BioNTech-Zulieferer, Schott, Boehringer-Ingelheim-Achse und Universitätsmedizin - self-hosted und auditfest.";
 
   return {
     title,
@@ -187,7 +187,7 @@ export async function generateMetadata({
 
 const mainzFaqs = [
   {
-    question: "Wir sind BioNTech-Zulieferer – wie integriert ihr n8n in unsere GxP-Welt?",
+    question: "Wir sind BioNTech-Zulieferer - wie integriert ihr n8n in unsere GxP-Welt?",
     answer:
       "Self-hosted on-premise in eurer validierten IT-Umgebung. Wir docken an eQMS-Systeme wie Veeva Vault oder TrackWise, an SAP S/4HANA und an LIMS-Lösungen an, mit vollständigem Audit-Trail nach 21 CFR Part 11 und Annex 11. Kein Studien-, Chargen- oder Pharmakovigilanz-Datensatz verlässt euer Rechenzentrum.",
   },
@@ -204,10 +204,10 @@ const mainzFaqs = [
   {
     question: "Was bringt das Forschungs-Spin-offs rund um BioNTech und die JGU?",
     answer:
-      "Junge Biotech-Startups müssen schon vor Phase I GMP-konform dokumentieren. Wir bauen früh skalierbare Workflows für Studiendaten-Ingest, Lieferanten-Audits und Pharmakovigilanz-Meldungen an PEI und EMA auf – mit n8n statt teurer eQMS-Suite, voll auditierbar von Tag eins an.",
+      "Junge Biotech-Startups müssen schon vor Phase I GMP-konform dokumentieren. Wir bauen früh skalierbare Workflows für Studiendaten-Ingest, Lieferanten-Audits und Pharmakovigilanz-Meldungen an PEI und EMA auf - mit n8n statt teurer eQMS-Suite, voll auditierbar von Tag eins an.",
   },
   {
-    question: "Wir sind ein DTC-Weinhändler in Rheinhessen – ist das nicht zu kleinteilig für Automatisierung?",
+    question: "Wir sind ein DTC-Weinhändler in Rheinhessen - ist das nicht zu kleinteilig für Automatisierung?",
     answer:
       "Im Gegenteil. Wir verbinden Shopify oder Shopware mit DHL, BranntweinMonG-Meldung an den Zoll, Mehrwegpfand-Reporting und Buchhaltung in DATEV. Saisonale Lastspitzen rund um die Rheinhessen-Weinmessen lassen sich so ohne zusätzliches Personal abfangen.",
   },
@@ -240,7 +240,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Mainz –{" "}
+                KI-Agentur in Mainz -{" "}
                 Biotech-Automatisierung{" "}
                 <BackgroundHero.Highlight>am Rhein</BackgroundHero.Highlight>
               </>
@@ -249,7 +249,7 @@ export default async function Page({
           <BackgroundHero.Description>
             BioNTech, Schott, ZDF und die Universitätsmedizin prägen den
             Mainzer Arbeitsmarkt. Wir automatisieren GxP-, Studien- und
-            Lieferketten-Workflows mit self-hosted n8n – 21 CFR Part 11,
+            Lieferketten-Workflows mit self-hosted n8n - 21 CFR Part 11,
             Annex 11 und LkSG-konform.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -281,7 +281,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            BioNTech, Schott, ZDF – Biotech-Cluster mit Pharma-Glas und Medien
+            BioNTech, Schott, ZDF - Biotech-Cluster mit Pharma-Glas und Medien
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo mRNA-Pipelines auf Pharma-Glas und Medien-Compliance treffen
@@ -303,7 +303,7 @@ export default async function Page({
             rund 9.000 Beschäftigten in Ingelheim. Dazwischen sitzt Schott in
             Mainz, Weltmarktführer für Pharma-Vials, mit rund 5.500 lokalen und
             17.100 weltweiten Mitarbeitern. Diese drei Pole erzwingen
-            GxP-Compliance bei hunderten Zulieferern – von Logistikern über
+            GxP-Compliance bei hunderten Zulieferern - von Logistikern über
             Engineering-Dienstleister bis zu IT-Häusern. Veeva Vault, TrackWise
             und SAP S/4HANA müssen sauber miteinander reden, auditfest und
             ohne manuelle Schnittstellen.
@@ -322,7 +322,7 @@ export default async function Page({
           <Typo.Paragraph>
             Hinzu kommt Rheinhessen als größtes deutsches Weinanbaugebiet mit
             seiner wachsenden DTC-Szene. Branntweinsteuermeldung an den Zoll,
-            Mehrwegpfand-Reporting und DATEV-Buchhaltung sind Pflicht – und
+            Mehrwegpfand-Reporting und DATEV-Buchhaltung sind Pflicht - und
             lassen sich mit denselben n8n-Bausteinen abbilden wie die
             Pharma-Workflows. Wie wir die Implementierung in sechs Phasen
             strukturieren, beschreiben wir auf der Seite{" "}
@@ -340,7 +340,7 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                BioNTech baut eigene KI-Teams – was machen Mainzer Zulieferer?
+                BioNTech baut eigene KI-Teams - was machen Mainzer Zulieferer?
               </Typo.H2>
               <Typo.Paragraph>
                 Große Biotechs leisten sich eigene Data-Science-Abteilungen.
@@ -368,7 +368,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 4. DataTable – Biotech-Vergleich */}
+      {/* 4. DataTable - Biotech-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>

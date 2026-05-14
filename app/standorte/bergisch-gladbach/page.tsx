@@ -138,27 +138,27 @@ export async function generateMetadata({
 
 const bergischGladbachFaqs = [
   {
-    question: "Wir liefern an Miltenyi Biotec oder gehören dazu – passen n8n-Workflows zu GMP?",
+    question: "Wir liefern an Miltenyi Biotec oder gehören dazu - passen n8n-Workflows zu GMP?",
     answer:
       "Ja. ATMP-Produktion verlangt 21 CFR Part 11 + EU GMP Annex 1 + Annex 11. Wir bauen versionierte Pipelines mit elektronischer Signatur, Audit-Trail und Vier-Augen-Freigabe. Anbindung an PAS-X (Werum/Körber), SAP S/4HANA, LIMS und Quality-Management-Tools wie SoftExpert.",
   },
   {
-    question: "Krüger ist FMCG mit großer Vertriebs-Komplexität – konkreter Use-Case?",
+    question: "Krüger ist FMCG mit großer Vertriebs-Komplexität - konkreter Use-Case?",
     answer:
       "Promotion-Disposition, Listungs-Verwaltung mit LEH-Kunden, Mengensteuerung in Saison-Produkten und IFS Food-Audits. n8n verbindet SAP, GS1-Datenpools, Vertriebs-CRM (Salesforce/Hubspot) und Auditmanagement zu durchgängigen Datenflüssen.",
   },
   {
-    question: "INDUS hat ca. 45 Töchter – wie skaliert n8n im Holding-Kontext?",
+    question: "INDUS hat ca. 45 Töchter - wie skaliert n8n im Holding-Kontext?",
     answer:
       "Pro Tochter eine n8n-Instanz, plus eine zentrale Konsolidierungs-Ebene für Reporting und Compliance-Steuerung. So bleiben Tochter-Prozesse autonom, aber Konzern-Reports (HGB-/CSRD-Konsolidierung, Working Capital, Intercompany) entstehen automatisiert.",
   },
   {
-    question: "Das Zanders-Areal wird neu entwickelt – wo greift Automatisierung?",
+    question: "Das Zanders-Areal wird neu entwickelt - wo greift Automatisierung?",
     answer:
       "Quartiers-Genehmigungen mit Bezirksregierung Köln, Investorenmanagement, BImSchG-Pflichten und Förderanträge (EFRE, NRW.URBAN). Workflows orchestrieren die Schnittstellen zwischen Stadt, RBK-Kreis, Investoren und Bauherren.",
   },
   {
-    question: "Wir sind Tochter eines DAX-Konzerns – was bringt uns lokales n8n?",
+    question: "Wir sind Tochter eines DAX-Konzerns - was bringt uns lokales n8n?",
     answer:
       "Lokale Spezialprozesse, die der Konzern-SAP nicht abbilden will: regionale Genehmigungen, Werks-spezifische Schichtplanung, KMU-Lieferanten-Onboarding. Wie wir Konzern-Töchter integrieren, beschreiben wir auf der Seite Unser Prozess.",
   },
@@ -186,7 +186,7 @@ export default async function Page({
               {overrides?.preHeadline ?? "Standort Bergisch Gladbach"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI in Bergisch Gladbach – für Biotech, FMCG und INDUS-Mittelstand"}
+              {overrides?.headline ?? "KI in Bergisch Gladbach - für Biotech, FMCG und INDUS-Mittelstand"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Miltenyi Biotec entwickelt globale ATMP-Therapien, Krüger ist europäischer
@@ -203,7 +203,7 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/bergisch-gladbach.jpg"
-              alt="Bergisch Gladbach – Biotech, Lebensmittel, INDUS-Mittelstand"
+              alt="Bergisch Gladbach - Biotech, Lebensmittel, INDUS-Mittelstand"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
@@ -233,7 +233,7 @@ export default async function Page({
               Holding-Konsolidierung trifft Tochter-Autonomie.
             </NumberedList.Item>
             <NumberedList.Item title="Zanders-Areal als Strukturwandel-Projekt:">
-              Das ehemalige Papier-Werk wird in ein urbanes Quartier transformiert –
+              Das ehemalige Papier-Werk wird in ein urbanes Quartier transformiert -
               eines der größten innerstädtischen Entwicklungsprojekte im Rheinland mit
               komplexen Genehmigungs-Workflows.
             </NumberedList.Item>
@@ -250,8 +250,8 @@ export default async function Page({
           </IntroBox.Headline>
           <IntroBox.Subline>
             Bergisch Gladbach hat eine der höchsten Top-Unternehmens-Dichten je Einwohner
-            in NRW. Drei sehr unterschiedliche Welten – Biotech-Pionier, FMCG-Marktführer
-            und börsennotierte Mittelstandsholding – brauchen drei sehr unterschiedliche
+            in NRW. Drei sehr unterschiedliche Welten - Biotech-Pionier, FMCG-Marktführer
+            und börsennotierte Mittelstandsholding - brauchen drei sehr unterschiedliche
             Workflow-Bausteine.
           </IntroBox.Subline>
         </IntroBox>

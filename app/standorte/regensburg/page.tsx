@@ -183,27 +183,27 @@ export async function generateMetadata({
 
 const regensburgFaqs = [
   {
-    question: "BMW-Werk Regensburg ist Fabrik des Jahres 2024 – wie passt n8n zur Tier-1-Liefer­kette?",
+    question: "BMW-Werk Regensburg ist Fabrik des Jahres 2024 - wie passt n8n zur Tier-1-Liefer­kette?",
     answer:
       "BMW fertigt parallel Verbrenner und E-Fahrzeuge auf einer Linie (Production Network 2025+). JIT/JIS-Abrufe, EDI/VDA-Belege, IATF-16949-Doku, Catena-X-Konnektoren und Production-Network-Pipelines werden mit n8n auditfest abgebildet.",
   },
   {
-    question: "Continental und Infineon – wie helfen wir SDV- und Halbleiter-Workflows?",
+    question: "Continental und Infineon - wie helfen wir SDV- und Halbleiter-Workflows?",
     answer:
       "Continental in Regensburg fokussiert Powertrain und Interior, Infineon ist Teil des bayerischen Halbleiter-Clusters. ASPICE, ISO 26262, SEMI-Standards, MES-Datenflüsse und Engineering-Daten zwischen CAD/PLM/ERP werden mit n8n orchestriert.",
   },
   {
-    question: "Krones AG – Weltmarktführer Abfüllanlagen, wie unterstützt n8n Service?",
+    question: "Krones AG - Weltmarktführer Abfüllanlagen, wie unterstützt n8n Service?",
     answer:
       "Krones beliefert Brauereien und Softdrink-Hersteller weltweit. CPQ-Konfiguration, Wartungsverträge, IoT-Daten installierter Linien, Ersatzteil-eCommerce und Field-Service werden mit n8n und SAP Service Cloud verzahnt.",
   },
   {
-    question: "Maschinenfabrik Reinhausen – wie hilft n8n bei Transformatoren-Service?",
+    question: "Maschinenfabrik Reinhausen - wie hilft n8n bei Transformatoren-Service?",
     answer:
-      "Weltmarktführer für Laststufenschalter. Variantenreiche Auftragsabwicklung, Konfiguration, Service-Workflows mit Energieversorgern weltweit und Ersatzteil-Logistik laufen End-to-End in n8n – mit Multi-Country-Compliance.",
+      "Weltmarktführer für Laststufenschalter. Variantenreiche Auftragsabwicklung, Konfiguration, Service-Workflows mit Energieversorgern weltweit und Ersatzteil-Logistik laufen End-to-End in n8n - mit Multi-Country-Compliance.",
   },
   {
-    question: "BioPark, OTH und Universität – wie automatisieren wir Forschungstransfer?",
+    question: "BioPark, OTH und Universität - wie automatisieren wir Forschungstransfer?",
     answer:
       "Drittmittel-Reporting, BioPark-Spin-off-Begleitung, Industriekooperationen mit OTH und Universität sowie BMBF-/EU-Antragsworkflows werden mit n8n abgebildet. Ideal für die wachsenden Diagnostik- und Medizintechnik-Startups in Regensburg.",
   },
@@ -241,7 +241,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Regensburg –{" "}
+                KI-Agentur in Regensburg -{" "}
                 BMW &quot;Fabrik des Jahres&quot;, Continental und{" "}
                 <BackgroundHero.Highlight>Krones</BackgroundHero.Highlight>
               </>
@@ -250,7 +250,7 @@ export default async function Page({
           <BackgroundHero.Description>
             BMW Werk Regensburg, Continental, Infineon, Krones AG,
             Maschinenfabrik Reinhausen, Universitätsklinikum, BioPark,
-            Universität und OTH Regensburg – eine der dynamischsten
+            Universität und OTH Regensburg - eine der dynamischsten
             Wirtschaftsregionen Bayerns. Wir bauen n8n-Workflows für
             BMW-Tier-1-Lieferanten, Halbleiter-Service, Krones-CPQ und
             Forschungstransfer im ostbayerischen Donauraum.
@@ -292,7 +292,7 @@ export default async function Page({
             Continental beschäftigt 8.000 Menschen, Krones ist Weltmarktführer
             für Abfüllanlagen, Maschinenfabrik Reinhausen weltführend bei
             Transformatoren-Schaltern. Niedrige Arbeitslosenquote, hoher
-            Fachkräftemangel – Automatisierung ist hier Wettbewerbsvorteil.
+            Fachkräftemangel - Automatisierung ist hier Wettbewerbsvorteil.
           </Typo.Paragraph>
         </IntroBox>
       </ContentWrapper>
@@ -302,7 +302,7 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/regensburg.jpg"
-            alt="Regensburg BMW, Continental und Krones – n8n-Workflows für ostbayerischen Mittelstand"
+            alt="Regensburg BMW, Continental und Krones - n8n-Workflows für ostbayerischen Mittelstand"
           />
           <BoundlessImageCard.Content>
             <Typo.H2>100.000 vollelektrische BMWs, UNESCO-Welterbe und Halbleiter</Typo.H2>
@@ -353,7 +353,7 @@ export default async function Page({
         <Typo.Paragraph>
           BMW steuert anders als Krones, Infineon anders als das
           Universitätsklinikum. Wir bauen für jeden Cluster die passenden
-          n8n-Bausteine – vom Catena-X-Konnektor bis zur SEMI-konformen
+          n8n-Bausteine - vom Catena-X-Konnektor bis zur SEMI-konformen
           Service-Pipeline.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -361,7 +361,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Car className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>BMW Werk Regensburg – Fabrik des Jahres 2024</Typo.H3>
+            <Typo.H3>BMW Werk Regensburg - Fabrik des Jahres 2024</Typo.H3>
             <Typo.Paragraph>
               9.000 Beschäftigte, 330.000 Fahrzeuge in 2024, davon 100.000
               vollelektrisch. Production Network 2025+ mit paralleler
@@ -373,7 +373,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cog className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Continental – Powertrain &amp; Interior in Regensburg</Typo.H3>
+            <Typo.H3>Continental - Powertrain &amp; Interior in Regensburg</Typo.H3>
             <Typo.Paragraph>
               8.000 Beschäftigte, eines der wichtigsten Continental-Zentren
               weltweit. ASPICE-Doku, ISO 26262, Software-Defined-Vehicle-
@@ -385,7 +385,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cpu className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Infineon Regensburg – Halbleiter-Cluster Bayern</Typo.H3>
+            <Typo.H3>Infineon Regensburg - Halbleiter-Cluster Bayern</Typo.H3>
             <Typo.Paragraph>
               2.800 Beschäftigte, großer Produktions- und Forschungsstandort
               des bayerischen Halbleiter-Clusters. SEMI-Standards, IATF für
@@ -397,7 +397,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <FlaskConical className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Krones AG – Weltmarktführer Abfüllanlagen</Typo.H3>
+            <Typo.H3>Krones AG - Weltmarktführer Abfüllanlagen</Typo.H3>
             <Typo.Paragraph>
               9.500 Beschäftigte am Hauptsitz, weltweit 16.300. CPQ,
               Wartungsverträge, IoT-Daten installierter Anlagen,

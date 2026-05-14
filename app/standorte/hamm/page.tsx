@@ -188,12 +188,12 @@ export async function generateMetadata({
 
 const hammFaqs = [
   {
-    question: "Hamm ist DB-Rangier- und Wartungsstandort – wie helfen Workflows in der Bahnlogistik?",
+    question: "Hamm ist DB-Rangier- und Wartungsstandort - wie helfen Workflows in der Bahnlogistik?",
     answer:
-      "Wagenstammdaten, Trassen-Anmeldungen (DB Netz), Wartungsdokumentation und EBA-Sicherheitsaudits sind Workflow-intensiv. n8n verbindet TPS, IRIS, SAP und Cargo-Plattformen – inklusive ECM-konformer Wartungs-Nachweise.",
+      "Wagenstammdaten, Trassen-Anmeldungen (DB Netz), Wartungsdokumentation und EBA-Sicherheitsaudits sind Workflow-intensiv. n8n verbindet TPS, IRIS, SAP und Cargo-Plattformen - inklusive ECM-konformer Wartungs-Nachweise.",
   },
   {
-    question: "Lippehäfen / Stadthafen – können wir Zoll und Massengut-Umschlag automatisieren?",
+    question: "Lippehäfen / Stadthafen - können wir Zoll und Massengut-Umschlag automatisieren?",
     answer:
       "Ja. ATLAS-Zollanmeldungen, NCTS-Versandverfahren und Frachtdokumentation für Massengut und Container laufen vollautomatisch. n8n liest Frachtbriefe (CMR), prüft gegen Bestellung und schreibt in TMS/WMS.",
   },
@@ -203,12 +203,12 @@ const hammFaqs = [
       "Ja, klassischer Anwendungsfall. Bautagebücher als App, Stücklisten-Sync zwischen CAD/PLM und ERP, automatische Subunternehmer-Abrechnung mit Aufmaß und Rechnungsprüfung. Mit OCR/KI für Lieferscheine und Stundennachweise.",
   },
   {
-    question: "Kraftwerk Westfalen wird auf Gas/H2 umgebaut – welche Workflows sind sinnvoll?",
+    question: "Kraftwerk Westfalen wird auf Gas/H2 umgebaut - welche Workflows sind sinnvoll?",
     answer:
       "Mehrjährige Genehmigungs-Projekte mit BNetzA, BImSchG-Anträge, Fördermittel-Reporting (IPCEI, KWKG) und H2-Herkunftsnachweise. n8n hält Aktenbestände durchgängig, generiert Berichte und meldet automatisch an Behörden.",
   },
   {
-    question: "Hesse Lignal – wie helfen Workflows einer Chemie-Spezialfirma?",
+    question: "Hesse Lignal - wie helfen Workflows einer Chemie-Spezialfirma?",
     answer:
       "REACH-Doku, CLP-Etikettierung, IFRA-Konformität bei Lacken, Sicherheitsdatenblatt-Pflege in 25+ Sprachen. n8n synchronisiert SAP, EHS-Software, EHS-Behörden und Kunden-Portale.",
   },
@@ -241,14 +241,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Hamm –{" "}
+                KI-Agentur in Hamm -{" "}
                 vom Bergbau-Hamm zum{" "}
                 <BackgroundHero.Highlight>Eisenbahn- und Energiehub</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus Zeche Heinrich-Robert wurden Lippehäfen, RWE-Kraftwerksumbau und Konversionsflächen wie der Erin-Park. Wir automatisieren genau die Workflows, die ein Eisenbahnknoten im Wandel braucht – ATLAS-Zoll, Bahnlogistik und Bautagebücher.
+            Aus Zeche Heinrich-Robert wurden Lippehäfen, RWE-Kraftwerksumbau und Konversionsflächen wie der Erin-Park. Wir automatisieren genau die Workflows, die ein Eisenbahnknoten im Wandel braucht - ATLAS-Zoll, Bahnlogistik und Bautagebücher.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Hamm besprechen</ContactButton>
@@ -274,15 +274,15 @@ export default async function Page({
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* 3. ProsCons – Was war, was kommt */}
+      {/* 3. ProsCons - Was war, was kommt */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Hamm hinter sich lässt – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Hamm hinter sich lässt - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
                 title="Zeche Heinrich-Robert geschlossen (2010)"
-                description="Letzte Steinkohleförderung in Hamm beendet – das Heinrich-Robert-Areal wird seitdem zum Konversionsstandort umgebaut."
+                description="Letzte Steinkohleförderung in Hamm beendet - das Heinrich-Robert-Areal wird seitdem zum Konversionsstandort umgebaut."
               />
               <ProsCons.Item
                 title="Kraftwerk Westfalen (RWE) im Reservebetrieb"
@@ -290,7 +290,7 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Erin-Park und alte Bergbauflächen unter Konversionsdruck"
-                description="Brachflächen, Altlasten, Genehmigungs-Bürokratie – Konversion zieht sich über Jahre und bindet Planungsressourcen."
+                description="Brachflächen, Altlasten, Genehmigungs-Bürokratie - Konversion zieht sich über Jahre und bindet Planungsressourcen."
               />
               <ProsCons.Item
                 title="Klassischer Mittelstand-Schwerindustrie unter Energiedruck"
@@ -300,7 +300,7 @@ export default async function Page({
             <ProsCons.Pros>
               <ProsCons.Item
                 title="Einer der größten Eisenbahnknoten Westdeutschlands"
-                description="DB Rangierbahnhof, DB Cargo-Wartung, intermodale Terminals – Hamm ist Drehkreuz für Schienen-Güterverkehr Ruhrgebiet-Berlin."
+                description="DB Rangierbahnhof, DB Cargo-Wartung, intermodale Terminals - Hamm ist Drehkreuz für Schienen-Güterverkehr Ruhrgebiet-Berlin."
               />
               <ProsCons.Item
                 title="Lippehäfen am Datteln-Hamm-Kanal"
@@ -308,11 +308,11 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Hoffmeier Industrieanlagen (1.400 MA Konzern, 1.000 in Hamm)"
-                description="Stahlbau und Anlagenbau für Kraftwerke, Chemie, Logistik – projektbezogen mit komplexer Stücklisten- und Subunternehmer-Steuerung."
+                description="Stahlbau und Anlagenbau für Kraftwerke, Chemie, Logistik - projektbezogen mit komplexer Stücklisten- und Subunternehmer-Steuerung."
               />
               <ProsCons.Item
                 title="Hesse Lignal & Sankt Marien-Hospital als regionale Anker"
-                description="Hesse als weltweiter Holzbeschichtungs-Spezialist (500 MA), Sankt Marien-Hospital mit 1.350 Beschäftigten – plus Klinikum Hamm und SRH Hochschule für Logistik."
+                description="Hesse als weltweiter Holzbeschichtungs-Spezialist (500 MA), Sankt Marien-Hospital mit 1.350 Beschäftigten - plus Klinikum Hamm und SRH Hochschule für Logistik."
               />
             </ProsCons.Pros>
           </ProsCons>
@@ -323,7 +323,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Hamm heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -360,7 +360,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Strukturwandel seit 2010 – Postindustrielles Umfeld
+            Strukturwandel seit 2010 - Postindustrielles Umfeld
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Was passiert mit den Prozessen, wenn die letzte Zeche schließt und das Kohlekraftwerk umgebaut wird?
@@ -376,12 +376,12 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/logistics-hub.jpg"
-            alt="Eisenbahnknoten und Lippehäfen Hamm – Logistik-Transformation"
+            alt="Eisenbahnknoten und Lippehäfen Hamm - Logistik-Transformation"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Lippehäfen & Bahnknoten – Postindustrielles Logistik-Drehkreuz</Typo.H2>
+            <Typo.H2>Lippehäfen & Bahnknoten - Postindustrielles Logistik-Drehkreuz</Typo.H2>
             <Typo.Paragraph>
-              Wo früher Kohle gefördert wurde, schlägt heute der Stadthafen Hamm Container und Massengüter um, DB Cargo wartet Wagen und der Rangierbahnhof bündelt Züge Richtung Berlin und Benelux. Quartiers- und Logistik-Management bedeutet: Trassen-Anmeldungen, Zollabwicklung, Wartungs-Workflows und Konversion-Projekte. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Wo früher Kohle gefördert wurde, schlägt heute der Stadthafen Hamm Container und Massengüter um, DB Cargo wartet Wagen und der Rangierbahnhof bündelt Züge Richtung Berlin und Benelux. Quartiers- und Logistik-Management bedeutet: Trassen-Anmeldungen, Zollabwicklung, Wartungs-Workflows und Konversion-Projekte. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">

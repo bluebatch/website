@@ -172,7 +172,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/ulm.jpg", width: 1200, height: 630, alt: "Ulm – Daimler Truck, Iveco und Schwörer Haus" }],
+      images: [{ url: "/images/cities/ulm.jpg", width: 1200, height: 630, alt: "Ulm - Daimler Truck, Iveco und Schwörer Haus" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/ulm.jpg"] },
     alternates: { canonical: "/ki-agentur-ulm" },
@@ -226,10 +226,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Ulm – Donau-Universitätsstadt"}
+              {overrides?.preHeadline ?? "Standort Ulm - Donau-Universitätsstadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Ulm – für Daimler Truck, Iveco und Müller Drogerie"}
+              {overrides?.headline ?? "KI-Agentur in Ulm - für Daimler Truck, Iveco und Müller Drogerie"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Daimler Truck baut in Ulm Nutzfahrzeuge, Iveco fertigt Magirus-Feuerwehr-Fahrzeuge, Müller Drogerie hat Ulm-Hauptsitz und die Universität Ulm prägt KI- und Quantenforschung. Wir bauen Workflows für Nutzfahrzeug-Compliance, Drogerie-Filialnetz und Forschung.
@@ -243,13 +243,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/ulm.jpg"
-              alt="Ulm – Daimler Truck, Iveco und Schwörer Haus"
+              alt="Ulm - Daimler Truck, Iveco und Schwörer Haus"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Ulmer Truck, Retail und Forschung</Typo.H2>
         <SimpleGrid cols={2}>
@@ -292,22 +292,22 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Ulm – höchster Kirchturm der Welt und Quanten-Cluster
+            Ulm - höchster Kirchturm der Welt und Quanten-Cluster
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Daimler Truck Wasserstoff-LKW entwickelt und Müller Drogerie 900+ Filialen versorgt, müssen Workflows industriell und retail-fähig sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Daimler Truck (Hauptsitz Ulm/Stuttgart), Iveco Magirus (Feuerwehr-Marktführer), Müller Drogerie mit 900+ Filialen, Schwörer Haus (Fertighaus-Marktführer) und Universität Ulm – diese Mischung verlangt Pipelines für Truck-IATF, Retail-Filial-Operations und Quantenforschung.
+            Daimler Truck (Hauptsitz Ulm/Stuttgart), Iveco Magirus (Feuerwehr-Marktführer), Müller Drogerie mit 900+ Filialen, Schwörer Haus (Fertighaus-Marktführer) und Universität Ulm - diese Mischung verlangt Pipelines für Truck-IATF, Retail-Filial-Operations und Quantenforschung.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Ulmer Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -349,7 +349,7 @@ export default async function Page({
         <Typo.H2>Ulm zwischen Wasserstoff-Zukunft und Iveco-Magirus-Bestand</Typo.H2>
         <Typo.Paragraph>
           Wenige Städte spüren den Strukturwandel im Nutzfahrzeugbau so direkt
-          – Daimler Truck blickt nach vorn, Iveco-Magirus kämpft mit den
+          - Daimler Truck blickt nach vorn, Iveco-Magirus kämpft mit den
           Folgen alter Geschäftsmodelle.
         </Typo.Paragraph>
         <div className="mt-8">

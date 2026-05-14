@@ -173,7 +173,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/offenbach-am-main.jpg", width: 1200, height: 630, alt: "Offenbach am Main – Heraeus, Honda Bank und Deutscher Wetterdienst" }],
+      images: [{ url: "/images/cities/offenbach-am-main.jpg", width: 1200, height: 630, alt: "Offenbach am Main - Heraeus, Honda Bank und Deutscher Wetterdienst" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/offenbach-am-main.jpg"] },
     alternates: { canonical: "/ki-agentur-offenbach-am-main" },
@@ -189,7 +189,7 @@ const offenbachFaqs = [
   {
     question: "Honda-Bank-Umfeld: was bringt n8n bei BaFin-Compliance?",
     answer:
-      "MaRisk, AML/KYC, Sanktionslisten-Prüfung und BaFin-Reporting in n8n-Pipelines. Anbindung an Core-Banking-Systeme, AKTUR und BaFin-MVP-Portal – inklusive Vier-Augen-Freigabe.",
+      "MaRisk, AML/KYC, Sanktionslisten-Prüfung und BaFin-Reporting in n8n-Pipelines. Anbindung an Core-Banking-Systeme, AKTUR und BaFin-MVP-Portal - inklusive Vier-Augen-Freigabe.",
   },
   {
     question: "DWD- oder Wetter-API-Nutzer: wie helfen Workflows?",
@@ -204,7 +204,7 @@ const offenbachFaqs = [
   {
     question: "Frankfurt-Pendler-Effekt: wie helfen HR-Workflows?",
     answer:
-      "Hybrid-Work-Verträge, Reisekosten-Workflows und A1-Bescheinigungen in n8n-Pipelines. Anbindung an SAP HCM, Workday und Active Directory – plus Steuer-Logik für Frankfurt-Pendler.",
+      "Hybrid-Work-Verträge, Reisekosten-Workflows und A1-Bescheinigungen in n8n-Pipelines. Anbindung an SAP HCM, Workday und Active Directory - plus Steuer-Logik für Frankfurt-Pendler.",
   },
 ];
 
@@ -227,10 +227,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Offenbach – Edelmetall- und Banken-Stadt"}
+              {overrides?.preHeadline ?? "Standort Offenbach - Edelmetall- und Banken-Stadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Offenbach – für Heraeus, Honda Bank und Wetterdienst"}
+              {overrides?.headline ?? "KI-Agentur in Offenbach - für Heraeus, Honda Bank und Wetterdienst"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Heraeus ist Welt-Marktführer für Edelmetalle und Sensortechnik, Honda Bank und Honeywell haben Hauptsitze in Offenbach und der Deutsche Wetterdienst sitzt vor Ort. Wir bauen Workflows für Edelmetall-Compliance, Banken-Reporting und Wetter-Daten-APIs.
@@ -244,13 +244,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/offenbach-am-main.jpg"
-              alt="Offenbach am Main – Heraeus, Honda Bank und Deutscher Wetterdienst"
+              alt="Offenbach am Main - Heraeus, Honda Bank und Deutscher Wetterdienst"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Offenbacher Edelmetall, Banken und Daten</Typo.H2>
         <SimpleGrid cols={2}>
@@ -306,7 +306,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Offenbacher Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -315,7 +315,7 @@ export default async function Page({
               Heraeus ist Welt-Marktführer für Edelmetalle (Platin, Palladium, Rhodium), Sensoren und Spezial-Beleuchtung. LBMA-Zertifizierung, GwG-Compliance und Charge-Tracking gehören in revisionssichere Pipelines.
             </NumberedList.Item>
             <NumberedList.Item title="Honda Bank und Auto-Finanzierungs-BaFin-Compliance:">
-              Honda Bank Europe in Offenbach betreibt Autofinanzierungen und Leasing. BaFin-Aufsicht, MaRisk, AML/KYC und Sanktionslisten-Prüfung sind Pflicht – mit revisionssicheren Compliance-Pipelines.
+              Honda Bank Europe in Offenbach betreibt Autofinanzierungen und Leasing. BaFin-Aufsicht, MaRisk, AML/KYC und Sanktionslisten-Prüfung sind Pflicht - mit revisionssicheren Compliance-Pipelines.
             </NumberedList.Item>
             <NumberedList.Item title="Deutscher Wetterdienst und Wetter-API-Wirtschaft:">
               DWD in Offenbach liefert Wetter- und Klimadaten an Versicherer, Energieversorger und Logistik-Unternehmen. API-Workflows, OpenData-Lizenz-Management und Crisis-Communication-Pipelines sind Themen.
@@ -330,17 +330,17 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Offenbach – seit 1851 Heraeus-Stadt am Main
+            Offenbach - seit 1851 Heraeus-Stadt am Main
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Heraeus Platinmetalle für globale Industrie verarbeitet und Honda Bank Auto-Finanzierungen regelt, sind Workflows die regulatorische Schlagader
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Heraeus mit 15.000 Mitarbeitern weltweit, Honda Bank mit Autofinanzierungs-Portfolio, Honeywell-Hauptsitz und der Deutsche Wetterdienst (DWD) – Offenbach vereint Edelmetall-Verarbeitung, Banken-Compliance und Wetter-/Klima-Datenwirtschaft.
+            Heraeus mit 15.000 Mitarbeitern weltweit, Honda Bank mit Autofinanzierungs-Portfolio, Honeywell-Hauptsitz und der Deutsche Wetterdienst (DWD) - Offenbach vereint Edelmetall-Verarbeitung, Banken-Compliance und Wetter-/Klima-Datenwirtschaft.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>

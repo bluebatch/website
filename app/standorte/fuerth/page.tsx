@@ -166,7 +166,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/fuerth.jpg", width: 1200, height: 630, alt: "Fürth – uvex Sports, Leonhard Kurz und Versandhandels-Erbe" }],
+      images: [{ url: "/images/cities/fuerth.jpg", width: 1200, height: 630, alt: "Fürth - uvex Sports, Leonhard Kurz und Versandhandels-Erbe" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/fuerth.jpg"] },
     alternates: { canonical: "/standorte/fuerth" },
@@ -187,7 +187,7 @@ const fuerthFaqs = [
   {
     question: "Bruder-Style DTC-Spielzeug: wie skalieren wir global?",
     answer:
-      "EN-71-Konformität, REACH-Compliance, DTC-Versandpipelines in 60+ Länder und saisonale Peak-Skalierung. Anbindung an Shopify, ERP und Versanddienstleister – mit Altersverifikations- und Steuer-Logik.",
+      "EN-71-Konformität, REACH-Compliance, DTC-Versandpipelines in 60+ Länder und saisonale Peak-Skalierung. Anbindung an Shopify, ERP und Versanddienstleister - mit Altersverifikations- und Steuer-Logik.",
   },
   {
     question: "Wir sind Versandhandel-Mittelstand: wo lohnt sich KI zuerst?",
@@ -220,10 +220,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Fürth – Kleeblattstadt"}
+              {overrides?.preHeadline ?? "Standort Fürth - Kleeblattstadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Fürth – für uvex Sports, Leonhard Kurz und Quelle-Erbe"}
+              {overrides?.headline ?? "KI-Agentur in Fürth - für uvex Sports, Leonhard Kurz und Quelle-Erbe"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               uvex Sports liefert Schutzbrillen und Helme weltweit, Leonhard Kurz ist Marktführer für Heißpräge-Technologie, Bruder Spielwaren ist Weltmarke und das Quelle-Erbe lebt in heutigen Versandhändlern weiter. Wir bauen Workflows für PSA-Compliance, Druckveredelung und E-Commerce.
@@ -237,13 +237,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/fuerth.jpg"
-              alt="Fürth – uvex Sports, Leonhard Kurz und Versandhandels-Erbe"
+              alt="Fürth - uvex Sports, Leonhard Kurz und Versandhandels-Erbe"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Fürther Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -267,22 +267,22 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Fürth – einst Bayerns Versandhandels-Hauptstadt
+            Fürth - einst Bayerns Versandhandels-Hauptstadt
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo PSA für Profis nach EN ISO 16321 zertifiziert wird und Leonhard Kurz Marken weltweit veredelt, sind Workflows die Schlagader
           </IntroBox.Headline>
           <IntroBox.Subline>
-            uvex-Gruppe mit 2.700 Mitarbeitern, Leonhard Kurz mit 5.500 weltweit, Bruder Spielwaren als Weltmarke und vivantes-Hospital-Konzern – Fürth ist Mittelstand-Hochburg mit Premium-Marken. PSA-Compliance, Druckveredelungs-Pipelines und Distanzhandels-DNA verlangen spezialisierte Workflows.
+            uvex-Gruppe mit 2.700 Mitarbeitern, Leonhard Kurz mit 5.500 weltweit, Bruder Spielwaren als Weltmarke und vivantes-Hospital-Konzern - Fürth ist Mittelstand-Hochburg mit Premium-Marken. PSA-Compliance, Druckveredelungs-Pipelines und Distanzhandels-DNA verlangen spezialisierte Workflows.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Fürther Marken-Mittelstand</Typo.H2>
         <SimpleGrid cols={2}>

@@ -136,7 +136,7 @@ export async function generateMetadata({
   const title = overrides?.metaTitle ?? "KI-Agentur in Erlangen | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "MedTech- und Energie-Automatisierung in Erlangen: n8n-Workflows für Siemens Healthineers, Siemens Energy, Universitätsklinikum und das Medical Valley – MDR-, IVDR- und GAMP-5-konform.";
+    "MedTech- und Energie-Automatisierung in Erlangen: n8n-Workflows für Siemens Healthineers, Siemens Energy, Universitätsklinikum und das Medical Valley - MDR-, IVDR- und GAMP-5-konform.";
 
   return {
     title,
@@ -177,9 +177,9 @@ export async function generateMetadata({
 
 const erlangenFaqs = [
   {
-    question: "Wir liefern an Siemens Healthineers – wie deckt n8n MDR und IVDR ab?",
+    question: "Wir liefern an Siemens Healthineers - wie deckt n8n MDR und IVDR ab?",
     answer:
-      "Self-hosted on-premise mit vollständiger Versionierung jeder technischen Dokumentation. Wir bauen Workflows für Post-Market-Surveillance, Vigilance-Meldungen an BfArM und EMA, UDI-Registrierung in EUDAMED und Lieferanten-Qualifizierung nach MDR Anhang IX – auditfest mit elektronischer Signatur nach 21 CFR Part 11.",
+      "Self-hosted on-premise mit vollständiger Versionierung jeder technischen Dokumentation. Wir bauen Workflows für Post-Market-Surveillance, Vigilance-Meldungen an BfArM und EMA, UDI-Registrierung in EUDAMED und Lieferanten-Qualifizierung nach MDR Anhang IX - auditfest mit elektronischer Signatur nach 21 CFR Part 11.",
   },
   {
     question: "Lässt sich die Healthineers-Abspaltung als Workflow-Großprojekt abbilden?",
@@ -197,7 +197,7 @@ const erlangenFaqs = [
       "Ja. Wir automatisieren Patientenaufnahme mit FHIR-Anbindung an die ePA, DRG-Kodierung, Studienverwaltung nach ICH-GCP und Materialwirtschaft. Im Medical Valley unterstützen wir Startups beim Aufbau MDR-konformer Prozesse, bevor sie zertifiziert werden müssen.",
   },
   {
-    question: "Wir sind 200-MA-Engineering-Dienstleister im Siemens-Umfeld – lohnt sich das?",
+    question: "Wir sind 200-MA-Engineering-Dienstleister im Siemens-Umfeld - lohnt sich das?",
     answer:
       "Gerade dann. Wer aus den Siemens-Rahmenverträgen fliegt, weil EDI- oder Forecast-Anbindung fehlt, verliert Millionenumsatz. Wir bauen die SRM-/SAP-Ariba-Integration und die MDR-Lieferanten-Qualifizierung zum Festpreis in 4 bis 8 Wochen produktiv, on-premise in eurem deutschen Rechenzentrum.",
   },
@@ -230,7 +230,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Erlangen –{" "}
+                KI-Agentur in Erlangen -{" "}
                 Medizintechnik- und Energie-Automatisierung im{" "}
                 <BackgroundHero.Highlight>Medical Valley</BackgroundHero.Highlight>
               </>
@@ -239,7 +239,7 @@ export default async function Page({
           <BackgroundHero.Description>
             Siemens Healthineers, Siemens Energy und das Universitätsklinikum
             prägen den Erlanger Arbeitsmarkt. Wir automatisieren MDR-,
-            IVDR- und Pharma-Workflows mit self-hosted n8n – auditfest und
+            IVDR- und Pharma-Workflows mit self-hosted n8n - auditfest und
             on-premise.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -268,7 +268,7 @@ export default async function Page({
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* 4. DataTable – MedTech-Vergleich */}
+      {/* 4. DataTable - MedTech-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>
@@ -328,7 +328,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Siemens, Healthineers, FAU – Medical Valley unter MDR-Druck
+            Siemens, Healthineers, FAU - Medical Valley unter MDR-Druck
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo MRT-Technologie auf Energietechnik und Spitzenforschung trifft
@@ -354,7 +354,7 @@ export default async function Page({
             Post-Market-Surveillance und UDI-Registrierung in EUDAMED.
             Ohne Workflow-Automatisierung ist diese Last nicht skalierbar.
             Die für 2026 vorgesehene Abspaltung von Siemens vergrößert den
-            Workflow-Bedarf zusätzlich – getrennte SAP-Mandanten,
+            Workflow-Bedarf zusätzlich - getrennte SAP-Mandanten,
             Personalprozesse und Buchhaltung.
           </Typo.Paragraph>
           <Typo.Paragraph>
@@ -373,7 +373,7 @@ export default async function Page({
             die FAU als eine der größten Universitäten Deutschlands und
             Fraunhofer IIS (Erfinder des MP3-Formats) bilden das wissenschaftliche
             Rückgrat. Hier entstehen Spin-offs, die früh MDR-konforme Prozesse
-            brauchen – und Mittelständler, die als Tier-1 oder Tier-2 in
+            brauchen - und Mittelständler, die als Tier-1 oder Tier-2 in
             Siemens-Lieferketten passen müssen. Wie wir das in sechs Phasen
             ausrollen, beschreiben wir auf{" "}
             <Link href="/unser-prozess" className="text-primary-600 hover:underline">
@@ -390,7 +390,7 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                Healthineers investiert in KI – was machen MedTech-Mittelständler im Medical Valley?
+                Healthineers investiert in KI - was machen MedTech-Mittelständler im Medical Valley?
               </Typo.H2>
               <Typo.Paragraph>
                 Siemens Healthineers baut massive KI-Teams für bildgebende

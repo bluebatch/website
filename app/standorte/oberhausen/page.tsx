@@ -181,27 +181,27 @@ export async function generateMetadata({
 
 const oberhausenFaqs = [
   {
-    question: "MAN Energy Solutions baut Wasserstoffkompressoren – welche Workflows brauchen wir?",
+    question: "MAN Energy Solutions baut Wasserstoffkompressoren - welche Workflows brauchen wir?",
     answer:
-      "Engineering-to-Order (ETO), CPQ-Konfiguration, Großmotor-Stücklisten, Service- und After-Sales-Workflows mit Predictive Maintenance. n8n verbindet PLM (Teamcenter), SAP, MES und Field-Service-Plattformen – wichtig für globale Wartung von Großmotoren und Turbinen.",
+      "Engineering-to-Order (ETO), CPQ-Konfiguration, Großmotor-Stücklisten, Service- und After-Sales-Workflows mit Predictive Maintenance. n8n verbindet PLM (Teamcenter), SAP, MES und Field-Service-Plattformen - wichtig für globale Wartung von Großmotoren und Turbinen.",
   },
   {
     question: "OQ Chemicals: wie automatisieren wir Spezialchemie-Compliance?",
     answer:
-      "REACH, CLP, Seveso-III, IFRS-Reporting an Muttergesellschaft in Oman sowie 24/7-Anlagenbetrieb-Doku. n8n koppelt LIMS, EHS-Software, SAP und Behörden-Schnittstellen (BImSchG, REACH-IT) – self-hosted und auditfest.",
+      "REACH, CLP, Seveso-III, IFRS-Reporting an Muttergesellschaft in Oman sowie 24/7-Anlagenbetrieb-Doku. n8n koppelt LIMS, EHS-Software, SAP und Behörden-Schnittstellen (BImSchG, REACH-IT) - self-hosted und auditfest.",
   },
   {
-    question: "CentrO als Erlebniscluster – welche Workflows lohnen sich im Handel und Center-Management?",
+    question: "CentrO als Erlebniscluster - welche Workflows lohnen sich im Handel und Center-Management?",
     answer:
       "Personaleinsatzplanung über 250+ Shops, Center-Marketing-Automation, Pre- und Post-Visit-Kommunikation, Loyalty-Workflows und Filialdisposition. Plus Reklamations- und Service-Tickets übergreifend zwischen Center und Shops.",
   },
   {
-    question: "Babcock-Areal in Konversion – wie helfen Workflows bei der Quartiers-Entwicklung?",
+    question: "Babcock-Areal in Konversion - wie helfen Workflows bei der Quartiers-Entwicklung?",
     answer:
       "Konversion komplexer Industrieflächen zieht Genehmigungs-, Vergabe- und Mittelverwendungs-Doku über Jahre hin. n8n verbindet Projektmanagement, Behördenschnittstellen, Förderstellen (Ruhrkonferenz, EU-EFRE) und Investoren-Reporting.",
   },
   {
-    question: "GMVA Niederrhein – wie automatisieren wir Müllverwertung und Energiebilanz?",
+    question: "GMVA Niederrhein - wie automatisieren wir Müllverwertung und Energiebilanz?",
     answer:
       "Anlieferungs-Quittierung, Wiegescheine, Emissions-Reporting, Strom-/Wärmebilanz und Marktkommunikation. n8n koppelt Wiegesysteme, EHS, BNetzA-Plattformen und Stadtwerke-Abrechnung zu einer Pipeline.",
   },
@@ -234,14 +234,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Oberhausen –{" "}
+                KI-Agentur in Oberhausen -{" "}
                 vom Stahl-Sterkrade zum{" "}
                 <BackgroundHero.Highlight>Wasserstoff- und Erlebnis-Hub</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus Babcock und Hütten-Industrie wurde MAN Energy Solutions, OQ Chemicals und CentrO. Wir automatisieren genau die Workflows, die ein Strukturwandel-Standort braucht – Engineering-to-Order für Großmotoren, Chemie-Compliance und Center-Management.
+            Aus Babcock und Hütten-Industrie wurde MAN Energy Solutions, OQ Chemicals und CentrO. Wir automatisieren genau die Workflows, die ein Strukturwandel-Standort braucht - Engineering-to-Order für Großmotoren, Chemie-Compliance und Center-Management.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Oberhausen besprechen</ContactButton>
@@ -277,24 +277,24 @@ export default async function Page({
             Was passiert mit den Prozessen, wenn aus Babcock MAN Wasserstoff wird?
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Oberhausen hat den klassischen Schwer- und Anlagenbau weitgehend hinter sich – und steht für die zweite Welle: MAN Energy Solutions baut von hier aus Wasserstoffkompressoren und Großwärmepumpen, OQ Chemicals produziert Oxo-Intermediates, das CentrO orchestriert 250+ Shops. Parallel ist das ehemalige Babcock-Areal in städtebaulicher Konversion. Jede dieser Säulen hat eigene Prozess-Pains.
+            Oberhausen hat den klassischen Schwer- und Anlagenbau weitgehend hinter sich - und steht für die zweite Welle: MAN Energy Solutions baut von hier aus Wasserstoffkompressoren und Großwärmepumpen, OQ Chemicals produziert Oxo-Intermediates, das CentrO orchestriert 250+ Shops. Parallel ist das ehemalige Babcock-Areal in städtebaulicher Konversion. Jede dieser Säulen hat eigene Prozess-Pains.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
       {/* 3. ProsCons */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Oberhausen hinter sich gelassen hat – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Oberhausen hinter sich gelassen hat - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
-                title="Babcock Borsig Insolvenz – Anlagenbau-Erbe abgewickelt"
-                description="Letzte Babcock-Reste mit drastischem Personalabbau, keine Transfergesellschaft – Spezial-Anlagenbauer und Engineering-Kompetenz weitgehend verloren."
+                title="Babcock Borsig Insolvenz - Anlagenbau-Erbe abgewickelt"
+                description="Letzte Babcock-Reste mit drastischem Personalabbau, keine Transfergesellschaft - Spezial-Anlagenbauer und Engineering-Kompetenz weitgehend verloren."
               />
               <ProsCons.Item
                 title="Hütten- und Schwerindustrie weitgehend verschwunden"
-                description="Traditionelle Stahl- und Hütten-Werke der Stadt geschlossen oder weit reduziert – Industrie-Beschäftigung musste neu aufgebaut werden."
+                description="Traditionelle Stahl- und Hütten-Werke der Stadt geschlossen oder weit reduziert - Industrie-Beschäftigung musste neu aufgebaut werden."
               />
               <ProsCons.Item
                 title="CentrO unter Online-Druck"
@@ -308,19 +308,19 @@ export default async function Page({
             <ProsCons.Pros>
               <ProsCons.Item
                 title="MAN Energy Solutions (3.500 MA in Sterkrade)"
-                description="Globaler Großmotor-, Turbinen- und Kompressoren-Bauer im Energiewende-Hochlauf – Wasserstoffkompressoren, Großwärmepumpen, Schiffsmotoren auf neuen Kraftstoffen."
+                description="Globaler Großmotor-, Turbinen- und Kompressoren-Bauer im Energiewende-Hochlauf - Wasserstoffkompressoren, Großwärmepumpen, Schiffsmotoren auf neuen Kraftstoffen."
               />
               <ProsCons.Item
-                title="OQ Chemicals (1.300 MA) – Oxo-Intermediates für die Welt"
-                description="Oman-finanzierte Spezialchemie mit großem Standortwerk – Schwerpunkt Spezialchemie, eingebunden in regionale Chemieachse."
+                title="OQ Chemicals (1.300 MA) - Oxo-Intermediates für die Welt"
+                description="Oman-finanzierte Spezialchemie mit großem Standortwerk - Schwerpunkt Spezialchemie, eingebunden in regionale Chemieachse."
               />
               <ProsCons.Item
-                title="CentrO – einer der größten Erlebnis-Cluster Europas"
-                description="250+ Shops, Gastronomien, Sea Life, Topgolf, neue Stadium-Projekte – 4.000 Beschäftigte kumuliert, ca. 20 Mio. Besucher (vor Corona)."
+                title="CentrO - einer der größten Erlebnis-Cluster Europas"
+                description="250+ Shops, Gastronomien, Sea Life, Topgolf, neue Stadium-Projekte - 4.000 Beschäftigte kumuliert, ca. 20 Mio. Besucher (vor Corona)."
               />
               <ProsCons.Item
                 title="Logistik-Korridor A2/A3/A42/A516 + Containerterminal"
-                description="Distributionszentren entlang Autobahn und Rhein-Herne-Kanal – ideal positioniert zwischen Duisport, Düsseldorf und Essen."
+                description="Distributionszentren entlang Autobahn und Rhein-Herne-Kanal - ideal positioniert zwischen Duisport, Düsseldorf und Essen."
               />
             </ProsCons.Pros>
           </ProsCons>
@@ -332,12 +332,12 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/logistics-hub.jpg"
-            alt="MAN Energy Solutions Sterkrade – Transformation"
+            alt="MAN Energy Solutions Sterkrade - Transformation"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>MAN Sterkrade & Babcock-Areal – wo Hütte war, fertigt heute der Wasserstoffkompressor</Typo.H2>
+            <Typo.H2>MAN Sterkrade & Babcock-Areal - wo Hütte war, fertigt heute der Wasserstoffkompressor</Typo.H2>
             <Typo.Paragraph>
-              MAN Energy Solutions baut in Oberhausen-Sterkrade Großmotoren und H2-Kompressoren für die Energiewende. Das benachbarte Babcock-Areal befindet sich in einer städtebaulichen Konversion zu Gewerbe- und Mischflächen. Beide Welten brauchen End-to-End-Workflows – Engineering-to-Order, Genehmigungs-Pipelines und Investoren-Onboarding. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              MAN Energy Solutions baut in Oberhausen-Sterkrade Großmotoren und H2-Kompressoren für die Energiewende. Das benachbarte Babcock-Areal befindet sich in einer städtebaulichen Konversion zu Gewerbe- und Mischflächen. Beide Welten brauchen End-to-End-Workflows - Engineering-to-Order, Genehmigungs-Pipelines und Investoren-Onboarding. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -352,7 +352,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Oberhausen heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -379,7 +379,7 @@ export default async function Page({
             </SimpleCard.Icon>
             <Typo.H3>Handel & Center-Management</Typo.H3>
             <Typo.Paragraph>
-              Personaleinsatzplanung, Center-Marketing-Automation, Loyalty-Workflows, Filialdisposition und Reklamations-Tickets – CentrO und Promenaden-Cluster.
+              Personaleinsatzplanung, Center-Marketing-Automation, Loyalty-Workflows, Filialdisposition und Reklamations-Tickets - CentrO und Promenaden-Cluster.
             </Typo.Paragraph>
           </SimpleCard>
         </SimpleGrid>

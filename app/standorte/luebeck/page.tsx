@@ -171,7 +171,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/luebeck.jpg", width: 1200, height: 630, alt: "Lübeck – Hanse-Hafen und Drägerwerk-Medizintechnik" }],
+      images: [{ url: "/images/cities/luebeck.jpg", width: 1200, height: 630, alt: "Lübeck - Hanse-Hafen und Drägerwerk-Medizintechnik" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/luebeck.jpg"] },
     alternates: { canonical: "/ki-agentur-luebeck" },
@@ -180,14 +180,14 @@ export async function generateMetadata({
 
 const luebeckFaqs = [
   {
-    question: "Drägerwerk-Zulieferer – kann n8n MDR-Compliance abbilden?",
+    question: "Drägerwerk-Zulieferer - kann n8n MDR-Compliance abbilden?",
     answer:
       "Ja. Technische Dokumentation, klinische Bewertung, PMS-Plan und Vigilance-Meldungen werden in versionierten n8n-Pipelines mit Notified-Body-Schnittstellen (TÜV SÜD, BSI) orchestriert. Risikomanagement-Akten nach ISO 14971 revisionssicher versioniert.",
   },
   {
     question: "Possehl-Holding-Tochter: wie hilft Automatisierung konkret?",
     answer:
-      "Bei Konzern-ERP-Konsolidierung zwischen SAP, Dynamics, Infor und Sage. Monatsabschluss-, IC-Abstimmungs- und Reporting-Workflows direkt an Lucanet oder SAP BPC – verkürzt Closing-Zeit um 40-60 %.",
+      "Bei Konzern-ERP-Konsolidierung zwischen SAP, Dynamics, Infor und Sage. Monatsabschluss-, IC-Abstimmungs- und Reporting-Workflows direkt an Lucanet oder SAP BPC - verkürzt Closing-Zeit um 40-60 %.",
   },
   {
     question: "Hafen Lübeck: was bringt n8n im Logistik-Alltag?",
@@ -195,7 +195,7 @@ const luebeckFaqs = [
       "Hafenanmeldungen, ATLAS-Zoll, Gefahrgut nach IMDG/ADR und EDI mit Reedereien (Finnlines, TT-Line, Stena Line) in automatisierten Pipelines. Anbindung an DAKOSY, HHLA und EORI-Systeme inklusive.",
   },
   {
-    question: "Wir sind Lübecker Lebensmittel-Mittelstand – wo hilft KI?",
+    question: "Wir sind Lübecker Lebensmittel-Mittelstand - wo hilft KI?",
     answer:
       "Bei HACCP-Charge-Tracking, bei automatischer Bestellabwicklung mit Großhandel (z.B. Edeka, Rewe) und bei saisonaler Peak-Skalierung. Marzipan-, Backwaren- und Wein-Branche profitieren überproportional.",
   },
@@ -225,10 +225,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Lübeck – Königin der Hanse"}
+              {overrides?.preHeadline ?? "Standort Lübeck - Königin der Hanse"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Lübeck – für Drägerwerk, Possehl und Hanse-Hafen"}
+              {overrides?.headline ?? "KI-Agentur in Lübeck - für Drägerwerk, Possehl und Hanse-Hafen"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Drägerwerk fertigt Medizin- und Sicherheitstechnik weltweit, Possehl-Holding bündelt 200 Töchter im Mittelstand, Niederegger ist Welt-Marktführer für Marzipan und der Hafen Lübeck verbindet Skandinavien mit dem Kontinent. Wir bauen Workflows für MDR-Medizinprodukte, Holding-Konsolidierung und Hafen-Logistik.
@@ -242,13 +242,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/luebeck.jpg"
-              alt="Lübeck – Hanse-Hafen und Drägerwerk-Medizintechnik"
+              alt="Lübeck - Hanse-Hafen und Drägerwerk-Medizintechnik"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Lübecker Medizintechnik, Holding und Hafen</Typo.H2>
         <SimpleGrid cols={2}>
@@ -291,7 +291,7 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Lübecker Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -328,17 +328,17 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Lübeck – seit 1143 Königin der Hanse
+            Lübeck - seit 1143 Königin der Hanse
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Beatmungsgeräte MDR-zertifiziert werden und 200 Possehl-Töchter konsolidiert werden müssen, sind Workflows die Lebensader
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Drägerwerk mit 16.000 Mitarbeitern weltweit, Possehl-Holding mit über 15.000 Beschäftigten in über 30 Ländern, Niederegger als Welt-Marktführer für Marzipan – Lübecks Wirtschaft ist Holding-, MedTech- und Maritim-geprägt. Spezialisierte Workflows sind hier nicht Luxus, sondern Voraussetzung.
+            Drägerwerk mit 16.000 Mitarbeitern weltweit, Possehl-Holding mit über 15.000 Beschäftigten in über 30 Ländern, Niederegger als Welt-Marktführer für Marzipan - Lübecks Wirtschaft ist Holding-, MedTech- und Maritim-geprägt. Spezialisierte Workflows sind hier nicht Luxus, sondern Voraussetzung.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>

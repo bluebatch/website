@@ -150,7 +150,7 @@ export async function generateMetadata({
     "KI-Agentur in Münster | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Versicherungs- und Hochschul-Automatisierung in Münster: n8n-Workflows für LVM, Provinzial, BASF Coatings, UKM und Bezirksregierung – BaFin-, IDD- und DORA-konform.";
+    "Versicherungs- und Hochschul-Automatisierung in Münster: n8n-Workflows für LVM, Provinzial, BASF Coatings, UKM und Bezirksregierung - BaFin-, IDD- und DORA-konform.";
 
   return {
     title,
@@ -191,9 +191,9 @@ export async function generateMetadata({
 
 const muensterFaqs = [
   {
-    question: "Wir arbeiten bei LVM oder Provinzial – wie deckt n8n BaFin, IDD und DORA ab?",
+    question: "Wir arbeiten bei LVM oder Provinzial - wie deckt n8n BaFin, IDD und DORA ab?",
     answer:
-      "Self-hosted on-premise im LVM- oder Provinzial-Rechenzentrum. Wir docken an msg.Insurit, inSurance Suite oder SAP for Insurance an und automatisieren Antragsstrecken, Schadenbearbeitung, KYC-Onboarding und Provisionsabrechnung mit Maklern – mit Vier-Augen-Freigaben, vollständigem Audit-Trail und DORA-Resilienztests.",
+      "Self-hosted on-premise im LVM- oder Provinzial-Rechenzentrum. Wir docken an msg.Insurit, inSurance Suite oder SAP for Insurance an und automatisieren Antragsstrecken, Schadenbearbeitung, KYC-Onboarding und Provisionsabrechnung mit Maklern - mit Vier-Augen-Freigaben, vollständigem Audit-Trail und DORA-Resilienztests.",
   },
   {
     question: "Hilft n8n beim Schaden-Boom durch Klima- und Cyber-Risiken?",
@@ -203,7 +203,7 @@ const muensterFaqs = [
   {
     question: "Was bringt n8n bei BASF Coatings für Lack-Lieferungen an OEMs?",
     answer:
-      "BASF Coatings produziert in Münster Lacke für die globale Automotive-Welt. Wir automatisieren GxP-/IATF-Qualitäts-Workflows, REACH-/SCIP-Meldungen und Catena-X-Anbindung an OEMs wie VW, BMW, Mercedes – mit PCF-Berechnung pro Charge und Lieferkettendokumentation nach LkSG.",
+      "BASF Coatings produziert in Münster Lacke für die globale Automotive-Welt. Wir automatisieren GxP-/IATF-Qualitäts-Workflows, REACH-/SCIP-Meldungen und Catena-X-Anbindung an OEMs wie VW, BMW, Mercedes - mit PCF-Berechnung pro Charge und Lieferkettendokumentation nach LkSG.",
   },
   {
     question: "Helft ihr UKM und konfessionellen Kliniken in Münster?",
@@ -244,7 +244,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Münster –{" "}
+                KI-Agentur in Münster -{" "}
                 Versicherungs- und Hochschulstadt{" "}
                 <BackgroundHero.Highlight>Westfalens</BackgroundHero.Highlight>
               </>
@@ -253,7 +253,7 @@ export default async function Page({
           <BackgroundHero.Description>
             LVM, Provinzial, BASF Coatings, UKM und die Bezirksregierung
             prägen den Münsteraner Arbeitsmarkt. Wir automatisieren BaFin-,
-            IDD- und DORA-Workflows mit self-hosted n8n – auditfest,
+            IDD- und DORA-Workflows mit self-hosted n8n - auditfest,
             on-premise und ohne Datenfluss in US-Clouds.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -286,7 +286,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            LVM, Provinzial, BASF Coatings – Versicherer trifft Lack-Weltmarktführer
+            LVM, Provinzial, BASF Coatings - Versicherer trifft Lack-Weltmarktführer
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Westfalens Versicherungshauptstadt auf das größte BASF-Lackwerk trifft
@@ -296,7 +296,7 @@ export default async function Page({
             Hochschul-, Verwaltungs- und Industriestandort. LVM mit 3,9 Millionen
             Kunden, Provinzial mit über 7 Mrd. EUR Beitragseinnahmen, BASF
             Coatings als weltgrößtes BASF-Lackwerk und die WWU mit 45.000
-            Studierenden bündeln vier Welten an einem Ort – mit massiven
+            Studierenden bündeln vier Welten an einem Ort - mit massiven
             Compliance-Pflichten und Workflow-Bedarf.
           </IntroBox.Subline>
         </IntroBox>
@@ -305,7 +305,7 @@ export default async function Page({
             LVM Versicherung ist mit rund 3.900 Beschäftigten und 3,9 Millionen
             Kunden der größte Versicherer Münsters. Die Provinzial Holding
             beschäftigt etwa 4.500 Mitarbeiter und hat 2024 über 7 Milliarden
-            Euro Beitragseinnahmen verbucht – ein Wachstum von 7 Prozent. Beide
+            Euro Beitragseinnahmen verbucht - ein Wachstum von 7 Prozent. Beide
             stehen unter BaFin- und MaRisk-Aufsicht, müssen die IDD-Vermittlerregeln
             einhalten, KYC nach Geldwäschegesetz, DORA-Resilienztests gegen
             IT-Ausfälle und steigende Schadensvolumina durch Klima- und
@@ -330,7 +330,7 @@ export default async function Page({
             Westfalen-Lippe), das Oberlandesgericht, mehrere Bundesbehörden
             und die Stadtverwaltung mit zusammen tausenden Beschäftigten.
             OZG 2.0, eAkte und KI-Assistenten für Sachbearbeitung sind hohe
-            Priorität – Münster kann hier Pilot-Standort für ganz
+            Priorität - Münster kann hier Pilot-Standort für ganz
             Westfalen-Lippe sein. Im Münsterland kommen Westfleisch, Agravis
             und der Agrar-Mittelstand hinzu, mit eigenen QS-, Tierarzneimittel-
             und CSRD-Anforderungen. Wie wir die Implementierung in sechs
@@ -349,7 +349,7 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                LVM und Provinzial bauen InsurTech-Teams – was machen Makler?
+                LVM und Provinzial bauen InsurTech-Teams - was machen Makler?
               </Typo.H2>
               <Typo.Paragraph>
                 Große Versicherer investieren in eigene Data-Science- und
@@ -357,7 +357,7 @@ export default async function Page({
                 Schadenregulierer und der Münsteraner Versicherungs-Mittelstand
                 brauchen einen pragmatischen Hebel: schlanke n8n-Workflows,
                 die KYC-Antragsprüfung, Provisionsabrechnung und Schadenmeldung
-                automatisieren – ohne IT-Großprojekt. Self-hosted, in eurem
+                automatisieren - ohne IT-Großprojekt. Self-hosted, in eurem
                 deutschen Rechenzentrum, modular erweiterbar.
               </Typo.Paragraph>
             </BoundlessImageCard.Content>
@@ -378,7 +378,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 4. DataTable – Versicherungs-/Industrie-Vergleich */}
+      {/* 4. DataTable - Versicherungs-/Industrie-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>

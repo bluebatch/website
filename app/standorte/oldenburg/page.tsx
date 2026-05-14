@@ -183,27 +183,27 @@ export async function generateMetadata({
 
 const oldenburgFaqs = [
   {
-    question: "EWE und EWE TEL – wie hilft n8n bei Energie- und Telco-Workflows?",
+    question: "EWE und EWE TEL - wie hilft n8n bei Energie- und Telco-Workflows?",
     answer:
       "EWE ist mit 9.000 Beschäftigten einer der größten Versorger Norddeutschlands mit Glasfaser, Wasserstoff und Smart Grid. Smart-Meter-Workflows, Tarifwechsel, Anschluss-Prozesse, MaKo/MaBiS-Pipelines werden mit n8n DSGVO-konform on-premise abgebildet.",
   },
   {
-    question: "Oldenburgische Landesbank (OLB) – wie helfen wir Mittelstands-Banking?",
+    question: "Oldenburgische Landesbank (OLB) - wie helfen wir Mittelstands-Banking?",
     answer:
       "OLB ist überregionale Mittelstandsbank mit 1.600 Beschäftigten. KYC, Kreditprozesse, Servicing, MaRisk-/BAIT-/DORA-Compliance werden mit n8n und KI-gestützter Dokumentenverarbeitung weitestgehend automatisiert.",
   },
   {
-    question: "CeWe Color – wie unterstützen wir Massenfertigung mit Personalisierung?",
+    question: "CeWe Color - wie unterstützen wir Massenfertigung mit Personalisierung?",
     answer:
-      "CeWe ist europäischer Marktführer im Fotoservice (4.000 weltweit). Auftragsabwicklung, Produktionssteuerung, Versand und Retouren werden End-to-End in n8n abgebildet – inklusive E-Commerce-Anbindung und individueller Personalisierung pro Auftrag.",
+      "CeWe ist europäischer Marktführer im Fotoservice (4.000 weltweit). Auftragsabwicklung, Produktionssteuerung, Versand und Retouren werden End-to-End in n8n abgebildet - inklusive E-Commerce-Anbindung und individueller Personalisierung pro Auftrag.",
   },
   {
-    question: "OFFIS, Universität, BTC AG – wie automatisieren wir Forschung und IT-Service?",
+    question: "OFFIS, Universität, BTC AG - wie automatisieren wir Forschung und IT-Service?",
     answer:
       "OFFIS-Institut, Universität Oldenburg, BTC AG (EWE-Tochter) und Jade Hochschule arbeiten in Medizininformatik, Energie-IT und Verkehr. Förderantragsmanagement, Drittmittelabrechnung, Beschaffung und HR-Workflows werden mit n8n orchestriert.",
   },
   {
-    question: "Agribusiness Weser-Ems – wie helfen Workflows in Lebensmittel und Tierhaltung?",
+    question: "Agribusiness Weser-Ems - wie helfen Workflows in Lebensmittel und Tierhaltung?",
     answer:
       "Bünting-Gruppe (13.000 Beschäftigte regional), Lebensmittelproduzenten und Agrarunternehmen brauchen automatisierte Bestellabwicklung, Track-and-Trace, Chargenmanagement und Filialsteuerung. Wir bauen n8n-Pipelines für IFS-Compliance und Multi-Standort-Logistik.",
   },
@@ -241,7 +241,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Oldenburg –{" "}
+                KI-Agentur in Oldenburg -{" "}
                 EWE, OLB und{" "}
                 <BackgroundHero.Highlight>Weser-Ems-Versorgungszentrum</BackgroundHero.Highlight>
               </>
@@ -249,7 +249,7 @@ export default async function Page({
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
             EWE, BTC AG, Oldenburgische Landesbank, CeWe Color, Carl von
-            Ossietzky Universität, OFFIS, Klinikum Oldenburg, Bünting-Gruppe –
+            Ossietzky Universität, OFFIS, Klinikum Oldenburg, Bünting-Gruppe -
             Oldenburg ist Weser-Ems-Zentrum mit 12,5 Mrd. EUR kumuliertem
             Umsatz. Wir bauen n8n-Workflows für Energie- und Telco-Services,
             Mittelstands-Banking, Foto-Massenproduktion und Agribusiness.
@@ -303,17 +303,17 @@ export default async function Page({
         <BoundlessImageCard imagePosition="left">
           <BoundlessImageCard.Image
             src="/images/cities/oldenburg.jpg"
-            alt="Oldenburg EWE, OLB und Weser-Ems-Cluster – n8n-Workflows für nordwestliches Niedersachsen"
+            alt="Oldenburg EWE, OLB und Weser-Ems-Cluster - n8n-Workflows für nordwestliches Niedersachsen"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Offshore-Wind, Wasserstoff und Agribusiness – Oldenburg als Drehkreuz</Typo.H2>
+            <Typo.H2>Offshore-Wind, Wasserstoff und Agribusiness - Oldenburg als Drehkreuz</Typo.H2>
             <Typo.Paragraph>
               Mit dem Offshore-Wind-Hochlauf der Nordsee gibt es in der
               Region (Cuxhaven, Wilhelmshaven, Emden) massive Anlagen- und
               Service-Bedarfe. Oldenburg fungiert als Engineering-, IT-
               und Finanzdrehkreuz für diesen Cluster. Wir helfen den
               Mittelständlern entlang dieser Wertschöpfungskette, mit
-              schlanken n8n-Workflows skalierbar zu bleiben –
+              schlanken n8n-Workflows skalierbar zu bleiben -
               vom Anschluss-Prozess bis zum Wartungs-Ticket.
             </Typo.Paragraph>
             <div className="mt-4">
@@ -353,7 +353,7 @@ export default async function Page({
         <Typo.H2>Oldenburger Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
           EWE steuert anders als die OLB, CeWe anders als die Universität.
-          Wir bauen für jeden Cluster die passenden n8n-Bausteine – vom
+          Wir bauen für jeden Cluster die passenden n8n-Bausteine - vom
           Smart-Meter-Workflow bis zur IFS-konformen Agribusiness-Pipeline.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -361,7 +361,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Zap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>EWE AG – Energie, Telco und Wasserstoff</Typo.H3>
+            <Typo.H3>EWE AG - Energie, Telco und Wasserstoff</Typo.H3>
             <Typo.Paragraph>
               9.047 Konzernbeschäftigte, regionaler Versorger für Energie,
               Wasser, Telekommunikation. Smart-Meter-Rollout, Tarifwechsel,
@@ -373,19 +373,19 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Landmark className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Oldenburgische Landesbank (OLB) – Mittelstandsbank</Typo.H3>
+            <Typo.H3>Oldenburgische Landesbank (OLB) - Mittelstandsbank</Typo.H3>
             <Typo.Paragraph>
               1.600 Beschäftigte, gegründet 1869, überregional aktiv. KYC,
               Kreditprozesse, Servicing, MaRisk-/BAIT-/DORA-Compliance
               werden mit n8n und KI-gestützter Dokumentenverarbeitung
-              weitestgehend automatisiert – inklusive Mandanten-Reporting.
+              weitestgehend automatisiert - inklusive Mandanten-Reporting.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cpu className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>BTC AG &amp; OFFIS – IT- und Software-Dienstleister</Typo.H3>
+            <Typo.H3>BTC AG &amp; OFFIS - IT- und Software-Dienstleister</Typo.H3>
             <Typo.Paragraph>
               BTC AG (EWE-Tochter, 2.100 Beschäftigte), OFFIS-Institut und
               dichte IT-Mittelstandsszene. Projektabrechnung, Time

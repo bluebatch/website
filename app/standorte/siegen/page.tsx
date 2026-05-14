@@ -172,7 +172,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/siegen.jpg", width: 1200, height: 630, alt: "Siegen – Achenbach Buschhütten und Hidden Champions" }],
+      images: [{ url: "/images/cities/siegen.jpg", width: 1200, height: 630, alt: "Siegen - Achenbach Buschhütten und Hidden Champions" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/siegen.jpg"] },
     alternates: { canonical: "/ki-agentur-siegen" },
@@ -226,10 +226,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Siegen – Hidden-Champion-Region"}
+              {overrides?.preHeadline ?? "Standort Siegen - Hidden-Champion-Region"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Siegen – für Achenbach Buschhütten, Maschinenbau und Universität"}
+              {overrides?.headline ?? "KI-Agentur in Siegen - für Achenbach Buschhütten, Maschinenbau und Universität"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Achenbach Buschhütten baut Walzwerke für die Welt, das Siegerland ist Hidden-Champion-Hochburg mit hunderten KMU im Maschinen- und Anlagenbau und die Universität Siegen prägt die Region mit Engineering-Forschung. Wir bauen Workflows für Anlagenbau-Compliance, Maschinen-Service und Drittmittel.
@@ -243,13 +243,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/siegen.jpg"
-              alt="Siegen – Achenbach Buschhütten und Hidden Champions"
+              alt="Siegen - Achenbach Buschhütten und Hidden Champions"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Siegener Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -267,28 +267,28 @@ export default async function Page({
               Universität Siegen mit Schwerpunkt Maschinenbau, Mechatronik und FOMAAS-Forschung. DFG-, BMBF- und EU-Förderprojekte, Industriepartnerschaften mit lokalen Hidden Champions und Doktoranden-HR sind Pipeline-Themen.
             </NumberedList.Item>
             <NumberedList.Item title="Krombacher und regionale Lebensmittel-Industrie:">
-              Krombacher (Kreuztal), Eichhof und Region-Mittelstand – HACCP, Charge-Rückverfolgung und Lebensmittelhygiene-Workflows nach IFS Food gehören zum Alltag.
+              Krombacher (Kreuztal), Eichhof und Region-Mittelstand - HACCP, Charge-Rückverfolgung und Lebensmittelhygiene-Workflows nach IFS Food gehören zum Alltag.
             </NumberedList.Item>
           </NumberedList>
         </div>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Siegen – Heimat der Hidden Champions im Maschinenbau
+            Siegen - Heimat der Hidden Champions im Maschinenbau
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Walzwerke nach Japan exportiert werden und 200+ Maschinenbau-KMU global ausliefern, müssen Workflows export- und ATEX-fest sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Achenbach Buschhütten als Weltmarktführer für Folienwalzwerke, SMS group (Stahltechnologie), Krombacher-Region und die Universität Siegen mit Engineering-Schwerpunkt – das Siegerland ist Maschinenbau-Hochburg mit ATEX-, Exportkontrolle- und CE-konformen Pipeline-Bedürfnissen.
+            Achenbach Buschhütten als Weltmarktführer für Folienwalzwerke, SMS group (Stahltechnologie), Krombacher-Region und die Universität Siegen mit Engineering-Schwerpunkt - das Siegerland ist Maschinenbau-Hochburg mit ATEX-, Exportkontrolle- und CE-konformen Pipeline-Bedürfnissen.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Siegener Maschinen- und Anlagenbau</Typo.H2>
         <SimpleGrid cols={2}>
@@ -361,7 +361,7 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Familienunternehmens-Tradition"
-                description="Inhabergeführt seit Generationen, lange Lieferanten-Bindungen, hohe Fertigungstiefe. Klassische SAP-Backbones, MES-Anbindung an Werkzeugmaschinen, EDI mit globalen Kunden – wir kennen die typischen Schwachstellen."
+                description="Inhabergeführt seit Generationen, lange Lieferanten-Bindungen, hohe Fertigungstiefe. Klassische SAP-Backbones, MES-Anbindung an Werkzeugmaschinen, EDI mit globalen Kunden - wir kennen die typischen Schwachstellen."
               />
             </ProsCons.Pros>
             <ProsCons.Cons>

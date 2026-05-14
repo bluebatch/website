@@ -132,7 +132,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/jena.jpg", width: 1200, height: 630, alt: "Jena Lichtstadt – Optik-Cluster" }],
+      images: [{ url: "/images/cities/jena.jpg", width: 1200, height: 630, alt: "Jena Lichtstadt - Optik-Cluster" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/jena.jpg"] },
     alternates: { canonical: "/ki-agentur-jena" },
@@ -146,24 +146,24 @@ const jenaFaqs = [
       "ZEISS Semiconductor Manufacturing Technology beliefert ASML für EUV-Lithographie. Reinraum-Dokumentation, Charge-Tracking, Lieferanten-Qualifizierung und US-Exportkontrolle (ITAR/EAR) müssen lückenlos auditierbar sein. n8n verbindet PLM, MES, SAP-Modulen und Compliance-Tools wie Descartes Systems oder MIC zu durchgängigen Belegketten.",
   },
   {
-    question: "Wir sind Photonik-Mittelstand – wo lohnt sich KI zuerst?",
+    question: "Wir sind Photonik-Mittelstand - wo lohnt sich KI zuerst?",
     answer:
       "Bei Angebotskonfiguration und CPQ für komplexe optische Komponenten, bei Klassifikation eingehender Anfragen mit AI Agents und in der MDR-Technischen-Dokumentation. Die spezialisierten Workflows skalieren dort am besten, wo Personalknappheit herrscht.",
   },
   {
-    question: "MDR-Compliance bei Medizintechnik – kann n8n da konkret helfen?",
+    question: "MDR-Compliance bei Medizintechnik - kann n8n da konkret helfen?",
     answer:
-      "Ja. Technische Dokumentation, klinische Bewertung, Post-Market-Surveillance und Vigilance-Meldungen werden in n8n-Pipelines abgebildet – mit Notified-Body-Schnittstellen (TÜV SÜD, BSI) und revisionssicheren Logs. Versionierung von Risikomanagement-Akten nach ISO 14971 inklusive.",
+      "Ja. Technische Dokumentation, klinische Bewertung, Post-Market-Surveillance und Vigilance-Meldungen werden in n8n-Pipelines abgebildet - mit Notified-Body-Schnittstellen (TÜV SÜD, BSI) und revisionssicheren Logs. Versionierung von Risikomanagement-Akten nach ISO 14971 inklusive.",
   },
   {
-    question: "BMBF- und EU-Förderprojekte sind sehr dokumentationsintensiv – Lösung?",
+    question: "BMBF- und EU-Förderprojekte sind sehr dokumentationsintensiv - Lösung?",
     answer:
       "Workflows, die Zeiterfassung, Belegmanagement, Verwendungsnachweise und Quartalsreports automatisch generieren. Anbindung an PT-Outline, easy-Online, ECAS/EU-Funding & Tenders und SAP CO. Spart spürbar Verwaltungsoverhead in Photonik-Verbundprojekten.",
   },
   {
-    question: "Wir wachsen mit dem Westbahnhof-Campus auf 2.500 Mitarbeiter – HR-Workflow?",
+    question: "Wir wachsen mit dem Westbahnhof-Campus auf 2.500 Mitarbeiter - HR-Workflow?",
     answer:
-      "End-to-End-Onboarding ist genau der Use-Case: Reisekostenfreigaben, IT-Bereitstellung, Sicherheitsfreigaben, Zugangskarten, Schulungsplanung. n8n verbindet Workday/SuccessFactors, Active Directory, Ivanti, SAP Concur – einmal eingerichtet, skaliert das ohne weiteres Personal in HR.",
+      "End-to-End-Onboarding ist genau der Use-Case: Reisekostenfreigaben, IT-Bereitstellung, Sicherheitsfreigaben, Zugangskarten, Schulungsplanung. n8n verbindet Workday/SuccessFactors, Active Directory, Ivanti, SAP Concur - einmal eingerichtet, skaliert das ohne weiteres Personal in HR.",
   },
 ];
 
@@ -186,10 +186,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Jena – Lichtstadt"}
+              {overrides?.preHeadline ?? "Standort Jena - Lichtstadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Jena – für Europas Photonik-Hauptstadt"}
+              {overrides?.headline ?? "KI-Agentur in Jena - für Europas Photonik-Hauptstadt"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               ZEISS, JenOptik, SCHOTT, Analytik Jena und das Universitätsklinikum
@@ -206,13 +206,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/jena.jpg"
-              alt="Jena Lichtstadt – Optik- und Photonik-Cluster"
+              alt="Jena Lichtstadt - Optik- und Photonik-Cluster"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Dinge die Jena einzigartig machen */}
+      {/* 3. NumberedList - 5 Dinge die Jena einzigartig machen */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Jenaer Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -225,18 +225,18 @@ export default async function Page({
             <NumberedList.Item title="ITAR/EAR-Exportkontrolle bei Dual-Use-Optiken:">
               Photonik-Komponenten enthalten oft US-Bauteile mit Re-Export-Beschränkungen.
               Endverbleibserklärungen, BAFA-Genehmigungen und automatisierte Sanktionslisten-Prüfungen
-              werden zur Pflicht – mit Audit-Trail.
+              werden zur Pflicht - mit Audit-Trail.
             </NumberedList.Item>
             <NumberedList.Item title="MDR-Compliance bei Medizinprodukten:">
-              OP-Mikroskope, Augenheilkunde, Diagnostik – fast alle Photonik-Unternehmen
+              OP-Mikroskope, Augenheilkunde, Diagnostik - fast alle Photonik-Unternehmen
               haben einen MedTech-Arm. Technische Dokumentation und Post-Market-Surveillance
               binden ganze Teams, wenn nicht automatisiert.
             </NumberedList.Item>
             <NumberedList.Item title="Universitätsklinikum mit Spitzenforschung Sepsis/Infektion:">
-              Drittmittel-Reporting, DRG-Abrechnung, Ethikkommissionen, Forschungsdaten-Management –
+              Drittmittel-Reporting, DRG-Abrechnung, Ethikkommissionen, Forschungsdaten-Management -
               ein dichtes Geflecht aus klinischen und Forschungs-Workflows.
             </NumberedList.Item>
-            <NumberedList.Item title="500 Mio. EUR Westbahnhof-Campus – 2.500 neue Stellen:">
+            <NumberedList.Item title="500 Mio. EUR Westbahnhof-Campus - 2.500 neue Stellen:">
               Größtes Standort-Wachstum der Stadtgeschichte. Onboarding, Reisekosten,
               IT-Bereitstellung und Beschaffung skalieren nicht ohne automatisierte Pipelines.
             </NumberedList.Item>
@@ -257,7 +257,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Optik-spezifische Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Optik-spezifische Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Jenaer Optik- und MedTech-Unternehmen</Typo.H2>
         <SimpleGrid cols={2}>
@@ -279,7 +279,7 @@ export default async function Page({
             <Typo.H3>MDR Technische Dokumentation für Medizinoptik</Typo.H3>
             <Typo.Paragraph>
               ISO 13485 Lenkungsstand, klinische Bewertung, PMS-Plan und Vigilance-Meldungen
-              orchestriert in versionierten n8n-Pipelines – mit Notified-Body-Anbindung.
+              orchestriert in versionierten n8n-Pipelines - mit Notified-Body-Anbindung.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
@@ -306,11 +306,11 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Optik-Cluster Story */}
+      {/* 2. IntroBox - Optik-Cluster Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            175 Jahre Carl Zeiss – 175 Jahre Präzision
+            175 Jahre Carl Zeiss - 175 Jahre Präzision
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Linsen für ASML geschliffen werden, müssen Workflows mikrometergenau sein
@@ -318,7 +318,7 @@ export default async function Page({
           <IntroBox.Subline>
             Jena vereint über 100 Optik- und Photonik-Unternehmen mit Hochschulforschung
             in einer Dichte, die weltweit einmalig ist. Diese Spezialisierung verlangt
-            spezialisierte Prozesse – generische ERP-Workflows reichen für EUV-Lithographie
+            spezialisierte Prozesse - generische ERP-Workflows reichen für EUV-Lithographie
             oder MDR-Bewertungen nicht aus.
           </IntroBox.Subline>
         </IntroBox>

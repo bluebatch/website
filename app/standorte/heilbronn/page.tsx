@@ -140,7 +140,7 @@ export async function generateMetadata({
   const title = overrides?.metaTitle ?? "KI-Agentur in Heilbronn | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Retail- und Automotive-Automatisierung in Heilbronn: n8n-Workflows für die Schwarz-Gruppe (Lidl, Kaufland), Audi Neckarsulm, Bechtle, Würth und das IPAI – CSRD-, IATF-16949- und Catena-X-konform.";
+    "Retail- und Automotive-Automatisierung in Heilbronn: n8n-Workflows für die Schwarz-Gruppe (Lidl, Kaufland), Audi Neckarsulm, Bechtle, Würth und das IPAI - CSRD-, IATF-16949- und Catena-X-konform.";
 
   return {
     title,
@@ -181,14 +181,14 @@ export async function generateMetadata({
 
 const heilbronnFaqs = [
   {
-    question: "Wir liefern an Lidl oder Kaufland – wie integriert ihr n8n in die Schwarz-IT-Welt?",
+    question: "Wir liefern an Lidl oder Kaufland - wie integriert ihr n8n in die Schwarz-IT-Welt?",
     answer:
       "Self-hosted on-premise, mit Anbindung an SAP S/4HANA Retail, das Schwarz-IT-Lieferantenportal und Schwarz Digits. Wir decken EDIFACT-Bestell-Workflows nach EANCOM, Eigenmarken-Spezifikationen, Pestizid- und Tierwohl-Nachweise und das CSRD-Lieferketten-Reporting nach ESRS S2 ab.",
   },
   {
     question: "Hilft n8n bei Audi Neckarsulm und dem e-tron-GT-Hochlauf?",
     answer:
-      "Ja. Audi Neckarsulm produziert A6, A7, A8 und e-tron GT. Wir bauen JIT/JIS-Workflows nach VDA 4905, Catena-X-Anbindung für PCF und Traceability, IATF-16949-konforme APQP-/PPAP-Doku und KSS-Bestellabwicklung. Identisch zum Audi-Stammwerk Ingolstadt – nur näher an euch.",
+      "Ja. Audi Neckarsulm produziert A6, A7, A8 und e-tron GT. Wir bauen JIT/JIS-Workflows nach VDA 4905, Catena-X-Anbindung für PCF und Traceability, IATF-16949-konforme APQP-/PPAP-Doku und KSS-Bestellabwicklung. Identisch zum Audi-Stammwerk Ingolstadt - nur näher an euch.",
   },
   {
     question: "Was bringt n8n im IPAI-Umfeld neben Audi, Porsche, Würth und Fraunhofer?",
@@ -201,7 +201,7 @@ const heilbronnFaqs = [
       "Ja. Bechtle ist als DAX-IT-Dienstleister durch zahlreiche Akquisitionen gewachsen und kämpft mit Multi-Currency-Buchhaltung, Lizenz-Management und Konzern-Konsolidierung. Wir automatisieren die Integration neuer Töchter in SAP S/4HANA und die monatliche Konsolidierung nach IFRS.",
   },
   {
-    question: "Wir sind 250-MA-Hidden-Champion in Heilbronn-Franken – lohnt sich das?",
+    question: "Wir sind 250-MA-Hidden-Champion in Heilbronn-Franken - lohnt sich das?",
     answer:
       "Gerade dann. Im IPAI-Umfeld konkurriert ihr um Fachkräfte mit Lidl, Audi und Porsche. Bewerbermanagement, Onboarding, Auftragsabwicklung und CSRD-ESG-Reporting müssen automatisiert sein, sonst verliert ihr im Personalmarkt. Wir bauen das zum Festpreis in 4 bis 8 Wochen produktiv.",
   },
@@ -234,7 +234,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Heilbronn –{" "}
+                KI-Agentur in Heilbronn -{" "}
                 Retail-, Automotive- und KI-Automatisierung in Europas{" "}
                 <BackgroundHero.Highlight>KI-Quartier</BackgroundHero.Highlight>
               </>
@@ -243,7 +243,7 @@ export default async function Page({
           <BackgroundHero.Description>
             Schwarz-Gruppe, Audi Neckarsulm, Bechtle, Würth und das IPAI
             prägen Heilbronn-Franken. Wir automatisieren CSRD-, Catena-X-
-            und IATF-Workflows mit self-hosted n8n – DSGVO-konform und
+            und IATF-Workflows mit self-hosted n8n - DSGVO-konform und
             on-premise.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -272,7 +272,7 @@ export default async function Page({
         </BackgroundHero>
       </ContentWrapper>
 
-      {/* 4. DataTable – Retail-/Automotive-Vergleich */}
+      {/* 4. DataTable - Retail-/Automotive-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>
@@ -332,7 +332,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Schwarz-Gruppe, Audi, IPAI – Europas KI-Cluster trifft Premium-Automotive
+            Schwarz-Gruppe, Audi, IPAI - Europas KI-Cluster trifft Premium-Automotive
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Europas größter Einzelhändler auf Europas größtes KI-Ökosystem trifft
@@ -369,7 +369,7 @@ export default async function Page({
             Fahrwerkstechnologien, Magna/Getrag Getriebe in Untergruppenbach.
           </Typo.Paragraph>
           <Typo.Paragraph>
-            Das Herzstück der Heilbronner Transformation ist das IPAI –
+            Das Herzstück der Heilbronner Transformation ist das IPAI -
             Innovation Park Artificial Intelligence: 23 Hektar Kreis-förmiges
             KI-Quartier mit Audi, Porsche, Würth und Fraunhofer als
             Erstmietern, finanziert mit 50 Millionen Euro Startkapital der
@@ -391,7 +391,7 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                Schwarz Digits baut eigene Cloud – was machen Mittelständler in Heilbronn-Franken?
+                Schwarz Digits baut eigene Cloud - was machen Mittelständler in Heilbronn-Franken?
               </Typo.H2>
               <Typo.Paragraph>
                 Schwarz Digits, Bechtle und Audi leisten sich eigene

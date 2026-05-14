@@ -173,7 +173,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/solingen.jpg", width: 1200, height: 630, alt: "Solingen – Klingenstadt und Schneidwaren-Cluster" }],
+      images: [{ url: "/images/cities/solingen.jpg", width: 1200, height: 630, alt: "Solingen - Klingenstadt und Schneidwaren-Cluster" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/solingen.jpg"] },
     alternates: { canonical: "/ki-agentur-solingen" },
@@ -187,19 +187,19 @@ const solingenFaqs = [
       "Ja. Verarbeitungs-Logs, Werkstoff-Charge-Tracking und Herkunftsdeklarationen werden in revisionssicheren Pipelines orchestriert. Bei Markenrechtsstreitigkeiten haben Sie auf Knopfdruck lückenlose Verarbeitungs-Nachweise nach Solinger Verordnung.",
   },
   {
-    question: "Wir betreiben Co-Branding mit Sterneköchen – wo hilft Automatisierung?",
+    question: "Wir betreiben Co-Branding mit Sterneköchen - wo hilft Automatisierung?",
     answer:
-      "Bei Royalty-Tracking, Mengenmeldungen und vertraglich vereinbarten Quartals-Reports. Workflows verbinden NetSuite/SAP, DocuSign, PIM-Systeme und Marketing-Tools – damit Lizenzpartner zeitnahe und korrekte Abrechnungen erhalten.",
+      "Bei Royalty-Tracking, Mengenmeldungen und vertraglich vereinbarten Quartals-Reports. Workflows verbinden NetSuite/SAP, DocuSign, PIM-Systeme und Marketing-Tools - damit Lizenzpartner zeitnahe und korrekte Abrechnungen erhalten.",
   },
   {
-    question: "DTC-Vertrieb in die USA – welche Workflows brauchen wir?",
+    question: "DTC-Vertrieb in die USA - welche Workflows brauchen wir?",
     answer:
       "Zoll-Klassifikation (HTS), Sales-Tax via Avalara, FedEx-/DHL-Versand und Premium-Customer-Service mit AI-Agent-Vorsortierung. Retouren werden klassifiziert und an Manufaktur oder Refurb-Linie geroutet.",
   },
   {
-    question: "Manufaktur mit 40+ Fertigungsschritten – kann n8n da helfen?",
+    question: "Manufaktur mit 40+ Fertigungsschritten - kann n8n da helfen?",
     answer:
-      "Ja. MES-, ERP- und QM-Systeme werden zu durchgängigen Charge-Pipelines verbunden. Härteprotokolle, Schleif-Logs und Qualitätsfreigaben revisionssicher dokumentiert – Voraussetzung für Premium-Garantie-Versprechen.",
+      "Ja. MES-, ERP- und QM-Systeme werden zu durchgängigen Charge-Pipelines verbunden. Härteprotokolle, Schleif-Logs und Qualitätsfreigaben revisionssicher dokumentiert - Voraussetzung für Premium-Garantie-Versprechen.",
   },
   {
     question: "Lohnt sich n8n für Werkzeug- und Schließtechnik-Mittelstand?",
@@ -227,10 +227,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Solingen – Klingenstadt"}
+              {overrides?.preHeadline ?? "Standort Solingen - Klingenstadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Solingen – für die deutsche Schneidwaren-Hauptstadt"}
+              {overrides?.headline ?? "KI-Agentur in Solingen - für die deutsche Schneidwaren-Hauptstadt"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Wüsthof, Zwilling J.A. Henckels, Robert Herder und über 100 Hersteller machen Solingen zur weltweit einzigen Stadt mit geschützter Herkunftsbezeichnung für Schneidwaren. Wir bauen Workflows für Markenrechtsschutz, Manufaktur-Logistik und Premium-DTC-Vertrieb.
@@ -244,7 +244,7 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/solingen.jpg"
-              alt="Solingen – Klingenstadt und Schneidwaren-Cluster"
+              alt="Solingen - Klingenstadt und Schneidwaren-Cluster"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
@@ -263,7 +263,7 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Solinger Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -275,7 +275,7 @@ export default async function Page({
               Hochpreisige Messer mit 40+ Fertigungsschritten erfordern detaillierte Charge-Verfolgung, Härteprotokolle und Qualitätsdokumentation. Manuelle Excel-Listen skalieren in der Premium-Manufaktur nicht.
             </NumberedList.Item>
             <NumberedList.Item title="DTC-Geschäft mit hohem Markenpremium:">
-              Solinger Hersteller verkaufen zunehmend direkt an Endkunden in den USA, Japan und der EU – mit Premium-Preisen und entsprechend hoher Service-Erwartung. CRM, Shopify-Pipelines und KI-Personalisierung sind Pflicht.
+              Solinger Hersteller verkaufen zunehmend direkt an Endkunden in den USA, Japan und der EU - mit Premium-Preisen und entsprechend hoher Service-Erwartung. CRM, Shopify-Pipelines und KI-Personalisierung sind Pflicht.
             </NumberedList.Item>
             <NumberedList.Item title="Co-Branding mit Sterneköchen und Influencern:">
               Lizenzdeals mit Jamie Oliver, Tim Mälzer und Gordon Ramsay-Tochterunternehmen erfordern Royalty-Tracking, vertragliche Mengen-Reports und schnelle Marketing-Workflows zwischen PIM und Social-Media-Tools.
@@ -287,7 +287,7 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Solinger Schneidwaren-Hersteller</Typo.H2>
         <SimpleGrid cols={2}>
@@ -330,11 +330,11 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Solingen – einzige geschützte Herkunftsbezeichnung für Schneidwaren weltweit
+            Solingen - einzige geschützte Herkunftsbezeichnung für Schneidwaren weltweit
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo "Made in Solingen" rechtlich geschützt ist, müssen Workflows die Echtheit lückenlos belegen

@@ -181,27 +181,27 @@ export async function generateMetadata({
 
 const kasselFaqs = [
   {
-    question: "VW-Werk Baunatal ist Leitwerk für E-Antriebe – wie passt n8n zur Zulieferer-Achse?",
+    question: "VW-Werk Baunatal ist Leitwerk für E-Antriebe - wie passt n8n zur Zulieferer-Achse?",
     answer:
-      "Über 16.500 Beschäftigte, Schlüsselstandort für Getriebe und Elektroantriebe. JIT/JIS-Bestellabrufe, EDI mit Tier-1/-2, Catena-X-Datenraum-Anbindung und LkSG-Konformität werden mit n8n abgebildet – inklusive PowerCo-Salzgitter-Konnektivität.",
+      "Über 16.500 Beschäftigte, Schlüsselstandort für Getriebe und Elektroantriebe. JIT/JIS-Bestellabrufe, EDI mit Tier-1/-2, Catena-X-Datenraum-Anbindung und LkSG-Konformität werden mit n8n abgebildet - inklusive PowerCo-Salzgitter-Konnektivität.",
   },
   {
-    question: "KNDS Deutschland – wie hilft n8n bei Verteidigungs-Compliance?",
+    question: "KNDS Deutschland - wie hilft n8n bei Verteidigungs-Compliance?",
     answer:
       "Bundeswehr-Sondervermögen und EU-Aufrüstung treiben Aufträge bis 2032+. Skalierung der Produktion, Sicherheitsüberprüfungen, Exportkontrollen (AWG, ITAR), Geheimschutz und Zulieferer-Audits werden auditfest und mandantengetrennt in n8n abgebildet.",
   },
   {
-    question: "K+S AG – wie unterstützen wir Bergbau- und Düngemittel-Compliance?",
+    question: "K+S AG - wie unterstützen wir Bergbau- und Düngemittel-Compliance?",
     answer:
-      "Werra-Salzlösung, CBAM, CSRD, CO2-Bilanzen, Förderprotokolle, Abwasser-Reporting und globale Distribution erzeugen massive Anforderungen. n8n bildet Umwelt- und Sicherheitsvorschriften auditfest ab – inklusive BAFA-Förderdokumentation.",
+      "Werra-Salzlösung, CBAM, CSRD, CO2-Bilanzen, Förderprotokolle, Abwasser-Reporting und globale Distribution erzeugen massive Anforderungen. n8n bildet Umwelt- und Sicherheitsvorschriften auditfest ab - inklusive BAFA-Förderdokumentation.",
   },
   {
-    question: "Wintershall Dea – passt n8n in die Energie-Transformation?",
+    question: "Wintershall Dea - passt n8n in die Energie-Transformation?",
     answer:
       "Joint Ventures, Beteiligungs-Reporting, Sanktions-Compliance (Russland-Aussteig) und CSRD sind komplex. n8n bildet die Datenströme zwischen klassischer Öl-/Gas-Förderung und Energiewende-Beteiligungen auditfest ab.",
   },
   {
-    question: "Bombardier/Alstom und Bahnindustrie – welche Use-Cases?",
+    question: "Bombardier/Alstom und Bahnindustrie - welche Use-Cases?",
     answer:
       "Investitionsoffensive Bahn, Ersatzteil-Workflows, Wartungsverträge, Tender-Antworten, ETCS-Konformität und Service-Logistik werden mit n8n und SAP Service Cloud verzahnt. Hochfrequente Field-Service-Daten werden konsolidiert.",
   },
@@ -239,7 +239,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Kassel –{" "}
+                KI-Agentur in Kassel -{" "}
                 VW Baunatal, KNDS, K+S und{" "}
                 <BackgroundHero.Highlight>documenta-Stadt</BackgroundHero.Highlight>
               </>
@@ -247,7 +247,7 @@ export default async function Page({
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
             VW Werk Baunatal, KNDS (Leopard 2, Boxer), K+S, Wintershall Dea,
-            Bombardier/Alstom, Gesundheit Nordhessen, Universität Kassel –
+            Bombardier/Alstom, Gesundheit Nordhessen, Universität Kassel -
             Kassel ist Nordhessens industrielles Zentrum und documenta-Stadt.
             Wir bauen n8n-Workflows für VW-E-Antriebe, Verteidigungs-
             Compliance, Düngemittel-CBAM und Bahntechnik.
@@ -283,7 +283,7 @@ export default async function Page({
         <Typo.H2>Kasseler Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
           VW Baunatal steuert anders als KNDS, K+S anders als die documenta.
-          Wir bauen für jeden Cluster die passenden n8n-Bausteine – vom
+          Wir bauen für jeden Cluster die passenden n8n-Bausteine - vom
           Catena-X-Konnektor bis zur Geheimschutz-Pipeline.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -291,7 +291,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Car className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>VW Werk Baunatal – Leitwerk für E-Antriebe</Typo.H3>
+            <Typo.H3>VW Werk Baunatal - Leitwerk für E-Antriebe</Typo.H3>
             <Typo.Paragraph>
               Über 16.500 Beschäftigte, zweitgrößtes VW-Werk weltweit,
               Schlüsselrolle in der E-Mobilitäts-Strategie. JIT/JIS,
@@ -303,7 +303,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <ShieldCheck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>KNDS Deutschland – Leopard 2 und Boxer</Typo.H3>
+            <Typo.H3>KNDS Deutschland - Leopard 2 und Boxer</Typo.H3>
             <Typo.Paragraph>
               1.500 Beschäftigte in Kassel, 11.000 im Konzern, 3,8 Mrd. EUR
               Umsatz. Sicherheitsüberprüfungen, AWG-/ITAR-Exportkontrollen,
@@ -315,11 +315,11 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <FlaskConical className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>K+S AG – Düngemittel- und Salz-Weltmarktführer</Typo.H3>
+            <Typo.H3>K+S AG - Düngemittel- und Salz-Weltmarktführer</Typo.H3>
             <Typo.Paragraph>
               11.500 Beschäftigte weltweit, viele im Werra-Revier. Werra-
               Salzlösung, CBAM, CSRD, CO2-Bilanzen, Förderprotokolle und
-              Abwasser-Reporting werden mit n8n auditfest gebündelt –
+              Abwasser-Reporting werden mit n8n auditfest gebündelt -
               inklusive globaler Distribution.
             </Typo.Paragraph>
           </SimpleCard>
@@ -327,7 +327,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Truck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Bombardier/Alstom – Bahntechnik in Kassel</Typo.H3>
+            <Typo.H3>Bombardier/Alstom - Bahntechnik in Kassel</Typo.H3>
             <Typo.Paragraph>
               Standort für Lokomotiv- und Wagenbau. Investitionsoffensive
               Bahn, Ersatzteil-Workflows, Wartungsverträge, Tender-Antworten
@@ -355,7 +355,7 @@ export default async function Page({
             <Typo.Paragraph>
               4.500 Beschäftigte in der Klinik-Holding rund um das
               Klinikum Kassel. DRG-Abrechnung, Personalplanung und
-              Materialwirtschaft werden mit n8n und KI entlastet – unter
+              Materialwirtschaft werden mit n8n und KI entlastet - unter
               Pflegepersonal-Druck und neuer KHPflEG-Vorgabe.
             </Typo.Paragraph>
           </SimpleCard>
@@ -407,7 +407,7 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/kassel.jpg"
-            alt="Kassel VW Baunatal, KNDS und documenta – n8n-Workflows für Nordhessens Industrie"
+            alt="Kassel VW Baunatal, KNDS und documenta - n8n-Workflows für Nordhessens Industrie"
           />
           <BoundlessImageCard.Content>
             <Typo.H2>VW-E-Antriebe, Bundeswehr-Sondervermögen und documenta</Typo.H2>

@@ -179,27 +179,27 @@ export async function generateMetadata({
 
 const cottbusFaqs = [
   {
-    question: "17 Mrd. € Strukturwandel-Fördermittel für die Lausitz – wie laufen Nachweise und Reporting?",
+    question: "17 Mrd. € Strukturwandel-Fördermittel für die Lausitz - wie laufen Nachweise und Reporting?",
     answer:
       "JTF (Just Transition Fund), STARK-Programm, BMWK-Mittel und EFRE-Förderungen verlangen mehrstufige Verwendungs- und Wirkungsnachweise. n8n sammelt Daten aus Buchhaltung, Projektmanagement und Wirkungs-Indikatoren und meldet automatisch an Förderbanken und Bezirksregierung.",
   },
   {
-    question: "LEAG in der Kohle-zu-Wasserstoff-Transformation – welche Workflows brauchen wir?",
+    question: "LEAG in der Kohle-zu-Wasserstoff-Transformation - welche Workflows brauchen wir?",
     answer:
       "Anlagenstilllegung, Rekultivierung, Standort-Umwidmung, Genehmigungs- und Engineering-Prozesse. n8n verbindet Engineering-Daten, BImSchG-Anträge, Rekultivierungs-Doku und Personalplanung über mehrjährige Transformations-Projekte.",
   },
   {
-    question: "DB ICE-Werk Cottbus – wie unterstützen Workflows den Werk-Aufbau (Greenfield)?",
+    question: "DB ICE-Werk Cottbus - wie unterstützen Workflows den Werk-Aufbau (Greenfield)?",
     answer:
-      "Neuer ICE-Servicestandort mit 1.200 Arbeitsplätzen, Aufbau von Personalrekrutierung, Schulung, Ersatzteillogistik und Wartungsplanung. Greenfield ist ideal für Workflow-First-Architektur ohne Altlasten – n8n koppelt DB-Konzern-IT, Werks-MES und Lieferanten von Tag eins.",
+      "Neuer ICE-Servicestandort mit 1.200 Arbeitsplätzen, Aufbau von Personalrekrutierung, Schulung, Ersatzteillogistik und Wartungsplanung. Greenfield ist ideal für Workflow-First-Architektur ohne Altlasten - n8n koppelt DB-Konzern-IT, Werks-MES und Lieferanten von Tag eins.",
   },
   {
-    question: "BTU Cottbus-Senftenberg – welche Forschungs-Workflows lohnen sich?",
+    question: "BTU Cottbus-Senftenberg - welche Forschungs-Workflows lohnen sich?",
     answer:
       "Drittmittel-Verwaltung (BMBF, BMWK, EU Horizon), Projektzeit-Nachweise, Veröffentlichungspflichten und Partner-Koordination mit Fraunhofer IEG, DLR Cottbus und LEAG. n8n strukturiert wachsendes Strukturwandel-Drittmittel-Volumen.",
   },
   {
-    question: "Universitätsmedizin Lausitz im Aufbau – welche Workflows beim Greenfield-Hochschulklinikum?",
+    question: "Universitätsmedizin Lausitz im Aufbau - welche Workflows beim Greenfield-Hochschulklinikum?",
     answer:
       "1,2 Mrd. € Investition, neue Studienlogistik, Patientenrekrutierung, eCRF, Ethik-Kommissionen und akademische Lehre. n8n strukturiert den Aufbau zwischen Carl-Thiem-Klinikum, BTU und Land Brandenburg.",
   },
@@ -232,14 +232,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Cottbus –{" "}
+                KI-Agentur in Cottbus -{" "}
                 von der Braunkohle-Hauptstadt zur{" "}
                 <BackgroundHero.Highlight>dynamischsten Region Deutschlands</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus der LEAG-Braunkohle-Hochburg wird Wasserstoff-Hub, ICE-Werk-Standort und Universitätsmedizin Lausitz – mit 17 Mrd. € Fördermitteln im Rücken. Wir automatisieren genau die Workflows, die ein Strukturwandel-Hotspot braucht – Förder-Reporting, Greenfield-Werks-Aufbau und BTU-Drittmittel.
+            Aus der LEAG-Braunkohle-Hochburg wird Wasserstoff-Hub, ICE-Werk-Standort und Universitätsmedizin Lausitz - mit 17 Mrd. € Fördermitteln im Rücken. Wir automatisieren genau die Workflows, die ein Strukturwandel-Hotspot braucht - Förder-Reporting, Greenfield-Werks-Aufbau und BTU-Drittmittel.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Cottbus besprechen</ContactButton>
@@ -270,12 +270,12 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/cottbus.jpg"
-            alt="DB ICE-Werk Cottbus – Strukturwandel-Hotspot"
+            alt="DB ICE-Werk Cottbus - Strukturwandel-Hotspot"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>DB ICE-Werk & LEAG-Transformation – wo Tagebau war, fährt heute der ICE 4</Typo.H2>
+            <Typo.H2>DB ICE-Werk & LEAG-Transformation - wo Tagebau war, fährt heute der ICE 4</Typo.H2>
             <Typo.Paragraph>
-              Auf ehemaligen LEAG-Flächen entstehen das größte Bahnwerk Europas, Wasserstoff-Pilotprojekte und neue Industrieansiedlungen (BASF Batterie-Recycling in Schwarzheide). Quartiers- und Werks-Management bedeutet: Förder-Nachweise, Greenfield-Aufbau, Personal-Onboarding und ECM-Dokumentation. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Auf ehemaligen LEAG-Flächen entstehen das größte Bahnwerk Europas, Wasserstoff-Pilotprojekte und neue Industrieansiedlungen (BASF Batterie-Recycling in Schwarzheide). Quartiers- und Werks-Management bedeutet: Förder-Nachweise, Greenfield-Aufbau, Personal-Onboarding und ECM-Dokumentation. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -288,12 +288,12 @@ export default async function Page({
 
       {/* 3. ProsCons */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Cottbus hinter sich lässt – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Cottbus hinter sich lässt - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
-                title="Kohleausstieg bis 2038 – LEAG schrumpft Braunkohle-Geschäft"
+                title="Kohleausstieg bis 2038 - LEAG schrumpft Braunkohle-Geschäft"
                 description="Lausitz-Tagebaue Welzow-Süd, Nochten, Jänschwalde werden über die nächsten Jahre stillgelegt, ca. 7.000 LEAG-Beschäftigte (Region) in tiefgreifender Transformation."
               />
               <ProsCons.Item
@@ -302,29 +302,29 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Demografische Überalterung und Fachkräftemangel"
-                description="Cottbus ist überaltert, gleichzeitig Magnet für neue Fachkräfte aus Polen und Tschechien – multilinguale HR-Workflows dringend nötig."
+                description="Cottbus ist überaltert, gleichzeitig Magnet für neue Fachkräfte aus Polen und Tschechien - multilinguale HR-Workflows dringend nötig."
               />
               <ProsCons.Item
                 title="Komplexer Verwaltungsapparat für 17 Mrd. € Förderung"
-                description="Just Transition Fund, STARK, EFRE – mehrstufige Nachweisführung überfordert Kommunen und KMU ohne Workflow-Plattformen."
+                description="Just Transition Fund, STARK, EFRE - mehrstufige Nachweisführung überfordert Kommunen und KMU ohne Workflow-Plattformen."
               />
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
-                title="Platz 1 IW-Regionalranking 2026 – dynamischste Region Deutschlands"
-                description="Kein Standort in Deutschland entwickelt sich aktuell so stark wie Cottbus – Stadt wandelt 17 Mrd. € Strukturhilfen in Aufbruch um."
+                title="Platz 1 IW-Regionalranking 2026 - dynamischste Region Deutschlands"
+                description="Kein Standort in Deutschland entwickelt sich aktuell so stark wie Cottbus - Stadt wandelt 17 Mrd. € Strukturhilfen in Aufbruch um."
               />
               <ProsCons.Item
-                title="DB ICE-Werk Cottbus – größtes Bahnwerk Europas im Aufbau"
-                description="Deutsche Bahn baut neues ICE-Werk mit ca. 1.200 Arbeitsplätzen, erster ICE 4-Service ab 2024 – Greenfield-Werk mit reiner Workflow-First-Chance."
+                title="DB ICE-Werk Cottbus - größtes Bahnwerk Europas im Aufbau"
+                description="Deutsche Bahn baut neues ICE-Werk mit ca. 1.200 Arbeitsplätzen, erster ICE 4-Service ab 2024 - Greenfield-Werk mit reiner Workflow-First-Chance."
               />
               <ProsCons.Item
                 title="BTU Cottbus-Senftenberg + Fraunhofer IEG + DLR"
-                description="Einzige TU Brandenburgs mit 1.500 MA, dazu Energie- und Wasserstoff-Forschung – Forschungs-Drittmittel-Volumen wächst rasant."
+                description="Einzige TU Brandenburgs mit 1.500 MA, dazu Energie- und Wasserstoff-Forschung - Forschungs-Drittmittel-Volumen wächst rasant."
               />
               <ProsCons.Item
                 title="Universitätsmedizin Lausitz im Aufbau (1,2 Mrd. €)"
-                description="Carl-Thiem-Klinikum wird zur Universitätsmedizin Lausitz aufgewertet – mit 2.500 MA und akademischer Lehre als neuer Schwerpunkt."
+                description="Carl-Thiem-Klinikum wird zur Universitätsmedizin Lausitz aufgewertet - mit 2.500 MA und akademischer Lehre als neuer Schwerpunkt."
               />
             </ProsCons.Pros>
           </ProsCons>
@@ -350,7 +350,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Cottbus heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">

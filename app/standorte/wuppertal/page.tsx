@@ -178,7 +178,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/wuppertal.jpg", width: 1200, height: 630, alt: "Wuppertal – Bayer Pharmazentrale, Vorwerk und Schwebebahn" }],
+      images: [{ url: "/images/cities/wuppertal.jpg", width: 1200, height: 630, alt: "Wuppertal - Bayer Pharmazentrale, Vorwerk und Schwebebahn" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/wuppertal.jpg"] },
     alternates: { canonical: "/ki-agentur-wuppertal" },
@@ -194,7 +194,7 @@ const wuppertalFaqs = [
   {
     question: "Vorwerk-Direktvertrieb: wie hilft Automatisierung?",
     answer:
-      "Vertriebspartner-Onboarding, Provision-Berechnung, Lead-Routing und KI-Personalisierung in n8n-Pipelines. Anbindung an SAP HCM, CRM und Provisions-Software wie Performio – verkürzt Onboarding-Zeit um 50-70 %.",
+      "Vertriebspartner-Onboarding, Provision-Berechnung, Lead-Routing und KI-Personalisierung in n8n-Pipelines. Anbindung an SAP HCM, CRM und Provisions-Software wie Performio - verkürzt Onboarding-Zeit um 50-70 %.",
   },
   {
     question: "Vossloh- oder Bahn-Zulieferer: was bringt n8n bei TSI-Zulassung?",
@@ -204,7 +204,7 @@ const wuppertalFaqs = [
   {
     question: "Coroplast- oder Automotive-Mittelstand: wie hilft IATF-Automatisierung?",
     answer:
-      "PPAP-Pakete, EDI-Anbindung an OEM-Portale, REACH-/RoHS-/CLP-Compliance und 8D-Reports. SAP QM, MES und PLM integriert – reduziert manuelle PPAP-Erstellung um 60-80 %.",
+      "PPAP-Pakete, EDI-Anbindung an OEM-Portale, REACH-/RoHS-/CLP-Compliance und 8D-Reports. SAP QM, MES und PLM integriert - reduziert manuelle PPAP-Erstellung um 60-80 %.",
   },
   {
     question: "BUW-Industriepartnerschaft: wie helfen Workflows?",
@@ -232,10 +232,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Wuppertal – Bergisches Pharma- und Schwebebahn-Land"}
+              {overrides?.preHeadline ?? "Standort Wuppertal - Bergisches Pharma- und Schwebebahn-Land"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Wuppertal – für Bayer Pharma, Vorwerk und Vossloh"}
+              {overrides?.headline ?? "KI-Agentur in Wuppertal - für Bayer Pharma, Vorwerk und Vossloh"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Bayer betreibt in Wuppertal-Elberfeld eine der größten Pharma-Produktionen weltweit, Vorwerk produziert Thermomix und Kobold, Vossloh ist Bahn-Infrastruktur-Spezialist und Coroplast liefert Klebebänder. Wir bauen Workflows für Pharma-GxP, DTC-Premium-Hausgeräte und Bahn-Compliance.
@@ -249,28 +249,28 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/wuppertal.jpg"
-              alt="Wuppertal – Bayer Pharmazentrale, Vorwerk und Schwebebahn"
+              alt="Wuppertal - Bayer Pharmazentrale, Vorwerk und Schwebebahn"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Wuppertal – Heimat des Aspirin und der Schwebebahn
+            Wuppertal - Heimat des Aspirin und der Schwebebahn
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Bayer Wirkstoff-Synthesen orchestriert und Vorwerk Thermomix in 70 Märkte verkauft, müssen Workflows pharma- und retail-präzise sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Bayer-Pharmazentrale Wuppertal (8.000 MA), Vorwerk (12.000 weltweit), Vossloh (Bahninfrastruktur), Coroplast (Klebebänder), Schwebebahn und Bergische Universität Wuppertal (BUW) – diese Mischung aus Pharma-DAX-Konzern, Premium-DTC und Bahn-Industrie verlangt spezialisierte Workflows.
+            Bayer-Pharmazentrale Wuppertal (8.000 MA), Vorwerk (12.000 weltweit), Vossloh (Bahninfrastruktur), Coroplast (Klebebänder), Schwebebahn und Bergische Universität Wuppertal (BUW) - diese Mischung aus Pharma-DAX-Konzern, Premium-DTC und Bahn-Industrie verlangt spezialisierte Workflows.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Wuppertaler Pharma, Retail und Bahn</Typo.H2>
         <SimpleGrid cols={2}>
@@ -313,7 +313,7 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Wuppertaler Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -328,10 +328,10 @@ export default async function Page({
               Vossloh AG (Hauptsitz Werdohl, Werk Wuppertal) liefert Schienen-Befestigungen und Weichensteller weltweit. Bahn-Compliance (EN 50126/50128/50129), TSI und Zulassungen sind Workflow-Themen.
             </NumberedList.Item>
             <NumberedList.Item title="Coroplast und Klebeband-Premium-Mittelstand:">
-              Coroplast Wuppertal (PVC-Klebebänder, Bordnetze) liefert Automotive-OEMs. IATF-16949, REACH, RoHS und CLP-Verordnung sind Pflicht – mit EDI-Anbindung an OEM-Portale.
+              Coroplast Wuppertal (PVC-Klebebänder, Bordnetze) liefert Automotive-OEMs. IATF-16949, REACH, RoHS und CLP-Verordnung sind Pflicht - mit EDI-Anbindung an OEM-Portale.
             </NumberedList.Item>
             <NumberedList.Item title="Bergische Universität und Mechatronik-Cluster:">
-              BUW mit Schwerpunkt Mechatronik, Sicherheitstechnik und Pflegewissenschaft. Drittmittel-Volumen, Industriepartnerschaften mit Bayer, Vorwerk und Coroplast – HR-Workflows mit dualen Studiengängen.
+              BUW mit Schwerpunkt Mechatronik, Sicherheitstechnik und Pflegewissenschaft. Drittmittel-Volumen, Industriepartnerschaften mit Bayer, Vorwerk und Coroplast - HR-Workflows mit dualen Studiengängen.
             </NumberedList.Item>
           </NumberedList>
         </div>

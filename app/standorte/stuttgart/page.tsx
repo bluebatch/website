@@ -136,27 +136,27 @@ const stuttgartFaqs = [
   {
     question: "Habt ihr Erfahrung mit Tier-1-Zulieferern wie Mahle oder Eberspächer?",
     answer:
-      "Ja. Wir kennen die typische Stuttgarter Lieferanten-IT: SAP S/4HANA als ERP-Backbone, JAGGAER und Pool4Tool für Beschaffung, Catena-X für die Lieferketten-Daten. Wir bauen n8n-Workflows, die zwischen diesen Systemen vermitteln – inklusive der EDI/VDA-Standards (4905, 4906, 4913).",
+      "Ja. Wir kennen die typische Stuttgarter Lieferanten-IT: SAP S/4HANA als ERP-Backbone, JAGGAER und Pool4Tool für Beschaffung, Catena-X für die Lieferketten-Daten. Wir bauen n8n-Workflows, die zwischen diesen Systemen vermitteln - inklusive der EDI/VDA-Standards (4905, 4906, 4913).",
   },
   {
-    question: "Wir entwickeln für Mercedes oder Porsche – wie passt n8n zur SDV-Strategie?",
+    question: "Wir entwickeln für Mercedes oder Porsche - wie passt n8n zur SDV-Strategie?",
     answer:
-      "n8n koordiniert die Entwicklungs-Pipelines außerhalb von MBOS oder VW.OS: Jira/Confluence, Polarion, ALM-Tools, GitLab, Mendix, Test-Bench-Daten. Engineering-Stunden in CCB-Boards, Hardware-Bestellungen und Software-Freigaben werden automatisiert dokumentiert – ein typisches SOX/IATF-16949-Audit-Thema.",
+      "n8n koordiniert die Entwicklungs-Pipelines außerhalb von MBOS oder VW.OS: Jira/Confluence, Polarion, ALM-Tools, GitLab, Mendix, Test-Bench-Daten. Engineering-Stunden in CCB-Boards, Hardware-Bestellungen und Software-Freigaben werden automatisiert dokumentiert - ein typisches SOX/IATF-16949-Audit-Thema.",
   },
   {
-    question: "Trumpf, Festo, Stihl – passt KI in den klassischen Maschinenbau?",
+    question: "Trumpf, Festo, Stihl - passt KI in den klassischen Maschinenbau?",
     answer:
       "Sehr gut. Predictive Maintenance, automatisierte Angebotskalkulation (CPQ), Ersatzteil-Identifikation per Vision-AI und Service-Disposition sind Stuttgarter Standard-Use-Cases. Wir docken an SAP Service Cloud, Salesforce und herstellereigene IoT-Plattformen an.",
   },
   {
-    question: "Wir sind Allianz/LBBW/W&W – welche Compliance-Themen deckt n8n ab?",
+    question: "Wir sind Allianz/LBBW/W&W - welche Compliance-Themen deckt n8n ab?",
     answer:
       "BaFin-Meldungen, MaRisk-Reports, IDD-Vermittler-Tracking, KYC-Onboarding, DORA-Resilienztests und VAIT-Audit-Trails. Alles versioniert, auditfest, im hauseigenen Rechenzentrum.",
   },
   {
     question: "Was ist mit Stuttgart-21-Bauverträgen oder Genehmigungs-Workflows?",
     answer:
-      "Großprojekte erzeugen Mengen an Schriftverkehr mit DB, Stadt, Regierungspräsidium. Wir bauen Workflows, die Bauanträge, Nachträge, VOB-Vergaben und Subunternehmer-Bürgschaften strukturiert verwalten – inkl. Plandiagrammen und SAP RE-FX-Anbindung.",
+      "Großprojekte erzeugen Mengen an Schriftverkehr mit DB, Stadt, Regierungspräsidium. Wir bauen Workflows, die Bauanträge, Nachträge, VOB-Vergaben und Subunternehmer-Bürgschaften strukturiert verwalten - inkl. Plandiagrammen und SAP RE-FX-Anbindung.",
   },
   {
     question: "Welche Implementierungs-Phasen erwartet uns?",
@@ -192,14 +192,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Stuttgart –{" "}
+                KI-Agentur in Stuttgart -{" "}
                 Automotive, Maschinenbau und{" "}
                 <BackgroundHero.Highlight>Mittelstand</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Mercedes-Benz, Porsche, Bosch, Trumpf, Festo, Stihl, Mahle – kaum
+            Mercedes-Benz, Porsche, Bosch, Trumpf, Festo, Stihl, Mahle - kaum
             ein Quadratkilometer Deutschlands bündelt mehr industrielle Kraft.
             Wir bauen Workflows, die Engineering-Pipelines, Lieferketten und
             Compliance-Prozesse für DAX-Konzerne und schwäbischen Mittelstand
@@ -239,7 +239,7 @@ export default async function Page({
           <Typo.Paragraph>
             Drei Verbrenner-Zentralen, fünf Hidden-Champion-Familien und ein
             Mittelstand, der weiß, wie man Werkzeugmaschinen baut: Stuttgart
-            ist die teuerste Tariflohn-Region Deutschlands – und gleichzeitig
+            ist die teuerste Tariflohn-Region Deutschlands - und gleichzeitig
             die unter dem stärksten Transformationsdruck. Mercedes, Porsche
             und Bosch haben Tausende Stellen gestrichen, die Margen sinken,
             während Software-Defined-Vehicle und E-Mobilität neue Plattformen
@@ -253,7 +253,7 @@ export default async function Page({
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Schwäbische Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
-          Jede Säule der Stuttgarter Wirtschaft hat eigene Workflows – Bosch
+          Jede Säule der Stuttgarter Wirtschaft hat eigene Workflows - Bosch
           steuert anders als Trumpf, Allianz anders als die Stadtverwaltung.
           Wir bauen für jeden Cluster die passenden n8n-Bausteine.
         </Typo.Paragraph>
@@ -262,11 +262,11 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Car className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Mercedes-Benz, Porsche, Bosch – Automotive HQ</Typo.H3>
+            <Typo.H3>Mercedes-Benz, Porsche, Bosch - Automotive HQ</Typo.H3>
             <Typo.Paragraph>
               Untertürkheim, Sindelfingen, Zuffenhausen, Gerlingen: SDV-Roadmaps,
               CCB-Boards, Lieferanten-Onboarding nach IATF-16949, EDI/VDA-Belege
-              und Catena-X-Konnektoren – wir orchestrieren Prozesse, die SAP
+              und Catena-X-Konnektoren - wir orchestrieren Prozesse, die SAP
               und MBOS allein nicht verbinden.
             </Typo.Paragraph>
           </SimpleCard>
@@ -274,7 +274,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cog className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Trumpf, Festo, Stihl – Maschinenbau & Hidden Champions</Typo.H3>
+            <Typo.H3>Trumpf, Festo, Stihl - Maschinenbau & Hidden Champions</Typo.H3>
             <Typo.Paragraph>
               Familienunternehmen mit Weltmarktstellung. Wir automatisieren
               CPQ-Konfigurationen, After-Sales-Disposition, Predictive
@@ -286,7 +286,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Truck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Mahle, Mann+Hummel, Eberspächer – Tier-1-Zulieferer</Typo.H3>
+            <Typo.H3>Mahle, Mann+Hummel, Eberspächer - Tier-1-Zulieferer</Typo.H3>
             <Typo.Paragraph>
               Verbrenner-Auslauf zwingt zur Diversifikation: Batteriethermik,
               Wärmemanagement, Leistungselektronik. Wir bauen Workflows für
@@ -298,7 +298,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Landmark className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Allianz, LBBW, W&W – Versicherungs- und Bankenplatz</Typo.H3>
+            <Typo.H3>Allianz, LBBW, W&W - Versicherungs- und Bankenplatz</Typo.H3>
             <Typo.Paragraph>
               Allianz Lebensversicherung mit 6.000 Mitarbeitern, LBBW mit
               10.000, dazu Wüstenrot &amp; Württembergische und Stuttgarter
@@ -310,7 +310,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <FlaskConical className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Universität Stuttgart, Fraunhofer, DLR – Forschungs-Ökosystem</Typo.H3>
+            <Typo.H3>Universität Stuttgart, Fraunhofer, DLR - Forschungs-Ökosystem</Typo.H3>
             <Typo.Paragraph>
               Drittmittelprojekte, BMBF/EU-Förderanträge, Patentverwaltung
               und Spin-off-Begleitung. Workflows, die Forschungsgruppen
@@ -325,7 +325,7 @@ export default async function Page({
             <Typo.Paragraph>
               IBM Deutschlandzentrale, Hewlett Packard Enterprise und Hunderte
               IT-Mittelständler. Wir verbinden Watsonx-, GreenLake- und
-              Eigen-Stacks mit ERP, CRM und Ticketing – ohne Vendor Lock-in.
+              Eigen-Stacks mit ERP, CRM und Ticketing - ohne Vendor Lock-in.
             </Typo.Paragraph>
           </SimpleCard>
         </SimpleGrid>
@@ -359,10 +359,10 @@ export default async function Page({
         <BoundlessImageCard imagePosition="left">
           <BoundlessImageCard.Image
             src="/images/cities/stuttgart.jpg"
-            alt="Stuttgart Automotive-Transformation – n8n-Workflows für SDV und E-Mobilität"
+            alt="Stuttgart Automotive-Transformation - n8n-Workflows für SDV und E-Mobilität"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>40 Mrd. EUR Porsche-Umsatz, sinkende Margen – wer zieht mit?</Typo.H2>
+            <Typo.H2>40 Mrd. EUR Porsche-Umsatz, sinkende Margen - wer zieht mit?</Typo.H2>
             <Typo.Paragraph>
               Porsche meldet 2024 Rekordumsätze von 40,1 Mrd. EUR und 5,6 Mrd. EUR
               operativen Gewinn, aber sinkende Margen durch den Umstieg auf
@@ -386,10 +386,10 @@ export default async function Page({
         <BoundlessImageCard imagePosition="left">
           <BoundlessImageCard.Image
             src="/images/cities/stuttgart.jpg"
-            alt="Stuttgart 21 – Workflow-Automatisierung für ein 11-Mrd-EUR-Großprojekt"
+            alt="Stuttgart 21 - Workflow-Automatisierung für ein 11-Mrd-EUR-Großprojekt"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Stuttgart 21 – wie automatisiert man ein 11-Mrd-EUR-Projekt?</Typo.H2>
+            <Typo.H2>Stuttgart 21 - wie automatisiert man ein 11-Mrd-EUR-Projekt?</Typo.H2>
             <Typo.Paragraph>
               Über 250 Subunternehmer, Tausende VOB-Nachträge, parallele
               Abstimmung mit DB Netz, Stadt Stuttgart, Regierungspräsidium und

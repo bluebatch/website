@@ -167,7 +167,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/freiburg-im-breisgau.jpg", width: 1200, height: 630, alt: "Freiburg – Solar-Cluster, Universität und Schwarzwald" }],
+      images: [{ url: "/images/cities/freiburg-im-breisgau.jpg", width: 1200, height: 630, alt: "Freiburg - Solar-Cluster, Universität und Schwarzwald" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/freiburg-im-breisgau.jpg"] },
     alternates: { canonical: "/standorte/freiburg-im-breisgau" },
@@ -178,7 +178,7 @@ const freiburgFaqs = [
   {
     question: "Fraunhofer-Partner: wie hilft n8n bei Drittmittel-Reporting?",
     answer:
-      "DFG-, BMBF-, BMWK- und EU-Horizon-Projekte mit Zeiterfassung, Verwendungsnachweis und Quartalsreports automatisiert. Anbindung an SAP CO, easy-Online und ECAS – verkürzt Verwaltungsaufwand spürbar.",
+      "DFG-, BMBF-, BMWK- und EU-Horizon-Projekte mit Zeiterfassung, Verwendungsnachweis und Quartalsreports automatisiert. Anbindung an SAP CO, easy-Online und ECAS - verkürzt Verwaltungsaufwand spürbar.",
   },
   {
     question: "Pharma-KMU im BioValley: was bringt Automatisierung?",
@@ -221,10 +221,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Freiburg – Solar-Hauptstadt"}
+              {overrides?.preHeadline ?? "Standort Freiburg - Solar-Hauptstadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Freiburg – für Fraunhofer ISE, Solar-Cluster und Uni-Klinikum"}
+              {overrides?.headline ?? "KI-Agentur in Freiburg - für Fraunhofer ISE, Solar-Cluster und Uni-Klinikum"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Fraunhofer ISE ist Europas größtes Solarforschungsinstitut, das Universitätsklinikum Freiburg ist Top-Standort für Onkologie und BioValley verbindet Pharma in DE/FR/CH. Wir bauen Workflows für PV-Förderprogramme, klinische Studien und Pharma-Compliance.
@@ -238,13 +238,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/freiburg-im-breisgau.jpg"
-              alt="Freiburg – Solar-Cluster, Universität und Schwarzwald"
+              alt="Freiburg - Solar-Cluster, Universität und Schwarzwald"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Freiburger Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -268,11 +268,11 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Freiburg – Europas Solar-Hauptstadt im BioValley
+            Freiburg - Europas Solar-Hauptstadt im BioValley
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Fraunhofer ISE die nächste Solar-Generation entwickelt und Universitätsklinikum Onkologie weltweit ausstrahlt, müssen Workflows wissenschaftlich präzise sein
@@ -283,7 +283,7 @@ export default async function Page({
         </IntroBox>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Freiburger Solar, Pharma und Klinik</Typo.H2>
         <SimpleGrid cols={2}>

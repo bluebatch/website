@@ -133,32 +133,32 @@ export async function generateMetadata({
 
 const osnabrueckFaqs = [
   {
-    question: "Hellmann ist global – wie passt n8n in eine 4PL-Architektur?",
+    question: "Hellmann ist global - wie passt n8n in eine 4PL-Architektur?",
     answer:
       "Hellmann nutzt etablierte TMS- und WMS-Plattformen. Für Sub-Carrier, Verlader und Zoll-Workflows orchestriert n8n die Schnittstellen: ATLAS-Zoll, EORI-Verifikation, eAWB, Trace-Daten von Carriern in CargoWise oder Mercurius, Frachtbrief-PDF-Extraktion mit AI Agents.",
   },
   {
-    question: "VW Osnabrück baut Cabrio und Nischenmodelle – wie hilft n8n dort?",
+    question: "VW Osnabrück baut Cabrio und Nischenmodelle - wie hilft n8n dort?",
     answer:
       "Sondermodelle und Niedrig-Stückzahlen brauchen flexible APQP-Workflows mit Einzelstück-Dokumentation, IATF-16949-konforme Lieferantenfreigaben und kunden-konfigurierbare Stücklisten. n8n verbindet die nicht-MBOS-Welt der Sondermodelle mit dem Konzern-SAP.",
   },
   {
-    question: "KME ist Kupfer – welche Compliance-Themen sind dort dringend?",
+    question: "KME ist Kupfer - welche Compliance-Themen sind dort dringend?",
     answer:
       "Kupfer-Halbzeuge unterliegen LME-Preisbindung, Konfliktmineralien-Reporting (Dodd-Frank §1502, EU 2017/821) und CBAM-Importzoll. Wir bauen Workflows, die Lieferanten-Audits, Sorgfaltspflichten-Doku und CBAM-Meldungen automatisieren.",
   },
   {
-    question: "Universität und Hochschule mit 5.000 Beschäftigten – wo lohnt sich Automatisierung?",
+    question: "Universität und Hochschule mit 5.000 Beschäftigten - wo lohnt sich Automatisierung?",
     answer:
       "Drittmittel-Workflow (DFG, BMBF, EU), Hochschulreporting, Verlängerungs-Anträge für Wissenschaftler und VHB-konformes Beschaffungsmanagement. Schnittstellen zu HISinOne, SAP CO und DFG-elan.",
   },
   {
     question: "Was unterscheidet uns als Osnabrücker Mittelstand?",
     answer:
-      "Lage A1/A30, Hafen am Mittellandkanal, Agribusiness-Region – Workflows berücksichtigen diese Spezifika. Wie wir Implementierung Schritt für Schritt aufsetzen, beschreiben wir auf der Seite Unser Prozess.",
+      "Lage A1/A30, Hafen am Mittellandkanal, Agribusiness-Region - Workflows berücksichtigen diese Spezifika. Wie wir Implementierung Schritt für Schritt aufsetzen, beschreiben wir auf der Seite Unser Prozess.",
   },
   {
-    question: "Wir sind eine Region-Klinik wie Klinikum Osnabrück – DRG und KHZG?",
+    question: "Wir sind eine Region-Klinik wie Klinikum Osnabrück - DRG und KHZG?",
     answer:
       "DRG-Abrechnung, KHZG-Förder-Reporting, Patienten-Aufnahme und Personalplanung im Schichtbetrieb. Anbindung an SAP IS-H, Cerner i.s.h.med und apenio-Pflege-Dokumentation.",
   },
@@ -191,7 +191,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                Künstliche Intelligenz in Osnabrück –{" "}
+                Künstliche Intelligenz in Osnabrück -{" "}
                 Logistik, Automotive und{" "}
                 <BackgroundHero.Highlight>Agribusiness</BackgroundHero.Highlight>
               </>
@@ -200,7 +200,7 @@ export default async function Page({
           <BackgroundHero.Description>
             Hellmann mit 14.000 Mitarbeitern weltweit, VW Cabrio-Werk, KME als
             weltweit größter Hersteller von Kupfer-Halbzeugen, plus Universität
-            und Klinikum – wir bauen Workflows für jede dieser Welten.
+            und Klinikum - wir bauen Workflows für jede dieser Welten.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">
@@ -231,14 +231,14 @@ export default async function Page({
         <Typo.H2>Sechs Cluster, sechs Workflow-Welten</Typo.H2>
         <Typo.Paragraph>
           Jede Säule der Osnabrücker Wirtschaft hat eigene Compliance- und
-          Prozessanforderungen – wir kennen alle.
+          Prozessanforderungen - wir kennen alle.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
           <SimpleCard align="left">
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Truck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Hellmann Worldwide Logistics – globale 4PL</Typo.H3>
+            <Typo.H3>Hellmann Worldwide Logistics - globale 4PL</Typo.H3>
             <Typo.Paragraph>
               Sub-Carrier-Disposition, ATLAS-Zoll, EORI-Verifikation, eAWB, Trace-Daten
               und KI-gestützte Frachtbrief-Extraktion. Anbindung an CargoWise und
@@ -249,7 +249,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Car className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>VW Osnabrück – Cabrio und Nischenfertigung</Typo.H3>
+            <Typo.H3>VW Osnabrück - Cabrio und Nischenfertigung</Typo.H3>
             <Typo.Paragraph>
               Sondermodelle mit niedrigen Stückzahlen, flexibler APQP, kunden-konfigurierbare
               Stücklisten, IATF-16949-Audits. n8n verbindet Sondermodell-Welt mit
@@ -260,7 +260,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cog className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>KME – weltgrößter Kupfer-Halbzeuge-Hersteller</Typo.H3>
+            <Typo.H3>KME - weltgrößter Kupfer-Halbzeuge-Hersteller</Typo.H3>
             <Typo.Paragraph>
               LME-Preisbindung, Konfliktmineralien-Reporting nach EU 2017/821 und
               Dodd-Frank §1502, CBAM-Meldungen, Lieferanten-Audits in der Kupfer-Lieferkette.
@@ -280,7 +280,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <GraduationCap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Universität und Hochschule – 5.000 Beschäftigte</Typo.H3>
+            <Typo.H3>Universität und Hochschule - 5.000 Beschäftigte</Typo.H3>
             <Typo.Paragraph>
               Drittmittel-Workflow (DFG, BMBF, EU), Hochschul-Reporting, Verlängerungs-Anträge
               für Wissenschaftler, VHB-konformes Beschaffungsmanagement.
@@ -306,7 +306,7 @@ export default async function Page({
             alt="Osnabrück Logistik-Knoten an A1/A30 und Mittellandkanal"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Hellmann seit 1871 – wie skaliert Logistik im KI-Zeitalter?</Typo.H2>
+            <Typo.H2>Hellmann seit 1871 - wie skaliert Logistik im KI-Zeitalter?</Typo.H2>
             <Typo.Paragraph>
               Hellmann ist von Osnabrück aus in 150+ Länder gewachsen und hat 14.000
               Mitarbeiter weltweit. KI-gestützte Tarifprüfung, automatisierte
@@ -329,7 +329,7 @@ export default async function Page({
             Drittgrößte Stadt Niedersachsens, gut diversifiziert: ein globaler
             Logistiker (Hellmann), ein VW-Werk mit Nischenfertigung, ein Welt-Player
             in Kupfer (KME), zwei Hochschulen und ein Klinikum mit 5.000 Beschäftigten.
-            Diese Vielfalt bringt vier sehr verschiedene Workflow-Welten an einen Ort –
+            Diese Vielfalt bringt vier sehr verschiedene Workflow-Welten an einen Ort -
             für die wir spezialisierte n8n-Bausteine bauen.
           </Typo.Paragraph>
         </IntroBox>

@@ -145,7 +145,7 @@ export async function generateMetadata({
     "KI-Agentur in Leverkusen | Bluebatch";
   const description =
     overrides?.metaDescription ??
-    "Pharma- und Chempark-Automatisierung in Leverkusen: n8n-Workflows für Bayer, Lanxess, Covestro und Currenta – GxP-, REACH- und LkSG-konform, self-hosted.";
+    "Pharma- und Chempark-Automatisierung in Leverkusen: n8n-Workflows für Bayer, Lanxess, Covestro und Currenta - GxP-, REACH- und LkSG-konform, self-hosted.";
 
   return {
     title,
@@ -186,9 +186,9 @@ export async function generateMetadata({
 
 const leverkusenFaqs = [
   {
-    question: "Wir sind Bayer-Zulieferer im Chempark – wie integriert ihr n8n in unsere Welt?",
+    question: "Wir sind Bayer-Zulieferer im Chempark - wie integriert ihr n8n in unsere Welt?",
     answer:
-      "Self-hosted, on-premise in eurer Chempark-Infrastruktur. Wir docken an SAP S/4HANA und das Currenta-Werksgenehmigungsportal an, an Bayer-eigene Lieferantenportale und an die GxP-Systeme der Crop-Science- und Pharma-Sparte. Vollständiger Audit-Trail nach 21 CFR Part 11, Annex 11 und GAMP 5 – ohne Datenfluss in US-Clouds.",
+      "Self-hosted, on-premise in eurer Chempark-Infrastruktur. Wir docken an SAP S/4HANA und das Currenta-Werksgenehmigungsportal an, an Bayer-eigene Lieferantenportale und an die GxP-Systeme der Crop-Science- und Pharma-Sparte. Vollständiger Audit-Trail nach 21 CFR Part 11, Annex 11 und GAMP 5 - ohne Datenfluss in US-Clouds.",
   },
   {
     question: "Lassen sich REACH- und LkSG-Pflichten gegenüber Bayer, Lanxess und Covestro automatisieren?",
@@ -203,10 +203,10 @@ const leverkusenFaqs = [
   {
     question: "Hilft das auch bei Lanxess und Covestro im Margenrennen?",
     answer:
-      "Genau dort. Spezialchemie-Anbieter wie Lanxess und Polymer-Hersteller wie Covestro stehen unter massivem Energie- und Rohstoffpreis-Druck. Wir automatisieren Angebotskalkulation, Materialdisposition, Forecast-Abstimmung mit Großkunden und ESG-Reporting nach CSRD – ohne dass eure Daten US-SaaS-Plattformen sehen.",
+      "Genau dort. Spezialchemie-Anbieter wie Lanxess und Polymer-Hersteller wie Covestro stehen unter massivem Energie- und Rohstoffpreis-Druck. Wir automatisieren Angebotskalkulation, Materialdisposition, Forecast-Abstimmung mit Großkunden und ESG-Reporting nach CSRD - ohne dass eure Daten US-SaaS-Plattformen sehen.",
   },
   {
-    question: "Wir sind ein 150-MA-Engineering-Dienstleister im Bayer-Schatten – lohnt sich das?",
+    question: "Wir sind ein 150-MA-Engineering-Dienstleister im Bayer-Schatten - lohnt sich das?",
     answer:
       "Gerade dann. Wer aus den Bayer-Rahmenverträgen fliegt, weil die Lieferanten-Audit-Doku nicht passt, verliert Jahresumsatz im einstelligen Millionenbereich. Wir bauen die EDI-Anbindung an SAP Ariba und die LkSG-Konformität in 4 bis 8 Wochen produktiv, on-premise und zum Festpreis.",
   },
@@ -239,7 +239,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Leverkusen –{" "}
+                KI-Agentur in Leverkusen -{" "}
                 Pharma- und{" "}
                 <BackgroundHero.Highlight>Chempark-Automatisierung</BackgroundHero.Highlight>
               </>
@@ -248,7 +248,7 @@ export default async function Page({
           <BackgroundHero.Description>
             Bayer, Lanxess, Covestro und Currenta prägen den Leverkusener
             Arbeitsmarkt. Wir automatisieren GxP-, Chempark- und
-            ESG-Workflows mit self-hosted n8n – REACH-, LkSG- und
+            ESG-Workflows mit self-hosted n8n - REACH-, LkSG- und
             GAMP-5-konform.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
@@ -281,7 +281,7 @@ export default async function Page({
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Bayer, Lanxess, Covestro – Pharma trifft Polymer trifft Spezialchemie
+            Bayer, Lanxess, Covestro - Pharma trifft Polymer trifft Spezialchemie
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo der Chempark Leverkusen auf globale Pharma-Compliance trifft
@@ -302,7 +302,7 @@ export default async function Page({
             Stellenabbau-Programm, gleichzeitig müssen Pharma und Crop Science
             globale Compliance-Pflichten meistern: FDA, EMA, GxP, REACH,
             ECHA-SCIP. Hunderte mittelständische Zulieferer im Maschinenbau,
-            Engineering und in Laborservices liefern in dieses Umfeld – ohne
+            Engineering und in Laborservices liefern in dieses Umfeld - ohne
             valide, automatisierte Lieferanten-Audit-Doku fliegen sie aus den
             Rahmenverträgen. SAP Ariba, das Bayer-Lieferantenportal und die
             firmeneigenen LkSG-Self-Assessments sind die digitalen Eintrittskarten.
@@ -339,14 +339,14 @@ export default async function Page({
             />
             <BoundlessImageCard.Content>
               <Typo.H2>
-                Bayer setzt auf KI in der Forschung – was machen Zulieferer im Chempark?
+                Bayer setzt auf KI in der Forschung - was machen Zulieferer im Chempark?
               </Typo.H2>
               <Typo.Paragraph>
                 Bayer investiert in eigene KI-Teams für Wirkstoff-Forschung
                 und Crop-Science-Daten. Engineering-Dienstleister, Labor-Anbieter
                 und Spezialfertiger im Chempark-Umfeld brauchen einen anderen
                 Hebel: schlanke, auditfeste Workflows zwischen SAP, Bayer-
-                Lieferantenportal und ihrer eigenen Disposition – ohne IT-Großprojekt
+                Lieferantenportal und ihrer eigenen Disposition - ohne IT-Großprojekt
                 und ohne Vendor Lock-in.
               </Typo.Paragraph>
             </BoundlessImageCard.Content>
@@ -354,7 +354,7 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 4. DataTable – Chempark-Vergleich */}
+      {/* 4. DataTable - Chempark-Vergleich */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox>
           <IntroBox.PreHeadline>

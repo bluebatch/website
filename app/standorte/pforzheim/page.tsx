@@ -171,7 +171,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/pforzheim.jpg", width: 1200, height: 630, alt: "Pforzheim – Goldstadt und Präzisionstechnik" }],
+      images: [{ url: "/images/cities/pforzheim.jpg", width: 1200, height: 630, alt: "Pforzheim - Goldstadt und Präzisionstechnik" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/pforzheim.jpg"] },
     alternates: { canonical: "/ki-agentur-pforzheim" },
@@ -187,10 +187,10 @@ const pforzheimFaqs = [
   {
     question: "Witzenmann-Zulieferung: was bringt Automatisierung konkret?",
     answer:
-      "Erstmusterprüfung, PPAP, 8D-Reports und Charge-Tracking automatisiert an Covisint, SupplyOn oder direkte OEM-Portale. n8n verbindet SAP QM, MES und PLM zu IATF-16949-konformen Lieferpaketen – Vier-Augen-Freigabe inklusive.",
+      "Erstmusterprüfung, PPAP, 8D-Reports und Charge-Tracking automatisiert an Covisint, SupplyOn oder direkte OEM-Portale. n8n verbindet SAP QM, MES und PLM zu IATF-16949-konformen Lieferpaketen - Vier-Augen-Freigabe inklusive.",
   },
   {
-    question: "Wir sind Schmuckmittelstand – wo lohnt sich KI zuerst?",
+    question: "Wir sind Schmuckmittelstand - wo lohnt sich KI zuerst?",
     answer:
       "Bei CAD-CAM-Auftragsabwicklung, bei automatischer Angebotskalkulation aus Rhino- oder Matrix-Modellen und bei Kunden-Onboarding mit AI Agents. CPQ für Sonderanfertigungen ist der schnellste Hebel.",
   },
@@ -225,10 +225,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Pforzheim – Goldstadt"}
+              {overrides?.preHeadline ?? "Standort Pforzheim - Goldstadt"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Pforzheim – für Goldstadt, Witzenmann und Präzisions-Mittelstand"}
+              {overrides?.headline ?? "KI-Agentur in Pforzheim - für Goldstadt, Witzenmann und Präzisions-Mittelstand"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Pforzheim verarbeitet historisch 70 % des deutschen Goldes, Witzenmann ist Weltmarktführer für Metallschläuche und die Hochschule Pforzheim prägt das Design Europas. Wir bauen Workflows für genau diese Spezialisierungen: GwG/LBMA-Edelmetall-Compliance, CAD-CAM-Auftragsabwicklung und IATF-konforme Lieferantenpipelines.
@@ -242,13 +242,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/pforzheim.jpg"
-              alt="Pforzheim – Goldstadt und Präzisionstechnik"
+              alt="Pforzheim - Goldstadt und Präzisionstechnik"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Pforzheimer Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -257,7 +257,7 @@ export default async function Page({
               C. Hafner und weitere Edelmetall-Verarbeiter unterliegen Geldwäschegesetz, Edelmetallaufsicht und LBMA-Zertifizierung. Wareneingang, Schmelzprotokolle und Lieferantenprüfung müssen lückenlos auditierbar sein.
             </NumberedList.Item>
             <NumberedList.Item title="Witzenmann-Zulieferung mit IATF 16949:">
-              Als Weltmarktführer für Metallschläuche beliefert Witzenmann Automotive- und Anlagenbau weltweit. Lieferanten brauchen IATF-konforme Erstmusterprüfung, Charge-Tracking und PPAP-Dokumentation – automatisiert über PLM/MES.
+              Als Weltmarktführer für Metallschläuche beliefert Witzenmann Automotive- und Anlagenbau weltweit. Lieferanten brauchen IATF-konforme Erstmusterprüfung, Charge-Tracking und PPAP-Dokumentation - automatisiert über PLM/MES.
             </NumberedList.Item>
             <NumberedList.Item title="Schmuck-Mittelstand mit CAD-CAM-Fertigung:">
               Wellendorff, Eppli und über 200 Schmuckmittelständler arbeiten mit Rhino, 3Design oder Matrix. CAD-Modelle, CNC-Fräsung und Wachsausschmelzguss müssen mit Auftragsverwaltung und ERP verbunden sein.
@@ -272,7 +272,7 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Pforzheimer Schmuck- und Präzisions-Unternehmen</Typo.H2>
         <SimpleGrid cols={2}>
@@ -291,7 +291,7 @@ export default async function Page({
             </SimpleCard.Icon>
             <Typo.H3>CAD-CAM-Auftragsabwicklung für Schmuckmittelstand</Typo.H3>
             <Typo.Paragraph>
-              Vom Rhino-/Matrix-Modell zur CNC-Fräsung und Wachsausschmelzguss – Workflows verbinden CAD-Software, Stücklisten, Lagerverwaltung und Kundenfreigaben mit DocuSign oder Adobe Sign.
+              Vom Rhino-/Matrix-Modell zur CNC-Fräsung und Wachsausschmelzguss - Workflows verbinden CAD-Software, Stücklisten, Lagerverwaltung und Kundenfreigaben mit DocuSign oder Adobe Sign.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
@@ -328,17 +328,17 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Seit 1767 Goldstadt – seit 1854 Heimat des Metallschlauchs
+            Seit 1767 Goldstadt - seit 1854 Heimat des Metallschlauchs
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Schmuck nach LBMA und Bauteile nach IATF auditiert werden, müssen Workflows lückenlos sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Über 11.000 Beschäftigte in Schmuck- und Uhrenindustrie, dazu Witzenmann mit 4.400 Mitarbeitenden und die Klingel-Gruppe im Distanzhandel – diese Spezialisierung verlangt spezialisierte Prozesse. Generische ERP-Abläufe reichen für Edelmetall-Schmelzprotokolle oder Goldscheideanstalten nicht aus.
+            Über 11.000 Beschäftigte in Schmuck- und Uhrenindustrie, dazu Witzenmann mit 4.400 Mitarbeitenden und die Klingel-Gruppe im Distanzhandel - diese Spezialisierung verlangt spezialisierte Prozesse. Generische ERP-Abläufe reichen für Edelmetall-Schmelzprotokolle oder Goldscheideanstalten nicht aus.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>

@@ -185,29 +185,29 @@ export async function generateMetadata({
 
 const duisburgFaqs = [
   {
-    question: "thyssenkrupp baut auf 16.000 Stellen ab – wie helfen Workflows in der Restrukturierung?",
+    question: "thyssenkrupp baut auf 16.000 Stellen ab - wie helfen Workflows in der Restrukturierung?",
     answer:
       "Personalmanagement, Transfergesellschaften, Qualifizierungs-Tracking und Schulungs-Workflows sind in Spitzenzeiten kaum manuell zu stemmen. n8n verbindet SAP HCM, Lernplattformen und Behörden-Schnittstellen (Agentur für Arbeit, Transfer-KuG) zu einer durchgängigen Pipeline.",
   },
   {
-    question: "CBAM kommt 2026 – kann n8n CO2-Grenzausgleich abbilden?",
+    question: "CBAM kommt 2026 - kann n8n CO2-Grenzausgleich abbilden?",
     answer:
-      "Ja. CBAM verlangt detaillierte CO2-Daten pro Importprodukt. n8n orchestriert die Datensammlung aus Lieferantenportalen, prüft Plausibilität, generiert die quartalsweisen CBAM-Reports und meldet an die DEHSt – inklusive Audit-Trail.",
+      "Ja. CBAM verlangt detaillierte CO2-Daten pro Importprodukt. n8n orchestriert die Datensammlung aus Lieferantenportalen, prüft Plausibilität, generiert die quartalsweisen CBAM-Reports und meldet an die DEHSt - inklusive Audit-Trail.",
   },
   {
-    question: "Wir liefern an HKM oder TKS – können Werkstoffzeugnisse (EN 10204) automatisiert werden?",
+    question: "Wir liefern an HKM oder TKS - können Werkstoffzeugnisse (EN 10204) automatisiert werden?",
     answer:
       "Ja, klassischer n8n-Use-Case. PDF-Werkstoffzeugnisse 3.1/3.2 werden per OCR und KI extrahiert, gegen Bestellung geprüft, in PLM/QM-System abgelegt und an den Kunden weitergeleitet. Materialrückverfolgbarkeit über Charge ist Standard.",
   },
   {
     question: "Duisport-Anbindung: lässt sich ATLAS/NCTS-Zoll mit n8n verbinden?",
     answer:
-      "Ja. Zollanmeldungen, ATLAS-Ausfuhr, NCTS-Versandverfahren und Hafentelematik (DAKOSY, dbh) sind via n8n integrierbar. Wir bauen die Schnittstellen self-hosted, BSI-konform und auditfest – wichtig für Reedereien und Spediteure am Rhein.",
+      "Ja. Zollanmeldungen, ATLAS-Ausfuhr, NCTS-Versandverfahren und Hafentelematik (DAKOSY, dbh) sind via n8n integrierbar. Wir bauen die Schnittstellen self-hosted, BSI-konform und auditfest - wichtig für Reedereien und Spediteure am Rhein.",
   },
   {
     question: "Wasserstoff-Hub: brauchen wir spezielle Workflows für H2-Herkunftsnachweise?",
     answer:
-      "Ja. CertifHy, RED-II und nationale Wasserstoff-Strategie verlangen lückenlose Herkunftsnachweise. n8n verbindet Elektrolyseur-Daten, Stromzertifikate und Lieferdokumente – Pflicht für Stahl- und Chemieabnehmer in Duisburg.",
+      "Ja. CertifHy, RED-II und nationale Wasserstoff-Strategie verlangen lückenlose Herkunftsnachweise. n8n verbindet Elektrolyseur-Daten, Stromzertifikate und Lieferdokumente - Pflicht für Stahl- und Chemieabnehmer in Duisburg.",
   },
 ];
 
@@ -238,14 +238,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Duisburg –{" "}
+                KI-Agentur in Duisburg -{" "}
                 vom Stahlkocher zum{" "}
                 <BackgroundHero.Highlight>grünen Hochofen</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            thyssenkrupp baut von 27.000 auf 16.000 Stellen ab und gleichzeitig Europas größte Direktreduktionsanlage. Duisport schlägt 60 Mio. Tonnen um. Wir automatisieren genau die Workflows, die ein Standort im Umbruch braucht – CBAM-Reporting, Werkstoffzeugnisse und Hafen-Telematik.
+            thyssenkrupp baut von 27.000 auf 16.000 Stellen ab und gleichzeitig Europas größte Direktreduktionsanlage. Duisport schlägt 60 Mio. Tonnen um. Wir automatisieren genau die Workflows, die ein Standort im Umbruch braucht - CBAM-Reporting, Werkstoffzeugnisse und Hafen-Telematik.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Duisburg besprechen</ContactButton>
@@ -276,12 +276,12 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/duisburg.jpg"
-            alt="Direktreduktionsanlage und Hafen in Duisburg – Transformation"
+            alt="Direktreduktionsanlage und Hafen in Duisburg - Transformation"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>TKS-Direktreduktion & duisport – die Transformation in Beton</Typo.H2>
+            <Typo.H2>TKS-Direktreduktion & duisport - die Transformation in Beton</Typo.H2>
             <Typo.Paragraph>
-              Auf dem TKS-Gelände entsteht Europas größte Direktreduktionsanlage für grünen Stahl. duisport baut den China-Hub und logport-Areale weiter aus. Beide Welten brauchen End-to-End-Workflows – Subventionsreporting, H2-Herkunftsnachweise, CBAM, Zollabwicklung und Werkstoff-Tracking. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Auf dem TKS-Gelände entsteht Europas größte Direktreduktionsanlage für grünen Stahl. duisport baut den China-Hub und logport-Areale weiter aus. Beide Welten brauchen End-to-End-Workflows - Subventionsreporting, H2-Herkunftsnachweise, CBAM, Zollabwicklung und Werkstoff-Tracking. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -296,7 +296,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Duisburg heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -329,19 +329,19 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 3. ProsCons – Was war, was kommt */}
+      {/* 3. ProsCons - Was war, was kommt */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Duisburg hinter sich lässt – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Duisburg hinter sich lässt - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
                 title="thyssenkrupp Steel: Abbau von 27.000 auf 16.000 Stellen bis 2030"
-                description="11.000 Arbeitsplätze direkt im Konzern, dazu Zulieferer und Dienstleister – die größte Stahl-Restrukturierung Deutschlands seit Jahrzehnten."
+                description="11.000 Arbeitsplätze direkt im Konzern, dazu Zulieferer und Dienstleister - die größte Stahl-Restrukturierung Deutschlands seit Jahrzehnten."
               />
               <ProsCons.Item
                 title="HKM (Hüttenwerke Krupp Mannesmann) unter Verkaufsdruck"
-                description="Salzgitter und TKS prüfen Ausstieg aus dem 3.000-Mitarbeiter-Werk in Hüttenheim – Zukunft der Hochöfen ungewiss."
+                description="Salzgitter und TKS prüfen Ausstieg aus dem 3.000-Mitarbeiter-Werk in Hüttenheim - Zukunft der Hochöfen ungewiss."
               />
               <ProsCons.Item
                 title="Klassische Stahlhandel-Margen unter Druck"
@@ -349,17 +349,17 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Strukturschwache Stadtteile, hohe Arbeitslosigkeit"
-                description="Duisburg hat eine der höchsten Arbeitslosenquoten Westdeutschlands – Sozial- und Verwaltungs-Workflows überlastet."
+                description="Duisburg hat eine der höchsten Arbeitslosenquoten Westdeutschlands - Sozial- und Verwaltungs-Workflows überlastet."
               />
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
-                title="Direktreduktionsanlage TKS – 2 Mrd. € für grünen Stahl"
-                description="Europas größtes H2-Stahl-Projekt, IPCEI-gefördert – neue Lieferketten, neue Compliance, neue Workflows."
+                title="Direktreduktionsanlage TKS - 2 Mrd. € für grünen Stahl"
+                description="Europas größtes H2-Stahl-Projekt, IPCEI-gefördert - neue Lieferketten, neue Compliance, neue Workflows."
               />
               <ProsCons.Item
-                title="duisport – Weltgrößter Binnenhafen, China-Endbahnhof"
-                description="60 Mio. t Umschlag, drittgrößter Containerhafen Europas, 80 Züge/Woche aus China – Logistik 4.0 auf Hochtouren."
+                title="duisport - Weltgrößter Binnenhafen, China-Endbahnhof"
+                description="60 Mio. t Umschlag, drittgrößter Containerhafen Europas, 80 Züge/Woche aus China - Logistik 4.0 auf Hochtouren."
               />
               <ProsCons.Item
                 title="Krohne Messtechnik & Klöckner & Co als digitale Anker"
@@ -367,7 +367,7 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Universität Duisburg-Essen + Fraunhofer IMS"
-                description="Eine der größten Unis Deutschlands plus Mikroelektronik-Forschung – Drittmittel- und Forschungs-Workflows in industrieller Größe."
+                description="Eine der größten Unis Deutschlands plus Mikroelektronik-Forschung - Drittmittel- und Forschungs-Workflows in industrieller Größe."
               />
             </ProsCons.Pros>
           </ProsCons>
@@ -384,7 +384,7 @@ export default async function Page({
             Was passiert mit den Prozessen, wenn 11.000 Stahl-Stellen wegfallen?
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Duisburg ist seit Jahrzehnten Synonym für Stahl – und steht heute mitten in der größten Restrukturierung der Konzerngeschichte. thyssenkrupp Steel schrumpft bis 2030 von 27.000 auf 16.000 Beschäftigte. HKM (Krupp-Mannesmann) und Schmolz + Bickenbach kämpfen ebenfalls mit Effizienzdruck. Parallel investiert TKS 2 Mrd. € in grünen Stahl, duisport rollt CBAM und ATLAS aus, Krohne und Klöckner & Co digitalisieren ihre Beschaffung. Jede dieser Säulen hat eigene Prozess-Pains.
+            Duisburg ist seit Jahrzehnten Synonym für Stahl - und steht heute mitten in der größten Restrukturierung der Konzerngeschichte. thyssenkrupp Steel schrumpft bis 2030 von 27.000 auf 16.000 Beschäftigte. HKM (Krupp-Mannesmann) und Schmolz + Bickenbach kämpfen ebenfalls mit Effizienzdruck. Parallel investiert TKS 2 Mrd. € in grünen Stahl, duisport rollt CBAM und ATLAS aus, Krohne und Klöckner & Co digitalisieren ihre Beschaffung. Jede dieser Säulen hat eigene Prozess-Pains.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>

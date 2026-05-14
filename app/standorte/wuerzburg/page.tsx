@@ -168,7 +168,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/wuerzburg.jpg", width: 1200, height: 630, alt: "Würzburg – Koenig & Bauer und Mainfranken-Cluster" }],
+      images: [{ url: "/images/cities/wuerzburg.jpg", width: 1200, height: 630, alt: "Würzburg - Koenig & Bauer und Mainfranken-Cluster" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/wuerzburg.jpg"] },
     alternates: { canonical: "/ki-agentur-wuerzburg" },
@@ -177,7 +177,7 @@ export async function generateMetadata({
 
 const wuerzburgFaqs = [
   {
-    question: "Koenig & Bauer beliefert Notenbanken – was bringt Automatisierung?",
+    question: "Koenig & Bauer beliefert Notenbanken - was bringt Automatisierung?",
     answer:
       "Service-Einsätze bei Zentralbanken erfordern Sicherheitsfreigaben, ITAR-/EAR-Klassifikation und revisionssichere Logs. n8n orchestriert Antrags-Workflows mit BAFA, Service-Ticket-Lifecycle und Ersatzteil-Logistik unter Exportkontrolle.",
   },
@@ -189,17 +189,17 @@ const wuerzburgFaqs = [
   {
     question: "JMU-Forschung: kann n8n Drittmittel-Reporting abbilden?",
     answer:
-      "Ja. DFG-, BMBF- und EU-Förderprojekte mit Zeiterfassung, Verwendungsnachweis und Quartalsreports. Anbindung an SAP CO, easy-Online, ECAS und klinische Studien-Datenbanken – mit Audit-Trail für Ethikkommissionen.",
+      "Ja. DFG-, BMBF- und EU-Förderprojekte mit Zeiterfassung, Verwendungsnachweis und Quartalsreports. Anbindung an SAP CO, easy-Online, ECAS und klinische Studien-Datenbanken - mit Audit-Trail für Ethikkommissionen.",
   },
   {
-    question: "Wir sind Mainfranken-Mittelstand – wo lohnt sich KI zuerst?",
+    question: "Wir sind Mainfranken-Mittelstand - wo lohnt sich KI zuerst?",
     answer:
       "Bei Angebotskalkulation (CPQ), bei Eingangsrechnungs-Verarbeitung mit KI und bei Lieferanten-Sanktionslisten-Prüfung. Klassische KMU-Pain-Points mit klarem ROI in 4-8 Wochen.",
   },
   {
     question: "Lebensmittel- und Weinbau: HACCP-Workflows mit n8n?",
     answer:
-      "Ja. Charge-Rückverfolgung, Temperatur-Logs und HACCP-Audit-Trails revisionssicher in n8n-Pipelines. Anbindung an QS-, IFS- und Bio-Zertifizierungssysteme – inklusive automatischer Korrektur-Maßnahmen bei Grenzwert-Überschreitung.",
+      "Ja. Charge-Rückverfolgung, Temperatur-Logs und HACCP-Audit-Trails revisionssicher in n8n-Pipelines. Anbindung an QS-, IFS- und Bio-Zertifizierungssysteme - inklusive automatischer Korrektur-Maßnahmen bei Grenzwert-Überschreitung.",
   },
 ];
 
@@ -222,10 +222,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Würzburg – Mainfranken"}
+              {overrides?.preHeadline ?? "Standort Würzburg - Mainfranken"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Würzburg – für Koenig & Bauer, Brose und Mainfranken"}
+              {overrides?.headline ?? "KI-Agentur in Würzburg - für Koenig & Bauer, Brose und Mainfranken"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Koenig & Bauer baut seit 1817 Druckmaschinen, Brose ist Familien-Weltkonzern für Automotive-Komponenten und die Julius-Maximilians-Universität ist Forschungsmotor. Wir bauen Workflows für Maschinenbau-Service, Automotive-IATF-Pipelines und klinische Forschung.
@@ -239,13 +239,13 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/wuerzburg.jpg"
-              alt="Würzburg – Koenig & Bauer und Mainfranken-Cluster"
+              alt="Würzburg - Koenig & Bauer und Mainfranken-Cluster"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Würzburger Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
@@ -263,13 +263,13 @@ export default async function Page({
               Mainfränkischer Weinbau (Silvaner), Distelhäuser Brauerei und Würzburger Hofbräu prägen die Lebensmittelbranche. HACCP, Charge-Rückverfolgung und Bio-Zertifizierung gehören in automatisierte Pipelines.
             </NumberedList.Item>
             <NumberedList.Item title="Mittelstand und Hidden Champions in Werkzeugmaschinen:">
-              Knauf (Gips/Bau), Mainfränkische Werkstätten und Maschinenbau-KMU mit 100-1000 MA – stark exportierend, mit Bedarf an EORI-Workflows, Lieferantenmanagement und CPQ.
+              Knauf (Gips/Bau), Mainfränkische Werkstätten und Maschinenbau-KMU mit 100-1000 MA - stark exportierend, mit Bedarf an EORI-Workflows, Lieferantenmanagement und CPQ.
             </NumberedList.Item>
           </NumberedList>
         </div>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Würzburger Industrie und Forschung</Typo.H2>
         <SimpleGrid cols={2}>
@@ -325,17 +325,17 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Koenig & Bauer – ältester Druckmaschinen-Bauer der Welt
+            Koenig & Bauer - ältester Druckmaschinen-Bauer der Welt
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo Banknoten-Druckmaschinen entstehen und Brose Sitzsysteme für Mercedes fertigt, müssen Workflows revisionssicher sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Koenig & Bauer beliefert weltweit Notenbanken mit Sicherheits-Druckmaschinen. Brose Sitech (mit VW) und Brose Standort Würzburg liefern Mercedes, BMW und Audi. Daneben Forschungsuni mit Uniklinikum – ein Mix, der spezialisierte Workflows verlangt.
+            Koenig & Bauer beliefert weltweit Notenbanken mit Sicherheits-Druckmaschinen. Brose Sitech (mit VW) und Brose Standort Würzburg liefern Mercedes, BMW und Audi. Daneben Forschungsuni mit Uniklinikum - ein Mix, der spezialisierte Workflows verlangt.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>

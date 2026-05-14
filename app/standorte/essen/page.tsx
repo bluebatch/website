@@ -187,27 +187,27 @@ export async function generateMetadata({
 
 const essenFaqs = [
   {
-    question: "E.ON, RWE – wie automatisiert n8n Marktkommunikation und CSRD?",
+    question: "E.ON, RWE - wie automatisiert n8n Marktkommunikation und CSRD?",
     answer:
-      "Millionen Marktnachrichten pro Tag (EDIFACT, MaKo, MaBiS, MSCONS), Smart-Meter-Rollout, BNetzA-Vorgaben und CSRD/ESRS-Daten werden in n8n-Pipelines abgebildet – auditfest und im eigenen Rechenzentrum. Wir kennen die Standard-Stacks der großen Versorger.",
+      "Millionen Marktnachrichten pro Tag (EDIFACT, MaKo, MaBiS, MSCONS), Smart-Meter-Rollout, BNetzA-Vorgaben und CSRD/ESRS-Daten werden in n8n-Pipelines abgebildet - auditfest und im eigenen Rechenzentrum. Wir kennen die Standard-Stacks der großen Versorger.",
   },
   {
-    question: "Brenntag operiert in 70+ Ländern – wie schaffen wir REACH und Gefahrgut?",
+    question: "Brenntag operiert in 70+ Ländern - wie schaffen wir REACH und Gefahrgut?",
     answer:
       "REACH-Compliance, ADR-Gefahrgut-Dokumente, kundenspezifische SDB, Multi-Country-Etikettierung, Bestelleingangs-OCR und Frachtbuchungen sind klassische Document-AI- und n8n-Use-Cases für Chemiedistribution.",
   },
   {
-    question: "thyssenkrupp im Konzernumbau – wie unterstützen wir IT-Migrationen?",
+    question: "thyssenkrupp im Konzernumbau - wie unterstützen wir IT-Migrationen?",
     answer:
-      "Trennung von Steel, Marine und Materials Services erzeugt getrennte ERP-Mandanten, Stammdatenbereinigung und Lieferanten-Re-Onboarding. n8n macht diese Migrationen mit Workflows beherrschbar – ohne in Kern-SAP-Systeme einzugreifen.",
+      "Trennung von Steel, Marine und Materials Services erzeugt getrennte ERP-Mandanten, Stammdatenbereinigung und Lieferanten-Re-Onboarding. n8n macht diese Migrationen mit Workflows beherrschbar - ohne in Kern-SAP-Systeme einzugreifen.",
   },
   {
-    question: "HOCHTIEF und Bau – wie hilft KI bei Lieferscheinen und Nachträgen?",
+    question: "HOCHTIEF und Bau - wie hilft KI bei Lieferscheinen und Nachträgen?",
     answer:
       "KI-basierte Belegerkennung, automatische Zuordnung von Subunternehmer-Rechnungen zu Vergaben (VOB), Bautagebücher, Nachweise und Aufmaß-Workflows reduzieren manuelle Erfassung massiv. n8n verbindet RIB iTWO, SAP RE-FX und Dokumentenmanagement.",
   },
   {
-    question: "Aldi Nord – wie passt n8n in eine Discounter-Lieferkette?",
+    question: "Aldi Nord - wie passt n8n in eine Discounter-Lieferkette?",
     answer:
       "Lieferantenrechnungen, Promotion-Planung, Eigenmarken-Spezifikationen, EAN-Pflege und EDI-Workflows mit tausenden Lieferanten werden automatisiert. Wir docken an Aldi-typische SAP- und Stammdaten-Plattformen an.",
   },
@@ -245,14 +245,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Essen –{" "}
+                KI-Agentur in Essen -{" "}
                 3 DAX-Konzerne, Energie-Hauptstadt und{" "}
                 <BackgroundHero.Highlight>HQ-Dichte</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            E.ON, RWE, Brenntag, thyssenkrupp, HOCHTIEF, Evonik, Aldi Nord –
+            E.ON, RWE, Brenntag, thyssenkrupp, HOCHTIEF, Evonik, Aldi Nord -
             keine andere deutsche Großstadt bündelt so viele börsennotierte
             Konzern-Hauptsitze auf engstem Raum. Wir bauen n8n-Workflows
             für Energie-Marktkommunikation, Chemiedistribution,
@@ -289,7 +289,7 @@ export default async function Page({
           <Typo.H2>Warum Essen eine spezialisierte KI-Agentur braucht</Typo.H2>
           <Typo.Paragraph>
             Drei DAX-Konzerne (E.ON, RWE, Brenntag) und drei MDAX-Konzerne
-            (thyssenkrupp, HOCHTIEF, Evonik) – Essen ist die
+            (thyssenkrupp, HOCHTIEF, Evonik) - Essen ist die
             HQ-dichteste Großstadt Deutschlands. Aus Kohle und Stahl wurde
             Konzern-Steuerung, Energiewende und Spezialchemie-Verteilung.
             CSRD, EU Chips Act, CBAM und massive IT-Migrationen rund um
@@ -305,17 +305,17 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/essen.jpg"
-            alt="Essen DAX- und MDAX-HQs – n8n-Workflows für Energie, Chemie und Bau"
+            alt="Essen DAX- und MDAX-HQs - n8n-Workflows für Energie, Chemie und Bau"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Strukturwandel zur HQ-Stadt – Essen automatisiert Konzernsteuerung</Typo.H2>
+            <Typo.H2>Strukturwandel zur HQ-Stadt - Essen automatisiert Konzernsteuerung</Typo.H2>
             <Typo.Paragraph>
               Essen ist Sinnbild für den deutschen Strukturwandel: aus der
               Kruppstadt mit Bergbau wurde die Stadt der DAX-/MDAX-Hauptsitze.
               RAG-Stiftungs- und Strukturstärkungsgesetz-Programme treiben
               zusätzlichen Digitalisierungsdruck. Wir helfen den
               Mittelstands-Zulieferern dieser Konzerne, mit schlanken
-              n8n-Workflows die Anforderungen ihrer Großkunden zu erfüllen –
+              n8n-Workflows die Anforderungen ihrer Großkunden zu erfüllen -
               vom Lieferanten-Portal bis zur CSRD-Datenanlieferung.
             </Typo.Paragraph>
             <div className="mt-4">
@@ -332,7 +332,7 @@ export default async function Page({
         <Typo.H2>Essener Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
           E.ON steuert anders als HOCHTIEF, Brenntag anders als Aldi Nord.
-          Wir bauen für jeden Cluster die passenden n8n-Bausteine – vom
+          Wir bauen für jeden Cluster die passenden n8n-Bausteine - vom
           MaKo-Pipeline bis zum CBAM-Reporting.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -340,7 +340,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Zap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>E.ON, RWE – Energie-Hauptstadt Deutschlands</Typo.H3>
+            <Typo.H3>E.ON, RWE - Energie-Hauptstadt Deutschlands</Typo.H3>
             <Typo.Paragraph>
               E.ON mit 8 Mio. Kunden, RWE als einer der größten
               Erneuerbare-Energien-Erzeuger Europas. Marktkommunikation
@@ -352,7 +352,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <FlaskConical className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Brenntag, Evonik – Chemiedistribution &amp; Spezialchemie</Typo.H3>
+            <Typo.H3>Brenntag, Evonik - Chemiedistribution &amp; Spezialchemie</Typo.H3>
             <Typo.Paragraph>
               Brenntag agiert in über 70 Ländern, Evonik mit Hochleistungs-
               polymeren. REACH-Compliance, ADR-Gefahrgut-Dokumente,
@@ -365,11 +365,11 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cog className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>thyssenkrupp – Konzern im Umbau</Typo.H3>
+            <Typo.H3>thyssenkrupp - Konzern im Umbau</Typo.H3>
             <Typo.Paragraph>
               Trennung von Steel, Marine und Materials Services. Wir bauen
               Workflows für getrennte ERP-Mandanten, Stammdatenbereinigung,
-              neue Buchhaltungsstrukturen und Lieferanten-Re-Onboarding –
+              neue Buchhaltungsstrukturen und Lieferanten-Re-Onboarding -
               ohne in das Kern-SAP einzugreifen.
             </Typo.Paragraph>
           </SimpleCard>
@@ -377,7 +377,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Building2 className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>HOCHTIEF – globaler Baukonzern</Typo.H3>
+            <Typo.H3>HOCHTIEF - globaler Baukonzern</Typo.H3>
             <Typo.Paragraph>
               Tonnenweise Lieferscheine, Subunternehmer-Rechnungen,
               Bautagebücher, VOB-Vergaben und Nachträge werden mit KI-OCR
@@ -389,7 +389,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <ShoppingCart className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Aldi Nord – Discounter-Lieferkette</Typo.H3>
+            <Typo.H3>Aldi Nord - Discounter-Lieferkette</Typo.H3>
             <Typo.Paragraph>
               Täglich tausende Lieferantenrechnungen, Promotion-Planung,
               Eigenmarken-Spezifikationen und EAN-Pflege. EDI-Workflows
@@ -401,11 +401,11 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <HeartPulse className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Universitätsklinikum Essen – Westdeutsches Tumorzentrum</Typo.H3>
+            <Typo.H3>Universitätsklinikum Essen - Westdeutsches Tumorzentrum</Typo.H3>
             <Typo.Paragraph>
               Maximalversorger mit onkologischem Schwerpunkt.
               Studienverwaltung, eCRF-Daten, Drittmittel-Reporting und
-              DRG-Kodierung werden mit n8n und KI orchestriert – unter
+              DRG-Kodierung werden mit n8n und KI orchestriert - unter
               hohem Personalmangel-Druck.
             </Typo.Paragraph>
           </SimpleCard>
@@ -448,7 +448,7 @@ export default async function Page({
             <ProsCons.Pros>
               <ProsCons.Item
                 title="Energie-Hauptstadt mit DAX-Power"
-                description="E.ON-HQ mit ca. 75.000 Mitarbeitern, RWE-HQ als DAX-Konzern, Brenntag als Weltmarktführer im Chemiehandel, Evonik als Industriespezialist – Energiehandel, ETS-Zertifikate und SAP IS-U laufen hier."
+                description="E.ON-HQ mit ca. 75.000 Mitarbeitern, RWE-HQ als DAX-Konzern, Brenntag als Weltmarktführer im Chemiehandel, Evonik als Industriespezialist - Energiehandel, ETS-Zertifikate und SAP IS-U laufen hier."
               />
               <ProsCons.Item
                 title="MDAX-Headquarter-Dichte"
@@ -458,7 +458,7 @@ export default async function Page({
             <ProsCons.Cons>
               <ProsCons.Item
                 title="Steinkohle-Erbe als Identitätsanker"
-                description="Zollverein UNESCO-Welterbe, Krupp-Tradition, IG Metall, Mitbestimmung – Betriebsräte und Restrukturierungspflichten sind hier kein Detail. Automatisierung muss tariflich und sozialpartnerschaftlich begleitet werden."
+                description="Zollverein UNESCO-Welterbe, Krupp-Tradition, IG Metall, Mitbestimmung - Betriebsräte und Restrukturierungspflichten sind hier kein Detail. Automatisierung muss tariflich und sozialpartnerschaftlich begleitet werden."
               />
               <ProsCons.Item
                 title="Strukturwandel-Müdigkeit"

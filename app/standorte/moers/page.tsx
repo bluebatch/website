@@ -182,22 +182,22 @@ export async function generateMetadata({
 
 const moersFaqs = [
   {
-    question: "EDEKA Rhein-Ruhr Regionalsitz in Moers – wie automatisieren wir Filial-Logistik?",
+    question: "EDEKA Rhein-Ruhr Regionalsitz in Moers - wie automatisieren wir Filial-Logistik?",
     answer:
-      "EDEKA Rhein-Ruhr betreibt hunderte Märkte aus Moers-Utfort. n8n koppelt Zentrallager-WMS, Filial-Bestellsysteme, EDIFACT-Lieferanten und Personaleinsatzplanung – inklusive Promo- und Aktions-Workflows zwischen Zentrale und Markt.",
+      "EDEKA Rhein-Ruhr betreibt hunderte Märkte aus Moers-Utfort. n8n koppelt Zentrallager-WMS, Filial-Bestellsysteme, EDIFACT-Lieferanten und Personaleinsatzplanung - inklusive Promo- und Aktions-Workflows zwischen Zentrale und Markt.",
   },
   {
-    question: "Energie-Achse Niederrhein (RWE/Steag/Uniper/ENNI) – welche Workflows brauchen Industriedienstleister?",
+    question: "Energie-Achse Niederrhein (RWE/Steag/Uniper/ENNI) - welche Workflows brauchen Industriedienstleister?",
     answer:
       "Wartung von Kraftwerken (Walsum, Voerde, Hünxe), Stillstandsplanung, EAM-Anbindung und Auftragsmanagement gegen Konzern-SAP. n8n verbindet Service-Techniker-Apps, ERP und Lieferanten-Portale zu einer Pipeline.",
   },
   {
-    question: "Krankenhaus Bethanien als Stiftungsklinik – welche Workflows entlasten Pflege und Verwaltung?",
+    question: "Krankenhaus Bethanien als Stiftungsklinik - welche Workflows entlasten Pflege und Verwaltung?",
     answer:
-      "Patientenaufnahme, ePA-Integration, DRG-Abrechnung mit Kostenträgern, MDR-Tracking für Medizinprodukte und Personalplanung. AI Agents klassifizieren Eingangsbefunde und Aufnahmedokumente – kritisch bei Pflegepersonal-Mangel.",
+      "Patientenaufnahme, ePA-Integration, DRG-Abrechnung mit Kostenträgern, MDR-Tracking für Medizinprodukte und Personalplanung. AI Agents klassifizieren Eingangsbefunde und Aufnahmedokumente - kritisch bei Pflegepersonal-Mangel.",
   },
   {
-    question: "ENNI Stadt & Service – wie skalieren wir Smart-Meter und Wasser-/Abwasser-Workflows?",
+    question: "ENNI Stadt & Service - wie skalieren wir Smart-Meter und Wasser-/Abwasser-Workflows?",
     answer:
       "Smart-Meter-Rollout, MaKo 2024, Tarifwechsel, Anschluss-Workflows und Marktkommunikation. Plus Wasser-/Abwasser-Abrechnung und Verkehrs-/Bäder-Verwaltung. n8n self-hosted und BSI-Grundschutz-konform für KRITIS-Versorger.",
   },
@@ -235,14 +235,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Moers –{" "}
+                KI-Agentur in Moers -{" "}
                 von Rheinpreussen zur{" "}
                 <BackgroundHero.Highlight>Energie- und Logistik-Achse Niederrhein</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus Bergbau und Schacht Rheinpreussen wurde EDEKA-Rhein-Ruhr-HQ, Energie-Achse mit RWE/Steag/Uniper und Krankenhaus Bethanien. Wir automatisieren genau die Workflows, die ein Niederrhein-Standort braucht – Filial-Logistik, Kraftwerk-Wartung und Klinik-Disposition.
+            Aus Bergbau und Schacht Rheinpreussen wurde EDEKA-Rhein-Ruhr-HQ, Energie-Achse mit RWE/Steag/Uniper und Krankenhaus Bethanien. Wir automatisieren genau die Workflows, die ein Niederrhein-Standort braucht - Filial-Logistik, Kraftwerk-Wartung und Klinik-Disposition.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Moers besprechen</ContactButton>
@@ -275,9 +275,9 @@ export default async function Page({
             alt="EDEKA Rhein-Ruhr Zentrallager Moers-Utfort"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>EDEKA-Zentrallager Moers-Utfort – wo Bergbau war, fährt heute der LKW</Typo.H2>
+            <Typo.H2>EDEKA-Zentrallager Moers-Utfort - wo Bergbau war, fährt heute der LKW</Typo.H2>
             <Typo.Paragraph>
-              Aus ehemaligen Bergbauflächen wurde Eurotec-Park und EDEKA-Logistik-Drehkreuz für hunderte Märkte am Rhein. Quartiers- und Logistik-Management bedeutet: WMS-Anbindung, EDIFACT-Lieferanten, Promo-Steuerung und Personaleinsatzplanung. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Aus ehemaligen Bergbauflächen wurde Eurotec-Park und EDEKA-Logistik-Drehkreuz für hunderte Märkte am Rhein. Quartiers- und Logistik-Management bedeutet: WMS-Anbindung, EDIFACT-Lieferanten, Promo-Steuerung und Personaleinsatzplanung. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -298,7 +298,7 @@ export default async function Page({
             Was passiert mit den Prozessen, wenn aus Steinkohle Logistik und Energie werden?
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Moers war eines der historischen Steinkohlenreviere am linken Niederrhein – mit Schacht Rheinpreussen als Symbol. Heute ist die Stadt eingebettet in die Energie-Achse mit RWE/Steag/Uniper-Kraftwerken in Walsum, Voerde und Hünxe, beherbergt den EDEKA-Rhein-Ruhr-Regionalsitz und das Stiftungs-Krankenhaus Bethanien. Jede dieser Säulen hat eigene Prozess-Pains.
+            Moers war eines der historischen Steinkohlenreviere am linken Niederrhein - mit Schacht Rheinpreussen als Symbol. Heute ist die Stadt eingebettet in die Energie-Achse mit RWE/Steag/Uniper-Kraftwerken in Walsum, Voerde und Hünxe, beherbergt den EDEKA-Rhein-Ruhr-Regionalsitz und das Stiftungs-Krankenhaus Bethanien. Jede dieser Säulen hat eigene Prozess-Pains.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
@@ -307,7 +307,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Moers heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -342,21 +342,21 @@ export default async function Page({
 
       {/* 3. ProsCons */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Moers hinter sich gelassen hat – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Moers hinter sich gelassen hat - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
                 title="Schacht Rheinpreussen und Bergbau am Niederrhein abgewickelt"
-                description="Ehemaliges Steinkohlerevier des linken Niederrheins, mit Schließungen über Jahrzehnte – komplette Wertschöpfungskette des Bergbaus verschwunden."
+                description="Ehemaliges Steinkohlerevier des linken Niederrheins, mit Schließungen über Jahrzehnte - komplette Wertschöpfungskette des Bergbaus verschwunden."
               />
               <ProsCons.Item
                 title="Kohleausstieg an der Energie-Achse Walsum/Voerde"
-                description="RWE, Steag/Iqony und Uniper bauen Kohle-Kraftwerke der Region zurück – Personal- und Service-Lieferanten unter Transformations-Druck."
+                description="RWE, Steag/Iqony und Uniper bauen Kohle-Kraftwerke der Region zurück - Personal- und Service-Lieferanten unter Transformations-Druck."
               />
               <ProsCons.Item
                 title="Mittelstand mit fragmentierter IT-Landschaft"
-                description="Bauzulieferer und Maschinenbauer 50-500 MA arbeiten oft auf Sage/DATEV/Excel-Inseln – Digitalisierungs-Rückstand kostet Margen."
+                description="Bauzulieferer und Maschinenbauer 50-500 MA arbeiten oft auf Sage/DATEV/Excel-Inseln - Digitalisierungs-Rückstand kostet Margen."
               />
               <ProsCons.Item
                 title="Strukturschwacher Niederrhein, demografischer Druck"
@@ -366,15 +366,15 @@ export default async function Page({
             <ProsCons.Pros>
               <ProsCons.Item
                 title="EDEKA Rhein-Ruhr Regionalsitz in Moers-Utfort"
-                description="Eine der größten EDEKA-Regionalgesellschaften, Zentrallager und hunderte Märkte – Logistik- und Filial-Workflow-Champion."
+                description="Eine der größten EDEKA-Regionalgesellschaften, Zentrallager und hunderte Märkte - Logistik- und Filial-Workflow-Champion."
               />
               <ProsCons.Item
                 title="Energie-Achse Niederrhein im Wasserstoff-Hochlauf"
-                description="RWE, Steag (Iqony), Uniper und ENNI im Umfeld – Wasserstoff, Power-to-X, neue Regulierung – riesiger Industriedienstleister-Pool."
+                description="RWE, Steag (Iqony), Uniper und ENNI im Umfeld - Wasserstoff, Power-to-X, neue Regulierung - riesiger Industriedienstleister-Pool."
               />
               <ProsCons.Item
-                title="Krankenhaus Bethanien (1.600 MA) – größter direkter Arbeitgeber"
-                description="Stiftungsklinik in Trägerschaft mit Schwerpunkt Innere Medizin und Reha – moderne Klinik-Workflows als Effizienz-Hebel."
+                title="Krankenhaus Bethanien (1.600 MA) - größter direkter Arbeitgeber"
+                description="Stiftungsklinik in Trägerschaft mit Schwerpunkt Innere Medizin und Reha - moderne Klinik-Workflows als Effizienz-Hebel."
               />
               <ProsCons.Item
                 title="Niederrhein-Gold & ENNI Stadt & Service als Mittelstand-Anker"

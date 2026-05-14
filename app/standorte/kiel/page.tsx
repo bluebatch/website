@@ -180,27 +180,27 @@ export async function generateMetadata({
 
 const kielFaqs = [
   {
-    question: "TKMS baut U-Boote für 8–15 Jahre – passt n8n zu Marine-Großprojekten?",
+    question: "TKMS baut U-Boote für 8-15 Jahre - passt n8n zu Marine-Großprojekten?",
     answer:
-      "Ja. Projektmanagement über Jahrzehnte, Engineering-Workflows, Materialdokumentation, Geheimschutz, Sicherheitsüberprüfungen, AWG- und ITAR-Exportkontrollen werden mit n8n auditfest und mandantengetrennt abgebildet – pro NATO-Land getrennt steuerbar.",
+      "Ja. Projektmanagement über Jahrzehnte, Engineering-Workflows, Materialdokumentation, Geheimschutz, Sicherheitsüberprüfungen, AWG- und ITAR-Exportkontrollen werden mit n8n auditfest und mandantengetrennt abgebildet - pro NATO-Land getrennt steuerbar.",
   },
   {
-    question: "Werften-Zulieferer Mittelstand – wie helfen wir bei Qualitätsdoku für militärische Anwendungen?",
+    question: "Werften-Zulieferer Mittelstand - wie helfen wir bei Qualitätsdoku für militärische Anwendungen?",
     answer:
-      "Stahlbau, Elektronik, Hydraulik, Antriebstechnik: hunderte Mittelständler liefern an TKMS und German Naval Yards. Qualitätsdokumentation, Audit-Trails, Werkstoffzertifikate und Geheimschutz-Anforderungen werden mit n8n abgebildet – ohne große IT-Mannschaft.",
+      "Stahlbau, Elektronik, Hydraulik, Antriebstechnik: hunderte Mittelständler liefern an TKMS und German Naval Yards. Qualitätsdokumentation, Audit-Trails, Werkstoffzertifikate und Geheimschutz-Anforderungen werden mit n8n abgebildet - ohne große IT-Mannschaft.",
   },
   {
-    question: "Kieler Hafen mit Fähren nach Oslo, Göteborg, Klaipeda – welche Workflows?",
+    question: "Kieler Hafen mit Fähren nach Oslo, Göteborg, Klaipeda - welche Workflows?",
     answer:
       "Buchungs-, Zoll- (ATLAS), Gefahrgut- und Reservierungs-Workflows sind hochfrequent und mehrsprachig. Wir bauen n8n-Pipelines für Color Line, Stena Line und DFDS-Schnittstellen plus Kreuzfahrt-Saisonalität.",
   },
   {
-    question: "Provinzial Nord und Förde Sparkasse – wie hilft n8n in der Versicherung?",
+    question: "Provinzial Nord und Förde Sparkasse - wie hilft n8n in der Versicherung?",
     answer:
-      "Schadenprozesse, Maklerprovisionen, Vertrags- und Antragsdokumente werden mit KI-gestützter Klassifikation und n8n abgewickelt – auditfest und BaFin-/MaRisk-/VAIT-tauglich. Wir kennen die typischen Bestandsführungssysteme.",
+      "Schadenprozesse, Maklerprovisionen, Vertrags- und Antragsdokumente werden mit KI-gestützter Klassifikation und n8n abgewickelt - auditfest und BaFin-/MaRisk-/VAIT-tauglich. Wir kennen die typischen Bestandsführungssysteme.",
   },
   {
-    question: "GEOMAR und Wind-/H2-Cluster – wie automatisieren wir Forschungs- und Energie-Workflows?",
+    question: "GEOMAR und Wind-/H2-Cluster - wie automatisieren wir Forschungs- und Energie-Workflows?",
     answer:
       "GEOMAR-Drittmittel, internationale Schiffslogistik, Forschungsdaten-Management, Offshore-Wind-Genehmigungen und Wasserstoff-Pilotprojekt-Workflows werden mit n8n abgebildet. Schleswig-Holstein als Windenergie-Land Nr. 1 hat hier enormen Bedarf.",
   },
@@ -238,7 +238,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Kiel –{" "}
+                KI-Agentur in Kiel -{" "}
                 TKMS, Marine, Ostsee-Hafen und{" "}
                 <BackgroundHero.Highlight>CAU</BackgroundHero.Highlight>
               </>
@@ -247,7 +247,7 @@ export default async function Page({
           <BackgroundHero.Description>
             TKMS, German Naval Yards, Raytheon Anschütz, Caterpillar
             (vormals MaK), Provinzial Nord, Förde Sparkasse, CAU, UKSH
-            Campus Kiel, GEOMAR – Kiel ist Deutschlands U-Boot-Hauptstadt
+            Campus Kiel, GEOMAR - Kiel ist Deutschlands U-Boot-Hauptstadt
             und größte Ostseestadt. Wir bauen n8n-Workflows für
             Marine-Großprojekte, Hafen- und Fährlogistik, Versicherungs-
             und Forschungs-Workflows.
@@ -307,7 +307,7 @@ export default async function Page({
         <Typo.H2>Kieler Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
           TKMS steuert anders als Provinzial, die CAU anders als der Hafen.
-          Wir bauen für jeden Cluster die passenden n8n-Bausteine – vom
+          Wir bauen für jeden Cluster die passenden n8n-Bausteine - vom
           Geheimschutz-Workflow bis zur mehrsprachigen Fähr-Buchung.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -315,7 +315,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <ShieldCheck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>TKMS &amp; German Naval Yards – U-Boote und Marineschiffe</Typo.H3>
+            <Typo.H3>TKMS &amp; German Naval Yards - U-Boote und Marineschiffe</Typo.H3>
             <Typo.Paragraph>
               Weltmarktführer für konventionelle U-Boote (Klasse 212, 218,
               214). Projektmanagement über 8-15 Jahre, Engineering,
@@ -328,7 +328,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Truck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Kieler Hafen – größter Fährhafen Deutschlands an der Ostsee</Typo.H3>
+            <Typo.H3>Kieler Hafen - größter Fährhafen Deutschlands an der Ostsee</Typo.H3>
             <Typo.Paragraph>
               Verbindungen nach Oslo (Color Line), Göteborg (Stena Line),
               Klaipeda (DFDS) plus Kreuzfahrten. Mehrsprachige Buchungs-,
@@ -352,7 +352,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <GraduationCap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>CAU &amp; GEOMAR – Ozean- und Meereswissenschaft</Typo.H3>
+            <Typo.H3>CAU &amp; GEOMAR - Ozean- und Meereswissenschaft</Typo.H3>
             <Typo.Paragraph>
               CAU mit 3.870 Beschäftigten und 28.000 Studierenden, GEOMAR
               als eines der wichtigsten europäischen Ozeanforschungszentren.
@@ -410,10 +410,10 @@ export default async function Page({
         <BoundlessImageCard imagePosition="left">
           <BoundlessImageCard.Image
             src="/images/cities/kiel.jpg"
-            alt="Kiel TKMS, Hafen und CAU – n8n-Workflows für Marine, Logistik und Forschung"
+            alt="Kiel TKMS, Hafen und CAU - n8n-Workflows für Marine, Logistik und Forschung"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Aufrüstung, Ostsee-Logistik und Kieler Woche – alles parallel</Typo.H2>
+            <Typo.H2>Aufrüstung, Ostsee-Logistik und Kieler Woche - alles parallel</Typo.H2>
             <Typo.Paragraph>
               TKMS-Auftragsbücher reichen bis weit in die 2030er Jahre,
               die Kieler Woche zieht über 3 Mio. Menschen an, GEOMAR

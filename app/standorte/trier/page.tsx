@@ -169,7 +169,7 @@ export async function generateMetadata({
       type: "website",
       locale: "de_DE",
       siteName: "Bluebatch",
-      images: [{ url: "/images/cities/trier.jpg", width: 1200, height: 630, alt: "Trier – Älteste Stadt Deutschlands und UNESCO-Welterbe" }],
+      images: [{ url: "/images/cities/trier.jpg", width: 1200, height: 630, alt: "Trier - Älteste Stadt Deutschlands und UNESCO-Welterbe" }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/cities/trier.jpg"] },
     alternates: { canonical: "/ki-agentur-trier" },
@@ -178,7 +178,7 @@ export async function generateMetadata({
 
 const trierFaqs = [
   {
-    question: "Tourismus mit hohem China-Anteil – wie hilft Automatisierung?",
+    question: "Tourismus mit hohem China-Anteil - wie hilft Automatisierung?",
     answer:
       "Mehrsprachige Ticketing- und Booking-Pipelines mit Alipay/WeChat Pay, automatischer Übersetzung von Bestätigungs-Mails und Group-Booking-Logik. Anbindung an Reservix, Eventim und CRM-Systeme.",
   },
@@ -193,14 +193,14 @@ const trierFaqs = [
       "Ja. Weinkataster, Bio-Zertifizierung, EU-Datenbank-Meldungen und VDP-Klassifikationsanträge in revisionssicheren Pipelines. Audit-Trail für IFS-Wine- und Bio-Audits inklusive.",
   },
   {
-    question: "Frontalier-Lohnabrechnung Luxemburg – ist das automatisierbar?",
+    question: "Frontalier-Lohnabrechnung Luxemburg - ist das automatisierbar?",
     answer:
       "Ja. Grenzüberschreitende Lohn-, Sozialversicherungs- und Steuer-Workflows zwischen DATEV/Sage und luxemburgischen Behörden. Frontalier-Bescheinigungen, A1-Bescheinigungen und Quartalsreports automatisch generiert.",
   },
   {
-    question: "Wir sind Trierer Mittelstand – wo lohnt sich KI zuerst?",
+    question: "Wir sind Trierer Mittelstand - wo lohnt sich KI zuerst?",
     answer:
-      "Bei Eingangsrechnungs-Verarbeitung, bei Tourismus-Anfrage-Klassifikation und bei Lieferanten-Onboarding. Drei Bereiche, die Innendienst spürbar entlasten – mit ROI in 4-8 Wochen.",
+      "Bei Eingangsrechnungs-Verarbeitung, bei Tourismus-Anfrage-Klassifikation und bei Lieferanten-Onboarding. Drei Bereiche, die Innendienst spürbar entlasten - mit ROI in 4-8 Wochen.",
   },
 ];
 
@@ -223,10 +223,10 @@ export default async function Page({
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>
-              {overrides?.preHeadline ?? "Standort Trier – Älteste Stadt Deutschlands"}
+              {overrides?.preHeadline ?? "Standort Trier - Älteste Stadt Deutschlands"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "KI-Agentur in Trier – für UNESCO-Tourismus, Mosel-Weinbau und Universität"}
+              {overrides?.headline ?? "KI-Agentur in Trier - für UNESCO-Tourismus, Mosel-Weinbau und Universität"}
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
               Trier ist mit Porta Nigra, Kaiserthermen und Konstantinbasilika UNESCO-Welterbe und Tourismus-Magnet. Mosel-Weinbau, Universität Trier und Karl-Marx-Erbe prägen die Stadt. Wir bauen Workflows für Tourismus-Logistik, Weingüter und Hochschul-Verwaltung.
@@ -240,19 +240,19 @@ export default async function Page({
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
               src="/images/cities/trier.jpg"
-              alt="Trier – Älteste Stadt Deutschlands und UNESCO-Welterbe"
+              alt="Trier - Älteste Stadt Deutschlands und UNESCO-Welterbe"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>
 
-      {/* 3. NumberedList – 5 Stadt-Eigenheiten */}
+      {/* 3. NumberedList - 5 Stadt-Eigenheiten */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>5 Eigenheiten der Trierer Wirtschaft, die Workflows beeinflussen</Typo.H2>
         <div className="mt-6">
           <NumberedList>
             <NumberedList.Item title="UNESCO-Welterbe und China-Tourismus:">
-              Porta Nigra, Kaiserthermen und Konstantinbasilika locken über 1,5 Mio. Übernachtungsgäste – ein hoher Anteil aus China (Karl-Marx-Geburtshaus). Mehrsprachiges Ticketing, Group-Booking und chinesische Bezahlmethoden (Alipay, WeChat Pay) gehören in Workflows.
+              Porta Nigra, Kaiserthermen und Konstantinbasilika locken über 1,5 Mio. Übernachtungsgäste - ein hoher Anteil aus China (Karl-Marx-Geburtshaus). Mehrsprachiges Ticketing, Group-Booking und chinesische Bezahlmethoden (Alipay, WeChat Pay) gehören in Workflows.
             </NumberedList.Item>
             <NumberedList.Item title="Mosel-Weinbau und VDP-Zertifizierung:">
               Hunderte Weingüter im Mosel-Tal (Weinkulturlandschaft Mosel) liefern Spitzenrieslinge nach VDP-Standard. Weinkataster, EU-Bio-Verordnung, Steuermarken-Pflicht und DTC-Versand erfordern automatisierte Compliance-Pipelines.
@@ -283,22 +283,22 @@ export default async function Page({
         />
       </ContentWrapper>
 
-      {/* 2. IntroBox – Specialty-Cluster-Story */}
+      {/* 2. IntroBox - Specialty-Cluster-Story */}
       <ContentWrapper bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>
-            Augusta Treverorum – seit Kaiser Augustus römisches Zentrum
+            Augusta Treverorum - seit Kaiser Augustus römisches Zentrum
           </IntroBox.PreHeadline>
           <IntroBox.Headline>
             Wo UNESCO-Welterbe, Mosel-Weinbau und Karl-Marx-Erbe zusammentreffen, müssen Workflows kulturell-tourismus-spezifisch sein
           </IntroBox.Headline>
           <IntroBox.Subline>
-            1,5 Millionen Übernachtungen pro Jahr, neun UNESCO-Welterbe-Stätten, hunderte Mosel-Weingüter und 12.000 Studierende an der Universität – Trier vereint Tourismus, Wein, Forschung und Karl-Marx-Pilgerstätte (besonders aus China). Diese Mischung verlangt spezialisierte Pipelines.
+            1,5 Millionen Übernachtungen pro Jahr, neun UNESCO-Welterbe-Stätten, hunderte Mosel-Weingüter und 12.000 Studierende an der Universität - Trier vereint Tourismus, Wein, Forschung und Karl-Marx-Pilgerstätte (besonders aus China). Diese Mischung verlangt spezialisierte Pipelines.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
-      {/* 4. SimpleGrid cols=2 – 4 Specialty-Use-Cases */}
+      {/* 4. SimpleGrid cols=2 - 4 Specialty-Use-Cases */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Workflow-Bausteine für Trierer Tourismus, Weinbau und Forschung</Typo.H2>
         <SimpleGrid cols={2}>
@@ -317,7 +317,7 @@ export default async function Page({
             </SimpleCard.Icon>
             <Typo.H3>VDP-konforme Weingut-Workflows</Typo.H3>
             <Typo.Paragraph>
-              Weinkataster, Steuermarken-Workflows, EU-Bio-Verordnung und VDP-Klassifikation. DTC-Versand zwischen Weinbau-ERP, Shopify und Versanddienstleistern – mit Altersverifikation und Mehrwertsteuer-Logik.
+              Weinkataster, Steuermarken-Workflows, EU-Bio-Verordnung und VDP-Klassifikation. DTC-Versand zwischen Weinbau-ERP, Shopify und Versanddienstleistern - mit Altersverifikation und Mehrwertsteuer-Logik.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
@@ -347,7 +347,7 @@ export default async function Page({
         <div className="mt-6">
           <NumberedList>
             <NumberedList.Item title="UNESCO-Welterbe-Tourismus.">
-              Porta Nigra, Konstantinbasilika, Kaiserthermen – größte
+              Porta Nigra, Konstantinbasilika, Kaiserthermen - größte
               Römerbauten-Sammlung nördlich der Alpen. Workflows für
               Tourismus-Marketing, Gästekarten und Saison-Personal.
             </NumberedList.Item>

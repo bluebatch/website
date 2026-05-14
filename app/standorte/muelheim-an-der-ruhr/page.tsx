@@ -181,27 +181,27 @@ export async function generateMetadata({
 
 const muelheimanderruhrFaqs = [
   {
-    question: "ALDI Süd steuert weltweit – wie automatisieren wir Konzern-Workflows in Mülheim?",
+    question: "ALDI Süd steuert weltweit - wie automatisieren wir Konzern-Workflows in Mülheim?",
     answer:
       "ALDI Süd hat eigene IT-Plattformen. Für Zulieferer und Tochter-Dienstleister bauen wir EDI, Stammdaten-Synchronisation, CSRD-/LkSG-Reporting und Marketing-Workflows. n8n koppelt Lieferanten-Portale, ERP und Cloud-DWH zu einer durchgängigen Pipeline.",
   },
   {
-    question: "Siemens Energy in Mülheim-Mintard – wie helfen Workflows in der Gasturbinen-Hyperphase?",
+    question: "Siemens Energy in Mülheim-Mintard - wie helfen Workflows in der Gasturbinen-Hyperphase?",
     answer:
-      "Engineering-to-Order, CPQ, globaler Service mit Field-Force, Ersatzteilversorgung und Predictive Maintenance für Gasturbinen und Generatoren. n8n verbindet PLM (Teamcenter), SAP, MES, IoT-Plattformen und Service-Apps – wichtig im aktuellen Energie-Boom.",
+      "Engineering-to-Order, CPQ, globaler Service mit Field-Force, Ersatzteilversorgung und Predictive Maintenance für Gasturbinen und Generatoren. n8n verbindet PLM (Teamcenter), SAP, MES, IoT-Plattformen und Service-Apps - wichtig im aktuellen Energie-Boom.",
   },
   {
-    question: "Brenntag als Weltmarktführer Chemiehandel – welche Workflows sind sinnvoll?",
+    question: "Brenntag als Weltmarktführer Chemiehandel - welche Workflows sind sinnvoll?",
     answer:
       "Sicherheitsdatenblätter in 25+ Sprachen, REACH/CLP-Compliance, ADR-Gefahrgut, Lieferketten-Workflows und globale Stammdaten. n8n synchronisiert SAP, EHS-Software, Behörden-Schnittstellen und Kunden-Portale weltweit.",
   },
   {
-    question: "Tengelmann-Gruppe steuert OBI, KiK und Trei – wie automatisieren wir Holding-Funktionen?",
+    question: "Tengelmann-Gruppe steuert OBI, KiK und Trei - wie automatisieren wir Holding-Funktionen?",
     answer:
       "Holdings brauchen Konzern-Konsolidierung, M&A-Integration, einheitliches Beteiligungs-Reporting, Treasury und gemeinsame Compliance. n8n verbindet ERP-Inseln der Töchter zu konsolidierten Holding-Dashboards.",
   },
   {
-    question: "Max-Planck-Institute & Spin-offs – welche Workflows brauchen Deep-Tech-Startups?",
+    question: "Max-Planck-Institute & Spin-offs - welche Workflows brauchen Deep-Tech-Startups?",
     answer:
       "Labordatenmanagement (ELN/LIMS), Fördermittel-Abrechnung (DFG, BMBF, EU), IP-/Patent-Workflows und Transfer-Compliance. n8n hilft jungen Spin-offs aus MPI Kohlenforschung und MPI CEC, früh skalierbare Prozesse aufzubauen.",
   },
@@ -234,14 +234,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Mülheim –{" "}
+                KI-Agentur in Mülheim -{" "}
                 von der Stahlstadt zur{" "}
                 <BackgroundHero.Highlight>Handels- und Energie-Zentrale Deutschlands</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus Mannesmann und Stahl wurde ALDI-Süd-HQ, Brenntag, Siemens Energy Mintard und zwei Max-Planck-Institute. Wir automatisieren genau die Workflows, die ein Handels- und Energie-Zentrum braucht – Konzern-Konsolidierung, ETO im Großmotorenbau und Lieferanten-EDI.
+            Aus Mannesmann und Stahl wurde ALDI-Süd-HQ, Brenntag, Siemens Energy Mintard und zwei Max-Planck-Institute. Wir automatisieren genau die Workflows, die ein Handels- und Energie-Zentrum braucht - Konzern-Konsolidierung, ETO im Großmotorenbau und Lieferanten-EDI.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Mülheim besprechen</ContactButton>
@@ -271,12 +271,12 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/muelheim-an-der-ruhr.jpg"
-            alt="ALDI Süd HQ und Siemens Energy Mintard – Transformation"
+            alt="ALDI Süd HQ und Siemens Energy Mintard - Transformation"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>ALDI-Süd-HQ & Siemens Mintard – wo Mannesmann war, läuft heute der Welt-Handel</Typo.H2>
+            <Typo.H2>ALDI-Süd-HQ & Siemens Mintard - wo Mannesmann war, läuft heute der Welt-Handel</Typo.H2>
             <Typo.Paragraph>
-              Aus dem ehemaligen Stahl-Mülheim wurde Handels-Hauptstadt: ALDI Süd, Tengelmann und Brenntag steuern globale Konzernfunktionen, Siemens Energy in Mintard liefert Gasturbinen in alle Welt. Beide Welten brauchen End-to-End-Workflows – Lieferketten-Steuerung, ETO-Konfiguration, Service-Pipelines. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Aus dem ehemaligen Stahl-Mülheim wurde Handels-Hauptstadt: ALDI Süd, Tengelmann und Brenntag steuern globale Konzernfunktionen, Siemens Energy in Mintard liefert Gasturbinen in alle Welt. Beide Welten brauchen End-to-End-Workflows - Lieferketten-Steuerung, ETO-Konfiguration, Service-Pipelines. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -291,7 +291,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Mülheim heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -334,20 +334,20 @@ export default async function Page({
             Was passiert mit den Prozessen, wenn aus Stahl drei Konzern-HQs werden?
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Mülheim hat in 50 Jahren seine Stahlindustrie verloren – und gleich drei der größten Handelskonzerne Deutschlands neu aufgebaut. ALDI Süd steuert von hier aus 50.000 Beschäftigte weltweit, Tengelmann hält OBI, KiK und Trei, Brenntag handelt Chemikalien rund um den Globus. Siemens Energy boomt in Mintard, die Max-Planck-Institute ziehen Spin-offs an. Jede dieser Säulen hat eigene Prozess-Pains.
+            Mülheim hat in 50 Jahren seine Stahlindustrie verloren - und gleich drei der größten Handelskonzerne Deutschlands neu aufgebaut. ALDI Süd steuert von hier aus 50.000 Beschäftigte weltweit, Tengelmann hält OBI, KiK und Trei, Brenntag handelt Chemikalien rund um den Globus. Siemens Energy boomt in Mintard, die Max-Planck-Institute ziehen Spin-offs an. Jede dieser Säulen hat eigene Prozess-Pains.
           </IntroBox.Subline>
         </IntroBox>
       </ContentWrapper>
 
       {/* 3. ProsCons */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Mülheim hinter sich gelassen hat – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Mülheim hinter sich gelassen hat - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
                 title="Mannesmann-Konzern aufgelöst, Stahl- und Röhren-Industrie reduziert"
-                description="Mannesmann-Tradition mit Stahlrohrfertigung weitgehend Geschichte, SMS group als Anlagenbauer übernahm Teile – klassische Schwerindustrie schrumpfte massiv."
+                description="Mannesmann-Tradition mit Stahlrohrfertigung weitgehend Geschichte, SMS group als Anlagenbauer übernahm Teile - klassische Schwerindustrie schrumpfte massiv."
               />
               <ProsCons.Item
                 title="Bergbau-Erbe an Ruhr und Speldorf"
@@ -355,7 +355,7 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Tengelmann-Gruppe nach Kaiser's-Verkauf neu aufgestellt"
-                description="Verkauf von Kaiser's-Tengelmann an EDEKA und REWE 2017 – Holding musste sich neu erfinden, OBI/KiK/Trei als Schwerpunkte."
+                description="Verkauf von Kaiser's-Tengelmann an EDEKA und REWE 2017 - Holding musste sich neu erfinden, OBI/KiK/Trei als Schwerpunkte."
               />
               <ProsCons.Item
                 title="Klassischer Mittelstand zwischen Großkonzernen"
@@ -372,12 +372,12 @@ export default async function Page({
                 description="Globale Gasturbinen- und Generator-Produktion mit 1.200+ Auszubildenden, Wasserstoffhochlauf treibt das Wachstum."
               />
               <ProsCons.Item
-                title="Brenntag SE – Weltmarktführer Chemiehandel"
+                title="Brenntag SE - Weltmarktführer Chemiehandel"
                 description="Globaler Vertrieb von Industrie- und Spezialchemikalien, 800 MA in Mülheim, komplexe HSE- und Stammdaten-Workflows."
               />
               <ProsCons.Item
                 title="Zwei Max-Planck-Institute (Kohlenforschung & CEC)"
-                description="700 Beschäftigte, Spitzenforschung in chemischer Energiekonversion – Spin-offs und Deep-Tech-Startups als Wachstumsmotor."
+                description="700 Beschäftigte, Spitzenforschung in chemischer Energiekonversion - Spin-offs und Deep-Tech-Startups als Wachstumsmotor."
               />
             </ProsCons.Pros>
           </ProsCons>

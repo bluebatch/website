@@ -181,29 +181,29 @@ export async function generateMetadata({
 
 const bottropFaqs = [
   {
-    question: "MC-Bauchemie liefert in 40+ Länder – wie automatisieren wir REACH und Multi-Country-Compliance?",
+    question: "MC-Bauchemie liefert in 40+ Länder - wie automatisieren wir REACH und Multi-Country-Compliance?",
     answer:
-      "REACH, CLP, kundenspezifische Rezepturen und Sicherheitsdatenblätter in 40+ Sprachen sind hochkomplex. n8n koppelt SAP, EHS-Software, REACH-IT und länderspezifische Behörden-Schnittstellen – self-hosted und auditfest, mit zentraler SDB-Pflege.",
+      "REACH, CLP, kundenspezifische Rezepturen und Sicherheitsdatenblätter in 40+ Sprachen sind hochkomplex. n8n koppelt SAP, EHS-Software, REACH-IT und länderspezifische Behörden-Schnittstellen - self-hosted und auditfest, mit zentraler SDB-Pflege.",
   },
   {
-    question: "InnovationCity Ruhr / Wärmewende-Projekte – welche Workflows brauchen wir bei Stadtwerken Bottrop?",
+    question: "InnovationCity Ruhr / Wärmewende-Projekte - welche Workflows brauchen wir bei Stadtwerken Bottrop?",
     answer:
-      "Heizkostenverordnung, CO2-Bepreisung, KWKG-Förderung, Einspeisemanagement und Quartiers-IoT für die Wärmewende. n8n verbindet Energiemonitoring, Stadtwerks-ERP, Förderstellen und Bürger-Portale – wichtig im Modellstadt-Programm.",
+      "Heizkostenverordnung, CO2-Bepreisung, KWKG-Förderung, Einspeisemanagement und Quartiers-IoT für die Wärmewende. n8n verbindet Energiemonitoring, Stadtwerks-ERP, Förderstellen und Bürger-Portale - wichtig im Modellstadt-Programm.",
   },
   {
-    question: "Eurovia Teerbau & Bauwirtschaft – welche Workflows entlasten bei Fachkräftemangel?",
+    question: "Eurovia Teerbau & Bauwirtschaft - welche Workflows entlasten bei Fachkräftemangel?",
     answer:
-      "Projektkalkulationen, digitale Bautagebücher, Subunternehmer-Verträge und Aufmaß-/Abrechnung sind hochgradig manuell. n8n koppelt ERP, Bau-Apps und Aufmaß-Tools, AI-Agents extrahieren Lieferscheine und Stundennachweise – direkter Zeit-Hebel.",
+      "Projektkalkulationen, digitale Bautagebücher, Subunternehmer-Verträge und Aufmaß-/Abrechnung sind hochgradig manuell. n8n koppelt ERP, Bau-Apps und Aufmaß-Tools, AI-Agents extrahieren Lieferscheine und Stundennachweise - direkter Zeit-Hebel.",
   },
   {
-    question: "RAG-Ewigkeitsaufgaben (Grubenwasser, Bodenmonitoring) – wie automatisieren wir die Doku?",
+    question: "RAG-Ewigkeitsaufgaben (Grubenwasser, Bodenmonitoring) - wie automatisieren wir die Doku?",
     answer:
       "Grubenwasserhaltung, Pumpenbetrieb, Bodenmonitoring und Senkungs-Tracking müssen über Jahrzehnte dokumentiert werden. IoT-Sensorik wird via n8n in Audit-Trails geschrieben, Monitoring-Dashboards an die RAG-Stiftung gemeldet.",
   },
   {
-    question: "Strukturwandel-Förderung & Folgeprojekte – wie hält man Förder-Reporting im Griff?",
+    question: "Strukturwandel-Förderung & Folgeprojekte - wie hält man Förder-Reporting im Griff?",
     answer:
-      "Just Transition Fund, EU-Strukturfonds, NRW-Förderungen und Klimaschutzprojekte verlangen detaillierte Verwendungsnachweise. n8n strukturiert Mittelabfluss, Meilensteine und CO2-Wirkungs-Reports – auditfest gegenüber Bezirksregierung Münster und EU.",
+      "Just Transition Fund, EU-Strukturfonds, NRW-Förderungen und Klimaschutzprojekte verlangen detaillierte Verwendungsnachweise. n8n strukturiert Mittelabfluss, Meilensteine und CO2-Wirkungs-Reports - auditfest gegenüber Bezirksregierung Münster und EU.",
   },
 ];
 
@@ -234,14 +234,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Bottrop –{" "}
+                KI-Agentur in Bottrop -{" "}
                 von der letzten Steinkohle-Zeche zur{" "}
                 <BackgroundHero.Highlight>InnovationCity Ruhr</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Aus Prosper-Haniel als letzter deutscher Steinkohle-Zeche wurde Modellstadt für klimagerechten Stadtumbau, MC-Bauchemie-Welt-HQ und HRW-Campus. Wir automatisieren genau die Workflows, die ein InnovationCity-Standort braucht – REACH-Compliance, Förder-Reporting und Wärmewende-Daten.
+            Aus Prosper-Haniel als letzter deutscher Steinkohle-Zeche wurde Modellstadt für klimagerechten Stadtumbau, MC-Bauchemie-Welt-HQ und HRW-Campus. Wir automatisieren genau die Workflows, die ein InnovationCity-Standort braucht - REACH-Compliance, Förder-Reporting und Wärmewende-Daten.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Bottrop besprechen</ContactButton>
@@ -286,7 +286,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Bottrop heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -324,12 +324,12 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/bottrop.jpg"
-            alt="InnovationCity Ruhr Bottrop – Modellstadt für klimagerechten Stadtumbau"
+            alt="InnovationCity Ruhr Bottrop - Modellstadt für klimagerechten Stadtumbau"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>InnovationCity Ruhr – wo Prosper-Haniel war, wird heute klimaneutral saniert</Typo.H2>
+            <Typo.H2>InnovationCity Ruhr - wo Prosper-Haniel war, wird heute klimaneutral saniert</Typo.H2>
             <Typo.Paragraph>
-              Aus dem ehemaligen Bergbau-Standort wurde bundesweit beachtetes Modellprojekt für klimagerechten Stadtumbau – mit erreichtem CO2-Ziel von -50% bis 2020. Quartiers- und Energiewende-Management bedeutet: Heizkostenverordnung, KWKG-Förderung, Quartiers-IoT, Bürger-Portale. Daneben hält MC-Bauchemie globale REACH-Compliance, Eurovia baut Straßen, RAG dokumentiert Ewigkeitsaufgaben. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Aus dem ehemaligen Bergbau-Standort wurde bundesweit beachtetes Modellprojekt für klimagerechten Stadtumbau - mit erreichtem CO2-Ziel von -50% bis 2020. Quartiers- und Energiewende-Management bedeutet: Heizkostenverordnung, KWKG-Förderung, Quartiers-IoT, Bürger-Portale. Daneben hält MC-Bauchemie globale REACH-Compliance, Eurovia baut Straßen, RAG dokumentiert Ewigkeitsaufgaben. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -342,17 +342,17 @@ export default async function Page({
 
       {/* 3. ProsCons */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Bottrop hinter sich gelassen hat – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Bottrop hinter sich gelassen hat - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
               <ProsCons.Item
                 title="Prosper-Haniel geschlossen Dezember 2018"
-                description="Letzte deutsche Steinkohlezeche endgültig stillgelegt – Ende einer 200-jährigen Industrie-Ära mit komplettem Wegfall der Bergbau-Wertschöpfungskette."
+                description="Letzte deutsche Steinkohlezeche endgültig stillgelegt - Ende einer 200-jährigen Industrie-Ära mit komplettem Wegfall der Bergbau-Wertschöpfungskette."
               />
               <ProsCons.Item
                 title="RAG-Ewigkeitsaufgaben binden Region langfristig"
-                description="Grubenwasserhaltung, Bodenmonitoring, Pumpenbetrieb und Senkungs-Tracking müssen über Jahrzehnte fortgeführt werden – Dauer-Belastung für Region und RAG-Stiftung."
+                description="Grubenwasserhaltung, Bodenmonitoring, Pumpenbetrieb und Senkungs-Tracking müssen über Jahrzehnte fortgeführt werden - Dauer-Belastung für Region und RAG-Stiftung."
               />
               <ProsCons.Item
                 title="Klassische Brauerei-Tradition unter Druck"
@@ -360,17 +360,17 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Mittelstand mit Excel-Backoffice und Inhaberführung"
-                description="Wie überall im Ruhrgebiet sind Bottroper Mittelständler oft inhabergeführt mit Excel-getriebenen Prozessen – Digitalisierungs-Rückstand und Nachfolge-Risiken."
+                description="Wie überall im Ruhrgebiet sind Bottroper Mittelständler oft inhabergeführt mit Excel-getriebenen Prozessen - Digitalisierungs-Rückstand und Nachfolge-Risiken."
               />
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
-                title="InnovationCity Ruhr – CO2-Ziel -50% bis 2020 erreicht"
+                title="InnovationCity Ruhr - CO2-Ziel -50% bis 2020 erreicht"
                 description="Modellstadt für klimagerechten Stadtumbau, bundesweit beachtetes Vorzeigeprojekt mit Folgeprojekten zu zirkulärer Wirtschaft, Smart-City und IoT."
               />
               <ProsCons.Item
-                title="MC-Bauchemie (2.500 MA) – globaler Bauchemie-Spezialist"
-                description="Liefert in 40+ Länder, Spezial- und Beton-Technologie – einer der größten Familien-Mittelständler der Bauchemie-Branche."
+                title="MC-Bauchemie (2.500 MA) - globaler Bauchemie-Spezialist"
+                description="Liefert in 40+ Länder, Spezial- und Beton-Technologie - einer der größten Familien-Mittelständler der Bauchemie-Branche."
               />
               <ProsCons.Item
                 title="Stadtwerke Bottrop & Hochschule Ruhr West"
@@ -378,7 +378,7 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Knappschaftskrankenhaus + Diakonisches Werk"
-                description="Beide mit ca. 1.200 Beschäftigten – Bergbau-Erbe als Klinikversorger und größter Sozialwirtschafts-Arbeitgeber der Region."
+                description="Beide mit ca. 1.200 Beschäftigten - Bergbau-Erbe als Klinikversorger und größter Sozialwirtschafts-Arbeitgeber der Region."
               />
             </ProsCons.Pros>
           </ProsCons>

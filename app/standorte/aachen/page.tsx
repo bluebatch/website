@@ -187,25 +187,25 @@ const aachenFaqs = [
   {
     question: "Arbeitet ihr mit RWTH-Spin-offs zusammen?",
     answer:
-      "Ja. Aachen ist Deutschlands stärkster Spin-off-Standort. Wir unterstützen junge Tech-Unternehmen aus dem RWTH-Ökosystem bei der Skalierung von Onboarding, CRM, Förderantragsmanagement und Investor-Reporting. n8n wächst mit, vom Pre-Seed bis zur Series A – ohne dass eigene DevOps-Teams nötig sind.",
+      "Ja. Aachen ist Deutschlands stärkster Spin-off-Standort. Wir unterstützen junge Tech-Unternehmen aus dem RWTH-Ökosystem bei der Skalierung von Onboarding, CRM, Förderantragsmanagement und Investor-Reporting. n8n wächst mit, vom Pre-Seed bis zur Series A - ohne dass eigene DevOps-Teams nötig sind.",
   },
   {
-    question: "Ford-Werk FRC und FEV – wie hilft n8n bei Engineering-Workflows?",
+    question: "Ford-Werk FRC und FEV - wie hilft n8n bei Engineering-Workflows?",
     answer:
       "Datenflüsse zwischen CAD/PLM/ERP, Versuchsdaten aus Prüfständen, ASPICE-Doku, IATF-16949-Konformität und Lieferanten-Engineering-Daten werden mit n8n orchestriert. Wir kennen die F&E-getriebene Wertschöpfungskette in Aachen.",
   },
   {
-    question: "Lindt, Lambertz, Zentis – passt n8n zur Lebensmittelindustrie?",
+    question: "Lindt, Lambertz, Zentis - passt n8n zur Lebensmittelindustrie?",
     answer:
       "Ja. IFS Food, BRC, EU-Verordnung 178/2002, Chargenrückverfolgung, Lieferanten-Audits und mehrsprachige Kennzeichnung sind klassische n8n-Use-Cases. Wir bauen Workflows, die GxP-/IFS-Auditoren akzeptieren.",
   },
   {
-    question: "Grünenthal – wie deckt n8n GxP/EMA-Compliance ab?",
+    question: "Grünenthal - wie deckt n8n GxP/EMA-Compliance ab?",
     answer:
-      "Pharmakovigilanz, AEs/SAEs, eCRF-Datenflüsse, GMP-Audits, Sortenschutz und Studien-Workflows werden auditfest abgebildet. Wir docken an Veeva Vault, ArisGlobal LifeSphere und SAP an – mit voller Mandantentrennung.",
+      "Pharmakovigilanz, AEs/SAEs, eCRF-Datenflüsse, GMP-Audits, Sortenschutz und Studien-Workflows werden auditfest abgebildet. Wir docken an Veeva Vault, ArisGlobal LifeSphere und SAP an - mit voller Mandantentrennung.",
   },
   {
-    question: "Wir arbeiten grenzüberschreitend mit NL und BE – wie hilft n8n?",
+    question: "Wir arbeiten grenzüberschreitend mit NL und BE - wie hilft n8n?",
     answer:
       "Mehrsprachige Dokumente, Intrastat-Meldungen, unterschiedliche MwSt-Regime, Zollabwicklung und länderspezifische Etikettierung werden in n8n-Pipelines abgebildet. Dreiländereck-Compliance ist ein klassisches Aachener Thema.",
   },
@@ -243,7 +243,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Aachen –{" "}
+                KI-Agentur in Aachen -{" "}
                 RWTH, Automotive-Forschung und{" "}
                 <BackgroundHero.Highlight>Dreiländereck-Mittelstand</BackgroundHero.Highlight>
               </>
@@ -251,7 +251,7 @@ export default async function Page({
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
             RWTH Aachen, Ford Research Center, FEV, Grünenthal, Lindt,
-            Universitätsklinikum, Fraunhofer ILT/IPT/IME – Aachen ist
+            Universitätsklinikum, Fraunhofer ILT/IPT/IME - Aachen ist
             Deutschlands stärkster Spin-off-Standort und Tor zu Benelux.
             Wir bauen n8n-Workflows für Engineering-Daten, KI-Forschungstransfer,
             Pharma-Compliance und grenzüberschreitende Lieferketten.
@@ -287,18 +287,18 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/aachen.jpg"
-            alt="Aachen RWTH und Dreiländereck-Lieferketten – n8n-Workflows für Forschung und Mittelstand"
+            alt="Aachen RWTH und Dreiländereck-Lieferketten - n8n-Workflows für Forschung und Mittelstand"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Dreiländereck und Spin-off-Welle – Aachen skaliert mit n8n</Typo.H2>
+            <Typo.H2>Dreiländereck und Spin-off-Welle - Aachen skaliert mit n8n</Typo.H2>
             <Typo.Paragraph>
               Aachener Unternehmen haben oft Niederlassungen in NL und BE.
               Multilinguale Dokumente, Intrastat-Meldungen, MwSt-Regime,
-              Zollabwicklung – das ist tägliches Geschäft. Gleichzeitig
+              Zollabwicklung - das ist tägliches Geschäft. Gleichzeitig
               entstehen aus der RWTH kontinuierlich neue Spin-offs, die
               ohne Backoffice-Personal schnell professionalisieren müssen.
-              Wir helfen beiden Welten – etablierten Mittelständlern und
-              Hyperwachstums-Startups – mit den gleichen n8n-Bausteinen.
+              Wir helfen beiden Welten - etablierten Mittelständlern und
+              Hyperwachstums-Startups - mit den gleichen n8n-Bausteinen.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -321,7 +321,7 @@ export default async function Page({
             zur Automotive-F&E-Drehscheibe gemacht, Grünenthal forscht im
             Schmerz-Bereich, die Lebensmittelindustrie (Lindt, Lambertz,
             Zentis) produziert hier in höchster Reglementierungsdichte.
-            Hinzu kommt die Dreiländereck-Lage – Niederländer und Belgier
+            Hinzu kommt die Dreiländereck-Lage - Niederländer und Belgier
             sind Pflicht-Partner, nicht Optionen.
           </Typo.Paragraph>
         </IntroBox>
@@ -332,7 +332,7 @@ export default async function Page({
         <Typo.H2>Aachener Cluster, die Automatisierung erzwingen</Typo.H2>
         <Typo.Paragraph>
           RWTH-Spin-offs steuern anders als Lindt, Ford-FRC anders als
-          Grünenthal. Wir bauen für jeden Cluster die passenden n8n-Bausteine –
+          Grünenthal. Wir bauen für jeden Cluster die passenden n8n-Bausteine -
           vom Förder-Antrag bis zur Pharmakovigilanz-Pipeline.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
@@ -340,19 +340,19 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <GraduationCap className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>RWTH Aachen – größte technische Uni Deutschlands</Typo.H3>
+            <Typo.H3>RWTH Aachen - größte technische Uni Deutschlands</Typo.H3>
             <Typo.Paragraph>
               13.000 Beschäftigte, einer der größten Technologieparks Europas.
               Wir bauen Workflows für Drittmittel-Reporting an BMBF, EU
               (Horizon), DFG, GRC, Patentverwaltung, KASTEL/Helmholtz-Cluster
-              und Spin-off-Begleitung – vom Pre-Seed bis zur Series A.
+              und Spin-off-Begleitung - vom Pre-Seed bis zur Series A.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Car className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Ford Research Center, FEV – Automotive-F&amp;E</Typo.H3>
+            <Typo.H3>Ford Research Center, FEV - Automotive-F&amp;E</Typo.H3>
             <Typo.Paragraph>
               Ford hat von Produktion auf Entwicklung umgestellt, FEV
               entwickelt Antriebe global. CAD/PLM/ERP-Datenflüsse,
@@ -364,11 +364,11 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <FlaskConical className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Grünenthal – Pharma &amp; Schmerztherapie</Typo.H3>
+            <Typo.H3>Grünenthal - Pharma &amp; Schmerztherapie</Typo.H3>
             <Typo.Paragraph>
               4.400 Beschäftigte am Aachener Standort. Pharmakovigilanz
               (AEs/SAEs), eCRF-Daten, GMP-Audits, Sortenschutz und
-              Studien-Workflows werden mit n8n und Veeva Vault verzahnt –
+              Studien-Workflows werden mit n8n und Veeva Vault verzahnt -
               auditfest und mit GxP-Konformität.
             </Typo.Paragraph>
           </SimpleCard>
@@ -376,7 +376,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cpu className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>RWTH Aachen Campus – KI-, Photonik- und H2-Cluster</Typo.H3>
+            <Typo.H3>RWTH Aachen Campus - KI-, Photonik- und H2-Cluster</Typo.H3>
             <Typo.Paragraph>
               Helmholtz-Cluster für Wasserstoffwirtschaft (HC-H2), Cluster
               für Smart Logistik, Produktionstechnik, E-Mobility und
@@ -388,12 +388,12 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cog className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Lindt, Lambertz, Zentis – Lebensmittelindustrie</Typo.H3>
+            <Typo.H3>Lindt, Lambertz, Zentis - Lebensmittelindustrie</Typo.H3>
             <Typo.Paragraph>
               IFS Food, BRC, EU-Verordnung 178/2002, Chargenrückverfolgung
               und Multi-Sprachen-Kennzeichnung erzeugen enormen
               Dokumentationsaufwand. Wir bauen Workflows, die GxP- und
-              IFS-Auditoren akzeptieren – inklusive Lieferanten-Audits.
+              IFS-Auditoren akzeptieren - inklusive Lieferanten-Audits.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">

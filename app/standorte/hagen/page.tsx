@@ -186,9 +186,9 @@ export async function generateMetadata({
 
 const hagenFaqs = [
   {
-    question: "Bilstein, Wälzholz, Hagener Feinstahl – wie laufen CBAM und Werkstoffdaten in der Kaltwalz-Industrie?",
+    question: "Bilstein, Wälzholz, Hagener Feinstahl - wie laufen CBAM und Werkstoffdaten in der Kaltwalz-Industrie?",
     answer:
-      "Kaltband- und Drahtproduzenten brauchen lückenlose CO2-Bilanzierung für CBAM und ESRS-Reporting. n8n verbindet Energiezähler, Stromherkunftsnachweise, Wareneingang und PLM zu einer Pipeline und meldet automatisch an DEHSt und Kunden – inkl. EN 10204-Zeugnis-Generierung.",
+      "Kaltband- und Drahtproduzenten brauchen lückenlose CO2-Bilanzierung für CBAM und ESRS-Reporting. n8n verbindet Energiezähler, Stromherkunftsnachweise, Wareneingang und PLM zu einer Pipeline und meldet automatisch an DEHSt und Kunden - inkl. EN 10204-Zeugnis-Generierung.",
   },
   {
     question: "LkSG-Sorgfaltspflichten für Mittelstand: wie automatisieren wir Lieferanten-Audits?",
@@ -196,17 +196,17 @@ const hagenFaqs = [
       "Auch Hagener Mittelständler unter 1.000 MA werden als Tier-2-Zulieferer vom OEM in die LkSG-Pflicht gezogen. n8n orchestriert Lieferanten-Self-Assessments, Risiko-Scoring, Eskalations-Workflows und das gesetzlich verlangte Beschwerdeverfahren.",
   },
   {
-    question: "FernUni Hagen mit 70.000+ Studierenden – welche Verwaltungs-Workflows lohnen sich?",
+    question: "FernUni Hagen mit 70.000+ Studierenden - welche Verwaltungs-Workflows lohnen sich?",
     answer:
-      "Anmeldungen, Prüfungsverwaltung, Klausurversand, Drittmittel-Reporting und Lernplattform-Integration. n8n verbindet Campus-Management (z.B. CampusOnline), Moodle, SAP HCM und BMBF-Schnittstellen – wichtig bei der Skalierung im Fernstudium.",
+      "Anmeldungen, Prüfungsverwaltung, Klausurversand, Drittmittel-Reporting und Lernplattform-Integration. n8n verbindet Campus-Management (z.B. CampusOnline), Moodle, SAP HCM und BMBF-Schnittstellen - wichtig bei der Skalierung im Fernstudium.",
   },
   {
-    question: "Brandt Zwieback und Lebensmittelproduktion – wie digitalisieren wir IFS Food und HACCP?",
+    question: "Brandt Zwieback und Lebensmittelproduktion - wie digitalisieren wir IFS Food und HACCP?",
     answer:
       "Allergen-Management, Chargenrückverfolgung, IFS-Food-Audits und Reinigungsnachweise sind in der Backwaren-Produktion zeitkritisch. n8n koppelt MES, Wareneingang und QM zu einer Pipeline und generiert auditfeste Nachweise auf Knopfdruck.",
   },
   {
-    question: "ENERVIE / Mark-E als Stadtwerk und KRITIS-Versorger – was ist möglich?",
+    question: "ENERVIE / Mark-E als Stadtwerk und KRITIS-Versorger - was ist möglich?",
     answer:
       "Marktkommunikation (MaKo 2024), Smart-Meter-Rollout, BNetzA-Reporting und KRITIS-Meldepflichten ans BSI. n8n betreiben wir self-hosted, BSI-Grundschutz-konform und mit Trennung zwischen IT/OT.",
   },
@@ -239,14 +239,14 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Hagen –{" "}
+                KI-Agentur in Hagen -{" "}
                 von der Drahtmetropole zur{" "}
                 <BackgroundHero.Highlight>Fern-Uni-Verwaltung</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
-            Hagen ist deutsche Drahthauptstadt, Brandt-Sitz und Heim der einzigen staatlichen FernUni. Wir automatisieren genau die Workflows, die ein Tor zum Sauerland braucht – CBAM/LkSG im Stahl, IFS Food in der Lebensmittelproduktion und Massenverwaltung im Fernstudium.
+            Hagen ist deutsche Drahthauptstadt, Brandt-Sitz und Heim der einzigen staatlichen FernUni. Wir automatisieren genau die Workflows, die ein Tor zum Sauerland braucht - CBAM/LkSG im Stahl, IFS Food in der Lebensmittelproduktion und Massenverwaltung im Fernstudium.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Automatisierung für Hagen besprechen</ContactButton>
@@ -277,12 +277,12 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/hagen.jpg"
-            alt="Drahtindustrie und FernUni in Hagen – Transformation"
+            alt="Drahtindustrie und FernUni in Hagen - Transformation"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Kaltband & Fern-Campus – zwei Welten, gleiche Workflow-DNA</Typo.H2>
+            <Typo.H2>Kaltband & Fern-Campus - zwei Welten, gleiche Workflow-DNA</Typo.H2>
             <Typo.Paragraph>
-              Wälzholz, Bilstein und Hagener Feinstahl walzen Stahl in Mikrometer-Genauigkeit. Die FernUni betreut mehr Studierende als die meisten Präsenzunis Deutschlands. Beide Welten brauchen End-to-End-Workflows: Energie-/CO2-Daten, Audit-Trails, automatische Reports an Behörden und Kunden. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+              Wälzholz, Bilstein und Hagener Feinstahl walzen Stahl in Mikrometer-Genauigkeit. Die FernUni betreut mehr Studierende als die meisten Präsenzunis Deutschlands. Beide Welten brauchen End-to-End-Workflows: Energie-/CO2-Daten, Audit-Trails, automatische Reports an Behörden und Kunden. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
               <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
@@ -297,7 +297,7 @@ export default async function Page({
       <ContentWrapper>
         <Typo.H2>Wo n8n in Hagen heute den Hebel ansetzt</Typo.H2>
         <Typo.Paragraph>
-          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+          Drei Cluster, drei sehr unterschiedliche Pain-Points - aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
         </Typo.Paragraph>
         <SimpleGrid cols={3}>
           <SimpleCard align="left">
@@ -345,9 +345,9 @@ export default async function Page({
         </IntroBox>
       </ContentWrapper>
 
-      {/* 3. ProsCons – Was war, was kommt */}
+      {/* 3. ProsCons - Was war, was kommt */}
       <ContentWrapper colorScheme="gray-light">
-        <Typo.H2>Was Hagen hinter sich lässt – und wo es jetzt steht</Typo.H2>
+        <Typo.H2>Was Hagen hinter sich lässt - und wo es jetzt steht</Typo.H2>
         <div className="mt-8">
           <ProsCons>
             <ProsCons.Cons>
@@ -357,7 +357,7 @@ export default async function Page({
               />
               <ProsCons.Item
                 title="Klassische Schwerindustrie schrumpft"
-                description="Stahlverarbeiter und Maschinenbauer im südlichen Ruhrgebiet bauen ab – über Jahrzehnte gewachsene Mittelstands-Stellen verschwinden."
+                description="Stahlverarbeiter und Maschinenbauer im südlichen Ruhrgebiet bauen ab - über Jahrzehnte gewachsene Mittelstands-Stellen verschwinden."
               />
               <ProsCons.Item
                 title="A45-Talbrücken-Sperrung als Logistik-Bremse"
@@ -370,20 +370,20 @@ export default async function Page({
             </ProsCons.Cons>
             <ProsCons.Pros>
               <ProsCons.Item
-                title="C.D. Wälzholz & Bilstein Group – Weltklasse-Mittelstand im Kaltband"
-                description="Wälzholz mit über 2.500 MA weltweit, Bilstein-Gruppe als deutscher Kaltwalz-Champion – beide investieren in CO2-arme Stahlsorten und digitale Produktion."
+                title="C.D. Wälzholz & Bilstein Group - Weltklasse-Mittelstand im Kaltband"
+                description="Wälzholz mit über 2.500 MA weltweit, Bilstein-Gruppe als deutscher Kaltwalz-Champion - beide investieren in CO2-arme Stahlsorten und digitale Produktion."
               />
               <ProsCons.Item
-                title="FernUniversität in Hagen – einzige staatliche Fernuni Deutschlands"
-                description="70.000+ Studierende, 2.000+ Mitarbeitende – ein digital-natives Massensystem mit gewaltigem Workflow-Bedarf."
+                title="FernUniversität in Hagen - einzige staatliche Fernuni Deutschlands"
+                description="70.000+ Studierende, 2.000+ Mitarbeitende - ein digital-natives Massensystem mit gewaltigem Workflow-Bedarf."
               />
               <ProsCons.Item
-                title="Brandt Zwieback – deutscher Marktführer (957 MA)"
-                description="Familienunternehmen mit konsequenter Innovation – Marktführer Zwieback, neue Riegel- und Snack-Marken, IFS-Food-Audit-Champion."
+                title="Brandt Zwieback - deutscher Marktführer (957 MA)"
+                description="Familienunternehmen mit konsequenter Innovation - Marktführer Zwieback, neue Riegel- und Snack-Marken, IFS-Food-Audit-Champion."
               />
               <ProsCons.Item
                 title="ENERVIE / Mark-E als regionaler Energie-Anker"
-                description="Stadtwerk mit Konzernstruktur, MaKo 2024, Smart-Meter-Rollout und KRITIS-Pflichten – moderner Versorger im Wandel."
+                description="Stadtwerk mit Konzernstruktur, MaKo 2024, Smart-Meter-Rollout und KRITIS-Pflichten - moderner Versorger im Wandel."
               />
             </ProsCons.Pros>
           </ProsCons>

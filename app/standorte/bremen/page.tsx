@@ -183,29 +183,29 @@ export async function generateMetadata({
 
 const bremenFaqs = [
   {
-    question: "Mercedes-Werk Bremen baut C-Klasse, GLC, EQE SUV – wie passt n8n zu Zulieferern?",
+    question: "Mercedes-Werk Bremen baut C-Klasse, GLC, EQE SUV - wie passt n8n zu Zulieferern?",
     answer:
       "JIT/JIS-Abrufe, EDI/VDA-Belege, Qualitätsdokumentation (IATF 16949), APQP-Phasen und Catena-X-Datenraum-Anbindung sind n8n-Standard. Wir kennen die typischen Schnittstellen zu SAP-Mandanten, Mercedes-Lieferantenportalen und Jaggaer.",
   },
   {
-    question: "Airbus, ArianeGroup, OHB – passt n8n zu Aerospace-Compliance?",
+    question: "Airbus, ArianeGroup, OHB - passt n8n zu Aerospace-Compliance?",
     answer:
       "Ja. EN 9100, NADCAP, ITAR, ESA-Standards, Konfigurationsmanagement und Lieferanten-Audits sind extrem dokumentationsintensiv. Wir bauen Workflows, die diese Pflichten reduzieren und ArianeGroup-Kostenziele bei Ariane 6 unterstützen.",
   },
   {
-    question: "Hafen Bremerhaven – können wir Zoll- und Yard-Workflows automatisieren?",
+    question: "Hafen Bremerhaven - können wir Zoll- und Yard-Workflows automatisieren?",
     answer:
-      "Ja. ATLAS, NCTS, Reederei-Schnittstellen, Yard-Management-Systeme (CTB, Eurogate), CBAM-Reporting und Automobilumschlag-Slots werden in n8n End-to-End orchestriert – inklusive multilingualer Frachtkommunikation.",
+      "Ja. ATLAS, NCTS, Reederei-Schnittstellen, Yard-Management-Systeme (CTB, Eurogate), CBAM-Reporting und Automobilumschlag-Slots werden in n8n End-to-End orchestriert - inklusive multilingualer Frachtkommunikation.",
   },
   {
-    question: "ArcelorMittal stellt auf grünen Stahl um – wie helfen n8n und KI?",
+    question: "ArcelorMittal stellt auf grünen Stahl um - wie helfen n8n und KI?",
     answer:
       "CO2-Tracking, Herkunftsnachweise nach EU-Taxonomie, Wasserstoff-Logistik, CBAM-Datenpipelines und Förderdokumentation für Transformations-Programme sind klassische n8n-Felder. Wir docken an SAP, Klimaschutz-Tools und BAFA-Schnittstellen an.",
   },
   {
-    question: "Atlas Elektronik, Lürssen – wie deckt n8n Wehrtechnik-Compliance ab?",
+    question: "Atlas Elektronik, Lürssen - wie deckt n8n Wehrtechnik-Compliance ab?",
     answer:
-      "BAFA-Anbindung, Dual-Use-Prüfungen, Geheimschutz, Sicherheitsüberprüfungen, langfristige Wartungs- und Ersatzteildokumentation für Marine-Aufträge werden auditfest abgebildet – mit klarer Mandantentrennung pro Projekt.",
+      "BAFA-Anbindung, Dual-Use-Prüfungen, Geheimschutz, Sicherheitsüberprüfungen, langfristige Wartungs- und Ersatzteildokumentation für Marine-Aufträge werden auditfest abgebildet - mit klarer Mandantentrennung pro Projekt.",
   },
   {
     question: "Welche Phasen erwarten uns bei einer Implementierung?",
@@ -241,7 +241,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI-Agentur in Bremen –{" "}
+                KI-Agentur in Bremen -{" "}
                 Mercedes, Airbus, Raumfahrt und{" "}
                 <BackgroundHero.Highlight>Hafenwirtschaft</BackgroundHero.Highlight>
               </>
@@ -249,7 +249,7 @@ export default async function Page({
           </BackgroundHero.Headline>
           <BackgroundHero.Description>
             Mercedes-Benz, Airbus, ArianeGroup, OHB, BLG Logistics, Beck&apos;s,
-            ArcelorMittal, Atlas Elektronik – Bremen ist mit 55,2 % Exportquote
+            ArcelorMittal, Atlas Elektronik - Bremen ist mit 55,2 % Exportquote
             das exportstärkste Bundesland Deutschlands. Wir bauen
             n8n-Workflows für Tier-1-Zulieferer, Aerospace-Compliance,
             Hafenwirtschaft und maritime Wehrtechnik.
@@ -326,10 +326,10 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/logistics-hub.jpg"
-            alt="Bremerhaven Hafen, Airbus Bremen und Mercedes-Werk – n8n-Workflows für Bremens Industrie"
+            alt="Bremerhaven Hafen, Airbus Bremen und Mercedes-Werk - n8n-Workflows für Bremens Industrie"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>55,2 % Exportquote – Bremen lebt von durchgängigen Workflows</Typo.H2>
+            <Typo.H2>55,2 % Exportquote - Bremen lebt von durchgängigen Workflows</Typo.H2>
             <Typo.Paragraph>
               Bremen ist das exportstärkste Bundesland Deutschlands. Jede
               Tonne Stahl, jede C-Klasse, jeder Airbus-Rumpf und jeder
@@ -353,14 +353,14 @@ export default async function Page({
         <Typo.Paragraph>
           Mercedes-Bremen steuert anders als ArianeGroup, BLG anders als
           ArcelorMittal. Wir bauen für jeden Cluster die passenden
-          n8n-Bausteine – vom Catena-X-Konnektor bis zur NCTS-Zollanmeldung.
+          n8n-Bausteine - vom Catena-X-Konnektor bis zur NCTS-Zollanmeldung.
         </Typo.Paragraph>
         <SimpleGrid cols={2}>
           <SimpleCard align="left">
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Car className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Mercedes-Benz Werk Bremen – C-Klasse, GLC, EQE SUV</Typo.H3>
+            <Typo.H3>Mercedes-Benz Werk Bremen - C-Klasse, GLC, EQE SUV</Typo.H3>
             <Typo.Paragraph>
               13.000 Beschäftigte, größter Mercedes-Standort nach Sindelfingen.
               Wir bauen Workflows für JIT/JIS-Sequenzierung, EDI/VDA-Belege,
@@ -372,19 +372,19 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Plane className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Airbus, ArianeGroup, OHB – Luft- und Raumfahrt</Typo.H3>
+            <Typo.H3>Airbus, ArianeGroup, OHB - Luft- und Raumfahrt</Typo.H3>
             <Typo.Paragraph>
               12.000 Beschäftigte in 140 Firmen, Europas zweitwichtigster
               Raumfahrt-Hub. EN 9100, NADCAP, ITAR und ESA-Standards,
               Konfigurationsmanagement und Lieferanten-Audits werden
-              automatisiert – inklusive Kostendruck-Workflows für Ariane 6.
+              automatisiert - inklusive Kostendruck-Workflows für Ariane 6.
             </Typo.Paragraph>
           </SimpleCard>
           <SimpleCard align="left">
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Truck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>BLG Logistics, Eurogate – Hafen und Containerumschlag</Typo.H3>
+            <Typo.H3>BLG Logistics, Eurogate - Hafen und Containerumschlag</Typo.H3>
             <Typo.Paragraph>
               6.500 BLG-Beschäftigte, Bremerhaven viertgrößter Containerhafen
               Europas, über 2 Mio. Fahrzeuge pro Jahr. ATLAS-/NCTS-Zoll,
@@ -396,7 +396,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <Cog className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>ArcelorMittal Bremen – grüner Stahl mit Wasserstoff</Typo.H3>
+            <Typo.H3>ArcelorMittal Bremen - grüner Stahl mit Wasserstoff</Typo.H3>
             <Typo.Paragraph>
               3.300 Beschäftigte, Hochofen und Stahlwerk in Transformation.
               CO2-Tracking, Herkunftsnachweise nach EU-Taxonomie,
@@ -408,7 +408,7 @@ export default async function Page({
             <SimpleCard.Icon color="white" background="primary-gradient">
               <ShieldCheck className="size-10" strokeWidth={1.5} />
             </SimpleCard.Icon>
-            <Typo.H3>Atlas Elektronik (TKMS), Lürssen – maritime Wehrtechnik</Typo.H3>
+            <Typo.H3>Atlas Elektronik (TKMS), Lürssen - maritime Wehrtechnik</Typo.H3>
             <Typo.Paragraph>
               Marinetechnik, U-Boot-Elektronik, Yachtbau, Marineschiffbau.
               BAFA-Exportkontrolle, Dual-Use-Prüfung, Geheimschutz,
@@ -436,10 +436,10 @@ export default async function Page({
         <BoundlessImageCard imagePosition="right">
           <BoundlessImageCard.Image
             src="/images/cities/logistics-hub.jpg"
-            alt="Bremerhaven Containerhafen – zweitgrößter Containerumschlag Deutschlands"
+            alt="Bremerhaven Containerhafen - zweitgrößter Containerumschlag Deutschlands"
           />
           <BoundlessImageCard.Content>
-            <Typo.H2>Bremerhaven &amp; Bremen-Hafen – zweitgrößter Containerhafen Deutschlands</Typo.H2>
+            <Typo.H2>Bremerhaven &amp; Bremen-Hafen - zweitgrößter Containerhafen Deutschlands</Typo.H2>
             <Typo.Paragraph>
               4,6 Mio. TEU jährlich, größter Autoverladehafen Europas mit über
               1,7 Mio. Fahrzeugen, Eurogate-Terminals und BLG Logistics als
@@ -447,7 +447,7 @@ export default async function Page({
               undenkbar ist. Wir bauen Workflows, die Zollabwicklung (ATLAS),
               Hafenbahn-Slots, EDIFACT-COPRAR-Meldungen, Lieferkettenpflichten
               nach LkSG und CO2-Reporting für Reedereien wie Hapag-Lloyd
-              orchestrieren – auditfest und durchgängig.
+              orchestrieren - auditfest und durchgängig.
             </Typo.Paragraph>
           </BoundlessImageCard.Content>
         </BoundlessImageCard>
