@@ -90,7 +90,11 @@ export default function Page() {
               </Link>
               . In diesem Beitrag geht es ausschließlich um die
               Kostenfrage: Was ist gratis, was kostet, und wo lauern
-              versteckte Posten.
+              versteckte Posten. Die vollständige Tarif-Übersicht mit
+              TCO-Rechnungen und Skalierungs-Schwellen gibt es im{" "}
+              <Link href="/blog/n8n-pricing-guide" className="text-primary-600 hover:underline">
+                n8n Pricing Guide
+              </Link>.
             </Typo.Paragraph>
           </div>
 

@@ -153,13 +153,13 @@ export default function Page() {
               Die Break-even-Rechnung hängt sehr stark vom eigenen Workflow-Mix
               ab. Eine grobe Faustregel: Ab etwa 30 gleichzeitig aktiven
               Workflows und ein paar hunderttausend Executions pro Monat wird
-              Self-Hosting wirtschaftlich. Alle Tarife und versteckten Kosten
-              erklären wir in unserem{" "}
+              Self-Hosting wirtschaftlich. Die genaue Aufschlüsselung aller
+              Cloud-Tarife und TCO-Rechnungen gibt es im{" "}
               <Link
-                href="/blog/ist-n8n-kostenlos"
+                href="/blog/n8n-pricing-guide"
                 className="text-primary-600 hover:underline"
               >
-                Beitrag zu den n8n-Kosten
+                n8n Pricing Guide
               </Link>
               .
             </Typo.Paragraph>

@@ -201,12 +201,12 @@ export default function Page() {
               Self-Hosted zweistellig. Wer den Pricing-Aspekt im Detail
               durchrechnen will, findet im{" "}
               <Link
-                href="/blog/make-vs-n8n-vergleich"
+                href="/blog/n8n-pricing-guide"
                 className="text-primary-500 hover:underline"
               >
-                Make-vs-n8n-Vergleich
+                n8n Pricing Guide
               </Link>{" "}
-              eine ähnliche Logik mit konkreten Zahlen.
+              alle Cloud-Tarife, TCO-Rechnungen und Skalierungs-Schwellen.
             </Typo.Paragraph>
           </div>
 
