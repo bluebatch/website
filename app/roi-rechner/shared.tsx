@@ -2,8 +2,34 @@
 
 import { useState, useEffect, useCallback, ReactNode } from "react";
 import { motion } from "framer-motion";
-import { Link as LinkIcon, ArrowLeft } from "lucide-react";
+import { Link as LinkIcon, ArrowLeft, Plus, Minus } from "lucide-react";
 import Link from "next/link";
+
+// --- Stepper Buttons (+/- next to value) ---
+
+function StepperButton({
+  onClick,
+  disabled,
+  children,
+  ariaLabel,
+}: {
+  onClick: () => void;
+  disabled?: boolean;
+  children: ReactNode;
+  ariaLabel: string;
+}) {
+  return (
+    <button
+      type="button"
+      aria-label={ariaLabel}
+      onClick={onClick}
+      disabled={disabled}
+      className="flex items-center justify-center w-7 h-7 rounded-md border border-gray-200 bg-white text-gray-600 hover:border-primary-400 hover:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
+    >
+      {children}
+    </button>
+  );
+}
 
 // --- Formatters ---
 
@@ -21,6 +47,16 @@ export function formatDecimal(value: number): string {
     minimumFractionDigits: 1,
     maximumFractionDigits: 1,
   });
+}
+
+/** Human-readable duration. 75 → "1 Std 15 Min", 480 → "8 Std", 8 → "8 Min". */
+export function formatMinutes(minutes: number): string {
+  const m = Math.round(minutes);
+  if (m < 60) return `${m} Min`;
+  const h = Math.floor(m / 60);
+  const rest = m % 60;
+  if (rest === 0) return `${h} Std`;
+  return `${h} Std ${rest} Min`;
 }
 
 // --- Param helper ---
@@ -112,6 +148,7 @@ export function Slider({
   max,
   step,
   unit,
+  format,
 }: {
   label: string;
   value: number;
@@ -120,17 +157,36 @@ export function Slider({
   max: number;
   step: number;
   unit?: string;
+  /** Optional formatter for the displayed value + boundary labels. When set,
+   *  the `unit` suffix is omitted (the formatter is expected to handle it). */
+  format?: (v: number) => string;
 }) {
-  const pct = max > min ? ((value - min) / (max - min)) * 100 : 0;
+  const rawPct = max > min ? ((value - min) / (max - min)) * 100 : 0;
+  // Cap visual fill at 0-100 even when value sits outside [min,max]
+  // (e.g. when a higher value is passed in via URL params from a subpage).
+  const pct = Math.min(100, Math.max(0, rawPct));
+  const showFormatted = !!format;
+  const dec = () => onChange(Math.max(min, Math.min(max, value) - step));
+  const inc = () => onChange(Math.min(max, Math.max(min, value) + step));
 
   return (
     <div>
-      <div className="flex justify-between items-baseline mb-2">
+      <div className="flex justify-between items-center mb-2">
         <label className="text-sm font-medium text-gray-700">{label}</label>
-        <span className="text-lg font-bold text-primary-700">
-          {value.toLocaleString("de-DE")}
-          {unit && <span className="text-sm font-normal text-gray-500 ml-1">{unit}</span>}
-        </span>
+        <div className="flex items-center gap-2">
+          <StepperButton onClick={dec} disabled={value <= min} ariaLabel={`${label} verringern`}>
+            <Minus className="w-3.5 h-3.5" />
+          </StepperButton>
+          <span className="text-lg font-bold text-primary-700 min-w-[3.5rem] text-center tabular-nums">
+            {showFormatted ? format!(value) : value.toLocaleString("de-DE")}
+            {!showFormatted && unit && (
+              <span className="text-sm font-normal text-gray-500 ml-1">{unit}</span>
+            )}
+          </span>
+          <StepperButton onClick={inc} disabled={value >= max} ariaLabel={`${label} erhöhen`}>
+            <Plus className="w-3.5 h-3.5" />
+          </StepperButton>
+        </div>
       </div>
       <div className="relative">
         <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-2 rounded-full bg-gray-200" />
@@ -155,8 +211,8 @@ export function Slider({
         />
       </div>
       <div className="flex justify-between text-xs text-gray-400 mt-1">
-        <span>{min}</span>
-        <span>{max}</span>
+        <span>{showFormatted ? format!(min) : min}</span>
+        <span>{showFormatted ? format!(max) : max}</span>
       </div>
     </div>
   );
@@ -196,6 +252,152 @@ export function ServiceToggle({
           {enabled ? "Wartung & Monitoring" : "nur Hosting"}
         </span>
       </button>
+    </div>
+  );
+}
+
+// --- Tier system (shared key small/medium/large, separate ranges per metric) ---
+
+export interface Tier {
+  key: string;
+  label: string;
+  min: number;
+  max: number;
+}
+
+/** Detect which tier a value belongs to. Boundary values go to the upper tier
+ * unless they equal the max of the highest tier. */
+export function detectTier(value: number, tiers: Tier[]): Tier {
+  for (let i = 0; i < tiers.length; i++) {
+    const t = tiers[i];
+    const isLast = i === tiers.length - 1;
+    if (value >= t.min && (isLast ? value <= t.max : value < t.max)) return t;
+  }
+  if (value < tiers[0].min) return tiers[0];
+  return tiers[tiers.length - 1];
+}
+
+export function clampToTier(value: number, tier: Tier): number {
+  return Math.min(tier.max, Math.max(tier.min, value));
+}
+
+/** Tier option visible in the selector — pure metadata (no min/max). */
+export interface TierOption {
+  key: string;
+  label: string;
+  description: string;
+}
+
+/** Buttons Small/Medium/Large with description text — shared selector for
+ *  multiple sliders on the same page. */
+export function TierSelector({
+  options,
+  activeKey,
+  onSelect,
+}: {
+  options: TierOption[];
+  activeKey: string;
+  onSelect: (key: string) => void;
+}) {
+  return (
+    <div className="grid grid-cols-3 gap-2">
+      {options.map((o) => {
+        const isActive = o.key === activeKey;
+        return (
+          <button
+            key={o.key}
+            type="button"
+            onClick={() => onSelect(o.key)}
+            className={`px-3 py-3 text-left rounded-lg border transition-colors cursor-pointer ${
+              isActive
+                ? "bg-primary-700 border-primary-700 text-white"
+                : "bg-white border-gray-200 text-gray-700 hover:border-primary-400 hover:text-primary-700"
+            }`}
+          >
+            <div className="text-sm font-semibold">{o.label}</div>
+            <div
+              className={`text-[11px] leading-snug mt-1 ${
+                isActive ? "text-primary-100" : "text-gray-500"
+              }`}
+            >
+              {o.description}
+            </div>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+/** Slider locked to a specific tier (controlled from outside). When the parent
+ *  switches tiers, value is expected to be snapped externally — this component
+ *  only enforces the visual clamp. */
+export function RangeSlider({
+  label,
+  value,
+  onChange,
+  tier,
+  step,
+  unit = "€",
+}: {
+  label: string;
+  value: number;
+  onChange: (v: number) => void;
+  tier: Tier;
+  step: number;
+  unit?: string;
+}) {
+  const displayValue = clampToTier(value, tier);
+  const pct =
+    tier.max > tier.min
+      ? ((displayValue - tier.min) / (tier.max - tier.min)) * 100
+      : 0;
+  const dec = () => onChange(clampToTier(displayValue - step, tier));
+  const inc = () => onChange(clampToTier(displayValue + step, tier));
+
+  return (
+    <div>
+      <div className="flex justify-between items-center mb-2">
+        <label className="text-sm font-medium text-gray-700">{label}</label>
+        <div className="flex items-center gap-2">
+          <StepperButton onClick={dec} disabled={displayValue <= tier.min} ariaLabel={`${label} verringern`}>
+            <Minus className="w-3.5 h-3.5" />
+          </StepperButton>
+          <span className="text-lg font-bold text-primary-700 min-w-[3.5rem] text-center tabular-nums">
+            {displayValue.toLocaleString("de-DE")}
+            {unit && <span className="text-sm font-normal text-gray-500 ml-1">{unit}</span>}
+          </span>
+          <StepperButton onClick={inc} disabled={displayValue >= tier.max} ariaLabel={`${label} erhöhen`}>
+            <Plus className="w-3.5 h-3.5" />
+          </StepperButton>
+        </div>
+      </div>
+      <div className="relative">
+        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-2 rounded-full bg-gray-200" />
+        <div
+          className="absolute top-1/2 -translate-y-1/2 left-0 h-2 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500"
+          style={{ width: `${pct}%` }}
+        />
+        <input
+          type="range"
+          min={tier.min}
+          max={tier.max}
+          step={step}
+          value={displayValue}
+          onChange={(e) => onChange(clampToTier(Number(e.target.value), tier))}
+          className="relative w-full appearance-none bg-transparent cursor-pointer z-10
+            [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5
+            [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2
+            [&::-webkit-slider-thumb]:border-primary-500 [&::-webkit-slider-thumb]:shadow-md
+            [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:rounded-full
+            [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-primary-500
+            [&::-moz-range-thumb]:shadow-md"
+        />
+      </div>
+      <div className="flex justify-between text-xs text-gray-400 mt-1">
+        <span>{tier.min.toLocaleString("de-DE")} {unit}</span>
+        <span>{tier.max.toLocaleString("de-DE")} {unit}</span>
+      </div>
     </div>
   );
 }

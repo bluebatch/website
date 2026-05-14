@@ -8,16 +8,60 @@ import ContactButton from "@/components/buttons/contact-button";
 import {
   formatEur,
   formatDecimal,
+  formatMinutes,
   paramNum,
   StackedBar,
   ResultMetric,
   Slider,
-  ServiceToggle,
+  TierSelector,
+  RangeSlider,
   CalculatorShell,
   useUrlSync,
+  detectTier,
+  clampToTier,
+  type Tier,
+  type TierOption,
 } from "../shared";
 
 const cat = config.categories.document;
+
+const TIER_OPTIONS: TierOption[] = [
+  {
+    key: "small",
+    label: "Small",
+    description: "1 Use-Case, einfache Workflow-Integration",
+  },
+  {
+    key: "medium",
+    label: "Medium",
+    description: "Mehrere Use-Cases, KI + 3–5 Integrationen",
+  },
+  {
+    key: "large",
+    label: "Large",
+    description: "Enterprise, Multi-System & komplexe KI-Agents",
+  },
+];
+
+const SETUP_TIERS: Tier[] = [
+  { key: "small", label: "Small", min: 2000, max: 4000 },
+  { key: "medium", label: "Medium", min: 4000, max: 12000 },
+  { key: "large", label: "Large", min: 12000, max: 30000 },
+];
+
+const MAINTENANCE_TIERS: Tier[] = [
+  { key: "small", label: "Small", min: 50, max: 500 },
+  { key: "medium", label: "Medium", min: 500, max: 2000 },
+  { key: "large", label: "Large", min: 2000, max: 5000 },
+];
+
+function findTier(tiers: Tier[], key: string): Tier {
+  return tiers.find((t) => t.key === key) ?? tiers[0];
+}
+
+function midOfTier(t: Tier, step: number): number {
+  return Math.round((t.min + t.max) / 2 / step) * step;
+}
 
 export default function DocumentCalculator({
   initialParams,
@@ -30,16 +74,39 @@ export default function DocumentCalculator({
   const [minBefore, setMinBefore] = useState(paramNum(initialParams, "before", defaults.minutesBefore));
   const [minAfter, setMinAfter] = useState(paramNum(initialParams, "after", defaults.minutesAfter));
   const [hourlyCost, setHourlyCost] = useState(paramNum(initialParams, "hourly", defaults.hourlyCostEur));
-  const [serviceEnabled, setServiceEnabled] = useState(initialParams.service !== "0");
+  const [setupCost, setSetupCost] = useState(paramNum(initialParams, "setup", defaults.setupCostEur));
+  const [maintenanceCost, setMaintenanceCost] = useState(paramNum(initialParams, "maint", defaults.mrrEur));
 
-  const activeMrr = serviceEnabled ? defaults.mrrEur : defaults.mrrBaseEur;
+  // Tier is shared between Setup and Maintenance. URL `tier=` wins; otherwise
+  // derive from setupCost on first render.
+  const [tierKey, setTierKey] = useState(() => {
+    const urlTier = initialParams.tier;
+    if (urlTier && TIER_OPTIONS.some((o) => o.key === urlTier)) return urlTier;
+    return detectTier(
+      paramNum(initialParams, "setup", defaults.setupCostEur),
+      SETUP_TIERS,
+    ).key;
+  });
+
+  const setupTier = findTier(SETUP_TIERS, tierKey);
+  const maintTier = findTier(MAINTENANCE_TIERS, tierKey);
+
+  const handleTierSelect = (newKey: string) => {
+    setTierKey(newKey);
+    const newSetup = findTier(SETUP_TIERS, newKey);
+    const newMaint = findTier(MAINTENANCE_TIERS, newKey);
+    setSetupCost(midOfTier(newSetup, 100));
+    setMaintenanceCost(midOfTier(newMaint, 50));
+  };
 
   useUrlSync("/roi-rechner/document", {
     docs: docsPerMonth,
     before: minBefore,
     after: minAfter,
     hourly: hourlyCost,
-    service: serviceEnabled,
+    tier: tierKey,
+    setup: setupCost,
+    maint: maintenanceCost,
   });
 
   const results = useMemo(() => {
@@ -52,22 +119,22 @@ export default function DocumentCalculator({
     const costWithAi = (docsPerMonth * minAfter / 60) * hourlyCost;
 
     const grossSavings = costWithoutAi;
-    const netSavings = costWithoutAi - costWithAi - activeMrr;
-    const amortMonths = netSavings > 0 ? defaults.setupCostEur / netSavings : Infinity;
-    const netYear1 = netSavings * 12 - defaults.setupCostEur;
-    const roiYear1 = defaults.setupCostEur > 0 ? (netYear1 / defaults.setupCostEur) * 100 : 0;
+    const netSavings = costWithoutAi - costWithAi - maintenanceCost;
+    const amortMonths = netSavings > 0 ? setupCost / netSavings : Infinity;
+    const netYear1 = netSavings * 12 - setupCost;
+    const roiYear1 = setupCost > 0 ? (netYear1 / setupCost) * 100 : 0;
     const netYear2 = netSavings * 12;
-    const roiYear2 = (activeMrr * 12) > 0 ? (netYear2 / (activeMrr * 12)) * 100 : 0;
+    const roiYear2 = (maintenanceCost * 12) > 0 ? (netYear2 / (maintenanceCost * 12)) * 100 : 0;
     return { timeSavedPerDoc, totalHoursSaved, grossSavings, costWithoutAi, costWithAi, netSavings, amortMonths, netYear1, roiYear1, netYear2, roiYear2 };
-  }, [docsPerMonth, minBefore, minAfter, hourlyCost, activeMrr, defaults]);
+  }, [docsPerMonth, minBefore, minAfter, hourlyCost, maintenanceCost, setupCost]);
 
   const isPositive = results.netSavings > 0;
 
   // Chart: ohne AI vs. mit AI (pro Jahr)
   const maOhneAiYear = results.costWithoutAi * 12;
   const maMitAiYear = results.costWithAi * 12;
-  const serviceYear = activeMrr * 12;
-  const setupYear1 = defaults.setupCostEur;
+  const serviceYear = maintenanceCost * 12;
+  const setupYear1 = setupCost;
   const chartMax = Math.max(maOhneAiYear, maMitAiYear + serviceYear + setupYear1);
 
   return (
@@ -78,21 +145,29 @@ export default function DocumentCalculator({
     >
       {/* Row 1: Konditionen | Auf den Punkt */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-        <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6 flex flex-col justify-center">
-          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+        <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6 space-y-5">
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
             Bluebatch Konditionen
           </h3>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <p className="text-xs text-gray-400">Setup (einmalig)</p>
-              <p className="text-lg font-bold text-gray-900">{formatEur(defaults.setupCostEur)}</p>
-            </div>
-            <ServiceToggle
-              enabled={serviceEnabled}
-              onToggle={() => setServiceEnabled(!serviceEnabled)}
-              activeMrr={activeMrr}
-            />
-          </div>
+          <TierSelector
+            options={TIER_OPTIONS}
+            activeKey={tierKey}
+            onSelect={handleTierSelect}
+          />
+          <RangeSlider
+            label="Projektsetup (einmalig)"
+            value={setupCost}
+            onChange={(v) => setSetupCost(clampToTier(v, setupTier))}
+            tier={setupTier}
+            step={100}
+          />
+          <RangeSlider
+            label="Wartung & Monitoring / Monat"
+            value={maintenanceCost}
+            onChange={(v) => setMaintenanceCost(clampToTier(v, maintTier))}
+            tier={maintTier}
+            step={50}
+          />
         </div>
 
         {isPositive ? (
@@ -129,8 +204,8 @@ export default function DocumentCalculator({
         <div className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 space-y-8 shadow-sm">
           <h3 className="text-lg font-semibold text-gray-900">Eure Zahlen</h3>
           <Slider label={sliders.documentsPerMonth.label} value={docsPerMonth} onChange={setDocsPerMonth} min={sliders.documentsPerMonth.min} max={sliders.documentsPerMonth.max} step={sliders.documentsPerMonth.step} />
-          <Slider label={sliders.minutesBefore.label} value={minBefore} onChange={(v) => { setMinBefore(v); if (v <= minAfter) setMinAfter(Math.max(sliders.minutesAfter.min, v - 1)); }} min={sliders.minutesBefore.min} max={sliders.minutesBefore.max} step={sliders.minutesBefore.step} unit="Min." />
-          <Slider label={sliders.minutesAfter.label} value={minAfter} onChange={(v) => setMinAfter(Math.min(v, minBefore - 1))} min={sliders.minutesAfter.min} max={Math.min(sliders.minutesAfter.max, minBefore - 1)} step={sliders.minutesAfter.step} unit="Min." />
+          <Slider label={sliders.minutesBefore.label} value={minBefore} onChange={(v) => { setMinBefore(v); if (v <= minAfter) setMinAfter(Math.max(sliders.minutesAfter.min, v - 1)); }} min={sliders.minutesBefore.min} max={sliders.minutesBefore.max} step={sliders.minutesBefore.step} format={formatMinutes} />
+          <Slider label={sliders.minutesAfter.label} value={minAfter} onChange={(v) => setMinAfter(Math.min(v, minBefore - 1))} min={sliders.minutesAfter.min} max={Math.min(sliders.minutesAfter.max, minBefore - 1)} step={sliders.minutesAfter.step} format={formatMinutes} />
           <Slider label={sliders.hourlyCostEur.label} value={hourlyCost} onChange={setHourlyCost} min={sliders.hourlyCostEur.min} max={sliders.hourlyCostEur.max} step={sliders.hourlyCostEur.step} unit={sliders.hourlyCostEur.unit} />
         </div>
 
