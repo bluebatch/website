@@ -261,9 +261,8 @@ export default async function Page({
             {overrides?.headline ?? (
               <>
                 KI Agentur Berlin -{" "}
-                <BackgroundHero.Highlight>
-                  Workflow-Automatisierung für Deutschlands Startup-Hauptstadt
-                </BackgroundHero.Highlight>
+                Workflow-Automatisierung für Deutschlands{" "}
+                <BackgroundHero.Highlight>Startup-Hauptstadt</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>

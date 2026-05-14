@@ -1,19 +1,27 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import ContentWrapper from "@/components/layout/content-wrapper";
-import Hero2Column, {
-  Hero2ColumnTextColumn,
-  Hero2ColumnHeadline,
-  Hero2ColumnDescription,
-  Hero2ColumnPreHeadline,
-} from "@/components/heroes/hero-2-column";
+import BackgroundHero from "@/components/heroes/background-hero";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import Typo from "@/components/ui/typo";
+import IntroBox from "@/components/ui/intro-box";
+import SimpleGrid from "@/components/layout/simple-grid";
+import SimpleCard from "@/components/cards/simple-card";
+import BoundlessImageCard from "@/components/cards/boundless-image-card";
+import ProsCons from "@/components/sections/pros-cons";
+import { FaqContainer } from "@/components/ui/faqs";
+import { CityLinksFromMeta } from "@/components/standorte/city-links";
+import ContactButton from "@/components/buttons/contact-button";
+import { FlaskConical, Factory, Cog } from "lucide-react";
 import type { CityMeta } from "@/lib/meta-custom";
-
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
+import { getRewriteOverrides } from "@/lib/get-rewrites";
+
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
+  mainRewrite: "/ki-agentur-krefeld",
   rewrites: [
     {
       source: "/ai-workflows-krefeld",
@@ -99,6 +107,9 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
         "Bluebatch",
       ],
     },
+      {
+      source: "/ki-agentur-krefeld",
+    },
   ],
 };
 
@@ -124,65 +135,280 @@ export const metaCustom: CityMeta = {
   ],
 };
 
-export const metadata: Metadata = {
-  title: `Workflow-Automatisierung ${metaCustom.name} | Bluebatch`,
-  description: `Bluebatch ist Ihr Partner für Workflow-Automatisierung und KI-Lösungen in ${metaCustom.name}. n8n-Workflows, API-Integrationen und Prozessoptimierung für Unternehmen in ${metaCustom.name} und Umgebung.`,
-  alternates: {
-    canonical: "/standorte/krefeld",
-  },
-  openGraph: {
-    title: `Workflow-Automatisierung ${metaCustom.name} | Bluebatch`,
-    description: `Bluebatch ist Ihr Partner für Workflow-Automatisierung und KI-Lösungen in ${metaCustom.name}. n8n-Workflows, API-Integrationen und Prozessoptimierung für Unternehmen in ${metaCustom.name} und Umgebung.`,
-    type: "website",
-    locale: "de_DE",
-    siteName: "Bluebatch",
-  },
-};
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}): Promise<Metadata> {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+  const params = await searchParams;
+  const overrides = getRewriteOverrides(rewriteSiteConfig, params);
 
-export default function Page() {
+  const title =
+    overrides?.metaTitle ??
+    "KI-Agentur in Krefeld | Bluebatch";
+  const description =
+    overrides?.metaDescription ??
+    "Ihr Partner für n8n-Workflows, KI-Automatisierung und Prozessoptimierung im Chempark Krefeld-Uerdingen und im IHK-Bezirk Mittlerer Niederrhein.";
+
+  return {
+    title,
+    description,
+    keywords: overrides?.keywords ?? [
+      "KI Agentur Krefeld", "n8n Krefeld", "Workflow-Automatisierung Krefeld", "KI Beratung Krefeld", "Prozessoptimierung Krefeld", "Bluebatch",
+    ],
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: "de_DE",
+      siteName: "Bluebatch",
+      images: [
+        {
+          url: "/images/cities/krefeld.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Bluebatch Workflow-Automatisierung Krefeld",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/cities/krefeld.jpg"],
+    },
+    alternates: {
+      canonical: "/ki-agentur-krefeld",
+    },
+  };
+}
+
+const krefeldFaqs = [
+  {
+    question: "Chempark Krefeld-Uerdingen – wie automatisieren wir REACH, CSRD und Anlagensicherheit?",
+    answer:
+      "Covestro, Lanxess und Bayer im Chempark unterliegen REACH, CLP, Störfallverordnung, IED, ADR/RID und CSRD. n8n verbindet SAP, EHS-Software, Behörden-Schnittstellen (REACH-IT, ELER) und Sicherheitsaudit-Datenbanken – auditfest, self-hosted und mit BSI-Grundschutz.",
+  },
+  {
+    question: "Outokumpu Nirosta in Krefeld – welche Workflows brauchen Edelstahl-Hersteller?",
+    answer:
+      "Werkstoffzeugnisse EN 10204 3.1/3.2, IATF 16949 für Auto-Kunden, CBAM-Reporting, Chargenrückverfolgung und Versand-EDI mit OEMs. n8n koppelt PLM, MES, SAP und Kunden-Portale – wichtig im Wettbewerb mit Asien.",
+  },
+  {
+    question: "Siempelkamp baut Pressen weltweit – welche Service-Workflows lohnen sich?",
+    answer:
+      "Weltmarktführer Holzwerkstoff-Pressen plus Guss- und Nukleartechnik – Engineering-to-Order, CPQ, weltweiter Service mit Field-Force, Ersatzteil-Logistik, Inbetriebnahme-Reports. n8n verbindet PLM, ERP, Service-Apps und IoT-Sensorik der Anlagen.",
+  },
+  {
+    question: "Rheinhafen Krefeld als trimodaler Knoten – wie automatisieren wir Hafen-Logistik?",
+    answer:
+      "ATLAS-Zoll, EDIFACT/EANCOM, intermodaler Umschlag zwischen Wasser, Bahn und LKW, Gefahrgut-Doku für Chemie-Transporte und Sendungsverfolgung. n8n koppelt TOS, TMS, WMS und Carrier-APIs – plus EDI mit Chempark-Logistik.",
+  },
+  {
+    question: "Helios Klinikum Krefeld – welche Workflows entlasten Klinikpersonal?",
+    answer:
+      "Patientenaufnahme, KIS-ePA-Integration, DRG-Abrechnung mit Kostenträgern, MDR-Doku für Medizinprodukte und Personaleinsatzplanung. AI Agents klassifizieren Eingangsbefunde und Aufnahmedokumente.",
+  },
+];
+
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   if (!metaCustom.publish) notFound();
+
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+  const params = await searchParams;
+  const overrides = getRewriteOverrides(rewriteSiteConfig, params);
+
   return (
     <>
-      <ContentWrapper isFirstSection>
-        <Hero2Column>
-          <Hero2ColumnTextColumn>
-            <Hero2ColumnPreHeadline>
-              Standort {metaCustom.name}
-            </Hero2ColumnPreHeadline>
-            <Hero2ColumnHeadline>
-              Workflow-Automatisierung in {metaCustom.name}
-            </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Ihr Partner für intelligente Automatisierung und KI-gestützte
-              Workflows in {metaCustom.name} und {metaCustom.bundesland}.
-            </Hero2ColumnDescription>
-          </Hero2ColumnTextColumn>
-        </Hero2Column>
+
+      {/* 1. BackgroundHero */}
+      <ContentWrapper isFirstSection noPadding>
+        <BackgroundHero
+          imageSrc="/images/cities/krefeld.jpg"
+          overlayOpacity={0.78}
+          opacityBackground="white"
+        >
+          <BackgroundHero.TopLabel>
+            {overrides?.preHeadline ?? "Standort Krefeld"}
+          </BackgroundHero.TopLabel>
+          <BackgroundHero.Headline>
+            {overrides?.headline ?? (
+              <>
+                KI-Agentur in Krefeld –{" "}
+                von der Samt- und Seidenstadt zum{" "}
+                <BackgroundHero.Highlight>Chempark-Cluster</BackgroundHero.Highlight>
+              </>
+            )}
+          </BackgroundHero.Headline>
+          <BackgroundHero.Description>
+            Aus historischer Textilstadt wurde Chempark Krefeld-Uerdingen (Covestro/Lanxess/Bayer), Outokumpu Nirosta und Siempelkamp-HQ. Wir automatisieren genau die Workflows, die ein niederrheinischer Chemie- und Edelstahl-Standort im Wandel braucht – REACH, EN 10204 und globaler Anlagenbau-Service.
+          </BackgroundHero.Description>
+          <BackgroundHero.CallToAction>
+            <ContactButton icon="chat">Automatisierung für Krefeld besprechen</ContactButton>
+          </BackgroundHero.CallToAction>
+          <BackgroundHero.Stats>
+            <BackgroundHero.Stat
+              value={228550}
+              label="Einwohner"
+              index={0}
+            />
+            <BackgroundHero.Stat
+              value={8500}
+              label="MA Chempark Krefeld-Uerdingen"
+              index={1}
+            />
+            <BackgroundHero.Stat
+              value={9.9}
+              suffix=" Mrd. €"
+              label="BIP 2022"
+              index={2}
+            />
+          </BackgroundHero.Stats>
+        </BackgroundHero>
       </ContentWrapper>
 
+      {/* 4. SimpleGrid cols=3 */}
       <ContentWrapper>
-        <div className="grid gap-8 md:grid-cols-2">
-          <div>
-            <Typo.H2>Unsere Services in {metaCustom.name}</Typo.H2>
+        <Typo.H2>Wo n8n in Krefeld heute den Hebel ansetzt</Typo.H2>
+        <Typo.Paragraph>
+          Drei Cluster, drei sehr unterschiedliche Pain-Points – aber alle mit einem gemeinsamen Bedürfnis: Workflows, die Datenflüsse zwischen Spezialsystemen orchestrieren.
+        </Typo.Paragraph>
+        <SimpleGrid cols={3}>
+          <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <FlaskConical className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
+            <Typo.H3>Chemie & Kunststoffe</Typo.H3>
             <Typo.Paragraph>
-              Als Experten für Workflow-Automatisierung unterstützen wir
-              Unternehmen in {metaCustom.name} und Umgebung bei der
-              Digitalisierung und Optimierung ihrer Geschäftsprozesse.
+              REACH/CLP, Störfallverordnung, IED-Emissionen, ADR/RID-Gefahrgut, CSRD und EHS-Compliance für Chempark-Anrainer – self-hosted und BSI-konform.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H2>Auch in Ihrer Nähe</Typo.H2>
+          </SimpleCard>
+          <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Factory className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
+            <Typo.H3>Edelstahl & Metall</Typo.H3>
             <Typo.Paragraph>
-              Wir betreuen Kunden in der gesamten Region — auch in den
-              umliegenden Städten.
+              EN 10204-Werkstoffzeugnisse, IATF 16949, CBAM-Reporting, Chargenrückverfolgung und Versand-EDI mit OEMs für Outokumpu Nirosta und Zulieferer.
             </Typo.Paragraph>
-          </div>
+          </SimpleCard>
+          <SimpleCard align="left">
+            <SimpleCard.Icon color="white" background="primary-gradient">
+              <Cog className="size-10" strokeWidth={1.5} />
+            </SimpleCard.Icon>
+            <Typo.H3>Anlagenbau & Service</Typo.H3>
+            <Typo.Paragraph>
+              ETO/CPQ, globaler Service mit Field-Force, Ersatzteil-Logistik, Inbetriebnahme-Reports und IoT-Anbindung für Siempelkamp und Mittelstand-Anlagenbau.
+            </Typo.Paragraph>
+          </SimpleCard>
+        </SimpleGrid>
+      </ContentWrapper>
+
+      {/* 2. IntroBox — Pain-Story */}
+      <ContentWrapper bodyWidth="small">
+        <IntroBox>
+          <IntroBox.PreHeadline>
+            Strukturkrise im Mittleren Niederrhein
+          </IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Was passiert mit den Prozessen, wenn Chemie und Edelstahl unter Energiekosten ächzen?
+          </IntroBox.Headline>
+          <IntroBox.Subline>
+            Die IHK Mittlerer Niederrhein meldet für 2024 eine massive strukturelle Krise mit rückläufigen Industrieumsätzen. Krefeld als Chemie-, Edelstahl- und Anlagenbau-Standort steht unter Energiekosten-Druck und chinesischer Importkonkurrenz. Der Chempark Krefeld-Uerdingen mit Covestro, Lanxess und Bayer ist Anker, Outokumpu Nirosta produziert Edelstahl, Siempelkamp baut Pressen für die Welt. Jede dieser Säulen hat eigene Prozess-Pains.
+          </IntroBox.Subline>
+        </IntroBox>
+      </ContentWrapper>
+
+      {/* 5. BoundlessImage */}
+      <ContentWrapper colorScheme="gray-light">
+        <BoundlessImageCard imagePosition="right">
+          <BoundlessImageCard.Image
+            src="/images/cities/krefeld.jpg"
+            alt="Chempark Krefeld-Uerdingen und Edelstahl"
+          />
+          <BoundlessImageCard.Content>
+            <Typo.H2>Chempark Uerdingen & Outokumpu – wo Seide war, fließen heute Polymere und Edelstahl</Typo.H2>
+            <Typo.Paragraph>
+              Aus der historischen Samt- und Seidenstadt wurde Krefeld zum Chemie-Cluster mit einem Drittel der NRW-Chemieproduktion, dazu Outokumpu-Edelstahl und Siempelkamp-Anlagenbau. Quartiers- und Anlagen-Management bedeutet: REACH, IED, CBAM, IATF-Audits und globaler Anlagenbau-Service. n8n verbindet diese Schnittstellen – ein Use-Case, den wir mehrfach gebaut haben.
+            </Typo.Paragraph>
+            <div className="mt-4">
+              <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
+                Unser 6-Phasen-Prozess →
+              </Link>
+            </div>
+          </BoundlessImageCard.Content>
+        </BoundlessImageCard>
+      </ContentWrapper>
+
+      {/* 3. ProsCons */}
+      <ContentWrapper colorScheme="gray-light">
+        <Typo.H2>Was Krefeld hinter sich lässt – und wo es jetzt steht</Typo.H2>
+        <div className="mt-8">
+          <ProsCons>
+            <ProsCons.Cons>
+              <ProsCons.Item
+                title="Textilindustrie weitgehend Geschichte"
+                description="Aus der historischen 'Samt- und Seidenstadt' sind nur noch technische Textilien und Distribution geblieben – klassische Webereien und Konfektion längst verschwunden."
+              />
+              <ProsCons.Item
+                title="Strukturelle Krise 2024 laut IHK"
+                description="Rückläufige Industrieumsätze, steigende Arbeitslosigkeit – Energiekosten und Asien-Konkurrenz belasten Chemie, Edelstahl und Anlagenbau gleichzeitig."
+              />
+              <ProsCons.Item
+                title="ThyssenKrupp/Outokumpu-Tradition unter Druck"
+                description="Edelstahlwerk Krefeld-Mitte historisch thyssenkrupp-geprägt, heute unter Outokumpu mit Konzern-Sparkurs."
+              />
+              <ProsCons.Item
+                title="Bayer-Restrukturierung wirkt bis Krefeld"
+                description="Bayer-Konzern-Umbau und Pharma/Crop-Science-Sparmaßnahmen reichen bis Krefeld – Personal-Reduzierungen und Standort-Konsolidierungen."
+              />
+            </ProsCons.Cons>
+            <ProsCons.Pros>
+              <ProsCons.Item
+                title="Chempark Krefeld-Uerdingen (8.500 MA) – Ein Drittel NRW-Chemieproduktion"
+                description="Einer der größten Chemieparks Europas: Covestro (Polymere), Lanxess (Spezialchemie), Bayer – plus Currenta als Standortbetreiber."
+              />
+              <ProsCons.Item
+                title="Outokumpu Nirosta – einer der größten Edelstahl-Produzenten Europas"
+                description="2.000 MA in Krefeld, traditionsreich aus thyssenkrupp-Erbe – Edelstahl-Champion mit Auto- und Spezial-Anwendungen."
+              />
+              <ProsCons.Item
+                title="Siempelkamp – Weltmarktführer Holzwerkstoff-Pressen"
+                description="1.500 MA, plus Aktivitäten in Guss- und Nukleartechnik – globaler Anlagenbauer mit komplexem Engineering-to-Order."
+              />
+              <ProsCons.Item
+                title="Trimodaler Rheinhafen + Helios Klinikum (2.500 MA)"
+                description="Trimodaler Knoten Wasser/Schiene/Straße, plus überregionaler Klinikversorger Helios Krefeld und Hochschule Niederrhein-Campus."
+              />
+            </ProsCons.Pros>
+          </ProsCons>
         </div>
       </ContentWrapper>
 
+      {/* 8. City Links */}
+      <ContentWrapper colorScheme="gradient-night">
+        <CityLinksFromMeta
+          crossReference={metaCustom.crossReference}
+          nearbySmall={metaCustom.nearbySmall}
+        />
+      </ContentWrapper>
+
+      {/* 6. FAQ */}
+      <ContentWrapper bodyWidth="small">
+        <Typo.H2>Häufige Fragen aus Krefeld</Typo.H2>
+        <div className="mt-6">
+          <FaqContainer faqs={krefeldFaqs} />
+        </div>
+      </ContentWrapper>
+
+      {/* 7. CTA */}
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
-      </ContentWrapper>
-    </>
+      </ContentWrapper>    </>
   );
 }

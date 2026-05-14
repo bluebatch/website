@@ -178,6 +178,7 @@ export default async function Page({
 
   return (
     <>
+
       {/* 1. BackgroundHero */}
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
@@ -192,9 +193,8 @@ export default async function Page({
             {overrides?.headline ?? (
               <>
                 KI-Agentur in Stuttgart –{" "}
-                <BackgroundHero.Highlight>
-                  Automotive, Maschinenbau und Mittelstand
-                </BackgroundHero.Highlight>
+                Automotive, Maschinenbau und{" "}
+                <BackgroundHero.Highlight>Mittelstand</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
@@ -331,33 +331,6 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* 4. BoundlessImageCard — Automotive Transformation */}
-      <ContentWrapper>
-        <BoundlessImageCard imagePosition="left">
-          <BoundlessImageCard.Image
-            src="/images/process-automation.jpg"
-            alt="Stuttgart Automotive-Transformation – n8n-Workflows für SDV und E-Mobilität"
-          />
-          <BoundlessImageCard.Content>
-            <Typo.H2>40 Mrd. EUR Porsche-Umsatz, sinkende Margen – wer zieht mit?</Typo.H2>
-            <Typo.Paragraph>
-              Porsche meldet 2024 Rekordumsätze von 40,1 Mrd. EUR und 5,6 Mrd. EUR
-              operativen Gewinn, aber sinkende Margen durch den Umstieg auf
-              E-Mobilität. Mercedes-Strategie 2030, Bosch-Stellenabbau,
-              Trumpf-Internationalisierung: jeder Konzern überträgt
-              Effizienzdruck an seine Lieferkette. Wir helfen Tier-2- und
-              Tier-3-Zulieferern, mit schlanken n8n-Workflows den geforderten
-              Tempo-Sprung zu schaffen.
-            </Typo.Paragraph>
-            <div className="mt-4">
-              <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
-                Unser 6-Phasen-Prozess →
-              </Link>
-            </div>
-          </BoundlessImageCard.Content>
-        </BoundlessImageCard>
-      </ContentWrapper>
-
       {/* 5. KpiCard Row */}
       <ContentWrapper colorScheme="gray-light">
         <Typo.H2>Stuttgart in Zahlen</Typo.H2>
@@ -381,6 +354,63 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
+      {/* 4. BoundlessImageCard — Automotive Transformation */}
+      <ContentWrapper>
+        <BoundlessImageCard imagePosition="left">
+          <BoundlessImageCard.Image
+            src="/images/cities/stuttgart.jpg"
+            alt="Stuttgart Automotive-Transformation – n8n-Workflows für SDV und E-Mobilität"
+          />
+          <BoundlessImageCard.Content>
+            <Typo.H2>40 Mrd. EUR Porsche-Umsatz, sinkende Margen – wer zieht mit?</Typo.H2>
+            <Typo.Paragraph>
+              Porsche meldet 2024 Rekordumsätze von 40,1 Mrd. EUR und 5,6 Mrd. EUR
+              operativen Gewinn, aber sinkende Margen durch den Umstieg auf
+              E-Mobilität. Mercedes-Strategie 2030, Bosch-Stellenabbau,
+              Trumpf-Internationalisierung: jeder Konzern überträgt
+              Effizienzdruck an seine Lieferkette. Wir helfen Tier-2- und
+              Tier-3-Zulieferern, mit schlanken n8n-Workflows den geforderten
+              Tempo-Sprung zu schaffen.
+            </Typo.Paragraph>
+            <div className="mt-4">
+              <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
+                Unser 6-Phasen-Prozess →
+              </Link>
+            </div>
+          </BoundlessImageCard.Content>
+        </BoundlessImageCard>
+      </ContentWrapper>
+
+      {/* 7.5. Bonus — Stuttgart 21 BoundlessImageCard */}
+      <ContentWrapper>
+        <BoundlessImageCard imagePosition="left">
+          <BoundlessImageCard.Image
+            src="/images/cities/stuttgart.jpg"
+            alt="Stuttgart 21 – Workflow-Automatisierung für ein 11-Mrd-EUR-Großprojekt"
+          />
+          <BoundlessImageCard.Content>
+            <Typo.H2>Stuttgart 21 – wie automatisiert man ein 11-Mrd-EUR-Projekt?</Typo.H2>
+            <Typo.Paragraph>
+              Über 250 Subunternehmer, Tausende VOB-Nachträge, parallele
+              Abstimmung mit DB Netz, Stadt Stuttgart, Regierungspräsidium und
+              Eisenbahn-Bundesamt: Stuttgart 21 ist Europas komplexestes
+              Bahnprojekt. Wir bauen n8n-Workflows, die Bauanträge, Bürgschaften
+              nach VOB/B, Subunternehmer-Onboarding und Nachtragsmanagement
+              strukturiert orchestrieren, an SAP RE-FX und PROBIS andocken und
+              jede Freigabe revisionssicher dokumentieren.
+            </Typo.Paragraph>
+          </BoundlessImageCard.Content>
+        </BoundlessImageCard>
+      </ContentWrapper>
+
+      {/* 8. City Links */}
+      <ContentWrapper colorScheme="gradient-night">
+        <CityLinksFromMeta
+          crossReference={metaCustom.crossReference}
+          nearbySmall={metaCustom.nearbySmall}
+        />
+      </ContentWrapper>
+
       {/* 6. FAQ */}
       <ContentWrapper bodyWidth="small">
         <Typo.H2>Häufige Fragen aus Stuttgart</Typo.H2>
@@ -392,15 +422,6 @@ export default async function Page({
       {/* 7. CTA */}
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
-      </ContentWrapper>
-
-      {/* 8. City Links */}
-      <ContentWrapper>
-        <CityLinksFromMeta
-          crossReference={metaCustom.crossReference}
-          nearbySmall={metaCustom.nearbySmall}
-        />
-      </ContentWrapper>
-    </>
+      </ContentWrapper>    </>
   );
 }

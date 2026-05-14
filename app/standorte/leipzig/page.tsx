@@ -169,9 +169,8 @@ export default async function Page({
             {overrides?.headline ?? (
               <>
                 KI Agentur Leipzig —{" "}
-                <BackgroundHero.Highlight>
-                  Workflow-Automatisierung für Deutschlands schnellstwachsende Großstadt
-                </BackgroundHero.Highlight>
+                Workflow-Automatisierung für Deutschlands{" "}
+                <BackgroundHero.Highlight>schnellstwachsende Großstadt</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>

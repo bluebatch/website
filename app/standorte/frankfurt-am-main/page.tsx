@@ -181,9 +181,8 @@ export default async function Page({
             {overrides?.headline ?? (
               <>
                 KI Agentur Frankfurt —{" "}
-                <BackgroundHero.Highlight>
-                  Compliance-Automatisierung für Europas Finanzhauptstadt
-                </BackgroundHero.Highlight>
+                Compliance-Automatisierung für Europas{" "}
+                <BackgroundHero.Highlight>Finanzhauptstadt</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>

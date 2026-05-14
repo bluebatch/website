@@ -17,6 +17,7 @@ import IntroBox from "@/components/ui/intro-box";
 import BoundlessImageCard from "@/components/cards/boundless-image-card";
 import SavingsCard, {
   SavingsBadge,
+  SavingsBadgeHighlight,
   SavingsItems,
   SavingsItem,
 } from "@/components/cards/savings-card";
@@ -362,16 +363,15 @@ export default async function Page({
           </IntroBox.Headline>
         </IntroBox>
         <SavingsCard>
-          <SavingsBadge>Einsparungspotenzial pro Kanzlei</SavingsBadge>
+          <SavingsBadge>
+            Amortisation in{" "}
+            <SavingsBadgeHighlight>2-3</SavingsBadgeHighlight> Monaten
+          </SavingsBadge>
           <SavingsItems>
-            <SavingsItem label="Weniger manuelle Belegerfassung">
-              120 Std./Monat
-            </SavingsItem>
-            <SavingsItem label="Schnellere Mandantenantworten" highlight>
-              40 %
-            </SavingsItem>
-            <SavingsItem label="ROI erreicht in">
-              &lt; 3 Monate
+            <SavingsItem label="Setup einmalig">15.000 €</SavingsItem>
+            <SavingsItem label="Betrieb pro Monat">1.500 €</SavingsItem>
+            <SavingsItem label="Ersparnis pro Monat" highlight>
+              7.800 €
             </SavingsItem>
           </SavingsItems>
         </SavingsCard>

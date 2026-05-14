@@ -114,7 +114,7 @@ export const metaCustom: CityMeta = {
   name: "Wiesbaden",
   slug: "wiesbaden",
   bundesland: "Hessen",
-  publish: true,
+  publish: false,
   nearbySmall: [
     "Hofheim am Taunus",
     "Rüsselsheim am Main",
@@ -211,6 +211,7 @@ export default async function Page({
 
   return (
     <>
+
       {/* 1. BackgroundHero */}
       <ContentWrapper isFirstSection noPadding>
         <BackgroundHero
@@ -225,9 +226,8 @@ export default async function Page({
             {overrides?.headline ?? (
               <>
                 KI-Agentur in Wiesbaden –{" "}
-                <BackgroundHero.Highlight>
-                  Versicherungs-Automatisierung am Rhein
-                </BackgroundHero.Highlight>
+                Versicherungs-Automatisierung{" "}
+                <BackgroundHero.Highlight>am Rhein</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
@@ -261,6 +261,62 @@ export default async function Page({
             />
           </BackgroundHero.Stats>
         </BackgroundHero>
+      </ContentWrapper>
+
+      {/* 4. DataTable – Versicherungs-Vergleich */}
+      <ContentWrapper colorScheme="gray-light">
+        <IntroBox>
+          <IntroBox.PreHeadline>
+            Versicherungsprozesse automatisieren
+          </IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Der konkrete Zeitgewinn pro Workflow
+          </IntroBox.Headline>
+        </IntroBox>
+        <div className="mt-8">
+          <DataTable>
+            <DataTable.Head>
+              <DataTable.Row>
+                <DataTable.HeaderCell>Prozess</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Manuell</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Automatisiert</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Zeitersparnis</DataTable.HeaderCell>
+              </DataTable.Row>
+            </DataTable.Head>
+            <DataTable.Body>
+              <DataTable.Row>
+                <DataTable.Cell bold>KYC-Vermittler-Onboarding</DataTable.Cell>
+                <DataTable.Cell>3–5 Tage</DataTable.Cell>
+                <DataTable.Cell>2 Std.</DataTable.Cell>
+                <DataTable.Cell bold>~94 %</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Schadenmeldung erfassen</DataTable.Cell>
+                <DataTable.Cell>45 Min/Fall</DataTable.Cell>
+                <DataTable.Cell>3 Min</DataTable.Cell>
+                <DataTable.Cell bold>~93 %</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Provisionsabrechnung</DataTable.Cell>
+                <DataTable.Cell>2 Tage/Monat</DataTable.Cell>
+                <DataTable.Cell>30 Min</DataTable.Cell>
+                <DataTable.Cell bold>~96 %</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>BaFin-MaRisk-Reporting</DataTable.Cell>
+                <DataTable.Cell>4 Std./Bericht</DataTable.Cell>
+                <DataTable.Cell>20 Min</DataTable.Cell>
+                <DataTable.Cell bold>~92 %</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>OZG-Antragsbearbeitung</DataTable.Cell>
+                <DataTable.Cell>3 Std./Antrag</DataTable.Cell>
+                <DataTable.Cell>15 Min</DataTable.Cell>
+                <DataTable.Cell bold>~92 %</DataTable.Cell>
+              </DataTable.Row>
+            </DataTable.Body>
+          </DataTable>
+        </div>
       </ContentWrapper>
 
       {/* 2. StatsList horizontal */}
@@ -351,60 +407,12 @@ export default async function Page({
         </div>
       </ContentWrapper>
 
-      {/* 4. DataTable – Versicherungs-Vergleich */}
-      <ContentWrapper colorScheme="gray-light">
-        <IntroBox>
-          <IntroBox.PreHeadline>
-            Versicherungsprozesse automatisieren
-          </IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            Der konkrete Zeitgewinn pro Workflow
-          </IntroBox.Headline>
-        </IntroBox>
-        <div className="mt-8">
-          <DataTable>
-            <DataTable.Head>
-              <DataTable.Row>
-                <DataTable.HeaderCell>Prozess</DataTable.HeaderCell>
-                <DataTable.HeaderCell>Manuell</DataTable.HeaderCell>
-                <DataTable.HeaderCell>Automatisiert</DataTable.HeaderCell>
-                <DataTable.HeaderCell>Zeitersparnis</DataTable.HeaderCell>
-              </DataTable.Row>
-            </DataTable.Head>
-            <DataTable.Body>
-              <DataTable.Row>
-                <DataTable.Cell bold>KYC-Vermittler-Onboarding</DataTable.Cell>
-                <DataTable.Cell>3–5 Tage</DataTable.Cell>
-                <DataTable.Cell>2 Std.</DataTable.Cell>
-                <DataTable.Cell bold>~94 %</DataTable.Cell>
-              </DataTable.Row>
-              <DataTable.Row>
-                <DataTable.Cell bold>Schadenmeldung erfassen</DataTable.Cell>
-                <DataTable.Cell>45 Min/Fall</DataTable.Cell>
-                <DataTable.Cell>3 Min</DataTable.Cell>
-                <DataTable.Cell bold>~93 %</DataTable.Cell>
-              </DataTable.Row>
-              <DataTable.Row>
-                <DataTable.Cell bold>Provisionsabrechnung</DataTable.Cell>
-                <DataTable.Cell>2 Tage/Monat</DataTable.Cell>
-                <DataTable.Cell>30 Min</DataTable.Cell>
-                <DataTable.Cell bold>~96 %</DataTable.Cell>
-              </DataTable.Row>
-              <DataTable.Row>
-                <DataTable.Cell bold>BaFin-MaRisk-Reporting</DataTable.Cell>
-                <DataTable.Cell>4 Std./Bericht</DataTable.Cell>
-                <DataTable.Cell>20 Min</DataTable.Cell>
-                <DataTable.Cell bold>~92 %</DataTable.Cell>
-              </DataTable.Row>
-              <DataTable.Row>
-                <DataTable.Cell bold>OZG-Antragsbearbeitung</DataTable.Cell>
-                <DataTable.Cell>3 Std./Antrag</DataTable.Cell>
-                <DataTable.Cell>15 Min</DataTable.Cell>
-                <DataTable.Cell bold>~92 %</DataTable.Cell>
-              </DataTable.Row>
-            </DataTable.Body>
-          </DataTable>
-        </div>
+      {/* 7. City Links */}
+      <ContentWrapper colorScheme="gradient-night">
+        <CityLinksFromMeta
+          crossReference={metaCustom.crossReference}
+          nearbySmall={metaCustom.nearbySmall}
+        />
       </ContentWrapper>
 
       {/* 5. FAQ */}
@@ -418,15 +426,6 @@ export default async function Page({
       {/* 6. CTA */}
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
-      </ContentWrapper>
-
-      {/* 7. City Links */}
-      <ContentWrapper>
-        <CityLinksFromMeta
-          crossReference={metaCustom.crossReference}
-          nearbySmall={metaCustom.nearbySmall}
-        />
-      </ContentWrapper>
-    </>
+      </ContentWrapper>    </>
   );
 }

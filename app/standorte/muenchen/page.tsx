@@ -263,7 +263,8 @@ export default async function Page({
             {overrides?.headline ?? (
               <>
                 KI Agentur München -{" "}
-                <BackgroundHero.Highlight>Automatisierung im Isar Valley</BackgroundHero.Highlight>
+                Automatisierung im{" "}
+                <BackgroundHero.Highlight>Isar Valley</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>

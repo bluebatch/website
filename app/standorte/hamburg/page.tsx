@@ -19,6 +19,7 @@ import SimpleCard from "@/components/cards/simple-card";
 import BoundlessImageCard from "@/components/cards/boundless-image-card";
 import SavingsCard, {
   SavingsBadge,
+  SavingsBadgeHighlight,
   SavingsItems,
   SavingsItem,
 } from "@/components/cards/savings-card";
@@ -268,9 +269,8 @@ export default async function Page({
           {overrides?.headline ?? (
             <>
               KI Agentur Hamburg -{" "}
-              <BackgroundHero.Highlight>
-                Workflow-Automatisierung für die Hansestadt
-              </BackgroundHero.Highlight>
+              Workflow-Automatisierung für die{" "}
+              <BackgroundHero.Highlight>Hansestadt</BackgroundHero.Highlight>
             </>
           )}
         </BackgroundHero.Headline>
@@ -524,16 +524,15 @@ export default async function Page({
       {/* 6. SavingsCard */}
       <ContentWrapper bodyWidth="small">
         <SavingsCard>
-          <SavingsBadge>ROI in 3-6 Monaten</SavingsBadge>
+          <SavingsBadge>
+            Amortisation in{" "}
+            <SavingsBadgeHighlight>3-6</SavingsBadgeHighlight> Monaten
+          </SavingsBadge>
           <SavingsItems>
-            <SavingsItem label="Weniger manuelle Zolldokumentation">
-              80%
-            </SavingsItem>
-            <SavingsItem label="Schnellere Container-Disposition">
-              60%
-            </SavingsItem>
-            <SavingsItem label="Weniger Fehler bei multimodaler Transportplanung">
-              40%
+            <SavingsItem label="Setup einmalig">30.000 €</SavingsItem>
+            <SavingsItem label="Betrieb pro Monat">3.000 €</SavingsItem>
+            <SavingsItem label="Ersparnis pro Monat" highlight>
+              9.000 €
             </SavingsItem>
           </SavingsItems>
         </SavingsCard>
