@@ -216,7 +216,15 @@ export default function Page() {
               Dieses Schichtmodell hat einen Vorteil: Die eigentliche KI-Logik
               bleibt austauschbar. Wer morgen von GPT-4o auf Claude Sonnet
               wechselt, tauscht nur den Chat-Model-Node aus. Die restlichen
-              Nodes laufen unverändert weiter.
+              Nodes laufen unverändert weiter. Die theoretischen Grundlagen
+              hinter diesem Schichtmodell beschreibt unser Artikel{" "}
+              <Link
+                href="/blog/wie-baut-man-ki-agents"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Agents bauen: Das Anthropic-Framework
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 

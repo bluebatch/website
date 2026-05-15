@@ -738,6 +738,10 @@ export default function Page() {
               <Link href="/blog/agentic-ai-im-grosshandel" className="text-primary-500 hover:underline">
                 Agentic AI im Großhandel
               </Link>
+              , und den konkreten Engineering-Bauplan liefert{" "}
+              <Link href="/blog/wie-baut-man-ki-agents" className="text-primary-500 hover:underline">
+                KI-Agents bauen: Das Anthropic-Framework
+              </Link>
               . Wie KI-gestützte Automatisierung auch in der
               Personaldienstleistung Prozesse beschleunigt, zeigen wir am
               Beispiel{" "}

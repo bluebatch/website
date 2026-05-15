@@ -364,7 +364,15 @@ export default function Page() {
               >
                 n8n KI-Agenten erstellen
               </Link>{" "}
-              ein Praxis-Setup mit Tools, Memory und Guardrails.
+              ein Praxis-Setup mit Tools, Memory und Guardrails. Für den
+              konzeptionellen Rahmen lohnt sich auch der Blick auf{" "}
+              <Link
+                href="/blog/wie-baut-man-ki-agents"
+                className="text-primary-600 hover:underline"
+              >
+                das Anthropic-Framework zum Bau von KI-Agents
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Ein entscheidender Vorteil von n8n: Alles läuft auf eurer eigenen
