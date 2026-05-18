@@ -65,12 +65,19 @@
 
 /* Base styles using the new theme variables */
 @layer base {
-  /* Smooth scrolling for anchor links */
-  html {
-    scroll-behavior: smooth;
+  /* Prevent horizontal page scroll. Without this, any element wider than
+     the viewport (third-party embeds, accidental margins, etc.) lets the
+     document scroll horizontally — and on iOS Safari that also breaks
+     `position: fixed; left:0; right:0` for the navigation, which ends up
+     anchored to the wider layout box and slips past the viewport edges. */
+  html,
+  body {
+    overflow-x: clip;
   }
 
-  /* Scroll offset for anchor links to account for sticky navigation */
+  /* Scroll offset for anchor links to account for sticky navigation.
+     Smooth scrolling itself is handled by <SmoothAnchorScroll /> so it
+     only applies to same-page #id clicks, not Next.js route changes. */
   [id] {
     scroll-margin-top: 120px;
   }
@@ -98,6 +105,41 @@
   animation: fadeIn 0.2s ease-out;
 }
 
+/* Chat conversation — staggered bubble entry + typing dots */
+@keyframes chat-bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.chat-bubble-in {
+  animation: chat-bubble-in 0.4s ease-out both;
+}
+@keyframes chat-typing-bob {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  40% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+.chat-typing-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: chat-typing-bob 1.2s ease-in-out infinite;
+}
+
 /* Navigation — staggered entry fade (replaces framer-motion) */
 @keyframes nav-fade-in {
   from {
@@ -116,40 +158,43 @@
 
 /* Navigation — scroll-driven shrink (replaces isScrolled JS).
    Chrome 115+, Edge 115+, Firefox 136+. Safari falls back to the
-   non-scrolled (larger) state, which is fine. */
-@supports (animation-timeline: scroll()) {
-  @keyframes nav-shrink-outer {
-    to {
-      padding-left: 2.5rem;   /* px-10 */
-      padding-right: 2.5rem;
-      padding-top: 0.75rem;   /* pt-3 */
+   non-scrolled (larger) state, which is fine.
+   Desktop only (>=1024px) — mobile keeps the compact nav at all scroll positions. */
+@media (min-width: 1024px) {
+  @supports (animation-timeline: scroll()) {
+    @keyframes nav-shrink-outer {
+      to {
+        padding-left: 2.5rem;   /* px-10 */
+        padding-right: 2.5rem;
+        padding-top: 0.75rem;   /* pt-3 */
+      }
     }
-  }
-  @keyframes nav-shrink-shell {
-    to {
-      max-width: 64rem;       /* max-w-5xl */
+    @keyframes nav-shrink-shell {
+      to {
+        max-width: 64rem;       /* max-w-5xl */
+      }
     }
-  }
-  @keyframes nav-shrink-inset {
-    to {
-      padding-left: 1.25rem;  /* px-5 */
-      padding-right: 1.25rem;
-      height: 4rem;           /* h-16 */
+    @keyframes nav-shrink-inset {
+      to {
+        padding-left: 1.25rem;  /* px-5 */
+        padding-right: 1.25rem;
+        height: 4rem;           /* h-16 */
+      }
     }
-  }
-  .nav-outer {
-    animation: nav-shrink-outer linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 30px;
-  }
-  .nav-shell {
-    animation: nav-shrink-shell linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 30px;
-  }
-  .nav-inset {
-    animation: nav-shrink-inset linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 30px;
+    .nav-outer {
+      animation: nav-shrink-outer linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 30px;
+    }
+    .nav-shell {
+      animation: nav-shrink-shell linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 30px;
+    }
+    .nav-inset {
+      animation: nav-shrink-inset linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 30px;
+    }
   }
 }

@@ -23,7 +23,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ContentWrapper isFirstSection>
-      <Typo.H1>Datenschutzerklärung</Typo.H1>
+      <Typo.H1 className="hyphens-auto [overflow-wrap:anywhere]">
+        Daten&shy;schutz&shy;erklärung
+      </Typo.H1>
 
       {/* 1. Datenschutz auf einen Blick */}
       <Typo.H2>1. Datenschutz auf einen Blick</Typo.H2>
@@ -545,7 +547,7 @@ export default function Page() {
         gesetzt, der die Erfassung Ihrer Daten bei zukünftigen Besuchen dieser
         Website verhindert: Google Analytics deaktivieren.
       </Typo.Paragraph>
-      <Typo.Paragraph>
+      <Typo.Paragraph className="[overflow-wrap:anywhere]">
         Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics
         finden Sie in der Datenschutzerklärung von Google:
         https://support.google.com/analytics/answer/6004245?hl=de.
@@ -728,7 +730,7 @@ export default function Page() {
         https://www.facebook.com/ads/preferences/?entry_product=ad_settings_screen
         deaktivieren. Dazu müssen Sie bei Facebook angemeldet sein.
       </Typo.Paragraph>
-      <Typo.Paragraph>
+      <Typo.Paragraph className="[overflow-wrap:anywhere]">
         Wenn Sie kein Meta-Konto besitzen, können Sie nutzungsbasierte Werbung
         von Meta auf der Website der European Interactive Digital Advertising
         Alliance deaktivieren:

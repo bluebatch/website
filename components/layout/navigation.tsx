@@ -161,6 +161,10 @@ const useCasesMenu = {
       icon: "/icons/factory.svg",
       href: "/wholesale-ai",
       cases: [
+        {
+          title: "KI-Chatbot mit ERP-Anbindung",
+          href: "/use-cases/grosshandel/ki-chatbot-grosshandel",
+        },
         { title: "Auftragserfassung", href: "/bestellung-erfassen" },
         {
           title: "Bestellabwicklung",
@@ -328,9 +332,9 @@ interface NavigationProps {
 
 export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
   return (
-    <div className="nav-outer fixed top-0 left-0 right-0 z-50 px-8 pt-4">
+    <div className="nav-outer fixed top-0 left-0 right-0 z-50 px-[6px] pt-[6px] lg:px-8 lg:pt-4">
       <nav className="nav-shell relative mx-auto bg-white/70 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200/50 max-w-6xl">
-        <div className="nav-inset px-6 h-20">
+        <div className="nav-inset px-4 h-14 lg:px-6 lg:h-20">
           <div className="flex h-full items-center justify-between">
             {/* Logo */}
             <div

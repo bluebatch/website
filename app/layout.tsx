@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/layout/navigation";
 import Footer from "@/components/layout/footer";
 import CookieConsent from "@/components/ui/cookie-consent";
+import SmoothAnchorScroll from "@/components/ui/smooth-anchor-scroll";
 import { PostHogProvider } from "@/components/providers/posthog";
 import MetaPixel from "@/components/marketing/meta-pixel";
 import HubSpotTracking from "@/components/marketing/hubspot-tracking";
@@ -53,6 +54,7 @@ export default async function RootLayout({
 
             <Footer />
             <CookieConsent />
+            <SmoothAnchorScroll />
             <MetaPixel />
             <HubSpotTracking />
           </ContactModal>

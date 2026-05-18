@@ -366,6 +366,7 @@ export default async function Page({
 
       {/* 3. LÖSUNG — vertical alternating layout */}
       <ContentWrapper colorScheme="gray">
+        <div id="solution" className="scroll-mt-24" />
         <IntroBox>
           <IntroBox.PreHeadline>Die Lösung</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -459,6 +460,10 @@ export default async function Page({
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-12 flex justify-center md:mt-16">
+          <ContactButton icon="chat">Jetzt Lösung vereinbaren</ContactButton>
         </div>
       </ContentWrapper>
 

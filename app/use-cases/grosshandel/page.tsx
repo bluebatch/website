@@ -65,6 +65,13 @@ export const metadata: Metadata = {
 
 const useCases = [
   {
+    slug: "ki-chatbot-grosshandel",
+    title: "KI-Chatbot mit ERP-Anbindung",
+    description:
+      "Pilot für deinen Großhandel: Open WebUI als sichere Chat-Oberfläche, fertige Connectoren zu Ebootis, MS Navision und SharePoint. 1.000 € Setup, 50 € pro Monat Betrieb, in 5 Tagen live.",
+    image: "/images/ki-chatbot-grosshandel/hero-chatbot.png",
+  },
+  {
     slug: "auftragserfassung",
     title: "Auftragserfassung",
     description:

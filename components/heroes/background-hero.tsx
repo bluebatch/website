@@ -30,7 +30,7 @@ function BackgroundHero({
   opacityBackground = "black",
 }: BackgroundHeroProps) {
   return (
-    <div className="relative w-full overflow-hidden flex items-center justify-center pt-32">
+    <div className="relative w-full overflow-hidden flex items-center justify-center min-h-[100dvh] pt-14 md:min-h-0 md:pt-32">
       {/* Background Media */}
       {videoSrc ? (
         <video
@@ -59,7 +59,7 @@ function BackgroundHero({
       />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8 md:py-20">
         {children}
       </div>
 
@@ -128,7 +128,7 @@ BackgroundHero.Description = function Description({
   children,
 }: DescriptionProps) {
   return (
-    <AnimatedDescription className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto mb-12">
+    <AnimatedDescription className="text-sm md:text-xl text-gray-800 max-w-3xl mx-auto mb-6 md:mb-12">
       {children}
     </AnimatedDescription>
   );
@@ -143,7 +143,7 @@ BackgroundHero.CallToAction = function CallToAction({
   children,
 }: CallToActionProps) {
   return (
-    <AnimatedCallToAction className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+    <AnimatedCallToAction className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 md:mb-16">
       {children}
     </AnimatedCallToAction>
   );
@@ -158,7 +158,7 @@ BackgroundHero.Stats = function Stats({ children }: StatsProps) {
   const count = React.Children.count(children);
   return (
     <AnimatedStats
-      className={`grid grid-cols-2 md:grid-cols-${count} gap-6 mx-auto`}
+      className={`grid grid-cols-${count} gap-2 md:gap-6 mx-auto`}
     >
       {children}
     </AnimatedStats>
@@ -186,12 +186,14 @@ BackgroundHero.Stat = function Stat({
   return (
     <AnimatedStat
       index={index}
-      className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all"
+      className="bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-3 md:p-6 border border-white/20 hover:bg-white/20 transition-all"
     >
-      <div className={`text-3xl md:text-4xl font-bold mb-2 ${color}`}>
+      <div className={`text-xl md:text-4xl font-bold mb-1 md:mb-2 ${color}`}>
         <AnimatedStatValue value={value} prefix={prefix} suffix={suffix} />
       </div>
-      <div className="text-sm text-gray-600">{label}</div>
+      <div className="text-[11px] leading-tight md:text-sm text-gray-600 hyphens-auto [overflow-wrap:anywhere]">
+        {label}
+      </div>
     </AnimatedStat>
   );
 };
