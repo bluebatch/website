@@ -208,7 +208,14 @@ export default function Page() {
                 n8n-Workflows für den Großhandel
               </Link>{" "}
               zeigt, wie die technische Basis für diese Automatisierung
-              aussieht.
+              aussieht. Für Teams, die mit fertigen Bausteinen starten wollen,
+              gibt es eine kuratierte{" "}
+              <Link
+                href="/blog/n8n-vorlagen-grosshandel"
+                className="text-primary-600 hover:underline"
+              >
+                Vorlagen-Sammlung mit Großhandels-Fokus
+              </Link>.
             </Typo.Paragraph>
           </div>
 

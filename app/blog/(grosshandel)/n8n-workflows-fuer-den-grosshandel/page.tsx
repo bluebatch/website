@@ -352,6 +352,14 @@ export default function Page() {
               hängt davon ab, wo bei euch am meisten Zeit verloren geht.
               Drei Faustregeln:
             </Typo.Paragraph>
+            <Typo.Paragraph>
+              Wer lieber mit fertigen Vorlagen startet, findet in unserer{" "}
+              <Link href="/blog/n8n-vorlagen-grosshandel" className="text-primary-600 hover:underline">
+                Sammlung von n8n-Vorlagen für den Großhandel
+              </Link>{" "}
+              direkt einsatzfähige Templates für Preislisten-Import,
+              Auftragsbestätigung und weitere typische B2B-Szenarien.
+            </Typo.Paragraph>
             <Typo.List>
               <Typo.ListItem>
                 <strong>Schnellster ROI:</strong> 3-Wege-Rechnungsprüfung.
