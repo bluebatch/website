@@ -119,7 +119,12 @@ export default function Page() {
               Webhook-Schnittstelle. Lizenzgebühren fallen nicht an. Wer
               einen Server, Container oder eine VM mit Docker hat, kann n8n
               in unter zehn Minuten starten und dauerhaft kostenfrei
-              betreiben. Wer Self-Hosting nicht selbst stemmen will,
+              betreiben. Die einzelnen Wege (npm, Docker, Docker Compose)
+              zeigt unser{" "}
+              <Link href="/blog/n8n-installieren-anleitung" className="text-primary-600 hover:underline">
+                n8n-Installations-Guide
+              </Link>{" "}
+              Schritt für Schritt. Wer Self-Hosting nicht selbst stemmen will,
               findet bei unserem{" "}
               <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">
                 n8n-Hosting in Deutschland

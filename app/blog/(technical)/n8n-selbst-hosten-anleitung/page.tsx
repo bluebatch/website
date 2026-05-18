@@ -208,7 +208,16 @@ export default function Page() {
               n8n-Container, Postgres-Container und ein Reverse Proxy. Ein
               typisches Setup trennt die Services sauber, mountet die Daten in
               benannte Volumes und legt alle Secrets in eine{" "}
-              <code>.env</code>-Datei.
+              <code>.env</code>-Datei. Für die schnelle lokale
+              Erst-Installation (npm, Docker Desktop, npx) liefert unser{" "}
+              <Link
+                href="/blog/n8n-installieren-anleitung"
+                className="text-primary-600 hover:underline"
+              >
+                Quick-Start-Guide zu n8n installieren
+              </Link>{" "}
+              die direkte Anleitung — der hier beschriebene Production-Stack
+              setzt darauf auf.
             </Typo.Paragraph>
 
             <BlogImage
