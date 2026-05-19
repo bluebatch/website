@@ -335,7 +335,7 @@ npx n8n`}
               <Typo.ListItem>
                 Die Desktop App von der{" "}
                 <a
-                  href="https://n8n.io/get-started/"
+                  href="https://docs.n8n.io/choose-n8n/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary-600 hover:underline"
