@@ -461,7 +461,7 @@ export default function Page() {
               über die Automatisierungsmöglichkeiten sucht, findet ihn in
               unserem Artikel zu{" "}
               <Link
-                href="/blog/digitalisierung-grosshandel"
+                href="/digitalisierung-grosshandel"
                 className="text-primary-600 hover:underline"
               >
                 Digitalisierung im Großhandel

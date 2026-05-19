@@ -735,7 +735,7 @@ export default function Page() {
           <CrossSellGrid.Headline>
             Mehr Großhandels-Workflows aus dem Bluebatch-Stack
           </CrossSellGrid.Headline>
-          <CrossSellGrid.Card href="/use-cases/grosshandel/auftragserfassung">
+          <CrossSellGrid.Card href="/bestellung-erfassen">
             <CrossSellGrid.Title>Auftragserfassung</CrossSellGrid.Title>
             <CrossSellGrid.Description>
               Bestellungen aus E-Mail, PDF und Portal automatisch erfassen
@@ -749,7 +749,7 @@ export default function Page() {
               automatische Nachbestellung.
             </CrossSellGrid.Description>
           </CrossSellGrid.Card>
-          <CrossSellGrid.Card href="/use-cases/grosshandel">
+          <CrossSellGrid.Card href="/wholesale-ai">
             <CrossSellGrid.Title>Alle Großhandels Use Cases</CrossSellGrid.Title>
             <CrossSellGrid.Description>
               Übersicht aller Workflows für Großhändler, von der

@@ -640,7 +640,7 @@ export default function Page() {
               Lieferzeit innerhalb der freigegebenen Range liegen, sonst geht es
               in die Freigabe-Schleife. Mehr dazu in unserem Artikel zur{" "}
               <Link
-                href="/blog/automatische-angebotserstellung-grosshandel"
+                href="/ki-angebote"
                 className="text-primary-600 hover:underline"
               >
                 automatischen Angebotserstellung im Großhandel
@@ -672,7 +672,7 @@ export default function Page() {
               der Sachbearbeitung mit klarer Begründung. Vertieft in unserem
               Beitrag{" "}
               <Link
-                href="/blog/bestellungen-erfassen-automatisieren"
+                href="/bestellerfassung-automatisieren"
                 className="text-primary-600 hover:underline"
               >
                 Bestellungen erfassen automatisieren
