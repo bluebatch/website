@@ -329,7 +329,7 @@ const connectors = [
 
 const upgradePath = [
   {
-    href: "/use-cases/grosshandel/auftragserfassung",
+    href: "/bestellung-erfassen",
     title: "Auftragserfassung automatisieren",
     description:
       "Wenn der Chatbot Stammdaten zuverlässig liefert, sind eingehende Bestellungen aus E-Mail und PDF der nächste logische Schritt.",
