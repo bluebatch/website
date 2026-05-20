@@ -364,7 +364,7 @@ export default function Page() {
               n8n-Cloud mit EU-Hosting lösen dieses Problem. Mehr dazu im
               Beitrag{" "}
               <Link
-                href="/blog/n8n-sicherheit-self-hosting"
+                href="/n8n-sicherheit"
                 className="text-primary-500 hover:underline"
               >
                 n8n Sicherheit und Self-Hosting
