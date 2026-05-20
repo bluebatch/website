@@ -177,6 +177,11 @@ export default function Page() {
               <Link href="/blog/make-vs-n8n-vergleich" className="text-primary-600 hover:underline">
                 Make-vs-n8n-Vergleich
               </Link>
+              , die komplette Aufschlüsselung der Zapier-Tarife inklusive
+              versteckter Kostentreiber im{" "}
+              <Link href="/blog/zapier-kosten-vergleich" className="text-primary-600 hover:underline">
+                Zapier-Kosten-Guide
+              </Link>
               . Vereinfacht: Sobald ein Workflow mehr als drei Nodes
               hat, gewinnt n8n im Pricing-Vergleich deutlich.
             </Typo.Paragraph>

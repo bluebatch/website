@@ -181,7 +181,15 @@ export default function Page() {
               Premium-Apps (z.B. NetSuite, Salesforce-Custom-Objects, manche
               Datenbank-Integrationen) sind in den günstigen Plänen außerdem
               gar nicht enthalten. Wer die braucht, springt direkt zwei
-              Stufen höher.
+              Stufen höher. Eine vollständige Übersicht aller Pläne, Task-Limits
+              und versteckten Kostentreiber liefert unser{" "}
+              <Link
+                href="/blog/zapier-kosten-vergleich"
+                className="text-blue-600 hover:underline"
+              >
+                Zapier-Kosten-Deep-Dive
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.H3>n8n: Pay-per-Execution oder Self-Hosted</Typo.H3>
             <Typo.Paragraph>
