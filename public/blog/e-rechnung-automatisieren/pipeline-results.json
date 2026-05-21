@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "hero.png",
+    "score": 85,
+    "verdict": "PASS",
+    "attempts": 2
+  },
+  {
+    "filename": "formate.png",
+    "score": 88,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "workflow.png",
+    "score": 78,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "roi.png",
+    "score": 94,
+    "verdict": "PASS",
+    "attempts": 1
+  }
+]
