@@ -628,7 +628,7 @@ export default function Page() {
 
         <BlogLayout.Navigation>
           <BlogLayout.NavigationItem idLink="pflicht">
-            Pflicht 2025–2028
+            Pflicht 2025 bis 2028
           </BlogLayout.NavigationItem>
           <BlogLayout.NavigationItem idLink="formate">
             XRechnung & ZUGFeRD
