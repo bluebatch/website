@@ -474,7 +474,16 @@ export default function Page() {
               >
                 n8n-Workflows für den Großhandel
               </Link>{" "}
-              eine ganze Reihe konkreter Workflows. Oder{" "}
+              eine ganze Reihe konkreter Workflows. Wer schon Make einsetzt
+              und überlegt, ob ein Wechsel zu Zapier sinnvoll wäre, sollte
+              vorher unseren{" "}
+              <Link
+                href="/blog/make-vs-zapier-vergleich"
+                className="text-primary-500 hover:underline"
+              >
+                Make-vs-Zapier-Vergleich
+              </Link>{" "}
+              lesen. Oder{" "}
               <Link
                 href="/contact"
                 className="text-primary-500 hover:underline"

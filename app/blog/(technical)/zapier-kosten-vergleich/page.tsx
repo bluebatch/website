@@ -405,7 +405,15 @@ export default function Page() {
               die Skalierungskosten mitdenken. Ein Workflow, der heute
               29 Euro kostet, kann in einem Jahr bei 500 Euro landen.
               Alternativen wie n8n (besonders Self-Hosted) oder Make bieten
-              bei steigendem Volumen deutlich bessere Unit Economics.
+              bei steigendem Volumen deutlich bessere Unit Economics. Wer
+              speziell Make gegen Zapier abwägt, findet im{" "}
+              <Link
+                href="/blog/make-vs-zapier-vergleich"
+                className="text-primary-500 hover:underline"
+              >
+                Make-vs-Zapier-Vergleich
+              </Link>{" "}
+              die operativen Stärken und Schwächen beider Tools im Detail.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Die Entscheidung hängt vom konkreten Use Case ab: Wie viele

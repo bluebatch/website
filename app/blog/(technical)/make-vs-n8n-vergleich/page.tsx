@@ -430,9 +430,16 @@ export default function Page() {
               >
                 n8n-vs-Zapier-Vergleich
               </Link>{" "}
-              die passende Entscheidungshilfe. Oder sprechen Sie uns direkt an,
-              wenn Sie Ihren Stack vor dem ersten großen Rollout sauber
-              planen wollen.
+              die passende Entscheidungshilfe; für den direkten Make-gegen-
+              Zapier-Showdown gibt es den{" "}
+              <Link
+                href="/blog/make-vs-zapier-vergleich"
+                className="text-primary-500 hover:underline"
+              >
+                Make-vs-Zapier-Vergleich
+              </Link>
+              . Oder sprechen Sie uns direkt an, wenn Sie Ihren Stack vor
+              dem ersten großen Rollout sauber planen wollen.
             </Typo.Paragraph>
           </div>
         </BlogLayout.Content>
