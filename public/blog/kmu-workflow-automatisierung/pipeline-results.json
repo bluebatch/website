@@ -1,0 +1,14 @@
+[
+  {
+    "filename": "tool-vergleich-kmu.png",
+    "score": 87,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "roi-kmu-rechnung.png",
+    "score": 86,
+    "verdict": "PASS",
+    "attempts": 2
+  }
+]
