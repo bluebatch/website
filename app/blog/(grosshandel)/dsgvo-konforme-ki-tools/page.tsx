@@ -220,7 +220,15 @@ export default function Page() {
               nutzbar. ChatGPT Team und Enterprise bieten AVVs, EU-Datenräume
               und Opt-out vom Training. Für viele Anwendungsfälle eine
               praktikable Option, solange die Mitarbeiter die richtige Version
-              nutzen.
+              nutzen. Details zu Beschaffung, EU-Datenresidenz und Rollout
+              stehen im{" "}
+              <Link
+                href="/blog/chatgpt-enterprise-deutschland"
+                className="text-bb-blue-700 underline hover:text-bb-blue-900"
+              >
+                ChatGPT-Enterprise-Guide für Deutschland
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>Microsoft Copilot</Typo.H3>
