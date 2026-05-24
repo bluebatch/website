@@ -402,6 +402,15 @@ export default function Page() {
               eigenen Tenant, zweitens die Connectors für die wichtigsten
               internen Systeme, drittens die Custom-GPT-Strategie, weil dort
               der eigentliche Mehrwert über das reine Chat-Interface entsteht.
+              Eine ausführliche Schritt-für-Schritt-Anleitung zu Beschaffung,
+              DSGVO-Setup und Rollout findest du im{" "}
+              <Link
+                href="/blog/chatgpt-enterprise-deutschland"
+                className="text-bb-blue-700 underline hover:text-bb-blue-900"
+              >
+                ChatGPT-Enterprise-Guide für Deutschland
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 
