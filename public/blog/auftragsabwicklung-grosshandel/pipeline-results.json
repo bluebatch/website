@@ -1,0 +1,14 @@
+[
+  {
+    "filename": "tool-vergleich.png",
+    "score": 85,
+    "verdict": "PASS",
+    "attempts": 3
+  },
+  {
+    "filename": "roi-rechnung.png",
+    "score": 93,
+    "verdict": "PASS",
+    "attempts": 1
+  }
+]
