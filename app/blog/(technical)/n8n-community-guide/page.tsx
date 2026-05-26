@@ -88,8 +88,16 @@ export default function Page() {
               >
                 Einführung in n8n
               </Link>
-              . Dieser Beitrag fokussiert sich darauf, wie ihr die Community
-              effektiv nutzt — als Anwender und als Beitragender.
+              . Wer praktisch starten will, findet im{" "}
+              <Link
+                href="/blog/n8n-tutorial-deutsch"
+                className="text-primary-600 hover:underline"
+              >
+                n8n-Tutorial auf Deutsch
+              </Link>{" "}
+              eine durchgehende Schritt-für-Schritt-Anleitung. Dieser
+              Beitrag fokussiert sich darauf, wie ihr die Community
+              effektiv nutzt, als Anwender und als Beitragender.
             </Typo.Paragraph>
           </div>
 

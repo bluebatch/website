@@ -88,10 +88,16 @@ export default function Page() {
               <Link href="/blog/was-ist-n8n" className="text-primary-600 hover:underline">
                 Einführung in n8n
               </Link>
-              . Hier geht es ausschließlich um die Pricing-Mathematik:
-              welcher Plan für welches Volumen, wann sich Self-Hosting
-              gegen Cloud rechnet und welche Posten in keinem Tarif-Blatt
-              auftauchen.
+              . Wer praktisch loslegen will, bevor er sich mit Tarifen
+              befasst, findet im{" "}
+              <Link href="/blog/n8n-tutorial-deutsch" className="text-primary-600 hover:underline">
+                n8n-Tutorial auf Deutsch
+              </Link>{" "}
+              eine durchgehende Anleitung vom ersten Workflow bis zum
+              produktiven Einsatz. Hier geht es ausschließlich um die
+              Pricing-Mathematik: welcher Plan für welches Volumen, wann
+              sich Self-Hosting gegen Cloud rechnet und welche Posten in
+              keinem Tarif-Blatt auftauchen.
             </Typo.Paragraph>
           </div>
 

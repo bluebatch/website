@@ -415,8 +415,17 @@ npx n8n`}
             <Typo.Paragraph>
               Damit steht das Grundprinzip: Trigger löst aus, Nodes
               verarbeiten Daten, Ergebnis kommt raus. Von hier aus lassen
-              sich beliebig komplexe Workflows bauen. Wer direkt mit
-              KI-Nodes arbeiten will, findet im Guide zu{" "}
+              sich beliebig komplexe Workflows bauen. Wer den vollständigen
+              Einstieg von der Oberfläche bis zum ersten produktiven
+              Workflow sucht, findet im{" "}
+              <Link
+                href="/blog/n8n-tutorial-deutsch"
+                className="text-primary-600 hover:underline"
+              >
+                n8n-Tutorial auf Deutsch
+              </Link>{" "}
+              eine durchgehende Schritt-für-Schritt-Anleitung. Wer direkt
+              mit KI-Nodes arbeiten will, findet im Guide zu{" "}
               <Link
                 href="/blog/n8n-ki-agenten-erstellen"
                 className="text-primary-600 hover:underline"

@@ -1208,7 +1208,15 @@ export default function Page() {  return (
               >
                 n8n Community Guide
               </Link>
-              .
+              . Wer auf Deutsch loslegen will, findet im{" "}
+              <Link
+                href="/blog/n8n-tutorial-deutsch"
+                className="text-primary-600 hover:underline"
+              >
+                n8n-Tutorial auf Deutsch
+              </Link>{" "}
+              eine durchgehende Anleitung vom ersten Workflow bis zum
+              produktiven Einsatz.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Namhafte deutsche Unternehmen setzen bereits auf n8n: StepStone
