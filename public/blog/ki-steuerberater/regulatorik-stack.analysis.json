@@ -1,0 +1,28 @@
+{
+  "rendering_style": "infographic",
+  "ink_outlines": true,
+  "background_tone": "white",
+  "dominant_colors": [
+    "white",
+    "blue",
+    "orange"
+  ],
+  "accent_color": "orange",
+  "accent_intensity": "strong",
+  "contrast_level": "high",
+  "mood": "informational",
+  "composition_type": "centered",
+  "has_text": true,
+  "has_people": false,
+  "has_portraits": false,
+  "has_speed_lines": false,
+  "subject_category": "technology",
+  "color_temperature": "cool",
+  "brightness_estimate": "very-bright",
+  "detail_level": "detailed",
+  "depth_of_field": "none",
+  "has_visible_hex_codes": false,
+  "has_leaked_metadata": false,
+  "has_typos": false,
+  "text_quality": "clean"
+}
