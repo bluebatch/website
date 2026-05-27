@@ -201,8 +201,12 @@ export default function Page() {
               B2B-Webshop-Konnektoren. Implementierungszeiten liegen bei sechs
               bis zwölf Monaten, Lizenzkosten im Bereich 100 bis 250 Euro pro
               User und Monat plus klassisches Setup-Projekt mit Festpreis von
-              40.000 bis 150.000 Euro. Sie sind 2026 die häufigste Wahl im
-              Bluebatch-ICP zwischen 50 und 300 Mitarbeitenden.
+              40.000 bis 150.000 Euro. ALPHAPLAN wurde 2025 vom Center for
+              Enterprise Research der Universität Potsdam zum ERP-System des
+              Jahres in der Kategorie Großhandel gekürt — die zwölfte
+              Auszeichnung des Hauses und ein starkes Signal für die
+              Branchen-Tiefe in diesem Cluster. Sie sind 2026 die häufigste
+              Wahl im Bluebatch-ICP zwischen 50 und 300 Mitarbeitenden.
             </Typo.Paragraph>
 
             <Typo.H3>Cluster 3: Branchen-Suite</Typo.H3>
@@ -405,10 +409,12 @@ export default function Page() {
               Artikelstamm, Kundenstamm, Preislisten, offene Posten, offene
               Aufträge, historische Bewegungen — die Migration eines 20 Jahre
               gewachsenen Bestandsystems ist regelmäßig der teuerste und
-              risikoreichste Teil des Projekts. Wer pro Stammkunde individuelle
-              Artikelnummern, eigene Preislisten und Rahmenverträge im
-              Legacy-System hat, baut die halbe Migration im Customizing nach,
-              statt sie sauber zu modellieren.
+              risikoreichste Teil des Projekts. proALPHA berichtet aus seiner
+              Migrationspraxis, dass 83 Prozent aller Datenmigrationsprojekte
+              ihr Budget oder ihren Zeitrahmen nicht einhalten. Wer pro
+              Stammkunde individuelle Artikelnummern, eigene Preislisten und
+              Rahmenverträge im Legacy-System hat, baut die halbe Migration im
+              Customizing nach, statt sie sauber zu modellieren.
             </Typo.Paragraph>
 
             <Typo.H3>2. Customizing-Falle</Typo.H3>
@@ -445,14 +451,21 @@ export default function Page() {
             <Typo.H3>5. Die Annahme, dass das neue WaWi die KI-Frage löst</Typo.H3>
             <Typo.Paragraph>
               Hersteller-Demos zeigen 2026 gern die neuen KI-Module: Sage
-              Copilot, Microsoft Copilot in Dynamics, SAP Joule, alphaplan
-              ki-tools. Das sind echte Roll-outs, aber sie decken nicht den
-              echten Engpass des Großhandels ab — die unstrukturierte
-              Bestellung aus zehn Kanälen, die Mapping-Logik gegen den
-              Kundenstamm, die Reklamationsbearbeitung mit semantischem Bezug
-              zum Lieferschein. Diese Aufgaben sind heute robuster über einen
-              externen KI-Workflow-Layer zu lösen als über das WaWi selbst.
-              Mehr zum Architektur-Pattern steht im Beitrag zu{" "}
+              Copilot (für Sage X3 weltweit verfügbar seit Juni 2025),
+              Microsoft Copilot in Dynamics 365 Business Central mit dem
+              Payables Agent, SAP Joule mit ab Dezember 2025 frei
+              konfigurierbaren Custom Agents im Joule Studio, proALPHA
+              Industrial AI Platform nach der Übernahme von Insiders
+              Technologies im September 2025. Das sind echte Roll-outs, aber
+              sie decken nicht den echten Engpass des deutschen Großhandels ab
+              — die unstrukturierte Bestellung aus zehn Kanälen, die
+              Mapping-Logik gegen den Kundenstamm, die Reklamationsbearbeitung
+              mit semantischem Bezug zum Lieferschein. Diese Aufgaben sind
+              heute robuster über einen externen KI-Workflow-Layer zu lösen
+              als über das WaWi selbst, vor allem weil mehrere
+              Hersteller-Module ausschließlich in den Cloud-Editionen laufen
+              und On-Prem-Anwender außen vor lassen. Mehr zum
+              Architektur-Pattern steht im Beitrag zu{" "}
               <Link
                 href="/blog/ki-workflow-erp"
                 className="text-primary-600 hover:underline"
@@ -700,7 +713,7 @@ export default function Page() {
                   question:
                     "Reicht das KI-Modul des WaWi-Herstellers für Bestelleingang aus?",
                   answer:
-                    "Stand 2026 nein, nicht im Großhandel. SAP Joule, Microsoft Copilot in Dynamics, Sage Copilot und vergleichbare Module sind solide für strukturierte Inputs (EDI, JSON), aber schwach in der Erkennung von freien PDF-Bestellungen und in der Mapping-Logik gegen Kunden-Artikelnummern. Wer 60 bis 80 Prozent Touch-Rate erreichen will, kombiniert das WaWi mit einem externen KI-Workflow-Layer.",
+                    "Stand 2026 nein, nicht im deutschen Großhandel. SAP Joule (mit über 400 angekündigten Use Cases bis Ende 2025), Microsoft Copilot in Dynamics 365 BC (Payables Agent verfügbar), Sage Copilot (in Sage X3 seit Juni 2025) und vergleichbare Module sind solide für strukturierte Inputs (EDI, JSON), aber schwach in der Erkennung von freien PDF-Bestellungen und in der Mapping-Logik gegen Kunden-Artikelnummern. Hinzu kommt, dass mehrere dieser Module nur in den Cloud-Editionen laufen — On-Prem-Häuser sind außen vor. Wer 60 bis 80 Prozent Touch-Rate erreichen will, kombiniert das WaWi mit einem externen KI-Workflow-Layer.",
                 },
                 {
                   question:
