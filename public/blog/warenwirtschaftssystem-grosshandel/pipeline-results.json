@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "anbieter-landkarte.png",
+    "score": 89,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "tco-vergleich.png",
+    "score": 90,
+    "verdict": "PASS",
+    "attempts": 1
+  },
+  {
+    "filename": "roi-rechnung.png",
+    "score": 94,
+    "verdict": "PASS",
+    "attempts": 3
+  }
+]
