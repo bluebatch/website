@@ -86,7 +86,15 @@ export default function Page() {
               >
                 n8n
               </Link>{" "}
-              oder Make günstiger werden.
+              oder Make günstiger werden. Wer einen breiteren Überblick über die{" "}
+              <Link
+                href="/blog/zapier-alternativen"
+                className="text-primary-500 hover:underline"
+              >
+                Zapier-Alternativen im DACH-Markt
+              </Link>{" "}
+              sucht, findet dort den vollständigen Marktvergleich inklusive
+              Power Automate, Workato und n8n.
             </Typo.Paragraph>
           </div>
 

@@ -483,7 +483,15 @@ export default function Page() {
               >
                 Make-vs-Zapier-Vergleich
               </Link>{" "}
-              lesen. Oder{" "}
+              lesen. Wer den Markt breiter scannt, bekommt im{" "}
+              <Link
+                href="/blog/zapier-alternativen"
+                className="text-primary-500 hover:underline"
+              >
+                Überblick aller relevanten Zapier-Alternativen
+              </Link>{" "}
+              auch Power Automate, Workato und n8n im Kontext der typischen
+              Use-Cases gegenübergestellt. Oder{" "}
               <Link
                 href="/contact"
                 className="text-primary-500 hover:underline"

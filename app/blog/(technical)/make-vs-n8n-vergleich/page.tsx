@@ -438,8 +438,16 @@ export default function Page() {
               >
                 Make-vs-Zapier-Vergleich
               </Link>
-              . Oder sprechen Sie uns direkt an, wenn Sie Ihren Stack vor
-              dem ersten großen Rollout sauber planen wollen.
+              . Wer den Blick noch breiter aufzieht, findet im{" "}
+              <Link
+                href="/blog/zapier-alternativen"
+                className="text-primary-500 hover:underline"
+              >
+                Marktüberblick der Zapier-Alternativen
+              </Link>{" "}
+              den vollständigen Vergleich inklusive Power Automate und Workato.
+              Oder sprechen Sie uns direkt an, wenn Sie Ihren Stack vor dem
+              ersten großen Rollout sauber planen wollen.
             </Typo.Paragraph>
           </div>
         </BlogLayout.Content>

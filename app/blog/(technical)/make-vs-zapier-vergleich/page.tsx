@@ -335,6 +335,14 @@ export default function Page() {
               >
                 Make-vs-n8n-Vergleich
               </Link>
+              . Für eine vollständige Marktübersicht inklusive Workato und
+              Power Automate eignet sich der{" "}
+              <Link
+                href="/blog/zapier-alternativen"
+                className="text-primary-500 hover:underline"
+              >
+                Überblick der Zapier-Alternativen 2026
+              </Link>
               .
             </Typo.Paragraph>
           </div>
