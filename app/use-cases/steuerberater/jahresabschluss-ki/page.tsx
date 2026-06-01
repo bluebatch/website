@@ -159,8 +159,8 @@ export default function Page() {
               KI Jahresabschluss: Saison-Peak entzerrt
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Saldenabstimmung, SKR03/SKR04 auf HGB-Mapping, Anhang nach
-              § 264-289 HGB und Lagebericht: KI liefert pro Mandant einen
+              Saldenabstimmung, SKR03/SKR04 auf HGB-Mapping, Anhang nach §
+              264-289 HGB und Lagebericht: KI liefert pro Mandant einen
               prüffähigen Entwurf. Der Steuerberater reviewt, korrigiert und
               gibt frei. So schrumpft der Abschluss von 40-200 h auf 8-40 h und
               Q1/Q2 ist kein Überstundenmarathon mehr.
@@ -234,9 +234,10 @@ export default function Page() {
             Vier KI-Bausteine für HGB-Abschluss, Anhang und Lagebericht
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Ein n8n-Workflow mit Claude und GPT-4 importiert die DATEV-Saldenliste,
-            mappt SKR auf HGB, schreibt Anhang und Lagebericht und liefert dem
-            Steuerberater einen prüffähigen Entwurf zur finalen Freigabe.
+            Ein n8n-Workflow mit Claude und GPT-4 importiert die
+            DATEV-Saldenliste, mappt SKR auf HGB, schreibt Anhang und
+            Lagebericht und liefert dem Steuerberater einen prüffähigen Entwurf
+            zur finalen Freigabe.
           </IntroBox.Subline>
         </IntroBox>
 
@@ -400,9 +401,7 @@ export default function Page() {
       <ContentWrapper colorScheme="gradient-cool">
         <IntroBox>
           <IntroBox.PreHeadline>Was bringt das in Euro?</IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            Amortisation in 6-7 Monaten
-          </IntroBox.Headline>
+          <IntroBox.Headline>Amortisation in 6-7 Monaten</IntroBox.Headline>
           <IntroBox.Subline>
             Rechenbeispiel für 50 Jahresabschlüsse pro Saison, gemischt aus
             BWA-Mandaten und mittelständischen GmbHs.
@@ -412,8 +411,8 @@ export default function Page() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
           <SavingsCard>
             <SavingsBadge>
-              Amortisation in{" "}
-              <SavingsBadgeHighlight>6-7</SavingsBadgeHighlight> Monaten
+              Amortisation in <SavingsBadgeHighlight>6-7</SavingsBadgeHighlight>{" "}
+              Monaten
             </SavingsBadge>
             <SavingsItems>
               <SavingsItem label="Setup einmalig">25.000 €</SavingsItem>
@@ -435,7 +434,9 @@ export default function Page() {
               1.560 €
             </RoiRow>
             <RoiRow label="Jahresersparnis (50 × 1.560 €)">78.000 €</RoiRow>
-            <RoiRow label="Im Schnitt pro Monat (78.000 € / 12)">6.500 €</RoiRow>
+            <RoiRow label="Im Schnitt pro Monat (78.000 € / 12)">
+              6.500 €
+            </RoiRow>
             <RoiRow label="Betrieb pro Monat">− 2.500 €</RoiRow>
             <RoiTotal label="Netto pro Monat">4.000 €</RoiTotal>
           </RoiCalculation>

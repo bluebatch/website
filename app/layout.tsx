@@ -7,6 +7,7 @@ import CookieConsent from "@/components/ui/cookie-consent";
 import SmoothAnchorScroll from "@/components/ui/smooth-anchor-scroll";
 import { PostHogProvider } from "@/components/providers/posthog";
 import MetaPixel from "@/components/marketing/meta-pixel";
+import MetaAdsTracker from "@/components/marketing/meta-ads-tracker";
 import HubSpotTracking from "@/components/marketing/hubspot-tracking";
 import { getBlogPosts } from "@/lib/get-blog-posts";
 import { resolveHref } from "@/lib/get-canonical-path";
@@ -56,6 +57,7 @@ export default async function RootLayout({
             <CookieConsent />
             <SmoothAnchorScroll />
             <MetaPixel />
+            <MetaAdsTracker />
             <HubSpotTracking />
           </ContactModal>
         </PostHogProvider>
