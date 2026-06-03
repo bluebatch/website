@@ -475,7 +475,15 @@ export default function Page() {
               <Typo.ListItem>
                 <strong>Microsoft-365-zentrierte IT:</strong> Wenn alle Daten in
                 SharePoint, Teams und Outlook liegen, ist Microsoft Copilot
-                oft die natürlichere Wahl.
+                oft die natürlichere Wahl. Wie sich Copilot und ChatGPT direkt
+                gegenüberstehen, zeigt unser{" "}
+                <Link
+                  href="/blog/copilot-vs-chatgpt-vergleich"
+                  className="text-primary-600 hover:underline"
+                >
+                  Vergleich Copilot vs. ChatGPT
+                </Link>
+                .
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Strenge Datenresidenz-Anforderungen:</strong> Wer

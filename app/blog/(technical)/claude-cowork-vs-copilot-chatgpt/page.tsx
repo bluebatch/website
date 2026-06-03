@@ -236,7 +236,15 @@ export default function Page() {
               Microsoft-Graph-API. Der Client ist keine eigene App, sondern in
               Word, Excel, Outlook, Teams und Edge integriert. Die Architektur
               setzt voraus, dass das Unternehmen Microsoft 365 einsetzt, idealer
-              Weise auf E3- oder E5-Niveau.
+              Weise auf E3- oder E5-Niveau. Eine fokussierte Gegenüberstellung
+              nur dieser beiden Tools liefert unser{" "}
+              <Link
+                href="/blog/copilot-vs-chatgpt-vergleich"
+                className="text-primary-600 hover:underline"
+              >
+                Vergleich Copilot vs. ChatGPT
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>ChatGPT Enterprise</Typo.H3>
