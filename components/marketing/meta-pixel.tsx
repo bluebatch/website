@@ -3,7 +3,8 @@
 import { useEffect } from "react";
 import Script from "next/script";
 
-const PIXEL_ID = "1312732710788403";
+// const PIXEL_ID = "1312732710788403";
+const PIXEL_ID = "1624299748827172";
 const CONSENT_KEY = "cookie_consent";
 
 declare global {

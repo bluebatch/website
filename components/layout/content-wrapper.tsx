@@ -20,7 +20,7 @@ export default function ContentWrapper({
 
   const paddingClasses = noPadding
     ? ``
-    : `px-4 ${!isFirstSection ? "pt-16" : "pt-40"} pb-16 sm:px-6 lg:px-8`;
+    : `px-4 ${!isFirstSection ? "pt-16" : "pt-24 lg:pt-40"} pb-16 sm:px-6 lg:px-8`;
 
   const bodyWidthClasses = {
     full: "",
