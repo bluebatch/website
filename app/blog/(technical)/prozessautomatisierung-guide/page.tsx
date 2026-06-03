@@ -581,8 +581,8 @@ export default function Page() {
                 className="text-primary-600 hover:underline"
               >
                 Sprecht uns an
-              </Link>{" "}
-              — in einem 30-minütigen Erstgespräch analysieren wir
+              </Link>
+              , in einem 30-minütigen Erstgespräch analysieren wir
               gemeinsam, welcher Workflow bei euch den größten Hebel hat
               und wie der erste Schritt aussieht.
             </Typo.Paragraph>
