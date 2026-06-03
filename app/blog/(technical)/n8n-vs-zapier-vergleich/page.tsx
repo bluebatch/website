@@ -146,7 +146,15 @@ export default function Page() {
               >
                 Was ist n8n?
               </Link>
-              .
+              . Wer zuerst die Methodik und den Business-Case klären will,
+              bevor er sich für ein Tool entscheidet, sollte den{" "}
+              <Link
+                href="/blog/prozessautomatisierung-guide"
+                className="text-primary-500 hover:underline"
+              >
+                Guide zur Prozessautomatisierung
+              </Link>{" "}
+              lesen.
             </Typo.Paragraph>
           </div>
 

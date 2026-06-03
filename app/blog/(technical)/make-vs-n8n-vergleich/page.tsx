@@ -343,7 +343,15 @@ export default function Page() {
             />
             <Typo.Paragraph>
               Statt pauschal "das eine ist besser" zu sagen, hier eine ehrliche
-              Zuordnung nach Situation.
+              Zuordnung nach Situation. Wer die Tool-Wahl in eine
+              übergeordnete Strategie einordnen will, findet im{" "}
+              <Link
+                href="/blog/prozessautomatisierung-guide"
+                className="text-primary-500 hover:underline"
+              >
+                Guide zur Prozessautomatisierung
+              </Link>{" "}
+              den Methoden- und ROI-Rahmen dahinter.
             </Typo.Paragraph>
             <Typo.H3>Make ist die bessere Wahl, wenn</Typo.H3>
             <Typo.List>
