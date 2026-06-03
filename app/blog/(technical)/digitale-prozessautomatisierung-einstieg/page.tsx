@@ -177,7 +177,13 @@ export default function Page() {
               Sachbearbeitung pro Woche einspart, amortisiert sich in wenigen
               Monaten. Der Hebel ist besonders groß bei Prozessen mit hohem
               Mengengerüst und geringer Varianz, etwa bei der
-              Auftragserfassung oder der Rechnungsprüfung.
+              Auftragserfassung oder der Rechnungsprüfung. Wie sich speziell
+              die seit 2025 verpflichtende E-Rechnung end-to-end automatisieren
+              lässt, zeigt unser Leitfaden{" "}
+              <Link href="/blog/e-rechnung-automatisieren" className="text-primary-600 hover:underline">
+                E-Rechnung automatisieren
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Wer wissen will, wie sich das konkret im Tagesgeschäft

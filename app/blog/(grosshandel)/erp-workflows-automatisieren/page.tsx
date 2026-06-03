@@ -269,6 +269,14 @@ export default function Page() {
                 className="text-primary-600 hover:underline"
               >
                 automatischen Rechnungsprüfung
+              </Link>. Wie der vorgelagerte Schritt, das Einlesen und
+              Validieren strukturierter E-Rechnungen wie XRechnung und
+              ZUGFeRD, automatisiert wird, beschreibt der Leitfaden{" "}
+              <Link
+                href="/blog/e-rechnung-automatisieren"
+                className="text-primary-600 hover:underline"
+              >
+                E-Rechnung automatisieren
               </Link>.
             </Typo.Paragraph>
           </div>
