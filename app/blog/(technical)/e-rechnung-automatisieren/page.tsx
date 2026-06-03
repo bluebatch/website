@@ -218,16 +218,16 @@ export default function Page() {
             <Typo.Paragraph>
               Das ist der Punkt, an dem die meisten Mittelständler erkennen:
               Compliance ohne Automatisierung ist Mehrarbeit. Und genau hier
-              kommt der Workflow ins Spiel. Wer den Hintergrund zur
-              KI-gestützten Rechnungserkennung tiefer einsteigen möchte, findet
+              kommt der Workflow ins Spiel. Wer sehen will, wie
+              KI-gestützte Rechnungserkennung in der Praxis aussieht, findet
               im{" "}
               <Link
-                href="/blog/ki-rechnungserkennung"
+                href="/use-cases/grosshandel/invoice-bot"
                 className="text-primary-500 hover:underline"
               >
-                KI-Rechnungserkennung-Vergleich
+                Invoice-Bot für den Großhandel
               </Link>{" "}
-              die wichtigsten Anbieter und Trade-offs.
+              ein konkretes Beispiel für den kompletten Eingangs-Workflow.
             </Typo.Paragraph>
           </div>
 
@@ -313,10 +313,10 @@ export default function Page() {
               gibt es ein OData- oder IDOC-Modul. Wer tiefer in die
               DATEV-Anbindung einsteigt, findet im{" "}
               <Link
-                href="/datev-anbindung"
+                href="/blog/erp-workflows-automatisieren"
                 className="text-primary-500 hover:underline"
               >
-                DATEV-Anbindungs-Guide
+                Guide zu ERP- und DATEV-Workflows
               </Link>{" "}
               die konkreten Schnittstellen-Optionen.
             </Typo.Paragraph>
@@ -489,7 +489,7 @@ export default function Page() {
               40 Prozent über der reinen Stundenrechnung. Wer das Thema
               automatisierte Rechnungsprüfung tiefer durchdenkt, findet im{" "}
               <Link
-                href="/3-wege-abgleich-rechnungspruefung"
+                href="/automatische-rechnungspruefung"
                 className="text-primary-500 hover:underline"
               >
                 Drei-Wege-Abgleich
