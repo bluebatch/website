@@ -369,7 +369,7 @@ export default function Page() {
               werden zusätzlich erreicht. Verwandter Use Case auf unserer
               Site:{" "}
               <Link
-                href="/3-wege-abgleich-rechnungspruefung"
+                href="/automatische-rechnungspruefung"
                 className="text-primary-600 hover:underline"
               >
                 3-Wege-Abgleich für die Rechnungsprüfung
