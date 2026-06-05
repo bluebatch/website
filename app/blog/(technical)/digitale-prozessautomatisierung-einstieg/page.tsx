@@ -404,7 +404,15 @@ export default function Page() {
               klarem Owner im Fachbereich, ist der beste Weg in das Thema.
               Aus diesem ersten Workflow wird in einem halben Jahr ein
               Portfolio von zehn oder zwanzig, jeder mit messbarer
-              Einsparung.
+              Einsparung. Welches Tool und welcher Workflow sich je nach
+              Unternehmensprofil rechnen, zeigt unser Leitfaden zur{" "}
+              <Link
+                href="/blog/kmu-workflow-automatisierung"
+                className="text-primary-600 hover:underline"
+              >
+                Workflow-Automatisierung für KMU
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Der Fehler, den viele machen: Sie warten auf die perfekte

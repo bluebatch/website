@@ -297,7 +297,16 @@ export default function Page() {
             <Typo.Paragraph>
               Vier Plattformen dominieren den Markt für
               Prozessautomatisierung im Mittelstand. Jede hat einen
-              anderen Sweet Spot.
+              anderen Sweet Spot. Welches Tool zu welchem Unternehmensprofil
+              passt, und drei durchgerechnete Praxis-Workflows dazu, zeigt
+              unser Leitfaden zur{" "}
+              <Link
+                href="/blog/kmu-workflow-automatisierung"
+                className="text-primary-600 hover:underline"
+              >
+                Workflow-Automatisierung für KMU
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.Paragraph>

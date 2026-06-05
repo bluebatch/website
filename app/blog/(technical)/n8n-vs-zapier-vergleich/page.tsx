@@ -471,7 +471,16 @@ export default function Page() {
               im DACH-Raum: n8n, idealerweise Self-Hosted in Deutschland,
               mit einem Partner für Setup und Betrieb. Die Einarbeitung ist
               überschaubar, die Kostenkurve bleibt flach, und alle
-              strategischen Optionen bleiben offen.
+              strategischen Optionen bleiben offen. Wie sich diese Tool-Wahl
+              je nach Unternehmensgröße auf den ROI auswirkt, rechnen wir im
+              Leitfaden zur{" "}
+              <Link
+                href="/blog/kmu-workflow-automatisierung"
+                className="text-primary-500 hover:underline"
+              >
+                Workflow-Automatisierung für KMU
+              </Link>{" "}
+              an drei Praxisbeispielen durch.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Wer konkrete Anwendungsbeispiele aus der Praxis sucht, findet

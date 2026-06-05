@@ -420,7 +420,16 @@ export default function Page() {
               mit wachsenden Automatisierungs-Ambitionen: n8n, idealerweise
               Self-Hosted, mit einem Partner für Setup und Betrieb. Die
               Einarbeitung ist überschaubar, die Kostenkurve bleibt flach, und
-              alle strategischen Optionen bleiben offen.
+              alle strategischen Optionen bleiben offen. Was diese Tool-Wahl
+              für ein konkretes Unternehmensprofil bedeutet, zeigt unser
+              Leitfaden zur{" "}
+              <Link
+                href="/blog/kmu-workflow-automatisierung"
+                className="text-primary-500 hover:underline"
+              >
+                Workflow-Automatisierung für KMU
+              </Link>{" "}
+              mit drei durchgerechneten Praxis-Workflows.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Wer tiefer einsteigen will, findet in unserem Beitrag{" "}
