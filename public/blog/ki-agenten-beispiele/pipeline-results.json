@@ -1,0 +1,14 @@
+[
+  {
+    "filename": "beispiel-katalog.png",
+    "score": 74,
+    "verdict": "MARGINAL",
+    "attempts": 3
+  },
+  {
+    "filename": "anti-pattern.png",
+    "score": 75,
+    "verdict": "MARGINAL",
+    "attempts": 3
+  }
+]
