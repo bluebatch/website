@@ -686,7 +686,16 @@ export default function Page() {
               </Link>
               . Wir gehen mit euch eure Use Cases durch, zeigen die
               Datenflüsse der drei Tools an eurer konkreten Infrastruktur und
-              sagen ehrlich, welches Werkzeug wofür passt.
+              sagen ehrlich, welches Werkzeug wofür passt. Wenn die Wahl auf
+              Claude fällt, übernehmen wir mit unserem{" "}
+              <Link
+                href="/ai-onboarding"
+                className="text-primary-600 hover:underline"
+              >
+                Claude AI Setup für Unternehmen
+              </Link>{" "}
+              die Installation privat auf EU-Hosting, DSGVO-konform und mit
+              Übergabe an euer Team.
             </Typo.Paragraph>
           </div>
 

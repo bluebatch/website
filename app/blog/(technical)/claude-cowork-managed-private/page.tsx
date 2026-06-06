@@ -716,9 +716,18 @@ export default function Page() {
             <Typo.Paragraph>
               Ihr überlegt, Cowork in eure AWS-Landing-Zone zu integrieren
               oder wollt die Architektur mit jemandem durchgehen, der die
-              Bedrock-Profile und MCP-Adapter schon aufgesetzt hat?{" "}
+              Bedrock-Profile und MCP-Adapter schon aufgesetzt hat? Schaut euch
+              unser{" "}
+              <Link
+                href="/ai-onboarding"
+                className="text-primary-600 hover:underline"
+              >
+                Claude AI Setup für Unternehmen
+              </Link>{" "}
+              an, dort installieren wir Claude und Claude Cowork privat auf
+              EU-Hosting und übergeben an euer Team. Oder{" "}
               <Link href="/contact" className="text-primary-600 hover:underline">
-                Sprecht uns an
+                sprecht uns an
               </Link>
               , wir machen mit euch einen Architektur-Workshop und eine erste
               Kostenabschätzung.
