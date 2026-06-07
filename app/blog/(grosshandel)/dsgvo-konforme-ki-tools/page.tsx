@@ -238,7 +238,16 @@ export default function Page() {
               wenn der Tenant richtig konfiguriert ist. Kritiker weisen aber
               darauf hin, dass Copilot Zugriff auf alle Dokumente hat, die der
               Nutzer sehen darf. Das schafft neue interne Datenschutzrisiken,
-              etwa bei falsch gesetzten Berechtigungen.
+              etwa bei falsch gesetzten Berechtigungen. Welche Lizenzstufen
+              dafür nötig sind und was der M365-Copilot-Aufschlag pro Nutzer
+              wirklich kostet, zeigt unser{" "}
+              <Link
+                href="/blog/microsoft-365-copilot-kosten"
+                className="text-primary-600 hover:underline"
+              >
+                Kosten-Guide zu Microsoft 365 Copilot
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>Google Gemini</Typo.H3>

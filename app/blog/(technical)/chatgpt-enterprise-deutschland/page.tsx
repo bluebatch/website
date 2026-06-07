@@ -483,7 +483,14 @@ export default function Page() {
                 >
                   Vergleich Copilot vs. ChatGPT
                 </Link>
-                .
+                , die echten Lizenz- und Vollkosten rechnet der{" "}
+                <Link
+                  href="/blog/microsoft-365-copilot-kosten"
+                  className="text-primary-600 hover:underline"
+                >
+                  Kosten-Guide zu M365 Copilot
+                </Link>
+                {" "}vor.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Strenge Datenresidenz-Anforderungen:</strong> Wer

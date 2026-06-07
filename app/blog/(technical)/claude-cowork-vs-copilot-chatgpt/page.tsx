@@ -507,7 +507,15 @@ export default function Page() {
               drei Beispielszenarien für ein Mittelstandsunternehmen mit 50
               Nutzern, die mit dem jeweiligen Tool produktiv arbeiten. Alle
               Werte sind grobe Richtgrößen für 2026 und ohne
-              Implementierungs-Beratung gerechnet.
+              Implementierungs-Beratung gerechnet. Für die M365-Aufstockung
+              lohnt der detaillierte{" "}
+              <Link
+                href="/blog/microsoft-365-copilot-kosten"
+                className="text-primary-600 hover:underline"
+              >
+                Kosten-Deep-Dive zu Microsoft 365 Copilot
+              </Link>
+              {" "}mit Vollkostenrechnung über E3/E5-Unterbau.
             </Typo.Paragraph>
 
             <BlogImage

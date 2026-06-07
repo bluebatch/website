@@ -206,7 +206,16 @@ export default function Page() {
             </Typo.H2>
             <Typo.Paragraph>
               Die Preise beider Tools unterscheiden sich stark, auch weil
-              die Lizenzmodelle unterschiedlich funktionieren:
+              die Lizenzmodelle unterschiedlich funktionieren. Wer die echten
+              Vollkosten für M365 Copilot inklusive E3/E5-Unterbau, Setup und
+              ROI für 100 Nutzer durchrechnen will, findet das im{" "}
+              <Link
+                href="/blog/microsoft-365-copilot-kosten"
+                className="text-primary-600 hover:underline"
+              >
+                Kosten-Deep-Dive zu Microsoft 365 Copilot
+              </Link>
+              :
             </Typo.Paragraph>
 
             <BlogImage
