@@ -77,8 +77,16 @@ export default function Page() {
               Digitale Prozessautomatisierung, kurz DPA, meint das
               regelbasierte oder KI-gestützte Abwickeln von Geschäftsprozessen
               über Systemgrenzen hinweg. Kein Mitarbeiter kopiert Daten aus
-              einer E-Mail in ein ERP-Formular, kein Sachbearbeiter setzt
-              zwanzig Haken, damit ein Auftrag freigegeben wird. Stattdessen
+              einer E-Mail in ein{" "}
+              <Link
+                href="/blog/ki-workflow-erp"
+                className="text-primary-600 hover:underline"
+              >
+                ERP-Formular, denn der KI-Workflow übergibt sie direkt ans
+                ERP
+              </Link>
+              , kein Sachbearbeiter setzt zwanzig Haken, damit ein Auftrag
+              freigegeben wird. Stattdessen
               übernimmt eine Automatisierungsschicht die Orchestrierung:
               Auslöser, Prüfungen, Systemaufrufe und Benachrichtigungen laufen
               ohne menschliche Zwischenschritte.

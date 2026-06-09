@@ -348,7 +348,12 @@ export default async function Page({
           <Link href="/bestellung-erfassen" className="text-primary-500 hover:underline">
             automatische Auftragserfassung
           </Link>{" "}
-          Ihren Bestellprozess beschleunigt.
+          Ihren Bestellprozess beschleunigt. Wie sich die Belegautomatisierung
+          als{" "}
+          <Link href="/blog/ki-workflow-erp" className="text-primary-500 hover:underline">
+            KI-Workflow direkt ans ERP anbinden
+          </Link>{" "}
+          lässt, lesen Sie im Blog.
         </Typo.Paragraph>
       </ContentWrapper>
 

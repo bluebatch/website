@@ -115,7 +115,14 @@ export default function Page() {
               Mail, das ERP legt den Auftrag an, das Warenwirtschaftssystem
               reserviert Bestand, eine Bestätigungs-Mail geht raus. Vier
               Systeme, ein Workflow, kein Mensch dazwischen für den
-              Normalfall.
+              Normalfall. Genau diese{" "}
+              <Link
+                href="/blog/ki-workflow-erp"
+                className="text-primary-600 hover:underline"
+              >
+                KI-gestützte Anbindung ans ERP
+              </Link>{" "}
+              ist der Hebel, der Bestellungen ohne Abtippen ins System bringt.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Abgrenzung zu RPA: Robotic Process Automation simuliert

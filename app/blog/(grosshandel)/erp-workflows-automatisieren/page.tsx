@@ -94,7 +94,14 @@ export default function Page() {
               Genau hier setzt n8n an. Die Open-Source-Plattform verbindet
               ERP-Systeme mit dem Rest der IT-Landschaft und automatisiert die
               Prozesse dazwischen. Ohne monatelanges Customizing, ohne
-              Middleware-Lizenzen, ohne Vendor-Lock-in.
+              Middleware-Lizenzen, ohne Vendor-Lock-in. Wie sich solche{" "}
+              <Link
+                href="/blog/ki-workflow-erp"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Workflows direkt an SAP, Navision oder DATEV anbinden
+              </Link>{" "}
+              lassen, zeigen wir an konkreten Order-to-Cash-Beispielen.
             </Typo.Paragraph>
           </div>
 
