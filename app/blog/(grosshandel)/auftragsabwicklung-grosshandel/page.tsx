@@ -185,7 +185,7 @@ export default function Page() {
               <Typo.ListItem>
                 <strong>3 Prozent Fehlerquote × 2.000 Aufträge</strong> bedeuten
                 60 Reklamationen pro Monat, jede mit Folgeaufwand für
-                Kundenservice, Logistik, Buchhaltung — konservativ 30 Minuten
+                Kundenservice, Logistik, Buchhaltung, konservativ 30 Minuten
                 Sekundäraufwand pro Vorfall, also weitere 30 Stunden.
               </Typo.ListItem>
             </Typo.List>
@@ -212,7 +212,7 @@ export default function Page() {
 
           <div>
             <Typo.H2 id="engpaesse">
-              Wo Auftragsabwicklung im Großhandel kippt — fünf echte Engpässe
+              Wo Auftragsabwicklung im Großhandel kippt: fünf echte Engpässe
             </Typo.H2>
             <Typo.Paragraph>
               In der Beratungspraxis tauchen immer wieder die gleichen fünf
@@ -247,7 +247,7 @@ export default function Page() {
             <Typo.H3>3. Verfügbarkeitsprüfung in Echtzeit</Typo.H3>
             <Typo.Paragraph>
               Bestand, Reservierungen, Wiederbeschaffungszeit, alternative
-              Artikel — die Logik dahinter ist im ERP gut abgebildet, die
+              Artikel, die Logik dahinter ist im ERP gut abgebildet, die
               Schnittstelle nach außen aber oft nicht. SAP S/4 HANA bietet
               OData-Endpoints für Material- und Bestandsdaten, Dynamics 365 BC
               ebenfalls. Bei sage 100 oder microtech build wird die
@@ -258,7 +258,7 @@ export default function Page() {
             <Typo.H3>4. Sonderkonditionen und Rahmenverträge</Typo.H3>
             <Typo.Paragraph>
               Kundenindividuelle Preise, Staffelpreise, laufende Aktionen,
-              Rahmenvertrags-Abrufe — die meisten ERPs haben das im Datenmodell,
+              Rahmenvertrags-Abrufe, die meisten ERPs haben das im Datenmodell,
               aber die Anwendung beim manuellen Auftrag passiert oft im Kopf des
               Innendienstes. Ein Workflow, der die Konditions-Logik aus dem ERP
               zieht statt sie nachzubauen, bleibt wartbar.
@@ -353,9 +353,9 @@ export default function Page() {
               .
             </Typo.Paragraph>
             <Typo.Paragraph>
-              Welcher Hebel KI im Großhandel grundsätzlich hat — von
+              Welcher Hebel KI im Großhandel grundsätzlich hat, von
               Bestelleingang über Lieferantenkommunikation bis zur
-              Wiederbeschaffung — schauen wir uns parallel in unserem
+              Wiederbeschaffung, schauen wir uns parallel in unserem
               Übersichts-Post zu{" "}
               <Link
                 href="/blog/wie-wirkt-sich-ki-auf-den-grosshandel-aus"
@@ -371,7 +371,7 @@ export default function Page() {
 
           <div>
             <Typo.H2 id="ki-workflow">
-              Der KI-Workflow im Detail — vom Posteingang zur Auftragsbestätigung
+              Der KI-Workflow im Detail: vom Posteingang zur Auftragsbestätigung
             </Typo.H2>
             <Typo.Paragraph>
               Die folgende Pipeline ist die Blaupause für die n8n-Variante. Sie
@@ -459,7 +459,7 @@ export default function Page() {
             <Typo.Paragraph>
               Der validierte Auftrag wird über die ERP-API angelegt. Die
               Auftragsbestätigung wird als PDF generiert und per Mail an den
-              Kunden geschickt — idealerweise mit derselben Mail-Identität, die
+              Kunden geschickt, idealerweise mit derselben Mail-Identität, die
               auch sonst aus dem Innendienst rausgeht. Auftragsnummer und
               Lieferterminzusage landen in der Bestätigung. Wer den
               vollständigen ERP-Anbindungs-Stack tiefer verstehen will, findet
@@ -484,7 +484,7 @@ export default function Page() {
               akzeptiert wird. Vertiefung zum konkreten Service-Pendant zeigt
               unser Use-Case{" "}
               <Link
-                href="/use-cases/grosshandel/bestellung-erfassen"
+                href="/use-cases/grosshandel/auftragserfassung"
                 className="text-primary-600 hover:underline"
               >
                 Bestellung erfassen
@@ -497,7 +497,7 @@ export default function Page() {
 
           <div>
             <Typo.H2 id="pick-pack-rechnung">
-              Pick/Pack, Lieferung und die Rechnung — der zweite Block
+              Pick/Pack, Lieferung und die Rechnung, der zweite Block
             </Typo.H2>
             <Typo.Paragraph>
               Sobald der Auftrag im ERP steht, übernimmt der zweite Block der
@@ -510,7 +510,7 @@ export default function Page() {
               Versanddokumente erzeugt ein Workflow über die DHL-, GLS- oder
               Shipcloud-API, je nach Versandregel im Kundenstamm. Mit dem
               physischen Versand wird die Lieferschein-Datei elektronisch an
-              den Kunden geschickt — bei größeren Kunden über das EDI-DESADV.
+              den Kunden geschickt, bei größeren Kunden über das EDI-DESADV.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Die Rechnung läuft direkt im richtigen Format raus: XRechnung
@@ -570,7 +570,7 @@ export default function Page() {
               Stunden, bei 50 Euro Vollkostensatz also 8.300 Euro pro Monat.
               Nach Einführung mit 75 Prozent Touch-Rate fallen 1.500 Aufträge
               komplett ohne Aufwand durch, die verbleibenden 500 brauchen 1
-              Minute Sichtprüfung — 42 Stunden im Monat, 2.100 Euro. Einsparung
+              Minute Sichtprüfung, 42 Stunden im Monat, 2.100 Euro. Einsparung
               pro Monat: 6.200 Euro. Bei typischen PoC-Investitionen von 20.000
               bis 30.000 Euro liegt die Amortisation bei drei bis fünf Monaten.
             </Typo.Paragraph>
@@ -604,7 +604,7 @@ export default function Page() {
               height={630}
             />
 
-            <Typo.H3>Woche 1 — Messen</Typo.H3>
+            <Typo.H3>Woche 1: Messen</Typo.H3>
             <Typo.Paragraph>
               100 zufällig gezogene Bestellungen der letzten zwei Wochen
               klassifizieren: Kanal (Mail-PDF, Mail-Freitext, Fax, Portal,
@@ -613,7 +613,7 @@ export default function Page() {
               Heatmap, die zeigt, wo das Geld liegt.
             </Typo.Paragraph>
 
-            <Typo.H3>Woche 2 — Skopen</Typo.H3>
+            <Typo.H3>Woche 2: Skopen</Typo.H3>
             <Typo.Paragraph>
               Engpass-Kanal wählen, in 80 Prozent der Mittelstands-Projekte ist
               das Mail-PDF von den Top-3-Stammkunden. Ziel-KPI festlegen: zum
@@ -623,16 +623,16 @@ export default function Page() {
               das Eskalations-Frontend aus.
             </Typo.Paragraph>
 
-            <Typo.H3>Woche 3 — Bauen</Typo.H3>
+            <Typo.H3>Woche 3: Bauen</Typo.H3>
             <Typo.Paragraph>
               n8n-Workflow aufsetzen, LLM-Prompt iterativ kalibrieren, gegen 50
               historische Bestellungen testen. Confidence-Schwellwerte messen
               und kalibrieren. ERP-Schnittstellen-Calls separat testen, dann
-              integrieren. Logging und Tracing von Anfang an einbauen — ohne
+              integrieren. Logging und Tracing von Anfang an einbauen, ohne
               Observability ist jeder produktive Workflow eine Blackbox.
             </Typo.Paragraph>
 
-            <Typo.H3>Woche 4 — Schatten-Betrieb</Typo.H3>
+            <Typo.H3>Woche 4: Schatten-Betrieb</Typo.H3>
             <Typo.Paragraph>
               Echte Bestellungen laufen durch, der Workflow generiert den
               Auftrag, ein Mensch im Innendienst validiert vor der Buchung.
@@ -691,7 +691,7 @@ export default function Page() {
                 {
                   question: "Wie geht der Workflow mit Bestellungen um, bei denen die KI unsicher ist?",
                   answer:
-                    "Jeder Schritt liefert einen Confidence-Score. Liegt der Gesamt-Score unter dem konfigurierten Schwellwert (typisch 0,85), wird die Bestellung dem Innendienst vorgelegt — mit allen Feldern vorbefüllt. Die Sichtprüfung dauert 30 bis 60 Sekunden statt 5 Minuten. Korrekturen aus diesen Eskalationen fließen ins Prompt-Tuning zurück und heben die Touch-Rate kontinuierlich.",
+                    "Jeder Schritt liefert einen Confidence-Score. Liegt der Gesamt-Score unter dem konfigurierten Schwellwert (typisch 0,85), wird die Bestellung dem Innendienst vorgelegt, mit allen Feldern vorbefüllt. Die Sichtprüfung dauert 30 bis 60 Sekunden statt 5 Minuten. Korrekturen aus diesen Eskalationen fließen ins Prompt-Tuning zurück und heben die Touch-Rate kontinuierlich.",
                 },
               ]}
             />
