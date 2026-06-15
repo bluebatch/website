@@ -78,7 +78,12 @@ export default function Page() {
               Hype-Sprache nicht überbrückbar ist. Die meisten Implementierungen
               scheitern nicht an der Technologie, sondern an einem grundlegenden
               Missverständnis, was ein Agent eigentlich ist und wann du gar
-              keinen brauchst.
+              keinen brauchst. Wer den praktischen Weg von der Idee zum
+              laufenden Agent sucht, findet ihn in unserem Leitfaden zum{" "}
+              <Link href="/blog/ki-agenten-erstellen" className="text-primary-600 hover:underline">
+                KI-Agenten erstellen
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Genau da setzt das Framework von Anthropic an. Anthropic hat in

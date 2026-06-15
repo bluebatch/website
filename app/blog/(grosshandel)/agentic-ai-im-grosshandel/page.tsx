@@ -82,7 +82,12 @@ export default function Page() {
               Prozesse durchlaufen. Der Unterschied zu klassischer
               Automatisierung: Agentic AI reagiert auf unvorhergesehene
               Situationen, passt sich an und braucht keine starren
-              Wenn-Dann-Regeln für jeden Sonderfall.
+              Wenn-Dann-Regeln für jeden Sonderfall. Wie ihr solche Agenten
+              konkret aufbaut, Schritt für Schritt, erklärt unser Leitfaden zum{" "}
+              <Link href="/blog/ki-agenten-erstellen" className="text-primary-600 hover:underline">
+                KI-Agenten erstellen
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Für den Großhandel ist das ein fundamentaler Unterschied. Wer

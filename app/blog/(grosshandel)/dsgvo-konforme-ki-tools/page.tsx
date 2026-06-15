@@ -395,7 +395,12 @@ export default function Page() {
                 className="text-primary-600 hover:underline"
               >
                 n8n-Workflows im Großhandel
-              </Link>.
+              </Link>{" "}
+              und im Leitfaden zum{" "}
+              <Link href="/blog/ki-agenten-erstellen" className="text-primary-600 hover:underline">
+                KI-Agenten erstellen
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 

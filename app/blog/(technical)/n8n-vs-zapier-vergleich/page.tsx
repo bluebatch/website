@@ -154,7 +154,15 @@ export default function Page() {
               >
                 Guide zur Prozessautomatisierung
               </Link>{" "}
-              lesen.
+              lesen. Wie aus einem Workflow ein eigenständiger Agent wird,
+              zeigt unser Leitfaden zum{" "}
+              <Link
+                href="/blog/ki-agenten-erstellen"
+                className="text-primary-500 hover:underline"
+              >
+                KI-Agenten erstellen
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 

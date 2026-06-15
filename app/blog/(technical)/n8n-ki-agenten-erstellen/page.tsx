@@ -80,7 +80,13 @@ export default function Page() {
               er in welcher Reihenfolge benutzt, um eine Aufgabe zu lösen. Er
               kann eine Datenbank abfragen, eine Rechnung prüfen, eine API
               aufrufen oder eine Berechnung anstoßen, ohne dass jemand den
-              genauen Ablauf vorgibt.
+              genauen Ablauf vorgibt. Wie KI-Agenten grundsätzlich aufgebaut
+              sind und welche Bauwege es jenseits von n8n gibt, zeigt unser
+              tool-agnostischer Leitfaden zum{" "}
+              <Link href="/blog/ki-agenten-erstellen" className="text-primary-600 hover:underline">
+                KI-Agenten erstellen
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Technisch basiert das auf dem AI-Agent-Node, den n8n seit der
