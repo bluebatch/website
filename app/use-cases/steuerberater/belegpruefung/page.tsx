@@ -449,6 +449,14 @@ export default function Page() {
               >
                 Workflow-Wartung
               </Link>
+              . Einen Überblick über alle KI-Einsatzbereiche in der Kanzlei
+              gibt unser Leitfaden{" "}
+              <Link
+                href="/blog/ki-steuerberater"
+                className="text-primary-600 hover:underline"
+              >
+                KI für Steuerberater
+              </Link>
               .
             </Typo.Paragraph>
           </TimelineAsStepsStep>

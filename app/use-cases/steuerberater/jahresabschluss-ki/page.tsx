@@ -333,7 +333,15 @@ export default function Page() {
           >
             DATEV-Jira-Task-Orchestration
           </Link>{" "}
-          erfolgt automatisch nach Freigabe.
+          erfolgt automatisch nach Freigabe. Wo der Jahresabschluss in die
+          gesamte KI-Strategie der Kanzlei passt, zeigt unser Leitfaden{" "}
+          <Link
+            href="/blog/ki-steuerberater"
+            className="text-primary-600 hover:underline"
+          >
+            KI für Steuerberater
+          </Link>
+          .
         </Typo.Paragraph>
       </ContentWrapper>
 
