@@ -1,0 +1,14 @@
+[
+  {
+    "filename": "agent-wege.png",
+    "score": 89,
+    "verdict": "PASS",
+    "attempts": 3
+  },
+  {
+    "filename": "gem-schritte.png",
+    "score": 83,
+    "verdict": "PASS",
+    "attempts": 2
+  }
+]
