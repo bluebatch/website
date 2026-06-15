@@ -533,7 +533,7 @@ export default function Page() {
               kann bei automatischen Zahlungsfreigaben über Schwellen zur
               High-Risk-Klassifikation führen. Mehr Hintergrund im{" "}
               <Link
-                href="/3-wege-abgleich-rechnungspruefung"
+                href="/automatische-rechnungspruefung"
                 className="text-primary-600 hover:underline"
               >
                 Service Rechnungsprüfung
@@ -808,7 +808,7 @@ export default function Page() {
               Use-Case lieber an einen Spezialisten vergibt als selbst zu
               bauen, findet im{" "}
               <Link
-                href="/3-wege-abgleich-rechnungspruefung"
+                href="/automatische-rechnungspruefung"
                 className="text-primary-600 hover:underline"
               >
                 Service Rechnungsprüfung
