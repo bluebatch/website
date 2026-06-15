@@ -155,6 +155,19 @@ export default async function Page({
               rausschicken.
             </Typo.Paragraph>
             <Typo.Paragraph>Sechs Schritte. Pro Bestellung.</Typo.Paragraph>
+            <Typo.Paragraph>
+              Wie sich dieser Ablauf bis zur Auftragsbestätigung durchgängig
+              automatisieren lässt, vom Posteingang über die Validierung bis
+              zur Übergabe ins ERP, zeigen wir im Detail in unserem Leitfaden
+              zur{" "}
+              <Link
+                href="/blog/auftragsabwicklung-grosshandel"
+                className="text-primary-600 hover:underline"
+              >
+                Auftragsabwicklung im Großhandel
+              </Link>
+              .
+            </Typo.Paragraph>
 
             <BlogImage
               src="/blog/bestellungen-erfassen-automatisieren/manueller-prozess.png"

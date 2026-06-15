@@ -252,7 +252,16 @@ export default async function Page({
             <Typo.Paragraph>
               Im Großhandel heißt das: Der Kunde schickt seine Anfrage an drei
               Lieferanten. Wer als Erster ein vernünftiges Angebot liefert,
-              bekommt den Auftrag.
+              bekommt den Auftrag. Wie es nach der Zusage weitergeht, von der
+              Bestellung bis zur Auftragsbestätigung, beschreibt unser Leitfaden
+              zur{" "}
+              <Link
+                href="/blog/auftragsabwicklung-grosshandel"
+                className="text-primary-600 hover:underline"
+              >
+                Auftragsabwicklung im Großhandel
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>70 Prozent der Zeit geht für Admin drauf</Typo.H3>

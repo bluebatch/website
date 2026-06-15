@@ -124,7 +124,16 @@ export default function Page() {
               qualifizierte Mitarbeiter an Routineaufgaben. Bei einem
               typischen Großhändler mit 200 Bestellungen pro Tag summiert
               sich das auf 30 bis 40 Stunden pro Woche, nur für die
-              Dateneingabe.
+              Dateneingabe. Wie ein KI-gestützter Ablauf diese Eingabe von der
+              eingehenden E-Mail bis zur Auftragsbestätigung übernimmt, zeigt
+              unser Leitfaden zur{" "}
+              <Link
+                href="/blog/auftragsabwicklung-grosshandel"
+                className="text-primary-600 hover:underline"
+              >
+                Auftragsabwicklung im Großhandel
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>Medienbrüche zwischen Systemen</Typo.H3>
