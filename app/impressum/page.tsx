@@ -49,7 +49,7 @@ export default function Page() {
       <Typo.Paragraph>
         Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:
         <br />
-        [noch nicht erteilt]
+        DE462585242
       </Typo.Paragraph>
 
       <Typo.H2>Streitschlichtung</Typo.H2>
