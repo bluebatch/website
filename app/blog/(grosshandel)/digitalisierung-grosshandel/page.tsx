@@ -1747,8 +1747,10 @@ export default async function Page({
                 <strong>
                   Dual-Format-Fähigkeit ohne ERP-Wechsel
                 </strong>: Der Workflow funktioniert ERP-agnostisch, ob SAP,
-                Microsoft Dynamics, Sage oder branchenspezifische
-                Warenwirtschaft, und generiert ZUGFeRD und XRechnung
+                Microsoft Dynamics, Sage oder branchenspezifische{" "}
+                <Link href="/blog/warenwirtschaftssystem-grosshandel" className="text-primary-600 hover:underline">
+                  Warenwirtschaft
+                </Link>, und generiert ZUGFeRD und XRechnung
                 gleichzeitig aus denselben Quelldaten.
               </Typo.ListItem>
               <Typo.ListItem>

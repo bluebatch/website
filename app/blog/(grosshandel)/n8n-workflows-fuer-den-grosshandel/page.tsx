@@ -76,7 +76,10 @@ export default function Page() {
             <Typo.Paragraph>
               Die meisten Großhändler arbeiten mit einer gewachsenen
               IT-Landschaft: ein ERP-System wie Dynamics NAV, SAP Business One
-              oder microtech büro+, dazu ein Warenwirtschaftssystem, ein
+              oder microtech büro+, dazu ein{" "}
+              <Link href="/blog/warenwirtschaftssystem-grosshandel" className="text-primary-600 hover:underline">
+                Warenwirtschaftssystem
+              </Link>, ein
               Rechnungstool, Excel-Listen und jede Menge manuelle Prozesse
               dazwischen. Genau hier setzt{" "}
               <Link href="/blog/was-ist-n8n" className="text-primary-600 hover:underline">

@@ -143,8 +143,10 @@ export default function Page() {
               Investitionspunkte. Ein Shop, der mit dem ERP synchron läuft,
               Lagerbestände in Echtzeit zeigt und individuelle Preise je
               Kunde korrekt ausspielt, ist kein Standardprodukt von der
-              Stange. Hier braucht es saubere Integration zwischen Shop und
-              Warenwirtschaft.
+              Stange. Hier braucht es saubere Integration zwischen Shop und{" "}
+              <Link href="/blog/warenwirtschaftssystem-grosshandel" className="text-primary-600 hover:underline">
+                Warenwirtschaft
+              </Link>.
             </Typo.Paragraph>
 
             <Typo.H3>2. Automatisierte Auftragsabwicklung</Typo.H3>
