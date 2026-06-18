@@ -7,7 +7,7 @@ import { tracking, Ga4Event } from "@/lib/tracking";
 
 const SUPPRESSED_PATHS = ["/impressum", "/datenschutz"];
 
-const GA_MEASUREMENT_ID = "G-EL0E8GDKZB";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-EL0E8GDKZB";
 const CONSENT_KEY = "cookie_consent";
 
 interface ConsentPreferences {

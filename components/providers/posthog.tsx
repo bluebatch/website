@@ -4,7 +4,9 @@ import posthog from "posthog-js";
 import { PostHogProvider as PHProvider } from "posthog-js/react";
 import { useEffect } from "react";
 
-const POSTHOG_KEY = "phc_CjXmLjzJx35L4T1YCkOwhYHx1Wk5viB67lndKnehi8N";
+const POSTHOG_KEY =
+  process.env.NEXT_PUBLIC_POSTHOG_KEY ??
+  "phc_CjXmLjzJx35L4T1YCkOwhYHx1Wk5viB67lndKnehi8N";
 const POSTHOG_HOST = "/ingest";
 const POSTHOG_UI_HOST = "https://eu.posthog.com";
 

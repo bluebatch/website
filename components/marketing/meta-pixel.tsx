@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import Script from "next/script";
 import { hasMarketingConsent } from "@/lib/tracking";
 
-// const PIXEL_ID = "1312732710788403";
-const PIXEL_ID = "1624299748827172";
+const PIXEL_ID =
+  process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1624299748827172";
 
 declare global {
   interface Window {
