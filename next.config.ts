@@ -59,7 +59,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "X-Frame-Options",
-            value: "ALLOW-FROM https://eu.posthog.com",
+            value: "SAMEORIGIN",
           },
           {
             key: "X-Content-Type-Options",
@@ -91,7 +91,7 @@ const nextConfig: NextConfig = {
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self' https://*.hsforms.com https://forms.hubspot.com https://www.facebook.com https://*.facebook.com",
-              "frame-ancestors https://eu.posthog.com https://*.posthog.com",
+              "frame-ancestors 'self' https://eu.posthog.com https://*.posthog.com",
               "upgrade-insecure-requests",
             ].join("; "),
           },
