@@ -684,7 +684,8 @@ export default function Page() {
         Unsere Website nutzt zur Reichweiten- und Konversionsmessung das
         Besucheraktions-Pixel (&bdquo;Meta Pixel&ldquo;) der Meta Platforms
         Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland
-        (&bdquo;Meta&ldquo;). Pixel-ID: 1312732710788403.
+        (&bdquo;Meta&ldquo;). Pixel-ID:{" "}
+        {process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1624299748827172"}.
       </Typo.Paragraph>
       <Typo.Paragraph>
         Das Meta Pixel wird ausschließlich nach Ihrer ausdrücklichen
