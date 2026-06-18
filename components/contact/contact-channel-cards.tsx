@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useContactModal } from "./contact-modal";
 import { ContactChannel } from "./contact-channel";
+import { tracking, Ga4Event } from "@/lib/tracking";
 
 const gridCols: Record<number, string> = {
   1: "md:grid-cols-1",
@@ -72,7 +73,14 @@ export default function ContactChannelCards({
       {visibleChannels.includes(ContactChannel.Phone) && (
         <a
           href="tel:+491634412159"
-          onClick={() => close()}
+          onClick={() => {
+            tracking.ga4(Ga4Event.CtaChannelSelect, {
+              channel: ContactChannel.Phone,
+              from_chooser: true,
+              cta_location: window.location.pathname,
+            });
+            close();
+          }}
           className={cardClass}
         >
           <div className={iconWrapperClass}>

@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
+import { tracking, Ga4Event } from "@/lib/tracking";
 
 const SUPPRESSED_PATHS = ["/impressum", "/datenschutz"];
 
@@ -62,7 +63,7 @@ function applyConsent(prefs: ConsentPreferences) {
 
   // After granting analytics, fire a pageview since the initial one was suppressed
   if (prefs.statistics) {
-    gtag("event", "page_view", {
+    tracking.ga4(Ga4Event.PageView, {
       page_location: window.location.href,
       page_title: document.title,
     });

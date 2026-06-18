@@ -2,28 +2,15 @@
 
 import { useEffect } from "react";
 import Script from "next/script";
+import { hasMarketingConsent } from "@/lib/tracking";
 
 // const PIXEL_ID = "1312732710788403";
 const PIXEL_ID = "1624299748827172";
-const CONSENT_KEY = "cookie_consent";
 
 declare global {
   interface Window {
-    fbq?: (...args: unknown[]) => void;
     _fbq?: unknown;
     __metaPixelInitialized?: boolean;
-  }
-}
-
-function hasMarketingConsent(): boolean {
-  if (typeof window === "undefined") return false;
-  try {
-    const raw = window.localStorage.getItem(CONSENT_KEY);
-    if (!raw) return false;
-    const prefs = JSON.parse(raw) as { marketing?: boolean };
-    return Boolean(prefs?.marketing);
-  } catch {
-    return false;
   }
 }
 

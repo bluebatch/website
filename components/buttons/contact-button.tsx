@@ -4,6 +4,7 @@ import Button from "@/components/ui/button";
 import { ReactNode } from "react";
 import { useContactModal } from "@/components/contact/contact-modal";
 import { ContactChannel } from "@/components/contact/contact-channel";
+import { tracking, Ga4Event } from "@/lib/tracking";
 
 type ContactIcon = "phone" | "mail" | "calendar" | "chat";
 type ContactSize = "sm" | "md" | "lg";
@@ -122,7 +123,14 @@ export default function ContactButton({
       ContactChannel.Phone,
     ];
 
-    if (activeChannels.length === 1) {
+    const isSingle = activeChannels.length === 1;
+    tracking.ga4(Ga4Event.CtaClick, {
+      cta_location: window.location.pathname,
+      channels_offered: activeChannels.join(","),
+      opened: isSingle ? activeChannels[0] : "chooser",
+    });
+
+    if (isSingle) {
       switch (activeChannels[0]) {
         case ContactChannel.Mail:
           openForm();
@@ -131,6 +139,14 @@ export default function ContactButton({
           openMeeting();
           break;
         case ContactChannel.Phone:
+          // Phone never enters the modal, so emit the channel-select here.
+          // Mail/Meeting emit it inside openForm/openMeeting (covers both the
+          // single-channel button and the channel-chooser cards).
+          tracking.ga4(Ga4Event.CtaChannelSelect, {
+            channel: ContactChannel.Phone,
+            from_chooser: false,
+            cta_location: window.location.pathname,
+          });
           window.location.href = "tel:+491634412159";
           break;
       }

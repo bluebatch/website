@@ -10,76 +10,9 @@ import {
 import Script from "next/script";
 import { ContactChannel } from "./contact-channel";
 import ContactChannelCards from "./contact-channel-cards";
-
-declare global {
-  interface Window {
-    fbq?: (...args: unknown[]) => void;
-  }
-}
+import { tracking, Ga4Event } from "@/lib/tracking";
 
 type ModalType = "form" | "meeting" | "channels" | null;
-
-function readCookie(name: string): string | undefined {
-  if (typeof document === "undefined") return undefined;
-  const match = document.cookie.match(
-    new RegExp("(?:^|;\\s*)" + name + "=([^;]+)"),
-  );
-  return match?.[1];
-}
-
-function trackConversion(args: {
-  metaEventName: "Contact" | "Lead";
-  metaContentName: string;
-  gaEventName: string;
-  gaLabel: string;
-  email?: string;
-  firstName?: string;
-  lastName?: string;
-}) {
-  if (typeof window === "undefined") return;
-
-  const eventId =
-    typeof crypto !== "undefined" && "randomUUID" in crypto
-      ? crypto.randomUUID()
-      : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-
-  // Meta Pixel + CAPI (deduped via shared eventId). Gated on fbq existence,
-  // which already gates on marketing consent in meta-pixel.tsx.
-  if (typeof window.fbq === "function") {
-    window.fbq(
-      "track",
-      args.metaEventName,
-      { content_name: args.metaContentName },
-      { eventID: eventId },
-    );
-
-    void fetch("/api/fb-events", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        eventId,
-        eventName: args.metaEventName,
-        contentName: args.metaContentName,
-        email: args.email,
-        firstName: args.firstName,
-        lastName: args.lastName,
-        eventSourceUrl: window.location.href,
-        fbc: readCookie("_fbc"),
-        fbp: readCookie("_fbp"),
-      }),
-    }).catch(() => {
-      // swallow — we don't surface ad-tracking errors to the user
-    });
-  }
-
-  // GA4 — Consent Mode in cookie-consent.tsx decides what actually gets sent
-  if (typeof window.gtag === "function") {
-    window.gtag("event", args.gaEventName, {
-      event_category: "engagement",
-      event_label: args.gaLabel,
-    });
-  }
-}
 
 interface ContactModalContextProps {
   activeModal: ModalType;
@@ -223,14 +156,12 @@ export default function ContactModal({ children }: { children: ReactNode }) {
         lastName,
         values,
       });
-      trackConversion({
-        metaEventName: "Lead",
-        metaContentName: "Contact Form",
-        gaEventName: "contact_form_submitted",
-        gaLabel: "Contact Form",
-        email,
-        firstName,
-        lastName,
+      // Meta-Conversion bewusst entfernt — Lead läuft jetzt über den
+      // Onboarding-Wizard (Domain/Mail). Bookings/Submissions landen ohnehin
+      // in HubSpot. GA4 behalten wir als Funnel-Conversion.
+      tracking.ga4(Ga4Event.ContactFormSubmitted, {
+        event_category: "engagement",
+        event_label: "Contact Form",
       });
     };
     window.addEventListener("message", handler);
@@ -238,12 +169,24 @@ export default function ContactModal({ children }: { children: ReactNode }) {
   }, []);
 
   const openForm = () => {
-    if (activeModal === "channels") setCameFromChannels(true);
+    const fromChooser = activeModal === "channels";
+    if (fromChooser) setCameFromChannels(true);
+    tracking.ga4(Ga4Event.CtaChannelSelect, {
+      channel: ContactChannel.Mail,
+      from_chooser: fromChooser,
+      cta_location: window.location.pathname,
+    });
     setActiveModal("form");
   };
 
   const openMeeting = () => {
-    if (activeModal === "channels") setCameFromChannels(true);
+    const fromChooser = activeModal === "channels";
+    if (fromChooser) setCameFromChannels(true);
+    tracking.ga4(Ga4Event.CtaChannelSelect, {
+      channel: ContactChannel.Meeting,
+      from_chooser: fromChooser,
+      cta_location: window.location.pathname,
+    });
     setActiveModal("meeting");
   };
 
@@ -482,10 +425,6 @@ function MeetingIframe({ active }: { active: boolean }) {
             {}) as Record<string, unknown>;
         const email =
           typeof guest.email === "string" ? guest.email : undefined;
-        const firstName =
-          typeof guest.firstName === "string" ? guest.firstName : undefined;
-        const lastName =
-          typeof guest.lastName === "string" ? guest.lastName : undefined;
 
         console.log("[meeting-booked]", { email, guest, payload });
         window.dispatchEvent(
@@ -494,14 +433,11 @@ function MeetingIframe({ active }: { active: boolean }) {
           }),
         );
 
-        trackConversion({
-          metaEventName: "Contact",
-          metaContentName: "Book Meeting",
-          gaEventName: "meeting_booked",
-          gaLabel: "Book Meeting",
-          email,
-          firstName,
-          lastName,
+        // Meta-Conversion bewusst entfernt — Bookings stehen ohnehin in
+        // HubSpot. GA4 behalten wir als Funnel-Conversion.
+        tracking.ga4(Ga4Event.MeetingBooked, {
+          event_category: "engagement",
+          event_label: "Book Meeting",
         });
       }
     };
