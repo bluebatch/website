@@ -309,8 +309,14 @@ export default function Page() {
             <Typo.Paragraph>
               Anthropic-Modelle laufen in der eigenen AWS-Umgebung. AWS ist
               Auftragsverarbeiter, Frankfurt ist als Region wählbar, IAM und
-              SSO greifen wie bei jedem AWS-Service. Sweet Spot für
-              KI-Datenschutz und Governance im Mittelstand.
+              SSO greifen wie bei jedem AWS-Service. Sweet Spot für{" "}
+              <Link
+                href="/blog/ki-datenschutz"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Datenschutz
+              </Link>{" "}
+              und Governance im Mittelstand.
             </Typo.Paragraph>
 
             <Typo.H3>3. Self-Hosted Open-Weights-Modell</Typo.H3>

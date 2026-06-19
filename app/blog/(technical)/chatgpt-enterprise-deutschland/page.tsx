@@ -319,6 +319,15 @@ export default function Page() {
               Wichtig: Auch mit EU-Residenz fließen bestimmte Metadaten
               (Account-Informationen, Billing) weiterhin in die USA. Für eine
               vollständige DSFA nach DSGVO Art. 35 muss das dokumentiert werden.
+              Wie sich AVV, Sub-Processor-Ketten und die AI-Act-Stichtage
+              insgesamt einordnen, zeigt unser{" "}
+              <Link
+                href="/blog/ki-datenschutz"
+                className="text-primary-600 hover:underline"
+              >
+                Überblick zu KI und Datenschutz
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>Compliance-Zertifizierungen</Typo.H3>

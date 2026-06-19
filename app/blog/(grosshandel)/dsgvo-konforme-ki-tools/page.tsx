@@ -87,7 +87,13 @@ export default function Page() {
               verhängt, die ChatGPT ohne ausreichende technische und
               organisatorische Maßnahmen einsetzen. Die EU-KI-Verordnung
               (AI Act) ergänzt seit Februar 2025 die DSGVO und verschärft die
-              Anforderungen zusätzlich.
+              Anforderungen zusätzlich. Welche Stichtage, Pflichten und
+              Datenschutz-Fallen dabei konkret auf Unternehmen zukommen, fasst
+              unser{" "}
+              <Link href="/blog/ki-datenschutz">
+                Überblick zu KI und Datenschutz
+              </Link>{" "}
+              zusammen.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Für den Mittelstand heißt das: KI-Nutzung ist kein rechtsfreier

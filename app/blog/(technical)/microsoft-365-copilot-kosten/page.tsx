@@ -565,7 +565,15 @@ export default function Page() {
               verfügbar) vertraglich zugesichert: Prompts, Antworten und
               Microsoft-Graph-Daten werden nicht für das Training von
               Foundation-LLMs verwendet. Das gilt auch für Anthropic als
-              Subprozessor.
+              Subprozessor. Wie diese Sub-Processor-Ketten, EU-Datenresidenz und
+              die AI-Act-Stichtage zusammenhängen, ordnet unser{" "}
+              <Link
+                href="/blog/ki-datenschutz"
+                className="text-primary-600 hover:underline"
+              >
+                Überblick zu KI und Datenschutz
+              </Link>{" "}
+              ein.
             </Typo.Paragraph>
           </div>
 
