@@ -193,7 +193,16 @@ export default function Page() {
                 <strong>Custom GPTs:</strong> ChatGPT Team und Enterprise
                 erlauben das Erstellen eigener GPT-Varianten mit
                 firmeneigenem Wissen, Anweisungen und API-Anbindungen. Ein
-                mächtiges Feature, das Copilot so nicht bietet.
+                mächtiges Feature, das Copilot im Chat so nicht bietet. Auf
+                Microsoft-Seite übernimmt diese Rolle Copilot Studio, mit dem
+                sich{" "}
+                <Link
+                  href="/blog/copilot-agent-erstellen"
+                  className="text-primary-600 hover:underline"
+                >
+                  eigene Copilot-Agenten erstellen
+                </Link>{" "}
+                lassen.
               </Typo.ListItem>
             </Typo.List>
           </div>

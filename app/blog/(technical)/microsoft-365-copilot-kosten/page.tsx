@@ -300,8 +300,14 @@ export default function Page() {
 
             <Typo.H3>Copilot Studio (separat)</Typo.H3>
             <Typo.Paragraph>
-              Innerhalb von Microsoft 365 lassen sich mit Copilot Studio
-              interne Agenten erstellen und nutzen, ohne Zusatzkosten. Wer
+              Innerhalb von Microsoft 365 lassen sich mit Copilot Studio{" "}
+              <Link
+                href="/blog/copilot-agent-erstellen"
+                className="text-primary-600 hover:underline"
+              >
+                interne Agenten erstellen
+              </Link>{" "}
+              und nutzen, ohne Zusatzkosten. Wer
               aber Agenten auf einer Unternehmens-Website veröffentlicht, in
               eine Mobile-App einbettet oder externen, nicht-lizenzierten
               Nutzern bereitstellt, braucht eine

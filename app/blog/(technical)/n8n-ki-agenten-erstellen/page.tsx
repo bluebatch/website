@@ -107,7 +107,13 @@ export default function Page() {
               nachgelagerter Node schreibt die Entscheidung zurück ins ERP. Die
               Plattform kümmert sich um Credentials, Logging, Fehlerbehandlung
               und Retry-Logik. Alles, was in einem Python-Skript mühselig
-              zusammengebaut werden müsste, ist hier Standard.
+              zusammengebaut werden müsste, ist hier Standard. Wer dagegen tief
+              im Microsoft-365-Stack sitzt, baut Agenten oft lieber direkt in
+              der gewohnten Umgebung und kann mit Copilot Studio{" "}
+              <Link href="/blog/copilot-agent-erstellen" className="text-primary-600 hover:underline">
+                einen Copilot-Agenten erstellen
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 

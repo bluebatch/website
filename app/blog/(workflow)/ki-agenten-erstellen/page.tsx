@@ -251,7 +251,13 @@ export default function Page() {
 
             <Typo.H3>3. Hosted-Plattformen</Typo.H3>
             <Typo.Paragraph>
-              Microsoft Copilot Studio ist 2026 die natürliche Wahl für
+              <Link
+                href="/blog/copilot-agent-erstellen"
+                className="text-primary-600 hover:underline"
+              >
+                Microsoft Copilot Studio
+              </Link>{" "}
+              ist 2026 die natürliche Wahl für
               MS-365-zentrierte Unternehmen. Tiefe Integration in
               Power Platform, Dataverse als Memory-Backend, native MCP-
               Konnektoren und Enterprise-Admin-Controls. Die Pricing-Logik

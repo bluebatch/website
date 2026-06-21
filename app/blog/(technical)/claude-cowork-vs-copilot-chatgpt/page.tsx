@@ -649,7 +649,15 @@ export default function Page() {
               Beide Welten ergänzen sich. Viele n8n-Workflows nutzen heute
               LLMs, um unstrukturierte Eingaben zu verarbeiten, während
               Fachabteilungen mit Cowork oder Copilot an Dokumenten arbeiten.
-              Wer wissen will, wie die{" "}
+              Wer auf Microsoft-Seite eigene Agenten bauen will, kann mit
+              Copilot Studio{" "}
+              <Link
+                href="/blog/copilot-agent-erstellen"
+                className="text-primary-600 hover:underline"
+              >
+                einen Copilot-Agenten erstellen
+              </Link>
+              . Wer wissen will, wie die{" "}
               <Link href="/blog/erp-workflows-automatisieren" className="text-primary-600 hover:underline">
                 ERP-Automatisierung mit KI
               </Link>{" "}
