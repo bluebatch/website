@@ -190,7 +190,14 @@ export default function Page() {
               realen Anwendungsfälle abdecken, bevor du überhaupt einen Agent
               brauchst. Diese Patterns sind keine theoretischen Konstrukte. Sie
               sind das, was sich bei Tausenden von Implementierungen als robust
-              herausgestellt hat.
+              herausgestellt hat. Wie sie in der Praxis aussehen, zeigt unser{" "}
+              <Link
+                href="/blog/ki-agenten-beispiele"
+                className="text-primary-600 hover:underline"
+              >
+                Beispielkatalog für KI-Agenten
+              </Link>
+              {" "}mit konkreten Use-Cases.
             </Typo.Paragraph>
 
             <Typo.H3>1. Prompt Chaining</Typo.H3>

@@ -158,7 +158,15 @@ export default function Page() {
             <Typo.Paragraph>
               Agentic AI klingt abstrakt, bis man die konkreten Anwendungsfälle
               sieht. Die folgenden fünf Beispiele zeigen, wo autonome
-              KI-Agenten im Großhandel heute schon eingesetzt werden.
+              KI-Agenten im Großhandel heute schon eingesetzt werden. Einen
+              breiteren Überblick über typische Einsatzszenarien liefert unser{" "}
+              <Link
+                href="/blog/ki-agenten-beispiele"
+                className="text-primary-600 hover:underline"
+              >
+                Beispielkatalog für KI-Agenten
+              </Link>
+              .
             </Typo.Paragraph>
 
             <BlogImage

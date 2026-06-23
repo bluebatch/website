@@ -108,7 +108,15 @@ export default function Page() {
               >
                 Bauplan für KI-Agents nach Anthropic
               </Link>
-              .
+              . Wer lieber an konkreten Anwendungsfällen entlang denkt, findet
+              im{" "}
+              <Link
+                href="/blog/ki-agenten-beispiele"
+                className="text-primary-600 hover:underline"
+              >
+                Beispielkatalog für KI-Agenten
+              </Link>
+              {" "}praxisnahe Use-Cases für Mittelstand und Großhandel.
             </Typo.Paragraph>
           </div>
 
