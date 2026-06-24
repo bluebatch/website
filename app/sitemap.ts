@@ -59,6 +59,22 @@ function isUnpublished(filePath: string): boolean {
   }
 }
 
+/**
+ * Check if a page is noindex (robots: { index: false }).
+ * Noindex pages (e.g. paid-ad funnel landing pages, legal pages) must not
+ * appear in the sitemap — listing a noindex URL sends Google a contradictory
+ * signal and, because such pages are intentionally not internally linked,
+ * trips the orphan-page detector. Static file read, mirrors isUnpublished.
+ */
+function isNoindex(filePath: string): boolean {
+  try {
+    const content = fs.readFileSync(filePath, "utf-8");
+    return /index:\s*false/.test(content);
+  } catch {
+    return false;
+  }
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const appDir = path.join(process.cwd(), "app");
   const allRoutes = getRoutes(appDir);
@@ -77,6 +93,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   for (const { routePath, filePath } of allRoutes) {
     if (isUnpublished(filePath)) continue;
+    if (isNoindex(filePath)) continue;
 
     // If this route has a mainRewrite, use the flat URL instead
     const mainRewrite = mainRewriteMap.get(routePath);
