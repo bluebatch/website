@@ -272,8 +272,14 @@ export default function Page() {
               hat eine Falle: ein Capacity Pack kostet 200 USD pro Monat
               für 25.000 Credits, ein Script-Antwort verbraucht 1 Credit,
               eine Reasoning-Antwort 100 Credits. Wer das Mengengerüst nicht
-              kennt, kalkuliert sich um Faktor 100 schief. ChatGPT Workspace
-              Agents (April 2026 gelauncht) sind der Nachfolger der Custom
+              kennt, kalkuliert sich um Faktor 100 schief.{" "}
+              <Link
+                href="/blog/chatgpt-agent-erstellen"
+                className="text-primary-600 hover:underline"
+              >
+                ChatGPT Workspace Agents
+              </Link>{" "}
+              (April 2026 gelauncht) sind der Nachfolger der Custom
               GPTs mit nativen Konnektoren in Slack, Drive, Salesforce,
               Notion und Atlassian. Hosting ist US-Default mit Azure-Frankfurt-
               Option für Enterprise.

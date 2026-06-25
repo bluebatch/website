@@ -112,8 +112,14 @@ export default function Page() {
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Custom GPTs für Teams:</strong> Eigene GPT-Varianten mit
-                firmeneigenem Wissen, Anweisungen und Tools erstellen. Intern
-                teilen oder auf bestimmte Abteilungen beschränken.
+                firmeneigenem Wissen, Anweisungen und Tools{" "}
+                <Link
+                  href="/blog/chatgpt-agent-erstellen"
+                  className="text-primary-600 hover:underline"
+                >
+                  erstellen
+                </Link>
+                . Intern teilen oder auf bestimmte Abteilungen beschränken.
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Admin Center:</strong> Zentrale Nutzerverwaltung, SSO via

@@ -615,7 +615,15 @@ export default function Page() {
               M365-Umfeld lebt und von Fachbereichen mit Low-Code gepflegt
               werden soll. Die Stärke ist die nahtlose Integration in die
               Microsoft-Welt, der Preis dafür ist das Message-Modell und die
-              Bindung an das Microsoft-Ökosystem.
+              Bindung an das Microsoft-Ökosystem. Das OpenAI-Pendant dazu, wie
+              man{" "}
+              <Link
+                href="/blog/chatgpt-agent-erstellen"
+                className="text-primary-600 hover:underline"
+              >
+                einen ChatGPT-Agenten erstellt
+              </Link>
+              , zeigt den gleichen Weg auf der OpenAI-Seite.
             </Typo.Paragraph>
             <Typo.Paragraph>
               <strong>Ein tool-agnostischer Weg mit n8n und einem
