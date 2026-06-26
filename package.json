@@ -9,6 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/openai-compatible": "^0.2.16",
+    "@ai-sdk/react": "^1.2.12",
+    "ai": "^4.3.19",
+    "botid": "^1.5.11",
     "framer-motion": "12.31.0",
     "lucide-react": "^0.474.0",
     "next": "16.1.6",
