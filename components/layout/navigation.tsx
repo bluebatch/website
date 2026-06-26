@@ -23,15 +23,9 @@ const uberUnsMenu = {
       items: [
         {
           icon: "/icons/award.svg",
-          title: "Warum Bluebatch?",
-          description: "Keine Agentur - IT-Experten",
-          href: "/warum-bluebatch",
-        },
-        {
-          icon: "/icons/workflow.svg",
-          title: "Unser Prozess",
-          description: "Wie wir arbeiten",
-          href: "/unser-prozess",
+          title: "Mit euch wachsen",
+          description: "Vom ersten Workflow zur AI-Plattform",
+          href: "/mit-euch-wachsen",
         },
         {
           icon: "/icons/badge-check.svg",

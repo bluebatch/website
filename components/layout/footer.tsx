@@ -4,14 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
-  const mainMenu = [
-    { label: "Über uns", href: "/" },
-    { label: "Warum Bluebatch", href: "/warum-bluebatch" },
-    { label: "Das Team", href: "/team" },
-    { label: "Unser Prozess", href: "/unser-prozess" },
-    { label: "Blog", href: "/blog-workflow" },
-  ];
-
   const servicesMenu = [
     { label: "KI-Implementierung", href: "/ki-implementierung" },
     { label: "n8n Hosting", href: "/n8n-hosting-deutschland" },
