@@ -110,6 +110,14 @@ export default function Page() {
               >
                 DSGVO-Leitfaden für KI-Tools
               </Link>
+              . Wer zuerst den breiteren Rahmen jenseits von KI sucht, von
+              E-Rechnung über DATEV bis zum digitalen Belegfluss, beginnt beim{" "}
+              <Link
+                href="/blog/digitalisierung-steuerberatung"
+                className="text-primary-600 hover:underline"
+              >
+                Digitalisierungs-Leitfaden für Steuerkanzleien
+              </Link>
               .
             </Typo.Paragraph>
           </div>

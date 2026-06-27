@@ -457,6 +457,14 @@ export default function Page() {
               >
                 KI für Steuerberater
               </Link>
+              . Wie die Belegprüfung in eine durchgängig digitale Kanzlei
+              passt, zeigt der{" "}
+              <Link
+                href="/blog/digitalisierung-steuerberatung"
+                className="text-primary-600 hover:underline"
+              >
+                Digitalisierungs-Leitfaden für Steuerkanzleien
+              </Link>
               .
             </Typo.Paragraph>
           </TimelineAsStepsStep>
