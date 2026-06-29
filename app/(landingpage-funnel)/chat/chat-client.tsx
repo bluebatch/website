@@ -3,21 +3,19 @@
 import { useEffect, useRef } from "react";
 import { useChat } from "@ai-sdk/react";
 import { BotIdClient } from "botid/client";
-import { ArrowUp, Bot, CalendarDays, Loader2, Mail } from "lucide-react";
-import { useContactModal } from "@/components/contact/contact-modal";
+import { ArrowUp, Bot, Loader2 } from "lucide-react";
+import ContactButton, { ContactChannel } from "@/components/buttons/contact-button";
 
 const EXAMPLES = [
   "Was macht Bluebatch genau?",
   "Wie hilft KI im Großhandel?",
-  "Ich bin von der Müller Großhandel GmbH — was lohnt sich für uns?",
+  "Welche Tools lassen sich anbinden?",
 ];
 
 export default function ChatClient() {
   const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
     api: "/api/chat",
   });
-  const { openMeeting, openForm } = useContactModal();
-
   const scrollRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -129,29 +127,29 @@ export default function ChatClient() {
           </button>
         </div>
         <p className="mt-2 text-center text-[11px] text-gray-400">
-          KI kann Fehler machen. Keine sensiblen Daten teilen.
+          KI kann Fehler machen, keine sensiblen Daten teilen. Alle Angaben und
+          Angebote sind unverbindlich.
         </p>
       </form>
       </div>
 
-      {/* CTA unter dem Chat: lieber direkt sprechen? */}
-      <div className="mx-auto mt-5 flex w-full max-w-2xl flex-col items-center gap-3 sm:flex-row sm:justify-center">
-        <button
-          type="button"
-          onClick={openMeeting}
-          className="flex w-full items-center justify-center gap-2 rounded-full bg-cta-500 px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-cta-600 sm:w-auto"
+      {/* CTA unter dem Chat: native ContactButton (inkl. GA4-Tracking). */}
+      <div className="mx-auto mt-5 flex w-full max-w-2xl flex-col items-center justify-center gap-3 sm:flex-row">
+        <ContactButton
+          channels={[ContactChannel.Meeting]}
+          icon="calendar"
+          className="w-full rounded-full sm:w-auto"
         >
-          <CalendarDays className="h-5 w-5" />
           Meeting buchen
-        </button>
-        <button
-          type="button"
-          onClick={openForm}
-          className="flex w-full items-center justify-center gap-2 rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-800 transition-colors hover:border-primary-400 hover:text-primary-700 sm:w-auto"
+        </ContactButton>
+        <ContactButton
+          channels={[ContactChannel.Mail]}
+          icon="mail"
+          dark
+          className="w-full rounded-full sm:w-auto"
         >
-          <Mail className="h-5 w-5" />
           Mail schreiben
-        </button>
+        </ContactButton>
       </div>
     </>
   );
