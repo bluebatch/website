@@ -14,6 +14,7 @@ import {
   ensureCompany,
   ensureContact,
   associate,
+  createNote,
   hubspotConfigured,
 } from "@/lib/server/hubspot-lead";
 
@@ -117,13 +118,73 @@ export async function detectSignals(text: string): Promise<LeadSignals> {
   };
 }
 
+export interface Qualification {
+  branche?: string;
+  tools?: string[];
+  pain?: string;
+  volumen?: string;
+  rolle?: string;
+}
+
+/** Zieht die Qualifizierung aus dem bisherigen Gesprächsverlauf (best-effort). */
+async function extractQualification(transcript: string): Promise<Qualification> {
+  try {
+    const { text: raw } = await generateText({
+      model: openwebui(LEAD_MODEL),
+      temperature: 0,
+      maxTokens: 300,
+      system:
+        "Du fasst aus einem Chat-Verlauf zwischen Website-Besucher und Assistent die " +
+        "Lead-Qualifizierung zusammen. Antworte AUSSCHLIESSLICH mit JSON, keine Erklärung. " +
+        'Schema: {"branche": string|null, "tools": string[]|null, "pain": string|null, "volumen": string|null, "rolle": string|null}. ' +
+        "branche=Branche/Tätigkeit, tools=genannte Systeme/ERP/Software, pain=wo manuelle " +
+        "Arbeit/Schmerz sitzt, volumen=Mengenangaben, rolle=Funktion der Person. " +
+        "Nur was im Verlauf wirklich gesagt wurde, sonst null.",
+      prompt: transcript,
+    });
+    const json = raw.replace(/```json|```/g, "").trim();
+    const p = JSON.parse(json) as Record<string, unknown>;
+    const q: Qualification = {};
+    if (typeof p.branche === "string" && p.branche.trim()) q.branche = p.branche.trim();
+    if (Array.isArray(p.tools)) {
+      const tools = p.tools.filter(
+        (t): t is string => typeof t === "string" && t.trim().length > 0,
+      );
+      if (tools.length) q.tools = tools;
+    }
+    if (typeof p.pain === "string" && p.pain.trim()) q.pain = p.pain.trim();
+    if (typeof p.volumen === "string" && p.volumen.trim()) q.volumen = p.volumen.trim();
+    if (typeof p.rolle === "string" && p.rolle.trim()) q.rolle = p.rolle.trim();
+    return q;
+  } catch {
+    return {};
+  }
+}
+
+/** Baut den HubSpot-Notiz-Text. Gibt null zurück, wenn nichts Brauchbares drin ist. */
+function buildQualNote(q: Qualification): string | null {
+  const rows: Array<[string, string | undefined]> = [
+    ["Branche", q.branche],
+    ["Tools/Systeme", q.tools?.join(", ")],
+    ["Pain/Prozess", q.pain],
+    ["Volumen", q.volumen],
+    ["Rolle", q.rolle],
+  ];
+  const lines = rows
+    .filter(([, v]) => v && v.trim())
+    .map(([k, v]) => `<strong>${k}:</strong> ${v}`);
+  if (!lines.length) return null;
+  return `<p><strong>Homepage-Chat — Qualifizierung</strong></p><p>${lines.join("<br>")}</p>`;
+}
+
 /**
  * Erkennt + feuert. `sessionId` macht die Meta-event_id pro Session/Stage
- * deterministisch → Meta dedupliziert, HubSpot ist ohnehin idempotent. Daher
- * ist mehrfaches Feuern über die Session harmlos.
+ * deterministisch → Meta dedupliziert, HubSpot ist ohnehin idempotent. `transcript`
+ * ist der bisherige Gesprächsverlauf für die Qualifizierungs-Notiz.
  */
 export async function detectAndFireLead(
   text: string,
+  transcript: string,
   sessionId: string,
   meta: RequestMeta,
 ): Promise<LeadSignals> {
@@ -134,10 +195,10 @@ export async function detectAndFireLead(
   if (meta.utmSource) utm.utm_source = meta.utmSource;
   if (meta.utmCampaign) utm.utm_campaign = meta.utmCampaign;
 
-  const tasks: Promise<unknown>[] = [];
-
+  // Meta-Events laufen parallel und brauchen keine HubSpot-IDs.
+  const metaTasks: Promise<unknown>[] = [];
   if (sig.domain) {
-    tasks.push(
+    metaTasks.push(
       sendMetaEvent({
         eventId: `${sessionId}:lead`,
         eventName: META_LEAD,
@@ -149,15 +210,9 @@ export async function detectAndFireLead(
         userAgent: meta.userAgent,
       }),
     );
-    if (hubspotConfigured()) {
-      const companyProps: Record<string, string> = { ...utm };
-      if (sig.company) companyProps.name = sig.company;
-      tasks.push(ensureCompany(sig.domain, companyProps));
-    }
   }
-
   if (sig.email) {
-    tasks.push(
+    metaTasks.push(
       sendMetaEvent({
         eventId: `${sessionId}:registration`,
         eventName: META_REGISTRATION,
@@ -170,19 +225,33 @@ export async function detectAndFireLead(
         userAgent: meta.userAgent,
       }),
     );
-    if (hubspotConfigured()) {
-      tasks.push(
-        (async () => {
-          const contactId = await ensureContact(sig.email!, utm);
-          if (contactId && sig.domain) {
-            const companyId = await ensureCompany(sig.domain, utm);
-            if (companyId) await associate(contactId, companyId);
-          }
-        })(),
-      );
-    }
   }
 
-  await Promise.allSettled(tasks);
+  // HubSpot: Company/Contact anlegen, IDs einsammeln, Qualifizierungs-Notiz anhängen.
+  const hubspotTask = (async () => {
+    if (!hubspotConfigured()) return;
+    let companyId: string | null = null;
+    let contactId: string | null = null;
+
+    if (sig.domain) {
+      const companyProps: Record<string, string> = { ...utm };
+      if (sig.company) companyProps.name = sig.company;
+      companyId = await ensureCompany(sig.domain, companyProps);
+    }
+    if (sig.email) {
+      contactId = await ensureContact(sig.email, utm);
+    }
+    if (contactId && companyId) await associate(contactId, companyId);
+
+    if (companyId || contactId) {
+      const note = buildQualNote(await extractQualification(transcript));
+      if (note) {
+        if (companyId) await createNote(note, { object: "companies", id: companyId });
+        else if (contactId) await createNote(note, { object: "contacts", id: contactId });
+      }
+    }
+  })();
+
+  await Promise.allSettled([...metaTasks, hubspotTask]);
   return sig;
 }

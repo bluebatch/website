@@ -92,7 +92,10 @@ export async function POST(req: NextRequest) {
         if (contactId && companyId) await associate(contactId, companyId);
       }
       if (contactId) {
-        await createNote(contactId, buildNoteBody(domain, email, body.settings));
+        await createNote(buildNoteBody(domain, email, body.settings), {
+          object: "contacts",
+          id: contactId,
+        });
       }
       return NextResponse.json({ ok: true, contactId, companyId });
     }

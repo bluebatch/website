@@ -80,16 +80,27 @@ export async function associate(contactId: string, companyId: string): Promise<v
   ).catch(() => {});
 }
 
-/** Legt eine Note an und hängt sie an den Contact (HubSpot-defined Note→Contact = 202). */
-export async function createNote(contactId: string, body: string): Promise<void> {
+// HubSpot-defined Association-Type-IDs für Notes: Contact = 202, Company = 190.
+const NOTE_ASSOC_TYPE = { contacts: 202, companies: 190 } as const;
+
+/** Legt eine Note an und hängt sie an einen Contact oder eine Company. */
+export async function createNote(
+  body: string,
+  target: { object: "contacts" | "companies"; id: string },
+): Promise<void> {
   await hs("/crm/v3/objects/notes", {
     method: "POST",
     body: JSON.stringify({
       properties: { hs_note_body: body, hs_timestamp: Date.now() },
       associations: [
         {
-          to: { id: contactId },
-          types: [{ associationCategory: "HUBSPOT_DEFINED", associationTypeId: 202 }],
+          to: { id: target.id },
+          types: [
+            {
+              associationCategory: "HUBSPOT_DEFINED",
+              associationTypeId: NOTE_ASSOC_TYPE[target.object],
+            },
+          ],
         },
       ],
     }),
