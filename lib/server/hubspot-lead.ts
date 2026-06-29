@@ -56,6 +56,26 @@ export async function ensureCompany(
   return json?.id ?? null;
 }
 
+/**
+ * Findet eine Company per Name oder legt sie neu an (ohne Domain). Für Leads, die
+ * nur ihren Firmennamen nennen ("wir sind Bioraum"), damit überhaupt ein Lead
+ * entsteht. Domain kann später nachgereicht werden.
+ */
+export async function ensureCompanyByName(
+  name: string,
+  props: Record<string, string> = {},
+): Promise<string | null> {
+  const existing = await searchId("companies", "name", name);
+  if (existing) return existing;
+  const res = await hs("/crm/v3/objects/companies", {
+    method: "POST",
+    body: JSON.stringify({ properties: { name, ...props } }),
+  });
+  if (!res.ok) return null;
+  const json = (await res.json().catch(() => null)) as { id?: string } | null;
+  return json?.id ?? null;
+}
+
 /** Findet den Contact per E-Mail oder legt ihn neu an. `props` setzt z.B. lead_source/UTM. */
 export async function ensureContact(
   email: string,

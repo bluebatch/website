@@ -12,6 +12,7 @@ import { openwebui, LEAD_MODEL } from "@/lib/openwebui";
 import { sendMetaEvent } from "@/lib/server/meta-capi";
 import {
   ensureCompany,
+  ensureCompanyByName,
   ensureContact,
   associate,
   createNote,
@@ -189,7 +190,8 @@ export async function detectAndFireLead(
   meta: RequestMeta,
 ): Promise<LeadSignals> {
   const sig = await detectSignals(text);
-  if (!sig.domain && !sig.email) return sig;
+  // Firma allein reicht jetzt: schon ein genannter Firmenname legt einen Lead an.
+  if (!sig.domain && !sig.email && !sig.company) return sig;
 
   const utm: Record<string, string> = { lead_source: LEAD_SOURCE };
   if (meta.utmSource) utm.utm_source = meta.utmSource;
@@ -197,7 +199,7 @@ export async function detectAndFireLead(
 
   // Meta-Events laufen parallel und brauchen keine HubSpot-IDs.
   const metaTasks: Promise<unknown>[] = [];
-  if (sig.domain) {
+  if (sig.domain || sig.company) {
     metaTasks.push(
       sendMetaEvent({
         eventId: `${sessionId}:lead`,
@@ -237,6 +239,9 @@ export async function detectAndFireLead(
       const companyProps: Record<string, string> = { ...utm };
       if (sig.company) companyProps.name = sig.company;
       companyId = await ensureCompany(sig.domain, companyProps);
+    } else if (sig.company) {
+      // Nur Firmenname, keine Domain → Company per Name anlegen.
+      companyId = await ensureCompanyByName(sig.company, utm);
     }
     if (sig.email) {
       contactId = await ensureContact(sig.email, utm);
