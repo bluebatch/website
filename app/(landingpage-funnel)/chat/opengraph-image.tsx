@@ -117,7 +117,7 @@ export default async function Image() {
             </div>
           </div>
           <div style={{ display: "flex", color: "rgba(255,255,255,0.5)", fontSize: 22 }}>
-            powered by Open WebUI
+            bluebatch.io
           </div>
         </div>
       </div>

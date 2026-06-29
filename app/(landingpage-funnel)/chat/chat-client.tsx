@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 import { useChat } from "@ai-sdk/react";
 import { BotIdClient } from "botid/client";
-import { ArrowUp, Bot, Loader2 } from "lucide-react";
+import { ArrowUp, Bot, CalendarDays, Loader2, Mail } from "lucide-react";
+import { useContactModal } from "@/components/contact/contact-modal";
 
 const EXAMPLES = [
   "Was macht Bluebatch genau?",
@@ -15,6 +16,7 @@ export default function ChatClient() {
   const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
     api: "/api/chat",
   });
+  const { openMeeting, openForm } = useContactModal();
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -36,7 +38,7 @@ export default function ChatClient() {
         </span>
         <div className="leading-tight">
           <p className="text-sm font-semibold text-gray-900">Bluebatch Assistent</p>
-          <p className="text-xs text-gray-400">powered by Open WebUI</p>
+          <p className="text-xs text-gray-400">KI für Großhandel &amp; Industrie</p>
         </div>
       </div>
 
@@ -130,6 +132,26 @@ export default function ChatClient() {
           KI kann Fehler machen. Keine sensiblen Daten teilen.
         </p>
       </form>
+      </div>
+
+      {/* CTA unter dem Chat: lieber direkt sprechen? */}
+      <div className="mx-auto mt-5 flex w-full max-w-2xl flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <button
+          type="button"
+          onClick={openMeeting}
+          className="flex w-full items-center justify-center gap-2 rounded-full bg-primary-800 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-700 sm:w-auto"
+        >
+          <CalendarDays className="h-5 w-5" />
+          Meeting buchen
+        </button>
+        <button
+          type="button"
+          onClick={openForm}
+          className="flex w-full items-center justify-center gap-2 rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-800 transition-colors hover:border-primary-400 hover:text-primary-700 sm:w-auto"
+        >
+          <Mail className="h-5 w-5" />
+          Mail schreiben
+        </button>
       </div>
     </>
   );
