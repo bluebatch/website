@@ -139,7 +139,7 @@ export default function ChatClient() {
         <button
           type="button"
           onClick={openMeeting}
-          className="flex w-full items-center justify-center gap-2 rounded-full bg-primary-800 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-700 sm:w-auto"
+          className="flex w-full items-center justify-center gap-2 rounded-full bg-cta-500 px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-cta-600 sm:w-auto"
         >
           <CalendarDays className="h-5 w-5" />
           Meeting buchen
