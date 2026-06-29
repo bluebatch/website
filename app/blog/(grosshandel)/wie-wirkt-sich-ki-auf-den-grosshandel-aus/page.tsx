@@ -753,7 +753,12 @@ export default function Page() {
               <Link href="/blog/dsgvo-konforme-ki-tools" className="text-primary-500 hover:underline">
                 DSGVO-konforme KI-Tools
               </Link>
-              .
+              . Welche Software-Kategorien von ERP über B2B-Shop bis zur
+              KI-Schicht im Großhandel zusammenspielen, ordnet unser{" "}
+              <Link href="/blog/grosshandel-software" className="text-primary-500 hover:underline">
+                Überblick zur Software für den Großhandel
+              </Link>{" "}
+              ein.
             </Typo.Paragraph>
           </div>
         </BlogLayout.Content>

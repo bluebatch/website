@@ -86,7 +86,16 @@ export default function Page() {
               e-vendo, und Enterprise-Suiten wie SAP S/4 HANA oder Microsoft
               Dynamics 365 Business Central. Dazu kommt seit etwa zwei Jahren
               eine vierte Frage, die fast alle Vergleichslisten ignorieren: Wo
-              und wie kommt die KI-Schicht ins Spiel?
+              und wie kommt die KI-Schicht ins Spiel? Wie sich die Warenwirtschaft
+              in das größere Bild aus ERP, CRM, B2B-Shop, EDI und
+              KI-Automatisierungs-Schicht einordnet, zeigt unser{" "}
+              <Link
+                href="/blog/grosshandel-software"
+                className="text-primary-600 hover:underline"
+              >
+                Überblick zur Software für den Großhandel
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Dieser Beitrag bündelt unsere Erfahrung aus Beratungsprojekten im

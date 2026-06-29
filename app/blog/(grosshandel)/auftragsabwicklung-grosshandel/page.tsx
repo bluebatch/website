@@ -294,7 +294,16 @@ export default function Page() {
               Für die Automatisierung der Auftragsabwicklung gibt es 2026 drei
               ernsthafte Optionen. Welche passt, hängt vom Volumen, vom
               vorhandenen ERP-Stack, von der IT-Kompetenz im Haus und davon ab,
-              wie stark Datenhoheit im Pflichtenheft steht.
+              wie stark Datenhoheit im Pflichtenheft steht. Wo diese drei Wege
+              in der gesamten Software-Landschaft des Großhandels einzuordnen
+              sind, zeigt unser{" "}
+              <Link
+                href="/blog/grosshandel-software"
+                className="text-primary-600 hover:underline"
+              >
+                Überblick zur Software für den Großhandel
+              </Link>
+              .
             </Typo.Paragraph>
 
             <BlogImage
