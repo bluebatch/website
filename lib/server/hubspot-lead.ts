@@ -136,3 +136,55 @@ export async function createNote(
     }),
   }).catch(() => {});
 }
+
+/** Sucht eine an das Objekt gehängte Note, deren Body den Marker enthält. */
+async function findNoteIdWithMarker(
+  object: "contacts" | "companies",
+  objectId: string,
+  marker: string,
+): Promise<string | null> {
+  const res = await hs(`/crm/v3/objects/${object}/${objectId}/associations/notes`, {
+    method: "GET",
+  });
+  if (!res.ok) return null;
+  const json = (await res.json().catch(() => null)) as
+    | { results?: Array<{ id?: string; toObjectId?: string }> }
+    | null;
+  const ids = (json?.results ?? [])
+    .map((r) => r.id ?? r.toObjectId)
+    .filter((x): x is string => Boolean(x));
+
+  for (const nid of ids.slice(0, 15)) {
+    const nr = await hs(`/crm/v3/objects/notes/${nid}?properties=hs_note_body`, {
+      method: "GET",
+    });
+    if (!nr.ok) continue;
+    const nj = (await nr.json().catch(() => null)) as
+      | { properties?: { hs_note_body?: string } }
+      | null;
+    if ((nj?.properties?.hs_note_body ?? "").includes(marker)) return nid;
+  }
+  return null;
+}
+
+/**
+ * Legt die Notiz an ODER aktualisiert die bestehende (per Marker im Body). Damit
+ * wird die Qualifizierung pro Turn fortgeschrieben statt dupliziert.
+ */
+export async function upsertNote(
+  target: { object: "contacts" | "companies"; id: string },
+  body: string,
+  marker: string,
+): Promise<void> {
+  const existing = await findNoteIdWithMarker(target.object, target.id, marker);
+  if (existing) {
+    await hs(`/crm/v3/objects/notes/${existing}`, {
+      method: "PATCH",
+      body: JSON.stringify({
+        properties: { hs_note_body: body, hs_timestamp: Date.now() },
+      }),
+    }).catch(() => {});
+    return;
+  }
+  await createNote(body, target);
+}

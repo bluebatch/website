@@ -87,14 +87,15 @@ export async function POST(req: NextRequest) {
   const sid = req.cookies.get(SID_COOKIE)?.value ?? randomUUID();
   const meta = readRequestMeta(req);
 
-  // Lead-Detection auf der letzten User-Nachricht — parallel, blockiert den
-  // Stream nicht; onFinish hält die Function am Leben bis sie fertig ist.
-  // Transcript (ganzer Verlauf) dient der Qualifizierungs-Notiz.
-  const transcript = messages
-    .map((m) => `${m.role}: ${m.content ?? ""}`)
+  // Lead-Detection über den GANZEN User-Verlauf — so bleibt eine früh genannte
+  // Firma erkannt und später genannte Probleme landen in der Notiz. Läuft parallel,
+  // blockiert den Stream nicht; onFinish hält die Function am Leben bis es fertig ist.
+  const userTranscript = messages
+    .filter((m) => m.role === "user")
+    .map((m) => m.content ?? "")
     .join("\n");
-  const detection: Promise<unknown> = lastUser?.content
-    ? detectAndFireLead(lastUser.content, transcript, sid, meta).catch(() => null)
+  const detection: Promise<unknown> = userTranscript.trim()
+    ? detectAndFireLead(userTranscript, sid, meta).catch(() => null)
     : Promise.resolve(null);
 
   const result = streamText({

@@ -1,11 +1,11 @@
-// Erkennt in einer Chat-Nachricht Lead-Signale (Domain/E-Mail/Firma/Intent) und
-// feuert serverseitig + hidden dieselben Events wie das Domain-Feld:
-//   Domain → Meta "Lead"               + HubSpot ensureCompany
-//   E-Mail → Meta "CompleteRegistration" + HubSpot ensureContact (+ assoziieren)
-//
-// Robust: Regex ist die verlässliche Primärquelle (deckt "meine Domain ist abc.de"
-// und E-Mails ab), das Mini-Model ergänzt nur Fuzzy-Fälle ("ich bin von Müller
-// Großhandel"). Alles best-effort — Fehler werden geschluckt, der Chat läuft weiter.
+// Erkennt Lead-Signale (Firma/Domain/E-Mail/Intent) UND die Qualifizierung (Branche,
+// Tools, Pain, Volumen, Rolle) aus dem GESAMTEN bisherigen User-Verlauf und feuert
+// serverseitig + hidden:
+//   Domain/Firma → Meta "Lead"            + HubSpot Company (per Domain oder Name)
+//   E-Mail       → Meta "CompleteRegistration" + HubSpot Contact (+ assoziieren)
+// Die Qualifizierungs-Notiz wird pro Turn upgesertet (vorhandene aktualisieren), damit
+// später genannte Probleme nachgetragen werden. Alles best-effort, Fehler werden
+// geschluckt, der Chat läuft weiter.
 
 import { generateText } from "ai";
 import { openwebui, LEAD_MODEL } from "@/lib/openwebui";
@@ -15,7 +15,7 @@ import {
   ensureCompanyByName,
   ensureContact,
   associate,
-  createNote,
+  upsertNote,
   hubspotConfigured,
 } from "@/lib/server/hubspot-lead";
 
@@ -24,6 +24,9 @@ const LEAD_SOURCE = "homepage_chat";
 // Meta-Standard-Eventnamen — gleiche Semantik wie das Enum der Website.
 const META_LEAD = "Lead";
 const META_REGISTRATION = "CompleteRegistration";
+
+// Marker im Notiz-Body, damit wir die richtige Notiz pro Turn wiederfinden + updaten.
+const QUAL_MARKER = "Homepage-Chat — Qualifizierung";
 
 export interface RequestMeta {
   ip?: string;
@@ -35,11 +38,18 @@ export interface RequestMeta {
   utmCampaign?: string;
 }
 
-export interface LeadSignals {
+export interface LeadData {
+  // Signale
   domain?: string;
   email?: string;
   company?: string;
   intent?: boolean;
+  // Qualifizierung
+  branche?: string;
+  tools?: string[];
+  pain?: string;
+  volumen?: string;
+  rolle?: string;
 }
 
 const COMMON_TLDS = new Set([
@@ -51,9 +61,9 @@ const EMAIL_RE = /[a-z0-9._%+-]+@([a-z0-9.-]+\.[a-z]{2,24})/i;
 const DOMAIN_RE =
   /\b((?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+([a-z]{2,24}))\b/gi;
 
-/** Verlässliche Regex-Extraktion von E-Mail und Domain. */
-export function regexSignals(text: string): LeadSignals {
-  const out: LeadSignals = {};
+/** Verlässliche Regex-Extraktion von E-Mail und Domain aus dem Verlauf. */
+export function regexSignals(text: string): { domain?: string; email?: string } {
+  const out: { domain?: string; email?: string } = {};
 
   const email = text.match(EMAIL_RE);
   if (email) {
@@ -76,122 +86,86 @@ export function regexSignals(text: string): LeadSignals {
   return out;
 }
 
-/** Best-effort Fuzzy-Erkennung von Firmenname / Kaufinteresse via Mini-Model. */
-async function classify(text: string): Promise<LeadSignals> {
+/** Eine LLM-Extraktion über den gesamten User-Verlauf: Signale + Qualifizierung. */
+async function extractAll(transcript: string): Promise<LeadData> {
   try {
     const { text: raw } = await generateText({
       model: openwebui(LEAD_MODEL),
       temperature: 0,
-      maxTokens: 200,
+      maxTokens: 350,
       system:
-        "Du extrahierst Lead-Signale aus einer einzelnen Chat-Nachricht eines " +
-        "Website-Besuchers. Antworte AUSSCHLIESSLICH mit JSON, keine Erklärung. " +
-        'Schema: {"company": string|null, "domain": string|null, "email": string|null, "intent": boolean}. ' +
-        "company = genannter Firmenname (ohne Rechtsform), domain = genannte Domain, " +
-        "email = genannte E-Mail, intent = true wenn echtes Kauf-/Kontaktinteresse erkennbar.",
-      prompt: text,
+        "Du extrahierst Lead-Infos aus den bisherigen Aussagen eines Website-Besuchers. " +
+        "Antworte AUSSCHLIESSLICH mit JSON, keine Erklärung. Schema: " +
+        '{"company": string|null, "domain": string|null, "email": string|null, ' +
+        '"intent": boolean, "branche": string|null, "tools": string[]|null, ' +
+        '"pain": string|null, "volumen": string|null, "rolle": string|null}. ' +
+        "company=Firmenname ohne Rechtsform, domain=genannte Domain, email=genannte E-Mail, " +
+        "intent=echtes Kauf-/Kontaktinteresse, branche=Branche/Tätigkeit, tools=genannte " +
+        "Systeme/ERP/Software, pain=wo manuelle Arbeit/Schmerz sitzt, volumen=Mengenangaben, " +
+        "rolle=Funktion der Person. Nur was wirklich gesagt wurde, sonst null.",
+      prompt: transcript,
     });
-    const json = raw.replace(/```json|```/g, "").trim();
-    const parsed = JSON.parse(json) as Record<string, unknown>;
-    const out: LeadSignals = {};
-    if (typeof parsed.company === "string" && parsed.company.trim())
-      out.company = parsed.company.trim();
-    if (typeof parsed.domain === "string" && parsed.domain.trim())
-      out.domain = parsed.domain.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0];
-    if (typeof parsed.email === "string" && parsed.email.includes("@"))
-      out.email = parsed.email.trim().toLowerCase();
-    if (typeof parsed.intent === "boolean") out.intent = parsed.intent;
+    const p = JSON.parse(raw.replace(/```json|```/g, "").trim()) as Record<string, unknown>;
+    const str = (v: unknown): string | undefined =>
+      typeof v === "string" && v.trim() ? v.trim() : undefined;
+
+    const out: LeadData = {};
+    out.company = str(p.company);
+    const dom = str(p.domain);
+    if (dom)
+      out.domain = dom.toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0];
+    if (typeof p.email === "string" && p.email.includes("@")) out.email = p.email.trim().toLowerCase();
+    if (typeof p.intent === "boolean") out.intent = p.intent;
+    out.branche = str(p.branche);
+    if (Array.isArray(p.tools)) {
+      const t = p.tools.filter((x): x is string => typeof x === "string" && x.trim().length > 0);
+      if (t.length) out.tools = t;
+    }
+    out.pain = str(p.pain);
+    out.volumen = str(p.volumen);
+    out.rolle = str(p.rolle);
     return out;
   } catch {
     return {};
   }
 }
 
-/** Erkennt Signale (Regex + Mini-Model). Regex hat Vorrang bei Domain/E-Mail. */
-export async function detectSignals(text: string): Promise<LeadSignals> {
-  const rx = regexSignals(text);
-  const llm = await classify(text);
-  return {
-    domain: rx.domain ?? llm.domain,
-    email: rx.email ?? llm.email,
-    company: llm.company,
-    intent: llm.intent,
-  };
-}
-
-export interface Qualification {
-  branche?: string;
-  tools?: string[];
-  pain?: string;
-  volumen?: string;
-  rolle?: string;
-}
-
-/** Zieht die Qualifizierung aus dem bisherigen Gesprächsverlauf (best-effort). */
-async function extractQualification(transcript: string): Promise<Qualification> {
-  try {
-    const { text: raw } = await generateText({
-      model: openwebui(LEAD_MODEL),
-      temperature: 0,
-      maxTokens: 300,
-      system:
-        "Du fasst aus einem Chat-Verlauf zwischen Website-Besucher und Assistent die " +
-        "Lead-Qualifizierung zusammen. Antworte AUSSCHLIESSLICH mit JSON, keine Erklärung. " +
-        'Schema: {"branche": string|null, "tools": string[]|null, "pain": string|null, "volumen": string|null, "rolle": string|null}. ' +
-        "branche=Branche/Tätigkeit, tools=genannte Systeme/ERP/Software, pain=wo manuelle " +
-        "Arbeit/Schmerz sitzt, volumen=Mengenangaben, rolle=Funktion der Person. " +
-        "Nur was im Verlauf wirklich gesagt wurde, sonst null.",
-      prompt: transcript,
-    });
-    const json = raw.replace(/```json|```/g, "").trim();
-    const p = JSON.parse(json) as Record<string, unknown>;
-    const q: Qualification = {};
-    if (typeof p.branche === "string" && p.branche.trim()) q.branche = p.branche.trim();
-    if (Array.isArray(p.tools)) {
-      const tools = p.tools.filter(
-        (t): t is string => typeof t === "string" && t.trim().length > 0,
-      );
-      if (tools.length) q.tools = tools;
-    }
-    if (typeof p.pain === "string" && p.pain.trim()) q.pain = p.pain.trim();
-    if (typeof p.volumen === "string" && p.volumen.trim()) q.volumen = p.volumen.trim();
-    if (typeof p.rolle === "string" && p.rolle.trim()) q.rolle = p.rolle.trim();
-    return q;
-  } catch {
-    return {};
-  }
-}
-
 /** Baut den HubSpot-Notiz-Text. Gibt null zurück, wenn nichts Brauchbares drin ist. */
-function buildQualNote(q: Qualification): string | null {
+function buildQualNote(d: LeadData): string | null {
   const rows: Array<[string, string | undefined]> = [
-    ["Branche", q.branche],
-    ["Tools/Systeme", q.tools?.join(", ")],
-    ["Pain/Prozess", q.pain],
-    ["Volumen", q.volumen],
-    ["Rolle", q.rolle],
+    ["Firma", d.company],
+    ["Branche", d.branche],
+    ["Tools/Systeme", d.tools?.join(", ")],
+    ["Pain/Prozess", d.pain],
+    ["Volumen", d.volumen],
+    ["Rolle", d.rolle],
   ];
   const lines = rows
     .filter(([, v]) => v && v.trim())
     .map(([k, v]) => `<strong>${k}:</strong> ${v}`);
   if (!lines.length) return null;
-  return `<p><strong>Homepage-Chat — Qualifizierung</strong></p><p>${lines.join("<br>")}</p>`;
+  return `<p><strong>${QUAL_MARKER}</strong></p><p>${lines.join("<br>")}</p>`;
 }
 
 /**
- * Erkennt + feuert. `sessionId` macht die Meta-event_id pro Session/Stage
- * deterministisch → Meta dedupliziert, HubSpot ist ohnehin idempotent. `transcript`
- * ist der bisherige Gesprächsverlauf für die Qualifizierungs-Notiz.
+ * Erkennt + feuert auf Basis des gesamten User-Verlaufs. `sessionId` macht die
+ * Meta-event_id deterministisch (Dedup), HubSpot-Company/Contact sind idempotent,
+ * die Qualifizierungs-Notiz wird upgesertet.
  */
 export async function detectAndFireLead(
-  text: string,
   transcript: string,
   sessionId: string,
   meta: RequestMeta,
-): Promise<LeadSignals> {
-  const sig = await detectSignals(text);
-  // Firma allein reicht jetzt: schon ein genannter Firmenname legt einen Lead an.
-  if (!sig.domain && !sig.email && !sig.company) return sig;
+): Promise<LeadData> {
+  const rx = regexSignals(transcript);
+  const llm = await extractAll(transcript);
+
+  const domain = rx.domain ?? llm.domain;
+  const email = rx.email ?? llm.email;
+  const company = llm.company;
+  const data: LeadData = { ...llm, domain, email, company };
+
+  if (!domain && !email && !company) return data;
 
   const utm: Record<string, string> = { lead_source: LEAD_SOURCE };
   if (meta.utmSource) utm.utm_source = meta.utmSource;
@@ -199,12 +173,12 @@ export async function detectAndFireLead(
 
   // Meta-Events laufen parallel und brauchen keine HubSpot-IDs.
   const metaTasks: Promise<unknown>[] = [];
-  if (sig.domain || sig.company) {
+  if (domain || company) {
     metaTasks.push(
       sendMetaEvent({
         eventId: `${sessionId}:lead`,
         eventName: META_LEAD,
-        contentName: sig.company ?? "homepage_chat",
+        contentName: company ?? "homepage_chat",
         eventSourceUrl: meta.eventSourceUrl,
         fbp: meta.fbp,
         fbc: meta.fbc,
@@ -213,13 +187,13 @@ export async function detectAndFireLead(
       }),
     );
   }
-  if (sig.email) {
+  if (email) {
     metaTasks.push(
       sendMetaEvent({
         eventId: `${sessionId}:registration`,
         eventName: META_REGISTRATION,
-        email: sig.email,
-        contentName: sig.company ?? "homepage_chat",
+        email,
+        contentName: company ?? "homepage_chat",
         eventSourceUrl: meta.eventSourceUrl,
         fbp: meta.fbp,
         fbc: meta.fbc,
@@ -229,34 +203,29 @@ export async function detectAndFireLead(
     );
   }
 
-  // HubSpot: Company/Contact anlegen, IDs einsammeln, Qualifizierungs-Notiz anhängen.
+  // HubSpot: Company/Contact (idempotent), dann Qualifizierungs-Notiz upserten.
   const hubspotTask = (async () => {
     if (!hubspotConfigured()) return;
     let companyId: string | null = null;
     let contactId: string | null = null;
 
-    if (sig.domain) {
-      const companyProps: Record<string, string> = { ...utm };
-      if (sig.company) companyProps.name = sig.company;
-      companyId = await ensureCompany(sig.domain, companyProps);
-    } else if (sig.company) {
-      // Nur Firmenname, keine Domain → Company per Name anlegen.
-      companyId = await ensureCompanyByName(sig.company, utm);
+    if (domain) {
+      const props: Record<string, string> = { ...utm };
+      if (company) props.name = company;
+      companyId = await ensureCompany(domain, props);
+    } else if (company) {
+      companyId = await ensureCompanyByName(company, utm);
     }
-    if (sig.email) {
-      contactId = await ensureContact(sig.email, utm);
-    }
+    if (email) contactId = await ensureContact(email, utm);
     if (contactId && companyId) await associate(contactId, companyId);
 
-    if (companyId || contactId) {
-      const note = buildQualNote(await extractQualification(transcript));
-      if (note) {
-        if (companyId) await createNote(note, { object: "companies", id: companyId });
-        else if (contactId) await createNote(note, { object: "contacts", id: contactId });
-      }
+    const note = buildQualNote(data);
+    if (note) {
+      if (companyId) await upsertNote({ object: "companies", id: companyId }, note, QUAL_MARKER);
+      else if (contactId) await upsertNote({ object: "contacts", id: contactId }, note, QUAL_MARKER);
     }
   })();
 
   await Promise.allSettled([...metaTasks, hubspotTask]);
-  return sig;
+  return data;
 }
