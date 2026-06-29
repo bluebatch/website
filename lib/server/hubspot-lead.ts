@@ -40,6 +40,34 @@ async function searchId(
   return json?.results?.[0]?.id ?? null;
 }
 
+/**
+ * Legt ein CRM-Objekt an. Schlägt der Create fehl (z.B. weil ein Property wie
+ * lead_source kein gültiger Dropdown-Wert ist), wird einmal nur mit den
+ * Kern-Properties (`core`) neu versucht, damit der Lead nicht still verloren geht.
+ */
+async function createObject(
+  object: "companies" | "contacts",
+  props: Record<string, string>,
+  core: string[],
+): Promise<string | null> {
+  let res = await hs(`/crm/v3/objects/${object}`, {
+    method: "POST",
+    body: JSON.stringify({ properties: props }),
+  });
+  if (!res.ok) {
+    const coreProps = Object.fromEntries(
+      Object.entries(props).filter(([k]) => core.includes(k)),
+    );
+    res = await hs(`/crm/v3/objects/${object}`, {
+      method: "POST",
+      body: JSON.stringify({ properties: coreProps }),
+    });
+  }
+  if (!res.ok) return null;
+  const json = (await res.json().catch(() => null)) as { id?: string } | null;
+  return json?.id ?? null;
+}
+
 /** Findet die Company per Domain oder legt sie neu an. `props` setzt z.B. lead_source/UTM. */
 export async function ensureCompany(
   domain: string,
@@ -47,13 +75,7 @@ export async function ensureCompany(
 ): Promise<string | null> {
   const existing = await searchId("companies", "domain", domain);
   if (existing) return existing;
-  const res = await hs("/crm/v3/objects/companies", {
-    method: "POST",
-    body: JSON.stringify({ properties: { domain, name: domain, ...props } }),
-  });
-  if (!res.ok) return null;
-  const json = (await res.json().catch(() => null)) as { id?: string } | null;
-  return json?.id ?? null;
+  return createObject("companies", { domain, name: domain, ...props }, ["domain", "name"]);
 }
 
 /**
@@ -67,13 +89,7 @@ export async function ensureCompanyByName(
 ): Promise<string | null> {
   const existing = await searchId("companies", "name", name);
   if (existing) return existing;
-  const res = await hs("/crm/v3/objects/companies", {
-    method: "POST",
-    body: JSON.stringify({ properties: { name, ...props } }),
-  });
-  if (!res.ok) return null;
-  const json = (await res.json().catch(() => null)) as { id?: string } | null;
-  return json?.id ?? null;
+  return createObject("companies", { name, ...props }, ["name"]);
 }
 
 /** Findet den Contact per E-Mail oder legt ihn neu an. `props` setzt z.B. lead_source/UTM. */
@@ -83,13 +99,7 @@ export async function ensureContact(
 ): Promise<string | null> {
   const existing = await searchId("contacts", "email", email);
   if (existing) return existing;
-  const res = await hs("/crm/v3/objects/contacts", {
-    method: "POST",
-    body: JSON.stringify({ properties: { email, ...props } }),
-  });
-  if (!res.ok) return null;
-  const json = (await res.json().catch(() => null)) as { id?: string } | null;
-  return json?.id ?? null;
+  return createObject("contacts", { email, ...props }, ["email"]);
 }
 
 /** Verknüpft Contact ↔ Company (v4 Default-Association). Nice-to-have, kein harter Fehler. */
