@@ -133,22 +133,14 @@ export default function ChatClient() {
       </form>
       </div>
 
-      {/* CTA unter dem Chat: native ContactButton (inkl. GA4-Tracking). */}
-      <div className="mx-auto mt-5 flex w-full max-w-2xl flex-col items-center justify-center gap-3 sm:flex-row">
+      {/* CTA unter dem Chat: native ContactButton (orange, öffnet Kanal-Auswahl). */}
+      <div className="mx-auto mt-5 flex w-full max-w-2xl justify-center">
         <ContactButton
-          channels={[ContactChannel.Meeting]}
-          icon="calendar"
-          className="w-full rounded-full sm:w-auto"
+          channels={[ContactChannel.Meeting, ContactChannel.Mail]}
+          icon="chat"
+          className="rounded-full"
         >
-          Meeting buchen
-        </ContactButton>
-        <ContactButton
-          channels={[ContactChannel.Mail]}
-          icon="mail"
-          dark
-          className="w-full rounded-full sm:w-auto"
-        >
-          Mail schreiben
+          Kontakt aufnehmen
         </ContactButton>
       </div>
     </>

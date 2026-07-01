@@ -199,21 +199,13 @@ function QualifiedOutcome({ onRestart }: { onRestart: () => void }) {
         ))}
       </ul>
 
-      <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <div className="mt-8 flex justify-center">
         <ContactButton
-          channels={[ContactChannel.Meeting]}
-          icon="calendar"
+          channels={[ContactChannel.Meeting, ContactChannel.Mail]}
+          icon="chat"
           className="w-full rounded-full sm:w-auto"
         >
-          Gespräch vereinbaren
-        </ContactButton>
-        <ContactButton
-          channels={[ContactChannel.Mail]}
-          icon="mail"
-          dark
-          className="w-full rounded-full sm:w-auto"
-        >
-          Anfrage senden
+          Kontakt aufnehmen
         </ContactButton>
       </div>
       <button
