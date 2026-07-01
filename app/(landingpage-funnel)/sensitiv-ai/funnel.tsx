@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   ShieldCheck,
   Lock,
@@ -10,6 +10,7 @@ import {
   RotateCcw,
   CheckCircle2,
 } from "lucide-react";
+import Button from "@/components/ui/button";
 import ContactButton, { ContactChannel } from "@/components/buttons/contact-button";
 
 type Outcome = "normal" | "qualified";
@@ -38,8 +39,37 @@ const QUESTIONS = [
 ];
 
 export default function SensitivAiFunnel() {
-  const [step, setStep] = useState(0);
-  const [outcome, setOutcome] = useState<Outcome | null>(null);
+  const searchParams = useSearchParams();
+
+  const [step, setStep] = useState<number>(() => {
+    const q = parseInt(searchParams.get("q") ?? "1", 10);
+    return Number.isFinite(q)
+      ? Math.min(Math.max(q - 1, 0), QUESTIONS.length - 1)
+      : 0;
+  });
+  const [outcome, setOutcome] = useState<Outcome | null>(() => {
+    const r = searchParams.get("r");
+    return r === "normal" ? "normal" : r === "angebot" ? "qualified" : null;
+  });
+
+  // State reload-fest in die URL spiegeln. Wir bauen von der aktuellen Query aus,
+  // damit die Tracking-Params (utm_*, fbclid, gclid, …) unangetastet bleiben.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (outcome) {
+      params.set("r", outcome === "qualified" ? "angebot" : "normal");
+      params.delete("q");
+    } else {
+      params.set("q", String(step + 1));
+      params.delete("r");
+    }
+    const qs = params.toString();
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}${qs ? `?${qs}` : ""}`,
+    );
+  }, [step, outcome]);
 
   const answer = (yes: boolean) => {
     if (!yes) {
@@ -121,13 +151,10 @@ function NormalOutcome({ onRestart }: { onRestart: () => void }) {
         und ohne den zusätzlichen § 203-Aufwand.
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <Link
-          href="/services"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-800 px-6 py-3.5 font-semibold text-white transition-colors hover:bg-primary-700 sm:w-auto"
-        >
+        <Button href="/services">
           Zu unseren AI-Services
           <ArrowRight className="h-5 w-5" />
-        </Link>
+        </Button>
       </div>
       <button
         type="button"
