@@ -285,7 +285,13 @@ export default function Page() {
               Option für Enterprise.
             </Typo.Paragraph>
             <Typo.Paragraph>
-              Google Vertex AI Agent Builder (rebrandet als Gemini Enterprise
+              <Link
+                href="/blog/google-ai-agent"
+                className="text-primary-600 hover:underline"
+              >
+                Google Vertex AI Agent Builder
+              </Link>{" "}
+              (rebrandet als Gemini Enterprise
               Agent Platform) ist seit März 2026 nativ MCP-fähig. Pricing
               ist pay-per-use mit fünf Komponenten: Agent Engine Runtime
               (0,0864 USD pro vCPU-Stunde), Session Storage (0,25 USD pro
