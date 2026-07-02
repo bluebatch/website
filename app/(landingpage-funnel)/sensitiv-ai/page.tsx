@@ -132,7 +132,7 @@ export default function Page() {
                 <img
                   src={s.img}
                   alt={`Illustration: ${s.title}`}
-                  className="w-full rounded-2xl shadow-sm md:w-auto md:max-w-[240px]"
+                  className="mx-auto w-full max-w-[200px] rounded-2xl shadow-sm md:mx-0 md:w-auto md:max-w-[240px]"
                 />
               </div>
             </div>
