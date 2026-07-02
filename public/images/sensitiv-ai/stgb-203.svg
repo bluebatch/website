@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" fill="none" role="img" aria-label="Paragraph 203 StGB">
+  <defs>
+    <linearGradient id="bgS" x1="0" y1="0" x2="480" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#002d62"/><stop offset="1" stop-color="#001532"/>
+    </linearGradient>
+    <radialGradient id="glowS" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(390 220) rotate(-120) scale(200)">
+      <stop stop-color="#f97316" stop-opacity="0.34"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="260" fill="url(#bgS)"/>
+  <rect width="480" height="260" fill="url(#glowS)"/>
+  <path d="M214 116 v-16 a26 26 0 0 1 52 0 v16" fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="10" stroke-linecap="round"/>
+  <rect x="192" y="116" width="96" height="92" rx="16" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/>
+  <text x="240" y="178" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#f97316">§</text>
+  <text x="240" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#ffffff" fill-opacity="0.75">203</text>
+</svg>

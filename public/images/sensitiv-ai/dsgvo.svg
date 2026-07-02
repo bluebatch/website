@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" fill="none" role="img" aria-label="DSGVO-konform">
+  <defs>
+    <linearGradient id="bgD" x1="0" y1="0" x2="480" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#002d62"/><stop offset="1" stop-color="#001532"/>
+    </linearGradient>
+    <radialGradient id="glowD" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(90 40) rotate(60) scale(200)">
+      <stop stop-color="#f97316" stop-opacity="0.32"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="260" fill="url(#bgD)"/>
+  <rect width="480" height="260" fill="url(#glowD)"/>
+  <g fill="#f97316">
+    <circle cx="180" cy="66" r="3.6"/><circle cx="200" cy="57" r="3.6"/><circle cx="221" cy="52" r="3.6"/>
+    <circle cx="240" cy="50" r="3.6"/><circle cx="259" cy="52" r="3.6"/><circle cx="280" cy="57" r="3.6"/><circle cx="300" cy="66" r="3.6"/>
+  </g>
+  <path d="M240 82 L300 104 V152 C300 186 274 208 240 220 C206 208 180 186 180 152 V104 Z"
+        fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/>
+  <path d="M215 150 l17 17 l33 -39" fill="none" stroke="#f97316" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
