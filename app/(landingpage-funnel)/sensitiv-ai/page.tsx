@@ -4,6 +4,12 @@ import ContentWrapper from "@/components/layout/content-wrapper";
 import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
 import Typo from "@/components/ui/typo";
+import TimelineAsSteps, {
+  TimelineAsStepsStep,
+} from "@/components/ui/timeline-as-steps";
+import ContactButton, {
+  ContactChannel,
+} from "@/components/buttons/contact-button";
 import SensitivAiFunnel from "./funnel";
 
 export const metadata: Metadata = {
@@ -114,29 +120,41 @@ export default function Page() {
           </Typo.Paragraph>
         </div>
 
-        <div className="mx-auto mt-12 max-w-5xl space-y-12 lg:space-y-16">
-          {steps.map((s, i) => (
-            <div
-              key={s.title}
-              className="flex flex-col gap-6 md:flex-row md:items-center md:gap-12"
-            >
-              <div className="order-2 md:order-1 md:flex-1">
-                <p className="mb-2 text-sm font-semibold text-cta-600">
-                  Schritt {i + 1}
-                </p>
-                <Typo.H3 className="mt-0!">{s.title}</Typo.H3>
-                <Typo.Paragraph>{s.body}</Typo.Paragraph>
-              </div>
-              <div className="order-1 md:order-2 md:flex md:flex-1 md:justify-end">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={s.img}
-                  alt={`Illustration: ${s.title}`}
-                  className="mx-auto w-full max-w-[200px] rounded-2xl shadow-sm md:mx-0 md:w-auto md:max-w-[240px]"
-                />
-              </div>
-            </div>
-          ))}
+        <div className="mx-auto mt-12 max-w-4xl">
+          <TimelineAsSteps>
+            {steps.map((s, i) => (
+              <TimelineAsStepsStep
+                key={s.title}
+                value={i + 1}
+                isLast={i === steps.length - 1}
+              >
+                <div className="flex w-full flex-col gap-4 md:flex-row md:items-center md:gap-8">
+                  <div className="order-2 md:order-1 md:flex-1">
+                    <Typo.H3 className="mt-1!">{s.title}</Typo.H3>
+                    <Typo.Paragraph>{s.body}</Typo.Paragraph>
+                  </div>
+                  <div className="order-1 md:order-2 md:flex md:flex-1 md:justify-end">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={s.img}
+                      alt={`Illustration: ${s.title}`}
+                      className="mx-auto w-full max-w-[180px] rounded-2xl shadow-sm md:mx-0 md:w-auto md:max-w-[220px]"
+                    />
+                  </div>
+                </div>
+              </TimelineAsStepsStep>
+            ))}
+          </TimelineAsSteps>
+        </div>
+
+        <div className="mt-14 flex justify-center">
+          <ContactButton
+            channels={[ContactChannel.Meeting, ContactChannel.Mail]}
+            icon="chat"
+            className="rounded-full"
+          >
+            Kontakt aufnehmen
+          </ContactButton>
         </div>
       </ContentWrapper>
     </>
