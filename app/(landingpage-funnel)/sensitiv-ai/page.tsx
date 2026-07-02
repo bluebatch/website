@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 const facts = [
-  { bold: "DSGVO-konform", rest: "auf Ihrer oder dedizierter Infrastruktur." },
+  { bold: "DSGVO-konform", rest: "auf AWS-Infrastruktur." },
   { bold: "§ 203 StGB", rest: "im Blick, für Berufsgeheimnisträger." },
   { bold: "Inkl. Einrichtung", rest: "wir setzen es sauber für Sie auf." },
   { bold: "Ihre Daten bleiben bei Ihnen,", rest: "kein Abfluss an Dritte." },
@@ -34,7 +34,7 @@ const cards = [
   {
     img: "/images/sensitiv-ai/dsgvo.svg",
     title: "DSGVO-konform",
-    body: "Ihre Daten laufen über eine DSGVO-konforme Infrastruktur, in der EU (Frankfurt) oder On-Premise. Mit Auftragsverarbeitungsvertrag (AVV), ohne Nutzung Ihrer Inhalte zum Training und mit voller Kontrolle über Speicherung und Löschung. Datenschutz ist damit kein nachträgliches Add-on, sondern von Anfang an eingebaut.",
+    body: "Ihre Daten laufen über eine DSGVO-konforme AWS-Infrastruktur in der Region Frankfurt (EU). Mit Auftragsverarbeitungsvertrag (AVV), ohne Nutzung Ihrer Inhalte zum Training und mit voller Kontrolle über Speicherung und Löschung. Datenschutz ist damit kein nachträgliches Add-on, sondern von Anfang an eingebaut.",
   },
   {
     img: "/images/sensitiv-ai/stgb-203.svg",
