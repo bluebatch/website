@@ -127,12 +127,12 @@ export default function Page() {
                 <Typo.H3 className="mt-0!">{s.title}</Typo.H3>
                 <Typo.Paragraph>{s.body}</Typo.Paragraph>
               </div>
-              <div className="order-1 md:order-2 md:flex-1">
+              <div className="order-1 md:order-2 md:flex md:flex-1 md:justify-end">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={s.img}
                   alt={`Illustration: ${s.title}`}
-                  className="w-full rounded-2xl shadow-sm"
+                  className="w-full rounded-2xl shadow-sm md:w-auto md:max-w-[240px]"
                 />
               </div>
             </div>
