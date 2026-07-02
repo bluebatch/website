@@ -22,6 +22,8 @@ const QUESTIONS = [
     title: "Arbeiten Sie mit sensiblen Daten?",
     subtitle:
       "Gesundheits-, Mandanten-, Personal- oder andere besonders schützenswerte Daten.",
+    context:
+      "Sensible Daten sind Informationen, deren Offenlegung Personen schaden könnte, etwa Patienten- und Personalakten, Mandantenunterlagen, Finanz- oder Vertragsdaten. Wer regelmäßig damit arbeitet, muss bei KI-Tools genau wissen, wohin die Daten fließen und wer darauf Zugriff hat.",
   },
   {
     id: "stgb203",
@@ -29,12 +31,16 @@ const QUESTIONS = [
     title: "Fallen diese Daten unter § 203 StGB?",
     subtitle:
       "Das Berufsgeheimnis, z. B. bei Ärzten, Anwälten, Steuerberatern oder Versicherungen.",
+    context:
+      "§ 203 StGB stellt die Verletzung von Privatgeheimnissen unter Strafe. Betroffen sind u. a. Ärzte, Psychotherapeuten, Anwälte, Steuerberater, Wirtschaftsprüfer und Versicherungen. Gelangen solche Daten an unbefugte Dritte oder an Cloud-Dienste ohne passende Vereinbarung, kann das strafbar sein. KI braucht hier ein besonders abgesichertes Setup.",
   },
   {
     id: "claude",
     icon: Sparkles,
     title: "Möchten Sie dafür Claude einsetzen?",
     subtitle: "Anthropic Claude als KI-Modell, statt generischer Tools.",
+    context:
+      "Claude von Anthropic gehört zu den leistungsstärksten und zugleich sichersten KI-Modellen, besonders stark bei Dokumenten, Analyse und langen Texten. Wir setzen es in einer verwalteten, privaten Umgebung ein, sodass Ihre Daten nicht zum Training verwendet werden und in einem DSGVO- und § 203-konformen Rahmen bleiben.",
   },
 ];
 
@@ -114,6 +120,9 @@ export default function SensitivAiFunnel() {
         </p>
         <h2 className="text-2xl font-bold text-gray-900">{q.title}</h2>
         <p className="mx-auto mt-2 max-w-md text-gray-500">{q.subtitle}</p>
+        <p className="mx-auto mt-4 max-w-md rounded-xl bg-gray-50 p-4 text-left text-sm leading-relaxed text-gray-500">
+          {q.context}
+        </p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <button
