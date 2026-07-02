@@ -7,9 +7,8 @@ import Typo from "@/components/ui/typo";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
 } from "@/components/ui/timeline-as-steps";
-import ContactButton, {
-  ContactChannel,
-} from "@/components/buttons/contact-button";
+import ContactButton from "@/components/buttons/contact-button";
+import { ContactChannel } from "@/components/contact/contact-channel";
 import SensitivAiFunnel from "./funnel";
 
 export const metadata: Metadata = {
