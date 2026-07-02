@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" fill="none" role="img" aria-label="Erstgespräch">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="480" y2="300" gradientUnits="userSpaceOnUse"><stop stop-color="#002d62"/><stop offset="1" stop-color="#001532"/></linearGradient>
+    <radialGradient id="gl1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(380 50) rotate(120) scale(210)"><stop stop-color="#f97316" stop-opacity="0.34"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg1)"/>
+  <rect width="480" height="300" fill="url(#gl1)"/>
+  <path d="M112 78 h150 a22 22 0 0 1 22 22 v46 a22 22 0 0 1 -22 22 h-120 l-26 24 v-24 h-4 a22 22 0 0 1 -22 -22 v-46 a22 22 0 0 1 22 -22 z" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.42" stroke-width="2.5"/>
+  <g fill="#ffffff" fill-opacity="0.65"><circle cx="152" cy="123" r="6.5"/><circle cx="184" cy="123" r="6.5"/><circle cx="216" cy="123" r="6.5"/></g>
+  <path d="M258 158 h104 a20 20 0 0 1 20 20 v40 a20 20 0 0 1 -20 20 h-52 l-24 22 v-22 h-28 a20 20 0 0 1 -20 -20 v-40 a20 20 0 0 1 20 -20 z" fill="#f97316" fill-opacity="0.92"/>
+  <path d="M290 198 l13 13 l24 -28" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

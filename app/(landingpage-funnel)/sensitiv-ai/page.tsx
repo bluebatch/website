@@ -4,9 +4,6 @@ import ContentWrapper from "@/components/layout/content-wrapper";
 import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
 import Typo from "@/components/ui/typo";
-import TimelineAsSteps, {
-  TimelineAsStepsStep,
-} from "@/components/ui/timeline-as-steps";
 import SensitivAiFunnel from "./funnel";
 
 export const metadata: Metadata = {
@@ -47,18 +44,22 @@ const steps = [
   {
     title: "Erstgespräch",
     body: "Wir klären in einem kurzen Gespräch, ob Ihr Fall technisch und rechtlich abbildbar ist.",
+    img: "/images/sensitiv-ai/step-1-erstgespraech.svg",
   },
   {
     title: "Verträge: DSGVO & § 203",
     body: "Sie unterschreiben den Auftragsverarbeitungsvertrag (DSGVO) und das Agreement zur § 203-konformen Nutzung.",
+    img: "/images/sensitiv-ai/step-2-vertraege.svg",
   },
   {
     title: "Einrichtung & Konfiguration",
     body: "Wir richten Ihren dedizierten Tenant ein und erzeugen die passende Konfiguration.",
+    img: "/images/sensitiv-ai/step-3-einrichtung.svg",
   },
   {
     title: "Config einspielen & loslegen",
     body: "Sie erhalten Ihre Config, spielen sie in der App ein und können sofort sicher mit Claude arbeiten.",
+    img: "/images/sensitiv-ai/step-4-config.svg",
   },
 ];
 
@@ -113,19 +114,29 @@ export default function Page() {
           </Typo.Paragraph>
         </div>
 
-        <div className="mx-auto mt-10 max-w-2xl">
-          <TimelineAsSteps>
-            {steps.map((s, i) => (
-              <TimelineAsStepsStep
-                key={s.title}
-                value={i + 1}
-                isLast={i === steps.length - 1}
-              >
-                <Typo.H3 className="mt-2!">{s.title}</Typo.H3>
+        <div className="mx-auto mt-12 max-w-5xl space-y-12 lg:space-y-16">
+          {steps.map((s, i) => (
+            <div
+              key={s.title}
+              className="flex flex-col gap-6 md:flex-row md:items-center md:gap-12"
+            >
+              <div className="order-2 md:order-1 md:flex-1">
+                <p className="mb-2 text-sm font-semibold text-cta-600">
+                  Schritt {i + 1}
+                </p>
+                <Typo.H3 className="mt-0!">{s.title}</Typo.H3>
                 <Typo.Paragraph>{s.body}</Typo.Paragraph>
-              </TimelineAsStepsStep>
-            ))}
-          </TimelineAsSteps>
+              </div>
+              <div className="order-1 md:order-2 md:flex-1">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={s.img}
+                  alt={`Illustration: ${s.title}`}
+                  className="w-full rounded-2xl shadow-sm"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </ContentWrapper>
     </>

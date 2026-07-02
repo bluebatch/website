@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" fill="none" role="img" aria-label="Config einspielen und loslegen">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="480" y2="300" gradientUnits="userSpaceOnUse"><stop stop-color="#002d62"/><stop offset="1" stop-color="#001532"/></linearGradient>
+    <radialGradient id="gl4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 60) rotate(90) scale(210)"><stop stop-color="#f97316" stop-opacity="0.36"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg4)"/>
+  <rect width="480" height="300" fill="url(#gl4)"/>
+  <g transform="translate(240 132)">
+    <path d="M0 -66 C26 -46 40 -16 40 16 L-40 16 C-40 -16 -26 -46 0 -66 Z" fill="#ffffff" fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2.5"/>
+    <circle cx="0" cy="-18" r="15" fill="#001532" stroke="#f97316" stroke-width="5"/>
+    <path d="M-40 16 L-64 44 C-46 46 -34 40 -26 30 Z" fill="#ffffff" fill-opacity="0.3"/>
+    <path d="M40 16 L64 44 C46 46 34 40 26 30 Z" fill="#ffffff" fill-opacity="0.3"/>
+    <path d="M-16 20 C-16 54 0 74 0 74 C0 74 16 54 16 20 Z" fill="#f97316"/>
+  </g>
+  <g stroke="#f97316" stroke-opacity="0.7" stroke-width="5" stroke-linecap="round">
+    <line x1="150" y1="250" x2="150" y2="268"/>
+    <line x1="240" y1="256" x2="240" y2="280"/>
+    <line x1="330" y1="250" x2="330" y2="268"/>
+  </g>
+</svg>
