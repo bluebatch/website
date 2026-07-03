@@ -320,7 +320,17 @@ export default function Page() {
 
             <Typo.H3>Premium-Modelle (Sonderfall)</Typo.H3>
             <Typo.Paragraph>
-              Standardmodell ist eine aktuelle GPT-Version. Seit Anfang 2026
+              Standardmodell ist eine aktuelle GPT-Version. Wer dieselben
+              Modelle stattdessen direkt über die OpenAI-Schnittstelle nutzt,
+              zahlt nicht pauschal pro Lizenz, sondern pro Token, wie wir im
+              Überblick zu den{" "}
+              <Link
+                href="/blog/openai-api-kosten"
+                className="text-primary-600 hover:underline"
+              >
+                OpenAI-API-Kosten
+              </Link>{" "}
+              zeigen. Seit Anfang 2026
               ist auch Anthropic Claude integriert (Sonnet 4.5 für Standard,
               Opus 4.5 für tiefes Reasoning), ohne Aufpreis. Aber:
               Claude-Modelle laufen außerhalb der EU Data Boundary und sind in
