@@ -270,7 +270,14 @@ export default function Page() {
               <Typo.ListItem>
                 <strong>API-Nutzung über Kontingent:</strong> Die inkludierten
                 API Credits decken Standardnutzung ab. Wer intensiv
-                automatisiert, zahlt extra.
+                automatisiert, zahlt extra, und zwar pro Token nach dem{" "}
+                <Link
+                  href="/blog/openai-api-kosten"
+                  className="text-primary-600 hover:underline"
+                >
+                  OpenAI-API-Preismodell
+                </Link>
+                .
               </Typo.ListItem>
               <Typo.ListItem>
                 <strong>Governance-Aufwand:</strong> Custom GPT Review-Prozesse,
