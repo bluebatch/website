@@ -839,8 +839,15 @@ export default function Page() {
               >
                 Service Rechnungsprüfung
               </Link>
-              {" "}eine fertige Lösung. Bluebatch begleitet deutsche
-              Mittelständler bei diesen Entscheidungen.{" "}
+              {" "}eine fertige Lösung. Als{" "}
+              <Link
+                href="/blog/ki-automatisierung-agentur"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Automatisierungs-Agentur
+              </Link>
+              {" "}begleitet Bluebatch deutsche Mittelständler bei diesen
+              Entscheidungen.{" "}
               <Link
                 href="/contact"
                 className="text-primary-600 hover:underline"

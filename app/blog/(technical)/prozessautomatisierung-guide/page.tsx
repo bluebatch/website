@@ -511,7 +511,14 @@ export default function Page() {
 
             <Typo.Paragraph>
               <strong>Investition:</strong> Aufbau des Workflows mit
-              externer Unterstützung: 8.000 bis 15.000 Euro einmalig.
+              Unterstützung einer{" "}
+              <Link
+                href="/blog/ki-automatisierung-agentur"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Automatisierungs-Agentur
+              </Link>
+              : 8.000 bis 15.000 Euro einmalig.
               Laufende Kosten (Tool-Lizenzen, Wartung): 200 bis 500 Euro
               pro Monat. Break-even: Zwischen dem zweiten und vierten
               Monat.
