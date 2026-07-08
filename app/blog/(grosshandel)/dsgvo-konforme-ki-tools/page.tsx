@@ -77,9 +77,11 @@ export default function Page() {
             <Typo.Paragraph>
               KI-Tools sind in Unternehmen angekommen. Vertrieb schreibt Angebote
               mit ChatGPT, das Marketing generiert Bilder mit Midjourney, der
-              Support nutzt Copilot für Antwortvorschläge. Was viele dabei
-              übersehen: Jede dieser Anwendungen verarbeitet personenbezogene
-              Daten, die unter die DSGVO fallen.
+              Support nutzt Copilot für Antwortvorschläge. Welche Einsatzfelder
+              sich im Mittelstand darüber hinaus lohnen, zeigt unser Überblick{" "}
+              <Link href="/blog/ki-fuer-unternehmen">KI für Unternehmen</Link>.
+              Was viele dabei übersehen: Jede dieser Anwendungen verarbeitet
+              personenbezogene Daten, die unter die DSGVO fallen.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Die Aufsichtsbehörden schauen seit 2025 genauer hin. Der Hamburger

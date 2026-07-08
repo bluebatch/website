@@ -99,7 +99,10 @@ export default function Page() {
               im deutschen Mittelstand. Er nennt die typischen Fallen, die wir bei Tool-Auswahl und
               Rollout in Mittelstandsunternehmen immer wieder sehen, ordnet die drei großen
               Werkzeug-Optionen (Hosted SaaS, Managed Private, Eigenbau) ein und schließt mit einem
-              90-Tage-Compliance-Plan, der ohne externe Anwaltskanzlei umsetzbar ist.
+              90-Tage-Compliance-Plan, der ohne externe Anwaltskanzlei umsetzbar ist. Wer noch einen
+              Schritt davor steht und erst Einsatzfelder und Werkzeuge sortieren will, findet in unserem
+              Überblick{" "}<Link href="/blog/ki-fuer-unternehmen">KI für Unternehmen</Link>{" "}den
+              breiteren Einstieg.
             </Typo.Paragraph>
           </div>
 
