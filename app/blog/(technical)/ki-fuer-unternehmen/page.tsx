@@ -10,7 +10,7 @@ import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 export const metaCustom: BlogMeta = {
   slug: "ki-fuer-unternehmen",
   author: "Max Hänsel",
-  date: "2026-07-07",
+  date: "2026-07-08",
   image: "/blog/ki-fuer-unternehmen/hero.png",
   tags: ["ki", "automatisierung"] as BlogTagId[],
   publish: true,
@@ -57,7 +57,7 @@ export default function Page() {
             Max Hänsel
           </BlogHero.Author>
           <BlogHero.ReadTime>13 Min. Lesezeit</BlogHero.ReadTime>
-          <BlogHero.Date dateTime="2026-07-07">7. Juli 2026</BlogHero.Date>
+          <BlogHero.Date dateTime="2026-07-08">8. Juli 2026</BlogHero.Date>
         </BlogHero.Meta>
 
         <BlogHero.Image
