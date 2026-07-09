@@ -10,6 +10,7 @@
 import { generateText } from "ai";
 import { openwebui, LEAD_MODEL } from "@/lib/openwebui";
 import { sendMetaEvent } from "@/lib/server/meta-capi";
+import { mapLead } from "@/lib/server/lead-mapping";
 import {
   ensureCompany,
   ensureCompanyByName,
@@ -19,11 +20,9 @@ import {
   hubspotConfigured,
 } from "@/lib/server/hubspot-lead";
 
-const LEAD_SOURCE = "homepage_chat";
-
-// Meta-Standard-Eventnamen — gleiche Semantik wie das Enum der Website.
+// Meta-Standard-Event. Bewusst nur "Lead" — Meta optimiert bei uns auf Lead,
+// CompleteRegistration wird nicht verarbeitet.
 const META_LEAD = "Lead";
-const META_REGISTRATION = "CompleteRegistration";
 
 // Marker im Notiz-Body, damit wir die richtige Notiz pro Turn wiederfinden + updaten.
 const QUAL_MARKER = "Homepage-Chat — Qualifizierung";
@@ -34,8 +33,9 @@ export interface RequestMeta {
   fbp?: string;
   fbc?: string;
   eventSourceUrl?: string;
-  utmSource?: string;
-  utmCampaign?: string;
+  // Volle Meta-/UTM-Attribution (utm_*, hsa_*, fbclid) — so wie MetaAdsTracker sie ablegt.
+  utm?: Record<string, string>;
+  fbclid?: string;
 }
 
 export interface LeadData {
@@ -167,41 +167,33 @@ export async function detectAndFireLead(
 
   if (!domain && !email && !company) return data;
 
-  const utm: Record<string, string> = { lead_source: LEAD_SOURCE };
-  if (meta.utmSource) utm.utm_source = meta.utmSource;
-  if (meta.utmCampaign) utm.utm_campaign = meta.utmCampaign;
+  // UTM→HubSpot-Dropdowns (facebook/instagram/inbound + paid/website) + campaign/content.
+  // Chat-Herkunft steckt weiterhin in der Qualifizierungs-Notiz (QUAL_MARKER), nicht
+  // mehr in lead_source — so folgt der Chat demselben Attributionsmodell wie das Formular.
+  const mapped = mapLead(meta.utm, meta.fbclid);
+  const props: Record<string, string> = {
+    lead_source: mapped.lead_source,
+    lead_medium: mapped.lead_medium,
+  };
+  if (mapped.lead_campaign) props.lead_campaign = mapped.lead_campaign;
+  if (mapped.lead_content) props.lead_content = mapped.lead_content;
 
-  // Meta-Events laufen parallel und brauchen keine HubSpot-IDs.
-  const metaTasks: Promise<unknown>[] = [];
-  if (domain || company) {
-    metaTasks.push(
-      sendMetaEvent({
-        eventId: `${sessionId}:lead`,
-        eventName: META_LEAD,
-        contentName: company ?? "homepage_chat",
-        eventSourceUrl: meta.eventSourceUrl,
-        fbp: meta.fbp,
-        fbc: meta.fbc,
-        ip: meta.ip,
-        userAgent: meta.userAgent,
-      }),
-    );
-  }
-  if (email) {
-    metaTasks.push(
-      sendMetaEvent({
-        eventId: `${sessionId}:registration`,
-        eventName: META_REGISTRATION,
-        email,
-        contentName: company ?? "homepage_chat",
-        eventSourceUrl: meta.eventSourceUrl,
-        fbp: meta.fbp,
-        fbc: meta.fbc,
-        ip: meta.ip,
-        userAgent: meta.userAgent,
-      }),
-    );
-  }
+  // Meta: genau EIN "Lead"-Event pro Session (deterministische event_id → Dedup über
+  // Turns). E-Mail geht als user_data mit, wenn vorhanden (bessere Match-Quality).
+  // CompleteRegistration bewusst raus.
+  const metaTasks: Promise<unknown>[] = [
+    sendMetaEvent({
+      eventId: `${sessionId}:lead`,
+      eventName: META_LEAD,
+      email,
+      contentName: company ?? "homepage_chat",
+      eventSourceUrl: meta.eventSourceUrl,
+      fbp: meta.fbp,
+      fbc: meta.fbc,
+      ip: meta.ip,
+      userAgent: meta.userAgent,
+    }),
+  ];
 
   // HubSpot: Company/Contact (idempotent), dann Qualifizierungs-Notiz upserten.
   const hubspotTask = (async () => {
@@ -210,13 +202,13 @@ export async function detectAndFireLead(
     let contactId: string | null = null;
 
     if (domain) {
-      const props: Record<string, string> = { ...utm };
-      if (company) props.name = company;
-      companyId = await ensureCompany(domain, props);
+      const companyProps: Record<string, string> = { ...props };
+      if (company) companyProps.name = company;
+      companyId = await ensureCompany(domain, companyProps);
     } else if (company) {
-      companyId = await ensureCompanyByName(company, utm);
+      companyId = await ensureCompanyByName(company, props);
     }
-    if (email) contactId = await ensureContact(email, utm);
+    if (email) contactId = await ensureContact(email, props);
     if (contactId && companyId) await associate(contactId, companyId);
 
     const note = buildQualNote(data);

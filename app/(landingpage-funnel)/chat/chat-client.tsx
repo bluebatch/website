@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
 import { BotIdClient } from "botid/client";
 import { ArrowUp, Bot, Loader2 } from "lucide-react";
@@ -13,8 +13,23 @@ const EXAMPLES = [
 ];
 
 export default function ChatClient() {
+  // Meta-/UTM-Attribution (vom MetaAdsTracker) aus dem localStorage nach dem Mount
+  // lesen und bei jeder Nachricht an /api/chat mitschicken — der Chat-POST trägt
+  // sonst keine Query-Params, das Backend hätte sonst keine Attribution.
+  const [attribution, setAttribution] = useState<unknown>(undefined);
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem("bb_meta_attribution");
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      if (raw) setAttribution(JSON.parse(raw));
+    } catch {
+      // kein/ungültiges Storage — Chat läuft trotzdem
+    }
+  }, []);
+
   const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
     api: "/api/chat",
+    body: { attribution },
   });
   const scrollRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
