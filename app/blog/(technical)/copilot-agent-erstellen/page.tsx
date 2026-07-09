@@ -119,6 +119,19 @@ export default function Page() {
               eigenständig entscheiden, welche Aktion er auslöst.
             </Typo.Paragraph>
             <Typo.Paragraph>
+              Nicht zu verwechseln ist Copilot Studio übrigens mit dem
+              GitHub Copilot Coding Agent: Der ist ein Entwickler-Werkzeug,
+              das autonom Issues und Pull Requests in GitHub-Repositories
+              bearbeitet. Wie das funktioniert, zeigt unser Guide zum{" "}
+              <Link
+                href="/blog/github-copilot-agent"
+                className="text-primary-600 hover:underline"
+              >
+                GitHub Copilot Agent
+              </Link>
+              .
+            </Typo.Paragraph>
+            <Typo.Paragraph>
               Ein Agent in Copilot Studio ist damit mehr als ein Chatbot. Er
               besteht aus einer Beschreibung seiner Aufgabe, aus Wissensquellen,
               auf die er zugreift, aus Aktionen, die er ausführen darf, und aus

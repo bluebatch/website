@@ -116,6 +116,14 @@ export default function Page() {
               >
                 Copilot Agent erstellen
               </Link>
+              . Für autonome Coding-Agents, die direkt in GitHub-Repositories
+              arbeiten, lohnt der Blick in den Guide zum{" "}
+              <Link
+                href="/blog/github-copilot-agent"
+                className="text-primary-600 hover:underline"
+              >
+                GitHub Copilot Agent
+              </Link>
               .
             </Typo.Paragraph>
           </div>
