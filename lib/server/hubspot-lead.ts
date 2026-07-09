@@ -102,6 +102,26 @@ export async function ensureContact(
   return createObject("contacts", { email, ...props }, ["email"]);
 }
 
+/**
+ * Setzt Properties auf einem Contact (per E-Mail): existiert er, PATCH; existiert er
+ * (noch) nicht, wird er angelegt. Für nachgelagerte Attribution-Updates, z.B. nach
+ * einer Meeting-Buchung — bewusst KEINE Forms-API, also kein Formular-Event.
+ */
+export async function upsertContact(
+  email: string,
+  props: Record<string, string> = {},
+): Promise<string | null> {
+  const existing = await searchId("contacts", "email", email);
+  if (existing) {
+    await hs(`/crm/v3/objects/contacts/${existing}`, {
+      method: "PATCH",
+      body: JSON.stringify({ properties: props }),
+    }).catch(() => {});
+    return existing;
+  }
+  return createObject("contacts", { email, ...props }, ["email"]);
+}
+
 /** Verknüpft Contact ↔ Company (v4 Default-Association). Nice-to-have, kein harter Fehler. */
 export async function associate(contactId: string, companyId: string): Promise<void> {
   await hs(

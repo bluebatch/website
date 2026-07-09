@@ -320,12 +320,42 @@ function MeetingIframe({ active }: { active: boolean }) {
           }),
         );
 
-        // Meta-Conversion bewusst entfernt — Bookings stehen ohnehin in
-        // HubSpot. GA4 behalten wir als Funnel-Conversion.
+        // GA4-Funnel-Conversion (Meta läuft serverseitig, s.u.).
         tracking.ga4(Ga4Event.MeetingBooked, {
           event_category: "engagement",
           event_label: "Book Meeting",
         });
+
+        // Attribution am gebuchten Kontakt nachsetzen + Meta-"Lead" feuern — reines
+        // Property-Update über /api/meeting-tracking (KEIN Formular-Event).
+        if (email) {
+          const firstName =
+            (typeof guest.firstName === "string" && guest.firstName) ||
+            (typeof guest.firstname === "string" && guest.firstname) ||
+            undefined;
+          const lastName =
+            (typeof guest.lastName === "string" && guest.lastName) ||
+            (typeof guest.lastname === "string" && guest.lastname) ||
+            undefined;
+          let attribution: unknown;
+          try {
+            const raw = window.localStorage.getItem("bb_meta_attribution");
+            if (raw) attribution = JSON.parse(raw);
+          } catch {
+            // kein/ungültiges Storage — Buchung bleibt unberührt
+          }
+          void fetch("/api/meeting-tracking", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email,
+              firstname: firstName,
+              lastname: lastName,
+              attribution,
+              pageUri: window.location.href,
+            }),
+          }).catch(() => {});
+        }
       }
     };
     window.addEventListener("message", handler);
