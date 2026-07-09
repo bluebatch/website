@@ -11,7 +11,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import Button from "@/components/ui/button";
-import ContactButton, { ContactChannel } from "@/components/buttons/contact-button";
+import ContactForm from "@/components/contact/contact-form";
 
 type Outcome = "normal" | "qualified";
 
@@ -156,7 +156,7 @@ function NormalOutcome({ onRestart }: { onRestart: () => void }) {
       </h2>
       <p className="mx-auto mt-3 max-w-md text-gray-500">
         Wenn Ihre Daten nicht unter das besondere Berufsgeheimnis (§ 203 StGB) fallen,
-        können Sie direkt unsere „normalen" AI-Services nutzen. Schnell, DSGVO-konform
+        können Sie direkt unsere „normalen“ AI-Services nutzen. Schnell, DSGVO-konform
         und ohne den zusätzlichen § 203-Aufwand.
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -208,14 +208,8 @@ function QualifiedOutcome({ onRestart }: { onRestart: () => void }) {
         ))}
       </ul>
 
-      <div className="mt-8 flex justify-center">
-        <ContactButton
-          channels={[ContactChannel.Meeting, ContactChannel.Mail]}
-          icon="chat"
-          className="w-full rounded-full sm:w-auto"
-        >
-          Kontakt aufnehmen
-        </ContactButton>
+      <div className="mt-8">
+        <ContactForm contentName="Claude für sensible Daten" />
       </div>
       <button
         type="button"
