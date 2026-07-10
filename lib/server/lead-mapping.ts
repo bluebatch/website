@@ -1,8 +1,14 @@
-// Zentrales UTM→HubSpot-Dropdown-Mapping. Single source of truth — genutzt vom
-// Kontaktformular (/api/contact) UND vom Homepage-Chat-Lead-Flow (lead-detect).
+// Zentrales UTM→HubSpot-Mapping. Single source of truth — genutzt vom Kontakt-
+// formular (/api/contact), dem Meeting-Tracking (/api/meeting-tracking) UND dem
+// Homepage-Chat-Lead-Flow (lead-detect).
 //
-// "Paid" = echter Ad-Klick (fbclid / hsa_src=fb / utm_medium=paid|cpc|ppc).
-// Alles andere gilt als organisch/inbound.
+// Modell (Stand HubSpot-Dropdowns):
+//   lead_source  = referral | outbound | inbound  → unsere Web-Flows sind IMMER
+//                  eingehend, daher konstant "inbound".
+//   lead_medium  = der Kanal/die Plattform (facebook | instagram | linkedin |
+//                  website | …). Facebook/Instagram sind hier das MEDIUM, nicht
+//                  mehr die Source.
+//   lead_campaign = utm_campaign (1:1), lead_content = utm_content (1:1).
 
 export interface MappedLead {
   lead_source: string;
@@ -16,31 +22,24 @@ export function mapLead(
   fbclid?: string | null,
 ): MappedLead {
   const src = (utm.utm_source ?? "").toLowerCase();
-  const med = (utm.utm_medium ?? "").toLowerCase();
   const hsa = (utm.hsa_src ?? "").toLowerCase();
 
-  const isPaid =
+  // Meta-Klick? Explizite Plattform in utm_source, sonst fbclid/hsa als Signal.
+  const isMeta =
     Boolean(fbclid ?? utm.fbclid) ||
     hsa === "fb" ||
-    med === "paid" ||
-    med === "cpc" ||
-    med === "ppc";
+    ["facebook", "fb", "instagram", "ig"].includes(src);
 
-  let lead_source: string;
   let lead_medium: string;
-  if (isPaid) {
-    if (src === "facebook" || src === "fb") lead_source = "facebook";
-    else if (src === "instagram" || src === "ig") lead_source = "instagram";
-    // Nur fbclid, keine Plattform-Info → Fallback Instagram (bewusste Entscheidung).
-    else lead_source = "instagram";
-    lead_medium = "paid";
-  } else {
-    lead_source = "inbound";
-    lead_medium = "website";
-  }
+  if (src === "facebook" || src === "fb") lead_medium = "facebook";
+  else if (src === "instagram" || src === "ig") lead_medium = "instagram";
+  else if (src === "linkedin") lead_medium = "linkedin";
+  // Meta-Klick ohne klare Plattform → Fallback Instagram (bewusste Entscheidung).
+  else if (isMeta) lead_medium = "instagram";
+  else lead_medium = "website";
 
   return {
-    lead_source,
+    lead_source: "inbound",
     lead_medium,
     lead_campaign: utm.utm_campaign?.trim() || undefined,
     lead_content: utm.utm_content?.trim() || undefined,
