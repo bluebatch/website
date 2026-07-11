@@ -316,7 +316,15 @@ export default function Page() {
               Enterprise-Kunden nicht für das Training von Modellen verwendet
               werden. Das gilt sowohl für die Chat-Oberfläche als auch für die
               API. Diese Zusicherung ist im Data Processing Agreement (DPA)
-              verankert.
+              verankert. Wer (noch) unterhalb von Enterprise arbeitet: Wie sich{" "}
+              <Link
+                href="/blog/chatgpt-dsgvo-konform-nutzen"
+                className="text-primary-600 hover:underline"
+              >
+                ChatGPT auch mit Free-, Plus- und Team-Tarifen DSGVO-konform
+                nutzen
+              </Link>{" "}
+              lässt, zeigt unser Praxis-Guide.
             </Typo.Paragraph>
 
             <Typo.H3>EU-Datenresidenz: Der aktuelle Stand</Typo.H3>

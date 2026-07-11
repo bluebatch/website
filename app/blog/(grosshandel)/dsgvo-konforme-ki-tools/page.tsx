@@ -228,7 +228,15 @@ export default function Page() {
               nutzbar. ChatGPT Team und Enterprise bieten AVVs, EU-Datenräume
               und Opt-out vom Training. Für viele Anwendungsfälle eine
               praktikable Option, solange die Mitarbeiter die richtige Version
-              nutzen. Details zu Beschaffung, EU-Datenresidenz und Rollout
+              nutzen. Wie sich Trainings-Opt-out, AVV und die richtigen
+              Einstellungen konkret umsetzen lassen, zeigt unsere{" "}
+              <Link
+                href="/blog/chatgpt-dsgvo-konform-nutzen"
+                className="text-bb-blue-700 underline hover:text-bb-blue-900"
+              >
+                Schritt-für-Schritt-Anleitung zu ChatGPT und DSGVO
+              </Link>
+              . Details zu Beschaffung, EU-Datenresidenz und Rollout
               stehen im{" "}
               <Link
                 href="/blog/chatgpt-enterprise-deutschland"
