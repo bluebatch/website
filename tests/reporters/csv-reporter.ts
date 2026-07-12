@@ -92,6 +92,10 @@ export default class CsvReporter implements Reporter {
   }
 
   private writeSeoDetails(today: string) {
+    // seo-scores.json bleibt von früheren Läufen liegen — ohne diesen Guard
+    // würde ein abgebrochener Run alte Scores mit frischem Datum stempeln.
+    if (!this.results.some((r) => r.project === "seo-audit")) return;
+
     const scoresPath = path.join(RESULTS_DIR, "seo-scores.json");
     if (!fs.existsSync(scoresPath)) return;
 
