@@ -1,6 +1,8 @@
 import { defineConfig } from "@playwright/test";
 
-const PORT = 4000;
+// 4000 kollidiert mit anderen Apps im Devcontainer (z.B. Kundenprojekt-Server);
+// Playwright bricht dann vor dem ersten Test ab. Daher ein unüblicher Port.
+const PORT = 4311;
 const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
 
 export default defineConfig({
