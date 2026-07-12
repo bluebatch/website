@@ -1,6 +1,8 @@
 import type { Page, BrowserContext } from "@playwright/test";
 
-export const BASE_URL = process.env.BASE_URL || "http://localhost:4000";
+// Muss zum webServer-Port in playwright.config.ts passen — ein abweichender
+// Port lässt die Crawl-Tests gegen eine fremde App im Devcontainer laufen.
+export const BASE_URL = process.env.BASE_URL || "http://localhost:4311";
 export const BASE_ORIGIN = new URL(BASE_URL).origin;
 export const CANONICAL_ORIGIN = "https://bluebatch.io";
 
