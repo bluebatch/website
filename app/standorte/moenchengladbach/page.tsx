@@ -381,8 +381,8 @@ export default async function Page({
               Aus dem Textil-Manchester wurde Sitz des weltweit führenden Anlagenbauers für Stahl- und NE-Metallwerke. Parallel wird die textile Wertschöpfungskette mit der Textilfabrik 7.0 neu erfunden, Santander steuert die deutsche Konsumkredit-Welt. Quartiers- und Konzern-Management bedeutet: ETO/CPQ, Banken-Compliance, vernetzte Produktion. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
-                Unser 6-Phasen-Prozess →
+              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
+                Mit euch wachsen: unser Modell →
               </Link>
             </div>
           </BoundlessImageCard.Content>

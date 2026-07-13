@@ -316,8 +316,8 @@ export default async function Page({
             Pfaffenhofen und Neuburg liefern in die Audi-Lieferkette zu.
             Wie wir die Implementierung in sechs Phasen strukturieren,
             beschreiben wir auf{" "}
-            <Link href="/unser-prozess" className="text-primary-600 hover:underline">
-              Unser Prozess
+            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
+              Mit euch wachsen
             </Link>
             .
           </Typo.Paragraph>

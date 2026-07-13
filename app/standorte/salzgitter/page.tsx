@@ -324,8 +324,8 @@ export default async function Page({
               Die Salzgitter AG ersetzt klassische Hochöfen durch H2-Direktreduktion und liefert ab Ende 2025 grünen Stahl an VW. Wenige Kilometer entfernt baut PowerCo eine Gigafactory für 40 GWh Zellkapazität. Beide Welten brauchen End-to-End-Workflows - CO2-Tracking, MES-Chargen, IATF-Audit-Trails. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
-                Unser 6-Phasen-Prozess →
+              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
+                Mit euch wachsen: unser Modell →
               </Link>
             </div>
           </BoundlessImageCard.Content>

@@ -325,8 +325,8 @@ export default async function Page({
             abliefern. Hinzu kommen die Autostadt mit über 2 Millionen
             Besuchern pro Jahr und die Wolfsburg AG als Diversifizierungs-Vehikel.
             Wie wir das in sechs Phasen ausrollen, beschreiben wir auf{" "}
-            <Link href="/unser-prozess" className="text-primary-600 hover:underline">
-              Unser Prozess
+            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
+              Mit euch wachsen
             </Link>
             .
           </Typo.Paragraph>

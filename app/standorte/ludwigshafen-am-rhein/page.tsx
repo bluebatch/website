@@ -324,8 +324,8 @@ export default async function Page({
             CBAM-Berichte und CSRD-Reporting nach ESRS E1 sind hochkomplex
             und nur automatisiert beherrschbar. Wie wir die Implementierung
             in sechs Phasen strukturieren, beschreiben wir auf der Seite{" "}
-            <Link href="/unser-prozess" className="text-primary-600 hover:underline">
-              Unser Prozess
+            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
+              Mit euch wachsen
             </Link>
             .
           </Typo.Paragraph>

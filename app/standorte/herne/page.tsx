@@ -293,8 +293,8 @@ export default async function Page({
               Kelvion liefert Wärmeübertrager in 75+ Länder, gesteuert aus Herne. Parallel macht der FTTH-Ausbau die Stadt zur attraktiven Adresse für IT-affine Mittelständler. Globale Konzernsteuerung, Cloud-Migrationen und KRITIS-konforme Versorgungs-Workflows: alles Felder für n8n. Wir verbinden diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
-                Unser 6-Phasen-Prozess →
+              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
+                Mit euch wachsen: unser Modell →
               </Link>
             </div>
           </BoundlessImageCard.Content>

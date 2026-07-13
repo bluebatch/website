@@ -384,8 +384,8 @@ export default async function Page({
             für ostdeutsche Standorte gibt es nicht, das Saarland muss durch
             Effizienz wachsen. Wie wir die Implementierung in sechs Phasen
             ausrollen, beschreiben wir auf{" "}
-            <Link href="/unser-prozess" className="text-primary-600 hover:underline">
-              Unser Prozess
+            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
+              Mit euch wachsen
             </Link>
             .
           </Typo.Paragraph>

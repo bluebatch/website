@@ -317,8 +317,8 @@ export default async function Page({
               vom Anschluss-Prozess bis zum Wartungs-Ticket.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
-                Unser 6-Phasen-Prozess →
+              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
+                Mit euch wachsen: unser Modell →
               </Link>
             </div>
           </BoundlessImageCard.Content>

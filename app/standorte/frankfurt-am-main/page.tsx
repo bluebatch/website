@@ -277,7 +277,7 @@ export default async function Page({
             <Link href="/n8n-hosting-deutschland" className="text-primary-600 hover:underline">Self-hosted auf Ihrer Infrastruktur</Link>,
             ohne dass ein einziges Dokument Ihr Rechenzentrum verlässt.
             Wie wir dabei vorgehen, erfahren Sie auf unserer Seite{" "}
-            <Link href="/unser-prozess" className="text-primary-600 hover:underline">Unser Prozess</Link>.
+            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">Unser Prozess</Link>.
           </Typo.Paragraph>
         </div>
         <div className="mt-10">

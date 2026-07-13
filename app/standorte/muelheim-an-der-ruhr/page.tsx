@@ -279,8 +279,8 @@ export default async function Page({
               Aus dem ehemaligen Stahl-Mülheim wurde Handels-Hauptstadt: ALDI Süd, Tengelmann und Brenntag steuern globale Konzernfunktionen, Siemens Energy in Mintard liefert Gasturbinen in alle Welt. Beide Welten brauchen End-to-End-Workflows - Lieferketten-Steuerung, ETO-Konfiguration, Service-Pipelines. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
-                Unser 6-Phasen-Prozess →
+              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
+                Mit euch wachsen: unser Modell →
               </Link>
             </div>
           </BoundlessImageCard.Content>

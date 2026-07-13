@@ -340,8 +340,8 @@ export default async function Page({
               MAN Energy Solutions baut in Oberhausen-Sterkrade Großmotoren und H2-Kompressoren für die Energiewende. Das benachbarte Babcock-Areal befindet sich in einer städtebaulichen Konversion zu Gewerbe- und Mischflächen. Beide Welten brauchen End-to-End-Workflows - Engineering-to-Order, Genehmigungs-Pipelines und Investoren-Onboarding. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/unser-prozess" className="text-primary-600 hover:underline font-semibold">
-                Unser 6-Phasen-Prozess →
+              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
+                Mit euch wachsen: unser Modell →
               </Link>
             </div>
           </BoundlessImageCard.Content>
