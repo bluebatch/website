@@ -458,7 +458,7 @@ export default function Page() {
               Modellqualität. Wie sich solche Anwendungen in konkrete Abläufe
               übersetzen, zeigen die Beispiele aus dem{" "}
               <Link
-                href="/use-cases/grosshandel"
+                href="/wholesale-ai"
                 className="text-primary-600 hover:underline"
               >
                 Großhandel

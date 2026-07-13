@@ -405,7 +405,7 @@ export default function Page() {
               inhaltlichen Kundenfragen. Drei Klassen, drei Rollen, ein
               Prozess. Weitere solcher Abläufe finden Sie in unseren{" "}
               <Link
-                href="/use-cases/grosshandel"
+                href="/wholesale-ai"
                 className="text-primary-600 hover:underline"
               >
                 Use Cases für den Großhandel

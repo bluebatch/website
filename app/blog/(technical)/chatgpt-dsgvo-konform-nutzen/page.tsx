@@ -474,7 +474,7 @@ export default function Page() {
               </Link>{" "}
               und in den Beispielen aus dem{" "}
               <Link
-                href="/use-cases/grosshandel"
+                href="/wholesale-ai"
                 className="text-primary-600 hover:underline"
               >
                 Großhandel

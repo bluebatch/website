@@ -160,7 +160,7 @@ function NormalOutcome({ onRestart }: { onRestart: () => void }) {
         und ohne den zusätzlichen § 203-Aufwand.
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <Button href="/services">
+        <Button href="/ki-implementierung">
           Zu unseren AI-Services
           <ArrowRight className="h-5 w-5" />
         </Button>

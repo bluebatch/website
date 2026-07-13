@@ -498,7 +498,7 @@ export default function Page() {
               </Link>{" "}
               und in den Beispielen aus dem{" "}
               <Link
-                href="/use-cases/grosshandel"
+                href="/wholesale-ai"
                 className="text-primary-600 hover:underline"
               >
                 Großhandel
@@ -536,7 +536,7 @@ export default function Page() {
               hilfreich. Wer bei der Einführung Unterstützung braucht, findet sie
               in unseren{" "}
               <Link
-                href="/services"
+                href="/ki-implementierung"
                 className="text-primary-600 hover:underline"
               >
                 Leistungen

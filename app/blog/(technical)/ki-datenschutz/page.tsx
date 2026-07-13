@@ -696,7 +696,7 @@ export default function Page() {
               Kundenstammdaten in KI-Workflows einfließen, ist diese Inventur besonders wertvoll,
               weil sie die Grundlage für eine saubere Process-Mining-Erweiterung legt. Tiefere
               Einordnung im Hub
-              {" "}<Link href="/blog/digitalisierung-grosshandel">Digitalisierung im Großhandel</Link>.
+              {" "}<Link href="/digitalisierung-grosshandel">Digitalisierung im Großhandel</Link>.
             </Typo.Paragraph>
           </div>
 

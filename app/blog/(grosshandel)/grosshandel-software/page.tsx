@@ -534,7 +534,7 @@ export default function Page() {
                 Auftragsabwicklung im Großhandel
               </Link>{" "}
               und zum{" "}
-              <Link href="/blog/bestellungen-erfassen-automatisieren">
+              <Link href="/bestellerfassung-automatisieren">
                 automatisierten Erfassen von Bestellungen
               </Link>
               . Bei der Belegerfassung extrahiert die KI Rechnungsdaten,

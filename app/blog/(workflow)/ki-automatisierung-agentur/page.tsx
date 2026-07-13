@@ -230,7 +230,7 @@ export default function Page() {
               </Link>{" "}
               oder die{" "}
               <Link
-                href="/use-cases/grosshandel/auftragserfassung"
+                href="/bestellung-erfassen"
                 className="text-primary-600 hover:underline"
               >
                 Auftragserfassung aus E-Mail und Fax
@@ -439,7 +439,7 @@ export default function Page() {
               , und einen Überblick über die machbaren Anwendungsfälle gibt
               unsere Sammlung von{" "}
               <Link
-                href="/use-cases/grosshandel"
+                href="/wholesale-ai"
                 className="text-primary-600 hover:underline"
               >
                 Use-Cases im Großhandel
@@ -475,7 +475,7 @@ export default function Page() {
               </Link>{" "}
               oder werfen Sie einen Blick auf unsere{" "}
               <Link
-                href="/services"
+                href="/ki-implementierung"
                 className="text-primary-600 hover:underline"
               >
                 Leistungen

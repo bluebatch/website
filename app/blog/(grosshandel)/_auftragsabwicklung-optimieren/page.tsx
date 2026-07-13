@@ -217,7 +217,7 @@ export default function Page() {
               schneller zu machen, sondern die Lücken dazwischen zu schließen. Wie
               sich der reine Erfassungsschritt automatisieren lässt, vertieft der
               Beitrag zum{" "}
-              <Link href="/blog/bestellungen-erfassen-automatisieren">
+              <Link href="/bestellerfassung-automatisieren">
                 automatisierten Erfassen von Bestellungen
               </Link>
               .

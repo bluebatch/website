@@ -87,7 +87,7 @@ export default function Page() {
               </Link>{" "}
               behandelt, und auch nicht allein um das Erzeugen des Angebots, das
               die{" "}
-              <Link href="/blog/automatische-angebotserstellung-grosshandel">
+              <Link href="/ki-angebote">
                 automatische Angebotserstellung
               </Link>{" "}
               beschreibt. Hier steht der Vertriebsprozess als Ganzes im
@@ -226,7 +226,7 @@ export default function Page() {
               CRM-Eintrag, sodass die Anfrage von der ersten Sekunde an
               dokumentiert ist. Diese automatische Erfassung ist eng verwandt mit
               dem{" "}
-              <Link href="/blog/bestellungen-erfassen-automatisieren">
+              <Link href="/bestellerfassung-automatisieren">
                 automatisierten Erfassen von Bestellungen
               </Link>
               , setzt aber eine Stufe früher an: nicht beim fertigen Auftrag,

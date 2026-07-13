@@ -445,7 +445,7 @@ export default function Page() {
               solche Assistenten in konkrete Abläufe übersetzt werden, zeigen
               unsere Beispiele aus dem{" "}
               <Link
-                href="/use-cases/grosshandel"
+                href="/wholesale-ai"
                 className="text-primary-600 hover:underline"
               >
                 Großhandel

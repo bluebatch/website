@@ -527,7 +527,7 @@ export default function Page() {
               OCR-Services für schwierige Layouts. Wer letzteres bauen will,
               findet den vollen Konstruktionsplan im Beitrag zum{" "}
               <Link
-                href="/blog/bestellungen-erfassen-automatisieren"
+                href="/bestellerfassung-automatisieren"
                 className="text-primary-600 hover:underline"
               >
                 automatischen Erfassen von Bestellungen

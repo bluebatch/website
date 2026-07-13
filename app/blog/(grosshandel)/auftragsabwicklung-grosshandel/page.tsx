@@ -137,7 +137,7 @@ export default function Page() {
               man den ersten dieser Kanäle automatisch ins ERP bringt, zeigt
               unser tiefer Praxispost zu{" "}
               <Link
-                href="/blog/bestellungen-erfassen-automatisieren"
+                href="/bestellerfassung-automatisieren"
                 className="text-primary-600 hover:underline"
               >
                 Bestellungen automatisch erfassen
@@ -199,7 +199,7 @@ export default function Page() {
               Eingriff durchlaufen. Weitere Use-Cases für diesen Hebel
               zeigen unsere{" "}
               <Link
-                href="/blog/digitalisierung-grosshandel"
+                href="/digitalisierung-grosshandel"
                 className="text-primary-600 hover:underline"
               >
                 Digitalisierungs-Use-Cases im Großhandel
@@ -274,7 +274,7 @@ export default function Page() {
               Auftragsabwicklung in zwei Jahren neu. Die enge nachgelagerte
               Logik der{" "}
               <Link
-                href="/use-cases/grosshandel/3-wege-rechnungspruefung"
+                href="/automatische-rechnungspruefung"
                 className="text-primary-600 hover:underline"
               >
                 3-Wege-Rechnungsprüfung
@@ -415,7 +415,7 @@ export default function Page() {
               routet entsprechend. Reklamationen gehen ins Kundenservice-
               System, Anfragen zur{" "}
               <Link
-                href="/blog/automatische-angebotserstellung-grosshandel"
+                href="/ki-angebote"
                 className="text-primary-600 hover:underline"
               >
                 automatischen Angebotserstellung
@@ -493,7 +493,7 @@ export default function Page() {
               akzeptiert wird. Vertiefung zum konkreten Service-Pendant zeigt
               unser Use-Case{" "}
               <Link
-                href="/use-cases/grosshandel/auftragserfassung"
+                href="/bestellung-erfassen"
                 className="text-primary-600 hover:underline"
               >
                 Bestellung erfassen

@@ -166,7 +166,7 @@ export default function Page() {
               beschleunigen Angebote, Produkttexte und Kampagnen. Wer im
               Großhandel sitzt, findet die branchennahen Varianten im{" "}
               <Link
-                href="/use-cases/grosshandel"
+                href="/wholesale-ai"
                 className="text-primary-600 hover:underline"
               >
                 Use-Case-Überblick für den Großhandel
@@ -186,7 +186,7 @@ export default function Page() {
               Bestellprognosen, Engpässe früher zu erkennen, und im Großhandel
               hängt das eng mit der{" "}
               <Link
-                href="/use-cases/grosshandel/auftragserfassung"
+                href="/bestellung-erfassen"
                 className="text-primary-600 hover:underline"
               >
                 automatischen Auftragserfassung
@@ -514,7 +514,7 @@ export default function Page() {
               den Datenschutz bis zum produktiven Betrieb kennt, findet in
               unseren{" "}
               <Link
-                href="/services"
+                href="/ki-implementierung"
                 className="text-primary-600 hover:underline"
               >
                 Leistungen

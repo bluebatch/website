@@ -324,7 +324,7 @@ export default function Page() {
               entsteht eine Lösung, die genau auf das Haus zugeschnitten ist.
               Wie ein automatischer Bestelleingang grundsätzlich funktioniert,
               zeigt der Beitrag zum{" "}
-              <Link href="/blog/bestellungen-erfassen-automatisieren">
+              <Link href="/bestellerfassung-automatisieren">
                 automatisierten Erfassen von Bestellungen
               </Link>
               .

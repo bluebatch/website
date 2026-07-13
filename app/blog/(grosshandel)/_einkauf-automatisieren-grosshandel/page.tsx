@@ -89,7 +89,7 @@ export default function Page() {
                 Auftragsabwicklung im Großhandel
               </Link>{" "}
               behandelt, und auch nicht um das{" "}
-              <Link href="/blog/bestellungen-erfassen-automatisieren">
+              <Link href="/bestellerfassung-automatisieren">
                 Erfassen eingehender Kundenbestellungen
               </Link>
               . Hier geht es um die andere Richtung: um den eigenen Einkauf, um
@@ -262,7 +262,7 @@ export default function Page() {
               liegt, und entscheidet auf einer sauberen Grundlage statt aus einer
               halb abgetippten Excel-Liste. Diese automatische Verarbeitung
               eingehender Belege ist technisch eng verwandt mit der{" "}
-              <Link href="/blog/bestellungen-erfassen-automatisieren">
+              <Link href="/bestellerfassung-automatisieren">
                 automatisierten Erfassung von Bestellungen
               </Link>
               , zeigt aber in die andere Richtung: nicht auf den Kundenauftrag,
