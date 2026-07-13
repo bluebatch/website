@@ -6,7 +6,7 @@ export const BASE_URL = process.env.BASE_URL || "http://localhost:4311";
 export const BASE_ORIGIN = new URL(BASE_URL).origin;
 export const CANONICAL_ORIGIN = "https://bluebatch.io";
 
-const SKIP_EXTENSIONS = /\.(xml|json|ico|png|jpg|svg|css|js|woff|woff2|ttf|webp)$/i;
+const SKIP_EXTENSIONS = /\.(xml|json|ico|png|jpg|svg|css|js|woff|woff2|ttf|webp|pdf)$/i;
 const SKIP_PREFIXES = ["/ingest", "/_next", "/api"];
 const SKIP_HREF_PREFIXES = ["#", "mailto:", "tel:", "javascript:"];
 

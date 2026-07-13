@@ -47,7 +47,7 @@ test("no broken external links", async ({ page }) => {
     const pathname = toVisit.shift()!;
     if (visited.has(pathname)) continue;
     visited.add(pathname);
-    if (/\.(xml|json|ico|png|jpg|svg|css|js|woff|woff2|ttf|webp)$/i.test(pathname)) continue;
+    if (/\.(xml|json|ico|png|jpg|svg|css|js|woff|woff2|ttf|webp|pdf)$/i.test(pathname)) continue;
     if (["/ingest", "/_next", "/api"].some((p) => pathname.startsWith(p))) continue;
 
     try {
