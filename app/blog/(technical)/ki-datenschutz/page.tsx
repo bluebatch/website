@@ -381,8 +381,9 @@ export default function Page() {
             <Typo.H3>Managed Private: Wenn Hosted nicht reicht</Typo.H3>
             <Typo.Paragraph>
               Sobald besonders sensible Daten ins Spiel kommen &mdash; Personalakten, Mandanten- oder
-              Patientendaten, Strategiedokumente &mdash; lohnt der Sprung zu Managed Private. AWS
-              Bedrock in Frankfurt eu-central-1 betreibt heute 31 KI-Modelle, darunter Claude Opus 4.7
+              Patientendaten, Strategiedokumente &mdash; lohnt der Sprung zu Managed Private.
+              {" "}<Link href="/blog/amazon-bedrock">AWS Bedrock</Link>{" "}
+              in Frankfurt eu-central-1 betreibt heute 31 KI-Modelle, darunter Claude Opus 4.7
               seit etwa April 2026, und ist damit die ausgereifteste EU-Option für Anthropic-Modelle.
               Azure OpenAI Service stellt GPT-5 in Sweden Central und West Europe als EU Data Zone
               bereit, in der Daten und Inferenz die EU nicht verlassen. Frankfurt (Germany West

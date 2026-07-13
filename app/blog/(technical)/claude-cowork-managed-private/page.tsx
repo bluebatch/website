@@ -94,7 +94,13 @@ export default function Page() {
               für inhaltliche Filter, Agents für mehrstufige Aufgaben sowie
               Customization-Optionen über Fine-Tuning oder Continued Pretraining.
               Für deutsche Unternehmen ist die Region eu-central-1 in Frankfurt
-              relevant, weil sie die DSGVO-konforme Verarbeitung erlaubt.
+              relevant, weil sie die DSGVO-konforme Verarbeitung erlaubt. Einen
+              Gesamtüberblick über Plattform, Abrechnung und Einstieg gibt der
+              Beitrag{" "}
+              <Link href="/blog/amazon-bedrock">
+                Amazon Bedrock: KI managed und nah an der DSGVO betreiben
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               In diesem Beitrag schauen wir uns an, welche Modelle auf Bedrock
