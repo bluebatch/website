@@ -379,7 +379,14 @@ export default function Page() {
             />
 
             <Typo.Paragraph>
-              Gegenüber der direkten Anbieter-API, etwa von Anthropic oder OpenAI,
+              Gegenüber der direkten Anbieter-API, etwa der{" "}
+              <Link
+                href="/blog/claude-api"
+                className="text-primary-600 hover:underline"
+              >
+                Claude API von Anthropic
+              </Link>{" "}
+              oder der OpenAI-API,
               ist der Vorteil von Bedrock vor allem vertraglicher und organisatorischer
               Natur: ein Vertragspartner, ein AVV, eine EU-Region, eigene
               Schlüssel und die native Einbettung in die AWS-Welt mit

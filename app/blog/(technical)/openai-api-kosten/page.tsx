@@ -495,7 +495,16 @@ export default function Page() {
               <strong>EU-Datenresidenz</strong> über einen eigenen
               Europa-Endpunkt: verfügbar, aber als Enterprise- und
               Advanced-Feature, das man aktiv beantragen und konfigurieren muss,
-              nicht als Standard für jeden Account.
+              nicht als Standard für jeden Account. Zum Vergleich: Wie Anthropic
+              Token-Preise und EU-Datenresidenz bei der eigenen Schnittstelle
+              handhabt, zeigt unser Guide zur{" "}
+              <Link
+                href="/blog/claude-api"
+                className="text-primary-600 hover:underline"
+              >
+                Claude API
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Für den DSGVO-konformen Einsatz müssen Sie in jedem Fall einen
