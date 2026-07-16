@@ -115,9 +115,10 @@ export default class CsvReporter implements Reporter {
       [scoreHeader, ...scoreRows].join("\n") + "\n",
     );
 
-    // Per-test structured detail files
+    // Per-test structured detail files. Zero findings still write a
+    // header-only file — a stale details file from an earlier broken run
+    // would otherwise survive green runs and keep re-poisoning analytics.
     for (const s of scores) {
-      if (s.details.length === 0) continue;
       const slug = s.test.toLowerCase().replace(/\s+/g, "-");
       this.writeStructuredDetail(today, slug, s.test, s.details);
     }
