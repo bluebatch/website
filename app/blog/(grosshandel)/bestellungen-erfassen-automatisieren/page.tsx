@@ -1115,7 +1115,17 @@ export default async function Page({
             <Typo.Paragraph>
               <strong>PDF-Bestellungen per Upload:</strong> Kunden, die
               Bestellungen als PDF hochladen oder per Messenger schicken, könnt
-              ihr über einen zusätzlichen Eingangskanal einbinden.
+              ihr über einen zusätzlichen Eingangskanal einbinden. Und wenn
+              eure eigenen Leute Aufträge unterwegs erfassen sollen, im
+              Außendienst, an der Theke oder im Lager, lohnt sich ein Blick
+              auf die{" "}
+              <Link
+                href="/blog/mobile-auftragsabwicklung"
+                className="text-primary-600 hover:underline"
+              >
+                mobile Auftragsabwicklung
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               <strong>EDI bleibt EDI.</strong> Für Großkunden, die bereits per

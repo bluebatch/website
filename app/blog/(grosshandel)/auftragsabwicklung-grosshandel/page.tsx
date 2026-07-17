@@ -515,11 +515,20 @@ export default function Page() {
             </Typo.Paragraph>
             <Typo.Paragraph>
               Die Pickliste wird aus dem ERP generiert und an das WMS oder
-              direkt an eine mobile Picker-App übergeben. Versandlabel und
-              Versanddokumente erzeugt ein Workflow über die DHL-, GLS- oder
-              Shipcloud-API, je nach Versandregel im Kundenstamm. Mit dem
-              physischen Versand wird die Lieferschein-Datei elektronisch an
-              den Kunden geschickt, bei größeren Kunden über das EDI-DESADV.
+              direkt an eine mobile Picker-App übergeben. Wie die Erfassung
+              per App im Lager, an der Theke und im Außendienst konkret
+              aussieht, zeigt unser Guide zur{" "}
+              <Link
+                href="/blog/mobile-auftragsabwicklung"
+                className="text-primary-600 hover:underline"
+              >
+                mobilen Auftragsabwicklung
+              </Link>
+              . Versandlabel und Versanddokumente erzeugt ein Workflow über
+              die DHL-, GLS- oder Shipcloud-API, je nach Versandregel im
+              Kundenstamm. Mit dem physischen Versand wird die
+              Lieferschein-Datei elektronisch an den Kunden geschickt, bei
+              größeren Kunden über das EDI-DESADV.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Die Rechnung läuft direkt im richtigen Format raus: XRechnung
