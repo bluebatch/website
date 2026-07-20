@@ -571,7 +571,17 @@ export default function Page() {
               Auftrag, Fehlerquote (Reklamationen mit Ursache im
               Erfassungsschritt) und Durchlaufzeit Posteingang bis
               Auftragsbestätigung. Wer diese vier KPIs vor und nach dem PoC
-              misst, hat eine ehrliche Baseline.
+              misst, hat eine ehrliche Baseline. Wie sich diese vier
+              Kennzahlen anschließend systematisch verbessern lassen, mit
+              konkreten Hebeln, Quick-Wins und Change-Management, zeigt unser
+              Leitfaden zur{" "}
+              <Link
+                href="/blog/auftragsabwicklung-optimieren"
+                className="text-primary-600 hover:underline"
+              >
+                Optimierung der Auftragsabwicklung
+              </Link>
+              .
             </Typo.Paragraph>
 
             <BlogImage

@@ -551,7 +551,16 @@ export default function Page() {
               Rechnungsprüfung oder der Stammdaten-Sync: Der erste
               Workflow zeigt innerhalb weniger Wochen, was möglich ist.
               Und jeder weitere Workflow wird einfacher, weil die
-              ERP-Anbindung bereits steht.
+              ERP-Anbindung bereits steht. Welche Kennzahlen ihr vorher und
+              nachher messt, um den Effekt zu belegen, und mit welchen Hebeln
+              ihr die Durchlaufzeit weiter senkt, zeigt unser Leitfaden zur{" "}
+              <Link
+                href="/blog/auftragsabwicklung-optimieren"
+                className="text-primary-600 hover:underline"
+              >
+                Optimierung der Auftragsabwicklung
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Ihr wollt wissen, welcher Workflow bei euch den größten
