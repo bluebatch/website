@@ -313,7 +313,16 @@ export default function Page() {
               >
                 Praxisbeitrag zur automatischen Angebotserstellung
               </Link>{" "}
-              beschrieben.
+              beschrieben. Angebote sind allerdings nur eine Station: Wie
+              Anfrage-Erfassung, Lead-Routing, Nachfassen und CRM-Sync als
+              durchgängige Kette zusammenspielen, zeigt unser Beitrag zur{" "}
+              <Link
+                href="/blog/vertriebsautomatisierung-grosshandel"
+                className="text-primary-600 hover:underline"
+              >
+                Vertriebsautomatisierung im Großhandel
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>Baustein 3: ERP-Integration über Workflow-Plattform</Typo.H3>

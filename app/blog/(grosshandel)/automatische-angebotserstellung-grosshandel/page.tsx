@@ -995,6 +995,20 @@ export default async function Page({
               benachrichtigt. Bei Absage wird der Grund erfasst und fließt ins
               CRM.
             </Typo.Paragraph>
+
+            <Typo.Paragraph>
+              Das Nachfassen ist dabei nur ein Baustein. Wer den kompletten Weg
+              von der Anfrage über Lead-Priorisierung bis zum sauberen
+              CRM-Abschluss automatisieren will, findet die Bausteine und
+              Kennzahlen in unserem Überblick zur{" "}
+              <Link
+                href="/blog/vertriebsautomatisierung-grosshandel"
+                className="text-primary-600 hover:underline"
+              >
+                Vertriebsautomatisierung im Großhandel
+              </Link>
+              .
+            </Typo.Paragraph>
           </div>
 
           <Separator />
