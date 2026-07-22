@@ -274,7 +274,7 @@ export default function Page() {
               Auftragsabwicklung in zwei Jahren neu. Die enge nachgelagerte
               Logik der{" "}
               <Link
-                href="/branchen/grosshandel/3-wege-rechnungspruefung"
+                href="/branchen/grosshandel/workflows/3-wege-rechnungspruefung"
                 className="text-primary-600 hover:underline"
               >
                 3-Wege-Rechnungsprüfung
@@ -493,7 +493,7 @@ export default function Page() {
               akzeptiert wird. Vertiefung zum konkreten Service-Pendant zeigt
               unser Use-Case{" "}
               <Link
-                href="/branchen/grosshandel/auftragserfassung"
+                href="/branchen/grosshandel/workflows/auftragserfassung"
                 className="text-primary-600 hover:underline"
               >
                 Bestellung erfassen

@@ -90,7 +90,7 @@ export default function Page() {
               Alternative zu den etablierten Werkzeugen, oder zahlt man den
               günstigen Preis an anderer Stelle wieder drauf? Wir vergleichen
               Pabbly ehrlich mit Zapier, Make und{" "}
-              <Link href="/tools/n8n" className="text-primary-500 hover:underline">
+              <Link href="/services/tools/n8n" className="text-primary-500 hover:underline">
                 n8n
               </Link>{" "}
               und sagen klar, für welche Situation welches Tool passt.

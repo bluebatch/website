@@ -452,7 +452,7 @@ export default function Page() {
 
         <div className="mt-8 text-center">
           <Link
-            href="/roi-rechner/document?docs=4&before=2880&after=1440&hourly=65&tier=large&setup=25000&maint=2500"
+            href="/branchen/grosshandel/roi-rechner/document?docs=4&before=2880&after=1440&hourly=65&tier=large&setup=25000&maint=2500"
             className="inline-flex items-center gap-2 rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-primary-700"
           >
             Eigenes ROI mit dem Calculator berechnen

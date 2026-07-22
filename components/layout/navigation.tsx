@@ -27,12 +27,6 @@ const uberUnsMenu = {
           description: "Vom ersten Workflow zur AI-Plattform",
           href: "/mit-euch-wachsen",
         },
-        {
-          icon: "/icons/badge-check.svg",
-          title: "Zertifizierungen",
-          description: "Nachweisbare Qualität",
-          href: "/services/zertifizierung",
-        },
       ],
     },
     {
@@ -91,57 +85,41 @@ const servicesMenu = {
           href: "/services/performance-scaling",
         },
         {
-          icon: "/icons/calculator.svg",
-          title: "ROI-Rechner",
-          description: "Lohnt sich Automatisierung?",
-          href: "/roi-rechner",
+          icon: "/icons/badge-check.svg",
+          title: "Zertifizierung",
+          description: "Nachweisbare Qualität",
+          href: "/services/zertifizierung",
         },
       ],
     },
     {
-      title: "Automation",
-      href: "/tools",
+      title: "Tools",
+      href: "/services/tools",
       items: [
         {
           title: "n8n",
           description: "Workflow-Automatisierung",
-          href: "/tools/n8n",
+          href: "/services/tools/n8n",
         },
         {
           title: "Make",
           description: "Visueller Szenario-Builder",
-          href: "/tools/make",
+          href: "/services/tools/make",
         },
         {
           title: "Zapier",
           description: "No-Code Automatisierung",
-          href: "/tools/zapier",
+          href: "/services/tools/zapier",
         },
         {
           title: "Power Automate",
           description: "Microsoft-Automatisierung",
-          href: "/tools/power-automate",
+          href: "/services/tools/power-automate",
         },
         {
-          title: "Alle Automation-Tools",
-          description: "Workato, UiPath, Tray.io u.m.",
-          href: "/tools",
-        },
-      ],
-    },
-    {
-      title: "Großhandel",
-      href: "/tools",
-      items: [
-        {
-          title: "Navision",
-          description: "Microsoft Dynamics ERP",
-          href: "/tools/navision",
-        },
-        {
-          title: "Easybill",
-          description: "Rechnungssoftware",
-          href: "/tools/easybill",
+          title: "Alle Tools",
+          description: "Navision, easybill, Workato u.m.",
+          href: "/services/tools",
         },
       ],
     },
@@ -156,37 +134,28 @@ const branchenMenu = {
       href: "/branchen/grosshandel",
       cases: [
         {
-          title: "KI-Chatbot mit ERP-Anbindung",
-          href: "/branchen/grosshandel/ki-chatbot-grosshandel",
-        },
-        { title: "Auftragserfassung", href: "/branchen/grosshandel/auftragserfassung" },
-        {
-          title: "Bestellabwicklung",
-          href: "/branchen/grosshandel/bestellabwicklung",
+          title: "Private AI",
+          href: "/branchen/grosshandel/private-ai",
         },
         {
-          title: "Lagerverwaltung",
-          href: "/branchen/grosshandel/lagerverwaltung",
+          title: "KI-Assistenten",
+          href: "/branchen/grosshandel/ki-assistenten",
         },
         {
-          title: "Invoice-Bot",
-          href: "/branchen/grosshandel/invoice-bot",
+          title: "KI-Agenten",
+          href: "/branchen/grosshandel/ki-agenten",
         },
         {
-          title: "3-Wege-Rechnungsprüfung",
-          href: "/branchen/grosshandel/3-wege-rechnungspruefung",
+          title: "Chatbots",
+          href: "/branchen/grosshandel/chatbots",
         },
         {
-          title: "Zertifikatsprüfung Lieferanten",
-          href: "/branchen/grosshandel/zertifikatspruefung-lieferanten",
+          title: "Workflows",
+          href: "/branchen/grosshandel/workflows",
         },
         {
-          title: "Angebots-Bot",
-          href: "/branchen/grosshandel/angebots-bot",
-        },
-        {
-          title: "KI-Automation mit easybill",
-          href: "/branchen/grosshandel/ai-automation-with-easybill",
+          title: "ROI-Rechner",
+          href: "/branchen/grosshandel/roi-rechner",
         },
       ],
     },
@@ -210,33 +179,6 @@ const branchenMenu = {
         {
           title: "Workflows",
           href: "/branchen/steuerberater/workflows",
-        },
-      ],
-    },
-    {
-      title: "Personaldienstleister",
-      icon: "/icons/personal-connections.svg",
-      href: "/branchen/personaldienstleister",
-      cases: [
-        {
-          title: "Bewerber-Screening",
-          href: "/branchen/personaldienstleister/bewerber-screening",
-        },
-        {
-          title: "Bewerberkommunikation",
-          href: "/branchen/personaldienstleister/bewerberkommunikation",
-        },
-        {
-          title: "Digitales Onboarding",
-          href: "/branchen/personaldienstleister/digitales-onboarding",
-        },
-        {
-          title: "Compliance-Überwachung",
-          href: "/branchen/personaldienstleister/compliance-ueberwachung",
-        },
-        {
-          title: "Zeiterfassung & Abrechnung",
-          href: "/branchen/personaldienstleister/zeiterfassung-abrechnung",
         },
       ],
     },
@@ -394,12 +336,12 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 </div>
               </div>
 
-              {/* Tools */}
+              {/* Services */}
               <div
                 className="nav-fade-in relative group/services"
                 style={{ animationDelay: "250ms" }}
               >
-                <Link href="/tools" className={triggerClass}>
+                <Link href="/services" className={triggerClass}>
                   <svg
                     className={triggerIconClass}
                     fill="none"
@@ -413,7 +355,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                       d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  Tools
+                  Services
                   <ChevronDown className={triggerIconClass} />
                 </Link>
 
@@ -586,13 +528,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
             </div>
 
             {/* Mobile Menu — client island */}
-            <NavigationMobile
-              branchenTopics={branchenMenu.topics.map((t) => ({
-                title: t.title,
-                icon: t.icon,
-                href: t.href,
-              }))}
-            />
+            <NavigationMobile />
           </div>
         </div>
       </nav>

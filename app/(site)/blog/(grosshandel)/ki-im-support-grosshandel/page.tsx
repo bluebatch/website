@@ -282,7 +282,7 @@ export default function Page() {
             <Typo.Paragraph>
               Wer die{" "}
               <Link
-                href="/branchen/grosshandel/auftragserfassung"
+                href="/branchen/grosshandel/workflows/auftragserfassung"
                 className="text-primary-600 hover:underline"
               >
                 Auftragserfassung

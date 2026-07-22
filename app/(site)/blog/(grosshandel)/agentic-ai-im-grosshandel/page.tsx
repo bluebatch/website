@@ -252,7 +252,7 @@ export default function Page() {
               Fälle, typischerweise unter 10 Prozent aller Bestellungen. Wie
               die{" "}
               <Link
-                href={resolveHref("/branchen/grosshandel/auftragserfassung")}
+                href={resolveHref("/branchen/grosshandel/workflows/auftragserfassung")}
                 className="text-primary-600 hover:underline"
               >
                 automatische Bestellerfassung
@@ -277,7 +277,7 @@ export default function Page() {
               ersten Wochen überdurchschnittlich viel bestellt, empfiehlt der
               Agent ein Rahmenvertragsangebot. Wie ein solcher{" "}
               <Link
-                href="/branchen/grosshandel/angebots-bot"
+                href="/branchen/grosshandel/ki-agenten/angebots-bot"
                 className="text-primary-600 hover:underline"
               >
                 Angebots-Bot im Großhandel

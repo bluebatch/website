@@ -158,7 +158,7 @@ export default function Page() {
             <Typo.Paragraph>
               <strong>Ergebnis:</strong> Bearbeitungszeit von 2-3 Tagen auf
               1-2 Stunden. Details zur Umsetzung zeigen wir auf unserer{" "}
-              <Link href="/branchen/grosshandel/auftragserfassung" className="text-primary-600 hover:underline">
+              <Link href="/branchen/grosshandel/workflows/auftragserfassung" className="text-primary-600 hover:underline">
                 Use-Case-Seite zur Auftragserfassung
               </Link>.
             </Typo.Paragraph>
@@ -192,7 +192,7 @@ export default function Page() {
             <Typo.Paragraph>
               Kein Copy-Paste zwischen Systemen, keine vergessenen
               Benachrichtigungen. Mehr dazu:{" "}
-              <Link href="/branchen/grosshandel/bestellabwicklung" className="text-primary-600 hover:underline">
+              <Link href="/branchen/grosshandel/workflows/bestellabwicklung" className="text-primary-600 hover:underline">
                 Bestellabwicklung automatisieren
               </Link>.
             </Typo.Paragraph>
@@ -218,7 +218,7 @@ export default function Page() {
             <Typo.Paragraph>
               Wer KI dazu schaltet, erkennt Nachfragespitzen, bevor sie
               eintreten. Mehr zum Thema{" "}
-              <Link href="/branchen/grosshandel/lagerverwaltung" className="text-primary-600 hover:underline">
+              <Link href="/branchen/grosshandel/workflows/lagerverwaltung" className="text-primary-600 hover:underline">
                 KI-gestützte Lagerverwaltung
               </Link>.
             </Typo.Paragraph>
@@ -251,7 +251,7 @@ export default function Page() {
             <Typo.Paragraph>
               <strong>Ergebnis:</strong> Von 12 Minuten auf unter 30 Sekunden
               pro Beleg. Alle Details zur{" "}
-              <Link href="/branchen/grosshandel/3-wege-rechnungspruefung" className="text-primary-600 hover:underline">
+              <Link href="/branchen/grosshandel/workflows/3-wege-rechnungspruefung" className="text-primary-600 hover:underline">
                 3-Wege-Rechnungsprüfung
               </Link>.
             </Typo.Paragraph>
@@ -285,7 +285,7 @@ export default function Page() {
             <Typo.Paragraph>
               Wer auch die Rechnungserstellung automatisieren will, findet
               dazu mehr auf unserer Seite zum{" "}
-              <Link href="/branchen/grosshandel/invoice-bot" className="text-primary-600 hover:underline">
+              <Link href="/branchen/grosshandel/ki-agenten/invoice-bot" className="text-primary-600 hover:underline">
                 Invoice-Bot
               </Link>.
             </Typo.Paragraph>
@@ -312,7 +312,7 @@ export default function Page() {
             <Typo.Paragraph>
               Das Ergebnis ist Compliance ohne manuellen Aufwand. Hier geht
               es zur{" "}
-              <Link href="/branchen/grosshandel/zertifikatspruefung-lieferanten" className="text-primary-600 hover:underline">
+              <Link href="/branchen/grosshandel/workflows/zertifikatspruefung-lieferanten" className="text-primary-600 hover:underline">
                 Zertifikatsprüfung im Detail
               </Link>.
             </Typo.Paragraph>
@@ -338,7 +338,7 @@ export default function Page() {
             <Typo.Paragraph>
               Großhändler, die das umsetzen, berichten von einer deutlich
               höheren Abschlussquote bei Erstanfragen. Mehr zum{" "}
-              <Link href="/branchen/grosshandel/angebots-bot" className="text-primary-600 hover:underline">
+              <Link href="/branchen/grosshandel/ki-agenten/angebots-bot" className="text-primary-600 hover:underline">
                 Angebots-Bot
               </Link>.
             </Typo.Paragraph>

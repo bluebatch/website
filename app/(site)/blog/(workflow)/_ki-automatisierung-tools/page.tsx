@@ -89,7 +89,7 @@ export default function Page() {
               DSGVO-Kurzcheck und ein Blick darauf, wie die Klassen in der
               Praxis zusammenspielen. Einzelne Tools im Detail finden Sie in
               unserer{" "}
-              <Link href="/tools" className="text-primary-600 hover:underline">
+              <Link href="/services/tools" className="text-primary-600 hover:underline">
                 Tool-Übersicht
               </Link>
               .

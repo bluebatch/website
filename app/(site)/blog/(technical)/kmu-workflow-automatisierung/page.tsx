@@ -376,7 +376,7 @@ export default function Page() {
               werden zusätzlich erreicht. Verwandter Use Case auf unserer
               Site:{" "}
               <Link
-                href="/branchen/grosshandel/3-wege-rechnungspruefung"
+                href="/branchen/grosshandel/workflows/3-wege-rechnungspruefung"
                 className="text-primary-600 hover:underline"
               >
                 3-Wege-Abgleich für die Rechnungsprüfung

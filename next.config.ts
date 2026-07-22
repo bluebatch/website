@@ -29,15 +29,50 @@ const nextConfig: NextConfig = {
     const { redirects } = collectRewriteRules();
     return [
       ...redirects,
-      // Legacy tool URLs → new flat URLs (route groups removed the middle segment)
+      // Legacy tool URLs → Tools liegen jetzt unter services/
       {
         source: "/tools/automation-tools/:slug*",
-        destination: "/tools/:slug*",
+        destination: "/services/tools/:slug*",
         permanent: true,
       },
       {
         source: "/tools/grosshandel/:slug*",
-        destination: "/tools/:slug*",
+        destination: "/services/tools/:slug*",
+        permanent: true,
+      },
+      // Tools wurde unter Services verschoben
+      {
+        source: "/tools/:path*",
+        destination: "/services/tools/:path*",
+        permanent: true,
+      },
+      // ROI-Rechner gehört zum Großhandel
+      {
+        source: "/roi-rechner/:path*",
+        destination: "/branchen/grosshandel/roi-rechner/:path*",
+        permanent: true,
+      },
+      // PDL-Rückbau: Branche eingestellt
+      {
+        source: "/branchen/personaldienstleister/:path*",
+        destination: "/branchen",
+        permanent: true,
+      },
+      // Großhandel-Detailseiten hängen jetzt unter ki-agenten/chatbots/workflows
+      {
+        source: "/branchen/grosshandel/:slug(angebots-bot|invoice-bot)",
+        destination: "/branchen/grosshandel/ki-agenten/:slug",
+        permanent: true,
+      },
+      {
+        source: "/branchen/grosshandel/ki-chatbot-grosshandel",
+        destination: "/branchen/grosshandel/chatbots/ki-chatbot-grosshandel",
+        permanent: true,
+      },
+      {
+        source:
+          "/branchen/grosshandel/:slug(auftragserfassung|bestellabwicklung|lagerverwaltung|3-wege-rechnungspruefung|zertifikatspruefung-lieferanten|ai-automation-with-easybill)",
+        destination: "/branchen/grosshandel/workflows/:slug",
         permanent: true,
       },
       // Use-Cases wurde zu Branchen umbenannt

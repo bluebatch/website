@@ -977,7 +977,7 @@ export default function Page() {
               . Wer den Belegerkennungs-Use-Case lieber an einen Spezialisten
               vergibt, statt selbst zu bauen, findet im{" "}
               <Link
-                href="/branchen/grosshandel/3-wege-rechnungspruefung"
+                href="/branchen/grosshandel/workflows/3-wege-rechnungspruefung"
                 className="text-primary-600 hover:underline"
               >
                 Service Rechnungsprüfung

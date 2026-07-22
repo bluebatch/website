@@ -222,7 +222,7 @@ export default function Page() {
               KI-gestützte Rechnungserkennung in der Praxis aussieht, findet
               im{" "}
               <Link
-                href="/branchen/grosshandel/invoice-bot"
+                href="/branchen/grosshandel/ki-agenten/invoice-bot"
                 className="text-primary-500 hover:underline"
               >
                 Invoice-Bot für den Großhandel
@@ -489,7 +489,7 @@ export default function Page() {
               40 Prozent über der reinen Stundenrechnung. Wer das Thema
               automatisierte Rechnungsprüfung tiefer durchdenkt, findet im{" "}
               <Link
-                href="/branchen/grosshandel/3-wege-rechnungspruefung"
+                href="/branchen/grosshandel/workflows/3-wege-rechnungspruefung"
                 className="text-primary-500 hover:underline"
               >
                 Drei-Wege-Abgleich

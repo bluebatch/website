@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
-import Link from "next/link";
 import { resolveHref } from "@/lib/get-canonical-path";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
@@ -24,18 +23,17 @@ import InternalLink from "@/components/buttons/internal-link";
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
   legacyRedirects: ["/wholesale-ai"],
-  rewrites: [
-      ],
+  rewrites: [],
 };
 
 export const metadata: Metadata = {
-  title: "Wholesale AI für den Großhandel - Use Cases | Bluebatch",
+  title: "KI für den Großhandel - Private AI, Agenten & Workflows | Bluebatch",
   description:
-    "Wholesale AI: Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung mit KI zu automatisieren.",
+    "KI für den Großhandel: Private AI, KI-Assistenten wie Claude und ChatGPT, KI-Agenten, Chatbots und Workflows für Auftragserfassung, Bestellabwicklung und Rechnungsprüfung.",
   openGraph: {
-    title: "Wholesale AI - Bluebatch Use Cases für den Großhandel",
+    title: "KI für den Großhandel - Bluebatch",
     description:
-      "Wholesale AI: Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung mit KI zu automatisieren.",
+      "KI für den Großhandel: Private AI, KI-Assistenten, KI-Agenten, Chatbots und Workflows für Auftragserfassung, Bestellabwicklung und Rechnungsprüfung.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -50,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wholesale AI - Bluebatch Use Cases für den Großhandel",
+    title: "KI für den Großhandel - Bluebatch",
     description:
-      "Wholesale AI: Wie Bluebatch Großhändlern hilft, Bestellabwicklung und Lagerverwaltung mit KI zu automatisieren.",
+      "KI für den Großhandel: Private AI, KI-Assistenten, KI-Agenten, Chatbots und Workflows für Auftragserfassung, Bestellabwicklung und Rechnungsprüfung.",
     images: ["/images/bluebatch-social-cover.jpg"],
   },
   alternates: {
@@ -60,69 +58,60 @@ export const metadata: Metadata = {
   },
 };
 
-const useCases = [
+const topics = [
   {
-    slug: "ki-chatbot-grosshandel",
-    title: "KI-Chatbot mit ERP-Anbindung",
+    id: "private-ai",
+    href: "/branchen/grosshandel/private-ai",
+    title: "Private AI",
+    linkLabel: "Mehr über Private AI",
     description:
-      "Pilot für deinen Großhandel: Open WebUI als sichere Chat-Oberfläche, fertige Connectoren zu Ebootis, MS Navision und SharePoint. 1.000 € Setup, 50 € pro Monat Betrieb, in 5 Tagen live.",
+      "Produktdaten, Preise und Kundendaten gehören nicht in öffentliche KI-Tools. Mit Private AI läuft die KI in Ihrer eigenen Umgebung: EU-Hosting, kein Training mit Ihren Daten, volle Kontrolle.",
+    image: "/images/machine-learning.jpg",
+  },
+  {
+    id: "ki-assistenten",
+    href: "/branchen/grosshandel/ki-assistenten",
+    title: "KI-Assistenten",
+    linkLabel: "Mehr über KI-Assistenten",
+    description:
+      "Claude, ChatGPT und Copilot als Werkzeug für Ihr Team: Ihre Mitarbeiter arbeiten, die KI hilft — bei Angebotstexten, Produktdaten, Auswertungen und der täglichen Mail-Flut.",
+    image: "/images/business-professional.jpg",
+  },
+  {
+    id: "ki-agenten",
+    href: "/branchen/grosshandel/ki-agenten",
+    title: "KI-Agenten",
+    linkLabel: "Alle KI-Agenten ansehen",
+    description:
+      "KI-Agenten arbeiten wie digitale Mitarbeiter: Der Angebots-Bot beantwortet Anfragen mit fertigen Angeboten, der Invoice-Bot verarbeitet Eingangsrechnungen. Ihr Team gibt frei.",
+    image: "/images/agentic-ai.jpg",
+  },
+  {
+    id: "chatbots",
+    href: "/branchen/grosshandel/chatbots",
+    title: "Chatbots",
+    linkLabel: "Mehr über KI-Chatbots",
+    description:
+      "KI-Chatbots mit ERP-Anbindung beantworten Kunden- und Mitarbeiterfragen direkt aus Ihren Systemen: Bestände, Preise, Lieferzeiten — rund um die Uhr, ohne Warteschleife.",
     image: "/images/ki-chatbot-grosshandel/hero-chatbot.png",
   },
   {
-    slug: "auftragserfassung",
-    title: "Auftragserfassung",
+    id: "workflows",
+    href: "/branchen/grosshandel/workflows",
+    title: "Workflows",
+    linkLabel: "Alle Workflows ansehen",
     description:
-      "Bestellungen aus E-Mails, PDFs, Faxen und Portalen automatisch erfassen. Unsere KI für den Großhandel extrahiert alle Daten, validiert gegen ERP und Lager - von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.",
-    image: "/images/auftragserfassung/hero.png",
+      "Fest automatisierte Prozesse: Auftragserfassung, Bestellabwicklung, Lagerverwaltung, 3-Wege-Rechnungsprüfung, Zertifikatsprüfung und easybill-Automation — zuverlässig und nachvollziehbar.",
+    image: "/images/digital-workflow.jpg",
   },
   {
-    slug: "bestellabwicklung",
-    title: "AI im Wholesale: Bestellabwicklung",
+    id: "roi-rechner",
+    href: "/branchen/grosshandel/roi-rechner",
+    title: "ROI-Rechner",
+    linkLabel: "Ersparnis berechnen",
     description:
-      "Von der Bestellung zur Auslieferung - vollautomatisch. KI für den Großhandel orchestriert Validierung, Lager-Routing, Kommissionierung und Versand durch n8n. 80-90% schnellere Bearbeitung im Lead to Cash Prozess.",
-    image: "/images/order-processing.jpg",
-  },
-  {
-    slug: "lagerverwaltung",
-    title: "Lagerverwaltung",
-    description:
-      "Echtzeit-Bestandssynchronisation über alle Lager und Kanäle. AI im Wholesale erstellt Bedarfsprognosen und löst automatisch Nachbestellungen aus. Nie wieder Fehlbestand oder Überbestand.",
-    image: "/images/warehouse-software.jpg",
-  },
-  {
-    slug: "invoice-bot",
-    title: "Invoice-Bot",
-    description:
-      "Eingangsrechnungen automatisch erfassen, prüfen und zur Freigabe weiterleiten. KI für den Großhandel extrahiert Beträge, Steuer und Metadaten - 80% weniger manueller Aufwand.",
-    image: "/images/invoice/invoice-end-to-end-process.jpg",
-  },
-  {
-    slug: "3-wege-rechnungspruefung",
-    title: "3-Wege-Rechnungsprüfung",
-    description:
-      "Automatischer Abgleich von Bestellung, Wareneingang und Rechnung. Toleranzregeln filtern relevante Abweichungen, Exception Routing bringt Ausnahmen zu den richtigen Freigebern.",
-    image: "/images/invoice-verification.jpg",
-  },
-  {
-    slug: "zertifikatspruefung-lieferanten",
-    title: "Zertifikatsprüfung Lieferanten",
-    description:
-      "ISO, FSSC, Bio, HACCP - alle Zertifikate zentral verwaltet. n8n überwacht Ablaufdaten, sendet Erinnerungen und validiert gegen Akkreditierungsstellen.",
-    image: "/images/certificate-check.jpg",
-  },
-  {
-    slug: "angebots-bot",
-    title: "Angebots-Bot",
-    description:
-      "Von der Kundenanfrage zum professionellen Angebot in Minuten. AI im Wholesale übernimmt Preisabfrage, PDF-Generierung und Follow-up - 21x höhere Qualifizierungsrate.",
-    image: "/images/pricing-calculator.jpg",
-  },
-  {
-    slug: "ai-automation-with-easybill",
-    title: "KI-Automatisierung mit easybill",
-    description:
-      "Rechnungen, Angebote und Kundendaten in easybill vollautomatisch verwalten. Von der Dokumentenerstellung über ZUGFeRD/XRechnung bis zum Mahnwesen - 80% weniger manuelle Buchhaltungsarbeit.",
-    image: "/images/process-automation.jpg",
+      "Lohnt sich Automatisierung für Ihren Betrieb? Rechnen Sie in 2 Minuten aus, was Dokumentenverarbeitung, Service-Anfragen und Kampagnen-Automatisierung bei Ihnen einsparen.",
+    image: "/images/cost-savings.jpg",
   },
 ];
 
@@ -138,29 +127,26 @@ export default async function Page({
       <ContentWrapper isFirstSection>
         <Hero2Column>
           <Hero2ColumnTextColumn>
-            <Hero2ColumnPreHeadline>Branchenlösungen</Hero2ColumnPreHeadline>
+            <Hero2ColumnPreHeadline>Branchen</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Wholesale AI: Automatisierung für den Großhandel
+              KI für den Großhandel: Automatisierung, die sich rechnet
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription>
-              Mit Wholesale AI automatisieren wir die repetitiven Prozesse, die
-              Ihr Team ausbremsen - vom Lead to Cash Prozess über die
-              Auftragserfassung bis zur{" "}
-              <Link href={resolveHref("/branchen/grosshandel/3-wege-rechnungspruefung")} className="text-primary-600 hover:underline">
-                Rechnungsprüfung
-              </Link>. Weniger manuelle
-              Arbeit, mehr Zeit für strategische Aufgaben.
+              Von der Auftragserfassung über die Bestellabwicklung bis zur
+              Rechnungsprüfung - wir automatisieren die repetitiven Prozesse in
+              Ihrem Betrieb. Weniger manuelle Arbeit, schnellere Durchlaufzeiten.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
-              8 erprobte KI-Lösungen für den Großhandel
+              Private AI, KI-Assistenten, KI-Agenten, Chatbots und Workflows
+              für den Großhandel
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/wholesale-planning.jpg"
+              src="/images/digital-marketplace.jpg"
               type="image"
             />
           </Hero2ColumnMediaColumn>
@@ -172,24 +158,23 @@ export default async function Page({
         <Customer />
       </ContentWrapper>
 
-      {/* Use Cases with alternating layout — Mobile: Headline → Text → Link → Image (50% centred) */}
-      {useCases.map((useCase, index) => {
+      {/* Die Unter-Hubs: Private AI, KI-Assistenten, KI-Agenten, Chatbots, Workflows + ROI */}
+      {topics.map((topic, index) => {
         const imageRight = index % 2 === 0;
         return (
           <ContentWrapper
-            key={useCase.slug}
+            key={topic.id}
+            id={topic.id}
             colorScheme={index % 2 === 1 ? "gray-light" : undefined}
           >
             <SimpleGrid cols={2} className="items-center gap-8 md:gap-12">
               <div className={imageRight ? "" : "md:order-2"}>
-                <Typo.H2 className="mb-4">{useCase.title}</Typo.H2>
+                <Typo.H2 className="mb-4">{topic.title}</Typo.H2>
                 <Typo.Paragraph className="text-gray-600 mb-6">
-                  {useCase.description}
+                  {topic.description}
                 </Typo.Paragraph>
-                <InternalLink
-                  href={resolveHref(`/branchen/grosshandel/${useCase.slug}`)}
-                >
-                  {useCase.title}
+                <InternalLink href={resolveHref(topic.href)}>
+                  {topic.linkLabel}
                 </InternalLink>
               </div>
               <div
@@ -198,8 +183,8 @@ export default async function Page({
                 }`}
               >
                 <Image
-                  src={useCase.image}
-                  alt={useCase.title}
+                  src={topic.image}
+                  alt={topic.title}
                   fill
                   className="object-cover rounded-lg shadow-lg"
                 />

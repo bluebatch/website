@@ -186,7 +186,7 @@ export default function Page() {
               Bestellprognosen, Engpässe früher zu erkennen, und im Großhandel
               hängt das eng mit der{" "}
               <Link
-                href="/branchen/grosshandel/auftragserfassung"
+                href="/branchen/grosshandel/workflows/auftragserfassung"
                 className="text-primary-600 hover:underline"
               >
                 automatischen Auftragserfassung

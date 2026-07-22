@@ -245,7 +245,7 @@ export default function Page() {
               Benachrichtigung an den Vertrieb. Details zur automatischen
               Erfassung von Bestellungen findet ihr auf unserer{" "}
               <Link
-                href="/branchen/grosshandel/auftragserfassung"
+                href="/branchen/grosshandel/workflows/auftragserfassung"
                 className="text-primary-600 hover:underline"
               >
                 Use-Case-Seite zur Bestellerfassung
@@ -281,7 +281,7 @@ export default function Page() {
               Sekunden. Die Fehlerquote geht gegen null. Alle Details
               zur Umsetzung findet ihr auf unserer Seite zur{" "}
               <Link
-                href="/branchen/grosshandel/3-wege-rechnungspruefung"
+                href="/branchen/grosshandel/workflows/3-wege-rechnungspruefung"
                 className="text-primary-600 hover:underline"
               >
                 automatischen Rechnungsprüfung

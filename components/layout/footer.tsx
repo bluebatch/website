@@ -4,31 +4,26 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
-  const servicesMenu = [
-    { label: "KI-Implementierung", href: "/services" },
-    { label: "n8n Hosting", href: "/services/n8n-hosting" },
-    { label: "Workflow-Wartung", href: "/services/workflow-wartung" },
-    { label: "Custom Nodes", href: "/services/custom-nodes" },
-    { label: "Zertifizierungen", href: "/services/zertifizierung" },
-    { label: "ROI-Rechner", href: "/roi-rechner" },
-  ];
-
-  const productMenu = [
-    { label: "Grosshandel", href: "/branchen/grosshandel" },
+  // Footer spiegelt die Pillars, keine Einzelseiten (site-structure.md)
+  const branchenMenu = [
+    { label: "Großhandel", href: "/branchen/grosshandel" },
     { label: "Steuerberater", href: "/branchen/steuerberater" },
-    { label: "PDL", href: "/branchen/personaldienstleister" },
   ];
 
-  const toolsMenu = [
-    { label: "n8n", href: "/tools/n8n" },
-    { label: "Navision", href: "/tools/navision" },
-    { label: "Easybill", href: "/tools/easybill" },
-    { label: "Alle Tools", href: "/tools" },
+  const wissenMenu = [
+    { label: "Services", href: "/services" },
+    { label: "Tools", href: "/services/tools" },
+    { label: "Blog", href: "/blog" },
+  ];
+
+  const unternehmenMenu = [
+    { label: "Mit euch wachsen", href: "/mit-euch-wachsen" },
+    { label: "Das Team", href: "/team" },
+    { label: "Standorte", href: "/standorte" },
+    { label: "Kontakt", href: "/contact" },
   ];
 
   const legalMenu = [
-    { label: "Kontakt", href: "/contact" },
-    { label: "Das Team", href: "/team" },
     { label: "Impressum", href: "/impressum" },
     { label: "Datenschutz", href: "/datenschutz" },
   ];
@@ -125,51 +120,35 @@ export default function Footer() {
 
           {/* Right Column - Menus */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-            {/* Services Menu */}
-            <div>
-              <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-                Services
-              </h3>
-              <ul className="space-y-3">
-                {servicesMenu.map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      href={item.href}
-                      className="hover:text-secondary-500 transition-colors text-sm"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Tools Menu */}
-            <div>
-              <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-                Tools
-              </h3>
-              <ul className="space-y-3">
-                {toolsMenu.map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      href={item.href}
-                      className="hover:text-secondary-500 transition-colors text-sm"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             {/* Branchen Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
                 Branchen
               </h3>
               <ul className="space-y-3">
-                {productMenu.map((item, index) => (
+                {branchenMenu.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="hover:text-secondary-500 transition-colors text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <span className="text-sm text-gray-500">Anwälte (bald)</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Services & Wissen Menu */}
+            <div>
+              <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
+                Services & Wissen
+              </h3>
+              <ul className="space-y-3">
+                {wissenMenu.map((item, index) => (
                   <li key={index}>
                     <Link
                       href={item.href}
@@ -182,10 +161,29 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Ressourcen Menu */}
+            {/* Unternehmen Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-                Ressourcen
+                Unternehmen
+              </h3>
+              <ul className="space-y-3">
+                {unternehmenMenu.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="hover:text-secondary-500 transition-colors text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Rechtliches Menu */}
+            <div>
+              <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
+                Rechtliches
               </h3>
               <ul className="space-y-3">
                 {legalMenu.map((item, index) => (

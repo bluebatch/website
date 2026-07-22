@@ -100,25 +100,25 @@ const techStack = [
     name: "TypeScript",
     description:
       "Type-safe Development für robuste und wartbare Nodes. Bessere IDE-Unterstützung und Fehlervermeidung.",
-    imageSrc: "/tools/Typescript.png",
+    imageSrc: "/services/tools/Typescript.png",
   },
   {
     name: "Node.js",
     description:
       "Asynchrone I/O für effiziente API-Kommunikation. Zugriff auf das gesamte npm-Ökosystem.",
-    imageSrc: "/tools/nodejs.png",
+    imageSrc: "/services/tools/nodejs.png",
   },
   {
     name: "n8n SDK",
     description:
       "Offizielles Node SDK von n8n für schnelle Entwicklung. Declarative und Programmatic Styles.",
-    imageSrc: "/tools/N8n-logo.png",
+    imageSrc: "/services/tools/N8n-logo.png",
   },
   {
     name: "CI/CD",
     description:
       "Automated Testing und Deployment-Pipelines. GitHub Actions für kontinuierliche Integration.",
-    imageSrc: "/tools/cicd.png",
+    imageSrc: "/services/tools/cicd.png",
   },
 ];
 

@@ -49,12 +49,6 @@ const topics = [
     description:
       "Dokumentenverarbeitung und Mandantenkommunikation digitalisieren - für mehr Zeit und zufriedene Mandanten.",
   },
-  {
-    href: "/branchen/personaldienstleister",
-    title: "Personaldienstleister",
-    description:
-      "Bewerber-Screening, Onboarding und Compliance automatisieren - für schnellere Vermittlungen und null Bußgeldrisiko.",
-  },
 ];
 
 export default function Page() {

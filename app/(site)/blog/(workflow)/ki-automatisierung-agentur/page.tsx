@@ -223,14 +223,14 @@ export default function Page() {
               halben Jahr stillschweigend bricht. Den größten Hebel haben für
               viele Großhändler die dokumentenlastigen Abläufe, etwa das{" "}
               <Link
-                href="/branchen/grosshandel/invoice-bot"
+                href="/branchen/grosshandel/ki-agenten/invoice-bot"
                 className="text-primary-600 hover:underline"
               >
                 automatisierte Lesen von Eingangsrechnungen
               </Link>{" "}
               oder die{" "}
               <Link
-                href="/branchen/grosshandel/auftragserfassung"
+                href="/branchen/grosshandel/workflows/auftragserfassung"
                 className="text-primary-600 hover:underline"
               >
                 Auftragserfassung aus E-Mail und Fax

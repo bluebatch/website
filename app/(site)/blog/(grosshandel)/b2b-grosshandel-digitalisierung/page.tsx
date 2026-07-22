@@ -153,7 +153,7 @@ export default function Page() {
             <Typo.Paragraph>
               Der Shop ist nur der sichtbare Teil. Dahinter müssen
               Bestellungen, Aufträge, Lieferpapiere und{" "}
-              <Link href={resolveHref("/branchen/grosshandel/3-wege-rechnungspruefung")} className="text-primary-600 hover:underline">
+              <Link href={resolveHref("/branchen/grosshandel/workflows/3-wege-rechnungspruefung")} className="text-primary-600 hover:underline">
                 Rechnungen
               </Link>{" "}
               ohne manuelle Zwischenschritte durchlaufen. Viele B2B-Kunden
@@ -164,7 +164,7 @@ export default function Page() {
             <Typo.Paragraph>
               Genau hier liegt einer der größten Hebel. Wer die{" "}
               <Link
-                href={resolveHref("/branchen/grosshandel/auftragserfassung")}
+                href={resolveHref("/branchen/grosshandel/workflows/auftragserfassung")}
                 className="text-primary-600 hover:underline"
               >
                 Auftragserfassung automatisiert

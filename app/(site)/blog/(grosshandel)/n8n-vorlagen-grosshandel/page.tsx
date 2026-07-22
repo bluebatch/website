@@ -320,7 +320,7 @@ export default function Page() {
               <strong>Zeitgewinn:</strong> Von 12 Minuten auf 30 Sekunden pro
               Beleg. Alle Details auf unserer Seite zur{" "}
               <Link
-                href="/branchen/grosshandel/3-wege-rechnungspruefung"
+                href="/branchen/grosshandel/workflows/3-wege-rechnungspruefung"
                 className="text-primary-600 hover:underline"
               >
                 3-Wege-Rechnungsprüfung

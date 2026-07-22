@@ -1,0 +1,373 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
+import type { PageConfig } from "@/lib/get-subpages";
+import BackgroundHero from "@/components/heroes/background-hero";
+import ContactButton from "@/components/buttons/contact-button";
+import SimpleGrid from "@/components/layout/simple-grid";
+import SimpleCard from "@/components/cards/simple-card";
+import CardShowcase from "@/components/cards/card-showcase";
+import TimelineAsSteps, {
+  TimelineAsStepsStep,
+} from "@/components/ui/timeline-as-steps";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import { FaqContainer } from "@/components/ui/faqs";
+import IntroBox from "@/components/ui/intro-box";
+import Customer from "@/components/sections/customer/customer";
+
+export const pageConfig: PageConfig = {
+  title: "Zertifikatsprüfung Lieferanten",
+  description:
+    "Lieferantenzertifikate automatisch prüfen, ablaufende Zertifikate erkennen und Erinnerungen senden.",
+};
+
+export const metadata: Metadata = {
+  title: "Zertifikatsprüfung Lieferanten - Großhandel | Bluebatch",
+  description:
+    "Wie Bluebatch Großhändlern hilft, Lieferantenzertifikate automatisch zu prüfen und Compliance sicherzustellen.",
+  openGraph: {
+    title: "Zertifikatsprüfung Lieferanten - Großhandel | Bluebatch",
+    description:
+      "ISO, FSSC, Bio, HACCP - alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Zertifikatsprüfung",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zertifikatsprüfung Lieferanten - Großhandel | Bluebatch",
+    description:
+      "ISO, FSSC, Bio, HACCP - alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/branchen/grosshandel/workflows/zertifikatspruefung-lieferanten",
+  },
+};
+
+const stats = [
+  { value: 99, suffix: "%", label: "Compliance-Quote" },
+  { value: 90, suffix: "%", label: "Weniger Audit-Zeit" },
+  { value: 60, suffix: "h", label: "Monatlich gespart" },
+];
+
+export default function Page() {
+  return (
+    <>
+      <ContentWrapper isFirstSection noPadding>
+        <BackgroundHero
+          imageSrc="/images/certificate-check.jpg"
+          overlayOpacity={0.8}
+          opacityBackground="white"
+        >
+          <BackgroundHero.TopLabel>Zertifikatsprüfung</BackgroundHero.TopLabel>
+          <BackgroundHero.Headline>
+            Lieferanten&shy;zertifikate{" "}
+            <BackgroundHero.Highlight>automatisch</BackgroundHero.Highlight>
+            <br />
+            prüfen und überwachen
+          </BackgroundHero.Headline>
+          <BackgroundHero.Description>
+            ISO, FSSC, Bio, HACCP - alle Zertifikate zentral verwaltet. n8n
+            überwacht Ablaufdaten, sendet Erinnerungen und validiert gegen
+            Akkreditierungsstellen. Nie wieder abgelaufene Zertifikate
+            übersehen.
+          </BackgroundHero.Description>
+          <BackgroundHero.CallToAction>
+            <ContactButton icon="chat">Compliance-Check anfragen</ContactButton>
+          </BackgroundHero.CallToAction>
+          <BackgroundHero.Stats>
+            {stats.map((stat, index) => (
+              <BackgroundHero.Stat
+                key={stat.label}
+                value={stat.value}
+                suffix={stat.suffix}
+                label={stat.label}
+                index={index}
+              />
+            ))}
+          </BackgroundHero.Stats>
+        </BackgroundHero>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.PreHeadline>Das Risiko</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Compliance-Lücken kosten mehr als nur Geld
+          </IntroBox.Headline>
+        </IntroBox>
+
+        <SimpleGrid cols={2} className="mt-10 gap-8">
+          <SimpleCard variant="danger">
+            <Typo.H3 className="text-red-700">Audit-Findings</Typo.H3>
+            <Typo.Paragraph className="text-gray-600 mt-2">
+              Bei 75-85% Compliance-Quote bei manueller Verwaltung werden bei
+              jedem Audit Lücken gefunden. Abgelaufene Zertifikate, fehlende
+              Dokumentation, nicht nachvollziehbare Prozesse.
+            </Typo.Paragraph>
+            <SimpleCard.Footer>
+              <span className="text-lg font-bold text-red-700">
+                10.000€ - 100.000€ pro Beanstandung
+              </span>
+            </SimpleCard.Footer>
+          </SimpleCard>
+
+          <SimpleCard variant="danger">
+            <Typo.H3 className="text-red-700">Reputationsschaden</Typo.H3>
+            <Typo.Paragraph className="text-gray-600 mt-2">
+              Ein Produktrückruf wegen eines nicht-zertifizierten Lieferanten
+              kann existenzbedrohend sein. FDA Warning Letters,
+              Kundenabwanderung, Medienberichterstattung.
+            </Typo.Paragraph>
+            <SimpleCard.Footer>
+              <span className="text-lg font-bold text-red-700">
+                500.000 € durchschnittlicher Rückruf-Schaden
+              </span>
+            </SimpleCard.Footer>
+          </SimpleCard>
+        </SimpleGrid>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="dark">
+        <IntroBox dark>
+          <IntroBox.PreHeadline>Der Workflow</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            So automatisieren wir die Zertifikatsprüfung
+          </IntroBox.Headline>
+        </IntroBox>
+
+        <CardShowcase>
+          <CardShowcase.Item size="small">
+            <CardShowcase.Image
+              src="/images/data-quality.jpg"
+              alt="Zertifikatserfassung"
+            />
+            <CardShowcase.Content>
+              <CardShowcase.Title>
+                1. Erfassen und Extrahieren
+              </CardShowcase.Title>
+              <CardShowcase.Description>
+                Zertifikate per Upload, E-Mail oder Self-Service Portal. KI
+                extrahiert automatisch Zertifikatsnummer, Aussteller,
+                Gültigkeitsdatum und Scope.
+              </CardShowcase.Description>
+            </CardShowcase.Content>
+          </CardShowcase.Item>
+
+          <CardShowcase.Item size="large">
+            <CardShowcase.Image
+              src="/images/compliance-signs.jpg"
+              alt="Validierung"
+            />
+            <CardShowcase.Content>
+              <CardShowcase.Title>2. Echtheit validieren</CardShowcase.Title>
+              <CardShowcase.Description>
+                Automatischer Abgleich gegen Akkreditierungsstellen-Datenbanken
+                (IAF CertSearch, ISO.org). Gefälschte Zertifikate sofort
+                erkannt.
+              </CardShowcase.Description>
+            </CardShowcase.Content>
+          </CardShowcase.Item>
+
+          <CardShowcase.Item size="large">
+            <CardShowcase.Image
+              src="/images/technology-integration.jpg"
+              alt="Ablaufüberwachung"
+            />
+            <CardShowcase.Content>
+              <CardShowcase.Title>3. Proaktiv erinnern</CardShowcase.Title>
+              <CardShowcase.Description>
+                Gestaffelte Erinnerungen bei 60, 30, 15, 7, 1 Tagen vor Ablauf.
+                Automatische Benachrichtigung an Lieferant und Einkauf.
+                Eskalation bei Nichtreaktion bis zur automatischen ERP-Sperre.
+              </CardShowcase.Description>
+            </CardShowcase.Content>
+          </CardShowcase.Item>
+
+          <CardShowcase.Item size="small">
+            <CardShowcase.Image
+              src="/images/strategic-thinking.jpg"
+              alt="Dashboard"
+            />
+            <CardShowcase.Content>
+              <CardShowcase.Title>4. Dashboard und Reports</CardShowcase.Title>
+              <CardShowcase.Description>
+                Echtzeit-Dashboard: % compliant, ablaufend, überfällig.
+                Audit-Reports per Knopfdruck. Lieferanten-Compliance-Historie
+                für lückenlose Nachverfolgung.
+              </CardShowcase.Description>
+            </CardShowcase.Content>
+          </CardShowcase.Item>
+        </CardShowcase>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <SimpleGrid cols={2} className="items-center gap-12">
+          <div>
+            <IntroBox textCentered={false}>
+              <IntroBox.PreHeadline>Eskalationsprotokoll</IntroBox.PreHeadline>
+              <IntroBox.Headline>
+                Automatische Eskalation bei Ablauf
+              </IntroBox.Headline>
+            </IntroBox>
+
+            <TimelineAsSteps>
+              <TimelineAsStepsStep value={60}>
+                <Typo.H3 className="mt-2!">60 Tage vorher</Typo.H3>
+                <Typo.Paragraph>
+                  Erste freundliche Erinnerung an den Lieferanten per E-Mail
+                </Typo.Paragraph>
+              </TimelineAsStepsStep>
+              <TimelineAsStepsStep value={30}>
+                <Typo.H3 className="mt-2!">30 Tage vorher</Typo.H3>
+                <Typo.Paragraph>
+                  Eskalation an Procurement Manager, Lieferant erhält 2.
+                  Erinnerung
+                </Typo.Paragraph>
+              </TimelineAsStepsStep>
+              <TimelineAsStepsStep value={7}>
+                <Typo.H3 className="mt-2!">7 Tage vorher</Typo.H3>
+                <Typo.Paragraph>
+                  Kritischer Alert, PO-Sperre wird vorbereitet, Management
+                  informiert
+                </Typo.Paragraph>
+              </TimelineAsStepsStep>
+              <TimelineAsStepsStep value={0}>
+                <Typo.H3 className="mt-2!">Ablaufdatum</Typo.H3>
+                <Typo.Paragraph>
+                  Automatische Lieferantensperre im ERP, Incident-Report
+                  generiert
+                </Typo.Paragraph>
+              </TimelineAsStepsStep>
+            </TimelineAsSteps>
+          </div>
+          <div className="relative aspect-square">
+            <Image
+              src="/images/opportunity-doors.jpg"
+              alt="Eskalationsworkflow"
+              fill
+              className="object-cover rounded-lg shadow-lg"
+            />
+          </div>
+        </SimpleGrid>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray">
+        <IntroBox>
+          <IntroBox.PreHeadline>ROI</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Wert für einen Großhändler mit 50-200 Lieferanten
+          </IntroBox.Headline>
+        </IntroBox>
+
+        <SimpleGrid cols={3} className="mt-10">
+          <SimpleCard>
+            <SimpleCard.Icon
+              src="/icons/shield-check.svg"
+              alt="Wert"
+              color="primary-gradient"
+            />
+            <Typo.H3>95.000-645.000 €</Typo.H3>
+            <Typo.Paragraph>
+              Jährlicher Wert durch vermiedene Strafen, Zeitersparnis,
+              Audit-Effizienz und Risikoreduktion
+            </Typo.Paragraph>
+          </SimpleCard>
+          <SimpleCard>
+            <SimpleCard.Icon
+              src="/icons/clock.svg"
+              alt="ROI"
+              color="primary-gradient"
+            />
+            <Typo.H3>3-6 Monate ROI</Typo.H3>
+            <Typo.Paragraph>
+              Schnelle Amortisation durch sofortige Zeitersparnis und
+              Risikoreduktion. Ab dann reine Einsparungen.
+            </Typo.Paragraph>
+          </SimpleCard>
+          <SimpleCard>
+            <SimpleCard.Icon
+              src="/icons/check-circle.svg"
+              alt="Null Beanstandungen"
+              color="primary-gradient"
+            />
+            <Typo.H3>Null Audit-Beanstandungen</Typo.H3>
+            <Typo.Paragraph>
+              Keine Beanstandungen mehr bei internen oder externen Audits wegen
+              Lieferanten-Compliance
+            </Typo.Paragraph>
+          </SimpleCard>
+        </SimpleGrid>
+      </ContentWrapper>
+
+      {/* Client Logos */}
+      <ContentWrapper noPadding bodyWidth="full">
+        <Customer />
+      </ContentWrapper>
+
+      {/* Verwandte Lösungen */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Verwandte Lösungen</IntroBox.Headline>
+        </IntroBox>
+        <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
+          Entdecken Sie{" "}
+          <Link href="/branchen/grosshandel" className="text-primary-500 hover:underline">
+            alle Großhandel Use Cases
+          </Link>
+          , oder erfahren Sie mehr über{" "}
+          <Link href="/branchen/grosshandel/workflows/3-wege-rechnungspruefung" className="text-primary-500 hover:underline">
+            automatische Rechnungsprüfung
+          </Link>
+          .
+        </Typo.Paragraph>
+      </ContentWrapper>
+
+      <ContentWrapper noPadding bodyWidth="full">
+        <ConsultationCtaDefault />
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <FaqContainer
+          faqs={[
+            {
+              question:
+                "Wie werden internationale Zertifikate mit unterschiedlichen Formaten verarbeitet?",
+              answer:
+                "Unsere KI-gestützte Dokumentenverarbeitung extrahiert intelligent Schlüsseldaten unabhängig vom Format. OCR-Technologie verarbeitet auch gescannte Dokumente. Mehrsprachige Unterstützung erkennt und übersetzt Zertifikatsinhalte. Bei Edge Cases mit niedrigem Confidence Score wird das Procurement-Team zur manuellen Überprüfung benachrichtigt.",
+            },
+            {
+              question:
+                "Was passiert, wenn ein Lieferant sein Zertifikat nicht rechtzeitig erneuert?",
+              answer:
+                "Das System implementiert ein gestaffeltes Eskalationsprotokoll: 60/30/15/7/1 Tage vorher werden Erinnerungen gesendet mit zunehmender Dringlichkeit. Bei Ablauf ohne Erneuerung wird der Lieferantenstatus automatisch auf Non-Compliant gesetzt, neue POs werden im ERP blockiert und ein Incident-Report für das Compliance-Team generiert.",
+            },
+            {
+              question:
+                "Wie wird die Echtheit der hochgeladenen Zertifikate sichergestellt?",
+              answer:
+                "Mehrstufige Validierung: Automatischer Abgleich der Zertifikatsnummer gegen Datenbanken der Akkreditierungsstellen (IAF CertSearch, ISO.org). Prüfung des Akkreditierungsstatus des Ausstellers. KI-Analyse auf Manipulationen. Plausibilitätsprüfung. Bei Red Flags wird das Zertifikat für manuelle Überprüfung geflaggt.",
+            },
+            {
+              question:
+                "Kann das System mit unserem ERP und Einkaufssoftware integrieren?",
+              answer:
+                "Ja, n8n unterstützt Integration mit allen gängigen ERP-Systemen (SAP, Oracle, Dynamics 365) und Procurement-Plattformen (Coupa, Ariba, Procurify) über REST APIs, Webhooks oder Datenbank-Verbindungen. Bidirektionaler Datenaustausch: Lieferanten-Stammdaten fließen ein, Compliance-Status wird zurückgeschrieben inkl. automatischer Sperren bei Non-Compliance.",
+            },
+          ]}
+        />
+      </ContentWrapper>
+    </>
+  );
+}

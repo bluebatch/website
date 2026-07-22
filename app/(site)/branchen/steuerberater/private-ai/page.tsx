@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <ContentWrapper isFirstSection>
       <div className="text-center max-w-3xl mx-auto">
-        <Typo.H1>Private AI</Typo.H1>
+        <Typo.H1>Private AI für Steuerberater</Typo.H1>
         <Typo.Paragraph className="text-gray-600 mt-4 mb-8">
           Mandantendaten gehören nicht in öffentliche KI-Tools. Mit Private AI
           nutzt Ihre Kanzlei moderne Sprachmodelle in einer geschützten

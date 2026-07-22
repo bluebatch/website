@@ -5,7 +5,7 @@ import { crawlSite, BASE_URL } from "../helpers/crawl";
 const KNOWN_REDIRECT_PREFIXES = [
   "/standorte/",
   "/branchen/",
-  "/tools/",
+  "/services/tools/",
   "/blog/",
 ];
 

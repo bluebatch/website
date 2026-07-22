@@ -312,7 +312,7 @@ export default function Page() {
               teure Output klein bleibt. Genau hier liegt für viele
               Großhändler der größte ungehobene Hebel, etwa beim{" "}
               <Link
-                href="/branchen/grosshandel/invoice-bot"
+                href="/branchen/grosshandel/ki-agenten/invoice-bot"
                 className="text-primary-600 hover:underline"
               >
                 automatisierten Lesen von Eingangsrechnungen

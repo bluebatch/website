@@ -510,7 +510,7 @@ export default function Page() {
         </IntroBox>
         <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
           Erfahren Sie mehr über unsere{" "}
-          <Link href="/branchen/personaldienstleister" className="text-primary-500 hover:underline">Automatisierungslösungen für Personaldienstleister</Link>, oder sehen Sie sich unsere{" "}
+          <Link href="/branchen" className="text-primary-500 hover:underline">Automatisierungslösungen für Personaldienstleister</Link>, oder sehen Sie sich unsere{" "}
           <Link href="/services" className="text-primary-500 hover:underline">Implementierungsservices</Link> an.
         </Typo.Paragraph>
       </ContentWrapper>

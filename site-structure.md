@@ -1,7 +1,7 @@
 # Site-Struktur — Zielbild (Draft)
 
-> Stand 2026-07-22. Dies ist das **Zielbild**, nicht der Ist-Zustand — wir
-> bauen erst die Struktur hier fertig, dann ziehen wir den Code nach.
+> Stand 2026-07-22. Die **Struktur ist umgesetzt** (Branch
+> `refactor/site-structure`); Seiten mit `(geplant)` werden stückweise gebaut.
 > Struktur = native Folder-/URL-Struktur. Links der Pfad, rechts Typ + Inhalt.
 > Marker: ohne Marker = existiert schon unter dieser URL · `(geplant)` = neu
 > zu bauen · `(Umzug)` = existiert, liegt heute aber unter anderer URL.
@@ -88,7 +88,7 @@ Grundsätze:
 │   │
 │   ├── grosshandel/ .......................... [HUB]    Branchen-Hub (Hub-Hub)
 │   │   │
-│   │   ├── private-ai/ ....................... [HUB]     (geplant) „Wo läuft die KI?"
+│   │   ├── private-ai/ ....................... [HUB]     „Wo läuft die KI?" (heute Dummy)
 │   │   │   ├── implementierung-open-webui .... [MONEY]   (geplant)
 │   │   │   ├── implementierung-vllm .......... [MONEY]   (geplant)
 │   │   │   ├── managed-private-ai ............ [MONEY]   (geplant)
@@ -100,7 +100,7 @@ Grundsätze:
 │   │   │   ├── private-ai-vs-cloud-ki ........ [CONTENT] (geplant)
 │   │   │   └── private-ai-erfolgreich-einfuehren [CONTENT] (geplant)
 │   │   │
-│   │   ├── ki-assistenten/ ................... [HUB]     (geplant) „KI als Werkzeug fürs
+│   │   ├── ki-assistenten/ ................... [HUB]     „KI als Werkzeug fürs
 │   │   │   │                                    Team": Claude, ChatGPT, Copilot
 │   │   │   ├── claude-einfuehrung ............ [MONEY]   (geplant)
 │   │   │   ├── chatgpt-enterprise-einfuehrung  [MONEY]   (geplant)
@@ -113,20 +113,20 @@ Grundsätze:
 │   │   │   ├── ki-assistenten-dsgvo .......... [CONTENT] (geplant)
 │   │   │   └── ki-assistenten-erfolgreich-einfuehren [CONTENT] (geplant)
 │   │   │
-│   │   ├── ki-agenten/ ....................... [HUB]     (geplant) „KI als digitaler
+│   │   ├── ki-agenten/ ....................... [HUB]     „KI als digitaler
 │   │   │   │                                    Mitarbeiter" — Agenten-Katalog
 │   │   │   ├── angebots-bot-implementierung .. [MONEY]   (geplant)
 │   │   │   ├── invoice-bot-implementierung ... [MONEY]   (geplant)
 │   │   │   ├── ki-agenten-workshop ........... [MONEY]   (geplant)
 │   │   │   ├── ki-agenten-betrieb ............ [MONEY]   (geplant)
 │   │   │   ├── was-kostet-ein-ki-agent ....... [MONEY]   (geplant) Preise & Dauer
-│   │   │   ├── angebots-bot .................. [CONTENT] (Umzug aus grosshandel/) Katalog
-│   │   │   ├── invoice-bot ................... [CONTENT] (Umzug aus grosshandel/) Katalog
+│   │   │   ├── angebots-bot .................. [CONTENT] Katalog
+│   │   │   ├── invoice-bot ................... [CONTENT] Katalog
 │   │   │   ├── was-ist-ein-ki-agent .......... [CONTENT] (geplant)
 │   │   │   ├── ki-agent-vs-workflow .......... [CONTENT] (geplant) Abgrenzung
 │   │   │   └── ki-agenten-erfolgreich-einfuehren [CONTENT] (geplant)
 │   │   │
-│   │   ├── chatbots/ ......................... [HUB]     (geplant) KI-Chatbots für
+│   │   ├── chatbots/ ......................... [HUB]     KI-Chatbots für
 │   │   │   │                                    Kunden & Website — eigener Hub,
 │   │   │   │                                    „Chatbot" hat eigenes Suchvolumen
 │   │   │   ├── ki-chatbot-implementierung .... [MONEY]   (geplant)
@@ -134,27 +134,27 @@ Grundsätze:
 │   │   │   ├── chatbot-betrieb ............... [MONEY]   (geplant)
 │   │   │   ├── chatbot-workshop .............. [MONEY]   (geplant)
 │   │   │   ├── was-kostet-ein-chatbot ........ [MONEY]   (geplant) Preise & Dauer
-│   │   │   ├── ki-chatbot-grosshandel ........ [CONTENT] (Umzug aus grosshandel/) Katalog
+│   │   │   ├── ki-chatbot-grosshandel ........ [CONTENT] Katalog
 │   │   │   ├── was-ist-ein-ki-chatbot ........ [CONTENT] (geplant)
 │   │   │   ├── chatbot-vs-ki-agent ........... [CONTENT] (geplant) Abgrenzung
 │   │   │   ├── chatbot-dsgvo ................. [CONTENT] (geplant)
 │   │   │   └── chatbot-erfolgreich-einfuehren  [CONTENT] (geplant)
 │   │   │
-│   │   ├── workflows/ ........................ [HUB]     (geplant) „Fest automatisierte
+│   │   ├── workflows/ ........................ [HUB]     „Fest automatisierte
 │   │   │   │                                    Prozesse" — Workflow-Katalog
 │   │   │   ├── auftragserfassung-implementierung [MONEY] (geplant)
 │   │   │   ├── rechnungspruefung-implementierung [MONEY] (geplant)
 │   │   │   ├── easybill-automation-implementierung [MONEY] (geplant)
 │   │   │   ├── workflow-audit-grosshandel .... [MONEY]   (geplant)
 │   │   │   ├── was-kostet-workflow-automatisierung [MONEY] (geplant) Preise & Dauer
-│   │   │   ├── auftragserfassung ............. [CONTENT] (Umzug aus grosshandel/)
-│   │   │   ├── bestellabwicklung ............. [CONTENT] (Umzug aus grosshandel/)
-│   │   │   ├── lagerverwaltung ............... [CONTENT] (Umzug aus grosshandel/)
-│   │   │   ├── 3-wege-rechnungspruefung ...... [CONTENT] (Umzug aus grosshandel/)
-│   │   │   ├── zertifikatspruefung-lieferanten [CONTENT] (Umzug aus grosshandel/)
-│   │   │   └── ai-automation-with-easybill ... [CONTENT] (Umzug aus grosshandel/)
+│   │   │   ├── auftragserfassung ............. [CONTENT] Katalog
+│   │   │   ├── bestellabwicklung ............. [CONTENT] Katalog
+│   │   │   ├── lagerverwaltung ............... [CONTENT] Katalog
+│   │   │   ├── 3-wege-rechnungspruefung ...... [CONTENT] Katalog
+│   │   │   ├── zertifikatspruefung-lieferanten [CONTENT] Katalog
+│   │   │   └── ai-automation-with-easybill ... [CONTENT] Katalog
 │   │   │
-│   │   └── roi-rechner/ ...................... [TOOL]   (Umzug von /roi-rechner)
+│   │   └── roi-rechner/ ...................... [TOOL]
 │   │       │                                    Conversion-Assist des Großhandel-Hubs
 │   │       ├── document ...................... [TOOL]   Rechner Dokumentenverarbeitung
 │   │       ├── service-requests .............. [TOOL]   Rechner Service-Anfragen
@@ -225,7 +225,7 @@ Grundsätze:
 │   ├── performance-scaling ................... [MONEY]
 │   ├── zertifizierung ........................ [MONEY]  auch Trust
 │   │
-│   └── tools/ ................................ [HUB]    (Umzug von /tools) Software-
+│   └── tools/ ................................ [HUB]    Software-
 │       │                                       Ökosystem; Ziel kontextueller Links
 │       │                                       aus Branchen, Services und Blog
 │       ├── n8n ............................... [CONTENT] wichtigste Tool-Seite
@@ -421,13 +421,13 @@ Funnel-LP ─────────────────==> nur eigenes For
 
 ## Nächste Schritte (Umsetzung des Zielbilds)
 
-- [ ] **Tools → services/tools/ umziehen:** Ordner verschieben, `legacyRedirects`
+- [x] **Tools → services/tools/ umgezogen:** Ordner verschieben, `legacyRedirects`
       für alle /tools/-URLs, Tools-Button aus der Nav, Tools-Sektion ins
       Services-Mega-Menü.
-- [ ] **ROI-Rechner → branchen/grosshandel/roi-rechner umziehen:** inkl.
+- [x] **ROI-Rechner → branchen/grosshandel/roi-rechner umgezogen:** inkl.
       Unterseiten, `legacyRedirects`, Nav-Eintrag im Services-Menü entfernen,
       vom Großhandel-Hub verlinken.
-- [ ] **Großhandel-Unter-Hubs anlegen** (private-ai, ki-assistenten, ki-agenten,
+- [x] **Großhandel-Unter-Hubs angelegt** (private-ai, ki-assistenten, ki-agenten,
       chatbots, workflows) und die 9 bestehenden Use-Case-Seiten einsortieren
       (2 → ki-agenten, 1 → chatbots, 6 → workflows, jeweils `legacyRedirects`).
 - [ ] **Money Pages bauen** — pro Unter-Hub 5, Priorität nach Fokus:
@@ -435,7 +435,7 @@ Funnel-LP ─────────────────==> nur eigenes For
 - [ ] **Fehlende Content Pages bauen** — Fragen-Cluster je Unter-Hub („Was ist…",
       „… erfolgreich einführen", Abgrenzung Assistent/Agent) plus Private-AI-
       und Cowork-/Assistenten-Cluster beider Branchen.
-- [ ] **PDL-Rückbau:** Nav-/Footer-Einträge raus, `branchen/personaldienstleister/`
+- [x] **PDL-Rückbau:** Nav-/Footer-Einträge raus, `branchen/personaldienstleister/`
       + Unterseiten per 301 auf `branchen/` umleiten.
 - [ ] **Breadcrumbs:** Design festlegen, auf allen Seiten ab Ebene 2 einbauen,
       inkl. BreadcrumbList-Schema (Pflicht bei 4 URL-Ebenen).

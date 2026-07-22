@@ -227,7 +227,7 @@ export default function Page() {
               setzt den Workflow danach fort. Wie das in der Praxis als Service
               läuft, zeigt der Use-Case zur{" "}
               <Link
-                href="/branchen/grosshandel/3-wege-rechnungspruefung"
+                href="/branchen/grosshandel/workflows/3-wege-rechnungspruefung"
                 className="text-primary-600 hover:underline"
               >
                 automatischen Rechnungsprüfung

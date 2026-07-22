@@ -590,7 +590,7 @@ export default async function Page({
               </Link>
               ,{" "}
               <Link
-                href="/branchen/grosshandel/angebots-bot"
+                href="/branchen/grosshandel/ki-agenten/angebots-bot"
                 className="text-primary-600 hover:underline"
               >
                 Angebots-Bot für den Großhandel

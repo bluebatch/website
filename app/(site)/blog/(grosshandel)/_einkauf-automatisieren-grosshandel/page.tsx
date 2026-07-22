@@ -301,7 +301,7 @@ export default function Page() {
               </Link>
               . Wo Lieferanten Nachweise und Zertifikate liefern müssen, hilft
               zudem die{" "}
-              <Link href="/branchen/grosshandel/zertifikatspruefung-lieferanten">
+              <Link href="/branchen/grosshandel/workflows/zertifikatspruefung-lieferanten">
                 automatische Prüfung von Lieferantenzertifikaten
               </Link>
               . Erst wenn dieses Rückgrat steht, tragen die anderen Hebel

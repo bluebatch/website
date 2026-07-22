@@ -91,7 +91,7 @@ const problems = [
 const architecture = [
   {
     component: "Redis Queue Mode",
-    imageSrc: "/tools/redis.png",
+    imageSrc: "/services/tools/redis.png",
     benefit: "7x Performance-Increase",
     description:
       "Von 23 auf 162 Requests/Sekunde. Message Broker für resiliente Job-Verarbeitung.",
@@ -104,7 +104,7 @@ const architecture = [
   },
   {
     component: "PostgreSQL Database",
-    imageSrc: "/tools/postgresql_plain_wordmark_logo_icon_146390.png",
+    imageSrc: "/services/tools/postgresql_plain_wordmark_logo_icon_146390.png",
     benefit: "1000x mehr Capacity",
     description:
       "Production-ready Datenbank für tausende Executions pro Minute. MVCC vermeidet Locks.",
@@ -117,7 +117,7 @@ const architecture = [
   },
   {
     component: "Docker Swarm / Kubernetes",
-    imageSrc: "/tools/Kubernetes.png",
+    imageSrc: "/services/tools/Kubernetes.png",
     benefit: "Zero-Downtime Deployments",
     description:
       "Container-Orchestrierung für High Availability und Auto-Scaling.",
@@ -130,7 +130,7 @@ const architecture = [
   },
   {
     component: "Prometheus & Grafana",
-    imageSrc: "/tools/grafana-prometheus.png",
+    imageSrc: "/services/tools/grafana-prometheus.png",
     benefit: "Vollständige Observability",
     description:
       "Real-time Monitoring aller Metriken. Proaktive Alerts bei Performance-Degradation.",
@@ -181,32 +181,32 @@ const benchmarks = [
 const technologies = [
   {
     name: "Redis",
-    logo: "/tools/redis.png",
+    logo: "/services/tools/redis.png",
     description: "In-Memory Message Broker für Queue Mode",
   },
   {
     name: "PostgreSQL",
-    logo: "/tools/postgresql_plain_wordmark_logo_icon_146390.png",
+    logo: "/services/tools/postgresql_plain_wordmark_logo_icon_146390.png",
     description: "Enterprise-ready Datenbank",
   },
   {
     name: "Kubernetes",
-    logo: "/tools/Kubernetes.png",
+    logo: "/services/tools/Kubernetes.png",
     description: "Container-Orchestrierung",
   },
   {
     name: "Prometheus",
-    logo: "/tools/prometheus.png",
+    logo: "/services/tools/prometheus.png",
     description: "Metrics & Monitoring",
   },
   {
     name: "Grafana",
-    logo: "/tools/grafana-prometheus.png",
+    logo: "/services/tools/grafana-prometheus.png",
     description: "Dashboards & Visualization",
   },
   {
     name: "Docker",
-    logo: "/tools/docker.svg",
+    logo: "/services/tools/docker.svg",
     description: "Container-Plattform",
   },
 ];
