@@ -11,7 +11,14 @@ export interface RewriteOverride {
 }
 
 export interface RewriteSiteConfig {
+  /** @deprecated Kanonisch ist die Folder-URL. Alte Flat-URLs gehören in legacyRedirects. */
   mainRewrite?: string;
+  /**
+   * Ehemalige kanonische Flat-URLs dieser Seite (früher mainRewrite).
+   * Werden per 301 auf die Folder-Route umgeleitet, damit bestehende
+   * SEO-Rankings und Backlinks erhalten bleiben.
+   */
+  legacyRedirects?: string[];
   rewrites: RewriteOverride[];
 }
 
@@ -86,6 +93,16 @@ export function collectRewriteRules(): CollectedRules {
       rewrites.push({
         source,
         destination: `${route}?_rwsrc=${encodeURIComponent(source)}`,
+      });
+    }
+
+    // Legacy-Flat-URLs (ehemalige mainRewrites): 301 auf die Folder-Route
+    for (const legacyUrl of extractLegacyRedirects(content)) {
+      registerSource(legacyUrl, route);
+      redirects.push({
+        source: legacyUrl,
+        destination: route,
+        permanent: true,
       });
     }
   }
@@ -194,6 +211,18 @@ function extractSources(content: string): string[] {
 function extractMainRewrite(content: string): string | null {
   const match = content.match(/mainRewrite:\s*["']([^"']+)["']/);
   return match ? match[1] : null;
+}
+
+function extractLegacyRedirects(content: string): string[] {
+  const match = content.match(/legacyRedirects:\s*\[([^\]]*)\]/);
+  if (!match) return [];
+  const urls: string[] = [];
+  const regex = /["']([^"']+)["']/g;
+  let m;
+  while ((m = regex.exec(match[1])) !== null) {
+    urls.push(m[1]);
+  }
+  return urls;
 }
 
 function pageFileToRoute(filePath: string): string {

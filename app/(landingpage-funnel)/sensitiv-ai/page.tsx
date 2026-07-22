@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "Sie arbeiten mit Berufsgeheimnis-Daten und wollen Claude nutzen? In 3 Fragen prüfen wir, ob unser DSGVO- und § 203-StGB-konformes Claude-Setup zu Ihnen passt.",
   alternates: { canonical: "/sensitiv-ai" },
-  robots: { index: false, follow: false },
+  robots: { index: false },
 };
 
 const facts = [

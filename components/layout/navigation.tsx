@@ -31,7 +31,7 @@ const uberUnsMenu = {
           icon: "/icons/badge-check.svg",
           title: "Zertifizierungen",
           description: "Nachweisbare Qualität",
-          href: "/ki-agentur-zertifizierung",
+          href: "/services/zertifizierung",
         },
       ],
     },
@@ -58,37 +58,37 @@ const servicesMenu = {
   sections: [
     {
       title: "Services",
-      href: "/ki-implementierung",
+      href: "/services",
       items: [
         {
           icon: "/icons/server-minimalistic.svg",
           title: "n8n Hosting",
           description: "OnPrem oder Cloud",
-          href: "/n8n-hosting-deutschland",
+          href: "/services/n8n-hosting",
         },
         {
           icon: "/icons/monitor-camera.svg",
           title: "Workflow-Wartung",
           description: "24/7 Monitoring",
-          href: "/workflow-wartung",
+          href: "/services/workflow-wartung",
         },
         {
           icon: "/icons/puzzle.svg",
           title: "Custom Nodes",
           description: "Maßgeschneiderte Integrationen",
-          href: "/n8n-node",
+          href: "/services/custom-nodes",
         },
         {
           icon: "/icons/academic-cap.svg",
           title: "Schulungen",
           description: "Workshops & Training",
-          href: "/n8n-schulung",
+          href: "/services/schulungen",
         },
         {
           icon: "/icons/speedometer.svg",
           title: "Performance Scaling",
           description: "High-Performance Setup",
-          href: "/n8n-performance",
+          href: "/services/performance-scaling",
         },
         {
           icon: "/icons/calculator.svg",
@@ -105,7 +105,7 @@ const servicesMenu = {
         {
           title: "n8n",
           description: "Workflow-Automatisierung",
-          href: "/was-ist-n8n",
+          href: "/tools/n8n",
         },
         {
           title: "Make",
@@ -148,107 +148,95 @@ const servicesMenu = {
   ],
 };
 
-const useCasesMenu = {
+const branchenMenu = {
   topics: [
     {
       title: "Großhandel",
       icon: "/icons/factory.svg",
-      href: "/wholesale-ai",
+      href: "/branchen/grosshandel",
       cases: [
         {
           title: "KI-Chatbot mit ERP-Anbindung",
-          href: "/use-cases/grosshandel/ki-chatbot-grosshandel",
+          href: "/branchen/grosshandel/ki-chatbot-grosshandel",
         },
-        { title: "Auftragserfassung", href: "/bestellung-erfassen" },
+        { title: "Auftragserfassung", href: "/branchen/grosshandel/auftragserfassung" },
         {
           title: "Bestellabwicklung",
-          href: "/use-cases/grosshandel/bestellabwicklung",
+          href: "/branchen/grosshandel/bestellabwicklung",
         },
         {
           title: "Lagerverwaltung",
-          href: "/use-cases/grosshandel/lagerverwaltung",
+          href: "/branchen/grosshandel/lagerverwaltung",
         },
         {
           title: "Invoice-Bot",
-          href: "/use-cases/grosshandel/invoice-bot",
+          href: "/branchen/grosshandel/invoice-bot",
         },
         {
           title: "3-Wege-Rechnungsprüfung",
-          href: "/automatische-rechnungspruefung",
+          href: "/branchen/grosshandel/3-wege-rechnungspruefung",
         },
         {
           title: "Zertifikatsprüfung Lieferanten",
-          href: "/use-cases/grosshandel/zertifikatspruefung-lieferanten",
+          href: "/branchen/grosshandel/zertifikatspruefung-lieferanten",
         },
         {
           title: "Angebots-Bot",
-          href: "/use-cases/grosshandel/angebots-bot",
+          href: "/branchen/grosshandel/angebots-bot",
         },
         {
           title: "KI-Automation mit easybill",
-          href: "/use-cases/grosshandel/ai-automation-with-easybill",
+          href: "/branchen/grosshandel/ai-automation-with-easybill",
         },
       ],
     },
     {
       title: "Steuerberater",
       icon: "/icons/calculator.svg",
-      href: "/use-cases/steuerberater",
+      href: "/branchen/steuerberater",
       cases: [
         {
-          title: "Belegprüfung",
-          href: "/use-cases/steuerberater/belegpruefung",
+          title: "Private AI",
+          href: "/branchen/steuerberater/private-ai",
         },
         {
-          title: "Dokumentenverarbeitung",
-          href: "/use-cases/steuerberater/dokumentenverarbeitung",
+          title: "Claude Cowork",
+          href: "/branchen/steuerberater/claude-cowork",
         },
         {
-          title: "Mandantenkommunikation",
-          href: "/use-cases/steuerberater/mandantenkommunikation",
+          title: "KI-Agenten",
+          href: "/branchen/steuerberater/ki-agenten",
         },
         {
-          title: "DATEV-Jira Orchestration",
-          href: "/use-cases/steuerberater/datev-jira-task-orchestration",
-        },
-        {
-          title: "E-Rechnung-Verarbeitung",
-          href: "/use-cases/steuerberater/e-rechnung-verarbeitung",
-        },
-        {
-          title: "Mandanten-Onboarding",
-          href: "/use-cases/steuerberater/mandanten-onboarding",
-        },
-        {
-          title: "KI-Jahresabschluss",
-          href: "/use-cases/steuerberater/jahresabschluss-ki",
+          title: "Workflows",
+          href: "/branchen/steuerberater/workflows",
         },
       ],
     },
     {
       title: "Personaldienstleister",
       icon: "/icons/personal-connections.svg",
-      href: "/use-cases/personaldienstleister",
+      href: "/branchen/personaldienstleister",
       cases: [
         {
           title: "Bewerber-Screening",
-          href: "/use-cases/personaldienstleister/bewerber-screening",
+          href: "/branchen/personaldienstleister/bewerber-screening",
         },
         {
           title: "Bewerberkommunikation",
-          href: "/use-cases/personaldienstleister/bewerberkommunikation",
+          href: "/branchen/personaldienstleister/bewerberkommunikation",
         },
         {
           title: "Digitales Onboarding",
-          href: "/use-cases/personaldienstleister/digitales-onboarding",
+          href: "/branchen/personaldienstleister/digitales-onboarding",
         },
         {
           title: "Compliance-Überwachung",
-          href: "/use-cases/personaldienstleister/compliance-ueberwachung",
+          href: "/branchen/personaldienstleister/compliance-ueberwachung",
         },
         {
           title: "Zeiterfassung & Abrechnung",
-          href: "/use-cases/personaldienstleister/zeiterfassung-abrechnung",
+          href: "/branchen/personaldienstleister/zeiterfassung-abrechnung",
         },
       ],
     },
@@ -471,12 +459,12 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 </div>
               </div>
 
-              {/* Use-Cases */}
+              {/* Branchen */}
               <div
-                className="nav-fade-in relative group/usecases"
+                className="nav-fade-in relative group/branchen"
                 style={{ animationDelay: "300ms" }}
               >
-                <Link href="/use-cases" className={triggerClass}>
+                <Link href="/branchen" className={triggerClass}>
                   <svg
                     className={triggerIconClass}
                     fill="none"
@@ -490,15 +478,15 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                       d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  Use-Cases
+                  Branchen
                   <ChevronDown className={triggerIconClass} />
                 </Link>
 
                 <div
-                  className={`${panelBase} group-hover/usecases:block group-focus-within/usecases:block w-[800px]`}
+                  className={`${panelBase} group-hover/branchen:block group-focus-within/branchen:block w-[800px]`}
                 >
                   <div className="p-4 grid grid-cols-3 gap-6">
-                    {useCasesMenu.topics.map((topic, topicIndex) => (
+                    {branchenMenu.topics.map((topic, topicIndex) => (
                       <div key={topicIndex}>
                         <Link
                           href={topic.href}
@@ -536,7 +524,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 className="nav-fade-in relative group/blog"
                 style={{ animationDelay: "350ms" }}
               >
-                <Link href="/blog-workflow" className={triggerClass}>
+                <Link href="/blog" className={triggerClass}>
                   <svg
                     className={triggerIconClass}
                     fill="none"
@@ -579,7 +567,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                       </div>
                       <div className="border-t border-gray-100 mt-2 pt-2 px-2">
                         <Button
-                          href="/blog-workflow"
+                          href="/blog"
                           className="w-full text-xs py-1.5 px-3"
                         >
                           Alle Artikel ansehen
@@ -599,7 +587,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
 
             {/* Mobile Menu — client island */}
             <NavigationMobile
-              useCasesTopics={useCasesMenu.topics.map((t) => ({
+              branchenTopics={branchenMenu.topics.map((t) => ({
                 title: t.title,
                 icon: t.icon,
                 href: t.href,

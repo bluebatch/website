@@ -2,7 +2,9 @@
  * Test 6: Link Depth
  *
  * Checks how many clicks it takes from the homepage to reach each page.
- * Pages reachable in 1-3 clicks = good. More than 3 = bad for SEO.
+ * Pages reachable in 1-3 clicks = good. More than 3 = score penalty.
+ * More than MAX_HARD_DEPTH clicks = HARD FAIL — keine Seite darf mehr als
+ * 4 Klicks von der Startseite entfernt sein (site-structure.md).
  * Uses BFS from homepage, tracking depth per discovered URL.
  */
 
@@ -12,6 +14,7 @@ import { collectLinkHrefs, verdict, reportScore } from "./helpers";
 import { BASE_URL, normalizePathname } from "../helpers/crawl";
 
 const MAX_GOOD_DEPTH = 3;
+const MAX_HARD_DEPTH = 4;
 const PASS_THRESHOLD = 80;
 const CONCURRENCY = 6;
 
@@ -137,4 +140,11 @@ test("Link Depth — max 3 clicks from homepage", async ({ page }) => {
   reportScore("Link Depth", score, PASS_THRESHOLD, details);
   console.log(`\n${verdict(score, PASS_THRESHOLD)}`);
   expect(score).toBeGreaterThanOrEqual(PASS_THRESHOLD);
+
+  // Hard-Fail: keine Seite darf tiefer als MAX_HARD_DEPTH liegen
+  const wayTooDeep = tooDeep.filter((p) => p.depth > MAX_HARD_DEPTH);
+  expect(
+    wayTooDeep.map((p) => `${p.url} (${p.depth} clicks)`),
+    `Seiten tiefer als ${MAX_HARD_DEPTH} Klicks — interne Verlinkung ergänzen (siehe site-structure.md, Verlinkungslogik)`,
+  ).toEqual([]);
 });

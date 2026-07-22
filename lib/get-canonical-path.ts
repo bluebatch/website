@@ -55,7 +55,7 @@ function buildMap(): Map<string, string> {
  * If no mainRewrite, returns the original path unchanged.
  *
  * @example
- * resolveHref("/standorte/berlin") // → "/ki-agentur-berlin"
+ * resolveHref("/standorte/berlin") // → "/standorte/berlin"
  * resolveHref("/team")             // → "/team" (no mainRewrite)
  */
 export function resolveHref(folderPath: string): string {

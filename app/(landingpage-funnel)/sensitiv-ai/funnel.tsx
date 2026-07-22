@@ -6,11 +6,10 @@ import {
   ShieldCheck,
   Lock,
   Sparkles,
-  ArrowRight,
   RotateCcw,
   CheckCircle2,
 } from "lucide-react";
-import Button from "@/components/ui/button";
+import ContactButton from "@/components/buttons/contact-button";
 import ContactForm from "@/components/contact/contact-form";
 
 type Outcome = "normal" | "qualified";
@@ -160,10 +159,10 @@ function NormalOutcome({ onRestart }: { onRestart: () => void }) {
         und ohne den zusätzlichen § 203-Aufwand.
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <Button href="/ki-implementierung">
-          Zu unseren AI-Services
-          <ArrowRight className="h-5 w-5" />
-        </Button>
+        {/* Sackgassen-Prinzip: kein Ausstieg aus dem Funnel, Kontakt statt Link */}
+        <ContactButton icon="chat">
+          Zu den AI-Services beraten lassen
+        </ContactButton>
       </div>
       <button
         type="button"

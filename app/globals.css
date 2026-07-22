@@ -247,3 +247,24 @@
   .check-box { animation: none; opacity: 1; }
   .check-mark { animation: none; stroke-dashoffset: 0; }
 }
+
+/* ProductTile (Agenten-Sammelkarte): animierter Verlaufs-Rand + Lichtreflex */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes sheen-once {
+  0% { transform: translateX(-150%) rotate(12deg); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(300%) rotate(12deg); opacity: 0; }
+}
+/* Läuft genau einmal pro Hover-Eintritt; danach bleibt der Reflex unsichtbar */
+.product-tile-border:hover .product-tile-sheen {
+  animation: sheen-once 0.9s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .product-tile-border { animation: none; }
+  .product-tile-sheen { animation: none; opacity: 0 !important; }
+}

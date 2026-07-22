@@ -5,22 +5,22 @@ import Image from "next/image";
 
 export default function Footer() {
   const servicesMenu = [
-    { label: "KI-Implementierung", href: "/ki-implementierung" },
-    { label: "n8n Hosting", href: "/n8n-hosting-deutschland" },
-    { label: "Workflow-Wartung", href: "/workflow-wartung" },
-    { label: "Custom Nodes", href: "/n8n-node" },
-    { label: "Zertifizierungen", href: "/ki-agentur-zertifizierung" },
+    { label: "KI-Implementierung", href: "/services" },
+    { label: "n8n Hosting", href: "/services/n8n-hosting" },
+    { label: "Workflow-Wartung", href: "/services/workflow-wartung" },
+    { label: "Custom Nodes", href: "/services/custom-nodes" },
+    { label: "Zertifizierungen", href: "/services/zertifizierung" },
     { label: "ROI-Rechner", href: "/roi-rechner" },
   ];
 
   const productMenu = [
-    { label: "Grosshandel", href: "/wholesale-ai" },
-    { label: "Steuerberater", href: "/use-cases/steuerberater" },
-    { label: "PDL", href: "/use-cases/personaldienstleister" },
+    { label: "Grosshandel", href: "/branchen/grosshandel" },
+    { label: "Steuerberater", href: "/branchen/steuerberater" },
+    { label: "PDL", href: "/branchen/personaldienstleister" },
   ];
 
   const toolsMenu = [
-    { label: "n8n", href: "/was-ist-n8n" },
+    { label: "n8n", href: "/tools/n8n" },
     { label: "Navision", href: "/tools/navision" },
     { label: "Easybill", href: "/tools/easybill" },
     { label: "Alle Tools", href: "/tools" },
@@ -163,10 +163,10 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Use-Cases Menu */}
+            {/* Branchen Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-                Use-Cases
+                Branchen
               </h3>
               <ul className="space-y-3">
                 {productMenu.map((item, index) => (

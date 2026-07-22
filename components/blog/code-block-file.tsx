@@ -16,7 +16,7 @@ export default function CodeBlockFile({
   fileName,
 }: CodeBlockFileProps) {
   // Read file from the blog post directory (supports route groups)
-  const blogDir = path.join(process.cwd(), "app/blog");
+  const blogDir = path.join(process.cwd(), "app/(site)/blog");
   let filePath = path.join(blogDir, src);
 
   if (!fs.existsSync(filePath)) {

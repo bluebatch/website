@@ -5,17 +5,17 @@ import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import ContactButton from "@/components/buttons/contact-button";
 
-interface UseCaseTopic {
+interface BranchenTopic {
   title: string;
   icon: string;
   href: string;
 }
 
 interface Props {
-  useCasesTopics: UseCaseTopic[];
+  branchenTopics: BranchenTopic[];
 }
 
-export default function NavigationMobile({ useCasesTopics }: Props) {
+export default function NavigationMobile({ branchenTopics }: Props) {
   const ref = useRef<HTMLDetailsElement>(null);
   const pathname = usePathname();
 
@@ -66,7 +66,7 @@ export default function NavigationMobile({ useCasesTopics }: Props) {
             Über uns
           </Link>
           <Link
-            href="/ki-implementierung"
+            href="/services"
             className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
           >
             Services
@@ -92,13 +92,13 @@ export default function NavigationMobile({ useCasesTopics }: Props) {
             </Link>
           </div>
           <Link
-            href="/use-cases"
+            href="/branchen"
             className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
           >
-            Use-Cases
+            Branchen
           </Link>
           <div className="pl-8 space-y-1">
-            {useCasesTopics.map((topic) => (
+            {branchenTopics.map((topic) => (
               <Link
                 key={topic.href}
                 href={topic.href}
@@ -109,7 +109,7 @@ export default function NavigationMobile({ useCasesTopics }: Props) {
             ))}
           </div>
           <Link
-            href="/blog-workflow"
+            href="/blog"
             className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
           >
             Blog

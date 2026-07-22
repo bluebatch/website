@@ -1,0 +1,459 @@
+import type { Metadata } from "next";
+import type { RewriteSiteConfig } from "@/lib/get-rewrites";
+import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
+import ContentWrapper from "@/components/layout/content-wrapper";
+import Typo from "@/components/ui/typo";
+import SimpleGrid from "@/components/layout/simple-grid";
+import Hero2Column, {
+  Hero2ColumnTextColumn,
+  Hero2ColumnMediaColumn,
+  Hero2ColumnPreHeadline,
+  Hero2ColumnHeadline,
+  Hero2ColumnDescription,
+  Hero2ColumnCallToAction,
+  Hero2ColumnSubtext,
+  Hero2ColumnImage,
+} from "@/components/heroes/hero-2-column";
+import Link from "next/link";
+import ContactButton from "@/components/buttons/contact-button";
+import Customer, { allLogos } from "@/components/sections/customer/customer";
+import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import SimpleCard from "@/components/cards/simple-card";
+import BoundlessImageCard from "@/components/cards/boundless-image-card";
+import TimelineAsSteps, {
+  TimelineAsStepsStep,
+} from "@/components/ui/timeline-as-steps";
+import PhaseCard, {
+  PhaseCardHeader,
+  PhaseCardTitle,
+  PhaseCardBadge,
+  PhaseCardDescription,
+} from "@/components/cards/phase-card";
+import IntroBox from "@/components/ui/intro-box";
+
+export const rewriteSiteConfig: RewriteSiteConfig = {
+  legacyRedirects: ["/n8n-node"],
+  rewrites: [
+      ],
+};
+
+export const metadata: Metadata = {
+  title: "n8n Node Entwicklung | Custom Nodes | Bluebatch",
+  description:
+    "Professionelle Custom-Node-Entwicklung für n8n. TypeScript, Node.js, SDK - maßgeschneiderte Entwicklung und Wartung Ihrer Integrationen.",
+  openGraph: {
+    title: "Custom Nodes für n8n entwickeln | Bluebatch",
+    description:
+      "Kein passender Node für Ihre App? Wir entwickeln Custom Nodes für n8n - für jede Integration.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/images/bluebatch-social-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch Custom Nodes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Custom Node Development für n8n | Bluebatch",
+    description: "Maßgeschneiderte Nodes für n8n - für jede API und jedes System.",
+    images: ["/images/bluebatch-social-cover.jpg"],
+  },
+  alternates: {
+    canonical: "/services/custom-nodes",
+  },
+};
+
+const useCases = [
+  {
+    title: "Legacy-System Integration",
+    description:
+      "Ein 15 Jahre altes proprietäres CRM-System mit nicht-standardisierter REST API. Custom Node ermöglicht nahtlose Lead-Synchronisation mit HubSpot, Mailchimp und Slack.",
+    benefit: "20+ Stunden/Monat manuelle Arbeit eingespart",
+    timeline: "2-3 Wochen",
+    image: "/images/technology-integration.jpg",
+  },
+  {
+    title: "E-Commerce Inventory Sync",
+    description:
+      "Multi-System-Synchronisation zwischen Shopify, proprietärem ERP und POS-Systemen. Real-time Inventory-Updates mit Conflict Resolution.",
+    benefit: "Stockouts um 80% reduziert, Überbestände um 40%",
+    timeline: "4-5 Wochen",
+    image: "/images/warehouse-software.jpg",
+  },
+  {
+    title: "DATEV-Integration",
+    description:
+      "Custom DATEV Node mit OCR-Integration für Rechnungsverarbeitung. Intelligente Dokumentenklassifizierung und automatisches Booking mit Approval-Workflow.",
+    benefit: "70% der Rechnungen vollautomatisch verarbeitet",
+    timeline: "6-8 Wochen",
+    image: "/images/datev-integration.jpg",
+  },
+];
+
+const techStack = [
+  {
+    name: "TypeScript",
+    description:
+      "Type-safe Development für robuste und wartbare Nodes. Bessere IDE-Unterstützung und Fehlervermeidung.",
+    imageSrc: "/tools/Typescript.png",
+  },
+  {
+    name: "Node.js",
+    description:
+      "Asynchrone I/O für effiziente API-Kommunikation. Zugriff auf das gesamte npm-Ökosystem.",
+    imageSrc: "/tools/nodejs.png",
+  },
+  {
+    name: "n8n SDK",
+    description:
+      "Offizielles Node SDK von n8n für schnelle Entwicklung. Declarative und Programmatic Styles.",
+    imageSrc: "/tools/N8n-logo.png",
+  },
+  {
+    name: "CI/CD",
+    description:
+      "Automated Testing und Deployment-Pipelines. GitHub Actions für kontinuierliche Integration.",
+    imageSrc: "/tools/cicd.png",
+  },
+];
+
+const customNodeScenarios = [
+  {
+    title: "Proprietäre APIs",
+    description: "Unternehmenseigene APIs, die nicht öffentlich verfügbar sind",
+    iconSrc: "/icons/code.svg",
+    iconColor: "blue" as const,
+    gradient: "bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200",
+  },
+  {
+    title: "Legacy-Systeme",
+    description: "Veraltete ERP/CRM-Systeme mit speziellen Datenformaten",
+    iconSrc: "/icons/factory.svg",
+    iconColor: "purple" as const,
+    gradient:
+      "bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200",
+  },
+  {
+    title: "Nischen-Services",
+    description: "Spezialisierte Branchenlösungen ohne bestehende Integration",
+    iconSrc: "/icons/chart.svg",
+    iconColor: "green" as const,
+    gradient: "bg-gradient-to-br from-green-50 to-green-100 border-green-200",
+  },
+  {
+    title: "Spezielle Auth",
+    description:
+      "JWT, komplexe OAuth2-Flows oder proprietäre Authentifizierung",
+    iconSrc: "/icons/auth-fingerprint.svg",
+    iconColor: "orange" as const,
+    gradient:
+      "bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200",
+  },
+  {
+    title: "Interne Systeme",
+    description: "Firmeninterne Tools, Datenbanken und Microservices",
+    iconSrc: "/icons/building.svg",
+    iconColor: "red" as const,
+    gradient: "bg-gradient-to-br from-red-50 to-red-100 border-red-200",
+  },
+  {
+    title: "Performance-Kritisch",
+    description: "Optimierte Nodes für High-Volume Workloads",
+    iconSrc: "/icons/rocket.svg",
+    iconColor: "pink" as const,
+    gradient: "bg-gradient-to-br from-pink-50 to-pink-100 border-pink-200",
+  },
+];
+
+const developmentPhases = [
+  {
+    number: "1",
+    title: "Setup & Scaffolding",
+    duration: "1-2 Stunden",
+    description:
+      "Repository erstellen mit npm create @n8n/node • Development-Environment konfigurieren • Git-Repository initialisieren",
+  },
+  {
+    number: "2",
+    title: "Planung & Design",
+    duration: "1-3 Tage",
+    description:
+      "API-Dokumentation analysieren • Authentifizierungsmethode identifizieren • Datenmodell verstehen (Input/Output) • Error Cases identifizieren",
+  },
+  {
+    number: "3",
+    title: "Implementation",
+    duration: "3-10 Tage",
+    description:
+      "Credentials erstellen (API Key, OAuth2) • Node-Logik entwickeln • UI-Properties definieren • Lokales Testing durchführen",
+  },
+  {
+    number: "4",
+    title: "Quality Assurance",
+    duration: "2-3 Tage",
+    description:
+      "Linting und Code Review • Documentation schreiben • Beispiel-Workflows erstellen",
+  },
+  {
+    number: "5",
+    title: "Deployment",
+    duration: "1-2 Tage",
+    description:
+      "Production Build erstellen • npm Registry Publish • Installation testen",
+  },
+];
+
+const apiTypes = [
+  "REST APIs (JSON, XML)",
+  "GraphQL APIs",
+  "SOAP/XML Services",
+  "Webhooks & Real-time",
+  "WebSocket Connections",
+  "Legacy-Systeme",
+];
+
+const authMethods = [
+  "API Key (Header/Query)",
+  "OAuth2 (alle Grant Types)",
+  "JWT mit Auto-Refresh",
+  "Basic Auth",
+  "Custom Auth Flows",
+  "Certificate-based Auth",
+];
+
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  await enforceMainRewrite(rewriteSiteConfig, searchParams);
+
+  return (
+    <>
+      {/* Hero Section */}
+      <ContentWrapper isFirstSection>
+        <Hero2Column>
+          <Hero2ColumnTextColumn>
+            <Hero2ColumnPreHeadline>n8n Services</Hero2ColumnPreHeadline>
+            <Hero2ColumnHeadline>n8n Node Entwicklung für Ihr Unternehmen</Hero2ColumnHeadline>
+            <Hero2ColumnDescription>
+              Sie brauchen einen Custom Node für n8n? Wir entwickeln
+              ihn. Professionelle TypeScript-Entwicklung für jede API, jedes
+              System, jede Integration. Von Legacy-ERP bis moderne
+              Cloud-Services.
+            </Hero2ColumnDescription>
+            <Hero2ColumnCallToAction>
+              <ContactButton icon="chat">
+                Node-Entwicklung anfragen
+              </ContactButton>
+            </Hero2ColumnCallToAction>
+            <Hero2ColumnSubtext>
+              TypeScript • Node.js • n8n SDK • Langfristige Wartung
+            </Hero2ColumnSubtext>
+          </Hero2ColumnTextColumn>
+          <Hero2ColumnMediaColumn>
+            <Hero2ColumnImage src="/images/web-development.jpg" type="image" />
+          </Hero2ColumnMediaColumn>
+        </Hero2Column>
+      </ContentWrapper>
+
+      {/* Introduction Text */}
+      <ContentWrapper bodyWidth="small">
+        <div className="text-center">
+          <Typo.Paragraph className="text-xl text-gray-700 leading-relaxed">
+            Ein individueller Node verbindet Ihre Systeme in n8n genau so, wie Sie
+            es brauchen. Die n8n Community bietet über 400 fertige
+            Integrationen - doch für spezialisierte Geschäftsprozesse,
+            proprietäre APIs oder Legacy-Systeme reicht das oft nicht aus.
+            Genau hier entwickeln wir Ihren Custom Node als maßgeschneiderte
+            Integration, die perfekt auf Ihre Anforderungen zugeschnitten ist.
+            Ob Sie KI Agenten erstellen oder einen eigenen Chatbot erstellen
+            Open Source - mit Custom Nodes schaffen wir die passende Grundlage.
+            Für den laufenden Betrieb empfehlen wir unsere{" "}
+            <Link href="/services/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>,
+            und für Teams, die selbst entwickeln wollen, unsere{" "}
+            <Link href="/services/schulungen" className="text-primary-600 hover:underline">n8n-Schulungen</Link>.
+          </Typo.Paragraph>
+        </div>
+      </ContentWrapper>
+
+      {/* When Custom Nodes Are Needed */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Wann brauchen Sie einen eigenen Node für n8n?</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Obwohl n8n 400+ eingebaute Nodes bietet, gibt es viele Szenarien, in
+            denen ein eigener Custom Node unverzichtbar ist
+          </IntroBox.Paragraph>
+        </IntroBox>
+
+        <SimpleGrid cols={3} className="gap-6">
+          {customNodeScenarios.map((scenario, index) => (
+            <SimpleCard key={index} className={scenario.gradient}>
+              <SimpleCard.Icon
+                src={scenario.iconSrc}
+                alt={scenario.title}
+                color={scenario.iconColor}
+              />
+              <Typo.H3 className="mb-2">{scenario.title}</Typo.H3>
+              <Typo.Paragraph className="text-gray-600 text-sm">
+                {scenario.description}
+              </Typo.Paragraph>
+            </SimpleCard>
+          ))}
+        </SimpleGrid>
+      </ContentWrapper>
+
+      {/* Real-World Examples */}
+      <ContentWrapper colorScheme="gray-light">
+        <IntroBox>
+          <IntroBox.Headline>Erfolgreiche Custom-Node-Projekte für n8n</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Reale Beispiele unserer Node-Entwicklungen in n8n
+          </IntroBox.Paragraph>
+        </IntroBox>
+
+        <div className="space-y-8">
+          {useCases.map((useCase, index) => (
+            <BoundlessImageCard
+              ratio="3-2"
+              key={index}
+              imagePosition={index % 2 === 0 ? "right" : "left"}
+            >
+              <BoundlessImageCard.Content>
+                <Typo.H3 className="mb-4">{useCase.title}</Typo.H3>
+                <Typo.Paragraph className="text-gray-600 mb-6">
+                  {useCase.description}
+                </Typo.Paragraph>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-primary-600 font-semibold">
+                      Benefit:
+                    </span>
+                    <span className="text-gray-700">{useCase.benefit}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-primary-600 font-semibold">
+                      Timeline:
+                    </span>
+                    <span className="text-gray-700">{useCase.timeline}</span>
+                  </div>
+                </div>
+              </BoundlessImageCard.Content>
+
+              <BoundlessImageCard.Image
+                fadeGradient
+                src={useCase.image}
+                alt={useCase.title}
+              />
+            </BoundlessImageCard>
+          ))}
+        </div>
+      </ContentWrapper>
+
+      {/* Tech Stack */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.Headline>Technologie-Stack</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Modern, robust und zukunftssicher
+          </IntroBox.Paragraph>
+        </IntroBox>
+
+        <SimpleGrid cols={4} className="gap-6">
+          {techStack.map((tech, index) => (
+            <SimpleCard key={index}>
+              <SimpleCard.Image
+                src={tech.imageSrc}
+                alt={tech.name}
+                size="lg"
+              />
+              <Typo.H3 className="mb-3">{tech.name}</Typo.H3>
+              <Typo.Paragraph className="text-gray-600 text-sm">
+                {tech.description}
+              </Typo.Paragraph>
+            </SimpleCard>
+          ))}
+        </SimpleGrid>
+      </ContentWrapper>
+
+      {/* Development Process */}
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
+        <IntroBox>
+          <IntroBox.Headline>Entwicklungsprozess</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Von der Konzeption bis zum Production-Deployment
+          </IntroBox.Paragraph>
+        </IntroBox>
+
+        <TimelineAsSteps>
+          {developmentPhases.map((phase, index) => (
+            <TimelineAsStepsStep
+              key={phase.number}
+              value={phase.number}
+              isLast={index === developmentPhases.length - 1}
+            >
+              <PhaseCard>
+                <PhaseCardHeader>
+                  <PhaseCardTitle>{phase.title}</PhaseCardTitle>
+                  <PhaseCardBadge>{phase.duration}</PhaseCardBadge>
+                </PhaseCardHeader>
+                <PhaseCardDescription>{phase.description}</PhaseCardDescription>
+              </PhaseCard>
+            </TimelineAsStepsStep>
+          ))}
+        </TimelineAsSteps>
+      </ContentWrapper>
+
+      {/* Integration Capabilities */}
+      <ContentWrapper>
+        <SimpleGrid cols={2} className="gap-12">
+          <div>
+            <Typo.H2 className="mb-6">Unterstützte API-Typen für KI Agenten erstellen</Typo.H2>
+            <div className="space-y-3">
+              {apiTypes.map((api, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 bg-gray-50 p-4 rounded-lg"
+                >
+                  <span className="text-primary-600">✓</span>
+                  <span className="font-medium text-gray-900">{api}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <Typo.H2 className="mb-6">Authentifizierung - auch für einen eigenen Chatbot erstellen Open Source</Typo.H2>
+            <div className="space-y-3">
+              {authMethods.map((method, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 bg-gray-50 p-4 rounded-lg"
+                >
+                  <span className="text-primary-600">✓</span>
+                  <span className="font-medium text-gray-900">{method}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </SimpleGrid>
+      </ContentWrapper>
+
+      {/* Client Logos */}
+      <ContentWrapper noPadding bodyWidth="full">
+        <Customer />
+      </ContentWrapper>
+
+      {/* Contact CTA */}
+      <ContentWrapper noPadding bodyWidth="full">
+        <ConsultationCtaDefault />
+      </ContentWrapper>
+    </>
+  );
+}

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
   },
   alternates: { canonical: "/claude-cowork-schulung" },
-  robots: { index: false, follow: false },
+  robots: { index: false },
 };
 
 const facts = [

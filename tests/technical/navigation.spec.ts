@@ -4,7 +4,7 @@ import { crawlSite, BASE_URL } from "../helpers/crawl";
 /** Known mainRewrite prefixes — these redirect to flat URLs by design */
 const KNOWN_REDIRECT_PREFIXES = [
   "/standorte/",
-  "/use-cases/",
+  "/branchen/",
   "/tools/",
   "/blog/",
 ];

@@ -7,6 +7,7 @@ interface ContentWrapperProps {
   noPadding?: boolean;
   isFirstSection?: boolean;
   bodyWidth?: "full" | "wide" | "small" | "narrow";
+  id?: string;
 }
 
 export default function ContentWrapper({
@@ -15,6 +16,7 @@ export default function ContentWrapper({
   noPadding = false,
   isFirstSection = false,
   bodyWidth = "wide",
+  id,
 }: ContentWrapperProps) {
   const scheme = colorSchemeMap[colorScheme];
 
@@ -30,7 +32,7 @@ export default function ContentWrapper({
   };
 
   return (
-    <div className={`w-full ${scheme.bg} ${scheme.text}`}>
+    <div id={id} className={`w-full ${scheme.bg} ${scheme.text} ${id ? "scroll-mt-24 lg:scroll-mt-32" : ""}`}>
       <div className={`${bodyWidthClasses[bodyWidth]} ${paddingClasses}`}>
         {children}
       </div>

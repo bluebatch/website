@@ -159,21 +159,6 @@ export default class CsvReporter implements Reporter {
         break;
       }
 
-      case "link-equity": {
-        // "/blog/speed-to-hire: 1 inbound links (10 sessions)" → page, inbound_links, sessions
-        const header = "date,page,inbound_links,sessions";
-        const rows = details.map((d) => {
-          const match = d.match(
-            /^(\/\S+):\s*(\d+)\s*inbound links?\s*\((\d+)\s*sessions?\)/,
-          );
-          if (match)
-            return `${today},${match[1]},${match[2]},${match[3]}`;
-          return `${today},"${d.replace(/"/g, '""')}",,`;
-        });
-        fs.writeFileSync(filePath, [header, ...rows].join("\n") + "\n");
-        break;
-      }
-
       case "orphan-pages": {
         // Just page paths
         const header = "date,page";

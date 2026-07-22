@@ -5,7 +5,12 @@ import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { tracking, Ga4Event } from "@/lib/tracking";
 
-const SUPPRESSED_PATHS = ["/impressum", "/datenschutz"];
+const SUPPRESSED_PATHS = [
+  "/impressum",
+  "/datenschutz",
+  "/impressum-funnel",
+  "/datenschutz-funnel",
+];
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-EL0E8GDKZB";
 const CONSENT_KEY = "cookie_consent";
@@ -120,7 +125,16 @@ const CATEGORIES = [
   },
 ];
 
-export default function CookieConsent() {
+interface CookieConsentProps {
+  /** Basis der Rechtslinks — Funnel-Layout nutzt die *-funnel-Varianten,
+   *  damit der Banner keine Hintertür aus dem Funnel öffnet. */
+  legalVariant?: "default" | "funnel";
+}
+
+export default function CookieConsent({
+  legalVariant = "default",
+}: CookieConsentProps) {
+  const legalSuffix = legalVariant === "funnel" ? "-funnel" : "";
   const pathname = usePathname();
   const isSuppressed = SUPPRESSED_PATHS.includes(pathname ?? "");
   const [showBanner, setShowBanner] = useState(false);
@@ -255,14 +269,14 @@ export default function CookieConsent() {
                 Informationen über die Verwendung Ihrer Daten finden Sie in
                 unserer{" "}
                 <a
-                  href="/datenschutz"
+                  href={`/datenschutz${legalSuffix}`}
                   className="underline hover:text-primary-700"
                 >
                   Daten&shy;schutz&shy;erklärung
                 </a>{" "}
                 und unserem{" "}
                 <a
-                  href="/impressum"
+                  href={`/impressum${legalSuffix}`}
                   className="underline hover:text-primary-700"
                 >
                   Impressum

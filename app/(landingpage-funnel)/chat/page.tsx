@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Stell uns deine Fragen zu KI und Automatisierung im Großhandel. Direkt im Chat, sofort eine Antwort.",
   alternates: { canonical: "/chat" },
-  robots: { index: false, follow: false },
+  robots: { index: false },
 };
 
 export default function Page() {

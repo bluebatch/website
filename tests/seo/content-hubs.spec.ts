@@ -4,7 +4,6 @@
  * Auto-discovers hubs from app/ directory structure and checks:
  * - Hub page links to each child page (canonical URL)
  * - Each child page links back to the hub
- * - GA4: high-traffic children missing back-links get extra penalty
  */
 
 import { test, expect } from "./fixtures";
@@ -14,7 +13,7 @@ import { BASE_URL } from "../helpers/crawl";
 
 const cfg = seoConfig.contentHubs;
 
-test("Content Hub Completeness", async ({ page, ga4Data }) => {
+test("Content Hub Completeness", async ({ page }) => {
   const hubs = discoverHubs();
   expect(hubs.length).toBeGreaterThan(0);
 
@@ -63,14 +62,6 @@ test("Content Hub Completeness", async ({ page, ga4Data }) => {
     const forwardRatio = childCount > 0 ? hubToChildCount / childCount : 1;
     const backRatio = childCount > 0 ? childToHubCount / childCount : 1;
     let hubScore = Math.round((forwardRatio * 0.5 + backRatio * 0.5) * 100);
-
-    // GA4 penalty: if high-traffic children are missing back-links, penalize harder
-    for (const missing of missingBacklinks) {
-      const ga4 = ga4Data.get(missing);
-      if (ga4 && ga4.sessions >= seoConfig.ga4.highTrafficThreshold) {
-        hubScore = Math.max(0, hubScore - 5);
-      }
-    }
 
     // Weight by children count (more children = more important hub)
     const weight = Math.min(childCount / cfg.minChildrenForFullScore, 1);

@@ -2,7 +2,13 @@
  * Test 3: Orphan Page Detection
  *
  * Compares sitemap URLs against pages reachable via internal links.
- * Orphan pages with GA4 traffic get a 2x penalty (worse waste).
+ * Reiner Ja/Nein-Check ohne externe Daten: jede Sitemap-URL muss intern
+ * verlinkt sein, sonst schlägt der Test fehl.
+ *
+ * Funnel-Landingpages (app/(landingpage-funnel)/) sind GEWOLLT unverlinkt und
+ * tauchen hier nie auf: sie sind noindex und werden von app/sitemap.ts aus der
+ * Sitemap ausgeschlossen. Diese Isolation ist kein Zufall, sondern wird explizit
+ * geprüft in tests/technical/funnel-isolation.spec.ts.
  */
 
 import { test, expect } from "./fixtures";
@@ -12,7 +18,7 @@ import { crawlSite, normalizePathname, BASE_URL } from "../helpers/crawl";
 
 const cfg = seoConfig.orphanPages;
 
-test("Orphan Page Detection", async ({ page, ga4Data }) => {
+test("Orphan Page Detection", async ({ page }) => {
   // Step 1: Get sitemap URLs
   const sitemapResponse = await page.goto(`${BASE_URL}/sitemap.xml`, {
     waitUntil: "domcontentloaded",
@@ -50,72 +56,45 @@ test("Orphan Page Detection", async ({ page, ga4Data }) => {
   console.log(`Reachable via internal links: ${reachableUrls.size}`);
 
   // Step 3: Find orphans
-  const orphans: { url: string; hasTraffic: boolean; sessions: number }[] = [];
+  const orphans: { url: string }[] = [];
   for (const url of sitemapUrls) {
     if (!reachableUrls.has(url)) {
-      const ga4 = ga4Data.get(url);
-      orphans.push({
-        url,
-        hasTraffic: ga4 ? ga4.sessions > 0 : false,
-        sessions: ga4?.sessions ?? 0,
-      });
+      orphans.push({ url });
     }
   }
 
-  // Sort: traffic orphans first (most critical)
-  orphans.sort((a, b) => b.sessions - a.sessions);
-
-  // Step 4: Calculate score with GA4 weighting
+  // Step 4: Calculate score
   const totalPages = sitemapUrls.size;
   if (totalPages === 0) {
     console.log("No sitemap pages found — skipping.");
     return;
   }
 
-  // Each orphan costs 1 point, traffic orphans cost 2x
-  let penaltyPoints = 0;
-  for (const orphan of orphans) {
-    penaltyPoints += orphan.hasTraffic
-      ? cfg.trafficOrphanPenaltyMultiplier
-      : 1;
-  }
-
-  const maxPenalty = totalPages; // worst case: all pages orphaned
-  const score = Math.max(0, Math.round((1 - penaltyPoints / maxPenalty) * 100));
+  const score = Math.max(
+    0,
+    Math.round((1 - orphans.length / totalPages) * 100),
+  );
 
   // Log orphans
   if (orphans.length > 0) {
     console.log(`\nOrphan pages: ${orphans.length}`);
-    const trafficOrphans = orphans.filter((o) => o.hasTraffic);
-    if (trafficOrphans.length > 0) {
-      console.log(`\nCritical — orphans WITH traffic:`);
-      for (const o of trafficOrphans.slice(0, 10)) {
-        console.log(`  ${o.url} (${o.sessions} sessions)`);
-      }
+    for (const o of orphans.slice(0, 20)) {
+      console.log(`  ${o.url}`);
     }
-    const noTrafficOrphans = orphans.filter((o) => !o.hasTraffic);
-    if (noTrafficOrphans.length > 0) {
-      console.log(`\nOrphans without traffic:`);
-      for (const o of noTrafficOrphans.slice(0, 10)) {
-        console.log(`  ${o.url}`);
-      }
-      if (noTrafficOrphans.length > 10) {
-        console.log(`  ... and ${noTrafficOrphans.length - 10} more`);
-      }
+    if (orphans.length > 20) {
+      console.log(`  ... and ${orphans.length - 20} more`);
     }
   } else {
     console.log("\nNo orphan pages found!");
   }
 
-  const details = orphans.map((o) =>
-    o.hasTraffic ? `${o.url} (${o.sessions} sessions) — CRITICAL` : o.url,
-  );
+  const details = orphans.map((o) => o.url);
   reportScore("Orphan Pages", score, cfg.passThreshold, details);
   console.log(`\n${verdict(score, cfg.passThreshold)}`);
 
   // Hard fail: any sitemap page not reachable via internal links is a bug.
   expect(
     orphans,
-    `Found ${orphans.length} orphan page(s) — every sitemap URL must be reachable via internal links:\n${orphans.map((o) => `  - ${o.url}${o.hasTraffic ? ` (${o.sessions} sessions)` : ""}`).join("\n")}`,
+    `Found ${orphans.length} orphan page(s) — every sitemap URL must be reachable via internal links:\n${orphans.map((o) => `  - ${o.url}`).join("\n")}`,
   ).toEqual([]);
 });

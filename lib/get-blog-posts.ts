@@ -23,7 +23,7 @@ interface BlogDir {
 }
 
 function getBlogDirs(): BlogDir[] {
-  const blogDir = path.join(process.cwd(), "app/blog");
+  const blogDir = path.join(process.cwd(), "app/(site)/blog");
   const entries = fs.readdirSync(blogDir, { withFileTypes: true });
   const dirs: BlogDir[] = [];
 
@@ -62,7 +62,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
   const posts: BlogPost[] = [];
 
   for (const dir of dirs) {
-    const mod = await import(`@/app/blog/${dir.importPath}/page`);
+    const mod = await import(`@/app/(site)/blog/${dir.importPath}/page`);
     if (!mod.metaCustom || mod.metaCustom.publish !== true) continue;
 
     const rawTitle =

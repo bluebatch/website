@@ -273,7 +273,7 @@ export function discoverHubs(): Hub[] {
         }
       }
 
-      // Continue walking to find nested hubs (e.g. /use-cases/grosshandel)
+      // Continue walking to find nested hubs (e.g. /branchen/grosshandel)
       walk(fullPath, route);
     }
   }

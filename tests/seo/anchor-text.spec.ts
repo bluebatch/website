@@ -3,7 +3,7 @@
  *
  * Collects all internal link anchor texts across the site.
  * Flags generic/banned anchors and empty anchors (image-only without alt).
- * No GA4 dependency — purely structural.
+ * Purely structural.
  */
 
 import { test, expect } from "./fixtures";

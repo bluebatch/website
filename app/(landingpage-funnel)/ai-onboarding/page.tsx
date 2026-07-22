@@ -49,6 +49,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/ai-onboarding",
   },
+  robots: { index: false },
 };
 
 const reportFacts = [

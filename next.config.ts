@@ -40,10 +40,34 @@ const nextConfig: NextConfig = {
         destination: "/tools/:slug*",
         permanent: true,
       },
+      // Use-Cases wurde zu Branchen umbenannt
+      {
+        source: "/use-cases/:path*",
+        destination: "/branchen/:path*",
+        permanent: true,
+      },
+      {
+        source: "/use-cases",
+        destination: "/branchen",
+        permanent: true,
+      },
+      // Steuerberater-Detailseiten hängen jetzt unter ki-agenten/ bzw. workflows/
+      {
+        source:
+          "/branchen/steuerberater/:slug(mail-agent|mandantenkommunikation|jahresabschluss-ki)",
+        destination: "/branchen/steuerberater/ki-agenten/:slug",
+        permanent: true,
+      },
+      {
+        source:
+          "/branchen/steuerberater/:slug(belegpruefung|dokumentenverarbeitung|datev-jira-task-orchestration|e-rechnung-verarbeitung|mandanten-onboarding)",
+        destination: "/branchen/steuerberater/workflows/:slug",
+        permanent: true,
+      },
       // Legacy short URL → DATEV use-case page
       {
         source: "/n8n-datev",
-        destination: "/use-cases/steuerberater/datev-jira-task-orchestration",
+        destination: "/branchen/steuerberater/workflows/datev-jira-task-orchestration",
         permanent: true,
       },
       // Retired page → Angebot-/Value-Seite (still linked from Standorte)

@@ -16,7 +16,7 @@ export interface CityEntry {
  * page.tsx as the single source of truth for publish status.
  */
 export function getAllCities(): CityEntry[] {
-  const standorteDir = path.join(process.cwd(), "app/standorte");
+  const standorteDir = path.join(process.cwd(), "app/(site)/standorte");
   const entries: CityEntry[] = [];
 
   for (const dir of fs.readdirSync(standorteDir, { withFileTypes: true })) {

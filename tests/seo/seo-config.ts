@@ -6,15 +6,6 @@
  */
 
 export const seoConfig = {
-  /** GA4 data settings */
-  ga4: {
-    dateRangeDays: 28,
-    /** Pages with >= this many sessions are considered "key" pages */
-    minSessionsForKeyPage: 5,
-    /** Pages with >= this many sessions get stricter contextual link requirements */
-    highTrafficThreshold: 20,
-  },
-
   /** Test 1: Content Hub Completeness */
   contentHubs: {
     passThreshold: 70,
@@ -29,15 +20,11 @@ export const seoConfig = {
     passThreshold: 60,
     /** Minimum internal links inside <main> for normal pages */
     minLinksPerPage: 2,
-    /** Minimum internal links inside <main> for high-traffic pages */
-    minLinksHighTrafficPage: 4,
   },
 
   /** Test 3: Orphan Page Detection */
   orphanPages: {
     passThreshold: 90,
-    /** Orphan pages with GA4 traffic get this multiplier on their penalty */
-    trafficOrphanPenaltyMultiplier: 2,
   },
 
   /** Test 4: Anchor Text Quality */
@@ -54,14 +41,5 @@ export const seoConfig = {
       "read more",
       "learn more",
     ],
-  },
-
-  /** Test 5: Link Equity Distribution */
-  linkEquity: {
-    passThreshold: 60,
-    /** How many top GA4 pages to check for inbound links */
-    topPagesFromGA4: 15,
-    /** Minimum unique pages linking to a key page for full score */
-    minInboundLinks: 3,
   },
 };

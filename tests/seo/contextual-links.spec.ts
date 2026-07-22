@@ -2,7 +2,7 @@
  * Test 2: Contextual Links (Body vs Nav)
  *
  * Checks that pages have real internal links inside <main>/<article>,
- * not just nav/footer links. High-traffic pages (via GA4) need more.
+ * not just nav/footer links.
  */
 
 import { test, expect } from "./fixtures";
@@ -12,7 +12,7 @@ import { crawlSite, normalizePathname, BASE_URL } from "../helpers/crawl";
 
 const cfg = seoConfig.contextualLinks;
 
-test("Contextual Links — body links per page", async ({ page, ga4Data }) => {
+test("Contextual Links — body links per page", async ({ page }) => {
   // Crawl site to get all pages
   const crawled = await crawlSite(page);
   const pages = crawled.filter(
@@ -37,10 +37,7 @@ test("Contextual Links — body links per page", async ({ page, ga4Data }) => {
     const bodyLinks = links.filter((l) => l.location === "body");
     const bodyLinkCount = bodyLinks.length;
 
-    // Determine required threshold based on GA4 traffic
-    const ga4 = ga4Data.get(pathname);
-    const isHighTraffic = ga4 && ga4.sessions >= seoConfig.ga4.highTrafficThreshold;
-    const required = isHighTraffic ? cfg.minLinksHighTrafficPage : cfg.minLinksPerPage;
+    const required = cfg.minLinksPerPage;
 
     total++;
     if (bodyLinkCount >= required) {
@@ -54,9 +51,7 @@ test("Contextual Links — body links per page", async ({ page, ga4Data }) => {
   if (failures.length > 0) {
     console.log("Pages below threshold:");
     for (const f of failures.slice(0, 20)) {
-      const ga4 = ga4Data.get(f.url);
-      const traffic = ga4 ? ` (${ga4.sessions} sessions)` : "";
-      console.log(`  ${f.url}: ${f.bodyLinks} body links, need ${f.required}${traffic}`);
+      console.log(`  ${f.url}: ${f.bodyLinks} body links, need ${f.required}`);
     }
     if (failures.length > 20) {
       console.log(`  ... and ${failures.length - 20} more`);
