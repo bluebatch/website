@@ -1,5 +1,6 @@
 import Navigation from "@/components/layout/navigation";
 import Footer from "@/components/layout/footer";
+import Breadcrumbs from "@/components/layout/breadcrumbs";
 import CookieConsent from "@/components/ui/cookie-consent";
 import { getBlogPosts } from "@/lib/get-blog-posts";
 import { resolveHref } from "@/lib/get-canonical-path";
@@ -17,11 +18,14 @@ export default async function SiteLayout({
     title: p.title,
     slug: p.slug,
     href: resolveHref(`/blog/${p.slug}`),
+    image: p.image,
+    date: p.date,
   }));
 
   return (
     <>
       <Navigation latestBlogPosts={latestBlogPosts} />
+      <Breadcrumbs />
       {children}
       <Footer />
       <CookieConsent />

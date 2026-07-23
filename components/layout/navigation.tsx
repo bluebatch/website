@@ -97,26 +97,31 @@ const servicesMenu = {
       href: "/services/tools",
       items: [
         {
+          icon: "/icons/process.svg",
           title: "n8n",
           description: "Workflow-Automatisierung",
           href: "/services/tools/n8n",
         },
         {
+          icon: "/icons/settings.svg",
           title: "Make",
           description: "Visueller Szenario-Builder",
           href: "/services/tools/make",
         },
         {
+          icon: "/icons/lightning-bolt.svg",
           title: "Zapier",
           description: "No-Code Automatisierung",
           href: "/services/tools/zapier",
         },
         {
+          icon: "/icons/adjustments.svg",
           title: "Power Automate",
           description: "Microsoft-Automatisierung",
           href: "/services/tools/power-automate",
         },
         {
+          icon: "/icons/wrench.svg",
           title: "Alle Tools",
           description: "Navision, easybill, Workato u.m.",
           href: "/services/tools",
@@ -134,26 +139,32 @@ const branchenMenu = {
       href: "/branchen/grosshandel",
       cases: [
         {
+          icon: "/icons/privacy.svg",
           title: "Private AI",
           href: "/branchen/grosshandel/private-ai",
         },
         {
+          icon: "/icons/people-group.svg",
           title: "KI-Assistenten",
           href: "/branchen/grosshandel/ki-assistenten",
         },
         {
+          icon: "/icons/admin-with-cogwheels.svg",
           title: "KI-Agenten",
           href: "/branchen/grosshandel/ki-agenten",
         },
         {
+          icon: "/icons/personal-connections.svg",
           title: "Chatbots",
           href: "/branchen/grosshandel/chatbots",
         },
         {
+          icon: "/icons/workflow.svg",
           title: "Workflows",
           href: "/branchen/grosshandel/workflows",
         },
         {
+          icon: "/icons/calculator.svg",
           title: "ROI-Rechner",
           href: "/branchen/grosshandel/roi-rechner",
         },
@@ -165,18 +176,22 @@ const branchenMenu = {
       href: "/branchen/steuerberater",
       cases: [
         {
+          icon: "/icons/privacy.svg",
           title: "Private AI",
           href: "/branchen/steuerberater/private-ai",
         },
         {
+          icon: "/icons/cloud.svg",
           title: "Claude Cowork",
           href: "/branchen/steuerberater/claude-cowork",
         },
         {
+          icon: "/icons/admin-with-cogwheels.svg",
           title: "KI-Agenten",
           href: "/branchen/steuerberater/ki-agenten",
         },
         {
+          icon: "/icons/workflow.svg",
           title: "Workflows",
           href: "/branchen/steuerberater/workflows",
         },
@@ -251,7 +266,13 @@ function ChevronDown({ className }: { className?: string }) {
 }
 
 interface NavigationProps {
-  latestBlogPosts?: { title: string; slug: string; href: string }[];
+  latestBlogPosts?: {
+    title: string;
+    slug: string;
+    href: string;
+    image?: string;
+    date?: string;
+  }[];
 }
 
 export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
@@ -447,8 +468,14 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                             <Link
                               key={caseIndex}
                               href={caseItem.href}
-                              className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                              className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
                             >
+                              {"icon" in caseItem && caseItem.icon && (
+                                <NavIcon
+                                  src={caseItem.icon}
+                                  className="w-4 h-4 shrink-0 text-gray-700 group-hover:text-primary-500 transition-colors"
+                                />
+                              )}
                               <p className="text-sm font-medium text-gray-900 group-hover:text-primary-500">
                                 {caseItem.title}
                               </p>
@@ -499,11 +526,36 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                           <Link
                             key={post.slug}
                             href={post.href}
-                            className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                            className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
                           >
-                            <p className="text-sm font-medium text-gray-900 group-hover:text-primary-500 line-clamp-1">
-                              {post.title}
-                            </p>
+                            {post.image && (
+                              <div className="relative h-12 w-16 shrink-0 overflow-hidden rounded-md bg-gray-100">
+                                <Image
+                                  src={post.image}
+                                  alt=""
+                                  fill
+                                  sizes="64px"
+                                  className="object-cover"
+                                />
+                              </div>
+                            )}
+                            <div className="min-w-0">
+                              <p className="text-sm font-medium text-gray-900 group-hover:text-primary-500 line-clamp-2">
+                                {post.title}
+                              </p>
+                              {post.date && (
+                                <p className="mt-0.5 text-xs text-gray-400">
+                                  {new Date(post.date).toLocaleDateString(
+                                    "de-DE",
+                                    {
+                                      day: "2-digit",
+                                      month: "short",
+                                      year: "numeric",
+                                    },
+                                  )}
+                                </p>
+                              )}
+                            </div>
                           </Link>
                         ))}
                       </div>
