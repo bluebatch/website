@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "was-ist-n8n",
@@ -46,6 +47,15 @@ export default function Page() {  return (
         <BlogHero.Headline>
           Was ist n8n? Der komplette Guide für Einsteiger (2026)
         </BlogHero.Headline>
+
+        <GeoSummary>
+          n8n ist eine Open-Source-Plattform für Workflow-Automatisierung, mit
+          der Unternehmen Apps und Systeme per Drag-and-Drop verbinden. Anders
+          als Zapier oder Make läuft n8n kostenlos auf dem eigenen Server,
+          unterstützt JavaScript und Python im Workflow und ist damit
+          DSGVO-konform betreibbar. Gegründet 2019 in Berlin, im Oktober 2025
+          mit 2,5 Milliarden Dollar bewertet.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "chatgpt-enterprise-deutschland",
@@ -51,6 +52,14 @@ export default function Page() {
           ChatGPT Enterprise in Deutschland: Kosten, DSGVO und
           Rollout-Playbook für den Mittelstand
         </BlogHero.Headline>
+
+        <GeoSummary>
+          ChatGPT Enterprise ist OpenAIs Unternehmenstarif für Organisationen ab
+          150 Seats, mit unbegrenztem GPT-4o, SSO, Admin Center und der Zusage,
+          dass Geschäftsdaten nicht ins Modell-Training fließen. Dieser Guide
+          zeigt deutschen Mittelständlern Kosten, DSGVO-Lage inklusive
+          EU-Datenresidenz, den Beschaffungsweg und ein Rollout-Playbook.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

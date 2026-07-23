@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "claude-cowork-vs-copilot-chatgpt",
@@ -51,6 +52,14 @@ export default function Page() {
           Claude vs. ChatGPT (vs. Copilot): Der Vergleich 2026 für den
           Mittelstand
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Claude (Cowork), ChatGPT Enterprise und Microsoft Copilot sind die
+          drei KI-Assistenten, zwischen denen deutsche Mittelständler mit 50 bis
+          200 Nutzern 2026 wählen. Claude gewinnt bei langen Dokumenten und im
+          managed-private-Modus über Amazon Bedrock, ChatGPT Enterprise beim
+          schnellen Breiten-Rollout, Copilot bei bestehendem Microsoft-365-Stack.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
