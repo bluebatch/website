@@ -437,8 +437,8 @@ Funnel-LP ─────────────────==> nur eigenes For
       und Cowork-/Assistenten-Cluster beider Branchen.
 - [x] **PDL-Rückbau:** Nav-/Footer-Einträge raus, `branchen/personaldienstleister/`
       + Unterseiten per 301 auf `branchen/` umleiten.
-- [ ] **Breadcrumbs:** Design festlegen, auf allen Seiten ab Ebene 2 einbauen,
-      inkl. BreadcrumbList-Schema (Pflicht bei 4 URL-Ebenen).
+- [x] **Breadcrumbs:** auf allen Seiten ab Ebene 2 eingebaut, inkl.
+      BreadcrumbList-Schema (components/layout/breadcrumbs.tsx).
 - [ ] **GEO-Hero-Kurzbeschreibung** auf allen Seiten nachrüsten (siehe
       Grundsatz), beginnend mit Hubs und Money Pages.
 - [x] **Kannibalisierungs-Onsite-Guard:** tests/seo/duplicate-titles.spec.ts —
