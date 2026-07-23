@@ -82,7 +82,7 @@ export default async function Page({
         />
       </BlogHero>
 
-      <BlogLayout>
+      <BlogLayout meta={metaCustom} metadata={metadata}>
         <BlogLayout.Content>
           {/* 1. Das Problem: Bestellungen erfassen frisst Stunden */}
           <div>

@@ -70,7 +70,7 @@ export default function Page() {
         />
       </BlogHero>
 
-      <BlogLayout>
+      <BlogLayout meta={metaCustom} metadata={metadata}>
         <BlogLayout.Content>
           {/* 1. Flexibilität als neuer Maßstab */}
           <div>

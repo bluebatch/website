@@ -66,7 +66,7 @@ export default function Page() {
         />
       </BlogHero>
 
-      <BlogLayout>
+      <BlogLayout meta={metaCustom} metadata={metadata}>
         <BlogLayout.Content>
           <div>
             <Typo.H2 id="pricing-stand-2026">

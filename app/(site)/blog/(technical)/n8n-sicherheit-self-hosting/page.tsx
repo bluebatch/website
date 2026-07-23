@@ -82,7 +82,7 @@ export default async function Page({
         />
       </BlogHero>
 
-      <BlogLayout>
+      <BlogLayout meta={metaCustom} metadata={metadata}>
         <BlogLayout.Content>
           {/* 1. Warum n8n-Sicherheit jetzt Top-Priorität ist */}
           <div>

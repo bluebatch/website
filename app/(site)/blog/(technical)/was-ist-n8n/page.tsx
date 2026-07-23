@@ -76,7 +76,7 @@ export default function Page() {  return (
         />
       </BlogHero>
 
-      <BlogLayout>
+      <BlogLayout meta={metaCustom} metadata={metadata}>
         <BlogLayout.Content>
           {/* 1. Was ist n8n? */}
           <div>
