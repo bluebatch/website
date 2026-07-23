@@ -56,8 +56,31 @@ export function FaqContainer({
     }
   });
 
+  // FAQPage-Schema (schema.org) für AI Overviews, ChatGPT und Perplexity.
+  // Der Inhalt steht ohnehin schon im DOM, das JSON-LD macht ihn nur
+  // maschinenlesbar. Pro Seite existiert genau ein FaqContainer, daher
+  // entsteht hier auch nur ein FAQPage-Block.
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="space-y-4 text-center">
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <Typo.H3>{headline}</Typo.H3>
       <Typo.Paragraph>
         Hier finden Sie die Antworten auf häufig gestellte Fragen.
