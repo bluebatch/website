@@ -19,9 +19,9 @@ export const metaCustom: BlogMeta = {
 
 export const metadata: Metadata = {
   title:
-    "Claude vs. ChatGPT (vs. Copilot) Vergleich 2026: Enterprise, DSGVO, Preise | Bluebatch",
+    "Claude vs. ChatGPT 2026: Welches Tool für welche Firma? | Bluebatch",
   description:
-    "Claude vs. ChatGPT im Vergleich für deutsche Unternehmen. Plus Microsoft Copilot. Modelle, Datenschutz, ChatGPT Enterprise, Preise und Entscheidungshilfe für 50 bis 200 Nutzer.",
+    "Claude für lange Dokumente und DSGVO, ChatGPT Enterprise für schnelles Rollout, Copilot bei Microsoft 365. Vergleich mit Preisen und Entscheidungsregel für 50 bis 200 Nutzer.",
   openGraph: {
     title:
       "Claude vs. ChatGPT (vs. Copilot): Der ehrliche Vergleich für den Mittelstand",
