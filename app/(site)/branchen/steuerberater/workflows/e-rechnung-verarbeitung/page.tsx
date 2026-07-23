@@ -9,9 +9,9 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ComparisonCard, {
   BeforeCard,
@@ -161,13 +161,15 @@ export default function Page() {
               E-Rechnung KI für Steuerkanzleien: XRechnung und ZUGFeRD ohne
               Abtippen
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Seit dem 01.01.2025 muss jeder B2B-Mandant E-Rechnungen
-              empfangen können. Bluebatch parst XRechnung und ZUGFeRD direkt
-              aus dem XML, validiert per KoSIT gegen EN 16931 und übergibt
-              geprüfte Buchungsvorschläge an DATEV. Vorsteuersicher,
-              GoBD-konform, ohne OCR-Fehlerquote.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Die E-Rechnung-Verarbeitung von Bluebatch ist ein n8n-Workflow
+              für Steuerkanzleien, der XRechnung und ZUGFeRD direkt aus dem
+              XML parst, per KoSIT-Validator gegen EN 16931 prüft und als
+              Buchungsvorschlag an DATEV übergibt. Die Vollkosten sinken von
+              11,50 Euro auf 0,10 Euro pro Rechnung, die Verarbeitung dauert
+              30 Sekunden statt 12 Minuten. Das Original-XML wird GoBD-konform
+              archiviert.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
             </Hero2ColumnCallToAction>

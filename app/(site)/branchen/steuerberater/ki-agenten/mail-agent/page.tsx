@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
 import IntroBox from "@/components/ui/intro-box";
@@ -240,13 +241,14 @@ export default function Page() {
         <StatsLeadHero.Headline>
           Der Mail Agent für Steuerkanzleien
         </StatsLeadHero.Headline>
-        <StatsLeadHero.Description>
-          Ihr Postfach ist voll mit Mandanten-Mails: Rückfragen,
-          Belegnachforderungen, Fristen, Statusanfragen. Der Mail Agent liest jede
-          eingehende Mail, erkennt den Mandanten, sortiert nach Thema und
-          Dringlichkeit und schreibt den Antwortentwurf im Ton Ihrer Kanzlei. Ihr
-          Team prüft und gibt frei, nichts geht ungefragt raus.
-        </StatsLeadHero.Description>
+        <GeoSummary>
+          Der Mail Agent von Bluebatch ist ein KI-Agent für Steuerkanzleien, der
+          Mandanten-Mails liest, den Mandanten über DATEVconnect in DATEV
+          erkennt und Antwortentwürfe im Kanzlei-Ton schreibt. Der Agent
+          arbeitet direkt im Microsoft-365-Postfach über die Microsoft Graph API
+          und senkt den E-Mail-Aufwand um rund 60 Prozent. Jede Antwort wird vom
+          Kanzleiteam geprüft und freigegeben.
+        </GeoSummary>
         <StatsLeadHero.Cta>
           <ContactButton icon="chat">Demo anfragen</ContactButton>
         </StatsLeadHero.Cta>

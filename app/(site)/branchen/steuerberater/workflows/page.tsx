@@ -4,6 +4,7 @@ import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import SimpleGrid from "@/components/layout/simple-grid";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import InternalLink from "@/components/buttons/internal-link";
@@ -84,11 +85,14 @@ export default function Page() {
       <ContentWrapper isFirstSection>
         <div className="text-center max-w-3xl mx-auto">
           <Typo.H1>Workflows für Steuerberater</Typo.H1>
-          <Typo.Paragraph className="text-gray-600 mt-4 mb-8">
-            Workflows automatisieren wiederkehrende Prozesse Schritt für
-            Schritt: Belege erfassen, Rechnungen validieren, Systeme
-            synchronisieren - zuverlässig, nachvollziehbar und GoBD-konform.
-          </Typo.Paragraph>
+          <GeoSummary align="center" className="mt-4">
+            Workflows automatisieren wiederkehrende Kanzlei-Prozesse Schritt für
+            Schritt: Belegprüfung mit GoBD-Validierung, Dokumentenverarbeitung
+            per KI-OCR, DATEV-Jira-Synchronisation, E-Rechnungs-Verarbeitung
+            und Mandanten-Onboarding. Bluebatch baut diese fünf Workflows für
+            Steuerkanzleien - zuverlässig, nachvollziehbar und mit bis zu 85%
+            weniger manuellem Aufwand.
+          </GeoSummary>
           <ContactButton icon="chat">Beratung anfragen</ContactButton>
         </div>
       </ContentWrapper>

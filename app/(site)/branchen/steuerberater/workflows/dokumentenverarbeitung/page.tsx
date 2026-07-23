@@ -4,6 +4,7 @@ import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
 import BackgroundHero from "@/components/heroes/background-hero";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ComparisonCard, {
   BeforeCard,
@@ -110,13 +111,15 @@ export default function Page() {
               automatisch erfassen
             </>
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Belegerfassung bindet pro Mandant rund 41 Stunden pro Monat. KI-OCR
-            klassifiziert Eingangsrechnungen, Bewirtungsbelege, Kassenbons und
-            Reisekosten, extrahiert alle Pflichtfelder und liefert einen
-            DATEV-fertigen Buchungsvorschlag, von 25 Minuten auf unter 1 Minute
-            pro Beleg.
-          </BackgroundHero.Description>
+          <GeoSummary align="center">
+            Die KI-Dokumentenverarbeitung von Bluebatch ist ein n8n-Workflow
+            für Steuerkanzleien, der Eingangsrechnungen, Bewirtungsbelege,
+            Kassenbons und Reisekosten per Multi-OCR klassifiziert und als
+            GoBD-konformen, DATEV-fertigen Buchungsvorschlag liefert. Die
+            Erfassungszeit sinkt von 25 Minuten auf unter 1 Minute pro Beleg,
+            das spart rund 41 Stunden pro Mandant und Monat bei bis zu 99
+            Prozent OCR-Trefferquote.
+          </GeoSummary>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
           </BackgroundHero.CallToAction>

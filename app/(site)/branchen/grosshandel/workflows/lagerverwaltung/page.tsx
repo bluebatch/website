@@ -22,6 +22,7 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import { FaqContainer } from "@/components/ui/faqs";
 import IntroBox from "@/components/ui/intro-box";
 import Customer from "@/components/sections/customer/customer";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const pageConfig: PageConfig = {
   title: "Lagerverwaltung",
@@ -118,11 +119,15 @@ export default function Page() {
             <br />
             mit automatischer Nachbestellung
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Echtzeit-Bestandssynchronisation über alle Lager und Kanäle.
-            KI-basierte Bedarfsprognosen lösen automatisch Nachbestellungen aus.
-            Nie wieder Fehlbestand oder Überbestand.
-          </BackgroundHero.Description>
+          <GeoSummary align="center">
+            Die automatisierte Lagerverwaltung ist ein KI-Workflow von
+            Bluebatch für den Großhandel, der Bestände in Echtzeit zwischen
+            ERP, WMS, Marktplätzen und Shops synchronisiert und
+            Nachbestellungen automatisch auslöst. KI-Bedarfsprognosen
+            erreichen 80-90% Genauigkeit, die Bestandsgenauigkeit steigt auf
+            über 95%. Typische Ergebnisse nach 6 Monaten: 8-10% mehr Umsatz
+            und 17% weniger Kapitalbindung.
+          </GeoSummary>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Bestandsanalyse anfragen</ContactButton>
           </BackgroundHero.CallToAction>

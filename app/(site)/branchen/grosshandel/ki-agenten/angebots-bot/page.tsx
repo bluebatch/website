@@ -10,11 +10,11 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
@@ -259,12 +259,14 @@ export default async function Page({
             <Hero2ColumnHeadline>
               {overrides?.headline ?? "Von der Anfrage zum Angebot in Minuten"}
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Leads, die innerhalb von 5 Minuten kontaktiert werden, haben eine
-              21x höhere Qualifizierungsrate. Unser Angebots-Bot erstellt
-              professionelle Angebote in Minuten statt Stunden -
-              vollautomatisch.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Der Angebots-Bot von Bluebatch ist ein KI-Agent für den
+              Großhandel, der Kundenanfragen automatisch in fertige PDF-Angebote
+              umwandelt und versendet. Die Angebotserstellung wird 70-90%
+              schneller, Leads mit Kontakt innerhalb von 5 Minuten erreichen
+              eine 21x höhere Qualifizierungsrate. Der Angebots-Bot integriert
+              CRM- und ERP-Systeme wie HubSpot, Salesforce, SAP und Odoo.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Demo anfragen</ContactButton>
             </Hero2ColumnCallToAction>

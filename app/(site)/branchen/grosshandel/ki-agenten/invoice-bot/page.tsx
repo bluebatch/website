@@ -9,11 +9,11 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
@@ -79,12 +79,14 @@ export default function Page() {
             <Hero2ColumnHeadline>
               n8n Workflow für die Rechnungs&shy;verarbeitung
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Ihre Eingangsrechnungen treffen ein (per E-Mail oder Scan). n8n
-              extrahiert automatisch alle relevanten Daten, gleicht sie ab und
-              stößt den Freigabeprozess an. Kein manuelles Abtippen, keine
-              verlorenen Belege, volle Skontokontrolle.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Der Invoice-Bot von Bluebatch ist ein n8n-Workflow für den
+              Großhandel, der Eingangsrechnungen automatisch erfasst, prüft und
+              zur Freigabe weiterleitet. Die KI extrahiert Rechnungsnummer,
+              Beträge, Steuersätze und Fälligkeiten und reduziert den manuellen
+              Aufwand um 80%. Ein 3-Wege-Matching gleicht jede Rechnung mit
+              Bestellung und Wareneingang ab und sichert Skontofristen.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat"></ContactButton>
             </Hero2ColumnCallToAction>

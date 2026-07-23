@@ -10,10 +10,10 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ComparisonCard, {
   BeforeCard,
@@ -158,13 +158,14 @@ export default function Page() {
             <Hero2ColumnHeadline>
               KI Jahresabschluss: Saison-Peak entzerrt
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Saldenabstimmung, SKR03/SKR04 auf HGB-Mapping, Anhang nach §
-              264-289 HGB und Lagebericht: KI liefert pro Mandant einen
-              prüffähigen Entwurf. Der Steuerberater reviewt, korrigiert und
-              gibt frei. So schrumpft der Abschluss von 40-200 h auf 8-40 h und
-              Q1/Q2 ist kein Überstundenmarathon mehr.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Der KI-Jahresabschluss von Bluebatch ist ein n8n-Workflow für
+              Steuerkanzleien, der die DATEV-Saldenliste importiert, SKR03/SKR04
+              auf HGB mappt und Anhang sowie Lagebericht als prüffähigen
+              Entwurf erstellt. Der Steuerberater reviewt und gibt frei. Der
+              Aufwand pro Mandant sinkt von 40-200 Stunden auf 8-40 Stunden,
+              also 60-80 Prozent weniger Zeit.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Pilot anfragen</ContactButton>
             </Hero2ColumnCallToAction>

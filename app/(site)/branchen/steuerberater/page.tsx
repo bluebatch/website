@@ -9,11 +9,11 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
@@ -101,11 +101,13 @@ export default function Page() {
             <Hero2ColumnHeadline>
               KI für Steuerberater: Automatisierung für die Kanzlei
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Von der Belegprüfung über die Mandantenkommunikation bis zum
-              Jahresabschluss - wir automatisieren die repetitiven Prozesse in
-              Ihrer Kanzlei. Weniger Routine, mehr Zeit für echte Beratung.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              KI für Steuerberater heißt bei Bluebatch: Private AI und Claude
+              Cowork für § 203-konforme Verarbeitung, KI-Agenten als digitale
+              Sachbearbeiter und automatisierte Workflows von der Belegprüfung
+              bis zum Jahresabschluss - bis zu 85% weniger Routineaufwand,
+              mehr Zeit für Beratung.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>

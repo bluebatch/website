@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { ProductTileGrid } from "@/components/cards/product-tile";
@@ -65,11 +66,14 @@ export default function Page() {
       <ContentWrapper isFirstSection>
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <Typo.H1>KI-Agenten für den Großhandel</Typo.H1>
-          <Typo.Paragraph className="text-gray-600 mt-4 mb-8">
-            KI-Agenten arbeiten wie digitale Mitarbeiter: Sie lesen Anfragen
-            und Rechnungen, kennen Ihre Preise und Prozesse und bereiten alles
-            vor - Ihr Team prüft und gibt frei.
-          </Typo.Paragraph>
+          <GeoSummary align="center" className="mt-4">
+            KI-Agenten arbeiten wie digitale Mitarbeiter im Großhandel: Der
+            Angebots-Bot verwandelt Kundenanfragen in fertige Angebote mit 21x
+            höherer Qualifizierungsrate, der Invoice-Bot verarbeitet
+            Eingangsrechnungen mit 80% weniger Aufwand. Bluebatch
+            implementiert beide Agenten mit ERP-Anbindung - Ihr Team gibt
+            frei.
+          </GeoSummary>
           <ContactButton icon="chat">Beratung anfragen</ContactButton>
         </div>
 

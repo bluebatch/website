@@ -13,10 +13,10 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ComparisonCard, {
   BeforeCard,
   AfterCard,
@@ -362,13 +362,15 @@ export default function Page() {
               KI-Chatbot für deinen Großhandel mit ERP-Anbindung, in 5 Tagen
               live
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Open WebUI als sichere, selbst-gehostete Chat-Oberfläche, plus
-              fertige n8n-Connectoren zu Ebootis, MS Navision und SharePoint.
-              Stammdaten, Bestände, Aufträge und Belege per Chat statt durch
-              fünf ERP-Masken klicken. Schneller Pilot, geringe Investition,
-              klarer Pfad zu größeren Workflows.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Der KI-Chatbot von Bluebatch ist eine selbst gehostete Open
+              WebUI-Chat-Oberfläche für den Großhandel mit fertigen
+              n8n-Connectoren zu Ebootis, MS Navision und SharePoint.
+              Mitarbeiter fragen Stammdaten, Bestände, Aufträge und Belege per
+              Chat ab, in unter 30 Sekunden statt 5-10 Minuten pro Auskunft.
+              Das Setup kostet 1.000 € einmalig, der Betrieb 50 € pro Monat,
+              Go-Live in 5 Tagen.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Pilot anfragen</ContactButton>
             </Hero2ColumnCallToAction>

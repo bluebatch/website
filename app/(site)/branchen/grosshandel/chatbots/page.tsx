@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { ProductTileGrid } from "@/components/cards/product-tile";
@@ -48,11 +49,13 @@ export default function Page() {
       <ContentWrapper isFirstSection>
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <Typo.H1>KI-Chatbots für den Großhandel</Typo.H1>
-          <Typo.Paragraph className="text-gray-600 mt-4 mb-8">
+          <GeoSummary align="center" className="mt-4">
             Ein KI-Chatbot mit ERP-Anbindung beantwortet Kunden- und
-            Mitarbeiterfragen direkt aus Ihren Systemen: Bestände, Preise,
-            Lieferzeiten - ohne Warteschleife, rund um die Uhr.
-          </Typo.Paragraph>
+            Mitarbeiterfragen direkt aus Ihren Systemen: Bestände, Preise und
+            Lieferzeiten in Echtzeit, rund um die Uhr. Bluebatch liefert den
+            Chatbot mit Connectoren zu Navision, Ebootis und SharePoint - ab
+            1.000 € Setup, in 5 Tagen live.
+          </GeoSummary>
           <ContactButton icon="chat">Beratung anfragen</ContactButton>
         </div>
 

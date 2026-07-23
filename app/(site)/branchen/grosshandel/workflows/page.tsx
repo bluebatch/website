@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { ProductTileGrid } from "@/components/cards/product-tile";
@@ -79,11 +80,15 @@ export default function Page() {
       <ContentWrapper isFirstSection>
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <Typo.H1>Workflows für den Großhandel</Typo.H1>
-          <Typo.Paragraph className="text-gray-600 mt-4 mb-8">
-            Workflows automatisieren wiederkehrende Prozesse Schritt für
-            Schritt: Aufträge erfassen, Bestellungen abwickeln, Rechnungen
-            prüfen, Bestände synchronisieren - zuverlässig und nachvollziehbar.
-          </Typo.Paragraph>
+          <GeoSummary align="center" className="mt-4">
+            Workflows automatisieren die Kernprozesse im Großhandel Schritt für
+            Schritt: Auftragserfassung aus E-Mails und PDFs, Bestellabwicklung,
+            Lagerverwaltung, 3-Wege-Rechnungsprüfung, Zertifikatsprüfung und
+            easybill-Automation. Bluebatch baut diese sechs Workflows auf
+            n8n-Basis mit Anbindung an ERP-Systeme wie Navision und easybill.
+            Das Ergebnis: 80-90% schnellere Bearbeitung, unter 1% Fehlerquote,
+            jeder Schritt nachvollziehbar protokolliert.
+          </GeoSummary>
           <ContactButton icon="chat">Beratung anfragen</ContactButton>
         </div>
 

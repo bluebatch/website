@@ -8,6 +8,7 @@ import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { getRewriteOverrides } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import BackgroundHero from "@/components/heroes/background-hero";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ComparisonCard, {
   BeforeCard,
@@ -236,12 +237,15 @@ export default async function Page({
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Bestellung erfassen aus E-Mail, PDF, Fax, EDI oder Portal - n8n
-            extrahiert alle Daten, validiert gegen ERP und Lager und erstellt
-            den Auftrag. So optimieren Sie den gesamten Bestellprozess im
-            Einkauf - von 2-3 Tagen auf 1-2 Stunden Bearbeitungszeit.
-          </BackgroundHero.Description>
+          <GeoSummary align="center">
+            Die automatische Auftragserfassung von Bluebatch ist ein
+            n8n-Workflow für den Großhandel, der Bestellungen aus E-Mail, PDF,
+            Fax, EDI und Portalen ausliest, gegen das ERP validiert und als
+            Auftrag bucht. Die Bearbeitungszeit sinkt von 2-3 Tagen auf 1-2
+            Stunden bei einer Fehlerquote unter 1%. Unterstützt werden
+            ERP-Systeme wie SAP S/4HANA, Dynamics 365 Business Central und
+            Microtech BüroPlus.
+          </GeoSummary>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
           </BackgroundHero.CallToAction>

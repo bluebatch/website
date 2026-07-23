@@ -16,6 +16,7 @@ import { FaqContainer } from "@/components/ui/faqs";
 import IntroBox from "@/components/ui/intro-box";
 import Customer from "@/components/sections/customer/customer";
 import KpiCard from "@/components/cards/kpi-card";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const pageConfig: PageConfig = {
   title: "3-Wege-Rechnungsprüfung",
@@ -100,12 +101,15 @@ export default async function Page({
             <BackgroundHero.Highlight>3-Wege-Matching</BackgroundHero.Highlight>
             <br />für den Großhandel
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Unsere automatische Rechnungsprüfung erkennt Abweichungen zwischen
-            Bestellung, Wareneingang und Rechnung, routet Ausnahmen intelligent
-            und beschleunigt die Freigabe um bis zu 95%. Keine manuellen
-            Vergleiche, keine verpassten Skonti.
-          </BackgroundHero.Description>
+          <GeoSummary align="center">
+            Die automatische 3-Wege-Rechnungsprüfung ist ein KI-Workflow von
+            Bluebatch für den Großhandel, der jede Rechnung zeilenweise mit
+            Bestellung und Wareneingang im ERP abgleicht. 75-85% der
+            Rechnungen laufen vollautomatisch durch, mit über 98%
+            Matching-Genauigkeit und 95% schnellerer Freigabe. Bei 1.000
+            Rechnungen pro Monat spart der Workflow rund 265.000 € jährlich,
+            amortisiert in 2-4 Monaten.
+          </GeoSummary>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
           </BackgroundHero.CallToAction>

@@ -64,11 +64,13 @@ Grundsätze:
   Kauf-Sektion" geben und keine reinen Listen-Übersichten (die hatten wir:
   laut SEO-Daten hat sie niemand genutzt). Wiederverwendbare Bausteine
   (ProductTile & Co.) ja, Template-Engine nein.
-- **GEO-Kurzbeschreibung im Hero (jede Seite):** Jede Seite beginnt mit einer
-  Hero-Section, die eine Kurzbeschreibung enthält — lang genug, dass eine KI
-  (AI Overviews, ChatGPT & Co.) daraus das Wesentliche der ganzen Seite ziehen
-  kann: Was ist das, für wen, was ist das Ergebnis/Angebot in Zahlen. Fehlt
-  aktuell noch, wird beim Umbau nachgerüstet.
+- **GEO-Kurzbeschreibung im Hero (jede Seite):** Jede Seite beginnt direkt
+  unter der H1 mit einer Kurzbeschreibung via `GeoSummary`-Komponente
+  (`components/ui/geo-summary.tsx`). Spezifikation aus der GEO-Recherche:
+  **40-60 Wörter, 2-3 Sätze, answer-first** (Satz 1 = „Was ist das und für
+  wen?"), mit konkreten Zahlen/Entitäten, ohne mehrdeutige Pronomen — das
+  Format, das LLMs am zuverlässigsten als Antwort extrahieren. Markiert mit
+  `data-geo="summary"`.
 - **Layout-Trennung per Route Group:** Hauptseiten unter `app/(site)/`
   (Navigation + Footer), Funnel-LPs unter `app/(landingpage-funnel)/`
   (Minimal-Chrome, Sackgasse). URLs bleiben davon unberührt.

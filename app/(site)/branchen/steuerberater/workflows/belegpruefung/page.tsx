@@ -9,10 +9,10 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ComparisonCard, {
   BeforeCard,
@@ -117,13 +117,14 @@ export default function Page() {
               KI-Belegerfassung für Steuerkanzleien: GoBD-konform und
               DATEV-ready
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Manuelle Belegprüfung gegen GoBD, §14 UStG und Pflichtangaben
-              bindet 3 bis 6 Stunden pro Monat und Mandant. Ein n8n-Workflow
-              mit KI-OCR, regelbasierter Validierung und Anomalieerkennung
-              übernimmt den Standardfall in unter einer Minute pro Beleg, mit
-              voller Übergabe an DATEV.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Die KI-Belegerfassung von Bluebatch ist ein n8n-Workflow für
+              Steuerkanzleien, der Belege per KI-OCR erfasst, GoBD-konform
+              gegen §14 UStG validiert und an DATEV übergibt. Statt 3 bis 6
+              Stunden pro Mandant und Monat dauert die Prüfung unter 60
+              Sekunden pro Beleg, die Fehlerquote sinkt auf unter 0,1 Prozent
+              bei 85 Prozent weniger Aufwand.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
             </Hero2ColumnCallToAction>

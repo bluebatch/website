@@ -18,11 +18,11 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
@@ -183,13 +183,15 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Claude, DSGVO- und § 203-StGB-konform für Ihre Kanzlei
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Steuerberater und Wirtschaftsprüfer arbeiten täglich mit
-              Mandantendaten unter Berufsgeheimnis. Wir richten Claude so ein, dass
-              Sie die volle Stärke moderner KI nutzen, ohne die Kontrolle über Ihre
-              Daten abzugeben. Auf DSGVO-konformer Infrastruktur, mit AVV und
-              § 203-konformem Setup.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Claude Cowork von Bluebatch ist eine verwaltete Claude-Umgebung
+              für Steuerberater und Wirtschaftsprüfer, die DSGVO- und
+              § 203-StGB-konform arbeitet. Die Daten laufen über
+              AWS-Infrastruktur in der Region Frankfurt (EU), mit AVV,
+              dediziertem Tenant und ohne Training mit Kanzleidaten. Bluebatch
+              übernimmt Einrichtung und Konfiguration komplett, in vier
+              Schritten vom Erstgespräch bis zum Start.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>

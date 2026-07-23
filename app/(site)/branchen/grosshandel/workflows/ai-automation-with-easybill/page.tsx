@@ -9,7 +9,6 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
@@ -47,6 +46,7 @@ import IntroBox from "@/components/ui/intro-box";
 import Customer from "@/components/sections/customer/customer";
 import KpiCard from "@/components/cards/kpi-card";
 import ToolLink from "@/components/ui/tool-link";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const pageConfig: PageConfig = {
   title: "KI-Automatisierung mit easybill",
@@ -131,12 +131,15 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Rechnungen und Buchhaltung in easybill vollautomatisch
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Vom Auftragseingang über die Rechnungserstellung bis zum
-              Zahlungseingang - automatisieren Sie Ihren gesamten
-              Dokumentenfluss in easybill mit n8n-Workflows und KI. 80% weniger
-              manuelle Buchhaltungsarbeit.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Die KI-Automatisierung mit easybill ist ein n8n-Workflow von
+              Bluebatch für den Großhandel, der Rechnungen, Lieferscheine und
+              Mahnungen über die easybill REST-API vollautomatisch erstellt,
+              inklusive ZUGFeRD 2.x, XRechnung 3.0 und DATEV-Export. Aufträge
+              werden in 3 Sekunden zur Rechnung, die manuelle
+              Buchhaltungsarbeit sinkt um 80%. Bei 200 Rechnungen pro Woche
+              spart das über 120.000 € jährlich, amortisiert in 2-3 Monaten.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Demo anfragen</ContactButton>
             </Hero2ColumnCallToAction>

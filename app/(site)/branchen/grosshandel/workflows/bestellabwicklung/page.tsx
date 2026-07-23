@@ -11,11 +11,11 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
@@ -212,11 +212,15 @@ export default async function Page({
               {overrides?.headline ??
                 "Von der Bestellung zur Auslieferung - vollautomatisch"}
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Bestellungen werden validiert, an das Lager geroutet,
-              kommissioniert und versendet - alles orchestriert durch n8n.
-              80-90% schnellere Bearbeitung, 95%+ Auftragsgenauigkeit.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Die automatisierte Bestellabwicklung von Bluebatch ist ein
+              n8n-Workflow für den Großhandel, der Bestellungen validiert, ans
+              optimale Lager routet, kommissioniert und versendet. Die
+              Bearbeitung wird 80-90% schneller bei über 95%
+              Auftragsgenauigkeit, die Durchlaufzeit sinkt von 2-3 Tagen auf
+              2-4 Stunden. Bluebatch bindet ERP-Systeme wie SAP, NetSuite und
+              Dynamics sowie Carrier wie DHL und UPS an.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Prozessanalyse anfragen</ContactButton>
             </Hero2ColumnCallToAction>

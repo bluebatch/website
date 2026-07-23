@@ -33,6 +33,7 @@ import RoiCalculation, {
   RoiTotal,
 } from "@/components/sections/roi-calculation";
 import ProblemFirstHero from "@/components/heroes/problem-first-hero";
+import GeoSummary from "@/components/ui/geo-summary";
 import WorkflowDiagram from "@/components/sections/workflow-diagram";
 import KpiCard from "@/components/cards/kpi-card";
 import SimpleCard from "@/components/cards/simple-card";
@@ -136,6 +137,14 @@ export default function Page() {
 
       {/* 2. WORKFLOW DIAGRAMM — sync */}
       <ContentWrapper colorScheme="gradient-cool">
+        <GeoSummary align="center">
+          Die DATEV-Jira-Task-Orchestration von Bluebatch ist ein
+          bidirektionaler n8n-Sync für Steuerkanzleien, der Aufgaben, Fristen
+          und Status zwischen DATEV Eigenorganisation comfort und Jira
+          automatisch abgleicht. Der Aufwand pro Vorgang sinkt von 15 bis 25
+          Minuten auf 2 Minuten, die SLA-Treffer steigen um 30 Prozent, bis zu
+          25 Stunden Doppelpflege pro Woche entfallen.
+        </GeoSummary>
         <IntroBox>
           <IntroBox.PreHeadline>Der Sync im Detail</IntroBox.PreHeadline>
           <IntroBox.Headline>

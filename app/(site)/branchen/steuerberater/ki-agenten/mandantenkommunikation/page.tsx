@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import type { PageConfig } from "@/lib/get-subpages";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -148,12 +149,14 @@ export default function Page() {
         <StatsLeadHero.Headline>
           KI Mandantenkommunikation für Steuerkanzleien
         </StatsLeadHero.Headline>
-        <StatsLeadHero.Description>
-          Routine-Anfragen, Belegnachforderungen und Fristen-Reminder laufen
-          automatisch über einen n8n-Workflow mit RAG auf der Mandantenakte.
-          Sachbearbeiter sparen 3 bis 5 Stunden pro Tag, Mandanten bekommen
-          rund um die Uhr eine Antwort.
-        </StatsLeadHero.Description>
+        <GeoSummary>
+          Die KI-Mandantenkommunikation von Bluebatch ist ein n8n-Workflow für
+          Steuerkanzleien, der Routineanfragen, Belegnachforderungen und
+          Fristen-Reminder automatisch beantwortet, mit RAG auf DATEV und
+          Mandantenakte. Sachbearbeiter sparen 3 bis 5 Stunden pro Tag, der
+          Belegrücklauf sinkt von 8 auf 3 Wochen. Mandanten erhalten rund um
+          die Uhr eine Antwort, fachliche Fragen gehen an den Sachbearbeiter.
+        </GeoSummary>
         <StatsLeadHero.Cta>
           <ContactButton icon="chat">Demo anfragen</ContactButton>
         </StatsLeadHero.Cta>

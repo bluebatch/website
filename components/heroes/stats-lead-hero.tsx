@@ -6,6 +6,7 @@ import {
 } from "react";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
+import GeoSummary from "@/components/ui/geo-summary";
 
 /**
  * StatsLeadHero
@@ -121,6 +122,8 @@ function StatsLeadHero({ children }: StatsLeadHeroProps) {
 
   const pre = find(PreHeadline);
   const headline = find(Headline);
+  // GEO-Kurzbeschreibung: darf statt .Description direkt unter der H1 stehen
+  const geo = find(GeoSummary);
   const desc = find(Description);
   const cta = find(Cta);
   const stats = find(Stats);
@@ -132,6 +135,7 @@ function StatsLeadHero({ children }: StatsLeadHeroProps) {
         <div>
           {pre}
           {headline}
+          {geo}
           {desc}
           {cta}
           {stats}

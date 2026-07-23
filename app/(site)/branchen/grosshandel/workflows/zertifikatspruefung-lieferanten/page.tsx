@@ -16,6 +16,7 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import { FaqContainer } from "@/components/ui/faqs";
 import IntroBox from "@/components/ui/intro-box";
 import Customer from "@/components/sections/customer/customer";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const pageConfig: PageConfig = {
   title: "Zertifikatsprüfung Lieferanten",
@@ -77,12 +78,15 @@ export default function Page() {
             <br />
             prüfen und überwachen
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            ISO, FSSC, Bio, HACCP - alle Zertifikate zentral verwaltet. n8n
-            überwacht Ablaufdaten, sendet Erinnerungen und validiert gegen
-            Akkreditierungsstellen. Nie wieder abgelaufene Zertifikate
-            übersehen.
-          </BackgroundHero.Description>
+          <GeoSummary align="center">
+            Die automatische Zertifikatsprüfung ist ein KI-Workflow von
+            Bluebatch für Großhändler mit 50-200 Lieferanten, der Zertifikate
+            wie ISO, FSSC, Bio und HACCP zentral erfasst, gegen
+            Akkreditierungsdatenbanken wie IAF CertSearch validiert und
+            Ablaufdaten überwacht. Gestaffelte Erinnerungen ab 60 Tagen vor
+            Ablauf sichern 99% Compliance-Quote. Der Workflow spart 60 Stunden
+            pro Monat und reduziert die Audit-Zeit um 90%.
+          </GeoSummary>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Compliance-Check anfragen</ContactButton>
           </BackgroundHero.CallToAction>

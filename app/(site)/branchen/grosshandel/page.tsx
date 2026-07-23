@@ -11,11 +11,11 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
@@ -131,11 +131,13 @@ export default async function Page({
             <Hero2ColumnHeadline>
               KI für den Großhandel: Automatisierung, die sich rechnet
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Von der Auftragserfassung über die Bestellabwicklung bis zur
-              Rechnungsprüfung - wir automatisieren die repetitiven Prozesse in
-              Ihrem Betrieb. Weniger manuelle Arbeit, schnellere Durchlaufzeiten.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              KI für den Großhandel heißt bei Bluebatch: Private AI in eigener
+              Umgebung, KI-Assistenten wie Claude und ChatGPT fürs Team,
+              KI-Agenten und Chatbots mit ERP-Anbindung sowie fest
+              automatisierte Workflows - von der Auftragserfassung bis zur
+              Rechnungsprüfung, mit 80-90% schnelleren Durchlaufzeiten.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>

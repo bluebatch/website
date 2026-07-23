@@ -4,6 +4,7 @@ import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import type { PageConfig } from "@/lib/get-subpages";
 import BackgroundHero from "@/components/heroes/background-hero";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ComparisonCard, {
   BeforeCard,
@@ -103,12 +104,14 @@ export default function Page() {
               in 30 Minuten
             </>
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Stammdaten, GwG-Identifizierung, PEP- und Sanktionslisten-Check,
-            Vollmacht und DATEV-Anlage in einem automatisierten Workflow. Statt
-            4-8 Stunden manueller Arbeit pro Neumandant ein revisionssicherer
-            n8n-Workflow mit Audit-Trail.
-          </BackgroundHero.Description>
+          <GeoSummary align="center">
+            Das KI-Mandanten-Onboarding von Bluebatch ist ein n8n-Workflow für
+            Steuerkanzleien, der Stammdaten, GwG-Identifizierung, PEP- und
+            Sanktionslisten-Check, Vollmacht und DATEV-Anlage automatisiert.
+            Die Kanzlei-Zeit pro Neumandant sinkt von 4 bis 8 Stunden auf 30
+            Minuten, der Aufwand um 85 Prozent und die Fehlerquote um 80
+            Prozent, mit revisionssicherem Audit-Trail.
+          </GeoSummary>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
           </BackgroundHero.CallToAction>

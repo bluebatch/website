@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { ProductTileGrid } from "@/components/cards/product-tile";
@@ -97,12 +98,13 @@ export default function Page() {
       <ContentWrapper isFirstSection>
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <Typo.H1>KI-Agenten für Steuerberater</Typo.H1>
-          <Typo.Paragraph className="text-gray-600 mt-4 mb-8">
-            KI-Agenten arbeiten wie digitale Sachbearbeiter: Sie lesen Mails,
-            kennen den Mandantenkontext und bereiten Antworten und Ergebnisse
-            vor - Ihr Team prüft und gibt frei. Wählen Sie den Agenten, der
-            Ihre Kanzlei am meisten entlastet.
-          </Typo.Paragraph>
+          <GeoSummary align="center" className="mt-4">
+            KI-Agenten sind digitale Sachbearbeiter für Steuerkanzleien: Der Mail
+            Agent beantwortet Mandanten-Mails, die Mandantenkommunikation
+            klärt Fristen und Belege, der KI-Jahresabschluss entzerrt den
+            Saison-Peak um 60-80%. Bluebatch implementiert die Agenten mit
+            DATEV-Anbindung - Ihr Team prüft und gibt jede Antwort frei.
+          </GeoSummary>
           <ContactButton icon="chat">Beratung anfragen</ContactButton>
         </div>
 
