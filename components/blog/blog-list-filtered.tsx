@@ -1,62 +1,45 @@
-"use client";
-
-import { useSearchParams, useRouter } from "next/navigation";
-import { useCallback, useMemo } from "react";
+import Link from "next/link";
 import { blogTags } from "@/lib/blog-tags";
 import type { BlogPost } from "@/lib/get-blog-posts";
 import BlogCard from "@/components/blog/blog-card";
 
 interface BlogListFilteredProps {
   posts: BlogPost[];
+  activeTags: string[];
 }
 
-export default function BlogListFiltered({ posts }: BlogListFilteredProps) {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-
-  const activeTags = useMemo(() => {
-    const param = searchParams.get("tags");
-    return param ? param.split(",").filter(Boolean) : [];
-  }, [searchParams]);
-
-  const toggleTag = useCallback(
-    (tagId: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-      const current = params.get("tags")?.split(",").filter(Boolean) ?? [];
-
-      const next = current.includes(tagId)
-        ? current.filter((t) => t !== tagId)
-        : [...current, tagId];
-
-      if (next.length === 0) {
-        params.delete("tags");
-      } else {
-        params.set("tags", next.join(","));
-      }
-
-      router.replace(`/blog?${params.toString()}`, { scroll: false });
-    },
-    [searchParams, router],
-  );
-
-  const filteredPosts = useMemo(() => {
-    if (activeTags.length === 0) return posts;
-    return posts.filter((post) =>
-      activeTags.some((tag) => post.tags.includes(tag)),
-    );
-  }, [activeTags]);
+/**
+ * Server-Komponente: Grid und Tag-Filter werden serverseitig gerendert.
+ *
+ * Bewusst ohne "use client" und ohne useSearchParams — als Client-Komponente
+ * lag das komplette Grid hinter einer Suspense-Bailout und stand erst nach der
+ * Hydration im DOM. Der Crawler sammelt Links direkt nach "domcontentloaded";
+ * Blogposts, die ausschliesslich ueber diesen Hub verlinkt sind, fielen dadurch
+ * je nach Timing als Orphans durch. Der Filter arbeitet jetzt ueber echte
+ * Links (/blog?tags=...), damit jeder Post ohne JavaScript erreichbar ist.
+ */
+export default function BlogListFiltered({
+  posts,
+  activeTags,
+}: BlogListFilteredProps) {
+  const filteredPosts =
+    activeTags.length === 0
+      ? posts
+      : posts.filter((post) =>
+          activeTags.some((tag) => post.tags.includes(tag)),
+        );
 
   // Only show tags that are actually used by at least one blog post
-  const usedTagIds = useMemo(() => {
-    const ids = new Set<string>();
-    posts.forEach((post) => post.tags.forEach((t) => ids.add(t)));
-    return ids;
-  }, []);
+  const usedTagIds = new Set<string>();
+  posts.forEach((post) => post.tags.forEach((t) => usedTagIds.add(t)));
+  const visibleTags = blogTags.filter((tag) => usedTagIds.has(tag.id));
 
-  const visibleTags = useMemo(
-    () => blogTags.filter((tag) => usedTagIds.has(tag.id)),
-    [usedTagIds],
-  );
+  const hrefForTag = (tagId: string) => {
+    const next = activeTags.includes(tagId)
+      ? activeTags.filter((t) => t !== tagId)
+      : [...activeTags, tagId];
+    return next.length === 0 ? "/blog" : `/blog?tags=${next.join(",")}`;
+  };
 
   return (
     <>
@@ -80,31 +63,31 @@ export default function BlogListFiltered({ posts }: BlogListFilteredProps) {
             Filtern nach Thema
           </span>
           {activeTags.length > 0 && (
-            <button
-              onClick={() =>
-                router.replace("/blog", { scroll: false })
-              }
-              className="ml-auto text-xs text-gray-500 hover:text-gray-700 transition-colors cursor-pointer"
+            <Link
+              href="/blog"
+              scroll={false}
+              className="ml-auto text-xs text-gray-500 hover:text-gray-700 transition-colors"
             >
               Filter zurücksetzen
-            </button>
+            </Link>
           )}
         </div>
         <div className="flex flex-wrap gap-2">
           {visibleTags.map((tag) => {
             const isActive = activeTags.includes(tag.id);
             return (
-              <button
+              <Link
                 key={tag.id}
-                onClick={() => toggleTag(tag.id)}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer border ${
+                href={hrefForTag(tag.id)}
+                scroll={false}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all border ${
                   isActive
                     ? "bg-primary-600 text-white border-primary-600 shadow-sm"
                     : "bg-white text-gray-700 border-gray-300 hover:border-primary-400 hover:text-primary-600"
                 }`}
               >
                 {tag.label}
-              </button>
+              </Link>
             );
           })}
         </div>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
-import { Suspense } from "react";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import BlogListFiltered from "@/components/blog/blog-list-filtered";
 import { getBlogPosts } from "@/lib/get-blog-posts";
@@ -45,6 +44,11 @@ export default async function BlogPage({
 }) {
   await enforceMainRewrite(rewriteSiteConfig, searchParams);
 
+  const params = await searchParams;
+  const rawTags = params.tags;
+  const tagsParam = Array.isArray(rawTags) ? rawTags[0] : rawTags;
+  const activeTags = tagsParam ? tagsParam.split(",").filter(Boolean) : [];
+
   const posts = await getBlogPosts();
 
   return (
@@ -80,9 +84,7 @@ export default async function BlogPage({
 
       {/* Blog Posts Grid with Filter */}
       <ContentWrapper>
-        <Suspense>
-          <BlogListFiltered posts={posts} />
-        </Suspense>
+        <BlogListFiltered posts={posts} activeTags={activeTags} />
       </ContentWrapper>
 
       <ContentWrapper noPadding>
