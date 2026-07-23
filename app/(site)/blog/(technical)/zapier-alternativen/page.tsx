@@ -505,7 +505,15 @@ export default function Page() {
               und Kostenanspruch ist n8n die stärkste Alternative.
               Wer bereits tief im Microsoft-Ökosystem steckt, sollte Power
               Automate prüfen. Und wer visuelle Komplexität braucht, greift
-              zu Make.
+              zu Make. Wenn vor allem der Preis den Ausschlag gibt, lohnt
+              zusätzlich ein Blick auf{" "}
+              <Link
+                href="/blog/pabbly-connect-alternative"
+                className="text-primary-600 hover:underline"
+              >
+                Pabbly Connect und dessen Lifetime-Deal
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Unsicher, welches Tool zu euren Prozessen passt? Wir

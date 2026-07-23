@@ -472,7 +472,15 @@ export default function Page() {
               nicht-technische Teams mit kleinem Volumen, vielen
               SaaS-Tools und ohne Compliance-Druck. n8n ist die richtige
               Antwort fast überall sonst, vor allem dort, wo Workflows
-              wachsen, KI im Spiel ist oder Datenhoheit zählt.
+              wachsen, KI im Spiel ist oder Datenhoheit zählt. Wer den
+              Vergleich rein über den Preis führt, sollte zusätzlich{" "}
+              <Link
+                href="/blog/pabbly-connect-alternative"
+                className="text-primary-500 hover:underline"
+              >
+                Pabbly Connect
+              </Link>{" "}
+              anschauen, den günstigsten der vier Anbieter.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Unsere Empfehlung für die meisten mittelständischen Unternehmen
