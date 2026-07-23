@@ -99,9 +99,23 @@ export default class CsvReporter implements Reporter {
     const scoresPath = path.join(RESULTS_DIR, "seo-scores.json");
     if (!fs.existsSync(scoresPath)) return;
 
-    const scores: SeoScore[] = JSON.parse(
+    const allScores: SeoScore[] = JSON.parse(
       fs.readFileSync(scoresPath, "utf-8"),
     );
+
+    // reportScore() ersetzt nur den eigenen Eintrag, löscht aber nie fremde.
+    // Ein gelöschter oder übersprungener Test bleibt dadurch für immer in
+    // seo-scores.json stehen und würde hier mit heutigem Datum gestempelt —
+    // ein dauerhaft grüner Zombie-Test (Fall "Link Equity", zuletzt echt
+    // gelaufen am 2026-07-22). Nur Einträge aus dem aktuellen Lauf zählen.
+    const scores = allScores.filter((s) => s.timestamp.slice(0, 10) === today);
+    for (const s of allScores) {
+      if (!scores.includes(s)) {
+        console.warn(
+          `[csv-reporter] SEO-Score "${s.test}" stammt vom ${s.timestamp.slice(0, 10)} und wird verworfen — der Test lief in diesem Lauf nicht.`,
+        );
+      }
+    }
 
     // SEO scores summary
     const scoreHeader =
