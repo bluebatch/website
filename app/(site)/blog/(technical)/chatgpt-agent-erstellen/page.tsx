@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "chatgpt-agent-erstellen",
@@ -48,6 +49,15 @@ export default function Page() {
         <BlogHero.Headline>
           ChatGPT Agent erstellen: die vier Wege und der richtige für euch
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Einen ChatGPT-Agenten baut ihr 2026 auf vier Wegen: Custom GPT und
+          Workspace Agents ohne Code, die Responses API mit dem Agents SDK für
+          Entwickler und den Eigenbau für volle Datenhoheit. Der Business-Plan
+          kostet rund 29 bis 34 Euro je Nutzer und Monat, GPT-5.4 etwa 2,50
+          US-Dollar je Million Eingabe-Token. Assistants API und Agent Builder
+          schaltet OpenAI 2026 ab.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

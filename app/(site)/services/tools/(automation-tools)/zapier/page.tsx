@@ -7,7 +7,6 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
@@ -15,6 +14,7 @@ import Hero2Column, {
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import IntroBox from "@/components/ui/intro-box";
+import GeoSummary from "@/components/ui/geo-summary";
 import DataTable from "@/components/ui/data-table";
 import ProsCons from "@/components/sections/pros-cons";
 import IndustryFit from "@/components/sections/industry-fit";
@@ -94,13 +94,14 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Zapier - die größte Automatisierungsplattform, ehrlich bewertet
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Zapier verbindet über 8.000 Apps und macht Automatisierung für
-              jeden zugänglich. Gleichzeitig kämpfen viele Nutzer mit
-              explodierenden Task-Kosten, DSGVO-Bedenken und fehlender
-              Flexibilität. Hier ist unsere ehrliche Einschätzung - mit echten
-              Zahlen, konkreten Grenzen und klaren Alternativen.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Zapier ist eine Cloud-Plattform für Workflow-Automatisierung, die
+              über 8.000 Apps ohne Code verbindet. Abgerechnet wird pro Task:
+              Professional startet bei 29,99 Euro für 750 Tasks, Team bei
+              103,50 Euro für 2.000 Tasks. Für deutsche Mittelständler sind die
+              Task-Kosten bei Volumen und der US-Hosting-Zwang die beiden
+              Punkte, an denen es regelmäßig scheitert.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">
                 Zapier-Beratung anfragen

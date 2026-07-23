@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "microsoft-365-copilot-kosten",
@@ -51,6 +52,15 @@ export default function Page() {
           Microsoft 365 Copilot Kosten 2026: Was er wirklich kostet und wann er
           sich lohnt
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Microsoft 365 Copilot kostet als Add-on 26,00 Euro je Nutzer und
+          Monat, dazu ist eine Microsoft-365-Basislizenz zwingend. Die
+          Vollkosten liegen für 100 Mitarbeitende im ersten Jahr eher bei
+          60.000 bis 100.000 Euro als bei den 31.200 Euro, die der reine
+          Add-on-Preis suggeriert. Den Unterschied machen Basislizenz,
+          Tenant-Vorbereitung, Training und laufende Adoption.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
