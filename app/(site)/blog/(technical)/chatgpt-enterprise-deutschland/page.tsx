@@ -19,9 +19,9 @@ export const metaCustom: BlogMeta = {
 
 export const metadata: Metadata = {
   title:
-    "ChatGPT Enterprise: Der komplette Guide für deutsche Unternehmen 2026 | Bluebatch",
+    "ChatGPT Enterprise 2026: Kosten, DSGVO & Rollout | Bluebatch",
   description:
-    "ChatGPT Enterprise für Deutschland: Kosten, DSGVO, EU-Datenresidenz, Enterprise vs Team vs Business, Beschaffung und Rollout-Playbook für den Mittelstand.",
+    "ChatGPT Enterprise für den Mittelstand: Kosten, DSGVO mit EU-Datenresidenz und ein Rollout-Playbook. Enterprise vs Team vs Business im Vergleich.",
   openGraph: {
     title:
       "ChatGPT Enterprise: Kosten, DSGVO und Rollout für deutsche Unternehmen",
