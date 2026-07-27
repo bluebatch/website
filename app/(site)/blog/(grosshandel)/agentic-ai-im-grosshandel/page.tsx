@@ -197,7 +197,17 @@ export default function Page() {
               Das Ergebnis: Bestellvorschläge, die nicht nur den Mindestbestand
               sichern, sondern aktiv Kosten optimieren. Großhändler berichten
               von 8 bis 15 Prozent Einsparung bei den Beschaffungskosten,
-              allein durch bessere Timing- und Mengenentscheidungen.
+              allein durch bessere Timing- und Mengenentscheidungen. Welche
+              Einkaufsschritte sich dafür konkret automatisieren lassen, von
+              Meldebeständen über Lieferantenanfragen bis zur Angebotsverarbeitung,
+              haben wir im{" "}
+              <Link
+                href="/blog/einkauf-automatisieren-grosshandel"
+                className="text-primary-600 hover:underline"
+              >
+                Leitfaden zum automatisierten Einkauf im Großhandel
+              </Link>{" "}
+              zusammengefasst.
             </Typo.Paragraph>
 
             <Typo.H3>2. Autonome Lagerverwaltung</Typo.H3>
