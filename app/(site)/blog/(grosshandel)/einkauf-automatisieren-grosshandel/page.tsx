@@ -10,7 +10,7 @@ import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 export const metaCustom: BlogMeta = {
   slug: "einkauf-automatisieren-grosshandel",
   author: "Max Hänsel",
-  date: "2026-07-25",
+  date: "2026-07-27",
   image: "/blog/einkauf-automatisieren-grosshandel/hero.png",
   tags: ["grosshandel", "automatisierung", "ki"] as BlogTagId[],
   publish: true,
@@ -58,7 +58,7 @@ export default function Page() {
             Max Hänsel
           </BlogHero.Author>
           <BlogHero.ReadTime>10 Min. Lesezeit</BlogHero.ReadTime>
-          <BlogHero.Date dateTime="2026-07-25">25. Juli 2026</BlogHero.Date>
+          <BlogHero.Date dateTime="2026-07-27">27. Juli 2026</BlogHero.Date>
         </BlogHero.Meta>
 
         <BlogHero.Image
