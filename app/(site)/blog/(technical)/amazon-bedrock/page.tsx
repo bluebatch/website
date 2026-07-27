@@ -303,7 +303,16 @@ export default function Page() {
               Dienst für Retrieval-Augmented Generation, also dafür, Antworten in
               den eigenen Unternehmensdokumenten zu verankern, statt das Modell frei
               raten zu lassen. Damit beantwortet die KI Fragen auf Basis der eigenen
-              Handbücher, Verträge oder Produktdaten.
+              Handbücher, Verträge oder Produktdaten. Wie eine solche Knowledge Base
+              konkret aufgesetzt wird, von den Datenquellen über Chunking bis zur
+              RAG-Pipeline, zeigt unser{" "}
+              <Link
+                href="/blog/aws-bedrock-knowledge-base"
+                className="text-primary-600 hover:underline"
+              >
+                Praxis-Guide zu Bedrock Knowledge Bases
+              </Link>
+              .
             </Typo.Paragraph>
 
             <BlogImage
