@@ -3,6 +3,7 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import DataTable from "@/components/ui/data-table";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 
@@ -50,6 +51,14 @@ export default function Page() {
           Amazon Bedrock für deutsche Unternehmen: DSGVO, Modelle und Claude
           Cowork managed private
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Amazon Bedrock ist der gemanagte KI-Dienst von AWS, über den deutsche
+          Unternehmen Claude-Modelle in der Region eu-central-1 in Frankfurt
+          DSGVO-konform betreiben. Der Bedrock-AVV regelt die
+          Auftragsverarbeitung. Wer volle Datenhoheit braucht, betreibt Claude
+          Cowork als managed private Variante im eigenen AWS-Konto.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

@@ -3,6 +3,7 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 
 export const metaCustom: BlogMeta = {
@@ -47,6 +48,15 @@ export default function Page() {
         <BlogHero.Headline>
           n8n Tutorial Deutsch: Vom ersten Workflow bis zum Produktivbetrieb
         </BlogHero.Headline>
+
+        <GeoSummary>
+          n8n ist ein visueller Workflow-Builder, mit dem sich Geschäftsprozesse
+          weitgehend ohne Code automatisieren lassen. Dieses Tutorial führt vom
+          ersten Login über Nodes, Expressions und Fehlerbehandlung bis zum
+          produktionsreifen Workflow. Gestartet wird wahlweise in der n8n Cloud
+          oder lokal mit Docker, verbunden mit Tools wie Slack, Google Sheets
+          und ERP-Systemen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

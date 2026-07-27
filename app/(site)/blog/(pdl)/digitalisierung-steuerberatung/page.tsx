@@ -3,6 +3,7 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
@@ -50,6 +51,15 @@ export default function Page() {
         <BlogHero.Headline>
           Digitalisierung in der Steuerberatung: der Praxis-Fahrplan für 2026
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Die Digitalisierung der Steuerberatung ist 2026 vor allem eine
+          Kapazitätsfrage: Laut DATEV-Digitalisierungsumfrage arbeiten rund 43
+          Prozent der Kanzleien nahezu papierlos. Dieser Praxis-Fahrplan liefert
+          ein Reifegradmodell, die digitalen Bausteine, die korrekten
+          E-Rechnungs-Stichtage bis 2028, GoBD-Pflichten, die Förder-Realität
+          und eine Drei-Phasen-Roadmap für die Kanzlei.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
