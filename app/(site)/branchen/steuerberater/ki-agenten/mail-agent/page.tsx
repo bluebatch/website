@@ -38,7 +38,7 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import CostCalculator from "./_components/cost-calculator";
 
 const DESCRIPTION =
-  "Der Mail Agent liest Mandanten-Mails, erkennt den Mandanten in DATEV, klassifiziert nach Thema und Frist und schreibt Antwortentwürfe im Kanzlei-Ton. Angebunden über Microsoft Graph API und DATEVconnect. Ihr Team prüft und gibt frei.";
+  "Der Mail Agent liest Mandanten-Mails, erkennt den Mandanten in DATEV und schreibt Antwortentwürfe im Kanzlei-Ton. Kein SaaS: installiert direkt in Ihrer Kanzlei, Mails und Akten bleiben im Haus, nur die KI-Anfrage verlässt sie. Ihr Team prüft und gibt frei.";
 
 export const metadata: Metadata = {
   title: "Mail Agent für Steuerberater: Mandanten-Mails mit KI | Bluebatch",
@@ -192,7 +192,17 @@ const faqs = [
   {
     question: "Ist das DSGVO- und § 203-konform?",
     answer:
-      "Ja. Der Betrieb läuft DSGVO-konform mit EU-Hosting und § 203-konformem Setup, auf Wunsch mit eigenem Schlüssel (BYOK). Wie wir das aufsetzen, zeigen wir auf der Seite Claude Cowork.",
+      "Ja. Der Agent läuft in Ihrer Kanzlei, Mandanten-Mails und Akten bleiben im Haus. Nur die KI-Anfrage geht in eine DSGVO-konforme EU-Umgebung mit AVV, ohne Training mit Ihren Daten, auf Wunsch mit eigenem Schlüssel (BYOK). Wie wir das aufsetzen, zeigen wir auf der Seite Claude Cowork.",
+  },
+  {
+    question: "Was unterscheidet den Mail Agent von fertigen SaaS-Tools?",
+    answer:
+      "SaaS-E-Mail-Tools verarbeiten Ihre Mandanten-Mails auf den Servern des Anbieters und kosten dauerhaft pro Monat oder Postfach. Den Mail Agent installiert Bluebatch direkt in Ihrer Kanzlei: Postfach, Akten und Belege bleiben im Haus, nur die KI-Anfrage verlässt sie. Die Implementierung wird auf Ihre Kategorien und Ihren Kanzlei-Ton eingerichtet und gehört danach Ihrer Kanzlei.",
+  },
+  {
+    question: "Wie lange dauert die Einführung?",
+    answer:
+      "In der Regel wenige Tage: Anbindung an Microsoft 365 und DATEVconnect, Abstimmung von Kategorien und Kanzlei-Ton, dann ein Pilotbetrieb mit echten Mails, in dem Ihr Team jede Antwort prüft. Danach läuft der Agent im Alltag, und Ihr Team klickt nur noch auf Freigeben.",
   },
 ];
 
@@ -242,12 +252,12 @@ export default function Page() {
           Der Mail Agent für Steuerkanzleien
         </StatsLeadHero.Headline>
         <GeoSummary>
-          Der Mail Agent von Bluebatch ist ein KI-Agent für Steuerkanzleien, der
-          Mandanten-Mails liest, den Mandanten über DATEVconnect in DATEV
-          erkennt und Antwortentwürfe im Kanzlei-Ton schreibt. Der Agent
-          arbeitet direkt im Microsoft-365-Postfach über die Microsoft Graph API
-          und senkt den E-Mail-Aufwand um rund 60 Prozent. Jede Antwort wird vom
-          Kanzleiteam geprüft und freigegeben.
+          Der Mail Agent von Bluebatch ist ein KI-Agent für Steuerkanzleien,
+          der Mandanten-Mails liest, den Mandanten über DATEVconnect erkennt
+          und Antwortentwürfe im Kanzlei-Ton schreibt. Anders als SaaS-Tools
+          wird der Agent direkt in der Kanzlei installiert: Mails und Akten
+          bleiben im Haus, nur die KI-Anfrage verlässt sie. Das Kanzleiteam
+          gibt jede Antwort frei, der E-Mail-Aufwand sinkt um rund 60 Prozent.
         </GeoSummary>
         <StatsLeadHero.Cta>
           <ContactButton icon="chat">Demo anfragen</ContactButton>
@@ -269,6 +279,55 @@ export default function Page() {
           alt="Automatisierter Mail-Fluss in der Steuerkanzlei"
         />
       </StatsLeadHero>
+
+      {/* Pain: Das Nadelöhr Posteingang */}
+      <ContentWrapper colorScheme="gray-light">
+        <IntroBox size="small">
+          <IntroBox.PreHeadline>Der Kanzlei-Alltag</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            Das Nadelöhr Ihrer Kanzlei ist das Postfach
+          </IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Nicht die Beratung frisst die Zeit, sondern das Drumherum: lesen,
+            zuordnen, Kontext in DATEV suchen, tippen. Drei Situationen, die
+            jede Kanzlei kennt:
+          </IntroBox.Paragraph>
+        </IntroBox>
+
+        <SimpleGrid cols={3} className="mt-12">
+          <SimpleCard align="left">
+            <Typo.H3>
+              &bdquo;Warum antwortet mir niemand?&ldquo;
+            </Typo.H3>
+            <Typo.Paragraph>
+              Der Mandant ruft an. Die Mail lag drei Tage ungelesen im
+              Sammelpostfach, weil sie zwischen Newslettern und Belegen
+              unterging.
+            </Typo.Paragraph>
+          </SimpleCard>
+          <SimpleCard align="left">
+            <Typo.H3>Alle gesehen, niemand zuständig</Typo.H3>
+            <Typo.Paragraph>
+              Vier Leute haben die Mail geöffnet. Ohne klare Zuordnung bleibt
+              am Ende jede Mail Chefsache, und der Chef hat keine Zeit.
+            </Typo.Paragraph>
+          </SimpleCard>
+          <SimpleCard align="left">
+            <Typo.H3>Die Frist stand nur im Postfach</Typo.H3>
+            <Typo.Paragraph>
+              Was nicht in DATEV oder im Kalender steht, geht unter. Eine
+              Einspruchsfrist, die nur in einer Mail hängt, ist ein Risiko.
+            </Typo.Paragraph>
+          </SimpleCard>
+        </SimpleGrid>
+
+        <Typo.Paragraph className="mx-auto mt-10 max-w-2xl text-center text-gray-600">
+          Die Rechnung dahinter: Bei rund 80 eingehenden Mails am Tag und 3 bis
+          5 Minuten pro Mail stecken schnell über 20 Stunden pro Woche allein
+          im Postfach. Der Kostenrechner weiter unten rechnet das für Ihre
+          Kanzlei durch.
+        </Typo.Paragraph>
+      </ContentWrapper>
 
       {/* Was der Agent übernimmt */}
       <ContentWrapper colorScheme="white">
@@ -363,12 +422,12 @@ export default function Page() {
             <span className="text-xs font-bold uppercase tracking-widest text-primary-200">
               Mail Agent
             </span>
-            <p className="text-lg font-bold">Claude in verwalteter Umgebung</p>
+            <p className="text-lg font-bold">Installiert in Ihrer Kanzlei</p>
             <ul className="mt-3 space-y-1.5 text-sm text-primary-100">
               <li>Liest und klassifiziert jede Mail</li>
               <li>Zieht Aktenkontext für die Antwort</li>
               <li>Schreibt den Entwurf im Kanzlei-Ton</li>
-              <li>Legt Belege ab, erkennt Fristen</li>
+              <li>KI-Anfragen an verwaltete EU-Umgebung</li>
             </ul>
           </div>
           <ApiConnector label="DATEVconnect" />
@@ -414,8 +473,117 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Manuell vs. Mail Agent */}
+      {/* Deployment: In der Kanzlei installiert, kein SaaS */}
       <ContentWrapper colorScheme="gray-light">
+        <IntroBox size="small">
+          <IntroBox.PreHeadline>Kein SaaS</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            In Ihrer Kanzlei installiert, nicht in fremder Cloud
+          </IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Fertige E-Mail-Tools laufen als SaaS: Ihre Mandanten-Mails werden
+            auf den Servern des Anbieters verarbeitet. Der Mail Agent von
+            Bluebatch geht den anderen Weg. Wir installieren ihn direkt in
+            Ihrer Kanzlei, auf Ihrer Infrastruktur. Postfach, Akten und Belege
+            bleiben im Haus. Nur die eigentliche KI-Anfrage verlässt die
+            Kanzlei, in eine verwaltete EU-Umgebung, auf Wunsch mit eigenem
+            Schlüssel.
+          </IntroBox.Paragraph>
+        </IntroBox>
+
+        {/* Datenfluss-Grafik: Kanzlei-Perimeter + einzige Außenverbindung */}
+        <div className="mt-12 flex flex-col items-stretch gap-4 lg:flex-row lg:items-center">
+          <div className="relative flex-1 rounded-3xl border-2 border-primary-600 bg-white p-6 pt-9 shadow-sm">
+            <span className="absolute -top-3.5 left-6 inline-flex items-center gap-1.5 rounded-full bg-primary-600 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+              <ShieldCheck className="h-3.5 w-3.5" />
+              Ihre Kanzlei
+            </span>
+            <div className="grid grid-cols-1 items-center gap-3 sm:grid-cols-[1fr_auto_1.1fr_auto_1fr]">
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-center">
+                <Inbox className="mx-auto h-6 w-6 text-primary-700" />
+                <p className="mt-2 text-sm font-bold text-gray-900">
+                  Microsoft 365
+                </p>
+                <p className="text-xs text-gray-500">Postfach & Outlook</p>
+              </div>
+              <ArrowRight className="mx-auto h-5 w-5 rotate-90 text-primary-400 sm:rotate-0" />
+              <div className="rounded-xl border-2 border-primary-300 bg-primary-50 p-4 text-center">
+                <Sparkles className="mx-auto h-6 w-6 text-primary-700" />
+                <p className="mt-2 text-sm font-bold text-gray-900">
+                  Mail Agent
+                </p>
+                <p className="text-xs text-gray-600">
+                  läuft auf Ihrer Infrastruktur
+                </p>
+              </div>
+              <ArrowRight className="mx-auto h-5 w-5 rotate-90 text-primary-400 sm:rotate-0" />
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-center">
+                <Database className="mx-auto h-6 w-6 text-primary-700" />
+                <p className="mt-2 text-sm font-bold text-gray-900">DATEV</p>
+                <p className="text-xs text-gray-500">Akte, DMS, Fristen</p>
+              </div>
+            </div>
+            <p className="mt-4 text-center text-xs text-gray-500">
+              Mails, Anhänge, Akten und Belege bleiben innerhalb dieser Grenze
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center justify-center gap-1 px-2">
+            <span className="rounded-full bg-gray-200 px-3 py-1 text-center text-xs font-semibold text-gray-600">
+              nur die KI-Anfrage
+            </span>
+            <svg
+              className="h-6 w-16 rotate-90 text-primary-400 lg:rotate-0"
+              viewBox="0 0 64 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path d="M2 12h52" strokeDasharray="6 5" />
+              <path d="M48 5l8 7-8 7" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+
+          <div className="rounded-3xl border-2 border-gray-300 bg-gray-900 p-6 text-white lg:w-64">
+            <Sparkles className="h-6 w-6 text-secondary-400" />
+            <p className="mt-2 text-sm font-bold">KI, verwaltete EU-Umgebung</p>
+            <ul className="mt-3 space-y-1.5 text-xs text-gray-300">
+              <li>AVV, kein Training mit Ihren Daten</li>
+              <li>Auf Wunsch eigener Schlüssel (BYOK)</li>
+              <li>Antwort geht zurück in die Kanzlei</li>
+            </ul>
+          </div>
+        </div>
+
+        <SimpleGrid cols={3} className="mt-12">
+          <SimpleCard align="left">
+            <Typo.H3>Keine Mandanten-Mails auf Fremdservern</Typo.H3>
+            <Typo.Paragraph>
+              Kein Anbieter-Portal, kein drittes System, durch das Ihre
+              Kommunikation läuft. Der Agent arbeitet dort, wo Ihre Daten
+              ohnehin liegen.
+            </Typo.Paragraph>
+          </SimpleCard>
+          <SimpleCard align="left">
+            <Typo.H3>Auf Ihre Kanzlei eingerichtet</Typo.H3>
+            <Typo.Paragraph>
+              Kategorien, Ton und Regeln werden bei der Einrichtung auf Ihre
+              Kanzlei abgestimmt, statt aus einem Standard-Baukasten zu kommen.
+            </Typo.Paragraph>
+          </SimpleCard>
+          <SimpleCard align="left">
+            <Typo.H3>Einmal implementiert, gehört er Ihnen</Typo.H3>
+            <Typo.Paragraph>
+              Keine Abo-Abhängigkeit pro Postfach: Die Implementierung gehört
+              Ihrer Kanzlei, Bluebatch übernimmt auf Wunsch Wartung und
+              Weiterentwicklung.
+            </Typo.Paragraph>
+          </SimpleCard>
+        </SimpleGrid>
+      </ContentWrapper>
+
+      {/* Manuell vs. Mail Agent */}
+      <ContentWrapper colorScheme="white">
         <IntroBox size="small">
           <IntroBox.PreHeadline>Manuell vs. Mail Agent</IntroBox.PreHeadline>
           <IntroBox.Headline>Schneller, und immer gleich</IntroBox.Headline>
@@ -469,20 +637,21 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Human-in-the-Loop */}
-      <ContentWrapper colorScheme="white" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <div className="text-center">
           <Typo.H2 className="mb-4">Immer mit Freigabe, nie ungefragt</Typo.H2>
           <Typo.Paragraph className="text-gray-600">
-            Der Mail Agent schlägt vor, Ihr Team entscheidet. Jede Antwort wird
-            geprüft und freigegeben, bevor sie an den Mandanten geht. So bekommen
-            Sie das Tempo der KI, ohne die Kontrolle über den Außenauftritt Ihrer
+            Jeder Entwurf ist ein Vorschlag, keine Automatik. Der Mail Agent
+            bereitet vor, Ihr Team entscheidet: Jede Antwort wird geprüft und
+            freigegeben, bevor sie an den Mandanten geht. So bekommen Sie das
+            Tempo der KI, ohne die Kontrolle über den Außenauftritt Ihrer
             Kanzlei abzugeben.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>
 
       {/* Workflow */}
-      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
+      <ContentWrapper colorScheme="white" bodyWidth="small">
         <IntroBox size="small">
           <IntroBox.PreHeadline>So läuft eine Mail durch</IntroBox.PreHeadline>
           <IntroBox.Headline>
@@ -507,7 +676,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Kostenrechner */}
-      <ContentWrapper colorScheme="white">
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox size="small">
           <IntroBox.PreHeadline>Was es bringt</IntroBox.PreHeadline>
           <IntroBox.Headline>Kostenrechner für Ihr Postfach</IntroBox.Headline>
@@ -523,7 +692,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Compliance */}
-      <ContentWrapper colorScheme="gray-light">
+      <ContentWrapper colorScheme="white">
         <SimpleGrid cols={2} className="items-center gap-8 md:gap-12">
           <div>
             <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-50 text-primary-800">
@@ -573,7 +742,7 @@ export default function Page() {
       </ContentWrapper>
 
       {/* FAQ */}
-      <ContentWrapper colorScheme="white" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <FaqContainer faqs={faqs}>
           <FaqContainer.Headline>
             Häufige Fragen zum Mail Agent
