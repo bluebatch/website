@@ -182,10 +182,12 @@ export default class CsvReporter implements Reporter {
       }
 
       case "link-depth": {
-        // "/some-page: depth 4" → page, depth
+        // link-depth.spec.ts emits "/some-page: 4 clicks" (see its reportScore
+        // call). The pattern used to look for "depth N" and so never matched —
+        // the depth column came out empty for every flagged page.
         const header = "date,page,depth";
         const rows = details.map((d) => {
-          const match = d.match(/^(\/\S+):\s*depth\s*(\d+)$/);
+          const match = d.match(/^(\/\S+):\s*(\d+)\s*clicks$/);
           if (match) return `${today},${match[1]},${match[2]}`;
           return `${today},"${d.replace(/"/g, '""')}",`;
         });
