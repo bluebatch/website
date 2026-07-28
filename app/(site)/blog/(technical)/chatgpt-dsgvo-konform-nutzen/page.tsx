@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "chatgpt-dsgvo-konform-nutzen",
@@ -48,6 +49,15 @@ export default function Page() {
         <BlogHero.Headline>
           ChatGPT DSGVO-konform nutzen: der Praxis-Leitfaden für den Mittelstand
         </BlogHero.Headline>
+
+        <GeoSummary>
+          ChatGPT lässt sich DSGVO-konform im Unternehmen nutzen, wenn fünf
+          Bausteine zusammenkommen: Modelltraining abschalten, einen
+          Business-Tarif wie Team oder Enterprise wählen, einen
+          Auftragsverarbeitungsvertrag mit OpenAI schließen, die
+          EU-Datenresidenz aktivieren und Datensparsamkeit im Team verankern.
+          Der Leitfaden führt durch jede dieser Stellschrauben.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

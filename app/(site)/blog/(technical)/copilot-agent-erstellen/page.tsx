@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "copilot-agent-erstellen",
@@ -49,6 +50,15 @@ export default function Page() {
         <BlogHero.Headline>
           Copilot Agent erstellen: Der praktische Weg durch Copilot Studio
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Mit Microsoft Copilot Studio erstellen Unternehmen eigene
+          KI-Agenten per Low-Code, die in Teams oder im Microsoft-365-Copilot
+          laufen. Abgerechnet wird in Copilot Credits: das Prepaid-Pack mit
+          25.000 Credits kostet 200 US-Dollar im Monat, Pay-as-you-go rund
+          0,01 Euro pro Credit. Der Guide zeigt die vier Bausteine, den
+          ersten Agenten Schritt für Schritt sowie Governance und DSGVO.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

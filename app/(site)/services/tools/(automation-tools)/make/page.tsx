@@ -20,6 +20,7 @@ import IndustryFit from "@/components/sections/industry-fit";
 import ToolComparisonTable from "@/components/sections/tool-comparison-table";
 import SimpleCard from "@/components/cards/simple-card";
 import IntroBox from "@/components/ui/intro-box";
+import GeoSummary from "@/components/ui/geo-summary";
 import NumberedList from "@/components/ui/numbered-list";
 
 export const metadata: Metadata = {
@@ -70,13 +71,15 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Make - die visuelle Automatisierungsplattform, ehrlich betrachtet
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Make (ehemals Integromat) gehört zu den meistgenutzten
-              No-Code-Automatisierungsplattformen weltweit. Aber was kann das
-              Tool wirklich, wo liegen die Grenzen, und wann lohnt sich ein
-              Blick auf Alternativen? Eine fundierte Einordnung - ohne
-              Marketing-Floskeln.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Make (ehemals Integromat) ist eine visuelle
+              No-Code-Automatisierungsplattform mit über 3.000 Integrationen,
+              abgerechnet nach Credits: Free bietet 1.000 Credits, Core startet
+              bei 10,59 Euro für 10.000 Credits im Monat. Für deutsche
+              Mittelständler sind das reine Cloud-Modell ohne
+              Self-Hosting-Option und die fehlende Portierbarkeit der
+              Szenarien die zwei wichtigsten Grenzen.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">
                 Automatisierung besprechen
