@@ -114,7 +114,7 @@ const topics = [
       "Bevor eine Kanzlei über konkrete KI-Anwendungen entscheidet, steht die Grundsatzfrage: In welcher Umgebung dürfen Mandantendaten verarbeitet werden? Private AI beantwortet sie strukturell: Offene Sprachmodelle wie Llama oder Mistral laufen auf Infrastruktur, die Ihre Kanzlei kontrolliert - mit Open WebUI als Chat-Oberfläche, vLLM als Modell-Server, EU-Hosting oder on-premise.",
       "AVV, dedizierter Tenant, kein Training mit Ihren Daten: konform mit DSGVO und § 203 StGB, einsatzbereit in wenigen Tagen.",
     ],
-    image: "/images/machine-learning.jpg",
+    image: "/images/technology-integration.jpg",
   },
   {
     id: "claude-cowork",
@@ -127,6 +127,7 @@ const topics = [
       "So nutzt die Kanzlei die stärkste Modellqualität DSGVO- und § 203-StGB-konform, ohne eigene Infrastruktur betreiben zu müssen. Bluebatch übernimmt Einrichtung, Konfiguration und Schulung.",
     ],
     image: "/images/claude-cowork.png",
+    portrait: true,
   },
   {
     id: "ki-agenten",
@@ -136,7 +137,7 @@ const topics = [
     linkLabel: "Alle KI-Agenten ansehen",
     paragraphs: [
       "KI-Agenten arbeiten wie digitale Sachbearbeiter: Sie erledigen komplette Aufgaben, Ihr Team prüft und gibt frei. Der Mail Agent beantwortet Mandanten-Mails, der Agent für Mandantenkommunikation klärt FAQ und Fristen und verkürzt den Belegrücklauf von 8 auf 3 Wochen, der KI-Jahresabschluss entzerrt den Saison-Peak um 60-80%.",
-      "Statt 3-5 Stunden Routine-Mails pro Tag und 40-200 Stunden pro Jahresabschluss-Mandant bleibt dem Team Zeit für Beratung.",
+      "Die Agenten passen sich Ihrer Kanzlei an, nicht umgekehrt: Der Mail Agent lernt Ihren Ton und Ihre Kategorien. Statt 3-5 Stunden Routine-Mails pro Tag und 40-200 Stunden pro Jahresabschluss-Mandant bleibt dem Team Zeit für Beratung.",
     ],
     image: "/images/agentic-ai.jpg",
   },
@@ -150,7 +151,7 @@ const topics = [
       "Workflows laufen immer gleich ab, nachvollziehbar und GoBD-konform: Die Belegprüfung mit KI-Erfassung senkt den Aufwand um 85% bei Fehlerquoten unter 0,1%, die E-Rechnungs-Verarbeitung reduziert die Kosten von 11,50 € auf 0,10 € pro Rechnung.",
       "Dazu kommen DATEV-Jira-Synchronisation (von 25 auf 2 Minuten pro Vorgang), Dokumentenverarbeitung per KI-OCR und Mandanten-Onboarding in 30 Minuten statt 4-8 Stunden.",
     ],
-    image: "/images/digital-workflow.jpg",
+    image: "/images/dokumentenverarbeitung/hero-document-flow.png",
   },
 ];
 
@@ -190,7 +191,7 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Branchen</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              KI für Steuerberater: Automatisierung für die Kanzlei
+              KI für Steuerberater: weniger Pflicht, mehr Beratung
             </Hero2ColumnHeadline>
             <GeoSummary>
               KI für Steuerberater umfasst vier Nutzungsmodelle: Private AI und
@@ -228,10 +229,15 @@ export default function Page() {
           <Typo.H2 className="mb-4">
             Warum KI für Steuerkanzleien jetzt wichtig ist
           </Typo.H2>
+          <Typo.Paragraph className="text-gray-600 mb-4">
+            Die meisten Kanzleien haben denselben Plan: weg von der reinen
+            Pflicht, hin zu echter Beratung. Mehr Wert für Mandanten, mehr
+            Sinn fürs Team, mehr Luft für die Kanzlei.
+          </Typo.Paragraph>
           <Typo.Paragraph className="text-gray-600">
-            Vier Entwicklungen treffen Kanzleien gleichzeitig, und jede
-            einzelne verschärft den Druck auf dieselben Menschen: die
-            Fachkräfte, die heute schon die Routine tragen.
+            Und dieser Plan scheitert selten am Willen. Er scheitert am
+            Alltag: am Postfach, am Belegstapel, an gewachsenen Strukturen.
+            Vier Entwicklungen verschärfen ihn gerade gleichzeitig:
           </Typo.Paragraph>
         </div>
         <SimpleGrid cols={2} className="gap-6 md:gap-8">
@@ -246,11 +252,12 @@ export default function Page() {
         </SimpleGrid>
         <div className="max-w-3xl mx-auto mt-10 md:mt-14 text-center">
           <Typo.Paragraph className="text-gray-600">
-            Über allem steht eine Rahmenbedingung: § 203 StGB. Steuerberater
-            dürfen Mandantendaten nicht in öffentliche KI-Tools geben. Jede
-            KI-Einführung in der Kanzlei beginnt deshalb mit der Frage nach der
-            Umgebung - und genau dafür gibt es zwei geschützte Antworten:
-            Private AI und Claude Cowork.
+            Über allem steht eine Rahmenbedingung: § 203 StGB. Berufliche
+            Verschwiegenheit ist für uns keine Fußnote, sondern die Grundlage
+            jeder Umgebung, die wir aufsetzen. Mandantendaten gehören nicht in
+            öffentliche KI-Tools - deshalb beginnt jede KI-Einführung in der
+            Kanzlei mit der Frage nach der Umgebung. Dafür gibt es zwei
+            geschützte Antworten: Private AI und Claude Cowork.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>
@@ -267,17 +274,23 @@ export default function Page() {
             Was Kanzleien mit KI grundsätzlich machen können
           </Typo.H2>
           <Typo.Paragraph className="text-gray-600 mb-4">
-            KI in der Steuerkanzlei ist kein einzelnes Tool, sondern vier
-            unterschiedliche Nutzungsmodelle, die aufeinander aufbauen: Erst
-            klärt die Kanzlei, wo die KI läuft (Private AI oder Claude Cowork
-            als geschützte Umgebung). Dann nutzt das Team KI als Werkzeug im
-            Alltag. Schließlich übernehmen KI-Agenten ganze Aufgaben und
+            Wer strategischer Berater werden will, braucht keine weitere
+            Insellösung - und kein neues System, auf das sich jede
+            Mitarbeiterin erst einarbeiten muss. Wir bauen KI deshalb in die
+            Systeme ein, mit denen Ihre Kanzlei ohnehin arbeitet: DATEV,
+            Microsoft 365, Ihr DMS. Die KI zieht bei Ihnen ein, nicht
+            umgekehrt.
+          </Typo.Paragraph>
+          <Typo.Paragraph className="text-gray-600 mb-4">
+            Dabei bauen vier Nutzungsmodelle aufeinander auf: Erst klärt die
+            Kanzlei, wo die KI läuft (Private AI oder Claude Cowork als
+            geschützte Umgebung). Dann nutzt das Team KI als Werkzeug im
+            Alltag. Schließlich übernehmen KI-Agenten ganze Aufgaben, und
             Workflows automatisieren feste Prozesse.
           </Typo.Paragraph>
           <Typo.Paragraph className="text-gray-600">
-            Die meisten Kanzleien starten mit einem Modell und bauen von dort
-            aus - welches das richtige ist, hängt von Mandantenstruktur,
-            Software-Landschaft und Team ab.
+            Die meisten Kanzleien starten klein und bauen von dort aus - nicht
+            als großes Projekt, sondern jeden Monat ein Stück mehr.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>
@@ -310,9 +323,11 @@ export default function Page() {
                 </InternalLink>
               </div>
               <div
-                className={`relative aspect-video mx-auto w-1/2 md:w-full ${
-                  imageRight ? "" : "md:order-1"
-                }`}
+                className={`relative mx-auto ${
+                  topic.portrait
+                    ? "aspect-[4/5] w-2/3 sm:w-1/2 md:w-2/3 lg:w-3/5"
+                    : "aspect-video w-1/2 md:w-full"
+                } ${imageRight ? "" : "md:order-1"}`}
               >
                 <Image
                   src={topic.image}
