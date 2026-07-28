@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "aws-bedrock-kosten",
@@ -49,6 +50,14 @@ export default function Page() {
           AWS Bedrock Kosten 2026: Was die Modelle wirklich kosten und wo die
           Sparhebel liegen
         </BlogHero.Headline>
+
+        <GeoSummary>
+          AWS Bedrock rechnet ohne Grundgebühr pro Million Token ab: Claude
+          Sonnet 4.6 kostet 3 Dollar Input und 15 Dollar Output, EU-Routing
+          über Frankfurt rund 10 Prozent Aufschlag. Batch-Inferenz halbiert
+          den Preis, Prompt-Caching spart bis zu 90 Prozent. Ein interner
+          Assistent im Mittelstand liegt damit bei 20 bis 100 Dollar im Monat.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

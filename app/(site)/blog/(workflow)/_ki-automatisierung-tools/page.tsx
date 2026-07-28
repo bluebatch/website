@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "ki-automatisierung-tools",
@@ -49,6 +50,15 @@ export default function Page() {
           KI Automatisierung Tools: welche Werkzeugklasse Ihr Unternehmen
           wirklich braucht
         </BlogHero.Headline>
+
+        <GeoSummary>
+          KI-Automatisierungstools verbinden Geschäftssysteme mit
+          Sprachmodellen und teilen sich 2026 in drei Klassen: iPaaS-Plattformen
+          mit KI-Nodes wie n8n und Make, KI-Agent-Builder und Copilot-artige
+          Assistenten. Der Vergleich zeigt Preise, DSGVO-Eignung und
+          Auswahlkriterien, mit denen Mittelständler das passende Werkzeug in
+          wenigen Tagen statt Monaten festlegen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
