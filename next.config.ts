@@ -75,7 +75,37 @@ const nextConfig: NextConfig = {
         destination: "/branchen/grosshandel/workflows/:slug",
         permanent: true,
       },
-      // Use-Cases wurde zu Branchen umbenannt
+      // Use-Cases wurde zu Branchen umbenannt. Detail-Slugs, die unter
+      // /branchen nochmal umgezogen sind, VOR dem Catch-all direkt aufs
+      // finale Ziel leiten — sonst laufen indexierte Alt-URLs über 2 Hops.
+      {
+        source:
+          "/use-cases/steuerberater/:slug(mail-agent|mandantenkommunikation|jahresabschluss-ki)",
+        destination: "/branchen/steuerberater/ki-agenten/:slug",
+        permanent: true,
+      },
+      {
+        source:
+          "/use-cases/steuerberater/:slug(belegpruefung|dokumentenverarbeitung|datev-jira-task-orchestration|e-rechnung-verarbeitung|mandanten-onboarding)",
+        destination: "/branchen/steuerberater/workflows/:slug",
+        permanent: true,
+      },
+      {
+        source: "/use-cases/grosshandel/:slug(angebots-bot|invoice-bot)",
+        destination: "/branchen/grosshandel/ki-agenten/:slug",
+        permanent: true,
+      },
+      {
+        source: "/use-cases/grosshandel/ki-chatbot-grosshandel",
+        destination: "/branchen/grosshandel/chatbots/ki-chatbot-grosshandel",
+        permanent: true,
+      },
+      {
+        source:
+          "/use-cases/grosshandel/:slug(auftragserfassung|bestellabwicklung|lagerverwaltung|3-wege-rechnungspruefung|zertifikatspruefung-lieferanten|ai-automation-with-easybill)",
+        destination: "/branchen/grosshandel/workflows/:slug",
+        permanent: true,
+      },
       {
         source: "/use-cases/:path*",
         destination: "/branchen/:path*",
