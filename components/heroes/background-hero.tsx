@@ -122,13 +122,19 @@ BackgroundHero.Highlight = function Highlight({
 // Description Sub-component
 interface DescriptionProps {
   children: ReactNode;
+  /** markiert den Absatz als GEO-Kurzbeschreibung (data-geo="summary") */
+  geo?: boolean;
 }
 
 BackgroundHero.Description = function Description({
   children,
+  geo,
 }: DescriptionProps) {
   return (
-    <AnimatedDescription className="text-sm md:text-xl text-gray-800 max-w-3xl mx-auto mb-6 md:mb-12">
+    <AnimatedDescription
+      geo={geo}
+      className="text-sm md:text-xl text-gray-800 max-w-3xl mx-auto mb-6 md:mb-12"
+    >
       {children}
     </AnimatedDescription>
   );

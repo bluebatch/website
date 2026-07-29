@@ -126,10 +126,12 @@ export default function Home() {
               Enterprise-Erfolg
             </BackgroundHero.Highlight>
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            n8n Automatisierung vom Experten: Bluebatch automatisiert Ihre
-            manuellen Backoffice-Prozesse mit intelligenten AI-Workflows auf
-            Enterprise-Niveau - live in nur 5 Tagen.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine KI- und Automatisierungsagentur aus Deutschland,
+            die manuelle Backoffice-Prozesse im Mittelstand mit n8n-Workflows
+            und KI-Agenten automatisiert. Von der Rechnungsprüfung bis zur
+            Auftragserfassung: Die ersten Workflows gehen in nur 5 Tagen live,
+            DSGVO-konform und auf Wunsch auf Ihrer eigenen Infrastruktur.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>

@@ -97,15 +97,19 @@ export function AnimatedHighlight({
 export function AnimatedDescription({
   children,
   className = "",
+  geo = false,
 }: {
   children: ReactNode;
   className?: string;
+  /** markiert den Absatz als GEO-Kurzbeschreibung (data-geo="summary") */
+  geo?: boolean;
 }) {
   return (
     <motion.p
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 1.1 }}
+      {...(geo ? { "data-geo": "summary" } : {})}
       className={className}
     >
       {children}

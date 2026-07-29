@@ -5,9 +5,9 @@ import ContentWrapper from "@/components/layout/content-wrapper";
 import Hero2Column, {
   Hero2ColumnTextColumn,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnPreHeadline,
 } from "@/components/heroes/hero-2-column";
+import GeoSummary from "@/components/ui/geo-summary";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import IntroBox from "@/components/ui/intro-box";
 import TabGroup, {
@@ -58,11 +58,14 @@ export default async function StandortePage({
             <Hero2ColumnHeadline>
               Ihre Automatisierungs Agentur in ganz Deutschland
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Als erfahrene Automatisierungs Agentur unterstützt Bluebatch
-              Unternehmen in über 80 deutschen Städten bei der Automatisierung
-              ihrer Geschäftsprozesse. Remote-first, aber immer nah an Ihnen.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Bluebatch ist eine Automatisierungs Agentur, die Unternehmen in
+              über 80 deutschen Städten bei der Automatisierung ihrer
+              Geschäftsprozesse unterstützt: n8n-Workflows, KI-Integrationen
+              und Prozessoptimierung, remote-first umgesetzt. Auf dieser Seite
+              finden Sie alle Standorte nach Bundesland, von Berlin über
+              Hamburg und München bis Stuttgart.
+            </GeoSummary>
           </Hero2ColumnTextColumn>
         </Hero2Column>
       </ContentWrapper>

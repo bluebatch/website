@@ -6,6 +6,7 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "automatische-angebotserstellung-grosshandel",
@@ -63,6 +64,14 @@ export default async function Page({
           KI Angebote im Großhandel: So funktioniert automatische
           Angebotserstellung in Sekunden
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Automatische Angebotserstellung heißt: Eine KI liest eingehende
+          Anfragen, gleicht Artikel, Preise und Verfügbarkeiten mit dem
+          ERP-System ab und erstellt das fertige Angebot in Sekunden statt
+          Stunden. Für Großhändler ist das ein direkter Umsatzhebel, denn 78
+          Prozent der Kunden kaufen beim Anbieter, der zuerst antwortet.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

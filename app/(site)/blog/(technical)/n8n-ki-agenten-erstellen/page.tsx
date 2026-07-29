@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "n8n-ki-agenten-erstellen",
@@ -47,6 +48,14 @@ export default function Page() {
         <BlogHero.Headline>
           n8n KI-Agenten erstellen: Von der Idee zum lauffähigen Agent-Workflow
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Ein KI-Agent in n8n ist ein Sprachmodell mit Werkzeugkasten: Der
+          AI-Agent-Node bündelt Chat Model, Tools und Memory, sodass der Agent
+          selbstständig Datenbanken abfragt, APIs aufruft oder Rechnungen
+          prüft. Diese Praxisanleitung zeigt den Aufbau mit zwei lauffähigen
+          Beispiel-Workflows, von der Tool-Anbindung bis zu Guardrails.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
