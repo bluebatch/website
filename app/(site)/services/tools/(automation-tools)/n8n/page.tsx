@@ -22,6 +22,7 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 import { InternalLinkLabel } from "@/components/buttons/internal-link";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
   legacyRedirects: ["/was-ist-n8n"],
@@ -94,11 +95,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 const defaultMeta = {
-  title: "Was ist n8n? Die Open-Source Automatisierungsplattform | Bluebatch",
+  title: "n8n Beratung, Implementierung & Hosting | Bluebatch",
   description:
-    "Was ist n8n? Die Open-Source iPaaS-Plattform für Workflow-Automatisierung mit 1.200+ Integrationen. Erfahren Sie, wie Bluebatch n8n als Prozessautomatisierung Software einsetzt.",
+    "n8n einführen mit Bluebatch: Beratung, Workflow-Implementierung, Custom Nodes und DSGVO-konformes Hosting auf eigener Infrastruktur. Ihre n8n Agentur aus Deutschland für den Mittelstand.",
   ogDescription:
-    "Was ist n8n? Die Open-Source iPaaS-Plattform für Enterprise-Workflows. Self-hosted, flexibel, skalierbar.",
+    "n8n Beratung, Implementierung und Hosting aus Deutschland. Bluebatch bringt n8n in den Mittelstand.",
 };
 
 export async function generateMetadata({
@@ -113,15 +114,15 @@ export async function generateMetadata({
   const description = overrides?.metaDescription ?? defaultMeta.description;
 
   const defaultKeywords = [
-    "was ist n8n",
-    "n8n",
-    "iPaaS",
-    "iPaaS RPA",
-    "iPaaS Cloud Integration",
-    "iPaaS Integration",
+    "n8n Beratung",
+    "n8n Agentur",
+    "n8n Agentur Deutschland",
+    "n8n Spezialist",
+    "n8n Dienstleister",
+    "n8n Implementierung",
+    "n8n Hosting",
     "Prozessautomatisierung Software",
     "Workflow Automatisierung",
-    "Open Source Automation",
     "Bluebatch",
   ];
 
@@ -262,15 +263,16 @@ export default async function Page({
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
               {overrides?.headline ??
-                "Was ist n8n? Die Open-Source Plattform für Prozessautomatisierung"}
+                "n8n einführen mit Bluebatch: Beratung, Implementierung und Hosting"}
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Was ist n8n? Eine leistungsstarke iPaaS-Plattform, die visuelle
-              Prozessgestaltung mit der Flexibilität von Code verbindet. Mit
-              über 1.200 Integrationen automatisieren Sie komplexe
-              Geschäftsprozesse - auf Ihrer eigenen Infrastruktur oder in der
-              Cloud.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Bluebatch führt n8n in mittelständischen Unternehmen ein: von der
+              Beratung über die Workflow-Implementierung und Custom Nodes bis
+              zum DSGVO-konformen Hosting auf eigener Infrastruktur mit 24/7
+              Monitoring und 99,9 % Uptime-SLA. n8n selbst ist eine
+              Open-Source-Automatisierungsplattform mit über 1.200
+              Integrationen.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">n8n Beratung anfragen</ContactButton>
             </Hero2ColumnCallToAction>
@@ -295,6 +297,14 @@ export default async function Page({
             n8n ist die führende Open-Source Prozessautomatisierung Software und
             eine echte Alternative zu Zapier und Make - mit voller
             Datenkontrolle und unbegrenzten Möglichkeiten für iPaaS Integration.
+            Was n8n im Detail ist und wie die Plattform funktioniert, erklärt
+            unser Einsteiger-Guide{" "}
+            <Link
+              href="/blog/was-ist-n8n"
+              className="text-primary-600 hover:underline"
+            >
+              Was ist n8n?
+            </Link>
           </IntroBox.Paragraph>
         </IntroBox>
 
