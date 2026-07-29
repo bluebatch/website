@@ -421,7 +421,13 @@ export default function Page() {
               ausrichten statt stündlich alles neu einzulesen, die
               Vektor-Store-Wahl an der realen Last ausrichten und für Piloten
               die günstige S3-Variante prüfen. Ein Kostenalarm im AWS-Konto
-              gehört von Tag eins dazu.
+              gehört von Tag eins dazu. Wie sich die Modellaufrufe selbst
+              zusammensetzen, von On-Demand über Batch bis Prompt-Caching,
+              schlüsselt unser Deep-Dive zu den{" "}
+              <Link href="/blog/aws-bedrock-kosten" className="text-primary-600 hover:underline">
+                AWS-Bedrock-Kosten
+              </Link>{" "}
+              auf.
             </Typo.Paragraph>
           </div>
 

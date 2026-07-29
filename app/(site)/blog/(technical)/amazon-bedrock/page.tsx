@@ -363,7 +363,13 @@ export default function Page() {
               und Mechanismen wie das Zwischenspeichern wiederkehrender Prompt-Teile
               oder die Stapelverarbeitung sind die wirksamsten Hebel, um sie zu
               senken. Von Anfang an Limits und ein Kostenmonitoring zu setzen, gehört
-              zur seriösen Einführung dazu.
+              zur seriösen Einführung dazu. Wer es genauer wissen will: Unser
+              Deep-Dive zu den{" "}
+              <Link href="/blog/aws-bedrock-kosten" className="text-primary-600 hover:underline">
+                AWS-Bedrock-Kosten
+              </Link>{" "}
+              rechnet Abrechnungsmodelle, Frankfurter Modellpreise und
+              Sparhebel im Detail durch.
             </Typo.Paragraph>
           </div>
 

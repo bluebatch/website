@@ -606,7 +606,12 @@ export default function Page() {
               einkalkuliert werden, abhängig vom Nutzungsintensität. Das liegt
               in der gleichen Größenordnung wie die klassischen SaaS-Seats,
               verteilt sich aber nach tatsächlicher Nutzung und nicht pauschal
-              pro Mitarbeiter.
+              pro Mitarbeiter. Die Abrechnungsmodelle und Sparhebel hinter
+              diesen Zahlen erklärt unser Deep-Dive zu den{" "}
+              <Link href="/blog/aws-bedrock-kosten" className="text-primary-600 hover:underline">
+                AWS-Bedrock-Kosten
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>Audit-Logs</Typo.H3>
