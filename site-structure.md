@@ -179,7 +179,7 @@ Grundsätze:
 │       │   ├── lokale-llms-fuer-kanzleien .... [CONTENT] (geplant)
 │       │   ├── paragraph-203-und-ki .......... [CONTENT] (geplant)
 │       │   ├── private-ai-erfolgreich-einfuehren [CONTENT] (geplant)
-│       │   └── kanzlei-wissensdatenbank ...... [CONTENT] (geplant) durchsuchbares
+│       │   └── kanzlei-wissensdatenbank ...... [CONTENT] durchsuchbares
 │       │                                        Kanzlei-Wissen inkl. Call-Aufzeichnungen
 │       │
 │       ├── claude-cowork/ .................... [HUB]     „KI als Werkzeug fürs Team",
@@ -189,21 +189,21 @@ Grundsätze:
 │       │   ├── claude-cowork-managed ......... [MONEY]   (geplant)
 │       │   ├── claude-cowork-datev-integration [MONEY]   (geplant)
 │       │   ├── was-kostet-claude-cowork ...... [MONEY]   (geplant) Preise & Dauer
-│       │   ├── kanzlei-skills-entwicklung .... [MONEY]   (geplant) Fachwissen als
+│       │   ├── kanzlei-skills-entwicklung .... [MONEY]   Fachwissen als
 │       │   │                                    KI-Skills kodieren lassen
 │       │   ├── was-ist-claude-cowork ......... [CONTENT] (geplant)
 │       │   ├── claude-cowork-use-cases ....... [CONTENT] (geplant)
 │       │   ├── claude-cowork-vs-copilot ...... [CONTENT] (geplant)
 │       │   ├── claude-cowork-dsgvo-203 ....... [CONTENT] (geplant)
 │       │   ├── claude-cowork-erfolgreich-einfuehren [CONTENT] (geplant)
-│       │   ├── was-sind-ki-skills ............ [CONTENT] (geplant) inkl. Mandanten-
+│       │   ├── was-sind-ki-skills ............ [CONTENT] inkl. Mandanten-
 │       │   │                                    Markdown je Mandant
-│       │   ├── gutachten-mit-ki .............. [CONTENT] (geplant) Gutachten und
+│       │   ├── gutachten-mit-ki .............. [CONTENT] Gutachten und
 │       │   │                                    verbindliche Auskünfte, ~3h statt Tagen
-│       │   ├── pruef-skills .................. [CONTENT] (geplant) Provisionsanspruch,
+│       │   ├── pruef-skills .................. [CONTENT] Provisionsanspruch,
 │       │   │                                    Arbeitszeugnis, Bauträger/AGB
-│       │   ├── begleitschreiben-veranlagung .. [CONTENT] (geplant)
-│       │   └── diktat-zu-text ................ [CONTENT] (geplant) Spracheingabe zu
+│       │   ├── begleitschreiben-veranlagung .. [CONTENT]
+│       │   └── diktat-zu-text ................ [CONTENT] Spracheingabe zu
 │       │                                        fertiger Mail, ~150h/Jahr
 │       │
 │       ├── ki-agenten/ ....................... [HUB]     „KI als digitaler Mitarbeiter"
@@ -216,13 +216,13 @@ Grundsätze:
 │       │   ├── mail-agent .................... [CONTENT] Katalog
 │       │   ├── mandantenkommunikation ........ [CONTENT] Katalog
 │       │   ├── jahresabschluss-ki ............ [CONTENT] Katalog
-│       │   ├── einspruch-agent ............... [CONTENT] (geplant) Katalog: Einspruch
+│       │   ├── einspruch-agent ............... [CONTENT] Katalog: Einspruch
 │       │   │                                    mit Recherche + Schriftsatz, 8h zu 2h
-│       │   ├── bwa-analyse-agent ............. [CONTENT] (geplant) Katalog: BWA-Analyse
+│       │   ├── bwa-analyse-agent ............. [CONTENT] Katalog: BWA-Analyse
 │       │   │                                    + Steuer-Forecast
-│       │   ├── beratungsanlaesse-agent ....... [CONTENT] (geplant) Katalog: Anlässe aus
+│       │   ├── beratungsanlaesse-agent ....... [CONTENT] Katalog: Anlässe aus
 │       │   │                                    Mandantendaten, Vorauszahlungs-Check
-│       │   ├── mandanten-chatbot ............. [CONTENT] (geplant) Katalog: Support-Bot
+│       │   ├── mandanten-chatbot ............. [CONTENT] Katalog: Support-Bot
 │       │   │                                    mit Kanzlei-Wissensbasis
 │       │   ├── was-ist-ein-ki-agent .......... [CONTENT] (geplant)
 │       │   └── ki-agenten-erfolgreich-einfuehren [CONTENT] (geplant)
@@ -234,36 +234,36 @@ Grundsätze:
 │       │   ├── datev-jira-sync-implementierung [MONEY]   (geplant)
 │       │   ├── workflow-audit-kanzlei ........ [MONEY]   (geplant)
 │       │   ├── was-kostet-workflow-automatisierung [MONEY] (geplant) Preise & Dauer
-│       │   ├── fibu-monatsreview-implementierung [MONEY] (geplant)
+│       │   ├── fibu-monatsreview-implementierung [MONEY]
 │       │   ├── belegpruefung ................. [CONTENT] Katalog
 │       │   ├── dokumentenverarbeitung ........ [CONTENT] Katalog
 │       │   ├── datev-jira-task-orchestration . [CONTENT] Katalog
 │       │   ├── e-rechnung-verarbeitung ....... [CONTENT] Katalog
 │       │   ├── mandanten-onboarding .......... [CONTENT] Katalog
-│       │   ├── fibu-monatsreview ............. [CONTENT] (geplant) Katalog: Buchungen
+│       │   ├── fibu-monatsreview ............. [CONTENT] Katalog: Buchungen
 │       │   │                                    prüfen via MCP + DATEV-Connect, inkl.
 │       │   │                                    Kreditoren-/Ordnungsmäßigkeitsprüfung
-│       │   ├── anlage-v-mit-ki ............... [CONTENT] (geplant)
-│       │   ├── buchungsstapel-per-ki ......... [CONTENT] (geplant)
-│       │   ├── bankabgleich-automatisieren ... [CONTENT] (geplant)
-│       │   ├── bewirtungsbelege-per-ki ....... [CONTENT] (geplant) auch handschriftlich
-│       │   ├── beleg-upload-automatisieren ... [CONTENT] (geplant) GetMyInvoices,
+│       │   ├── anlage-v-mit-ki ............... [CONTENT]
+│       │   ├── buchungsstapel-per-ki ......... [CONTENT]
+│       │   ├── bankabgleich-automatisieren ... [CONTENT]
+│       │   ├── bewirtungsbelege-per-ki ....... [CONTENT] auch handschriftlich
+│       │   ├── beleg-upload-automatisieren ... [CONTENT] GetMyInvoices,
 │       │   │                                    DUO/lexware je Mandant
-│       │   ├── honorarprozess-automatisieren . [CONTENT] (geplant) Mahnwesen,
+│       │   ├── honorarprozess-automatisieren . [CONTENT] Mahnwesen,
 │       │   │                                    Serienrechnung, SEPA
-│       │   ├── kassenmeldepflicht ............ [CONTENT] (geplant) Formular, XML,
+│       │   ├── kassenmeldepflicht ............ [CONTENT] Formular, XML,
 │       │   │                                    ELSTER-Import
-│       │   └── lohnprozess-automatisieren .... [CONTENT] (geplant) bis White-Label
+│       │   └── lohnprozess-automatisieren .... [CONTENT] bis White-Label
 │       │
-│       └── kanzlei-organisation/ ............. [HUB]     (geplant) Prozesse, Handbuch,
+│       └── kanzlei-organisation/ ............. [HUB]     Prozesse, Handbuch,
 │           │                                    internes Onboarding — Kanzlei als Betrieb
-│           ├── kanzlei-digitalisierungs-workshop [MONEY] (geplant)
-│           ├── kanzleihandbuch-aufbauen ...... [CONTENT] (geplant) inkl. Muster-Vorlage
-│           ├── prozessdoku-mit-ki ............ [CONTENT] (geplant) Screen-Recording zu
+│           ├── kanzlei-digitalisierungs-workshop [MONEY]
+│           ├── kanzleihandbuch-aufbauen ...... [CONTENT] inkl. Muster-Vorlage
+│           ├── prozessdoku-mit-ki ............ [CONTENT] Screen-Recording zu
 │           │                                    Artikel, senkt Fehlerquote
-│           ├── mitarbeiter-onboarding-digital  [CONTENT] (geplant) DATEV-fit in 1 Woche
-│           ├── rollenbasierte-kanzlei ........ [CONTENT] (geplant) Rollen + Dashboards
-│           └── ticketsystem-kanzlei .......... [CONTENT] (geplant) statt Mail-Chaos
+│           ├── mitarbeiter-onboarding-digital  [CONTENT] DATEV-fit in 1 Woche
+│           ├── rollenbasierte-kanzlei ........ [CONTENT] Rollen + Dashboards
+│           └── ticketsystem-kanzlei .......... [CONTENT] statt Mail-Chaos
 │
 ├── services/ ................................. [HUB]    Angebots-Verteiler
 │   ├── n8n-hosting ........................... [MONEY]
@@ -327,7 +327,7 @@ Quelle: `steuerberater-50-cases.md`. Alle 50 Cases sind eingeordnet:
   claude-cowork +6, ki-agenten +4, workflows +10, kanzlei-organisation +7).
   Mehrere eng verwandte Cases teilen sich bewusst eine Seite (z.B. die drei
   Prüf-Skills, Mahnwesen + Serienrechnung, Rollen + Dashboards).
-- **Neuer fünfter StB-Hub `kanzlei-organisation/`** (geplant) nach dem
+- **Neuer fünfter StB-Hub `kanzlei-organisation/`** nach dem
   Skalierungsprinzip: Kanzleihandbuch, Prozessdoku, internes Onboarding —
   eigenes Keyword-Cluster („Kanzlei als Betrieb"), passt in keinen der vier
   KI-Hubs.

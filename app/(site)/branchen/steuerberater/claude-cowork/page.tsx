@@ -333,8 +333,57 @@ export default function Page() {
         </div>
       </ContentWrapper>
 
+      {/* Vertiefen: was das Team mit Claude Cowork konkret macht */}
+      <ContentWrapper colorScheme="white">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <Typo.H2 className="mb-4">
+            Was Kanzleien mit Claude Cowork konkret machen
+          </Typo.H2>
+          <Typo.Paragraph className="text-gray-600">
+            Vom Gutachten bis zum Diktat: Diese Anwendungsfälle kommen direkt
+            aus dem Kanzlei-Alltag - jede Seite zeigt, wie das Team damit
+            arbeitet.
+          </Typo.Paragraph>
+        </div>
+        <SimpleGrid cols={3} className="gap-4">
+          {[
+            {
+              href: "/branchen/steuerberater/claude-cowork/kanzlei-skills-entwicklung",
+              label: "Fachwissen als KI-Skills kodieren lassen",
+            },
+            {
+              href: "/branchen/steuerberater/claude-cowork/was-sind-ki-skills",
+              label: "Was sind KI-Skills?",
+            },
+            {
+              href: "/branchen/steuerberater/claude-cowork/pruef-skills",
+              label: "Prüf-Skills: Provisionsanspruch, Arbeitszeugnis, AGB",
+            },
+            {
+              href: "/branchen/steuerberater/claude-cowork/gutachten-mit-ki",
+              label: "Gutachten mit KI in circa 3 Stunden",
+            },
+            {
+              href: "/branchen/steuerberater/claude-cowork/begleitschreiben-veranlagung",
+              label: "Begleitschreiben zur Veranlagung",
+            },
+            {
+              href: "/branchen/steuerberater/claude-cowork/diktat-zu-text",
+              label: "Diktat zu Text: circa 150h pro Jahr sparen",
+            },
+          ].map((item) => (
+            <div
+              key={item.href}
+              className="rounded-xl border border-gray-200 bg-white p-5"
+            >
+              <InternalLink href={item.href}>{item.label}</InternalLink>
+            </div>
+          ))}
+        </SimpleGrid>
+      </ContentWrapper>
+
       {/* FAQ */}
-      <ContentWrapper colorScheme="white" bodyWidth="small">
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <FaqContainer faqs={faqs}>
           <FaqContainer.Headline>
             Häufige Fragen zu KI bei sensiblen Daten

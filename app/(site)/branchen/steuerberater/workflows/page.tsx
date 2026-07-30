@@ -134,6 +134,105 @@ const workflows = [
     ],
     linkLabel: "Zum Mandanten-Onboarding",
   },
+  {
+    href: "/branchen/steuerberater/workflows/fibu-monatsreview",
+    title: "FiBu-Monatsreview",
+    badge: "Workflow #06",
+    role: "Buchungsprüfung per KI",
+    stat: "je Monat",
+    description:
+      "Jede Buchung geprüft, bevor der Monat schließt: KI-Review via MCP-Server an DATEV-Connect, inkl. Kreditoren- und Ordnungsmäßigkeitsprüfung.",
+    image: "/images/datev-integration.jpg",
+    linkLabel: "Zum FiBu-Monatsreview",
+  },
+  {
+    href: "/branchen/steuerberater/workflows/anlage-v-mit-ki",
+    title: "Anlage V mit KI",
+    badge: "Workflow #07",
+    role: "Vermietungseinkünfte",
+    stat: "ohne Abtippen",
+    description:
+      "Anlage V per KI erstellen und prüfen: Vermietungseinkünfte aus Unterlagen erfasst, plausibilisiert und vorbereitet.",
+    image: "/images/document-automation.jpg",
+    linkLabel: "Zur Anlage V mit KI",
+  },
+  {
+    href: "/branchen/steuerberater/workflows/buchungsstapel-per-ki",
+    title: "Buchungsstapel per KI",
+    badge: "Workflow #08",
+    role: "Vom Beleg zum DATEV-Stapel",
+    stat: "SKR 03/04",
+    description:
+      "Buchungsstapel per KI generieren: aus Belegen wird ein fertiger, kontierter DATEV-Stapel zur Übernahme.",
+    image: "/images/invoice-processing.jpg",
+    linkLabel: "Zum Buchungsstapel per KI",
+  },
+  {
+    href: "/branchen/steuerberater/workflows/bankabgleich-automatisieren",
+    title: "Bankabgleich automatisieren",
+    badge: "Workflow #09",
+    role: "OPOS statt Abhaken",
+    stat: "täglich",
+    description:
+      "Bankabstimmung automatisiert per KI: Zahlungseingänge zuordnen, offene Posten abgleichen, Differenzen melden.",
+    image: "/images/business-analytics.jpg",
+    linkLabel: "Zum Bankabgleich",
+  },
+  {
+    href: "/branchen/steuerberater/workflows/bewirtungsbelege-per-ki",
+    title: "Bewirtungsbelege per KI",
+    badge: "Workflow #10",
+    role: "Auch handschriftlich",
+    stat: "§ 4 EStG",
+    description:
+      "Bewirtungsbelege per KI auslesen und buchen, auch handschriftliche - inklusive 70/30-Aufteilung und Pflichtangaben-Check.",
+    image: "/images/invoice-verification.jpg",
+    linkLabel: "Zu den Bewirtungsbelegen",
+  },
+  {
+    href: "/branchen/steuerberater/workflows/beleg-upload-automatisieren",
+    title: "Beleg-Upload automatisieren",
+    badge: "Workflow #11",
+    role: "Mandantenbelege einsammeln",
+    stat: "je Mandant",
+    description:
+      "Belege automatisch beim Mandanten einsammeln: E-Mail-Weiterleitung, GetMyInvoices und Co., passend zu DATEV Unternehmen Online oder lexware.",
+    image: "/images/data-flow.jpg",
+    linkLabel: "Zum Beleg-Upload",
+  },
+  {
+    href: "/branchen/steuerberater/workflows/honorarprozess-automatisieren",
+    title: "Honorarprozess automatisieren",
+    badge: "Workflow #12",
+    role: "Rechnung bis Mahnlauf",
+    stat: "SEPA",
+    description:
+      "Serienrechnung, SEPA-Lastschrift und vollautomatischer Mahnprozess - damit Honorare pünktlich kommen, ohne Hinterhertelefonieren.",
+    image: "/images/pricing-calculator.jpg",
+    linkLabel: "Zum Honorarprozess",
+  },
+  {
+    href: "/branchen/steuerberater/workflows/kassenmeldepflicht",
+    title: "Kassenmeldepflicht",
+    badge: "Workflow #13",
+    role: "§ 146a AO",
+    stat: "1 Klick",
+    description:
+      "Vom Mandanten-Formular über den Konverter zur XML - und per 1-Klick-Import in ELSTER gemeldet.",
+    image: "/images/process-automation.jpg",
+    linkLabel: "Zur Kassenmeldepflicht",
+  },
+  {
+    href: "/branchen/steuerberater/workflows/lohnprozess-automatisieren",
+    title: "Lohnprozess automatisieren",
+    badge: "Workflow #14",
+    role: "Bis White-Label",
+    stat: "monatlich",
+    description:
+      "Lohnprozess automatisieren - von der Datenerfassung bis zur White-Label-Plattform, die die Kanzlei ihren Mandanten anbietet.",
+    image: "/images/human-resources.jpg",
+    linkLabel: "Zum Lohnprozess",
+  },
 ];
 
 const stats = [

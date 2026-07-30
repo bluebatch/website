@@ -195,6 +195,11 @@ const branchenMenu = {
           title: "Workflows",
           href: "/branchen/steuerberater/workflows",
         },
+        {
+          icon: "/icons/settings.svg",
+          title: "Kanzlei-Organisation",
+          href: "/branchen/steuerberater/kanzlei-organisation",
+        },
       ],
     },
   ],

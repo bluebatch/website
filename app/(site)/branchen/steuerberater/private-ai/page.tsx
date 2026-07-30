@@ -144,9 +144,14 @@ export default function Page() {
               </InternalLink>{" "}
               auf - mit derselben geschützten Basis.
             </Typo.Paragraph>
-            <InternalLink href="/branchen/steuerberater/claude-cowork">
-              Alternative: Claude Cowork, verwaltet und § 203-konform
-            </InternalLink>
+            <div className="flex flex-col items-start gap-3">
+              <InternalLink href="/branchen/steuerberater/private-ai/kanzlei-wissensdatenbank">
+                Anwendungsfall: die durchsuchbare Kanzlei-Wissensdatenbank
+              </InternalLink>
+              <InternalLink href="/branchen/steuerberater/claude-cowork">
+                Alternative: Claude Cowork, verwaltet und § 203-konform
+              </InternalLink>
+            </div>
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image

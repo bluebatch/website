@@ -107,6 +107,74 @@ const agents = [
     ],
     linkLabel: "Zum KI-Jahresabschluss-Agenten",
   },
+  {
+    href: "/branchen/steuerberater/ki-agenten/einspruch-agent",
+    title: "Einspruch-Agent",
+    badge: "Agent #04",
+    role: "Sachbearbeiter Rechtsbehelf",
+    stat: "8h zu 2h",
+    description:
+      "Einspruch gegen den Steuerbescheid mit Rechtsprechungs-Recherche, Argumentation und fertigem Schriftsatz-Entwurf - der Steuerberater prüft und verantwortet.",
+    image: "/images/tax-consulting-workspace.jpg",
+    features: [
+      "Recherchiert einschlägige Rechtsprechung",
+      "Baut die Argumentation auf",
+      "Liefert den Schriftsatz als Entwurf",
+      "Human-in-the-Loop-Kontrolle",
+    ],
+    linkLabel: "Zum Einspruch-Agenten",
+  },
+  {
+    href: "/branchen/steuerberater/ki-agenten/bwa-analyse-agent",
+    title: "BWA-Analyse-Agent",
+    badge: "Agent #05",
+    role: "Assistent Auswertung",
+    stat: "je Mandant",
+    description:
+      "Analysiert jede BWA automatisch, markiert Auffälligkeiten und erstellt einen Steuer-Forecast je Mandant - als Grundlage für proaktive Beratung.",
+    image: "/images/business-analytics.jpg",
+    features: [
+      "BWA automatisch analysiert",
+      "Auffälligkeiten markiert",
+      "Steuer-Forecast je Mandant",
+      "Beratungsgrundlage statt Zahlenfriedhof",
+    ],
+    linkLabel: "Zum BWA-Analyse-Agenten",
+  },
+  {
+    href: "/branchen/steuerberater/ki-agenten/beratungsanlaesse-agent",
+    title: "Beratungsanlässe-Agent",
+    badge: "Agent #06",
+    role: "Assistent Beratung",
+    stat: "4x/Jahr",
+    description:
+      "Erkennt Beratungsanlässe systematisch aus Mandantendaten - anstehende Übergaben, ungewöhnliche Belastungen, Fristen - inkl. quartalsweisem Vorauszahlungs-Check.",
+    image: "/images/opportunity-doors.jpg",
+    features: [
+      "Scannt Mandantendaten auf Anlässe",
+      "Quartalsweiser Vorauszahlungs-Check",
+      "Proaktiver Anpassungs-Hinweis",
+      "Aus Pflicht wird Beratung",
+    ],
+    linkLabel: "Zum Beratungsanlässe-Agenten",
+  },
+  {
+    href: "/branchen/steuerberater/ki-agenten/mandanten-chatbot",
+    title: "Mandanten-Chatbot",
+    badge: "Agent #07",
+    role: "Ansprechpartner rund um die Uhr",
+    stat: "24/7",
+    description:
+      "Beantwortet Mandantenfragen rund um die Uhr aus der Kanzlei-Wissensbasis - fachliche Fragen gehen an den Sachbearbeiter.",
+    image: "/images/client-communication.jpg",
+    features: [
+      "Antwortet aus der Kanzlei-Wissensbasis",
+      "Rund um die Uhr erreichbar",
+      "Fachfragen gehen an den Sachbearbeiter",
+      "Entlastet Telefon und Postfach",
+    ],
+    linkLabel: "Zum Mandanten-Chatbot",
+  },
 ];
 
 const abgrenzung = [

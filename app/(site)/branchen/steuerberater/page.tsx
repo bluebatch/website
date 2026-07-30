@@ -341,6 +341,26 @@ export default function Page() {
         );
       })}
 
+      {/* Fünfter Baustein: die Kanzlei als Betrieb */}
+      <ContentWrapper>
+        <div className="text-center max-w-3xl mx-auto">
+          <Typo.Paragraph className="text-sm font-semibold uppercase tracking-wide text-primary-600 mb-2">
+            Und das Fundament darunter
+          </Typo.Paragraph>
+          <Typo.H2 className="mb-4">Kanzlei-Organisation</Typo.H2>
+          <Typo.Paragraph className="text-gray-600 mb-6">
+            Jede Automatisierung ist nur so gut wie der Prozess dahinter.
+            Rollenbasierte Organisation, ein gepflegtes Kanzleihandbuch und
+            dokumentierte Abläufe sind die Voraussetzung dafür, dass KI-Agenten
+            und Workflows greifen - deshalb behandeln wir die Kanzlei als
+            Betrieb in einem eigenen Bereich.
+          </Typo.Paragraph>
+          <InternalLink href="/branchen/steuerberater/kanzlei-organisation">
+            Zur Kanzlei-Organisation
+          </InternalLink>
+        </div>
+      </ContentWrapper>
+
       {/* Einstieg: wo anfangen */}
       <ContentWrapper colorScheme="gray-light">
         <div className="text-center max-w-3xl mx-auto">

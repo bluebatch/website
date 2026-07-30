@@ -40,6 +40,10 @@ const branchenGroups = [
       { label: "Claude Cowork", href: "/branchen/steuerberater/claude-cowork" },
       { label: "KI-Agenten", href: "/branchen/steuerberater/ki-agenten" },
       { label: "Workflows", href: "/branchen/steuerberater/workflows" },
+      {
+        label: "Kanzlei-Organisation",
+        href: "/branchen/steuerberater/kanzlei-organisation",
+      },
     ],
   },
 ];
