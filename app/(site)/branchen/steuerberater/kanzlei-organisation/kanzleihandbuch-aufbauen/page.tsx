@@ -16,7 +16,7 @@ import TimelineAsSteps, {
 import { FaqContainer } from "@/components/ui/faqs";
 
 export const metadata: Metadata = {
-  title: "Kanzleihandbuch aufbauen - Notion-Wiki statt Ordner | Bluebatch",
+  title: "Kanzleihandbuch: mit Muster-Vorlage aufbauen statt leerem Blatt | Bluebatch",
   description:
     "Kanzleihandbuch als Notion-Wiki aufbauen: Fundament für Onboarding, Delegation, Führung und KI. Mit Muster-Handbuch (circa 200 Seiten) als Vorlage starten.",
   openGraph: {

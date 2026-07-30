@@ -28,7 +28,7 @@ export const pageConfig: PageConfig = {
 };
 
 const defaultMeta = {
-  title: "Honorarprozess automatisieren in der Kanzlei | Bluebatch",
+  title: "Mahnwesen automatisieren: Rechnung, SEPA, Mahnlauf der Kanzlei | Bluebatch",
   description:
     "Honorarprozess für Steuerkanzleien automatisieren: Serienrechnung, SEPA-Lastschrift über Stripe oder lexware, vollautomatischer Mahnlauf mit Eskalation bis zur Mandatskündigung.",
   ogDescription:
@@ -85,7 +85,7 @@ export default function Page() {
               Use Case Steuerberater
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Honorarprozess automatisieren: Serienrechnung, SEPA und Mahnlauf
+              Mahnwesen automatisieren: Serienrechnung, SEPA und Mahnlauf ohne Handarbeit
             </Hero2ColumnHeadline>
             <GeoSummary>
               Der automatisierte Honorarprozess von Bluebatch ist ein Workflow

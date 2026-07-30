@@ -20,7 +20,7 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Diktat zu Text - E-Mails diktieren in der Steuerkanzlei | Bluebatch",
+  title: "Diktiersoftware neu gedacht: Diktat zu fertigem Text per KI | Bluebatch",
   description:
     "Diktat zu Text für Steuerkanzleien: Spracheingabe wird zur fertig formulierten E-Mail in Outlook, DATEV oder Word. Circa 150 Stunden Ersparnis pro Jahr, für wen sich das lohnt und wie es sich im Alltag anfühlt.",
   openGraph: {

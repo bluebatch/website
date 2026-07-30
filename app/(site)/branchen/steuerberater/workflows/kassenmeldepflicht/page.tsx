@@ -28,7 +28,7 @@ export const pageConfig: PageConfig = {
 };
 
 const defaultMeta = {
-  title: "Kassenmeldepflicht automatisieren für Steuerberater | Bluebatch",
+  title: "Kassenmeldepflicht 2025/26: ELSTER-Meldung automatisieren | Bluebatch",
   description:
     "Kassenmeldepflicht nach § 146a Abs. 4 AO als Workflow: Mandanten erfassen Kassendaten per MS-Forms-Formular, ein Konverter erzeugt die XML, 1-Klick-Import in ELSTER.",
   ogDescription:

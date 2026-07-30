@@ -22,7 +22,7 @@ import { ProductTileGrid } from "@/components/cards/product-tile";
 import { FaqContainer } from "@/components/ui/faqs";
 
 export const metadata: Metadata = {
-  title: "Kanzlei-Organisation - Prozesse, Handbuch, Onboarding | Bluebatch",
+  title: "Kanzleiorganisation: Prozesse, Handbuch, Onboarding | Bluebatch",
   description:
     "Kanzlei-Organisation für Steuerberater: dokumentierte Prozesse, Kanzleihandbuch, rollenbasierte Struktur und internes Onboarding als Fundament jeder Automatisierung.",
   openGraph: {

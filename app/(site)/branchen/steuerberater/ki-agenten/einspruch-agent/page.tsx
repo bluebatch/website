@@ -38,7 +38,7 @@ export const pageConfig: PageConfig = {
 };
 
 const defaultMeta = {
-  title: "Einspruch-Agent für Steuerberater: Schriftsatz mit KI | Bluebatch",
+  title: "Einspruch gegen den Steuerbescheid mit KI: 8h zu 2h | Bluebatch",
   description:
     "Einspruch gegen den Steuerbescheid per KI-Agent: Rechtsprechungs-Recherche, Argumentation, fertiger Schriftsatz-Entwurf. Von 8 auf 2 Stunden pro Einspruch, der Berufsträger gibt frei.",
   ogDescription:

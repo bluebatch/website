@@ -28,7 +28,7 @@ export const pageConfig: PageConfig = {
 };
 
 const defaultMeta = {
-  title: "Lohnprozess automatisieren für Steuerkanzleien | Bluebatch",
+  title: "Lohnbuchhaltung automatisieren: der Lohnprozess der Kanzlei | Bluebatch",
   description:
     "Lohnprozess in der Kanzlei automatisieren: Lohndaten strukturiert beim Mandanten erfassen, Auswertungen automatisch verteilen, auf Wunsch als White-Label-Plattform im Kanzlei-Design.",
   ogDescription:
@@ -84,8 +84,7 @@ export default function Page() {
               Use Case Steuerberater
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Lohnprozess automatisieren: von der Datenerfassung zur
-              White-Label-Plattform
+              Lohnbuchhaltung automatisieren: von der Datenerfassung zur White-Label-Plattform
             </Hero2ColumnHeadline>
             <GeoSummary>
               Die Lohnprozess-Automatisierung von Bluebatch ist ein Workflow

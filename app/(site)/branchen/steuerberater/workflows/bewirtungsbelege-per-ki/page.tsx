@@ -24,13 +24,13 @@ import IntroBox from "@/components/ui/intro-box";
 export const pageConfig: PageConfig = {
   title: "Bewirtungsbelege per KI",
   description:
-    "Bewirtungsbelege per KI auslesen und buchen, auch handschriftliche Angaben zu Anlass und Teilnehmern.",
+    "Bewirtungsbeleg mit KI: auslesen, prüfen und buchen - auch handschriftliche Angaben zu Anlass und Teilnehmern.",
 };
 
 const defaultMeta = {
-  title: "Bewirtungsbelege per KI buchen für Steuerkanzleien | Bluebatch",
+  title: "Bewirtungsbeleg: Pflichtangaben prüfen und per KI buchen | Bluebatch",
   description:
-    "Bewirtungsbelege per KI auslesen und buchen, auch handschriftlich. Pflichtangaben nach § 4 Abs. 5 Nr. 2 EStG prüfen, 70/30-Aufteilung automatisch, DATEV-ready.",
+    "Bewirtungsbeleg mit KI: auslesen, prüfen und buchen - auch handschriftlich. Pflichtangaben nach § 4 Abs. 5 Nr. 2 EStG prüfen, 70/30-Aufteilung automatisch, DATEV-ready.",
   ogDescription:
     "KI liest Bewirtungsbelege inklusive handschriftlicher Angaben, prüft die Pflichtangaben und übergibt den fertigen Buchungsvorschlag mit 70/30-Aufteilung an DATEV.",
 };
@@ -84,7 +84,7 @@ export default function Page() {
               Use Case Steuerberater
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Bewirtungsbelege per KI auslesen und buchen, auch handschriftlich
+              Bewirtungsbeleg mit KI: auslesen, prüfen und buchen - auch handschriftlich
             </Hero2ColumnHeadline>
             <GeoSummary>
               Die KI-Bewirtungsbeleg-Erfassung von Bluebatch ist ein

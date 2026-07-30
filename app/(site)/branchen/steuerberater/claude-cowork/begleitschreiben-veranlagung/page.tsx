@@ -23,7 +23,7 @@ export const pageConfig: PageConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Begleitschreiben zur Veranlagung mit KI - Kanzlei-Workflow | Bluebatch",
+  title: "Begleitschreiben zur Steuererklärung: per KI statt Muster | Bluebatch",
   description:
     "Begleitschreiben zur Veranlagung per KI generieren: Workflow, Wissensbasis aus System-Prompt, anonymisierten Kanzlei-Dokumenten und BFH-Urteilen, Freigabe-Prinzip für Steuerkanzleien.",
   openGraph: {

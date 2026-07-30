@@ -26,7 +26,7 @@ export const pageConfig: PageConfig = {
 };
 
 const defaultMeta = {
-  title: "Anlage V mit KI erstellen und prüfen für Steuerkanzleien | Bluebatch",
+  title: "Anlage V ausfüllen und prüfen mit KI - für Steuerkanzleien | Bluebatch",
   description:
     "Anlage V per KI: Mietverträge, Nebenkostenabrechnungen und Darlehensbelege automatisch auslesen, den Zeilen der Anlage V zuordnen und gegen das Vorjahr plausibilisieren.",
   ogDescription:

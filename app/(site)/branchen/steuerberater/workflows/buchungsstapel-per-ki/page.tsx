@@ -33,7 +33,7 @@ export const pageConfig: PageConfig = {
 };
 
 const defaultMeta = {
-  title: "Buchungsstapel per KI generieren für Steuerkanzleien | Bluebatch",
+  title: "Buchhaltung automatisieren: Buchungsstapel per KI für DATEV | Bluebatch",
   description:
     "Buchungsstapel per KI: Belege, Bank- und Kassendaten automatisch nach SKR 03 oder SKR 04 kontieren und als fertigen Stapel an DATEV Kanzlei-Rechnungswesen übergeben.",
   ogDescription:

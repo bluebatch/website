@@ -28,7 +28,7 @@ export const pageConfig: PageConfig = {
 };
 
 const defaultMeta = {
-  title: "Beleg-Upload automatisieren für Steuerkanzleien | Bluebatch",
+  title: "Belege digitalisieren: Mandanten-Upload automatisieren | Bluebatch",
   description:
     "Automatisierter Beleg-Upload beim Mandanten: E-Mail-Weiterleitung, GetMyInvoices oder InvoiceFetcher, Übergabe an DATEV Unternehmen Online oder lexware per Schnittstelle.",
   ogDescription:
