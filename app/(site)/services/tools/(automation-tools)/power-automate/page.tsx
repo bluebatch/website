@@ -8,7 +8,6 @@ import Hero2Column, {
   Hero2ColumnMediaColumn,
   Hero2ColumnPreHeadline,
   Hero2ColumnHeadline,
-  Hero2ColumnDescription,
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
   Hero2ColumnImage,
@@ -21,6 +20,7 @@ import DataTable from "@/components/ui/data-table";
 import ProsCons from "@/components/sections/pros-cons";
 import IndustryFit from "@/components/sections/industry-fit";
 import ToolComparisonTable from "@/components/sections/tool-comparison-table";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metadata: Metadata = {
   title:
@@ -134,13 +134,15 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Microsoft Power Automate - ehrlich bewertet
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Power Automate ist Microsofts Automatisierungsplattform mit Cloud
-              Flows, Desktop RPA und Copilot-KI. Gartner-Leader seit 7 Jahren,
-              über 14.800 Unternehmen weltweit, tief in M365 integriert. Aber
-              auch: versteckte Kosten, API-Limits und starker Vendor Lock-in.
-              Hier ist die ganze Geschichte.
-            </Hero2ColumnDescription>
+            <GeoSummary>
+              Microsoft Power Automate ist Microsofts Automatisierungsplattform
+              mit Cloud Flows, Desktop-RPA und Copilot-KI, tief in Microsoft
+              365 integriert und Gartner-Leader seit 7 Jahren. Diese Seite
+              bewertet Power Automate unabhängig für den Mittelstand: echte
+              Kosten ab 15 € pro User und Monat, versteckte Lizenzfallen,
+              API-Limits, Vendor Lock-in und der Vergleich mit n8n, Make und
+              Zapier.
+            </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">
                 Power Automate Beratung anfragen

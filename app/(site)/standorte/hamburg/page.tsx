@@ -271,11 +271,14 @@ export default async function Page({
             </>
           )}
         </BackgroundHero.Headline>
-        <BackgroundHero.Description>
-          Als KI Agentur Hamburg sind wir Ihr Partner für n8n-Workflows,
-          KI-Automatisierung und Prozessoptimierung — von Hafen-Logistik
-          bis E-Commerce. Self-hosted, DSGVO-konform und skalierbar
-          für Unternehmen in der Hansestadt.
+        <BackgroundHero.Description geo>
+          Bluebatch ist eine KI Agentur für Hamburg: n8n-Workflows,
+          KI-Automatisierung und Prozessoptimierung für Unternehmen von
+          Hafen-Logistik bis E-Commerce, self-hosted und DSGVO-konform auf
+          eigener Infrastruktur. Typische Projekte wie automatische
+          Bestellerfassung oder Rechnungsprüfung sparen Hamburger Betrieben
+          mehrere Stunden manueller Arbeit pro Tag, remote umgesetzt und vor
+          Ort betreut.
         </BackgroundHero.Description>
         <BackgroundHero.CallToAction>
           <ContactButton icon="chat">

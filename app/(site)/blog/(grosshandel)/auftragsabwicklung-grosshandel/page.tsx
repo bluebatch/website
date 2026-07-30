@@ -5,6 +5,7 @@ import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "auftragsabwicklung-grosshandel",
@@ -50,6 +51,15 @@ export default function Page() {
           Auftragsabwicklung im Großhandel: Warum der echte Hebel vor dem
           ERP liegt
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Auftragsabwicklung im Großhandel bindet 40 bis 60 Prozent der
+          Innendienst-Kapazität, weil 60 bis 80 Prozent aller Bestellungen
+          unstrukturiert ankommen: PDF, Freitext-Mail, Excel, Fax. Dieser
+          Cluster-Hub zeigt, wo der Prozess kippt, vergleicht die drei
+          Tool-Wege 2026 (ERP-Modul, KI-SaaS, Best-of-Breed mit n8n) und
+          rechnet den ROI eines KI-Workflows vor dem ERP durch.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
