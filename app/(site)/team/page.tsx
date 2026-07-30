@@ -86,10 +86,13 @@ export default function TeamPage() {
             <Hero2ColumnHeadline>
               Die Köpfe hinter Bluebatch
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Wir sind Workflow-Architekten, Code-Enthusiasten und
-              Automatisierungs-Nerds. Gemeinsam revolutionieren wir die Art, wie
-              Unternehmen arbeiten.
+            <Hero2ColumnDescription geo>
+              Bluebatch ist eine KI- und Automatisierungsagentur aus
+              Deutschland. Das Team aus Workflow-Architekten und Entwicklern
+              automatisiert Backoffice-Prozesse im Mittelstand mit
+              n8n-Workflows und KI-Agenten: von der Rechnungsprüfung bis zur
+              Auftragserfassung, die ersten Workflows in 5 Tagen live und
+              DSGVO-konform.
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>

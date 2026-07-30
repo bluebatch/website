@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 import { resolveHref } from "@/lib/get-canonical-path";
 
 export const metaCustom: BlogMeta = {
@@ -48,6 +49,15 @@ export default function Page() {
         <BlogHero.Headline>
           B2B-Großhandel digitalisieren: Strategie, Kanäle und Workflows für 2026
         </BlogHero.Headline>
+
+        <GeoSummary>
+          B2B-Großhandel digitalisieren heißt, vier Säulen parallel
+          aufzubauen: digitaler Vertriebskanal, automatisierte
+          Auftragsabwicklung, datengetriebene Steuerung und intelligente
+          Prozessautomatisierung. Dieser Leitfaden zeigt Strategie, Kanäle und
+          Workflows für 2026 — inklusive Praxisbausteinen wie automatischer
+          Angebotserstellung, die pro Angebot 10 bis 20 Minuten spart.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

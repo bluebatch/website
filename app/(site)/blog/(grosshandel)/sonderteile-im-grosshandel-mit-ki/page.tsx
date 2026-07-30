@@ -6,6 +6,7 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "sonderteile-im-grosshandel-mit-ki",
@@ -63,6 +64,15 @@ export default async function Page({
           Angebotserstellung Sonderteile: Wie Veredler-Großhändler den
           Bestelleingang mit KI automatisieren
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Angebotserstellung für Sonderteile ist im Veredler-Großhandel der
+          größte Engpass im Innendienst: 15 von 39 Antriebstechnik-Veredlern
+          suchen dort aktuell Personal, 38 Prozent der Branche. Dieser Artikel
+          zeigt drei KI-Hebel im Bestelleingang — Anfragen automatisch
+          erfassen, Kundenzeichnungen interpretieren, Kalkulationen
+          wiederverwenden — mit Praxisbeispielen und Einstiegsplan.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

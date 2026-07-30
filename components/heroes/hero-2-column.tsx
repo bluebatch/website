@@ -23,6 +23,8 @@ interface HeadlineProps {
 
 interface DescriptionProps {
   children: ReactNode;
+  /** markiert den Absatz als GEO-Kurzbeschreibung (data-geo="summary") */
+  geo?: boolean;
 }
 
 interface SubtextProps {
@@ -84,9 +86,12 @@ export function Hero2ColumnHeadline({ children, as: Tag = "h1" }: HeadlineProps)
   );
 }
 
-export function Hero2ColumnDescription({ children }: DescriptionProps) {
+export function Hero2ColumnDescription({ children, geo }: DescriptionProps) {
   return (
-    <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
+    <p
+      {...(geo ? { "data-geo": "summary" } : {})}
+      className="text-base md:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed"
+    >
       {children}
     </p>
   );
