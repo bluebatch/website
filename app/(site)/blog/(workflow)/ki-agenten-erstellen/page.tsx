@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "ki-agenten-erstellen",
@@ -51,6 +52,15 @@ export default function Page() {
           KI-Agenten erstellen: Die ehrliche Entscheidungshilfe für den
           deutschen Mittelstand
         </BlogHero.Headline>
+
+        <GeoSummary>
+          KI-Agenten erstellen heißt, zwei Entscheidungen vor der Tool-Wahl zu
+          treffen. 80 Prozent der gescheiterten Mittelstands-Piloten haben das
+          umgekehrt gemacht. Der Guide ordnet vier Plattform-Kategorien entlang
+          von sechs Bewertungsdimensionen, zeigt vier Use-Cases mit konkreter
+          Tool-Empfehlung und die neun Bausteine, die einen produktionsreifen
+          Agenten vom Prototyp trennen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

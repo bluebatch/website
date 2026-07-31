@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "kmu-workflow-automatisierung",
@@ -48,6 +49,15 @@ export default function Page() {
         <BlogHero.Headline>
           KMU Workflow-Automatisierung: Der pragmatische Guide für 50 bis 1.000 Mitarbeitende
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Workflow-Automatisierung verkettet manuelle Schritte zwischen
+          bestehenden Systemen. Für Firmen mit 50 bis 1.000 Mitarbeitenden
+          rechnet der Guide es durch: Im Bestelleingang eines Elektrogroßhändlers
+          mit 180 MA sparen 42 Stunden pro Woche rund 80.000 Euro
+          Wertschöpfungs-Spielraum, bei 10.000 bis 15.000 Euro Projektkosten und
+          Break-even nach 2 bis 3 Monaten.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

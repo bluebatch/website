@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "github-copilot-agent",
@@ -48,6 +49,14 @@ export default function Page() {
         <BlogHero.Headline>
           GitHub Copilot Agent: Vom Issue zum fertigen Pull Request
         </BlogHero.Headline>
+
+        <GeoSummary>
+          GitHub Copilot Agent meint zwei Werkzeuge: den autonomen Coding Agent,
+          der aus einem Issue im Hintergrund einen Pull Request macht, und den
+          Agent Mode als interaktiven Mitprogrammierer in VS Code. Der Artikel
+          trennt beide, ordnet die vier Pläne samt Premium-Request-Kontingenten
+          ein und zeigt Mittelständlern Governance und DSGVO-Fragen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

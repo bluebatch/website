@@ -7,6 +7,7 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "n8n-sicherheit-self-hosting",
@@ -62,6 +63,15 @@ export default async function Page({
         <BlogHero.Headline>
           n8n Sicherheit: So schützt ihr eure Self-Hosted Instanz vor Angriffen
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Wer n8n selbst hostet, betreibt eine Automatisierungsplattform mit
+          Zugriff auf sämtliche Firmensysteme. Zwischen November 2025 und März
+          2026 kamen 7 kritische CVEs mit CVSS 9.4 bis 10.0 zusammen, über
+          100.000 Instanzen hängen ungeschützt im Netz. Dieser Leitfaden zeigt
+          Mittelständlern Reverse Proxy, TLS, Docker-Hardening, Secrets und
+          DSGVO-Pflichten.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
