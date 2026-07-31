@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import Image from "next/image";
 import { Briefcase, Inbox, Keyboard, Mic } from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Diktat zu Text in der Steuerkanzlei", "Steuerberater"),
   },
   alternates: {
     canonical: "/branchen/steuerberater/claude-cowork/diktat-zu-text",

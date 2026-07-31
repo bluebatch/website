@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import ContentWrapper from "@/components/layout/content-wrapper";
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Blog Workflow Automatisierung — Bluebatch Insights", "Blog"),
   },
   alternates: {
     canonical: "/blog",

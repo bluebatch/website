@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import ContactButton from "@/components/buttons/contact-button";
 import { BackToOverview } from "../shared";
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("ROI-Rechner: Social Media Ads", "Großhandel"),
   },
   alternates: {
     canonical: "/branchen/grosshandel/roi-rechner/social-media-ads",

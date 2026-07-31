@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import DatenschutzContent from "@/components/legal/datenschutz-content";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     title: "Datenschutzerklärung - Bluebatch",
     description:
       "Datenschutzerklärung und Informationen zum Umgang mit personenbezogenen Daten bei Bluebatch.",
+    images: ogImages("Datenschutzerklärung", "Bluebatch"),
   },
 };
 

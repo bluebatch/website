@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import Image from "next/image";
 import { Clock, FolderOpen, MessagesSquare, UserCheck } from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Mandanten-Chatbot für Steuerkanzleien", "Steuerberater"),
   },
   alternates: {
     canonical: "/branchen/steuerberater/ki-agenten/mandanten-chatbot",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import Image from "next/image";
 import {
   ClipboardCheck,
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Kanzlei-Organisation für Steuerberater", "Steuerberater"),
   },
   alternates: {
     canonical: "/branchen/steuerberater/kanzlei-organisation",

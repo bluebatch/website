@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import Link from "next/link";
 import { resolveHref } from "@/lib/get-canonical-path";
 import ContentWrapper from "@/components/layout/content-wrapper";
@@ -37,6 +38,7 @@ export const metadata: Metadata = {
     title: "Automatisierungs Agentur — Workflow-Automatisierung in ganz Deutschland | Bluebatch",
     description:
       "Bluebatch ist Ihre Automatisierungs Agentur für Unternehmen in ganz Deutschland. Finden Sie Ihren Standort — von Berlin bis München.",
+    images: ogImages("Automatisierungs-Agentur, deutschlandweit", "Standorte"),
   },
 };
 

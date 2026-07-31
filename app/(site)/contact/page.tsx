@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Customer from "@/components/sections/customer/customer";
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Kontakt", "Bluebatch"),
   },
   alternates: {
     canonical: "/contact",

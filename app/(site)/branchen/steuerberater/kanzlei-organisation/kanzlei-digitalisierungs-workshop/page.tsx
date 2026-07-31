@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import Image from "next/image";
 import {
   SearchCheck,
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Kanzlei-Digitalisierungs-Workshop", "Steuerberater"),
   },
   alternates: {
     canonical:

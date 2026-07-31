@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import ImpressumContent from "@/components/legal/impressum-content";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Impressum - Bluebatch",
     description: "Impressum und rechtliche Informationen zu Bluebatch.",
+    images: ogImages("Impressum", "Bluebatch"),
   },
 };
 

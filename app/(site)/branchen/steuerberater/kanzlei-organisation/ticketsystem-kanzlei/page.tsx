@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import Image from "next/image";
 import { UserX, EyeOff, CalendarX, Archive } from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Ticketsystem in der Kanzlei", "Steuerberater"),
   },
   alternates: {
     canonical:

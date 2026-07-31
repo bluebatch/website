@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import Image from "next/image";
 import {
   FileText,
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Was sind KI-Skills? Kanzlei-Fachwissen in Markdown", "Steuerberater"),
   },
   alternates: {
     canonical: "/branchen/steuerberater/claude-cowork/was-sind-ki-skills",

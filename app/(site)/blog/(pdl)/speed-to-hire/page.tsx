@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
@@ -35,6 +36,7 @@ export const metadata: Metadata = {
     type: "article",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Speed to Hire: Warum deine besten Kandidaten weg sind, bevor du anrufst", "Blog"),
   },
   alternates: {
     canonical: "/blog/speed-to-hire",

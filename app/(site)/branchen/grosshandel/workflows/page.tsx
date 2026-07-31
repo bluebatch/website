@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Workflows für den Großhandel", "Großhandel"),
   },
   alternates: {
     canonical: "/branchen/grosshandel/workflows",

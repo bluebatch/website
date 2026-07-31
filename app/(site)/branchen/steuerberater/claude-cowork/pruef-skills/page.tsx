@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("Prüf-Skills für Kanzleien", "Steuerberater"),
   },
   alternates: {
     canonical: "/branchen/steuerberater/claude-cowork/pruef-skills",

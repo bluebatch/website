@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/og";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import IntroBox from "@/components/ui/intro-box";
 import RoiCategoryPicker from "./roi-calculator";
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
+    images: ogImages("ROI-Rechner - Lohnt sich KI-Automatisierung?", "Großhandel"),
   },
   alternates: {
     canonical: "/branchen/grosshandel/roi-rechner",
