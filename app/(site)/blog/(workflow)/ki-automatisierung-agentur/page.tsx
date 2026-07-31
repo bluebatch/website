@@ -140,6 +140,20 @@ export default function Page() {
               </Link>
               .
             </Typo.Paragraph>
+
+            <Typo.Paragraph>
+              Wer die Werkzeugfrage lieber selbst vorsortiert, bevor er mit einer
+              Agentur spricht, findet die Landschaft nach Werkzeugklassen,
+              Auswahlkriterien und DSGVO-Kurzcheck geordnet in unserem Vergleich
+              der{" "}
+              <Link
+                href="/blog/ki-automatisierung-tools"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Automatisierung-Tools
+              </Link>
+              .
+            </Typo.Paragraph>
           </div>
 
           <Separator />

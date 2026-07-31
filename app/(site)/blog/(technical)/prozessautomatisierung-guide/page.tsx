@@ -310,6 +310,20 @@ export default function Page() {
             </Typo.Paragraph>
 
             <Typo.Paragraph>
+              Sobald KI im Spiel ist, kommen zu den klassischen
+              Workflow-Plattformen noch Agenten-Frameworks, Dokumenten-KI und
+              Chat-Oberflächen dazu. Welche Werkzeugklassen es gibt und nach
+              welchen Kriterien man auswählt, sortiert unser Überblick zu{" "}
+              <Link
+                href="/blog/ki-automatisierung-tools"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Automatisierung-Tools
+              </Link>
+              .
+            </Typo.Paragraph>
+
+            <Typo.Paragraph>
               <strong>n8n</strong> ist Open Source und lässt sich selbst
               hosten. Für Unternehmen, die Daten nicht in US-Clouds
               schicken wollen, ist das ein entscheidender Vorteil. Die

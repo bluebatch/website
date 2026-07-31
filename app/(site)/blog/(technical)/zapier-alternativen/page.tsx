@@ -486,6 +486,20 @@ export default function Page() {
                 oder Tray.io, wenn Budget und Teamgröße es rechtfertigen.
               </Typo.ListItem>
             </Typo.List>
+            <Typo.Paragraph>
+              Alle genannten Kandidaten sind klassische Workflow-Plattformen.
+              Wer zusätzlich Dokumentenverstehen, Agenten oder Chat-Zugriff
+              braucht, sollte die Auswahl eine Ebene höher aufziehen: Unser
+              Überblick zu{" "}
+              <Link
+                href="/blog/ki-automatisierung-tools"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Automatisierung-Tools
+              </Link>{" "}
+              sortiert die Werkzeugklassen und liefert einen DSGVO-Kurzcheck
+              dazu.
+            </Typo.Paragraph>
           </div>
 
           <Separator />
