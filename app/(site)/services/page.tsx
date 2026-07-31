@@ -201,11 +201,14 @@ export default async function Page({
             <Hero2ColumnHeadline>
               KI-Implementierung & Professionelle Services
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Implementierung von KI vom Experten: Von KI Agenten Integration über
-              Schnittstellen Management bis zu Prozess Automation - wir sind
-              Ihre Softwareentwicklung Firma für Enterprise n8n. Consulting
-              Services IT aus einer Hand, made in Germany.
+            <Hero2ColumnDescription geo>
+              Bluebatch implementiert KI-Automatisierung für mittelständische
+              Unternehmen mit 50 bis 1.000 Mitarbeitenden. Fünf Services decken
+              den ganzen Weg ab: KI-Agenten-Integration, Prozess-Automatisierung,
+              Systemintegration, n8n-Entwicklung und Schulungen. Typisches
+              Ergebnis ist ein Workflow, der manuelle Bearbeitungszeit um bis zu
+              85 Prozent senkt. Entwicklung und Hosting DSGVO-konform in
+              Deutschland.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>

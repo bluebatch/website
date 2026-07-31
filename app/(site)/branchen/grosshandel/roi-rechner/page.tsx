@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ogImages } from "@/lib/og";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import IntroBox from "@/components/ui/intro-box";
+import GeoSummary from "@/components/ui/geo-summary";
 import RoiCategoryPicker from "./roi-calculator";
 
 export const metadata: Metadata = {
@@ -31,10 +32,14 @@ export default function RoiRechnerPage() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
             Lohnt sich KI-Automatisierung für euch?
           </h1>
-          <IntroBox.Paragraph>
-            Stellt eure Werte ein und seht sofort, wie schnell sich ein
-            KI-Workflow amortisiert. Keine Anmeldung, keine versteckten Kosten.
-          </IntroBox.Paragraph>
+          <GeoSummary align="center">
+            Der Bluebatch ROI-Rechner beziffert in 30 Sekunden, was
+            KI-Automatisierung im Großhandel spart. Drei Rechner stehen bereit:
+            Dokumentenprüfung, Serviceanfragen und Social-Media-Content. Ihr
+            stellt Menge, Bearbeitungszeit und Stundensatz ein und seht
+            Zeitersparnis, jährliche Einsparung und Amortisationsdauer. Typisch
+            sind 25 auf 5 Minuten pro Dokument. Ohne Anmeldung, ohne Kosten.
+          </GeoSummary>
         </IntroBox>
       </ContentWrapper>
 

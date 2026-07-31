@@ -62,16 +62,14 @@ export default async function BlogPage({
             <Hero2ColumnHeadline>
               Blog Workflow Automatisierung & n8n Expertise
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              In unserem Blog Workflow Themen vertiefen: Von
-              Prozessautomatisierung über n8n Custom Nodes bis hin zu
-              KI-gestützten Geschäftsprozessen. Unser Blog Workflow Wissen hilft
-              euch, repetitive Aufgaben zu eliminieren und Abläufe effizient zu
-              gestalten. Entdeckt praxisnahe Anleitungen zu Blog Workflow
-              Automatisierung, Integrationsbeispiele und Best Practices — damit
-              euer Team sich auf das konzentriert, was wirklich zählt. Jeder
-              Beitrag basiert auf echten Projekterfahrungen aus dem
-              Automatisierungsalltag.
+            <Hero2ColumnDescription geo>
+              Der Bluebatch Blog sammelt über 70 Praxisartikel zu
+              Workflow-Automatisierung und KI für den Mittelstand. Vier
+              Themenstränge: Großhandel, Steuerberatung und Personaldienstleister,
+              technische n8n- und Custom-Node-Anleitungen sowie
+              Workflow-Grundlagen. Jeder Beitrag stammt aus echten
+              Automatisierungsprojekten und nennt Aufwand, Werkzeuge und
+              Ergebnis, statt allgemein über Digitalisierung zu schreiben.
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
