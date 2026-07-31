@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Sparkles, Server, Plug, Database } from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
+import { FlowDiagram } from "@/components/diagrams/integration-diagram";
 import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=MCP-Server%20f%C3%BCr%20e.bootis%3A%20ERP%20f%C3%BCr%20KI-Agenten%20ansprechbar%20machen&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "MCP-Server für e.bootis - Bluebatch",
@@ -53,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: meta.title,
     description: meta.ogDescription,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=MCP-Server%20f%C3%BCr%20e.bootis%3A%20ERP%20f%C3%BCr%20KI-Agenten%20ansprechbar%20machen&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/ebootis/mcp-server",
@@ -117,6 +119,35 @@ export default function Page() {
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
+      </ContentWrapper>
+
+      {/* Integrations-Diagramm */}
+      <ContentWrapper colorScheme="gray-light">
+        <FlowDiagram
+          bidirectional
+          nodes={[
+            {
+              label: "KI-Agent",
+              sublabel: "Claude & Co.",
+              icon: <Sparkles className="h-5 w-5" />,
+            },
+            {
+              label: "MCP-Server",
+              icon: <Server className="h-5 w-5" />,
+              highlight: true,
+            },
+            {
+              label: "OpenEngine",
+              icon: <Plug className="h-5 w-5" />,
+            },
+            {
+              label: "e.bootis",
+              sublabel: "lesen & schreiben",
+              icon: <Database className="h-5 w-5" />,
+            },
+          ]}
+          caption="Der MCP-Server macht e.bootis kontrolliert fuer KI-Agenten ansprechbar."
+        />
       </ContentWrapper>
 
       {/* 2. PROBLEM / NUTZEN */}

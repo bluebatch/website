@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Team&eyebrow=Bluebatch",
         width: 1200,
         height: 630,
         alt: "Bluebatch Team",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "Team - Bluebatch",
     description:
       "Lernen Sie das Bluebatch Team kennen. Workflow-Experten und Automatisierungs-Profis.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Team&eyebrow=Bluebatch"],
   },
   alternates: {
     canonical: "/team",

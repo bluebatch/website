@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Microsoft%20Power%20Automate%3A%20Ehrliche%20Analyse%2C%20Kosten%20%26%20Alternativen&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch Power Automate Analyse",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
       "Microsoft Power Automate: Ehrliche Analyse, Kosten & Alternativen | Bluebatch",
     description:
       "Power Automate: echte Kosten, versteckte Limits und wann sich Alternativen lohnen.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Microsoft%20Power%20Automate%3A%20Ehrliche%20Analyse%2C%20Kosten%20%26%20Alternativen&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/power-automate",

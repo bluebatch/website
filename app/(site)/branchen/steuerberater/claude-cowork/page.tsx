@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Claude%20Cowork%20f%C3%BCr%20Steuerberater%2C%20DSGVO-%20%26%20%C2%A7%20203-konform&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch, Claude Cowork für Steuerberater",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Claude Cowork für Steuerberater, DSGVO- & § 203-konform",
     description: DESCRIPTION,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Claude%20Cowork%20f%C3%BCr%20Steuerberater%2C%20DSGVO-%20%26%20%C2%A7%20203-konform&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater/claude-cowork",

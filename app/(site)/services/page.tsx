@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=KI-Implementierung%20%26%20Services&eyebrow=Services",
         width: 1200,
         height: 630,
         alt: "Bluebatch KI Services und Implementierung",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Implementierung von KI & Services | Bluebatch",
     description:
       "KI erfolgreich implementieren für Ihr Unternehmen. Consulting Services IT, Prozess Automation und mehr.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=KI-Implementierung%20%26%20Services&eyebrow=Services"],
   },
   alternates: {
     canonical: "/services",

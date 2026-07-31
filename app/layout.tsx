@@ -23,6 +23,28 @@ export const metadata: Metadata = {
   title: "Bluebatch – AI Workflow Builder",
   description:
     "Build powerful AI agents that work predictably in production. Transform your business with intelligent automation and AI-powered workflows.",
+  // Generisches Default-Social-Bild (blau-orange, KI-/Workflow-Anmutung) für
+  // Seiten ohne eigenes Bild. Einzelne Seiten überschreiben das mit einem
+  // titelbezogenen /og-Bild (siehe lib/og.ts).
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    siteName: "Bluebatch",
+    images: [
+      {
+        url: "/og?title=KI-Agenten,%20Workflows%20%26%20Automatisierung&eyebrow=Bluebatch",
+        width: 1200,
+        height: 630,
+        alt: "Bluebatch - KI-Agenten und Workflows",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [
+      "/og?title=KI-Agenten,%20Workflows%20%26%20Automatisierung&eyebrow=Bluebatch",
+    ],
+  },
 };
 
 // Navigation + Footer leben bewusst NICHT hier, sondern in app/(site)/layout.tsx —

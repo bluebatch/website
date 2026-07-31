@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Workflows%20f%C3%BCr%20Steuerberater&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch Workflows für Steuerberater",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Workflows für Steuerberater - Bluebatch",
     description:
       "Automatisierte Workflows für Steuerkanzleien: Belegprüfung, Dokumentenverarbeitung, DATEV-Jira-Sync, E-Rechnung und Mandanten-Onboarding - zuverlässig und GoBD-konform.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Workflows%20f%C3%BCr%20Steuerberater&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater/workflows",

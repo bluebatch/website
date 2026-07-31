@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=DATEV-Jira%20Orchestration&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch Workflow Steuerkanzlei",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultMeta.title,
     description: defaultMeta.ogDescription,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=DATEV-Jira%20Orchestration&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater/workflows/datev-jira-task-orchestration",

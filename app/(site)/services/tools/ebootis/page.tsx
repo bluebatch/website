@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Database,
+  Workflow,
+  MessagesSquare,
+  Bot,
+  Share2,
+} from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
+import { HubDiagram } from "@/components/diagrams/integration-diagram";
 import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -24,7 +32,7 @@ import { FaqContainer } from "@/components/ui/faqs";
 export const metadata: Metadata = {
   title: "e.bootis ERP: KI-Integration und Automatisierung | Bluebatch",
   description:
-    "e.bootis-ERP mit KI verbinden: n8n-Integration, KI-Chatbot mit ERP-Anbindung, MCP-Server und KI-Assessment. Bluebatch nutzt die OpenEngine, damit Ihre Daten arbeiten.",
+    "e.bootis (ebootis) ERP mit KI verbinden: n8n-Integration, KI-Chatbot mit ERP-Anbindung, MCP-Server und KI-Assessment. Bluebatch nutzt die OpenEngine, damit Ihre Daten arbeiten.",
   openGraph: {
     title: "e.bootis ERP: KI-Integration und Automatisierung | Bluebatch",
     description:
@@ -34,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=e.bootis%20ERP%3A%20KI-Integration%20und%20Automatisierung&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "e.bootis ERP Integration mit Bluebatch",
@@ -46,7 +54,7 @@ export const metadata: Metadata = {
     title: "e.bootis ERP: KI-Integration und Automatisierung | Bluebatch",
     description:
       "e.bootis-ERP mit KI verbinden: n8n-Integration, KI-Chatbot, MCP-Server und KI-Assessment.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=e.bootis%20ERP%3A%20KI-Integration%20und%20Automatisierung&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/ebootis",
@@ -186,6 +194,40 @@ export default function Page() {
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
+      </ContentWrapper>
+
+      {/* Integrations-Diagramm */}
+      <ContentWrapper colorScheme="white">
+        <HubDiagram
+          center={{
+            label: "e.bootis ERP",
+            sublabel: "OpenEngine",
+            icon: <Database className="h-5 w-5" />,
+          }}
+          spokes={[
+            {
+              label: "n8n",
+              sublabel: "Automatisierung",
+              icon: <Workflow className="h-5 w-5" />,
+            },
+            {
+              label: "KI-Chatbot",
+              sublabel: "Team & Kunden",
+              icon: <MessagesSquare className="h-5 w-5" />,
+            },
+            {
+              label: "MCP-Server",
+              sublabel: "KI-Agenten",
+              icon: <Bot className="h-5 w-5" />,
+            },
+            {
+              label: "EDI",
+              sublabel: "Handelspartner",
+              icon: <Share2 className="h-5 w-5" />,
+            },
+          ]}
+          caption="Die OpenEngine macht e.bootis-Daten fuer Automatisierung und KI erreichbar."
+        />
       </ContentWrapper>
 
       {/* Warum e.bootis + KI */}

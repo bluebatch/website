@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=KI%20f%C3%BCr%20Steuerberater%20-%20Private%20AI%2C%20KI-Agenten%20%26%20Workflows&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch Steuerberater",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "KI für Steuerberater - Bluebatch",
     description:
       "KI für Steuerberater: Private AI, Claude Cowork, KI-Agenten für Mandantenkommunikation und Workflows für Belegprüfung, E-Rechnung und Jahresabschluss.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=KI%20f%C3%BCr%20Steuerberater%20-%20Private%20AI%2C%20KI-Agenten%20%26%20Workflows&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater",

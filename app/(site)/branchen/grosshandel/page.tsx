@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=KI%20f%C3%BCr%20den%20Gro%C3%9Fhandel%20-%20Private%20AI%2C%20Agenten%20%26%20Workflows&eyebrow=Gro%C3%9Fhandel",
         width: 1200,
         height: 630,
         alt: "Bluebatch Großhandel",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "KI für den Großhandel - Bluebatch",
     description:
       "KI für den Großhandel: Private AI, KI-Assistenten, KI-Agenten, Chatbots und Workflows für Auftragserfassung, Bestellabwicklung und Rechnungsprüfung.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=KI%20f%C3%BCr%20den%20Gro%C3%9Fhandel%20-%20Private%20AI%2C%20Agenten%20%26%20Workflows&eyebrow=Gro%C3%9Fhandel"],
   },
   alternates: {
     canonical: "/branchen/grosshandel",

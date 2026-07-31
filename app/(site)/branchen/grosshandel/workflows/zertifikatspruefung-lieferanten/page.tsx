@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Zertifikatspr%C3%BCfung%20Lieferanten&eyebrow=Gro%C3%9Fhandel",
         width: 1200,
         height: 630,
         alt: "Bluebatch Zertifikatsprüfung",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Zertifikatsprüfung Lieferanten - Großhandel | Bluebatch",
     description:
       "ISO, FSSC, Bio, HACCP - alle Zertifikate zentral verwaltet. Automatische Ablaufüberwachung.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Zertifikatspr%C3%BCfung%20Lieferanten&eyebrow=Gro%C3%9Fhandel"],
   },
   alternates: {
     canonical: "/branchen/grosshandel/workflows/zertifikatspruefung-lieferanten",

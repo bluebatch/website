@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Microsoft%20Dynamics%20NAV%20%28Navision%29%20Automatisierung&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch Navision Automatisierung",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Microsoft Dynamics NAV (Navision) Automatisierung | Bluebatch",
     description:
       "Navision-Prozesse automatisieren: Aufträge, Rechnungen, Lagerbestände.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Microsoft%20Dynamics%20NAV%20%28Navision%29%20Automatisierung&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/navision",

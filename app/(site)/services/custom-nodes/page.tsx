@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=n8n%20Node%20Entwicklung&eyebrow=Services",
         width: 1200,
         height: 630,
         alt: "Bluebatch Custom Nodes",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Custom Node Development für n8n | Bluebatch",
     description: "Maßgeschneiderte Nodes für n8n - für jede API und jedes System.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=n8n%20Node%20Entwicklung&eyebrow=Services"],
   },
   alternates: {
     canonical: "/services/custom-nodes",

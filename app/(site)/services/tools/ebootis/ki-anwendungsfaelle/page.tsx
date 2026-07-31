@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=KI-Anwendungsf%C3%A4lle%20mit%20e.bootis%3A%20Use-Cases%20f%C3%BCr%20den%20Gro%C3%9Fhandel&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "KI-Anwendungsfälle mit e.bootis",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "KI-Anwendungsfälle mit e.bootis: Use-Cases für den Großhandel | Bluebatch",
     description:
       "KI-Use-Cases auf Basis der e.bootis-Daten: Angebote, Bedarfsprognose, PIM-Texte und Kundenservice.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=KI-Anwendungsf%C3%A4lle%20mit%20e.bootis%3A%20Use-Cases%20f%C3%BCr%20den%20Gro%C3%9Fhandel&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/ebootis/ki-anwendungsfaelle",

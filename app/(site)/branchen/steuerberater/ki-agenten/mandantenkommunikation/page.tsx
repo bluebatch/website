@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=KI-Mandantenkommunikation&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch KI-Mandantenkommunikation",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultMeta.title,
     description: defaultMeta.ogDescription,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=KI-Mandantenkommunikation&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater/ki-agenten/mandantenkommunikation",

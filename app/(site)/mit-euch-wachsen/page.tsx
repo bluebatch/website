@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Mit%20euch%20wachsen%20%E2%80%94%20vom%20Workshop%20zur%20eigenen%20AI-Plattform&eyebrow=Bluebatch",
         width: 1200,
         height: 630,
         alt: "Mit Bluebatch wachsen — vom Workshop zur AI-Plattform",

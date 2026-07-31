@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Building2, FileText, Database, Workflow, CheckCircle2 } from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
+import { FlowDiagram } from "@/components/diagrams/integration-diagram";
 import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=EDI-Automatisierung%20mit%20e.bootis%3A%20Prozessketten%20per%20n8n&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "EDI-Automatisierung mit e.bootis",
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     title: "EDI-Automatisierung mit e.bootis: Prozessketten per n8n | Bluebatch",
     description:
       "EDI-Prozessketten über e.bootis automatisieren, orchestriert per n8n über die OpenEngine.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=EDI-Automatisierung%20mit%20e.bootis%3A%20Prozessketten%20per%20n8n&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/ebootis/edi-automatisierung",
@@ -139,6 +141,40 @@ export default function Page() {
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
+      </ContentWrapper>
+
+      {/* Integrations-Diagramm */}
+      <ContentWrapper colorScheme="white">
+        <FlowDiagram
+          nodes={[
+            {
+              label: "Handelspartner",
+              sublabel: "Lieferant, Kunde",
+              icon: <Building2 className="h-5 w-5" />,
+            },
+            {
+              label: "EDI",
+              sublabel: "Nachricht",
+              icon: <FileText className="h-5 w-5" />,
+            },
+            {
+              label: "e.bootis",
+              icon: <Database className="h-5 w-5" />,
+              highlight: true,
+            },
+            {
+              label: "n8n",
+              sublabel: "Orchestrierung",
+              icon: <Workflow className="h-5 w-5" />,
+            },
+            {
+              label: "Folgeaktion",
+              sublabel: "Bestaetigung, Lager, Versand",
+              icon: <CheckCircle2 className="h-5 w-5" />,
+            },
+          ]}
+          caption="Ganze Prozessketten laufen automatisch, von der EDI-Nachricht bis zur Folgeaktion."
+        />
       </ContentWrapper>
 
       {/* Welche Belege */}

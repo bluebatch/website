@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=3-Wege-Rechnungspr%C3%BCfung&eyebrow=Gro%C3%9Fhandel",
         width: 1200,
         height: 630,
         alt: "Bluebatch 3-Wege-Rechnungsprüfung",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Automatische Rechnungsprüfung: 3-Wege-Matching - Großhandel | Bluebatch",
     description:
       "Automatische Rechnungsprüfung mit 3-Wege-Matching. Nie wieder manuelle Prüfung.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=3-Wege-Rechnungspr%C3%BCfung&eyebrow=Gro%C3%9Fhandel"],
   },
   alternates: {
     canonical: "/branchen/grosshandel/workflows/3-wege-rechnungspruefung",

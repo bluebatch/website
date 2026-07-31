@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Pipedream%3A%20Ehrliche%20Bewertung%20nach%20der%20Workday-%C3%9Cbernahme&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch Pipedream Bewertung",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Pipedream: Ehrliche Bewertung nach der Workday-Übernahme | Bluebatch",
     description:
       "Pipedream ehrlich bewertet: Stärken, Risiken nach der Workday-Übernahme und Vergleich mit n8n.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Pipedream%3A%20Ehrliche%20Bewertung%20nach%20der%20Workday-%C3%9Cbernahme&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/pipedream",

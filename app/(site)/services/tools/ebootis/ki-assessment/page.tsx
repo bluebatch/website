@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=e.bootis%20KI-Assessment%3A%20Potenzial-Check%20f%C3%BCr%20500%20Euro%20Festpreis&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "e.bootis KI-Assessment von Bluebatch",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: meta.title,
     description: meta.ogDescription,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=e.bootis%20KI-Assessment%3A%20Potenzial-Check%20f%C3%BCr%20500%20Euro%20Festpreis&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/ebootis/ki-assessment",

@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=KI-Automatisierung%20mit%20easybill&eyebrow=Gro%C3%9Fhandel",
         width: 1200,
         height: 630,
         alt: "Bluebatch KI-Automatisierung mit easybill",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     title: "KI-Automatisierung mit easybill - Großhandel | Bluebatch",
     description:
       "Rechnungen, Angebote und Zahlungen in easybill vollautomatisch verwalten. 80% weniger manuelle Buchhaltungsarbeit.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=KI-Automatisierung%20mit%20easybill&eyebrow=Gro%C3%9Fhandel"],
   },
   alternates: {
     canonical: "/branchen/grosshandel/workflows/ai-automation-with-easybill",

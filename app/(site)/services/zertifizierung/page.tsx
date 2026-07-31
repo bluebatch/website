@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=KI%20Agentur%20mit%20Zertifizierung&eyebrow=Services",
         width: 1200,
         height: 630,
         alt: "Bluebatch - Zertifizierte KI Agentur",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: "KI Agentur mit Zertifizierung | Bluebatch",
     description:
       "Zertifizierte KI Agentur für Enterprise-Automatisierung. n8n-Expertise, DSGVO-konform.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=KI%20Agentur%20mit%20Zertifizierung&eyebrow=Services"],
   },
   alternates: {
     canonical: "/services/zertifizierung",

@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Workflow%20Wartung%20%26%20Servicevertrag&eyebrow=Services",
         width: 1200,
         height: 630,
         alt: "Bluebatch Workflow-Wartung",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Wartung Ihrer Workflows & Servicevertrag | Bluebatch",
     description:
       "Professionelle Wartung Ihrer n8n-Workflows mit 24/7 Monitoring und 99,9% Uptime-Garantie.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Workflow%20Wartung%20%26%20Servicevertrag&eyebrow=Services"],
   },
   alternates: {
     canonical: "/services/workflow-wartung",

@@ -173,7 +173,7 @@ export async function generateMetadata({
       siteName: "Bluebatch",
       images: [
         {
-          url: "/images/bluebatch-social-cover.jpg",
+          url: "/og?title=KI-Agenten%2C%20Workflows%20%26%20Automatisierung&eyebrow=Standorte",
           width: 1200,
           height: 630,
           alt: "Bluebatch Workflow-Automatisierung Köln",
@@ -184,7 +184,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/images/bluebatch-social-cover.jpg"],
+      images: ["/og?title=KI-Agenten%2C%20Workflows%20%26%20Automatisierung&eyebrow=Standorte"],
     },
     alternates: {
       canonical: "/standorte/koeln",

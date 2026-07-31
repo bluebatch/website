@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Database, Plug, Workflow, Boxes } from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
+import { FlowDiagram } from "@/components/diagrams/integration-diagram";
 import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=e.bootis%20mit%20n8n%20verbinden%3A%20ERP-Automatisierung%20%C3%BCber%20die%20OpenEngine&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "e.bootis mit n8n verbinden - Bluebatch",
@@ -53,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: meta.title,
     description: meta.ogDescription,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=e.bootis%20mit%20n8n%20verbinden%3A%20ERP-Automatisierung%20%C3%BCber%20die%20OpenEngine&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/ebootis/n8n-integration",
@@ -118,6 +120,37 @@ export default function Page() {
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
+      </ContentWrapper>
+
+      {/* Integrations-Diagramm */}
+      <ContentWrapper colorScheme="gray-light">
+        <FlowDiagram
+          bidirectional
+          nodes={[
+            {
+              label: "e.bootis",
+              sublabel: "ERP",
+              icon: <Database className="h-5 w-5" />,
+              highlight: true,
+            },
+            {
+              label: "OpenEngine",
+              sublabel: "Schnittstelle",
+              icon: <Plug className="h-5 w-5" />,
+            },
+            {
+              label: "n8n",
+              sublabel: "Workflows",
+              icon: <Workflow className="h-5 w-5" />,
+            },
+            {
+              label: "Zielsysteme",
+              sublabel: "Shop, Mail, DATEV",
+              icon: <Boxes className="h-5 w-5" />,
+            },
+          ]}
+          caption="Bestellungen, Belege und Stammdaten fliessen automatisch zwischen e.bootis und Ihren Systemen."
+        />
       </ContentWrapper>
 
       {/* 2. PROBLEM / NUTZEN */}

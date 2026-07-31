@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Bluebatch%20-%20Automatisierung%20mit%20n8n&eyebrow=Bluebatch",
         width: 1200,
         height: 630,
         alt: "Bluebatch - Automatisierung mit n8n | KI Agentur",
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     title: "Bluebatch - Automatisierung mit n8n | KI Agentur",
     description:
       "Workflow-Automatisierung mit n8n vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount - live in nur 5 Tagen.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Bluebatch%20-%20Automatisierung%20mit%20n8n&eyebrow=Bluebatch"],
   },
   robots: {
     index: true,

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Freshworks%20Integration%20%26%20Automatisierung&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch Freshworks Automatisierung",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Freshworks Integration & Automatisierung | Bluebatch",
     description:
       "Freshdesk, Freshsales, Freshservice und Freshchat automatisieren. n8n-Workflows und KI-Agenten.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Freshworks%20Integration%20%26%20Automatisierung&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/freshworks",

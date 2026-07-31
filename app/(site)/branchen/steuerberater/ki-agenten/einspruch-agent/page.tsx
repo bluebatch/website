@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Einspruch-Agent&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch Einspruch-Agent für Steuerberater",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultMeta.title,
     description: defaultMeta.ogDescription,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Einspruch-Agent&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater/ki-agenten/einspruch-agent",

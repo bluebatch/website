@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Tray.io%20%28Tray.ai%29%3A%20Funktionen%2C%20Kosten%2C%20Grenzen%20%26%20Vergleich&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch Tray.io Analyse und Beratung",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
       "Tray.io (Tray.ai): Funktionen, Kosten, Grenzen & Vergleich | Bluebatch",
     description:
       "Tray.io ehrlich bewertet: Enterprise-iPaaS mit echten Preisen, Stärken und Grenzen.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Tray.io%20%28Tray.ai%29%3A%20Funktionen%2C%20Kosten%2C%20Grenzen%20%26%20Vergleich&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/tray-io",

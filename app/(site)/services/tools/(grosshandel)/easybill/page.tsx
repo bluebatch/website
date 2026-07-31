@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Easybill%20Rechnungssoftware%20Automatisierung&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch Easybill Automatisierung",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Easybill Rechnungssoftware Automatisierung | Bluebatch",
     description:
       "Easybill automatisieren: Rechnungen, Zahlungen, E-Commerce-Integration.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Easybill%20Rechnungssoftware%20Automatisierung&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/easybill",

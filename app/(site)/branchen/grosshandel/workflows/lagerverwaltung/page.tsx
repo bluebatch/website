@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Lagerverwaltung&eyebrow=Gro%C3%9Fhandel",
         width: 1200,
         height: 630,
         alt: "Bluebatch Lagerverwaltung",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Lagerverwaltung - Großhandel | Bluebatch",
     description:
       "Echtzeit-Bestandssynchronisation und KI-basierte Bedarfsprognosen für automatische Nachbestellungen.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Lagerverwaltung&eyebrow=Gro%C3%9Fhandel"],
   },
   alternates: {
     canonical: "/branchen/grosshandel/workflows/lagerverwaltung",

@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=BWA-Analyse-Agent&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch BWA-Analyse-Agent für Steuerkanzleien",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultMeta.title,
     description: defaultMeta.ogDescription,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=BWA-Analyse-Agent&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater/ki-agenten/bwa-analyse-agent",

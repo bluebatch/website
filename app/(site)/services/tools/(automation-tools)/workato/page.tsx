@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Workato%3A%20Ehrliche%20Analyse%2C%20echte%20Kosten%20%26%20Alternativen&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch Workato Analyse",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
       "Workato: Ehrliche Analyse, echte Kosten & Alternativen | Bluebatch",
     description:
       "Workato: Enterprise iPaaS mit 15K-180K+ €/Jahr. Stärken, Grenzen und günstigere Alternativen.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Workato%3A%20Ehrliche%20Analyse%2C%20echte%20Kosten%20%26%20Alternativen&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/workato",

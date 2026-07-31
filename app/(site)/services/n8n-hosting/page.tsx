@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=n8n%20Hosting%20Deutschland%20-%20Self-Hosted%20auf%20Ihrer%20Infrastruktur&eyebrow=Services",
         width: 1200,
         height: 630,
         alt: "Bluebatch n8n Hosting",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "Self-Hosting von n8n in Deutschland | Bluebatch",
     description:
       "n8n in Deutschland hosten: open source Workflow Engine auf Ihrer Infrastruktur. DSGVO-konform.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=n8n%20Hosting%20Deutschland%20-%20Self-Hosted%20auf%20Ihrer%20Infrastruktur&eyebrow=Services"],
   },
   alternates: {
     canonical: "/services/n8n-hosting",

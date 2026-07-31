@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=E-Rechnung-Verarbeitung&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch E-Rechnung KI für Steuerkanzleien",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultMeta.title,
     description: defaultMeta.ogDescription,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=E-Rechnung-Verarbeitung&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater/workflows/e-rechnung-verarbeitung",

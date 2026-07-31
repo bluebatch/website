@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Zapier%20ehrlich%20bewertet%3A%20Kosten%2C%20Grenzen%20%26%20Alternativen%20%282026%29&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Zapier Bewertung und Alternativen - Bluebatch",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Zapier ehrlich bewertet: Kosten, Grenzen & Alternativen (2026) | Bluebatch",
     description:
       "Zapier Kosten, Erfahrungen und Alternativen im ehrlichen Vergleich. Task-Pricing, DSGVO, n8n vs Zapier.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Zapier%20ehrlich%20bewertet%3A%20Kosten%2C%20Grenzen%20%26%20Alternativen%20%282026%29&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/zapier",

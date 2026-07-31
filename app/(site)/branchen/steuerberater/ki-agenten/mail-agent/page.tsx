@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Mail%20Agent%20f%C3%BCr%20Steuerberater%3A%20Mandanten-Mails%20mit%20KI&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch, Mail Agent für Steuerberater",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mail Agent für Steuerberater, Mandanten-Mails mit KI",
     description: DESCRIPTION,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Mail%20Agent%20f%C3%BCr%20Steuerberater%3A%20Mandanten-Mails%20mit%20KI&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater/ki-agenten/mail-agent",

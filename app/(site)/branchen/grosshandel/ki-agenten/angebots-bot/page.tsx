@@ -186,7 +186,7 @@ export async function generateMetadata({
       siteName: "Bluebatch",
       images: [
         {
-          url: "/images/bluebatch-social-cover.jpg",
+          url: "/og?title=Angebots-Bot&eyebrow=Gro%C3%9Fhandel",
           width: 1200,
           height: 630,
           alt: "Bluebatch Angebots-Bot",
@@ -197,7 +197,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description: overrides?.metaDescription ?? defaultMeta.ogDescription,
-      images: ["/images/bluebatch-social-cover.jpg"],
+      images: ["/og?title=Angebots-Bot&eyebrow=Gro%C3%9Fhandel"],
     },
     alternates: {
       canonical,

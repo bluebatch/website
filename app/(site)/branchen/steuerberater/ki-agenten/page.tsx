@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=KI-Agenten%20f%C3%BCr%20Steuerberater&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch KI-Agenten für Steuerberater",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "KI-Agenten für Steuerberater - Bluebatch",
     description:
       "KI-Agenten für Steuerkanzleien: Mail Agent, Mandantenkommunikation und KI-Jahresabschluss. Digitale Sachbearbeiter, die vorbereiten - Ihr Team gibt frei.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=KI-Agenten%20f%C3%BCr%20Steuerberater&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater/ki-agenten",

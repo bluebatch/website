@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Branchen&eyebrow=Branchen",
         width: 1200,
         height: 630,
         alt: "Bluebatch Branchen",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Branchen - Bluebatch",
     description:
       "Branchenlösungen für AI-Automation: Großhandel, Steuerberater, Personaldienstleister.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Branchen&eyebrow=Branchen"],
   },
   alternates: {
     canonical: "/branchen",

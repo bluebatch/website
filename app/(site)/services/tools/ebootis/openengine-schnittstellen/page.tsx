@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Plug, Database, Workflow, ShoppingCart, Sparkles } from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
+import { HubDiagram } from "@/components/diagrams/integration-diagram";
 import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -23,11 +25,11 @@ import TimelineAsSteps, {
 import { FaqContainer } from "@/components/ui/faqs";
 
 export const metadata: Metadata = {
-  title: "e.bootis-OpenEngine: Schnittstellen ohne Sonderprogrammierung | Bluebatch",
+  title: "e.bootis-OpenEngine: die ERP-Schnittstelle ohne Sonderprogrammierung | Bluebatch",
   description:
     "Die OpenEngine ist die Schnittstellen-Plattform von e.bootis, im Standard ohne Zusatzkosten. So öffnen Sie e.bootis für n8n, Web-Shop, EDI und KI-Agenten, ohne teure Sonderprogrammierung.",
   openGraph: {
-    title: "e.bootis-OpenEngine: Schnittstellen ohne Sonderprogrammierung | Bluebatch",
+    title: "e.bootis-OpenEngine: die ERP-Schnittstelle ohne Sonderprogrammierung | Bluebatch",
     description:
       "Die OpenEngine öffnet e.bootis für externe Systeme wie n8n, Web-Shop, EDI und KI-Agenten, im Standard ohne Zusatzkosten und ohne aufwendige Sonderprogrammierung.",
     type: "website",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=e.bootis-OpenEngine%3A%20die%20ERP-Schnittstelle%20ohne%20Sonderprogrammierung&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "e.bootis-OpenEngine als Schnittstellen-Plattform",
@@ -44,10 +46,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "e.bootis-OpenEngine: Schnittstellen ohne Sonderprogrammierung | Bluebatch",
+    title: "e.bootis-OpenEngine: die ERP-Schnittstelle ohne Sonderprogrammierung | Bluebatch",
     description:
       "Die OpenEngine öffnet e.bootis für n8n, Web-Shop, EDI und KI-Agenten, im Standard ohne Zusatzkosten.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=e.bootis-OpenEngine%3A%20die%20ERP-Schnittstelle%20ohne%20Sonderprogrammierung&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/ebootis/openengine-schnittstellen",
@@ -132,6 +134,37 @@ export default function Page() {
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
+      </ContentWrapper>
+
+      {/* Integrations-Diagramm */}
+      <ContentWrapper colorScheme="white">
+        <HubDiagram
+          center={{
+            label: "OpenEngine",
+            sublabel: "im Standard enthalten",
+            icon: <Plug className="h-5 w-5" />,
+          }}
+          spokes={[
+            {
+              label: "e.bootis-Kern",
+              sublabel: "Einkauf, Lager, PIM",
+              icon: <Database className="h-5 w-5" />,
+            },
+            {
+              label: "n8n",
+              icon: <Workflow className="h-5 w-5" />,
+            },
+            {
+              label: "Web-Shop",
+              icon: <ShoppingCart className="h-5 w-5" />,
+            },
+            {
+              label: "KI & Chatbot",
+              icon: <Sparkles className="h-5 w-5" />,
+            },
+          ]}
+          caption="Die OpenEngine buendelt die Funktionen von e.bootis fuer externe Systeme."
+        />
       </ContentWrapper>
 
       {/* Was die OpenEngine ist */}

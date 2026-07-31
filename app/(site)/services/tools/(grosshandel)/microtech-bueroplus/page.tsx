@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=microtech%20ERP-Automatisierung%20mit%20n8n&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch microtech ERP Automatisierung",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "microtech ERP-Automatisierung mit n8n | Bluebatch",
     description:
       "microtech ERP automatisieren: GraphQL API, SQL-Replikation, Auftragsimport, DATEV-Export.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=microtech%20ERP-Automatisierung%20mit%20n8n&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/microtech-bueroplus",

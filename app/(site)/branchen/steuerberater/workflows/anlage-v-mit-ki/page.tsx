@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Anlage%20V%20mit%20KI&eyebrow=Steuerberater",
         width: 1200,
         height: 630,
         alt: "Bluebatch Anlage V mit KI für Steuerkanzleien",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultMeta.title,
     description: defaultMeta.ogDescription,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Anlage%20V%20mit%20KI&eyebrow=Steuerberater"],
   },
   alternates: {
     canonical: "/branchen/steuerberater/workflows/anlage-v-mit-ki",

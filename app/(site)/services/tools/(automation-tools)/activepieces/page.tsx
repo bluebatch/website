@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Activepieces%3A%20Ehrliche%20Bewertung%20der%20Open-Source-Automatisierung&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch Activepieces Bewertung",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Activepieces: Ehrliche Bewertung der Open-Source-Automatisierung | Bluebatch",
     description:
       "Activepieces ehrlich bewertet: Stärken, Schwächen, Preise und Vergleich mit n8n.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Activepieces%3A%20Ehrliche%20Bewertung%20der%20Open-Source-Automatisierung&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/activepieces",

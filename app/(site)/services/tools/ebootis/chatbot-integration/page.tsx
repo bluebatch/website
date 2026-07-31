@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { MessageSquare, Bot, Plug, Database } from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
+import { FlowDiagram } from "@/components/diagrams/integration-diagram";
 import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=KI-Chatbot%20mit%20e.bootis-Anbindung%3A%20Best%C3%A4nde%2C%20Preise%2C%20Auftr%C3%A4ge%20im%20Chat&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "KI-Chatbot mit e.bootis-Anbindung - Bluebatch",
@@ -53,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: meta.title,
     description: meta.ogDescription,
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=KI-Chatbot%20mit%20e.bootis-Anbindung%3A%20Best%C3%A4nde%2C%20Preise%2C%20Auftr%C3%A4ge%20im%20Chat&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/ebootis/chatbot-integration",
@@ -120,6 +122,35 @@ export default function Page() {
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
+      </ContentWrapper>
+
+      {/* Integrations-Diagramm */}
+      <ContentWrapper colorScheme="gray-light">
+        <FlowDiagram
+          bidirectional
+          nodes={[
+            {
+              label: "Nutzerfrage",
+              sublabel: "Team oder Kunde",
+              icon: <MessageSquare className="h-5 w-5" />,
+            },
+            {
+              label: "KI-Chatbot",
+              icon: <Bot className="h-5 w-5" />,
+              highlight: true,
+            },
+            {
+              label: "OpenEngine",
+              icon: <Plug className="h-5 w-5" />,
+            },
+            {
+              label: "e.bootis",
+              sublabel: "Bestaende, Preise, Auftraege",
+              icon: <Database className="h-5 w-5" />,
+            },
+          ]}
+          caption="Der Chatbot beantwortet Fragen mit Live-Daten direkt aus e.bootis."
+        />
       </ContentWrapper>
 
       {/* 2. PROBLEM / NUTZEN */}

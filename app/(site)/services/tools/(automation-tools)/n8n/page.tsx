@@ -138,7 +138,7 @@ export async function generateMetadata({
       siteName: "Bluebatch",
       images: [
         {
-          url: "/images/bluebatch-social-cover.jpg",
+          url: "/og?title=n8n%20Beratung%2C%20Implementierung%20%26%20Hosting&eyebrow=Tools",
           width: 1200,
           height: 630,
           alt: "Bluebatch n8n Automatisierung",
@@ -149,7 +149,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description: overrides?.metaDescription ?? defaultMeta.ogDescription,
-      images: ["/images/bluebatch-social-cover.jpg"],
+      images: ["/og?title=n8n%20Beratung%2C%20Implementierung%20%26%20Hosting&eyebrow=Tools"],
     },
     alternates: {
       canonical: "/services/tools/n8n",

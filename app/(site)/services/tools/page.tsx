@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Tools%20im%20%C3%9Cberblick&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch Tools & Integrationen",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Tools im Überblick | Bluebatch",
     description:
       "Automatisierungs-Tools und Großhandel-Tools - Beratung und Migration.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Tools%20im%20%C3%9Cberblick&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools",

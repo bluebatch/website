@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=Invoice-Bot&eyebrow=Gro%C3%9Fhandel",
         width: 1200,
         height: 630,
         alt: "Bluebatch Invoice-Bot",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Invoice-Bot - Großhandel | Bluebatch",
     description:
       "Eingangsrechnungen automatisch erfassen und verarbeiten. 80% weniger manueller Aufwand.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=Invoice-Bot&eyebrow=Gro%C3%9Fhandel"],
   },
   alternates: {
     canonical: "/branchen/grosshandel/ki-agenten/invoice-bot",

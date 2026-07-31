@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/images/bluebatch-social-cover.jpg",
+        url: "/og?title=n8n%20Performance%20Scaling&eyebrow=Services",
         width: 1200,
         height: 630,
         alt: "Bluebatch Performance Scaling",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "Performance-Scaling für n8n | Bluebatch",
     description:
       "Performance-Probleme mit n8n? Wir skalieren auf Enterprise-Level mit Redis und Queue Mode.",
-    images: ["/images/bluebatch-social-cover.jpg"],
+    images: ["/og?title=n8n%20Performance%20Scaling&eyebrow=Services"],
   },
   alternates: {
     canonical: "/services/performance-scaling",
