@@ -10,6 +10,13 @@ import ContactButton from "@/components/buttons/contact-button";
 // Gruppen-Überschriften. Erreichbar sind nur Hubs — einzelne Seiten
 // übernehmen die Hub-Seiten selbst.
 
+const uberUns = [
+  { label: "Startseite", href: "/" },
+  { label: "Mit euch wachsen", href: "/mit-euch-wachsen" },
+  { label: "Das Team", href: "/team" },
+  { label: "Kontakt", href: "/contact" },
+];
+
 const services = [
   { label: "n8n Hosting", href: "/services/n8n-hosting" },
   { label: "Workflow-Wartung", href: "/services/workflow-wartung" },
@@ -122,12 +129,17 @@ export default function NavigationMobile() {
 
       <div className="absolute left-0 right-0 top-full mt-1 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden">
         <div className="px-4 py-4 space-y-1 max-h-[calc(100vh-8rem)] overflow-y-auto">
-          <Link
-            href="/"
-            className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
-          >
-            Über uns
-          </Link>
+          <Accordion title="Über uns">
+            {uberUns.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </Accordion>
 
           <Accordion title="Services">
             <Link

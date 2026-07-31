@@ -80,6 +80,14 @@ const LABELS: Record<string, string> = {
   "mitarbeiter-onboarding-digital": "Mitarbeiter-Onboarding",
   "rollenbasierte-kanzlei": "Rollenbasierte Kanzlei",
   "ticketsystem-kanzlei": "Ticketsystem",
+  ebootis: "e.bootis ERP",
+  "ki-assessment": "KI-Assessment",
+  "n8n-integration": "n8n-Integration",
+  "chatbot-integration": "Chatbot-Integration",
+  "mcp-server": "MCP-Server",
+  "openengine-schnittstellen": "OpenEngine & Schnittstellen",
+  "ki-anwendungsfaelle": "KI-Anwendungsfälle",
+  "edi-automatisierung": "EDI-Automatisierung",
 };
 
 const WORD_FIXES: Record<string, string> = {

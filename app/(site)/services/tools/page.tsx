@@ -110,6 +110,12 @@ const automationTools = [
 
 const grosshandelTools = [
   {
+    slug: "ebootis",
+    title: "e.bootis ERP",
+    description: "Deutsches ERP für Großhandel mit OpenEngine - unser Integrations-Hub.",
+    image: "/services/tools/ebootis.svg",
+  },
+  {
     slug: "navision",
     title: "Navision",
     description: "Microsoft Dynamics NAV / Business Central - ERP für den Mittelstand.",

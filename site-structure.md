@@ -288,7 +288,17 @@ Grundsätze:
 │       ├── freshworks ........................ [CONTENT] Automation-Tool
 │       ├── navision .......................... [CONTENT] Großhandel-Tool
 │       ├── easybill .......................... [CONTENT] Großhandel-Tool
-│       └── microtech-bueroplus ............... [CONTENT] Großhandel-Tool
+│       ├── microtech-bueroplus ............... [CONTENT] Großhandel-Tool
+│       └── ebootis/ .......................... [HUB]     e.bootis ERP - Tool-Portrait +
+│           │                                    Integrations-Hub (neues Muster:
+│           │                                    ein Tool wird selbst zum Hub)
+│           ├── ki-assessment .................. [MONEY]   500 € Festpreis-Einstieg
+│           ├── n8n-integration ............... [MONEY]
+│           ├── chatbot-integration ........... [MONEY]
+│           ├── mcp-server .................... [MONEY]
+│           ├── openengine-schnittstellen ..... [CONTENT]
+│           ├── ki-anwendungsfaelle ........... [CONTENT]
+│           └── edi-automatisierung ........... [CONTENT]
 │
 ├── blog/ ..................................... [HUB]    Blog-Übersicht
 │   └── <artikel> (~60 Stück) ................. [CONTENT] Blogs sind immer Content
