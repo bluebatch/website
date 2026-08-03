@@ -20,6 +20,7 @@ import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import SimpleCard, { SimpleCardIcon } from "@/components/cards/simple-card";
+import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
@@ -211,6 +212,13 @@ export default async function Page({
             <Hero2ColumnHeadline>
               n8n Schulung & Workshops
             </Hero2ColumnHeadline>
+            <GeoSummary>
+              Bluebatch schult Teams im Mittelstand auf n8n und KI-Automatisierung
+              - von den Grundlagen bis zum Enterprise-Deployment, dazu eine
+              KI-DSGVO-Schulung. Die Trainings laufen vor Ort, online oder hybrid
+              mit maximal 10 Teilnehmern, damit jeder am eigenen Workflow arbeitet
+              statt nur zuzusehen.
+            </GeoSummary>
             <Hero2ColumnDescription>
               Unsere n8n Schulung befähigt Ihr Team zur
               Workflow-Automatisierung. Praxisorientierte Trainings von

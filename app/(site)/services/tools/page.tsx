@@ -16,6 +16,7 @@ import Hero2Column, {
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
 import { ArrowRight } from "lucide-react";
 
@@ -151,6 +152,14 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Unsere Tools im Überblick
             </Hero2ColumnHeadline>
+            <GeoSummary>
+              Diese Übersicht listet alle Automatisierungs- und
+              Großhandels-Tools, die Bluebatch anbindet und betreibt: n8n, Make,
+              Zapier, Power Automate, Workato, UiPath, Tray.io, Activepieces und
+              Pipedream sowie die ERP- und Business-Systeme e.bootis, Navision,
+              microtech büro+, easybill und Freshworks. Die Beratung ist
+              herstellerunabhängig.
+            </GeoSummary>
             <Hero2ColumnDescription>
               Von n8n über Make und Zapier bis Navision und Freshworks - wir
               kennen alle Plattformen und beraten Sie unabhängig. Migration,
