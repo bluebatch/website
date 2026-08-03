@@ -208,6 +208,17 @@ export interface Hub {
  * A hub = directory with page.tsx AND subdirectories that also have page.tsx.
  * Route groups like (grosshandel) are transparent.
  */
+/**
+ * Seiten mit `publish: false` rufen notFound() auf und liefern live einen 404.
+ * Sie sind damit keine Hub-Kinder: von einer Seite, die es oeffentlich nicht
+ * gibt, kann kein Back-Link auf den Hub ausgehen. Ohne diesen Filter melden
+ * die 68 unveroeffentlichten Standorte dauerhaft fehlende Back-Links und
+ * verdecken damit eine echte Back-Link-Regression auf den Live-Seiten.
+ */
+function isUnpublished(pagePath: string): boolean {
+  return /publish:\s*false/.test(fs.readFileSync(pagePath, "utf-8"));
+}
+
 export function discoverHubs(): Hub[] {
   const appDir = path.join(process.cwd(), "app");
   const hubs: Hub[] = [];
@@ -238,7 +249,7 @@ export function discoverHubs(): Hub[] {
 
       const childRoute = `${parentRoute}/${entry.name}`;
       const childPage = path.join(fullPath, "page.tsx");
-      if (fs.existsSync(childPage)) {
+      if (fs.existsSync(childPage) && !isUnpublished(childPage)) {
         children.push({ route: childRoute, canonicalUrl: getCanonical(childRoute) });
       }
     }
