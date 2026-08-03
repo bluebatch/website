@@ -15,6 +15,7 @@ import Hero2Column, {
 } from "@/components/heroes/hero-2-column";
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 import TimelineAsSteps, {
@@ -22,19 +23,19 @@ import TimelineAsSteps, {
 } from "@/components/ui/timeline-as-steps";
 
 export const metadata: Metadata = {
-  title: "Microsoft Dynamics NAV (Navision) Automatisierung | Bluebatch",
+  title: "Navision ERP automatisieren: Rechnungen, EDI, Buchhaltung | Bluebatch",
   description:
-    "Automatisieren Sie Ihre Navision/Dynamics 365 Business Central Prozesse mit n8n. Auftragsimport, Rechnungserstellung und Daten-Synchronisation.",
+    "Automatisierung für Navision (Dynamics NAV): Rechnungsverarbeitung, EDI-Anbindung, Buchhaltung und ERP-Schnittstellen über n8n. Von der Analyse bis zum laufenden Betrieb.",
   openGraph: {
-    title: "Microsoft Dynamics NAV (Navision) Automatisierung | Bluebatch",
+    title: "Navision ERP automatisieren: Rechnungen, EDI, Buchhaltung | Bluebatch",
     description:
-      "Navision-Prozesse automatisieren mit n8n - Aufträge, Rechnungen, Lagerbestände und mehr.",
+      "Rechnungsverarbeitung, EDI und Buchhaltung in Navision automatisieren - über n8n an Webshop, DMS und CRM angebunden.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=Microsoft%20Dynamics%20NAV%20%28Navision%29%20Automatisierung&eyebrow=Tools",
+        url: "/og?title=Navision%20ERP%20automatisieren&eyebrow=Tools",
         width: 1200,
         height: 630,
         alt: "Bluebatch Navision Automatisierung",
@@ -43,10 +44,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Microsoft Dynamics NAV (Navision) Automatisierung | Bluebatch",
+    title: "Navision ERP automatisieren: Rechnungen, EDI, Buchhaltung | Bluebatch",
     description:
-      "Navision-Prozesse automatisieren: Aufträge, Rechnungen, Lagerbestände.",
-    images: ["/og?title=Microsoft%20Dynamics%20NAV%20%28Navision%29%20Automatisierung&eyebrow=Tools"],
+      "Rechnungsverarbeitung, EDI und Buchhaltung in Navision automatisieren.",
+    images: ["/og?title=Navision%20ERP%20automatisieren&eyebrow=Tools"],
   },
   alternates: {
     canonical: "/services/tools/navision",
@@ -101,9 +102,21 @@ const automations = [
   },
   {
     icon: "🧾",
-    title: "Rechnungserstellung",
+    title: "Rechnungsverarbeitung",
     description:
-      "Automatisierte Rechnungsgenerierung und -versand basierend auf Lieferscheinen und Aufträgen.",
+      "Eingangsrechnungen per KI auslesen, gegen Bestellung und Wareneingang prüfen und als Beleg in Navision buchen. Ausgangsrechnungen werden aus Lieferscheinen erzeugt und versendet.",
+  },
+  {
+    icon: "🔗",
+    title: "EDI-Anbindung",
+    description:
+      "EDI-Nachrichten von Kunden und Lieferanten (ORDERS, DESADV, INVOIC) empfangen, in Navision-Belege übersetzen und Rückmeldungen automatisch zurückspielen.",
+  },
+  {
+    icon: "📒",
+    title: "Buchhaltung",
+    description:
+      "Kontoauszüge, Belege und Zahlungseingänge automatisch zuordnen und in der Navision-Finanzbuchhaltung verbuchen - inklusive Übergabe an DATEV.",
   },
   {
     icon: "📦",
@@ -127,12 +140,21 @@ export default function Page() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Tools</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Microsoft Dynamics NAV (Navision) automatisieren
+              Navision automatisieren: Rechnungsverarbeitung, EDI und
+              Buchhaltung
             </Hero2ColumnHeadline>
+            <GeoSummary>
+              Bluebatch automatisiert Prozesse in Microsoft Dynamics NAV
+              (Navision) und Dynamics 365 Business Central über n8n - vor allem
+              Rechnungsverarbeitung, EDI-Anbindung, Buchhaltungsbuchungen und
+              die ERP-Schnittstellen zu Webshop, DMS und CRM. Angebunden wird
+              über OData, SOAP oder REST, bei Bedarf über eigene n8n-Nodes.
+            </GeoSummary>
             <Hero2ColumnDescription>
-              Navision ist das bewährte ERP-System für den Mittelstand. Wir
-              automatisieren Ihre Navision-Prozesse über n8n und schaffen
-              nahtlose Verbindungen zu Ihren anderen Business-Systemen.
+              Navision ist das bewährte ERP-System für den Mittelstand - und
+              der Ort, an dem Rechnungen, Belege und Bestellungen bis heute
+              größtenteils von Hand landen. Genau diese wiederkehrenden
+              Prozesse automatisieren wir über n8n.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">
@@ -140,7 +162,8 @@ export default function Page() {
               </ContactButton>
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
-              Dynamics 365 Business Central • ERP • Automatisierung via n8n
+              Rechnungsverarbeitung • EDI • Buchhaltung • ERP-Schnittstellen
+              via n8n
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
@@ -227,7 +250,9 @@ export default function Page() {
           <IntroBox.PreHeadline>Use Cases</IntroBox.PreHeadline>
           <IntroBox.Headline>Typische Automatisierungen</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Diese Navision-Prozesse automatisieren wir am häufigsten
+            Diese Navision-Prozesse automatisieren wir am häufigsten -
+            Rechnungsverarbeitung, EDI und Buchhaltung stehen dabei fast immer
+            am Anfang
           </IntroBox.Paragraph>
         </IntroBox>
 
