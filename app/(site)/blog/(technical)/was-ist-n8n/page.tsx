@@ -777,7 +777,15 @@ export default function Page() {  return (
               <strong>Model Context Protocol (MCP)</strong>
               {" "}von Anthropic. Damit können KI-Modelle (z.B. Claude) direkt
               n8n-Workflows als Werkzeuge nutzen, und umgekehrt kann n8n externe
-              MCP-Tools in seine Agents einbinden.
+              MCP-Tools in seine Agents einbinden. Was ein MCP-Server genau ist,
+              wie er aufgebaut ist und welche Server sich lohnen, erklären wir in{" "}
+              <Link
+                href="/blog/was-ist-mcp-server"
+                className="text-primary-600 hover:underline"
+              >
+                Was ist ein MCP-Server?
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 

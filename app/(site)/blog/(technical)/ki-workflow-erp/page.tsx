@@ -405,7 +405,14 @@ export default function Page() {
               Joule und Joule Studio sind SAPs eigene Agenten-Plattform (GA
               seit Q1 2026), mit 2.500+ vorgebauten Skills. Joule Studio
               bekommt seit Mai 2026 n8n nativ eingebettet, sodass externe
-              AI-Workflows als Tools per MCP konsumierbar werden. Für
+              AI-Workflows als Tools per{" "}
+              <Link
+                href="/blog/was-ist-mcp-server"
+                className="text-primary-600 hover:underline"
+              >
+                MCP
+              </Link>{" "}
+              konsumierbar werden. Für
               klassische S/4HANA-On-Prem- oder B1-Kunden ist Joule noch
               nicht relevant, ein eigener Stack dominiert.
             </Typo.Paragraph>

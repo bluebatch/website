@@ -235,7 +235,14 @@ export default function Page() {
             <Typo.Paragraph>
               Über das Model Context Protocol, kurz MCP, lassen sich standardisierte
               Anbindungen an externe Systeme herstellen, ohne für jedes Tool eine
-              eigene Brücke zu bauen. Structured Outputs erzwingen ein festes
+              eigene Brücke zu bauen; wie so ein Server intern arbeitet, steht in{" "}
+              <Link
+                href="/blog/was-ist-mcp-server"
+                className="text-primary-600 hover:underline"
+              >
+                Was ist ein MCP-Server?
+              </Link>
+              . Structured Outputs erzwingen ein festes
               Ausgabeformat, sodass die Antwort verlässlich als sauberes JSON
               zurückkommt und sich direkt weiterverarbeiten lässt. Wer das
               Grundprinzip solcher agentischen Bausteine tool-unabhängig verstehen
