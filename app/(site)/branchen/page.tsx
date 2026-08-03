@@ -49,6 +49,12 @@ const topics = [
     description:
       "Dokumentenverarbeitung und Mandantenkommunikation digitalisieren - für mehr Zeit und zufriedene Mandanten.",
   },
+  {
+    href: "/branchen/anwaelte",
+    title: "Anwälte",
+    description:
+      "Kanzleisoftware wie actaport anbinden und KI § 203-konform nutzen - der Cloud Connector ist der erste Baustein.",
+  },
 ];
 
 export default function Page() {

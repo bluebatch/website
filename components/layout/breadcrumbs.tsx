@@ -88,6 +88,9 @@ const LABELS: Record<string, string> = {
   "openengine-schnittstellen": "OpenEngine & Schnittstellen",
   "ki-anwendungsfaelle": "KI-Anwendungsfälle",
   "edi-automatisierung": "EDI-Automatisierung",
+  anwaelte: "Anwälte",
+  "actaport-cloud-connector": "Cloud Connector zu actaport",
+  "actaport-cloud-connector-implementierung": "Connector implementieren",
 };
 
 const WORD_FIXES: Record<string, string> = {

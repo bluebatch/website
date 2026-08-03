@@ -162,9 +162,14 @@ Grundsätze:
 │   │       ├── service-requests .............. [TOOL]   Rechner Service-Anfragen
 │   │       └── social-media-ads .............. [TOOL]   Rechner Social-Media-Ads
 │   │
-│   ├── anwaelte/ ............................. [HUB]    (geplant) dritte Fokus-Branche;
-│   │                                            Struktur analog Steuerberater
-│   │                                            (§ 203 → claude-cowork relevant)
+│   ├── anwaelte/ ............................. [HUB]    dritte Fokus-Branche, im Aufbau;
+│   │   │                                        Struktur analog Steuerberater
+│   │   │                                        (§ 203 → claude-cowork relevant).
+│   │   │                                        Vier Unter-Hubs geplant (private-ai,
+│   │   │                                        claude-cowork, ki-agenten, workflows)
+│   │   ├── actaport-cloud-connector .......... [CONTENT] actaport-Anbindung (REST-API,
+│   │   │                                        n8n, beA) erklärt
+│   │   └── actaport-cloud-connector-implementierung [MONEY] Connector zu actaport bauen
 │   │
 │   └── steuerberater/ ........................ [HUB]    Branchen-Hub, Fokus-Branche
 │       │

@@ -8,6 +8,7 @@ export default function Footer() {
   const branchenMenu = [
     { label: "Großhandel", href: "/branchen/grosshandel" },
     { label: "Steuerberater", href: "/branchen/steuerberater" },
+    { label: "Anwälte", href: "/branchen/anwaelte" },
   ];
 
   const wissenMenu = [
@@ -136,9 +137,6 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
-                <li>
-                  <span className="text-sm text-gray-500">Anwälte (bald)</span>
-                </li>
               </ul>
             </div>
 
