@@ -484,6 +484,38 @@ export default function TeamPage() {
         </div>
       </ContentWrapper>
 
+      {/* Partner */}
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
+        <IntroBox size="small">
+          <IntroBox.PreHeadline>Partner</IntroBox.PreHeadline>
+          <IntroBox.Headline>Gemeinsam mit Pexon Consulting</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Für größere Cloud- und Plattform-Themen arbeiten wir mit unserem
+            Partner Pexon Consulting zusammen. So verbinden wir unsere
+            Automatisierungs- und KI-Expertise mit tiefem Cloud- und
+            Engineering-Know-how.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="https://pexon-consulting.de"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-800 transition-colors hover:border-primary-400 hover:text-primary-600"
+          >
+            pexon-consulting.de
+          </a>
+          <a
+            href="https://pexon.com"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-800 transition-colors hover:border-primary-400 hover:text-primary-600"
+          >
+            pexon.com
+          </a>
+        </div>
+      </ContentWrapper>
+
       {/* Client Logos */}
       <ContentWrapper noPadding bodyWidth="full">
         <Customer />
