@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode, Children, isValidElement } from "react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Check } from "lucide-react";
 import { resolveHref } from "@/lib/get-canonical-path";
 import SimpleGrid from "@/components/layout/simple-grid";
 
@@ -76,23 +76,24 @@ export function ProductTileFeatures({ children }: { children: ReactNode }) {
 
 interface ProductTileFeatureProps {
   children: ReactNode;
-  /** Füllstand des Balkens in Prozent (0-100) */
-  value?: number;
+  /** Optionales KPI/Kürzel statt Häkchen, z.B. "24/7" oder "-60%" */
+  badge?: string;
 }
 
 export function ProductTileFeature({
   children,
-  value = 85,
+  badge,
 }: ProductTileFeatureProps) {
   return (
-    <div>
-      <p className="text-xs text-gray-300">{children}</p>
-      <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-gray-700">
-        <div
-          className="h-full origin-left rounded-full bg-gradient-to-r from-primary-500 to-secondary-400 transition-transform delay-150 duration-500 md:scale-x-0 md:group-hover/tile:scale-x-100"
-          style={{ width: `${value}%` }}
-        />
-      </div>
+    <div className="flex items-start gap-2.5">
+      {badge ? (
+        <span className="mt-px shrink-0 rounded bg-secondary-400/15 px-1.5 text-xs font-bold leading-5 text-secondary-300">
+          {badge}
+        </span>
+      ) : (
+        <Check className="mt-0.5 h-4 w-4 shrink-0 text-secondary-400" />
+      )}
+      <p className="text-sm leading-snug text-gray-200">{children}</p>
     </div>
   );
 }
@@ -185,7 +186,7 @@ export interface ProductTileItem {
   role?: string;
   stat?: string;
   description?: string;
-  features?: (string | { label: string; value: number })[];
+  features?: (string | { label: string; badge?: string })[];
   linkLabel?: string;
 }
 
@@ -217,15 +218,13 @@ export function ProductTileGrid({
           )}
           {item.features && item.features.length > 0 && (
             <ProductTileFeatures>
-              {item.features.map((feature, index) => {
+              {item.features.map((feature) => {
                 const label =
                   typeof feature === "string" ? feature : feature.label;
-                const value =
-                  typeof feature === "string"
-                    ? Math.max(92 - index * 14, 40)
-                    : feature.value;
+                const badge =
+                  typeof feature === "string" ? undefined : feature.badge;
                 return (
-                  <ProductTileFeature key={label} value={value}>
+                  <ProductTileFeature key={label} badge={badge}>
                     {label}
                   </ProductTileFeature>
                 );
