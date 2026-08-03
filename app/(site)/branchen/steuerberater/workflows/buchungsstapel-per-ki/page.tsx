@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import ProseColumns from "@/components/ui/prose-columns";
 import type { PageConfig } from "@/lib/get-subpages";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -128,35 +129,26 @@ export default function Page() {
           </IntroBox.Subline>
         </IntroBox>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div>
-            <Typo.H3 className="mt-0!">Wiederkehrende Muster</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              Miete, Leasing, Telekommunikation, Wareneinkauf beim
-              Stammlieferanten: Dieselben Geschäftsvorfälle laufen jeden
-              Monat auf dieselben Konten. Genau diese Muster kann eine KI
-              aus der Buchungshistorie lernen.
-            </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Personal am Limit</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              FiBu-Fachkräfte sind schwer zu finden und mit
-              Routine-Erfassung ausgelastet. Jede Stunde Tipparbeit fehlt
-              für Abstimmung, Klärung und Beratung, also für die Arbeit,
-              die tatsächlich Fachwissen braucht.
-            </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Uneinheitliche Kontierung</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              Drei Bearbeiter, drei Kontierungsstile: Derselbe
-              Geschäftsvorfall landet je nach Bearbeiter auf
-              unterschiedlichen Konten. Ein generierter Stapel kontiert
-              dagegen konsistent nach einem Regelwerk.
-            </Typo.Paragraph>
-          </div>
-        </div>
+        <ProseColumns cols={3} className="mt-12">
+          <ProseColumns.Item title="Wiederkehrende Muster">
+            Miete, Leasing, Telekommunikation, Wareneinkauf beim
+            Stammlieferanten: Dieselben Geschäftsvorfälle laufen jeden Monat
+            auf dieselben Konten. Genau diese Muster kann eine KI aus der
+            Buchungshistorie lernen.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Personal am Limit">
+            FiBu-Fachkräfte sind schwer zu finden und mit Routine-Erfassung
+            ausgelastet. Jede Stunde Tipparbeit fehlt für Abstimmung, Klärung
+            und Beratung, also für die Arbeit, die tatsächlich Fachwissen
+            braucht.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Uneinheitliche Kontierung">
+            Drei Bearbeiter, drei Kontierungsstile: Derselbe Geschäftsvorfall
+            landet je nach Bearbeiter auf unterschiedlichen Konten. Ein
+            generierter Stapel kontiert dagegen konsistent nach einem
+            Regelwerk.
+          </ProseColumns.Item>
+        </ProseColumns>
       </ContentWrapper>
 
       {/* 3. WORKFLOW */}
@@ -214,11 +206,8 @@ export default function Page() {
           />
         </WorkflowDiagram>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-          <div>
-            <Typo.H3 className="mt-0!">
-              Kontierung aus der Buchungshistorie
-            </Typo.H3>
+        <ProseColumns cols={2} wide className="mt-12">
+          <ProseColumns.Item title="Kontierung aus der Buchungshistorie">
             <Typo.Paragraph>
               Die KI lernt aus den bisherigen Buchungen des Mandanten: Wie
               wurde dieser Lieferant bisher kontiert, welches Konto passt zu
@@ -227,11 +216,8 @@ export default function Page() {
               Stapel markiert, statt still auf ein Verlegenheitskonto zu
               laufen.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">
-              Steuerschlüssel bleiben Regelsache
-            </Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Steuerschlüssel bleiben Regelsache">
             <Typo.Paragraph>
               Umsatzsteuer-Logik wird nicht der Mustererkennung überlassen:
               Steuerschlüssel, Reverse-Charge-Fälle und
@@ -239,8 +225,8 @@ export default function Page() {
               Regelwerk. Die KI schlägt vor, die Regeln begrenzen, was in
               den Stapel darf.
             </Typo.Paragraph>
-          </div>
-        </div>
+          </ProseColumns.Item>
+        </ProseColumns>
       </ContentWrapper>
 
       {/* 4. VORHER / NACHHER */}

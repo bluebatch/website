@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import ProseColumns from "@/components/ui/prose-columns";
 import type { PageConfig } from "@/lib/get-subpages";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -124,33 +125,24 @@ export default function Page() {
           </IntroBox.Subline>
         </IntroBox>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div>
-            <Typo.H3 className="mt-0!">Zeile für Zeile von Hand</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              Verwendungszweck lesen, Rechnung suchen, Betrag vergleichen,
-              abhaken. Bei Mandanten mit hohem Zahlungsvolumen ist die
-              Abstimmung ein fester Tagesblock, der jeden Monat wiederkehrt.
-            </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Die schwierigen 20 Prozent</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              Skontoabzug, Teilzahlungen, Sammelüberweisungen über mehrere
-              Rechnungen, kryptische Verwendungszwecke: Die Sonderfälle
-              kosten den Großteil der Zeit und landen oft als Klärposten
-              auf Zwischenkonten, wo sie liegen bleiben.
-            </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Abstimmung kommt zu spät</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              Wer nur zum Monatsende abstimmt, sieht Zahlungsdifferenzen,
-              Doppelzahlungen und offene Forderungen erst Wochen später.
-              Für Mahnwesen und Liquiditätsaussagen ist das zu spät.
-            </Typo.Paragraph>
-          </div>
-        </div>
+        <ProseColumns cols={3} className="mt-12">
+          <ProseColumns.Item title="Zeile für Zeile von Hand">
+            Verwendungszweck lesen, Rechnung suchen, Betrag vergleichen,
+            abhaken. Bei Mandanten mit hohem Zahlungsvolumen ist die
+            Abstimmung ein fester Tagesblock, der jeden Monat wiederkehrt.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Die schwierigen 20 Prozent">
+            Skontoabzug, Teilzahlungen, Sammelüberweisungen über mehrere
+            Rechnungen, kryptische Verwendungszwecke: Die Sonderfälle kosten
+            den Großteil der Zeit und landen oft als Klärposten auf
+            Zwischenkonten, wo sie liegen bleiben.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Abstimmung kommt zu spät">
+            Wer nur zum Monatsende abstimmt, sieht Zahlungsdifferenzen,
+            Doppelzahlungen und offene Forderungen erst Wochen später. Für
+            Mahnwesen und Liquiditätsaussagen ist das zu spät.
+          </ProseColumns.Item>
+        </ProseColumns>
       </ContentWrapper>
 
       {/* 3. WORKFLOW */}
@@ -195,11 +187,8 @@ export default function Page() {
           />
         </WorkflowDiagram>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-          <div>
-            <Typo.H3 className="mt-0!">
-              Eindeutiges matcht die Regel, den Rest liest die KI
-            </Typo.H3>
+        <ProseColumns cols={2} wide className="mt-12">
+          <ProseColumns.Item title="Eindeutiges matcht die Regel, den Rest liest die KI">
             <Typo.Paragraph>
               Stimmen Betrag und Rechnungsnummer überein, braucht es keine
               KI, das erledigen Regeln zuverlässig und nachvollziehbar.
@@ -208,11 +197,8 @@ export default function Page() {
               zerlegt Sammelüberweisungen auf einzelne Rechnungen und
               ordnet Teilzahlungen dem richtigen offenen Posten zu.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">
-              Klärposten mit Kontext statt nackter Differenz
-            </Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Klärposten mit Kontext statt nackter Differenz">
             <Typo.Paragraph>
               Was weder Regel noch KI sicher zuordnen können, landet als
               Klärposten beim Team, mit Kontext: ähnlichste offene Posten,
@@ -220,8 +206,8 @@ export default function Page() {
               einer anonymen Differenz wird eine Entscheidung, die in
               Sekunden fällt.
             </Typo.Paragraph>
-          </div>
-        </div>
+          </ProseColumns.Item>
+        </ProseColumns>
       </ContentWrapper>
 
       {/* 4. NACHVOLLZIEHBARKEIT */}

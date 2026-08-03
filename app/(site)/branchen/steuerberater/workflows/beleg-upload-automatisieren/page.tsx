@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import ProseColumns from "@/components/ui/prose-columns";
 import type { PageConfig } from "@/lib/get-subpages";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -123,18 +124,16 @@ export default function Page() {
           </IntroBox.Subline>
         </IntroBox>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div>
-            <Typo.H3 className="mt-0!">Der Pendelordner lebt noch</Typo.H3>
+        <ProseColumns cols={3} className="mt-12">
+          <ProseColumns.Item title="Der Pendelordner lebt noch">
             <Typo.Paragraph className="text-sm text-gray-600">
               Papierbelege im Ordner, PDFs verstreut über drei Mail-Postfächer,
               Portal-Rechnungen von Amazon, Telekom und Co., die niemand
               herunterlädt. Die Kanzlei jagt jedem Kanal einzeln hinterher und
               bucht trotzdem mit Lücken.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Nachfordern kostet Tage</Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Nachfordern kostet Tage">
             <Typo.Paragraph className="text-sm text-gray-600">
               Fehlende Belege fallen erst beim Buchen auf. Dann beginnt das
               Mail-Ping-Pong: anfordern, erinnern, warten. Der Abschluss
@@ -142,17 +141,16 @@ export default function Page() {
               Zitterpartie, und der Sachbearbeiter arbeitet als Mahnstelle
               statt als Buchhalter.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Jeder Mandant tickt anders</Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Jeder Mandant tickt anders">
             <Typo.Paragraph className="text-sm text-gray-600">
               Der eine arbeitet mit DATEV Unternehmen Online, der nächste mit
               lexware, der dritte mailt Fotos. Ein einziger starrer Prozess
               für alle funktioniert nicht. Was funktioniert: ein definierter
               digitaler Prozess je Mandant, passend zu seinem Tool.
             </Typo.Paragraph>
-          </div>
-        </div>
+          </ProseColumns.Item>
+        </ProseColumns>
 
         <div className="mx-auto mt-12 max-w-2xl">
           <div className="relative aspect-video overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">

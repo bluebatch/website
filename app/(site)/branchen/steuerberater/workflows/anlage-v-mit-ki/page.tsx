@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import ProseColumns from "@/components/ui/prose-columns";
 import type { PageConfig } from "@/lib/get-subpages";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -121,36 +122,26 @@ export default function Page() {
           </IntroBox.Subline>
         </IntroBox>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div>
-            <Typo.H3 className="mt-0!">Zersplitterte Unterlagen</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              Mietverträge, Kontoauszüge, Nebenkostenabrechnung der
-              Hausverwaltung, Zinsbescheinigung der Bank,
-              Handwerkerrechnungen: Die Werte für eine einzige Anlage V
-              stecken in einem Dutzend Dokumente in unterschiedlichen
-              Formaten.
-            </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Fehleranfällige Übertragung</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              Jede Zahl wird von Hand in die richtige Zeile übertragen:
-              Mieteinnahmen, Umlagen, Erhaltungsaufwand, Schuldzinsen, AfA.
-              Zahlendreher und vertauschte Zeilen fallen oft erst beim
-              Bescheid auf.
-            </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Prüfung gegen das Vorjahr fehlt</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              Ob die AfA konsistent fortgeführt wurde, ob Erhaltungsaufwand
-              plötzlich vom üblichen Niveau abweicht oder eine Mieteinnahme
-              fehlt: Für den systematischen Vorjahresvergleich je Objekt
-              fehlt im Tagesgeschäft die Zeit.
-            </Typo.Paragraph>
-          </div>
-        </div>
+        <ProseColumns cols={3} className="mt-12">
+          <ProseColumns.Item title="Zersplitterte Unterlagen">
+            Mietverträge, Kontoauszüge, Nebenkostenabrechnung der
+            Hausverwaltung, Zinsbescheinigung der Bank, Handwerkerrechnungen:
+            Die Werte für eine einzige Anlage V stecken in einem Dutzend
+            Dokumente in unterschiedlichen Formaten.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Fehleranfällige Übertragung">
+            Jede Zahl wird von Hand in die richtige Zeile übertragen:
+            Mieteinnahmen, Umlagen, Erhaltungsaufwand, Schuldzinsen, AfA.
+            Zahlendreher und vertauschte Zeilen fallen oft erst beim Bescheid
+            auf.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Prüfung gegen das Vorjahr fehlt">
+            Ob die AfA konsistent fortgeführt wurde, ob Erhaltungsaufwand
+            plötzlich vom üblichen Niveau abweicht oder eine Mieteinnahme
+            fehlt: Für den systematischen Vorjahresvergleich je Objekt fehlt
+            im Tagesgeschäft die Zeit.
+          </ProseColumns.Item>
+        </ProseColumns>
       </ContentWrapper>
 
       {/* 3. WORKFLOW */}
@@ -201,9 +192,8 @@ export default function Page() {
           />
         </WorkflowDiagram>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-          <div>
-            <Typo.H3 className="mt-0!">Erstellen: Werte statt Tipperei</Typo.H3>
+        <ProseColumns cols={2} wide className="mt-12">
+          <ProseColumns.Item title="Erstellen: Werte statt Tipperei">
             <Typo.Paragraph>
               Die KI erkennt pro Objekt Mieteinnahmen und Umlagen aus
               Kontoauszügen und Abrechnungen, ordnet Werbungskosten wie
@@ -212,9 +202,8 @@ export default function Page() {
               Das Ergebnis ist eine vollständig vorbefüllte Anlage V als
               Vorschlag, mit Quellenangabe je Wert.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Prüfen: Abweichungen sichtbar</Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Prüfen: Abweichungen sichtbar">
             <Typo.Paragraph>
               Auch bereits erstellte Anlagen lassen sich gegenprüfen: Der
               Workflow vergleicht jede Position mit dem Vorjahr und den
@@ -223,8 +212,8 @@ export default function Page() {
               ohne Beleg. Der Bearbeiter sieht nur die markierten Punkte,
               nicht das ganze Formular.
             </Typo.Paragraph>
-          </div>
-        </div>
+          </ProseColumns.Item>
+        </ProseColumns>
       </ContentWrapper>
 
       {/* 4. NACHVOLLZIEHBARKEIT */}

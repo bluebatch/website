@@ -14,6 +14,7 @@ import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
 import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
+import OfferCard from "@/components/cards/offer-card";
 import IntroBox from "@/components/ui/intro-box";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -129,37 +130,6 @@ const faqs = [
   },
 ];
 
-function OfferCard({
-  href,
-  title,
-  price,
-  description,
-}: {
-  href: string;
-  title: string;
-  price?: string;
-  description: string;
-}) {
-  return (
-    <InternalLink href={href} variant="plain" resolve={false}>
-      <SimpleCard align="left" className="h-full">
-        <div className="flex items-start justify-between gap-3">
-          <Typo.H3>{title}</Typo.H3>
-          {price && (
-            <span className="shrink-0 rounded-full bg-primary-50 px-3 py-1 text-sm font-bold text-primary-700">
-              {price}
-            </span>
-          )}
-        </div>
-        <Typo.Paragraph className="text-gray-600">{description}</Typo.Paragraph>
-        <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-medium text-primary-600">
-          Mehr erfahren
-          <ArrowRight className="h-4 w-4" />
-        </span>
-      </SimpleCard>
-    </InternalLink>
-  );
-}
 
 export default function Page() {
   return (
@@ -283,7 +253,7 @@ export default function Page() {
         </IntroBox>
         <SimpleGrid cols={2} className="mt-12">
           {offers.map((o) => (
-            <OfferCard key={o.href} {...o} />
+            <OfferCard key={o.href} {...o} resolve={false} />
           ))}
         </SimpleGrid>
       </ContentWrapper>

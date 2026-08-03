@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import ProseColumns from "@/components/ui/prose-columns";
 import type { PageConfig } from "@/lib/get-subpages";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -128,35 +129,25 @@ export default function Page() {
           </IntroBox.Subline>
         </IntroBox>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div>
-            <Typo.H3 className="mt-0!">Stichprobe statt Vollprüfung</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              Bei hunderten Buchungen pro Mandant und Monat prüft niemand
-              jede Zeile. Fehlkontierungen, vertauschte Steuersätze oder
-              doppelt erfasste Eingangsrechnungen fallen oft erst beim
-              Jahresabschluss auf, dann ist die Korrektur teuer.
-            </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Kreditoren ohne Kontrolle</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              Kreditorenkonten mit falschen Salden, offene Posten, die längst
-              bezahlt sind, und Buchungen auf Sammelkonten: Ohne
-              systematische Kreditorenprüfung wächst die Klärliste still im
-              Hintergrund.
-            </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Ordnungsmäßigkeit als Risiko</Typo.H3>
-            <Typo.Paragraph className="text-gray-600">
-              GoBD verlangt nachvollziehbare, vollständige und zeitgerechte
-              Buchführung. Wer Auffälligkeiten erst in der Betriebsprüfung
-              erklärt, verhandelt aus der Defensive. Ein dokumentiertes
-              Monatsreview dreht das um.
-            </Typo.Paragraph>
-          </div>
-        </div>
+        <ProseColumns cols={3} className="mt-12">
+          <ProseColumns.Item title="Stichprobe statt Vollprüfung">
+            Bei hunderten Buchungen pro Mandant und Monat prüft niemand jede
+            Zeile. Fehlkontierungen, vertauschte Steuersätze oder doppelt
+            erfasste Eingangsrechnungen fallen oft erst beim Jahresabschluss
+            auf, dann ist die Korrektur teuer.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Kreditoren ohne Kontrolle">
+            Kreditorenkonten mit falschen Salden, offene Posten, die längst
+            bezahlt sind, und Buchungen auf Sammelkonten: Ohne systematische
+            Kreditorenprüfung wächst die Klärliste still im Hintergrund.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Ordnungsmäßigkeit als Risiko">
+            GoBD verlangt nachvollziehbare, vollständige und zeitgerechte
+            Buchführung. Wer Auffälligkeiten erst in der Betriebsprüfung
+            erklärt, verhandelt aus der Defensive. Ein dokumentiertes
+            Monatsreview dreht das um.
+          </ProseColumns.Item>
+        </ProseColumns>
       </ContentWrapper>
 
       {/* 3. WORKFLOW */}
@@ -201,11 +192,8 @@ export default function Page() {
           />
         </WorkflowDiagram>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-          <div>
-            <Typo.H3 className="mt-0!">
-              MCP-Server als Brücke zu DATEV-Connect
-            </Typo.H3>
+        <ProseColumns cols={2} wide className="mt-12">
+          <ProseColumns.Item title="MCP-Server als Brücke zu DATEV-Connect">
             <Typo.Paragraph>
               Der MCP-Server (Model Context Protocol) gibt dem KI-Modell
               kontrollierten Lesezugriff auf die Buchungsdaten in DATEV: nur
@@ -213,11 +201,8 @@ export default function Page() {
               Abfrage protokolliert. Das Modell stellt gezielte Fragen an die
               Daten, statt dass jemand CSV-Exporte hin- und herschiebt.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">
-              Zweistufige Prüfung: Regeln plus KI
-            </Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Zweistufige Prüfung: Regeln plus KI">
             <Typo.Paragraph>
               Harte Verstöße wie falsche Steuerschlüssel, Buchungen in
               geschlossene Perioden oder Salden auf Interimskonten erkennt
@@ -227,8 +212,8 @@ export default function Page() {
               Reverse-Charge-Kandidaten. Jede Auffälligkeit landet mit
               Begründung auf der Klärliste.
             </Typo.Paragraph>
-          </div>
-        </div>
+          </ProseColumns.Item>
+        </ProseColumns>
       </ContentWrapper>
 
       {/* 4. PRÜFUMFANG */}
@@ -240,9 +225,8 @@ export default function Page() {
           </IntroBox.Headline>
         </IntroBox>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div>
-            <Typo.H3 className="mt-0!">Kreditorenprüfung</Typo.H3>
+        <ProseColumns cols={2} className="mt-12">
+          <ProseColumns.Item title="Kreditorenprüfung">
             <Typo.Paragraph>
               Saldenabgleich je Kreditor, Dubletten-Erkennung über
               Rechnungsnummer und Betrag, überfällige offene Posten,
@@ -257,9 +241,8 @@ export default function Page() {
               , das Monatsreview setzt dahinter an und prüft das Ergebnis im
               Zusammenhang.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Ordnungsmäßigkeitsprüfung</Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Ordnungsmäßigkeitsprüfung">
             <Typo.Paragraph>
               Vollständigkeit der Perioden, zeitgerechte Erfassung,
               Steuerschlüssel-Plausibilität gegen Kontenrahmen und
@@ -268,8 +251,8 @@ export default function Page() {
               Kanzlei bei Rückfragen und in der Betriebsprüfung vorlegen
               kann.
             </Typo.Paragraph>
-          </div>
-        </div>
+          </ProseColumns.Item>
+        </ProseColumns>
 
         <div className="mx-auto mt-12 max-w-2xl">
           <div className="relative aspect-video overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import ProseColumns from "@/components/ui/prose-columns";
 import type { PageConfig } from "@/lib/get-subpages";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -124,9 +125,8 @@ export default function Page() {
           </IntroBox.Subline>
         </IntroBox>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div>
-            <Typo.H3 className="mt-0!">Rechnungen kommen zu spät</Typo.H3>
+        <ProseColumns cols={3} className="mt-12">
+          <ProseColumns.Item title="Rechnungen kommen zu spät">
             <Typo.Paragraph className="text-sm text-gray-600">
               Wiederkehrende Leistungen wie Finanzbuchhaltung und Lohn werden
               monatlich erbracht, aber oft unregelmäßig abgerechnet, weil die
@@ -134,9 +134,8 @@ export default function Page() {
               verschiebt den Zahlungseingang um denselben Zeitraum nach
               hinten.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Mahnen ist Beziehungsarbeit</Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Mahnen ist Beziehungsarbeit">
             <Typo.Paragraph className="text-sm text-gray-600">
               Der Sachbearbeiter, der den Mandanten täglich betreut, soll ihn
               gleichzeitig ans Zahlen erinnern. Das Ergebnis: Mahnungen
@@ -144,9 +143,8 @@ export default function Page() {
               Jahresgespräch steht ein unangenehmer Betrag im Raum, der
               längst hätte eskaliert werden müssen.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Dauerverzug ohne Konsequenz</Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Dauerverzug ohne Konsequenz">
             <Typo.Paragraph className="text-sm text-gray-600">
               Einzelne Mandanten zahlen chronisch spät oder gar nicht und
               binden trotzdem volle Kapazität. Ohne definierten
@@ -154,8 +152,8 @@ export default function Page() {
               Mandate konsequent zu beenden, obwohl sie wirtschaftlich längst
               ein Verlustgeschäft sind.
             </Typo.Paragraph>
-          </div>
-        </div>
+          </ProseColumns.Item>
+        </ProseColumns>
 
         <div className="mx-auto mt-12 max-w-2xl">
           <div className="relative aspect-video overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">

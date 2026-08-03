@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import ProseColumns from "@/components/ui/prose-columns";
 import type { PageConfig } from "@/lib/get-subpages";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -42,6 +43,7 @@ import RoiCalculation, {
 } from "@/components/sections/roi-calculation";
 import WorkflowDiagram from "@/components/sections/workflow-diagram";
 import KpiCard from "@/components/cards/kpi-card";
+import HeroStatBand from "@/components/heroes/hero-stat-band";
 
 export const pageConfig: PageConfig = {
   title: "Belegprüfung",
@@ -128,21 +130,7 @@ export default function Page() {
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
             </Hero2ColumnCallToAction>
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              {heroStats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-xl border border-gray-200 bg-white/70 p-4 text-center backdrop-blur"
-                >
-                  <div className="text-2xl font-bold text-primary-700 md:text-3xl">
-                    {stat.value}
-                  </div>
-                  <div className="mt-1 text-xs font-medium uppercase tracking-wide text-gray-600">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <HeroStatBand stats={heroStats} />
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
@@ -277,9 +265,8 @@ export default function Page() {
           />
         </WorkflowDiagram>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-          <div>
-            <Typo.H3 className="mt-0!">Multi-OCR Best-of-Breed</Typo.H3>
+        <ProseColumns cols={2} wide className="mt-12">
+          <ProseColumns.Item title="Multi-OCR Best-of-Breed">
             <Typo.Paragraph>
               Für PDFs und Papier-Scans extrahiert ein Multi-OCR-Stack aus
               Klippa, Mindee und Azure Document Intelligence die Belegdaten.
@@ -288,11 +275,8 @@ export default function Page() {
               USt-ID, Leistungsbeschreibung, Skontofrist und
               Zahlungsbedingungen.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">
-              Confidence-Score und Auto-Freigabe
-            </Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Confidence-Score und Auto-Freigabe">
             <Typo.Paragraph>
               Jeder Beleg bekommt einen Confidence-Score zwischen 0 und 100
               Prozent. Ab 90 Prozent läuft die Buchung vollautomatisch an
@@ -302,8 +286,8 @@ export default function Page() {
               Entscheidung mit Zeitstempel, User und Originalbild im
               GoBD-Audit-Log.
             </Typo.Paragraph>
-          </div>
-        </div>
+          </ProseColumns.Item>
+        </ProseColumns>
       </ContentWrapper>
 
       {/* 4. COMPARISON CARD: Vorher / Nachher */}

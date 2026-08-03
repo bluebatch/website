@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import ProseColumns from "@/components/ui/prose-columns";
 import type { PageConfig } from "@/lib/get-subpages";
 import Hero2Column, {
   Hero2ColumnTextColumn,
@@ -124,9 +125,8 @@ export default function Page() {
           </IntroBox.Subline>
         </IntroBox>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div>
-            <Typo.H3 className="mt-0!">Was zu melden ist</Typo.H3>
+        <ProseColumns cols={3} className="mt-12">
+          <ProseColumns.Item title="Was zu melden ist">
             <Typo.Paragraph className="text-sm text-gray-600">
               Pro Betriebsstätte jedes elektronische Aufzeichnungssystem mit
               zertifizierter technischer Sicherheitseinrichtung (TSE): Art des
@@ -135,9 +135,8 @@ export default function Page() {
               elektronisch über Mein ELSTER beziehungsweise die
               ERiC-Schnittstelle.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Laufende Fristen</Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Laufende Fristen">
             <Typo.Paragraph className="text-sm text-gray-600">
               Der Bestand war bis zum 31. Juli 2025 zu melden. Seitdem gilt:
               Jede neu angeschaffte und jede außer Betrieb genommene Kasse
@@ -145,9 +144,8 @@ export default function Page() {
               damit ein Dauerprozess, der bei jedem Kassenwechsel eines
               Mandanten erneut anfällt.
             </Typo.Paragraph>
-          </div>
-          <div>
-            <Typo.H3 className="mt-0!">Das Datensammel-Problem</Typo.H3>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Das Datensammel-Problem">
             <Typo.Paragraph className="text-sm text-gray-600">
               Die eigentliche Arbeit ist nicht die Meldung, sondern die
               Beschaffung der Daten: Seriennummern und TSE-Angaben stehen beim
@@ -155,8 +153,8 @@ export default function Page() {
               Telefon eingesammelt kommen sie unvollständig, in falschen
               Formaten und tröpfchenweise an.
             </Typo.Paragraph>
-          </div>
-        </div>
+          </ProseColumns.Item>
+        </ProseColumns>
 
         <div className="mx-auto mt-12 max-w-2xl">
           <div className="relative aspect-video overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
