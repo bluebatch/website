@@ -38,8 +38,9 @@ const agents = [
     features: [
       "Liest Kundenanfragen und erkennt Positionen",
       "Preisabfrage gegen ERP und Preislisten",
-      "Erstellt fertige Angebots-PDFs",
+      { label: "Fertiges Angebot statt Stunden", badge: "in Min" },
       "Automatisches Follow-up",
+      { label: "Höhere Qualifizierungsrate", badge: "21x" },
     ],
     linkLabel: "Zum Angebots-Bot",
   },
@@ -57,6 +58,7 @@ const agents = [
       "Extrahiert Beträge, Steuer und Metadaten",
       "Prüft gegen Bestellung und Wareneingang",
       "Leitet zur richtigen Freigabe weiter",
+      { label: "Weniger manueller Aufwand", badge: "-80%" },
     ],
     linkLabel: "Zum Invoice-Bot",
   },

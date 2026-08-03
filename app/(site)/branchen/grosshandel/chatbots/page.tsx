@@ -39,7 +39,7 @@ const chatbots = [
       "Antwortet direkt aus ERP und SharePoint",
       "Bestände, Preise, Lieferzeiten in Echtzeit",
       "Sichere Chat-Oberfläche (Open WebUI)",
-      "In 5 Tagen einsatzbereit",
+      { label: "Einsatzbereit bis Go-Live", badge: "5 Tage" },
     ],
     linkLabel: "Zum KI-Chatbot",
   },

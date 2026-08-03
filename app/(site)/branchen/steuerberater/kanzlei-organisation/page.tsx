@@ -53,7 +53,7 @@ const fundament = [
     features: [
       "Fundament für Delegation und Führung",
       "Basis für jeden KI-Einsatz",
-      "Vorlage anpassen statt selbst schreiben",
+      { label: "Muster-Handbuch als Vorlage", badge: "200 S." },
     ],
     linkLabel: "Zum Kanzleihandbuch",
   },
@@ -67,7 +67,7 @@ const fundament = [
       "Screen-Recording aufnehmen, KI transkribiert und schreibt den Handbuch-Artikel. Die Dokumentation entsteht ohne Extra-Zeit im Tagesgeschäft.",
     image: "/images/digital-workflow.jpg",
     features: [
-      "Aufnehmen statt aufschreiben",
+      { label: "Doku ohne Extra-Zeit", badge: "0 h" },
       "KI-Transkription zu fertigen Artikeln",
       "Standardisierung senkt die Fehlerquote",
     ],
@@ -84,7 +84,7 @@ const fundament = [
     image: "/images/human-resources.jpg",
     features: [
       "Video-Kurs aus dem Kanzleihandbuch",
-      "DATEV-fit in einer Woche",
+      { label: "Neue Mitarbeiter DATEV-fit", badge: "1 Wo." },
       "Einmal erstellen, immer wieder nutzen",
     ],
     linkLabel: "Zum digitalen Onboarding",
