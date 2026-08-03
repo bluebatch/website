@@ -19,6 +19,7 @@ import Link from "next/link";
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 
@@ -155,6 +156,14 @@ export default async function Page({
             <Hero2ColumnHeadline>
               n8n Hosting Deutschland - Self-Hosted auf Ihrer Infrastruktur
             </Hero2ColumnHeadline>
+            <GeoSummary>
+              Bluebatch betreibt n8n als Self-Hosting auf der Infrastruktur des
+              Kunden - OnPrem, Private Cloud oder hybrid, mit Servern in
+              Deutschland. Gedacht für Unternehmen mit DSGVO-Anforderungen im
+              B2B, die ihre Workflow-Daten nicht an einen SaaS-Anbieter geben
+              wollen. Ergebnis: 100 % Datenkontrolle im eigenen Rechenzentrum,
+              inklusive Einrichtung, Updates und Monitoring durch uns.
+            </GeoSummary>
             <Hero2ColumnDescription>
               Self-Hosting von n8n bedeutet maximale Datenkontrolle und
               Datenschutz nach DSGVO. Als open source Workflow Engine lässt sich

@@ -15,6 +15,7 @@ import Hero2Column, {
 } from "@/components/heroes/hero-2-column";
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 import BoundlessImageCard from "@/components/cards/boundless-image-card";
@@ -143,6 +144,14 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Easybill - Rechnungssoftware automatisieren
             </Hero2ColumnHeadline>
+            <GeoSummary>
+              Bluebatch automatisiert Easybill über n8n: Rechnungserstellung
+              aus Shop-Bestellungen, Mahnwesen, Zahlungsabgleich und der Export
+              an den Steuerberater. Gedacht für KMU und Großhändler, die
+              Easybill an Shopify, Amazon, eBay oder ihr ERP anbinden wollen.
+              Abgedeckt sind ZUGFeRD und XRechnung sowie der DATEV- und
+              Lexware-Export, angebunden über die REST-API von Easybill.
+            </GeoSummary>
             <Hero2ColumnDescription>
               Easybill ist die deutsche Cloud-Rechnungssoftware für KMU und
               Freelancer. Mit ZUGFeRD, XRechnung und DATEV-Integration

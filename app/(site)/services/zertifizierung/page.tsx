@@ -19,6 +19,7 @@ import Hero2Column, {
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
+import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 import BoundlessImageCard from "@/components/cards/boundless-image-card";
@@ -140,6 +141,15 @@ export default async function KiAgenturZertifizierungPage({
             <Hero2ColumnHeadline>
               KI Agentur mit Zertifizierung: Qualität, die nachweisbar ist
             </Hero2ColumnHeadline>
+            <GeoSummary>
+              Bluebatch ist eine KI- und Automatisierungsagentur mit
+              zertifizierter Expertise in n8n, Cloud-Infrastruktur und
+              Datenschutz. Gedacht für Unternehmen, die einen Partner mit
+              belegbarer Qualität statt nur mit Referenzfolien suchen. In
+              Zahlen: über 50 Enterprise-Kunden, mehr als 200 produktive
+              Workflows, 99,9 % Uptime-SLA und 4 bis 8 Wochen vom Kickoff bis
+              zum laufenden Workflow.
+            </GeoSummary>
             <Hero2ColumnDescription>
               Bei der Wahl einer KI Agentur zählt nicht nur technisches
               Know-how, sondern auch nachweisbare Qualität. Bluebatch
