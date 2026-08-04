@@ -263,10 +263,14 @@ export default async function Page({
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Als KI Agentur Berlin sind wir Ihr Partner für n8n-Workflows,
-            KI-Automatisierung und Prozessoptimierung in Berlin und Brandenburg.
-            Self-hosted, DSGVO-konform und skalierbar.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine n8n und KI Agentur für Berlin: n8n-Workflows,
+            API-Integrationen und Prozessautomatisierung für Startups,
+            Mittelstand und Verwaltung in Berlin und Brandenburg, self-hosted
+            und DSGVO-konform auf eigener Infrastruktur. Typische Projekte wie
+            automatische Bestellerfassung oder Rechnungsprüfung sparen Berliner
+            Betrieben mehrere Stunden manueller Arbeit pro Tag, remote umgesetzt
+            und vor Ort betreut.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Beratung anfragen</ContactButton>
