@@ -142,11 +142,12 @@ export const metaCustom: CityMeta = {
 };
 
 const defaultMeta = {
-  title: `KI Agentur München - Workflow-Automatisierung & Prozessoptimierung | Bluebatch`,
-  description: `Bluebatch ist Ihre KI Agentur München — Ihr Partner für Workflow-Automatisierung, n8n-Workflows, API-Integrationen und Prozessoptimierung für DAX-Konzerne, Tech-Giganten und Mittelständler.`,
+  title: `n8n Agentur München - KI-Automatisierung & Workflows | Bluebatch`,
+  description: `Bluebatch ist Ihre n8n und KI Agentur in München: n8n-Workflows, API-Integrationen und Prozessautomatisierung für DAX-Konzerne, Tech-Giganten und Mittelständler, self-hosted und DSGVO-konform.`,
 };
 
 const defaultKeywords = [
+  "n8n Agentur München",
   "KI Agentur München",
   "bayerische KI Agentur",
   "Workflow-Automatisierung München",
@@ -259,18 +260,20 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                KI Agentur München -{" "}
-                Automatisierung im{" "}
+                n8n Agentur München -{" "}
+                Workflow-Automatisierung im{" "}
                 <BackgroundHero.Highlight>Isar Valley</BackgroundHero.Highlight>
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Als KI Agentur München bieten wir Workflow-Automatisierung mit n8n
-            für DAX-Konzerne, Tech-Giganten und innovative Mittelständler. Von
-            BMW über Siemens bis zu Europas größtem Apple Engineering Hub — wir
-            automatisieren Prozesse dort, wo Deutschlands Wirtschaftskraft
-            zuhause ist.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine n8n und KI Agentur für München: n8n-Workflows,
+            API-Integrationen und Prozessautomatisierung für DAX-Konzerne,
+            Tech-Giganten und innovative Mittelständler, self-hosted und
+            DSGVO-konform auf eigener Infrastruktur. Typische Projekte wie
+            automatische Bestellerfassung oder Rechnungsprüfung sparen Münchner
+            Betrieben mehrere Stunden manueller Arbeit pro Tag, remote umgesetzt
+            und vor Ort betreut.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">
