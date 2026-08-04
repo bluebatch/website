@@ -114,9 +114,9 @@ const automations = [
   },
   {
     icon: "📒",
-    title: "Buchhaltung",
+    title: "Kreditorenbuchhaltung",
     description:
-      "Kontoauszüge, Belege und Zahlungseingänge automatisch zuordnen und in der Navision-Finanzbuchhaltung verbuchen - inklusive Übergabe an DATEV.",
+      "Kontoauszüge, Belege und Zahlungseingänge automatisch zuordnen und in der Navision-Finanzbuchhaltung verbuchen. In der Kreditorenbuchhaltung laufen Eingangsrechnung, Freigabe und Zahllauf ohne manuelles Nachtippen - inklusive Übergabe an DATEV.",
   },
   {
     icon: "📦",
@@ -146,7 +146,7 @@ export default function Page() {
             <GeoSummary>
               Bluebatch automatisiert Prozesse in Microsoft Dynamics NAV
               (Navision) und Dynamics 365 Business Central über n8n - vor allem
-              Rechnungsverarbeitung, EDI-Anbindung, Buchhaltungsbuchungen und
+              Rechnungsverarbeitung, EDI-Anbindung, Kreditorenbuchhaltung und
               die ERP-Schnittstellen zu Webshop, DMS und CRM. Angebunden wird
               über OData, SOAP oder REST, bei Bedarf über eigene n8n-Nodes.
             </GeoSummary>
