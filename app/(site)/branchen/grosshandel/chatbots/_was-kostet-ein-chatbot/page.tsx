@@ -331,7 +331,7 @@ export default function Page() {
             </DataTable.Row>
             <DataTable.Row>
               <DataTable.Cell bold>Seat-Lizenzen obendrauf</DataTable.Cell>
-              <DataTable.Cell>–</DataTable.Cell>
+              <DataTable.Cell>keine</DataTable.Cell>
               <DataTable.Cell>40 bis 80 € je Nutzer</DataTable.Cell>
               <DataTable.Cell>
                 Der Posten, der ein günstiges Angebot im zweiten Jahr teuer
