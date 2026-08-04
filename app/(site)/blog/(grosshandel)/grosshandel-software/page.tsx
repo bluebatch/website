@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "grosshandel-software",
@@ -51,6 +52,16 @@ export default function Page() {
           Großhandel-Software 2026: der komplette Überblick über alle
           Kategorien (und wo der KI-Layer ansetzt)
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Großhändler brauchen im Kern vier Software-Kategorien: ERP als
+          Datenbasis, WMS für das Lager, ein Shop- oder EDI-Frontend für die
+          Bestellannahme und DMS für Belege. Der KI-Layer ersetzt keine davon,
+          er sitzt zwischen ihnen und übernimmt die manuelle Übergabe. Dieser
+          Überblick vergleicht die Kategorien, nennt die gängigen Anbieter und
+          zeigt, wo Automatisierung typisch 2 bis 4 Stunden Handarbeit pro Tag
+          einspart.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
