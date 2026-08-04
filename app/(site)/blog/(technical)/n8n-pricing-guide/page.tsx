@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "n8n-pricing-guide",
@@ -46,6 +47,15 @@ export default function Page() {
         <BlogHero.Headline>
           n8n Pricing 2026: Cloud-Tarife, TCO und Skalierungs-Schwellen
         </BlogHero.Headline>
+
+        <GeoSummary>
+          n8n Cloud kostet im Jahresabo ab 24 Euro pro Monat (Starter, 2.500
+          Executions) und ab 60 Euro (Pro, 10.000 Executions), abgerechnet wird
+          pro Workflow-Execution statt pro Task. Dieser Leitfaden richtet sich
+          an Teams, die den echten TCO rechnen wollen, und benennt die zwei
+          Wechsel-Schwellen: Starter zu Pro ab rund 1.500 Executions im Monat,
+          Pro zu Self-Hosting ab rund 8.000.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
