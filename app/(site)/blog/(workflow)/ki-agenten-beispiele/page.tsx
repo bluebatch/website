@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "ki-agenten-beispiele",
@@ -49,6 +50,16 @@ export default function Page() {
           KI-Agenten Beispiele: 12 Use-Cases, die im Mittelstand wirklich Geld
           sparen
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Diese Sammlung zeigt zwölf KI-Agenten-Beispiele aus Großhandel,
+          Vertrieb und Buchhaltung im deutschen Mittelstand, jeweils mit
+          Auslöser, angebundenen Systemen und dokumentierten Zahlen. Der
+          Bestelleingangs-Agent senkt die Bearbeitungszeit je Auftrag von 4,5
+          Minuten auf 16 Sekunden, bei 2.000 Aufträgen im Monat sind das rund
+          100 gesparte Stunden oder etwa 3.500 Euro. Enthalten ist auch, wann
+          ein einfacher Workflow die bessere Wahl ist.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

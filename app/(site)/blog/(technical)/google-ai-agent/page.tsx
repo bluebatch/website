@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "google-ai-agent",
@@ -48,6 +49,16 @@ export default function Page() {
         <BlogHero.Headline>
           Google AI Agent erstellen: die vier Wege und der richtige für euch
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Einen Google-KI-Agenten baut man 2026 auf vier Wegen: Gemini Gems
+          (No-Code, kostenlos nutzbar, bis zu zehn Wissensdateien pro Gem),
+          Gemini Enterprise (früher Google Agentspace, firmenweite Workbench),
+          Gemini API (rund 20 US-Dollar pro Monat) und das quelloffene Agent
+          Development Kit mit Agent Engine für Entwickler. Dieser Leitfaden
+          ordnet die vier für den deutschen Mittelstand nach Datenschutzbedarf
+          und Skalierung ein.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

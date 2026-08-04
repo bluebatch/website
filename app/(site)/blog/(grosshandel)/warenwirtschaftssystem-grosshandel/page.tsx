@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "warenwirtschaftssystem-grosshandel",
@@ -51,6 +52,17 @@ export default function Page() {
           Warenwirtschaftssystem für den Großhandel: Anbieter-Vergleich 2026 und
           der KI-Layer darum herum
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Dieser Vergleich ordnet acht Warenwirtschaftssysteme für Großhändler
+          mit 50 bis 1.000 Mitarbeitenden ein: Sage, VARIO, ALPHAPLAN, proALPHA,
+          Haufe X360, SAP und Dynamics 365. Über fünf Jahre liegt die
+          Cloud-Mittelstand-Welt bei rund 380.000 Euro, Branchen-Spezialisten
+          bei rund 720.000 Euro, Enterprise-Suiten bei 1,5 Millionen Euro.
+          Größter kurzfristiger Hebel ist meist nicht das neue WaWi, sondern der
+          KI-Layer davor: 40 bis 55 Prozent der Bestellungen kommen als PDF im
+          Mail-Anhang.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
