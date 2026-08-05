@@ -483,6 +483,15 @@ export default function Page() {
               Schritt sich zuerst lohnt,{" "}
               <Link href="/contact">sprecht uns gern an</Link>.
             </Typo.Paragraph>
+            <Typo.Paragraph>
+              Liegt euer Engpass nicht im Einkauf, sondern auf der Kundenseite,
+              also bei den Aufträgen, die täglich per Mail und PDF hereinkommen,
+              führt der Weg über die{" "}
+              <Link href="/branchen/grosshandel/workflows/auftragserfassung">
+                automatische Auftragserfassung im Großhandel
+              </Link>
+              .
+            </Typo.Paragraph>
           </div>
         </BlogLayout.Content>
       </BlogLayout>

@@ -1233,6 +1233,18 @@ export default async function Page({
               kostenlosen Beratung, wo der größte Hebel liegt und wie ein
               n8n-Workflow für euer Setup aussehen würde.
             </Typo.Paragraph>
+            <Typo.Paragraph>
+              Wie wir das als fertiges Projekt umsetzen, mit Anbindung an euer
+              ERP, Freigabelogik und Übergabe an den Innendienst, steht auf der
+              Seite zur{" "}
+              <Link
+                href="/branchen/grosshandel/workflows/auftragserfassung"
+                className="text-primary-600 hover:underline"
+              >
+                automatischen Auftragserfassung im Großhandel
+              </Link>
+              .
+            </Typo.Paragraph>
 
             <div className="my-6">
               <ContactButton>Kostenlose Beratung buchen</ContactButton>
