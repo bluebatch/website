@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "ki-workflow-erp",
@@ -51,6 +52,16 @@ export default function Page() {
           KI-Workflows für ERP-Systeme: SAP, Datev und Business Central
           intelligent automatisieren
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Ein KI-Workflow im ERP setzt ein LLM oder einen AI-Agent zwischen
+          Eingangsdaten und ERP: Die KI erkennt Belege, klassifiziert Aufträge
+          und reichert Stammdaten an, SAP, Datev oder Business Central bleiben
+          das System of Record. Dieser Guide zeigt Mittelständlern mit 50 bis
+          1.000 Mitarbeitenden sieben praxiserprobte Szenarien, den passenden
+          Stack, die ERP-Schnittstellen, GoBD-Compliance und einen
+          4-Wochen-Pilotplan.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

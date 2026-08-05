@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "amazon-bedrock",
@@ -48,6 +49,16 @@ export default function Page() {
         <BlogHero.Headline>
           Amazon Bedrock: KI managed und nah an der DSGVO betreiben
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Amazon Bedrock ist ein serverloser AWS-Dienst, der Foundation Models
+          wie Claude über eine einzige API bereitstellt, ohne eigene
+          GPU-Cluster. Für den Mittelstand ist Bedrock der
+          Mittelweg zwischen fremdem Chat-Tool und eigenem Rechenzentrum. Dieser
+          Beitrag erklärt, wie Datenresidenz in EU-Regionen funktioniert, an
+          welcher Stelle sie kippt und was AVV, Verschlüsselung und der
+          US-Anbieter AWS für die DSGVO bedeuten.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

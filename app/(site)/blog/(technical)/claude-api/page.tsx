@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "claude-api",
@@ -48,6 +49,16 @@ export default function Page() {
         <BlogHero.Headline>
           Claude API: Anthropics Modelle direkt im Mittelstand nutzen
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Die Claude API ist der direkte, programmierbare Zugang zu Anthropics
+          Sprachmodellen, ohne Chat-Oberfläche und ohne Cloud-Marktplatz
+          dazwischen. Mittelständler binden damit Klassifikation,
+          Dokumentenauswertung und eigene Assistenten in ihre Software ein.
+          Dieser Beitrag erklärt die Messages-API, Tool Use und MCP, die
+          Modellfamilien, EU-Datenresidenz, AVV und Zero Data Retention und
+          wann der Direktzugang besser passt als Amazon Bedrock.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
