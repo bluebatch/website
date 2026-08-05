@@ -253,6 +253,15 @@ export default function Page() {
               >
                 KI-Agenten erstellen
               </Link>
+              . Wer dieselben Bausteine erst einmal am eigenen Rechner
+              ausprobieren will, statt sie in eine Anwendung einzubauen, kommt am
+              schnellsten über die Kommandozeile hinein:{" "}
+              <Link
+                href="/blog/claude-code-installieren"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code installieren
+              </Link>
               .
             </Typo.Paragraph>
             <Typo.Paragraph>

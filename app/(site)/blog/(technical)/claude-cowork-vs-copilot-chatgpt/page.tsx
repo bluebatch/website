@@ -462,6 +462,16 @@ export default function Page() {
                 nach und nach an interne Systeme anflanschen.
               </Typo.ListItem>
             </Typo.List>
+            <Typo.Paragraph>
+              Für technische Teams gibt es neben Cowork noch den Weg über die
+              Kommandozeile: Claude Code läuft im Terminal, arbeitet direkt auf
+              den Dateien im Projektordner und ist in wenigen Minuten
+              eingerichtet. Der Einstieg steht in{" "}
+              <Link href="/blog/claude-code-installieren">
+                Claude Code installieren
+              </Link>
+              .
+            </Typo.Paragraph>
 
             <Typo.H3>Wann Microsoft Copilot die bessere Wahl ist</Typo.H3>
             <Typo.List>
