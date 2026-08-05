@@ -6,6 +6,7 @@ import ContactButton from "@/components/buttons/contact-button";
 import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 
 export const metaCustom: BlogMeta = {
@@ -62,6 +63,16 @@ export default async function Page({
         <BlogHero.Headline>
           Bestellungen erfassen automatisieren im Großhandel
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Bestellungen automatisch erfassen heißt: eingehende Kundenaufträge aus
+          E-Mail, PDF-Anhang und Fax werden per KI ausgelesen und ins ERP
+          gebucht, statt von Hand abgetippt zu werden. Statt 12 Minuten je
+          Auftrag dauert das Sekunden, bei 200 Bestellungen am Tag sind das rund
+          30.800 Euro Personalkosten im Monat. Dieser Beitrag zeigt die
+          Kostenrechnung, Praxisbeispiele aus dem Großhandel und einen
+          n8n-Workflow zum Nachbauen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

@@ -3,6 +3,7 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
@@ -49,6 +50,15 @@ export default function Page() {
           Einkauf automatisieren im Großhandel: von der Bedarfsmeldung bis zur
           Bestellung
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Einkauf automatisieren heißt im Großhandel: Beschaffung zum
+          Lieferanten hin, also Meldebestand und automatische
+          Bestellvorschläge, KI-gestützter Angebotsvergleich und gepflegte
+          Lieferantenstammdaten im ERP. Nicht gemeint ist das Erfassen
+          eingehender Kundenbestellungen. Der Beitrag zeigt die Hebel, die
+          passenden Kennzahlen und einen Einstieg in 90 Tagen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
