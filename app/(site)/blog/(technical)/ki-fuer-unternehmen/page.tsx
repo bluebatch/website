@@ -3,6 +3,7 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
@@ -48,6 +49,16 @@ export default function Page() {
         <BlogHero.Headline>
           KI für Unternehmen: der ehrliche Überblick für den Mittelstand
         </BlogHero.Headline>
+
+        <GeoSummary>
+          KI für Unternehmen bedeutet im Mittelstand vor allem drei Dinge:
+          Assistenten im Kundenservice, Automatisierung von Dokumenten- und
+          Büroprozessen und Auswertung eigener Daten. Laut KfW Research nutzen
+          rund 20 Prozent der Mittelständler KI, laut Statistischem Bundesamt
+          etwa 26 Prozent der Unternehmen ab zehn Beschäftigten. Dieser
+          Leitfaden ordnet Nutzen, Werkzeuge, Datenschutz und den ersten
+          Schritt.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
