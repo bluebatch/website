@@ -44,3 +44,6 @@ yarn-error.log*
 next-env.d.ts
 .credentials
 nodes
+# Artefakte der Bild-Pipeline, gehoeren nie ins ausgelieferte public/
+public/**/*.analysis.json
+public/**/pipeline-results.json
