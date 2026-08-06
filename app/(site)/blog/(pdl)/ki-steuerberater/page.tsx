@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "ki-steuerberater",
@@ -50,6 +51,17 @@ export default function Page() {
         <BlogHero.Headline>
           KI für Steuerberater: Wo 2026 wirklich Stunden gespart werden
         </BlogHero.Headline>
+
+        <GeoSummary>
+          KI für Steuerberater bedeutet 2026 nicht mehr Pilotprojekt, sondern
+          Kapazitätsfrage: 78,2 Prozent der deutschen Kanzleien setzen bereits
+          KI-gestützte Systeme ein, während über 10.000 Stellen unbesetzt sind.
+          Dieser Hub zeigt Kanzleien mit 50 bis 1.000 Mitarbeitenden sieben
+          Aufgabenfelder mit echtem Hebel, die drei Tool-Wege DATEV, externe
+          SaaS und Eigenbau, die Vorgaben aus § 203 StGB, GoBD und EU AI Act
+          sowie einen 90-Tage-Pilotplan für 40 bis 80 gesparte Routinestunden
+          im Monat.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

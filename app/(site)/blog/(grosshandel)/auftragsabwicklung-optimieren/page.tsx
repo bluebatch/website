@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "auftragsabwicklung-optimieren",
@@ -49,6 +50,16 @@ export default function Page() {
         <BlogHero.Headline>
           Auftragsabwicklung optimieren: messen, Hebel ziehen, dranbleiben
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Die Auftragsabwicklung zu optimieren heißt im Großhandel zuerst
+          messen, nicht Software kaufen. Dieser Beitrag zeigt
+          Operations-Verantwortlichen bei Großhändlern mit 50 bis 1.000
+          Mitarbeitenden die drei Kennzahlen Durchlaufzeit, Touch-Rate und
+          Fehlerquote, sortiert die wirksamsten Hebel nach Aufwand und Wirkung
+          und nennt die organisatorischen Quick-Wins, die in den ersten 30 Tagen
+          ohne Großprojekt einen sichtbaren Unterschied erzeugen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

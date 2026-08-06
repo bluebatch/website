@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "aws-bedrock-knowledge-base",
@@ -49,6 +50,18 @@ export default function Page() {
           AWS Bedrock Knowledge Base: RAG auf eigenen Dokumenten, ohne eigenen
           Stack
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Eine AWS Bedrock Knowledge Base ist der gemanagte RAG-Baustein von
+          Amazon Bedrock: Sie nimmt eigene Dokumente aus S3, Confluence,
+          SharePoint oder Salesforce auf, zerlegt sie in Chunks, erzeugt
+          Embeddings und beantwortet Fragen mit Quellenangabe. Dieser Beitrag
+          erklärt IT-Verantwortlichen im Mittelstand die vier
+          Chunking-Strategien, die Vektor-Store-Optionen von OpenSearch
+          Serverless über Aurora mit pgvector bis Pinecone und die günstige
+          S3-Variante, samt der Frage, wann ein eigener Stack die bessere Wahl
+          ist.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
