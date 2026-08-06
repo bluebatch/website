@@ -1,0 +1,11 @@
+# pnpm 11 fuehrt Build-Skripte nur noch nach ausdruecklicher Freigabe aus.
+# Ohne diese Datei bricht `pnpm install` mit ERR_PNPM_IGNORED_BUILDS (exit 1)
+# ab — und damit auch der Deps-Check, den `pnpm run build` automatisch faehrt.
+# sharp braucht das native Binary fuer die Next-Bildoptimierung,
+# unrs-resolver fuer eslint. core-js und protobufjs brauchen ihre
+# postinstall-Skripte nicht, deshalb bleiben sie aus.
+allowBuilds:
+  core-js: false
+  protobufjs: false
+  sharp: true
+  unrs-resolver: true
