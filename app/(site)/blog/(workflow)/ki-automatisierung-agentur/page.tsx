@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "ki-automatisierung-agentur",
@@ -50,6 +51,17 @@ export default function Page() {
           KI-Automatisierungsagentur: Was sie leistet und wie Sie die richtige
           finden
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Eine KI-Automatisierungsagentur automatisiert konkrete
+          Geschäftsprozesse von der Analyse über den Bau bis zum laufenden
+          Betrieb, anders als Beratung, Systemhaus oder Freelancer. Dieser
+          Beitrag richtet sich an mittelständische Unternehmen mit einem
+          konkreten Engpass und liefert sieben Auswahlkriterien, den
+          fünfstufigen Projektablauf von der ein- bis dreiwöchigen Discovery bis
+          zum Betrieb, drei Preismodelle vom Festpreis-Piloten bis zum Retainer
+          sowie die drei DSGVO-Punkte, die vor Projektstart geklärt sein müssen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

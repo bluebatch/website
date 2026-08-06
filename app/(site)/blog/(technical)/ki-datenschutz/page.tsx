@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "ki-datenschutz",
@@ -50,6 +51,17 @@ export default function Page() {
         <BlogHero.Headline>
           KI Datenschutz 2026: DSGVO-konforme KI-Nutzung im deutschen Mittelstand
         </BlogHero.Headline>
+
+        <GeoSummary>
+          KI-Datenschutz ist 2026 keine reine Vertragsfrage mehr, sondern hängt
+          gleichzeitig an Datenfluss, Vertragslage und Infrastruktur. Dieser
+          Leitfaden trennt für Unternehmen mit 50 bis 1.000 Mitarbeitenden diese
+          drei Layer, benennt fünf typische Fallen aus Tool-Auswahl und Rollout,
+          ordnet die drei Werkzeug-Wege Hosted SaaS, Managed Private und
+          Eigenbau ein, listet die fünf AI-Act-Stichtage von Februar 2025 bis
+          August 2028 und endet mit einem 90-Tage-Compliance-Plan in drei
+          Phasen, der ohne externe Kanzlei umsetzbar ist.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

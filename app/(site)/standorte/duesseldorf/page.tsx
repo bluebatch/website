@@ -257,12 +257,16 @@ export default async function Page({
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Henkel, E.ON, Uniper, Rheinmetall, Vodafone, Metro, Trivago, Messe
-            Düsseldorf - die NRW-Landeshauptstadt vereint Konzern-Hauptsitze,
-            Werbe-Cluster und Modemetropole auf engstem Raum. Wir bauen
-            n8n-Workflows, die Multi-Country-Compliance, Energie-Marktkommunikation
-            und Eventlogistik automatisieren.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine n8n und KI Agentur für Düsseldorf: n8n-Workflows,
+            API-Integrationen und Prozessautomatisierung für Konzern-Hauptsitze
+            und Mittelständler in der NRW-Landeshauptstadt, self-hosted und
+            DSGVO-konform auf eigener Infrastruktur. Rund um Henkel, E.ON,
+            Uniper, Rheinmetall, Vodafone, Metro und die Messe automatisieren
+            wir Multi-Country-Compliance, Energie-Marktkommunikation und
+            Eventlogistik. Typische Projekte wie automatische Bestellerfassung
+            oder Rechnungsprüfung sparen mehrere Stunden manueller Arbeit pro
+            Tag, remote umgesetzt und vor Ort betreut.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">
