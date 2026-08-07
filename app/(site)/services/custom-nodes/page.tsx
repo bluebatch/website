@@ -30,6 +30,7 @@ import PhaseCard, {
   PhaseCardDescription,
 } from "@/components/cards/phase-card";
 import IntroBox from "@/components/ui/intro-box";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
   legacyRedirects: ["/n8n-node"],
@@ -241,6 +242,14 @@ export default async function Page({
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>n8n Services</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>n8n Node Entwicklung für Ihr Unternehmen</Hero2ColumnHeadline>
+            <GeoSummary>
+              Ein Custom Node ist eine maßgeschneiderte n8n-Integration für
+              Systeme, für die es keinen fertigen Node gibt. Bluebatch
+              entwickelt Custom Nodes in TypeScript auf dem n8n-SDK, für
+              Unternehmen mit Legacy-ERP, proprietärem CRM oder Branchensoftware.
+              In Zahlen: 2 bis 8 Wochen vom Kickoff bis zum produktiven Node,
+              inklusive Credentials, Tests und laufender Wartung.
+            </GeoSummary>
             <Hero2ColumnDescription>
               Sie brauchen einen Custom Node für n8n? Wir entwickeln
               ihn. Professionelle TypeScript-Entwicklung für jede API, jedes

@@ -22,6 +22,7 @@ import ConsultationCtaDefault from "@/components/sections/consultation-cta-defau
 import { AnimatedNumber } from "@/components/cards/kpi-card";
 import SimpleCard from "@/components/cards/simple-card";
 import IntroBox from "@/components/ui/intro-box";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
   legacyRedirects: ["/n8n-performance"],
@@ -226,6 +227,13 @@ export default async function Page({
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>n8n Services</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>n8n Performance Scaling für Ihr Unternehmen</Hero2ColumnHeadline>
+            <GeoSummary>
+              n8n Performance Scaling bringt eine überlastete n8n-Instanz auf
+              produktionsfähigen Durchsatz, über Queue Mode, Redis, RabbitMQ und
+              Docker Swarm. Gedacht für Unternehmen, deren Workflows unter Last
+              hängen oder abstürzen. In Zahlen: von 23 auf 162 Requests pro
+              Sekunde, also rund 7x mehr Durchsatz, bei 99,9 % Uptime.
+            </GeoSummary>
             <Hero2ColumnDescription>
               Die Performance von n8n ist entscheidend für skalierbare Automatisierung.
               Ihre Instanz laggt oder crashed? Wir lösen Performance-Probleme

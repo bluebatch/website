@@ -21,6 +21,7 @@ import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import StatsList from "@/components/ui/stats-list";
 import IntroBox from "@/components/ui/intro-box";
+import GeoSummary from "@/components/ui/geo-summary";
 import { AnimatedNumber } from "@/components/cards/kpi-card";
 import Icon from "@/components/ui/icon";
 import TabGroup, {
@@ -158,6 +159,14 @@ export default async function Page({
             <Hero2ColumnHeadline>
               Workflow Wartung & Servicevertrag
             </Hero2ColumnHeadline>
+            <GeoSummary>
+              Ein Wartungsvertrag für n8n-Workflows hält bestehende
+              Automatisierungen dauerhaft am Laufen, mit Monitoring rund um die
+              Uhr, proaktiven Updates und Performance-Optimierung. Gedacht für
+              Unternehmen, die produktive Workflows im Einsatz haben und dafür
+              kein eigenes Team stellen wollen. In Zahlen: 99,9 % Uptime und
+              garantierte Reaktionszeiten von 48 bis 12 Stunden je Servicelevel.
+            </GeoSummary>
             <Hero2ColumnDescription>
               Professionelle Wartung Ihrer Workflows ist essenziell für stabile Automatisierung.
               Ihre Workflows laufen - wir sorgen dafür, dass es so bleibt.
