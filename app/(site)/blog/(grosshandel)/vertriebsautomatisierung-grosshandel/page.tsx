@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "vertriebsautomatisierung-grosshandel",
@@ -48,6 +49,15 @@ export default function Page() {
         <BlogHero.Headline>
           Vertriebsautomatisierung im Großhandel: von der Anfrage bis zum Abschluss
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Vertriebsautomatisierung im Großhandel ersetzt keinen Vertriebler,
+          sondern die Arbeit zwischen den Gesprächen: Anfragen aus allen
+          Kanälen erfassen, Leads routen, Angebote nachfassen und CRM und ERP
+          synchron halten. Gemessen wird sie an Reaktionszeit, Conversion und
+          Pipeline-Velocity. Ein gestufter Einstieg liefert in 90 Tagen
+          sichtbare Ergebnisse.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

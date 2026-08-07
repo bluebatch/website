@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "mobile-auftragsabwicklung",
@@ -51,6 +52,14 @@ export default function Page() {
           Mobile Auftragsabwicklung im Großhandel: Aufträge erfassen, wo sie
           entstehen
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Mobile Auftragsabwicklung heißt, dass der Auftrag dort in die
+          Warenwirtschaft wandert, wo er entsteht: beim Kunden im Außendienst,
+          an der Abholtheke und im Lager. Entscheidend sind nicht die Masken,
+          sondern Offline-Fähigkeit und eine echte ERP-Anbindung. Das Abtippen
+          im Innendienst und der Medienbruch dahinter fallen damit weg.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
