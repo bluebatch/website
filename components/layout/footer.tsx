@@ -43,7 +43,7 @@ export default function Footer() {
     { icon: "twitter", href: "/", label: "Twitter" },
     {
       icon: "github",
-      href: "https://github.com/orgs/bluebatch",
+      href: "https://github.com/bluebatch",
       label: "GitHub",
     },
   ];
