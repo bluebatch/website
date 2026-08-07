@@ -244,11 +244,15 @@ export default async function Page({
           {overrides?.headline ??
             "Workflow-Automatisierung für Kölns Wirtschaft"}
         </BackgroundHero.Headline>
-        <BackgroundHero.Description>
-          Medien, Versicherungen, Chemie, Messe — Kölns vielfältige
-          Wirtschaft verdient maßgeschneiderte n8n-Automatisierung und
-          KI-Lösungen. Bluebatch ist Ihr Partner für intelligente
-          Prozessoptimierung im Rheinland.
+        <BackgroundHero.Description geo>
+          Bluebatch ist eine n8n und KI Agentur für Köln: n8n-Workflows,
+          API-Integrationen und Prozessautomatisierung für Medienhäuser,
+          Versicherer, Chemie- und Handelsunternehmen im 74 Milliarden Euro
+          starken Wirtschaftsraum Köln, self-hosted und DSGVO-konform.
+          Typische Projekte wie automatische Bestellerfassung,
+          Dokumentenprüfung oder Rechnungsfreigabe sparen Kölner Betrieben
+          mehrere Stunden manueller Arbeit pro Tag, remote umgesetzt und vor
+          Ort betreut.
         </BackgroundHero.Description>
         <BackgroundHero.CallToAction>
           <ContactButton icon="chat">

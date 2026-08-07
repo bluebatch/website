@@ -247,12 +247,15 @@ export default async function Page({
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Mercedes-Benz, Airbus, ArianeGroup, OHB, BLG Logistics, Beck&apos;s,
-            ArcelorMittal, Atlas Elektronik - Bremen ist mit 55,2 % Exportquote
-            das exportstärkste Bundesland Deutschlands. Wir bauen
-            n8n-Workflows für Tier-1-Zulieferer, Aerospace-Compliance,
-            Hafenwirtschaft und maritime Wehrtechnik.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine n8n und KI Agentur für Bremen: n8n-Workflows,
+            API-Integrationen und Prozessautomatisierung für Tier-1-Zulieferer,
+            Aerospace- und Hafenbetriebe im exportstärksten Bundesland
+            Deutschlands (55,2 % Exportquote), self-hosted und DSGVO-konform.
+            Typische Projekte wie automatische Bestellerfassung,
+            Zolldokumentation oder Rechnungsprüfung sparen Bremer Betrieben
+            mehrere Stunden manueller Arbeit pro Tag, remote umgesetzt und vor
+            Ort betreut.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">

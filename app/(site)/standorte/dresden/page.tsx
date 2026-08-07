@@ -247,12 +247,15 @@ export default async function Page({
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Infineon, GlobalFoundries, Bosch Sensortec, TSMC/ESMC ab 2027,
-            TU Dresden, 10 Fraunhofer-Institute, VW Gläserne Manufaktur -
-            jeder dritte in Europa produzierte Chip stammt aus Sachsen.
-            Wir bauen n8n-Workflows für Halbleiter-Compliance,
-            Reinraum-Service, Exzellenz-Forschung und Industrie-Greenfield.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine n8n und KI Agentur für Dresden: n8n-Workflows,
+            API-Integrationen und Prozessautomatisierung für
+            Halbleiterfertigung, Zulieferer und Forschungseinrichtungen im
+            Silicon Saxony, aus dem jeder dritte in Europa produzierte Chip
+            stammt, self-hosted und DSGVO-konform. Typische Projekte wie
+            automatische Bestellerfassung, Prüfprotokolle oder
+            Rechnungsprüfung sparen Dresdner Betrieben mehrere Stunden
+            manueller Arbeit pro Tag, remote umgesetzt und vor Ort betreut.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">
