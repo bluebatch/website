@@ -37,7 +37,7 @@ import Customer from "@/components/sections/customer/customer";
 export const pageConfig: PageConfig = {
   title: "Angebots-Bot",
   description:
-    "Automatische Angebotserstellung und -versand basierend auf Kundenanfragen.",
+    "Angebotsmanagement für den Großhandel: Anfragen, Kalkulation, Versand und Nachfassen in einem Tool.",
 };
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
@@ -144,11 +144,12 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 const defaultMeta = {
-  title: "Angebots-Bot - Großhandel | Bluebatch",
+  title:
+    "Angebotsmanagement automatisieren: Angebots-Bot für den Großhandel | Bluebatch",
   description:
-    "Wie Bluebatch Großhändlern hilft, Angebote automatisch zu erstellen und zu versenden. 21x höhere Qualifizierungsrate.",
+    "Angebotsmanagement-Software für Großhändler: Anfragen, Kalkulation, Versand und Nachfassen in einem Tool, angebunden an CRM und ERP. 21x höhere Qualifizierungsrate.",
   ogDescription:
-    "Von der Kundenanfrage zum professionellen Angebot in Minuten. 21x höhere Qualifizierungsrate.",
+    "Angebotsmanagement für den Großhandel: ein Tool für Anfrage, Kalkulation, Versand und Follow-up. 21x höhere Qualifizierungsrate.",
 };
 
 export async function generateMetadata({
@@ -257,15 +258,17 @@ export default async function Page({
               {overrides?.preHeadline ?? "Angebots-Bot"}
             </Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              {overrides?.headline ?? "Von der Anfrage zum Angebot in Minuten"}
+              {overrides?.headline ??
+                "Angebotsmanagement automatisieren, von der Anfrage bis zum Nachfassen"}
             </Hero2ColumnHeadline>
             <GeoSummary>
-              Der Angebots-Bot von Bluebatch ist ein KI-Agent für den
-              Großhandel, der Kundenanfragen automatisch in fertige PDF-Angebote
-              umwandelt und versendet. Die Angebotserstellung wird 70-90%
-              schneller, Leads mit Kontakt innerhalb von 5 Minuten erreichen
-              eine 21x höhere Qualifizierungsrate. Der Angebots-Bot integriert
-              CRM- und ERP-Systeme wie HubSpot, Salesforce, SAP und Odoo.
+              Der Angebots-Bot von Bluebatch ist ein Angebotsmanagement-Tool für
+              den Großhandel: Er bündelt Anfrage-Eingang, Kalkulation, Versand
+              und Follow-up an einer Stelle, statt sie über Postfach, ERP und
+              CRM zu verteilen. Angebote gehen 70-90% schneller raus, Leads mit
+              Kontakt innerhalb von 5 Minuten erreichen eine 21x höhere
+              Qualifizierungsrate. Angebunden werden CRM- und ERP-Systeme wie
+              HubSpot, Salesforce, SAP und Odoo.
             </GeoSummary>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Demo anfragen</ContactButton>
@@ -323,7 +326,7 @@ export default async function Page({
         <IntroBox>
           <IntroBox.PreHeadline>Der Workflow</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            So funktioniert der Angebots-Bot
+            So funktioniert automatisiertes Angebotsmanagement
           </IntroBox.Headline>
           <IntroBox.Subline>
             Vier automatisierte Schritte - von der Kundenanfrage zum versendeten

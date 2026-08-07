@@ -1385,6 +1385,120 @@ export default async function Page({
               height={800}
             />
           </div>
+
+          <Separator />
+
+          {/* Section 7 */}
+          <div>
+            <Typo.H2 id="angebotserstellung-automatisieren">
+              Angebotserstellung automatisieren: Was ihr dafür braucht
+            </Typo.H2>
+
+            <Typo.Paragraph>
+              Die häufigste Frage, die wir in Erstgesprächen hören, ist nicht
+              &quot;funktioniert das?&quot;, sondern &quot;was müssen wir dafür
+              haben?&quot;. Deshalb hier die ehrliche Antwort: Um die
+              Angebotserstellung zu automatisieren, braucht ihr vier Dinge. Drei
+              davon habt ihr wahrscheinlich schon.
+            </Typo.Paragraph>
+
+            <Typo.List>
+              <Typo.ListItem>
+                <strong>Einen digitalen Eingangskanal.</strong> Ein
+                Sammelpostfach, an das Anfragen gehen, reicht völlig. Wenn
+                Anfragen heute in fünf persönlichen Outlook-Postfächern landen,
+                ist das der erste Schritt, und er hat mit KI noch nichts zu tun.
+              </Typo.ListItem>
+              <Typo.ListItem>
+                <strong>Artikelstammdaten, die auslesbar sind.</strong> Eine
+                ERP-Schnittstelle ist der bequeme Weg. Ein nächtlicher
+                CSV-Export auf einen Fileshare tut es genauso. Was nicht geht:
+                Preise, die nur im Kopf des Vertriebsleiters existieren.
+              </Typo.ListItem>
+              <Typo.ListItem>
+                <strong>Eine Preislogik, die jemand aufschreiben kann.</strong>
+                {" "}Kundenkonditionen, Staffeln, Rahmenverträge — die müssen
+                nicht sauber im System stehen, aber sie müssen benennbar sein.
+                In der Praxis ist genau das die Aufgabe, die im Projekt am
+                längsten dauert.
+              </Typo.ListItem>
+              <Typo.ListItem>
+                <strong>Eine Person, die freigibt.</strong> Am Anfang geht jedes
+                Angebot über einen Menschen. Erst wenn die Trefferquote über
+                mehrere Wochen stimmt, gebt ihr einzelne Fallgruppen frei.
+              </Typo.ListItem>
+            </Typo.List>
+
+            <Typo.Paragraph>
+              Der Ablauf danach ist immer derselbe: zwei Wochen Proof of Concept
+              mit echten Altanfragen, zwei bis vier Wochen Produktiv-Setup, dann
+              schrittweise Ausweitung. Kein ERP-Wechsel, kein Big Bang. Wer
+              lieber ein fertiges Produkt statt eines Projekts möchte: Genau
+              diesen Ablauf haben wir im{" "}
+              <Link
+                href="/branchen/grosshandel/ki-agenten/angebots-bot"
+                className="text-primary-600 hover:underline"
+              >
+                Angebots-Bot für den Großhandel
+              </Link>{" "}
+              vorkonfiguriert.
+            </Typo.Paragraph>
+
+            <Typo.Paragraph>
+              Was ihr <strong>nicht</strong> braucht: ein sauberes ERP, ein
+              abgeschlossenes Stammdatenprojekt oder eine IT-Abteilung. Wir
+              haben Angebotsprozesse mit Warenwirtschaften aus den Neunzigern
+              automatisiert. Solange sich Daten irgendwie exportieren lassen,
+              gibt es einen Weg.
+            </Typo.Paragraph>
+          </div>
+
+          <Separator />
+
+          {/* Section 8 */}
+          <div>
+            <Typo.H2 id="automatisierte-angebotserstellung">
+              Automatisierte Angebotserstellung: Textbausteine oder
+              KI-Kalkulation?
+            </Typo.H2>
+
+            <Typo.Paragraph>
+              Unter &quot;automatisierte Angebotserstellung&quot; verkaufen
+              Anbieter zwei völlig verschiedene Dinge. Der Unterschied
+              entscheidet, ob euch die Lösung im Alltag wirklich Zeit spart.
+            </Typo.Paragraph>
+
+            <Typo.Paragraph>
+              <strong>Variante 1: Textbaustein-Automation.</strong> Das kann
+              nahezu jedes CRM. Ihr wählt Artikel und Mengen von Hand aus, das
+              System setzt daraus ein hübsches PDF mit Anschreiben, Logo und
+              AGB. Die Fleißarbeit bleibt: Anfrage lesen, Artikelnummern
+              suchen, Konditionen prüfen, Verfügbarkeit klären. Von den 45
+              Minuten pro Angebot spart ihr die letzten fünf.
+            </Typo.Paragraph>
+
+            <Typo.Paragraph>
+              <strong>Variante 2: KI-Kalkulation.</strong> Hier setzt die
+              Automatisierung eine Stufe früher an, nämlich beim Verstehen der
+              Anfrage. Die KI liest die E-Mail oder das PDF, erkennt
+              &quot;2 Rollen Kabel NYM-J 3x1,5, 100 m&quot; auch dann, wenn der
+              Kunde es anders schreibt als euer Katalog, matcht auf die
+              Artikelnummer, zieht Kundenpreis und Bestand aus dem ERP und legt
+              das fertige Angebot zur Freigabe vor. Gespart werden die ersten 40
+              Minuten, nicht die letzten fünf.
+            </Typo.Paragraph>
+
+            <Typo.Paragraph>
+              Die Faustregel: Wenn eure Angebote hauptsächlich aus wenigen
+              Standardpositionen bestehen und der Aufwand im Formulieren liegt,
+              reichen Textbausteine. Wenn eure Leute Zeit mit Suchen, Zuordnen
+              und Nachfragen verbringen — und das ist im Großhandel mit fünf-
+              bis sechsstelligen Artikelzahlen der Normalfall — hilft nur die
+              zweite Variante. Beides zusammen ist übrigens kein Widerspruch:
+              Die KI-Kalkulation liefert die Positionen, euer bestehendes
+              Layout macht das PDF daraus.
+            </Typo.Paragraph>
+          </div>
         </BlogLayout.Content>
 
         <BlogLayout.Navigation>
@@ -1441,6 +1555,12 @@ export default async function Page({
           </BlogLayout.NavigationItem>
           <BlogLayout.NavigationItem idLink="implementation-guide">
             Implementation Guide
+          </BlogLayout.NavigationItem>
+          <BlogLayout.NavigationItem idLink="angebotserstellung-automatisieren">
+            Angebotserstellung automatisieren
+          </BlogLayout.NavigationItem>
+          <BlogLayout.NavigationItem idLink="automatisierte-angebotserstellung">
+            Textbausteine oder KI-Kalkulation?
           </BlogLayout.NavigationItem>
         </BlogLayout.Navigation>
       </BlogLayout>
