@@ -171,11 +171,13 @@ export default async function Page({
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Leipzig wächst so schnell wie keine andere deutsche Großstadt.
-            Als KI Agentur automatisieren wir Logistik, Automotive und
-            Startup-Prozesse mit n8n-Workflows, die dieses Tempo mithalten.
-            Self-hosted, DSGVO-konform und skalierbar.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine n8n und KI Agentur für Leipzig: wir
+            automatisieren Logistik-, Automotive- und Startup-Prozesse für
+            Zulieferer, Speditionen und wachsende Mittelständler, self-hosted
+            und DSGVO-konform auf eigener Infrastruktur. In der Luftfracht
+            sparen unsere Workflows typischerweise 15 bis 25 Stunden pro Woche,
+            der Aufwand für Zolldokumentation sinkt um bis zu 80 Prozent.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Beratung anfragen</ContactButton>

@@ -183,11 +183,13 @@ export default async function Page({
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            330+ Finanzinstitute, dreifache regulatorische Aufsicht durch EZB,
-            BaFin und AMLA, und Deutschlands höchstes BIP pro Kopf. Frankfurt
-            braucht Compliance-Automatisierung, die mit dem Regulierungstempo
-            Schritt hält, self-hosted, DSGVO-konform und auf Ihrer Infrastruktur.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine n8n und KI Agentur für Frankfurt am Main: wir
+            automatisieren Compliance-, KYC- und Meldeprozesse für Banken,
+            Versicherer und Finanzdienstleister im Rhein-Main-Gebiet,
+            self-hosted und DSGVO-konform auf eigener Infrastruktur. Eine
+            KYC-Prüfung läuft danach in unter 4 Stunden statt 5 bis 10 Tagen,
+            der typische ROI liegt bei 3 bis 6 Monaten.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Beratung anfragen</ContactButton>

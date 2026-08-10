@@ -252,12 +252,14 @@ export default async function Page({
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Volkswagen Nutzfahrzeuge, Continental, TUI, Talanx/HDI, VHV,
-            Hannover Rück, Sennheiser, MHH - Hannover bündelt Industrie,
-            Tourismus und Versicherungswirtschaft. Wir bauen n8n-Workflows
-            für Tier-1-Lieferanten, CSRD-Reporting, Schadenprozesse und
-            Eventlogistik der Weltleitmesse.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine n8n und KI Agentur für Hannover: wir
+            automatisieren JIT-Bestellabrufe, CSRD-Reporting, Schadenprozesse
+            und Messelogistik für Tier-1-Lieferanten, Versicherer und
+            Mittelständler der Region, self-hosted und DSGVO-konform auf
+            eigener Infrastruktur. Von der Analyse bis zum operativen Betrieb
+            arbeiten wir in 6 festen Phasen, damit ein Workflow planbar
+            produktiv geht statt im Pilotstatus zu bleiben.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">
