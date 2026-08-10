@@ -197,12 +197,14 @@ export default async function Page({
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            Mercedes-Benz, Porsche, Bosch, Trumpf, Festo, Stihl, Mahle - kaum
-            ein Quadratkilometer Deutschlands bündelt mehr industrielle Kraft.
-            Wir bauen Workflows, die Engineering-Pipelines, Lieferketten und
-            Compliance-Prozesse für DAX-Konzerne und schwäbischen Mittelstand
-            automatisieren.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine n8n und KI Agentur für Stuttgart: wir
+            automatisieren Engineering-Pipelines, Lieferanten-Onboarding nach
+            IATF-16949 und Compliance-Dokumentation für Automotive-Zulieferer,
+            Maschinenbauer und den schwäbischen Mittelstand, self-hosted und
+            DSGVO-konform auf eigener Infrastruktur. Von der Prozess-Analyse bis
+            zum operativen Betrieb arbeiten wir in 6 festen Phasen, damit ein
+            Workflow planbar produktiv geht statt im Pilotstatus zu bleiben.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">

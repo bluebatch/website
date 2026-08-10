@@ -179,11 +179,14 @@ export default async function Page({
               {overrides?.headline ??
                 "KI Agentur Nürnberg — Deutschlands Automatisierungshauptstadt"}
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Wo die SPS-Messe auf DATEV trifft und die UTN Deutschlands erste
-              KI-Universität ist. In Nürnberg automatisieren wir
-              Geschäftsprozesse mit n8n, self-hosted, DSGVO-konform und
-              zugeschnitten auf das Ökosystem der Metropolregion.
+            <Hero2ColumnDescription geo>
+              Bluebatch ist eine n8n und KI Agentur für Nürnberg: wir
+              automatisieren Auftragserfassung, Lieferantenmanagement und
+              Qualitätsdokumentation für Fertiger, Zulieferer und
+              Mittelständler der Metropolregion, self-hosted und DSGVO-konform
+              auf eigener Infrastruktur. Ein typischer Workflow verbindet
+              ERP-System, E-Mail-Eingang und Produktionsdatenbank und spart 60
+              bis 80 Prozent der manuellen Bearbeitungszeit.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Beratung anfragen</ContactButton>

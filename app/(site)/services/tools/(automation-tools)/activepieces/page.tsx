@@ -67,12 +67,15 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Activepieces - vielversprechend, aber noch nicht reif
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
+            <Hero2ColumnDescription geo>
               Activepieces ist eine MIT-lizenzierte Open-Source-Plattform für
-              Workflow-Automatisierung mit starkem KI-Fokus. Gegründet 2022,
-              unterstützt von Y Combinator, aber mit nur 500.000,- €
-              Finanzierung und im Pre-1.0-Stadium. Wir zeigen Ihnen ehrlich, wo
-              Activepieces glänzt - und wo die Grenzen liegen.
+              Workflow-Automatisierung mit starkem KI-Fokus, gegründet 2022 und
+              noch im Pre-1.0-Stadium. Bluebatch bewertet sie hier für
+              mittelständische Unternehmen, die eine Automatisierungsplattform
+              auswählen: Das Sandboxing-Modell kostet rund 15 Sekunden pro
+              einfacher Task gegenüber unter einer Sekunde bei n8n, bei 1.000
+              Ausführungen täglich also über 4 Stunden Wartezeit statt 17
+              Minuten.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">
