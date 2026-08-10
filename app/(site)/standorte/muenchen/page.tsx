@@ -142,7 +142,7 @@ export const metaCustom: CityMeta = {
 };
 
 const defaultMeta = {
-  title: `n8n Agentur München - KI-Automatisierung & Workflows | Bluebatch`,
+  title: `KI Agentur München - n8n, Workflow-Automatisierung & Prozessoptimierung | Bluebatch`,
   description: `Bluebatch ist Ihre n8n und KI Agentur in München: n8n-Workflows, API-Integrationen und Prozessautomatisierung für DAX-Konzerne, Tech-Giganten und Mittelständler, self-hosted und DSGVO-konform.`,
 };
 
@@ -260,7 +260,7 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                n8n Agentur München -{" "}
+                KI Agentur München -{" "}
                 Workflow-Automatisierung im{" "}
                 <BackgroundHero.Highlight>Isar Valley</BackgroundHero.Highlight>
               </>
