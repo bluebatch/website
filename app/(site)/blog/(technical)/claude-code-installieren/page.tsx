@@ -137,7 +137,16 @@ export default function Page() {
               Oder über die Anthropic Console mit Prepaid-Credits und
               Abrechnung pro Token, der typische Weg für Firmen-Accounts mit
               zentralem Kosten-Tracking. Wichtig: Der kostenlose Claude-Plan
-              enthält keinen Claude-Code-Zugriff. Unternehmen, die bereits
+              enthält keinen Claude-Code-Zugriff. Welcher der beiden Wege
+              günstiger ist, hängt am Nutzungsprofil, durchgerechnet haben wir
+              das im Artikel zum{" "}
+              <Link
+                href="/blog/claude-code-kosten"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code Preis
+              </Link>
+              . Unternehmen, die bereits
               AWS oder Google Cloud im Vertrag haben, können Claude Code
               außerdem gegen Amazon Bedrock oder Vertex laufen lassen, mehr
               dazu am Ende des Artikels.
