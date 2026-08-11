@@ -21,12 +21,12 @@ export const metadata: Metadata = {
   title:
     "ChatGPT Enterprise 2026: Kosten, DSGVO & Rollout | Bluebatch",
   description:
-    "ChatGPT Enterprise für den Mittelstand: Kosten, DSGVO mit EU-Datenresidenz und ein Rollout-Playbook. Enterprise vs Team vs Business im Vergleich.",
+    "ChatGPT für Unternehmen: welche Variante ab welcher Größe, Kosten, DSGVO mit EU-Datenresidenz und wie ihr ChatGPT im Unternehmen einführt. Enterprise vs Team vs Business für den Mittelstand.",
   openGraph: {
     title:
-      "ChatGPT Enterprise: Kosten, DSGVO und Rollout für deutsche Unternehmen",
+      "ChatGPT für Unternehmen: Varianten, Kosten, DSGVO und Rollout",
     description:
-      "Der definitive Buyer's Guide zu ChatGPT Enterprise für den deutschen Mittelstand. Pricing, Datenschutz, Beschaffungsprozess und Rollout-Playbook.",
+      "Der Buyer's Guide zur ChatGPT-Nutzung im Unternehmen: welche Variante für welche Größe, Pricing, Datenschutz, Beschaffungsprozess und Rollout-Playbook für den deutschen Mittelstand.",
     type: "article",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -54,11 +54,13 @@ export default function Page() {
         </BlogHero.Headline>
 
         <GeoSummary>
-          ChatGPT Enterprise ist OpenAIs Unternehmenstarif für Organisationen ab
-          150 Seats, mit unbegrenztem GPT-4o, SSO, Admin Center und der Zusage,
-          dass Geschäftsdaten nicht ins Modell-Training fließen. Dieser Guide
-          zeigt deutschen Mittelständlern Kosten, DSGVO-Lage inklusive
-          EU-Datenresidenz, den Beschaffungsweg und ein Rollout-Playbook.
+          Wer ChatGPT für Unternehmen einsetzen will, wählt zwischen Team (ab 2
+          Seats), Business (ab 25) und Enterprise (ab 150 Seats, unbegrenztes
+          GPT-4o, SSO, Admin Center und die Zusage, dass Geschäftsdaten nicht ins
+          Modell-Training fließen). Dieser Guide zeigt deutschen Mittelständlern,
+          welche Variante ab welcher Größe passt, was sie kostet, wie die
+          DSGVO-Lage inklusive EU-Datenresidenz aussieht und wie ihr ChatGPT im
+          Unternehmen in vier Phasen über acht bis neun Wochen einführt.
         </GeoSummary>
 
         <BlogHero.Meta>
@@ -151,6 +153,52 @@ export default function Page() {
                 wo der größte Produktivitätsgewinn entsteht.
               </Typo.ListItem>
             </Typo.List>
+          </div>
+
+          <Separator />
+
+          <div>
+            <Typo.H2 id="chatgpt-fuer-unternehmen">
+              ChatGPT für Unternehmen: welche Variante für welche
+              Unternehmensgröße
+            </Typo.H2>
+            <Typo.Paragraph>
+              Die häufigste Frage kommt vor der Produktentscheidung: Wer ChatGPT
+              für Unternehmen einsetzen will, muss zuerst wissen, welche der drei
+              Geschäftskundenvarianten überhaupt in Frage kommt. Die Antwort
+              hängt weniger am Budget als an der Mitarbeiterzahl, denn OpenAI
+              koppelt die Funktionen an Mindest-Seats.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              Unter 25 Mitarbeitern führt kein Weg an Team vorbei. Das ist kein
+              Nachteil: Für eine Steuerkanzlei mit 12 Leuten oder einen
+              Großhändler mit 20 Innendienst-Mitarbeitern reicht Team funktional
+              vollständig aus. Was fehlt, ist SSO und zentrale Governance, und
+              beides braucht man bei 12 Konten schlicht nicht.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              Zwischen 25 und 150 Mitarbeitern liegt der Bereich, in dem die
+              meisten mittelständischen Unternehmen stecken, und genau dort ist
+              die Entscheidung unangenehm. Enterprise ist mit 150 Seats
+              Mindestabnahme nicht erreichbar, Team wird bei 60 aktiven Nutzern
+              ohne SSO administrativ mühsam. Business ist für diese Lücke
+              gemacht, wird von OpenAI aber individuell bepreist, was den
+              Vergleich erschwert. Der pragmatische Weg im Mittelstand: mit Team
+              starten, Nutzung über sechs Monate messen und erst dann in die
+              Business-Verhandlung gehen, wenn die tatsächliche Nutzerzahl
+              belastbar ist.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              Ab 150 Mitarbeitern, die ChatGPT wirklich täglich nutzen, wird
+              Enterprise rechnerisch und organisatorisch sinnvoll. Entscheidend
+              ist das Wort „nutzen": 400 Mitarbeiter im Unternehmen heißen nicht
+              400 Seats. Wer nach Kopfzahl statt nach erwarteter Nutzung
+              lizenziert, zahlt im ersten Jahr regelmäßig das Doppelte des
+              Nötigen.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              Die folgende Tabelle zeigt die Unterschiede im Detail.
+            </Typo.Paragraph>
           </div>
 
           <Separator />
@@ -448,12 +496,16 @@ export default function Page() {
 
           <div>
             <Typo.H2 id="rollout-playbook">
-              Rollout-Playbook: ChatGPT Enterprise im Unternehmen einführen
+              Rollout-Playbook: ChatGPT im Unternehmen einführen
             </Typo.H2>
             <Typo.Paragraph>
-              Ein Enterprise-Rollout scheitert selten an der Technik. Er
-              scheitert an fehlender Struktur. Dieses Playbook hat sich in der
-              Praxis bewährt:
+              Ein Rollout scheitert selten an der Technik. Er scheitert an
+              fehlender Struktur. Dieses Playbook hat sich in der Praxis bewährt
+              und funktioniert unabhängig davon, ob ihr Enterprise, Business oder
+              Team einsetzt. Im Mittelstand ist vor allem Phase 2 entscheidend:
+              Ohne echte Use Cases aus dem eigenen Tagesgeschäft bleibt die
+              ChatGPT-Nutzung im Unternehmen bei ein paar E-Mail-Entwürfen
+              stehen.
             </Typo.Paragraph>
 
             <BlogImage
@@ -492,6 +544,16 @@ export default function Page() {
               Review-Prozess für Custom GPTs etablieren: Wer darf GPTs erstellen,
               wer gibt sie frei? API-Nutzung monitoren. Quartalsweise
               Nutzungsreports erstellen und ROI messen.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              Zwei Dinge unterscheiden Mittelständler, die ChatGPT im Unternehmen
+              nutzen, von denen, bei denen die Lizenz nach einem halben Jahr
+              ungenutzt weiterläuft. Erstens ein benannter Verantwortlicher pro
+              Abteilung statt einer zentralen IT-Rolle für alle: Im Mittelstand
+              hat die IT selten die Kapazität, 8 Fachbereiche gleichzeitig zu
+              begleiten. Zweitens der Verzicht auf einen großen Kick-off zugunsten
+              von Phase 2. Wer erst 20 Power User echte Aufgaben lösen lässt und
+              deren Ergebnisse zeigt, bekommt die Breite von selbst.
             </Typo.Paragraph>
           </div>
 
@@ -652,6 +714,9 @@ export default function Page() {
           </BlogLayout.NavigationItem>
           <BlogLayout.NavigationItem idLink="features">
             Features im Detail
+          </BlogLayout.NavigationItem>
+          <BlogLayout.NavigationItem idLink="chatgpt-fuer-unternehmen">
+            ChatGPT für Unternehmen: welche Variante
           </BlogLayout.NavigationItem>
           <BlogLayout.NavigationItem idLink="enterprise-vs-team-vs-business">
             Enterprise vs. Team vs. Business
