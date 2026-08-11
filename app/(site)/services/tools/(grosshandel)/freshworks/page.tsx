@@ -73,11 +73,17 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Freshworks - Customer Service & CRM automatisieren
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
+            <Hero2ColumnDescription geo>
               Freshworks vereint Helpdesk, CRM, IT-Service-Management und
-              Marketing-Automation in einer Plattform. Wir integrieren
-              Freshdesk, Freshsales, Freshservice und alle Freshworks-Produkte
-              in Ihre n8n-Workflows und KI-Agenten.
+              Marketing-Automation auf einer gemeinsamen Datenschicht, genutzt
+              von über 60.000 Unternehmen. Wir binden Freshdesk, Freshsales,
+              Freshservice, Freshchat und Freshmarketer über n8n an ERP und
+              KI-Agenten an, für Handels- und Serviceteams, die Support und
+              Vertrieb auf denselben Datenstand bringen wollen. Ergebnis:
+              Tickets werden beim Eingang per LLM klassifiziert und geroutet
+              statt von Hand verteilt, SLA-Überschreitungen eskalieren
+              automatisch, und der Freshservice-Node deckt 15+ Ressourcen für
+              eigene Workflows ab.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">

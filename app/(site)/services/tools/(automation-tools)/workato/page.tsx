@@ -134,12 +134,17 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Workato - die teure Enterprise-iPaaS, ehrlich bewertet
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Workato ist Gartner-Leader seit 7 Jahren, hat 12.000+ Kunden und
-              eine Bewertung von ehemals 5,7 Milliarden €. Leistungsstark,
-              enterprise-tauglich, KI-Vorreiter. Aber auch: 15.000,- €
-              bis 180.000,- €+/Jahr ohne öffentliche Preise. Hier ist die ehrliche
-              Einordnung.
+            <Hero2ColumnDescription geo>
+              Workato ist eine Enterprise-iPaaS mit 1.200+ vorgebauten
+              Konnektoren, also die Integrationsplattform für Konzerne, die
+              Hunderte Systeme unter einer Governance verbinden müssen:
+              12.000+ Kunden, Gartner-Leader seit 7 Jahren, 700+ Kunden mit
+              über 100.000,- € ARR. Der Preis dafür ist hoch, der Einstieg
+              liegt bei rund 15.000,- € pro Jahr, ein typisches
+              Enterprise-Deployment bei 50.000,- bis 180.000,- € und mehr pro
+              Jahr, also beim 10- bis 50-fachen einer Open-Source-Alternative.
+              Hier erfahren Sie ehrlich, wann sich das rechnet und wann der
+              Mittelstand besser fährt.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">

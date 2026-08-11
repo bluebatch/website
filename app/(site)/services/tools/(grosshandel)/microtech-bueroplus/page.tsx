@@ -70,11 +70,16 @@ export default function Page() {
             <Hero2ColumnHeadline>
               microtech ERP - Automatisierung per GraphQL und PostgreSQL
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              microtech ERP (ehemals BüroPlus) ist das Warenwirtschaftssystem
-              für den deutschen Mittelstand. Wir automatisieren Ihre
-              Auftragsverarbeitung, Bestandsführung und E-Commerce-Anbindung
-              über n8n - per GraphQL API oder SQL-Replikation nach PostgreSQL.
+            <Hero2ColumnDescription geo>
+              microtech ERP (ehemals büro+) ist das Warenwirtschaftssystem für
+              den deutschen Mittelstand. Wir automatisieren Auftragsverarbeitung,
+              Bestandsführung und E-Commerce-Anbindung über n8n, per GraphQL API
+              oder SQL-Replikation nach PostgreSQL, für Multichannel-Händler, die
+              Shopware, Amazon und eBay neben microtech betreiben. Ergebnis:
+              Eine eingehende Bestellung wird in wenigen Sekunden zum Auftrag im
+              ERP statt in manueller Erfassung, die pro Tag Stunden verschlingt,
+              und der Bestandsabgleich läuft alle fünf Minuten kanalübergreifend,
+              womit Überverkäufe entfallen.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">
