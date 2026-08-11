@@ -67,12 +67,16 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Pipedream - starkes Developer-Tool mit unsicherer Zukunft
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
+            <Hero2ColumnDescription geo>
               Pipedream ist eine code-native Automatisierungsplattform für
-              Entwickler mit 2.800+ Integrationen und Zugriff auf das gesamte
-              npm-Ökosystem. Seit November 2025 gehört Pipedream zu Workday.
-              Cloud-only, US-Daten, kein Self-Hosting. Wir zeigen Ihnen ehrlich,
-              was das für Ihre Entscheidung bedeutet.
+              Entwicklerteams, die Workflows lieber in JavaScript oder Python
+              schreiben als zu klicken: 2.800+ Integrationen, Zugriff auf das
+              gesamte npm-Ökosystem, Free-Plan mit 100 Credits pro Monat, Basic
+              ab 45,- € und Advanced ab 74,- € pro Monat. Seit November 2025
+              gehört Pipedream zu Workday, bleibt Cloud-only mit US-Daten und
+              ohne Self-Hosting, und ein Wechsel weg von der Plattform kostet
+              nach unserer Schätzung 2 bis 4 Stunden Rebuild pro Workflow. Wir
+              zeigen Ihnen ehrlich, was das für Ihre Entscheidung bedeutet.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">

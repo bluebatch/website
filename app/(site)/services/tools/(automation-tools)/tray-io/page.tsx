@@ -68,13 +68,16 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Tray.io - die Enterprise-iPaaS mit KI-Ambitionen
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Tray.io (seit 2024 Tray.ai) positioniert sich als
-              &quot;Universal Automation Cloud&quot; für Enterprise-Integrationen.
-              Die Plattform kombiniert iPaaS, KI-Agenten und Embedded
-              Integrations - zu Enterprise-Preisen. Hier erfahren Sie
-              ehrlich, was Tray kann, was es wirklich kostet und wo die
-              Grenzen liegen.
+            <Hero2ColumnDescription geo>
+              Tray.io (seit 2024 Tray.ai) ist eine Enterprise-iPaaS für
+              Konzerne und größere Mittelständler, die viele Systeme dauerhaft
+              miteinander verbinden müssen: 600+ Konnektoren, KI-Agenten und
+              Embedded Integrations, dahinter ca. 242 Mitarbeiter und rund
+              150 Mio. € eingesammeltes Kapital. Die Plattform veröffentlicht
+              keine Preise; realistisch liegen Sie bei 5.000,- € bis
+              10.000,- € pro Monat, also 60.000,- € bis 120.000,- € im Jahr,
+              ohne kostenlosen Plan und ohne Test vor dem Sales-Gespräch. Hier
+              erfahren Sie ehrlich, was Tray kann und wo die Grenzen liegen.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">

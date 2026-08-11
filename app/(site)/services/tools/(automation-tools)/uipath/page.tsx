@@ -68,12 +68,17 @@ export default function Page() {
             <Hero2ColumnHeadline>
               UiPath - der RPA-Marktführer für Desktop-Automatisierung
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              UiPath ist nicht irgendein Automatisierungstool - es ist die
-              weltweit führende Plattform für Robotic Process Automation. Aber
-              RPA ist ein grundlegend anderer Ansatz als API-Automatisierung.
-              Hier erfahren Sie ehrlich, was UiPath kann, was es kostet und wo
-              die Grenzen liegen.
+            <Hero2ColumnDescription geo>
+              UiPath ist die weltweit führende Plattform für Robotic Process
+              Automation, also für Unternehmen, deren Altsysteme keine
+              brauchbaren Schnittstellen haben und die deshalb Oberflächen
+              statt APIs automatisieren müssen: 34 % Marktanteil,
+              1,78 Mrd. € Annual Recurring Revenue, 10.800+ Kunden. Der Preis
+              dafür ist hoch, ein Unattended Robot startet bei rund
+              4.000,- € pro Jahr, ein typischer Enterprise-Deal liegt bei
+              87.000,- € und mehr pro Jahr. Hier erfahren Sie ehrlich, wann
+              sich das lohnt und wann API-Automatisierung denselben Job
+              günstiger erledigt.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">
