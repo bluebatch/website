@@ -484,6 +484,17 @@ export default function Page() {
               man die Ausreißer mit Limits im Griff behält.
             </Typo.Paragraph>
             <Typo.Paragraph>
+              Eine Sache klärt diese Rechnung bewusst nicht: ob Claude Code
+              überhaupt das richtige Werkzeug ist. OpenAIs Codex startet bei
+              denselben 20 Dollar, die Entscheidung hängt also nicht am Preis,
+              sondern an Oberflächen, Automatisierbarkeit und Datenroute. Diese
+              Gegenüberstellung steht in{" "}
+              <Link href="/blog/claude-code-vs-codex">
+                Codex vs. Claude Code
+              </Link>
+              .
+            </Typo.Paragraph>
+            <Typo.Paragraph>
               Wenn ihr Claude Code im Team einführen wollt, inklusive
               Kostenkontrolle, Compliance-Route und Rollout: Genau solche
               Setups bauen wir für den Mittelstand. Der kürzeste Weg ist ein
