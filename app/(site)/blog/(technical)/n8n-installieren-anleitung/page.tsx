@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "n8n-installieren-anleitung",
@@ -47,6 +48,17 @@ export default function Page() {
         <BlogHero.Headline>
           n8n installieren: Anleitung für npx, Docker und Desktop App
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Diese Anleitung zeigt Schritt für Schritt, wie die
+          Automatisierungsplattform n8n lokal installiert wird: für Einsteiger
+          und IT-Teams, die Workflows testen wollen, bevor ein Server dafür
+          bereitsteht. Drei Wege stehen zur Wahl, npx, Docker und die Desktop
+          App für Windows und macOS; der schnellste ist in unter 5 Minuten
+          durch. Am Ende läuft ein erster Workflow mit einem Schedule-Trigger,
+          der alle 5 Minuten auslöst, dazu die Schritte von der lokalen
+          Installation in den Produktivbetrieb.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

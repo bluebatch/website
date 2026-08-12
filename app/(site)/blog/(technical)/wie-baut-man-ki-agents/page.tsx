@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "wie-baut-man-ki-agents",
@@ -47,6 +48,18 @@ export default function Page() {
         <BlogHero.Headline>
           KI-Agents bauen: Das Anthropic-Framework, übersetzt für den Großhandel
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Dieser Leitfaden übersetzt Anthropics Bauplan für KI-Agents in die
+          Praxis von Großhandel und Mittelstand: für Engineering- und IT-Teams,
+          die entscheiden müssen, ob ein Anwendungsfall einen festen Workflow
+          oder einen autonomen Agenten braucht. Fünf Workflow-Patterns decken
+          rund 80 Prozent der Fälle ab, nur der Rest rechtfertigt den
+          Agent-Loop. Dazu vier nicht verhandelbare Engineering-Regeln und
+          sieben Use-Cases aus dem Großhandel. Beispiel Rechnungsprüfung: ein
+          einzelner OCR-Pass trifft 80 bis 85 Prozent, eine nachgeschaltete
+          Prüfstufe hebt das auf über 97 Prozent.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

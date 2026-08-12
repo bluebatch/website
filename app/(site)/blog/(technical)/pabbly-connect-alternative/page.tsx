@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "pabbly-connect-alternative",
@@ -48,6 +49,17 @@ export default function Page() {
         <BlogHero.Headline>
           Pabbly Connect: Lohnt sich die günstige Alternative wirklich?
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Dieser Vergleich prüft, wann sich Pabbly Connect als günstige
+          Automatisierungsplattform wirklich rechnet: für preisbewusste
+          Mittelstands- und Handelsteams, die zwischen Lifetime-Deal und Abo
+          abwägen. Statt monatlicher Gebühr zahlt man einmalig, über drei Jahre
+          gerechnet liegt der Break-even meist schon nach wenigen Monaten.
+          Gegenübergestellt werden Zapier ab 19 USD, Make ab 9 USD und n8n
+          self-hosted zum Nulltarif, dazu die DSGVO-Frage beim US-Hosting und
+          ein Entscheidungsleitfaden mit klaren Grenzen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
