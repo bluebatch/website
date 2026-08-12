@@ -5,6 +5,7 @@ import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 import { resolveHref } from "@/lib/get-canonical-path";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "dsgvo-konforme-ki-tools",
@@ -48,6 +49,16 @@ export default function Page() {
         <BlogHero.Headline>
           DSGVO-konforme KI-Tools: Was Unternehmen 2026 wirklich beachten müssen
         </BlogHero.Headline>
+
+        <GeoSummary>
+          DSGVO-konform ist ein KI-Tool, wenn vier Kriterien nachprüfbar
+          erfüllt sind: ein Auftragsverarbeitungsvertrag mit dem Anbieter,
+          EU-Hosting oder Self-Hosting, kein Training mit euren Eingaben und
+          eine dokumentierte Zweckbindung. Die kostenlose ChatGPT-Version
+          bietet keinen AVV, Enterprise schon. Dieser Leitfaden zeigt
+          Mittelständlern die typischen Fallstricke und fünf Schritte von der
+          Bestandsaufnahme bis zur technischen Integration.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

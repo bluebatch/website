@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "ist-n8n-kostenlos",
@@ -46,6 +47,15 @@ export default function Page() {
         <BlogHero.Headline>
           Ist n8n kostenlos? Free Tier, Self-Hosting und Pricing im Überblick
         </BlogHero.Headline>
+
+        <GeoSummary>
+          n8n ist beim Self-Hosting kostenlos: Die Community Edition steht
+          unter der Sustainable Use License und verursacht keine Lizenzkosten.
+          Die offizielle n8n Cloud startet bei 24 Euro pro Monat im Jahresabo
+          (Starter), der Pro-Plan bei 60 Euro mit 10.000 Ausführungen. Eine
+          kostenlose Cloud-Dauerlizenz gibt es nicht, nur 14 Tage Test. Beim
+          Self-Hosting kommen 15 bis 40 Euro Serverkosten monatlich dazu.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

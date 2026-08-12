@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { Separator, BlogLayout, BlogHero, BlogImage } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "zapier-kosten-vergleich",
@@ -46,6 +47,15 @@ export default function Page() {
         <BlogHero.Headline>
           Zapier Kosten 2026: Was das Automatisierungstool wirklich kostet
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Zapier kostet 2026 im Jahresabo 0 Euro (Free, 100 Tasks), ab 29 Euro
+          im Monat (Starter, 750 Tasks), ab 72 Euro (Professional, 2.000
+          Tasks), ab 437 Euro (Team, 50.000 Tasks) und ab 875 Euro (Company).
+          Bei monatlicher Zahlung kommen rund 33 Prozent dazu. Der Sprung von
+          Professional auf Team versechsfacht die Kosten und trifft die
+          meisten Teams unerwartet, sobald Workflows wachsen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
