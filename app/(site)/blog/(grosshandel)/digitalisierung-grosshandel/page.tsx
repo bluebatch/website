@@ -5,6 +5,7 @@ import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
 
 export const metaCustom: BlogMeta = {
@@ -61,6 +62,18 @@ export default async function Page({
         <BlogHero.Headline>
           Digitalisierung Großhandel: 15 ausgewählte Use Cases
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Dieser Leitfaden von Bluebatch beschreibt für Großhändler 15 konkrete
+          KI-Workflows entlang der Auftrags-, Beleg- und Compliance-Prozesse,
+          von der Auftragserfassung über die Rechnungsprüfung bis zu
+          CBAM-Meldung und Zolltarifierung. Zu jedem Use Case stehen die
+          technische Umsetzung mit n8n und belegte Ergebniszahlen, etwa 80 bis
+          96 Prozent Zeitersparnis bei der Auftragserfassung aus mehr als zehn
+          Praxisumsetzungen in deutschen Großhandelsbetrieben. Mehr als 75
+          Prozent der Großhändler haben bislang keinen einzigen KI-Workflow im
+          Einsatz.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
