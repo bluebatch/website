@@ -40,6 +40,8 @@ import RoiCalculation, {
 import ComplianceNoticeBox from "@/components/ui/compliance-notice-box";
 import WorkflowDiagram from "@/components/sections/workflow-diagram";
 import SimpleCard from "@/components/cards/simple-card";
+import ProseColumns from "@/components/ui/prose-columns";
+import InternalLink from "@/components/buttons/internal-link";
 
 export const pageConfig: PageConfig = {
   title: "E-Rechnung-Verarbeitung",
@@ -506,12 +508,92 @@ export default function Page() {
         </div>
       </ContentWrapper>
 
+      {/* 7. E-INVOICING-COMPLIANCE */}
+      <ContentWrapper colorScheme="gradient-cool">
+        <IntroBox>
+          <IntroBox.PreHeadline>Compliance im Detail</IntroBox.PreHeadline>
+          <IntroBox.Headline>
+            E-Invoicing-Compliance: was der Workflow automatisch prüft
+          </IntroBox.Headline>
+          <IntroBox.Subline>
+            E-Invoicing ist in Deutschland kein Formatthema, sondern ein
+            Compliance-Thema. Ob der Vorsteuerabzug hält, entscheidet sich an
+            drei Fragen: Entspricht die Rechnung formal der EN 16931, kam sie
+            über einen zulässigen Kanal an, und liegt das strukturierte
+            Original unverändert im Archiv? Genau diese drei Prüfungen laufen
+            bei uns als Automation im n8n-Workflow, statt als Checkliste im
+            Kopf des Sachbearbeiters.
+          </IntroBox.Subline>
+        </IntroBox>
+
+        <ProseColumns cols={3} className="mt-12">
+          <ProseColumns.Item title="KoSIT-Validierung gegen EN 16931">
+            Der KoSIT-Validator ist die Referenzimplementierung des Bundes und
+            prüft drei Ebenen: die Syntax des XML (CII oder UBL), die
+            Schematron-Regeln der CIUS XRechnung und die Geschäftsregeln der
+            EN 16931, also etwa die Konsistenz von Positionssummen, Steuersätzen
+            und Gesamtbetrag. Fällt eine Rechnung durch, ist sie
+            umsatzsteuerlich keine ordnungsgemäße Rechnung. Der Workflow blockt
+            sie deshalb vor dem Buchungsstapel und schickt den Fehlerbericht
+            zurück an den Lieferanten, statt sie zu buchen und später zu
+            korrigieren.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Peppol-Anforderungen an den Zustellweg">
+            Peppol arbeitet im Vier-Ecken-Modell: Sender und Empfänger sprechen
+            nie direkt miteinander, sondern jeweils über einen zertifizierten
+            Access Point. Empfangsseitig braucht die Kanzlei dafür eine eigene
+            Teilnehmerkennung und ein Profil nach Peppol BIS Billing 3.0, das
+            im Verzeichnis hinterlegt ist. Der Transport quittiert die
+            Zustellung technisch, was den Zugang belegbar macht. Pflicht ist
+            Peppol nicht, für den Empfang genügt auch ein E-Mail-Postfach; mit
+            der gestaffelten Versandpflicht ab 2027 wird es aber der Kanal, den
+            größere Mandanten und deren Kunden voraussetzen.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Aufbewahrungspflichten für das Original">
+            Aufzubewahren ist der strukturierte Teil, also das XML, nicht das
+            PDF-Sichtbild. Die Frist für Rechnungen liegt seit dem Vierten
+            Bürokratieentlastungsgesetz bei acht statt zehn Jahren (§ 14b
+            Abs. 1 UStG, gilt für alle am 31.12.2024 noch nicht abgelaufenen
+            Fristen) und beginnt mit Ablauf des Kalenderjahres, in dem die
+            Rechnung ausgestellt wurde. Die GoBD verlangen zusätzlich
+            Unveränderbarkeit und Nachvollziehbarkeit. Der Workflow legt das
+            Original-XML deshalb mit Hashwert, Zeitstempel und Audit-Eintrag
+            im revisionssicheren Archiv ab.
+          </ProseColumns.Item>
+        </ProseColumns>
+
+        <div className="mt-10 max-w-3xl">
+          <Typo.Paragraph>
+            E-Invoice-Compliance endet nicht bei der strukturierten Rechnung.
+            Dieselbe Prüf- und Archivlogik braucht jede Belegart, die in die
+            Kanzlei läuft, nur ohne den Komfort maschinenlesbarer Felder. Wie
+            das für Papier- und PDF-Belege aussieht, zeigt die{" "}
+            <InternalLink
+              href="/branchen/steuerberater/workflows/belegpruefung"
+              variant="underline"
+            >
+              automatisierte Belegprüfung in der Kanzlei
+            </InternalLink>
+            . Und wenn Mandantendaten die Kanzlei aus Gründen des § 203 StGB
+            gar nicht verlassen dürfen, läuft derselbe Workflow in der eigenen
+            Umgebung, beschrieben unter{" "}
+            <InternalLink
+              href="/branchen/steuerberater/private-ai"
+              variant="underline"
+            >
+              Private AI für Steuerkanzleien
+            </InternalLink>
+            .
+          </Typo.Paragraph>
+        </div>
+      </ContentWrapper>
+
       {/* Customer logos band */}
       <ContentWrapper noPadding bodyWidth="full">
         <Customer />
       </ContentWrapper>
 
-      {/* 7. FAQ */}
+      {/* 8. FAQ */}
       <ContentWrapper colorScheme="white">
         <FaqContainer
           faqs={[
@@ -561,7 +643,7 @@ export default function Page() {
         />
       </ContentWrapper>
 
-      {/* 8. FINAL CTA */}
+      {/* 9. FINAL CTA */}
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>
