@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import { InternalLinkLabel } from "@/components/buttons/internal-link";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metadata: Metadata = {
   title: "Branchen - Bluebatch | Branchenlösungen für AI-Automation",
@@ -62,10 +63,14 @@ export default function Page() {
     <ContentWrapper isFirstSection>
       <div className="text-center mb-16">
         <Typo.H1>Branchen</Typo.H1>
-        <Typo.Paragraph>
-          Entdecken Sie, wie Unternehmen mit Bluebatch ihre Prozesse
-          automatisieren.
-        </Typo.Paragraph>
+        <GeoSummary align="center">
+          Die Branchenlösungen von Bluebatch sind fertig geschnittene
+          KI-Automatisierungen für Großhandel, Steuerkanzleien und
+          Anwaltskanzleien. Insgesamt 51 dokumentierte Anwendungsfälle
+          beschreiben je Branche den Ablauf, die angebundenen Systeme wie ERP,
+          DATEV oder actaport und die Ersparnis pro Vorgang. Jeder Fall ist als
+          n8n-Workflow umsetzbar.
+        </GeoSummary>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -41,9 +41,13 @@ export default function Page() {
             <Hero2ColumnHeadline>
               Powerful AI Workflows mit Bluebatch
             </Hero2ColumnHeadline>
-            <Hero2ColumnDescription>
-              Verwandeln Sie Ihr Unternehmen mit intelligenter Automatisierung
-              und KI-gestützten Workflows.
+            <Hero2ColumnDescription geo>
+              Über die Kontaktseite von Bluebatch erreichen Großhändler,
+              Steuerkanzleien und Anwaltskanzleien das Team für
+              KI-Automatisierung auf drei Wegen: Anfrageformular, direkte
+              Terminbuchung für ein kostenloses Erstgespräch und Telefon unter
+              +49 163 4412159. Auf schriftliche Anfragen antwortet Bluebatch
+              innerhalb von 24 Stunden.
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
