@@ -21,6 +21,7 @@ import ProsCons from "@/components/sections/pros-cons";
 import IndustryFit from "@/components/sections/industry-fit";
 import ToolComparisonTable from "@/components/sections/tool-comparison-table";
 import GeoSummary from "@/components/ui/geo-summary";
+import SoftwareApplicationSchema from "@/components/ui/software-application-schema";
 
 export const metadata: Metadata = {
   title:
@@ -126,6 +127,7 @@ const probleme = [
 export default function Page() {
   return (
     <>
+      <SoftwareApplicationSchema slug="power-automate" />
       {/* 1. Hero */}
       <ContentWrapper isFirstSection>
         <Hero2Column>

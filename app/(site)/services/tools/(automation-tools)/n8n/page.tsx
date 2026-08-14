@@ -23,6 +23,7 @@ import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
 import { InternalLinkLabel } from "@/components/buttons/internal-link";
 import GeoSummary from "@/components/ui/geo-summary";
+import SoftwareApplicationSchema from "@/components/ui/software-application-schema";
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
   legacyRedirects: ["/was-ist-n8n"],
@@ -255,6 +256,7 @@ export default async function Page({
 
   return (
     <>
+      <SoftwareApplicationSchema slug="n8n" />
       <ContentWrapper isFirstSection>
         <Hero2Column>
           <Hero2ColumnTextColumn>

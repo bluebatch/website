@@ -14,6 +14,7 @@ export { default as ProseColumns } from "./prose-columns";
 export { ProseColumnsItem } from "./prose-columns";
 export { default as SectionHeader } from "./section-header";
 export { default as StatsList } from "./stats-list";
+export { default as SoftwareApplicationSchema } from "./software-application-schema";
 export { StatItem } from "./stats-list";
 export { default as TabGroup } from "./tab-group";
 export { TabContent, TabContentContainer, TabItem, TabNavigation } from "./tab-group";

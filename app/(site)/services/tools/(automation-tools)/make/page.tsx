@@ -22,6 +22,7 @@ import SimpleCard from "@/components/cards/simple-card";
 import IntroBox from "@/components/ui/intro-box";
 import GeoSummary from "@/components/ui/geo-summary";
 import NumberedList from "@/components/ui/numbered-list";
+import SoftwareApplicationSchema from "@/components/ui/software-application-schema";
 
 export const metadata: Metadata = {
   title:
@@ -63,6 +64,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <SoftwareApplicationSchema slug="make" />
       {/* 1. Hero */}
       <ContentWrapper isFirstSection>
         <Hero2Column>

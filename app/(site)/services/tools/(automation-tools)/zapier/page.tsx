@@ -20,6 +20,7 @@ import ProsCons from "@/components/sections/pros-cons";
 import IndustryFit from "@/components/sections/industry-fit";
 import ToolComparisonTable from "@/components/sections/tool-comparison-table";
 import SimpleCard from "@/components/cards/simple-card";
+import SoftwareApplicationSchema from "@/components/ui/software-application-schema";
 
 export const metadata: Metadata = {
   title:
@@ -86,6 +87,7 @@ const pricing = [
 export default function Page() {
   return (
     <>
+      <SoftwareApplicationSchema slug="zapier" />
       {/* 1. Hero */}
       <ContentWrapper isFirstSection>
         <Hero2Column>
