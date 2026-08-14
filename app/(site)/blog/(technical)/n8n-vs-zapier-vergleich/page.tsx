@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { Separator, BlogLayout, BlogHero, BlogImage } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "n8n-vs-zapier-vergleich",
@@ -46,6 +47,20 @@ export default function Page() {
         <BlogHero.Headline>
           n8n vs Zapier: Welches Workflow-Tool passt zu Ihrem Team?
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Dieser Vergleich hilft Teams im Mittelstand bei der Wahl zwischen n8n
+          und Zapier. Der entscheidende Unterschied ist das Abrechnungsmodell:
+          Zapier zählt jeden einzelnen Schritt als Task, der Professional-Plan
+          startet bei rund 49 Euro im Monat mit 2.000 Tasks. n8n zählt einen
+          kompletten Workflow-Durchlauf als eine Execution, Starter 20 Euro mit
+          2.500 Executions, Pro 50 Euro mit 10.000 Executions. Bei Workflows mit
+          vielen Schritten liegt n8n Cloud dadurch typischerweise 30 bis 60
+          Prozent unter Zapier, self-gehostet läuft n8n auf einem VPS für 10 bis
+          30 Euro im Monat, unabhängig von Workflow- und Execution-Zahl. Zapier
+          bietet dafür über 8.000 fertige App-Integrationen und braucht kein
+          eigenes Hosting.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

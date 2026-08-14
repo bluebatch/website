@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { Separator, BlogLayout, BlogHero, BlogImage } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "e-rechnung-automatisieren",
@@ -46,6 +47,19 @@ export default function Page() {
         <BlogHero.Headline>
           E-Rechnung automatisieren 2026: Der XRechnung-Workflow für deutsche KMU
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Dieser Beitrag beschreibt für deutsche KMU, wie ein Workflow
+          XRechnung- und ZUGFeRD-Eingangsrechnungen automatisch ausliest, prüft
+          und ins Buchhaltungssystem übergibt. Gerechnetes Beispiel: 500
+          Eingangsrechnungen im Monat kosten manuell bei 10 Minuten pro Beleg
+          83 Stunden und, bei 45 Euro Stundensatz, rund 44.800 Euro im Jahr.
+          Automatisiert bleiben etwa 4 bis 5 Stunden im Monat für Ausnahmen und
+          Überwachung, also rund 3.500 Euro Ersparnis pro Monat. Nach Abzug der
+          laufenden Kosten bleiben netto rund 38.400 Euro im Jahr bei
+          n8n-Self-Hosting, rund 36.000 Euro bei Lexware und rund 18.000 Euro
+          bei einer DocuWare-Suite.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

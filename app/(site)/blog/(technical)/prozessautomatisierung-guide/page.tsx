@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "prozessautomatisierung-guide",
@@ -47,6 +48,20 @@ export default function Page() {
         <BlogHero.Headline>
           Prozessautomatisierung 2026: Der komplette Guide für den Mittelstand
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Dieser Leitfaden zeigt mittelständischen Unternehmen, welche Prozesse
+          sich zu automatisieren lohnen, wie drei Großhandels-Workflows im
+          Detail aufgebaut sind und was n8n, Make und Zapier voneinander
+          unterscheidet. Gerechnetes Beispiel Bestellabwicklung: 80 Bestellungen
+          am Tag zu je 15 Minuten sind 5.200 Stunden im Jahr und bei 35 Euro
+          Stundensatz 182.000 Euro Personalkosten. Laufen 70 Prozent der
+          Standardfälle automatisch, bleiben 3.640 eingesparte Stunden oder rund
+          127.000 Euro im Jahr, bei 8.000 bis 15.000 Euro einmaligem Aufbau.
+          Die Durchlaufzeit vom Bestelleingang bis zur Auftragsbestätigung sank
+          bei einem Kunden von 45 auf unter 3 Minuten, die Fehlerquote bei der
+          Datenübernahme von 4 auf unter 0,5 Prozent.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
