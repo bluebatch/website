@@ -291,6 +291,18 @@ export default function Page() {
             <Typo.Paragraph className="mb-4 text-gray-600">
               Belegprüfung, Dokumentenverarbeitung, Mandantenkommunikation und
               Jahresabschluss, wir zeigen konkret, wo KI in der Kanzlei entlastet.
+              Ab 2026 kommt die Pflicht zur strukturierten Eingangsrechnung dazu:
+              Wie ein Workflow XRechnung und ZUGFeRD prüft, gegen die EN 16931
+              validiert und revisionssicher archiviert, steht unter{" "}
+              <InternalLink
+                href={resolveHref(
+                  "/branchen/steuerberater/workflows/e-rechnung-verarbeitung",
+                )}
+                variant="underline"
+              >
+                E-Rechnungen automatisiert verarbeiten
+              </InternalLink>
+              .
             </Typo.Paragraph>
             <div className="flex flex-col items-start gap-3">
               <InternalLink href={resolveHref("/branchen/steuerberater")}>

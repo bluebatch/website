@@ -574,6 +574,16 @@ export default function Page() {
             >
               automatisierte Belegprüfung in der Kanzlei
             </InternalLink>
+            . Vorgelagert steht die Frage, wie der Beleg überhaupt hereinkommt:
+            per PDF-Upload, aus dem E-Mail-Postfach, aus einem Cloud-Drive oder
+            vom Scanner. Wie diese vier Kanäle in denselben Klassifikator und
+            denselben Audit-Trail laufen, beschreibt die{" "}
+            <InternalLink
+              href="/branchen/steuerberater/workflows/dokumentenverarbeitung"
+              variant="underline"
+            >
+              Dokumentenverarbeitung in der Kanzlei
+            </InternalLink>
             . Und wenn Mandantendaten die Kanzlei aus Gründen des § 203 StGB
             gar nicht verlassen dürfen, läuft derselbe Workflow in der eigenen
             Umgebung, beschrieben unter{" "}
