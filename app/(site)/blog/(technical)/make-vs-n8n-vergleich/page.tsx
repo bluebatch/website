@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { Separator, BlogLayout, BlogHero, BlogImage } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "make-vs-n8n-vergleich",
@@ -47,6 +48,16 @@ export default function Page() {
         <BlogHero.Headline>
           Make vs n8n: Welches Workflow-Tool passt zu Ihrem Team?
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Dieser Vergleich stellt die Workflow-Tools Make und n8n für Teams
+          gegenüber, die 2026 einen Automatisierungs-Stack aufbauen. Make
+          rechnet pro Operation, das Pro-Paket kostet 29 Euro im Monat, größere
+          Kunden landen bei 500 Euro. n8n Cloud rechnet pro Execution, der
+          Starter-Plan kostet 20 Euro für 2.500 Executions und liegt für
+          mittlere Teams 30 bis 50 Prozent günstiger; selbst gehostet läuft n8n
+          auf einem VPS ab 10 Euro im Monat.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

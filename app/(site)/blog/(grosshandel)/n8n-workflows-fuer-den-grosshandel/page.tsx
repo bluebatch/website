@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "n8n-workflows-fuer-den-grosshandel",
@@ -47,6 +48,15 @@ export default function Page() {
         <BlogHero.Headline>
           7 n8n-Workflows für den Großhandel, die sofort wirken
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Dieser Beitrag beschreibt sieben n8n-Workflows für Großhändler, von
+          der Auftragserfassung über die Nachbestellung bis zum Angebots-Bot.
+          Die 3-Wege-Rechnungsprüfung sinkt dabei von 12 Minuten auf unter 30
+          Sekunden pro Beleg, Angebote entstehen in Minuten statt Stunden. Der
+          Empfang von E-Rechnungen ist seit 2025 Pflicht, der Versand ab 2027
+          für Unternehmen mit über 800.000 Euro Umsatz.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

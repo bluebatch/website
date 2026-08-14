@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "n8n-selbst-hosten-anleitung",
@@ -47,6 +48,15 @@ export default function Page() {
         <BlogHero.Headline>
           n8n selbst hosten: Anleitung für eine produktionsreife Instanz
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Diese Anleitung zeigt IT-Teams im Mittelstand, wie sie n8n selbst
+          hosten und produktionsreif betreiben. Der Stack besteht aus Docker
+          Compose, Postgres und Caddy als Reverse Proxy mit automatischem TLS.
+          Für kleine bis mittlere Setups reichen 2 bis 4 vCPU, 4 bis 8 GB RAM
+          und 40 GB SSD; dazu kommen ein getestetes Backup- und Restore-Skript
+          und eine Aufbewahrung der Execution-Daten von 336 Stunden.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
