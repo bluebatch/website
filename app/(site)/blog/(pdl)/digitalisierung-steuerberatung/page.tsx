@@ -518,6 +518,15 @@ export default function Page() {
               Der eigentliche wirtschaftliche Hebel liegt 2026 nicht in der
               Kostensenkung, sondern in der Kapazität: mit gleichem Personal
               mehr Mandate betreuen zu können, wenn neue Fachkräfte fehlen.
+              Wie sich diese Kapazitätsrechnung gegen die laufenden KI-Kosten
+              stellt, rechnen wir in{" "}
+              <Link
+                href="/blog/werden-steuerberater-durch-ki-ersetzt"
+                className="text-primary-600 hover:underline"
+              >
+                Werden Steuerberater durch KI ersetzt?
+              </Link>{" "}
+              durch.
             </Typo.Paragraph>
           </div>
 

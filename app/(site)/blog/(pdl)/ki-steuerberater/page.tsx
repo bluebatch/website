@@ -643,6 +643,19 @@ export default function Page() {
               bei konstantem Personal, was angesichts des Fachkräftemangels
               die strategisch relevantere Rechnung ist.
             </Typo.Paragraph>
+            <Typo.Paragraph>
+              Diese Rechnung hat eine Kehrseite, die seltener aufgemacht wird:
+              Was die KI-Seite selbst kostet, wenn niemand sie steuert. Wie
+              eine Monatsrechnung von 2.500 Euro zustande kommt und wie sie
+              sich gegen die Vollkosten von 1,5 Senior-Berufsträgern rechnet,
+              steht in{" "}
+              <Link
+                href="/blog/werden-steuerberater-durch-ki-ersetzt"
+                className="text-primary-600 hover:underline"
+              >
+                Werden Steuerberater durch KI ersetzt?
+              </Link>
+            </Typo.Paragraph>
           </div>
 
           <Separator />
