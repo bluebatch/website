@@ -103,6 +103,19 @@ export default function Page() {
               die ersten zehn Minuten. Am Ende stehen die häufigsten Fehler
               mit ihren Lösungen und ein Blick auf den Rollout im Team.
             </Typo.Paragraph>
+            <Typo.Paragraph>
+              Wenn Sie zuerst wissen wollen, womit Sie es überhaupt zu tun
+              haben, also worin sich ein Agent im Dateisystem von einem
+              Chatfenster und von einer Autovervollständigung im Editor
+              unterscheidet, klärt das der Grundlagenartikel{" "}
+              <Link
+                href="/blog/was-ist-claude-code"
+                className="text-primary-600 hover:underline"
+              >
+                Was ist Claude Code
+              </Link>
+              .
+            </Typo.Paragraph>
           </div>
 
           <Separator />

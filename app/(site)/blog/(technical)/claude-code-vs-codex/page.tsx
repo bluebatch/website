@@ -131,7 +131,17 @@ export default function Page() {
               Mobile-App. Wichtig ist die Konsequenz aus dieser Liste: Alle
               Oberflächen sprechen dieselbe Engine, also gelten dieselben
               Projektanweisungen und Werkzeuganbindungen überall. Eine Sitzung
-              lässt sich zwischen ihnen weiterreichen.
+              lässt sich zwischen ihnen weiterreichen. Wie dieser Agent
+              intern arbeitet, also wie er sich den Projektkontext selbst
+              zusammensucht statt ihn vorgelegt zu bekommen, steht ausführlich
+              unter{" "}
+              <Link
+                href="/blog/was-ist-claude-code"
+                className="text-primary-600 hover:underline"
+              >
+                Was ist Claude Code
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               <strong>Codex</strong> von OpenAI setzt am ChatGPT-Ökosystem an.
