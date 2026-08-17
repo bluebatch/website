@@ -337,6 +337,17 @@ export default function Page() {
               hochlädt.
             </Typo.Paragraph>
             <Typo.Paragraph>
+              Wer den Einstieg lieber im Terminal macht: Wie sich MCP-Server in{" "}
+              <Link
+                href="/blog/claude-code-mcp"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code einrichten
+              </Link>{" "}
+              lassen, inklusive Scopes und Konfigurationsdatei, steht in einer
+              eigenen Schritt-für-Schritt-Anleitung.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
               Dieser Selbstversuch kostet nichts, läuft komplett lokal und
               beantwortet die Frage, die in Entscheidungsrunden am meisten
               Zeit frisst: „Was bedeutet das konkret?&ldquo; Danach lässt sich

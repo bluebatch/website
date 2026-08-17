@@ -322,7 +322,15 @@ export default function Page() {
                 MCP-Server
               </Link>{" "}
               ausführlich beschrieben. Ohne MCP kennt Claude Code nur euer
-              Dateisystem, mit MCP auch die Systeme daneben.
+              Dateisystem, mit MCP auch die Systeme daneben. Wie ihr{" "}
+              <Link
+                href="/blog/claude-code-mcp"
+                className="text-primary-600 hover:underline"
+              >
+                MCP-Server in Claude Code einrichtet
+              </Link>
+              , von der ersten Installation bis zu den Scopes, steht in einer
+              eigenen Anleitung.
             </Typo.Paragraph>
 
             <Typo.H3>Subagenten und geplante Läufe</Typo.H3>
