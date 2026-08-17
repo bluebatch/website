@@ -130,7 +130,12 @@ export default function Page() {
           <Typo.H2 className="mb-4">Was der Connector möglich macht</Typo.H2>
           <Typo.Paragraph className="text-gray-600">
             Sobald actaport angebunden ist, lassen sich die typischen
-            Kanzlei-Prozesse automatisieren und mit KI unterstützen.
+            Kanzlei-Prozesse automatisieren und mit KI unterstützen. Technisch
+            ist der Connector genau der Fall, für den wir{" "}
+            <InternalLink href="/services/custom-nodes" variant="underline">
+              eigene n8n-Nodes für Fachsoftware
+            </InternalLink>{" "}
+            bauen: eine Schnittstelle, die es als Standardbaustein nicht gibt.
           </Typo.Paragraph>
         </div>
         <SimpleGrid cols={2}>
