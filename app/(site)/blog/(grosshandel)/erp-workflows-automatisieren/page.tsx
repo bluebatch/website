@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 import { resolveHref } from "@/lib/get-canonical-path";
 
 export const metaCustom: BlogMeta = {
@@ -49,6 +50,15 @@ export default function Page() {
           ERP-Workflows automatisieren: So verbindet n8n SAP, Dynamics NAV und
           microtech
         </BlogHero.Headline>
+
+        <GeoSummary>
+          ERP-Workflow-Automatisierung verbindet SAP, Dynamics NAV und microtech
+          über n8n, damit Auftragsimport, Rechnungsprüfung, Lagerwarnung,
+          Stammdaten-Sync und Lieferantenmanagement ohne Abtippen laufen. Bei 200
+          Bestellungen am Tag binden diese Routinen 30 bis 40 Stunden pro Woche;
+          die Bearbeitungszeit je Beleg sinkt von 12 Minuten auf unter 30
+          Sekunden. Dieser Beitrag zeigt fünf Workflows für Großhändler.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

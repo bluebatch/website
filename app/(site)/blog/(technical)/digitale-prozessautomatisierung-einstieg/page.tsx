@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "digitale-prozessautomatisierung-einstieg",
@@ -47,6 +48,15 @@ export default function Page() {
         <BlogHero.Headline>
           Digitale Prozessautomatisierung: Der Einstieg für den Mittelstand
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Digitale Prozessautomatisierung (DPA) wickelt Geschäftsprozesse
+          regelbasiert oder KI-gestützt über Systemgrenzen hinweg ab, statt
+          Daten von Hand zwischen E-Mail, ERP und Freigaben zu kopieren. Dieser
+          Einstieg für den Mittelstand klärt die Abgrenzung zu RPA und BPM, die
+          Voraussetzungen, die Tool-Auswahl und wie der erste Pilotprozess in
+          vier Wochen produktiv wird.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

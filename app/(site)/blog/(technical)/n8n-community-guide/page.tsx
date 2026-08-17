@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "n8n-community-guide",
@@ -47,6 +48,14 @@ export default function Page() {
         <BlogHero.Headline>
           n8n Community 2026: Forum, GitHub, Templates und wo ihr wirklich Hilfe bekommt
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Die n8n-Community verteilt sich auf vier Anlaufstellen: das offizielle
+          Forum, das GitHub-Repository, die Template-Bibliothek und die
+          Community-Kanäle. Dieser Leitfaden zeigt, welcher Kanal welche Frage
+          beantwortet, wie eine Frage aussieht, die schnell eine Antwort
+          bekommt, und wie ihr selbst Nodes und Templates beisteuert.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
