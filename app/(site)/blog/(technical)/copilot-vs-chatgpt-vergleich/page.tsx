@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "copilot-vs-chatgpt-vergleich",
@@ -50,6 +51,16 @@ export default function Page() {
           Copilot vs ChatGPT: Welcher KI-Assistent passt wirklich zu
           deinem Unternehmen?
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Microsoft Copilot und ChatGPT im aufgabenbasierten Vergleich für den
+          deutschen Mittelstand: Kosten, Datenschutz und welches Werkzeug
+          welche Arbeit besser erledigt. Microsoft 365 Copilot kostet 28,10 EUR
+          pro Nutzer und Monat als Add-on zu einer bestehenden M365-Lizenz,
+          ChatGPT Team 25 US-Dollar pro Nutzer, ChatGPT Enterprise rund 60.
+          Entscheidend ist nicht die Modellqualität, sondern wo das Team seine
+          Arbeitszeit verbringt.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

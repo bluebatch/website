@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "n8n-zertifizierung-guide",
@@ -47,6 +48,15 @@ export default function Page() {
         <BlogHero.Headline>
           n8n Zertifizierung 2026: Welche es gibt und wann sie sich lohnt
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Die offiziellen n8n-Zertifizierungen Foundations und Builder im
+          Überblick, für Automatisierer und Teams, die den Aufwand abwägen.
+          Foundations kostet 199 US-Dollar bei 20 bis 40 Stunden Vorbereitung,
+          Builder 399 US-Dollar bei 60 bis 100 Stunden; beide Preise enthalten
+          einen Wiederholungsversuch. Wer bereits Workflows baut, kennt rund 80
+          Prozent der Foundations-Inhalte.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

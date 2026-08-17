@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "n8n-vorlagen-grosshandel",
@@ -48,6 +49,15 @@ export default function Page() {
           n8n Vorlagen für den Großhandel: 7 Workflow-Templates zum
           Sofort-Starten
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Sieben fertige n8n-Workflow-Vorlagen für den Großhandel, jeweils mit
+          Node-Kette und Einsatzfall, von der Bestellerfassung aus E-Mails bis
+          zum Belegabgleich. Die größten Einzelhebel: Preislisten-Update von 4
+          Stunden auf 10 Minuten, Belegabgleich von 12 Minuten auf 30 Sekunden
+          pro Beleg, Bestellerfassung 2 bis 3 Stunden pro Tag ab 50
+          Bestellungen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
