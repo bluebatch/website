@@ -21,6 +21,7 @@ import IndustryFit from "@/components/sections/industry-fit";
 import ToolComparisonTable from "@/components/sections/tool-comparison-table";
 import SimpleCard from "@/components/cards/simple-card";
 import SoftwareApplicationSchema from "@/components/ui/software-application-schema";
+import { FaqContainer } from "@/components/ui/faqs";
 
 export const metadata: Metadata = {
   title:
@@ -457,6 +458,39 @@ export default function Page() {
           </Link>
           .
         </Typo.Paragraph>
+      </ContentWrapper>
+
+
+      {/* FAQ */}
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
+        <FaqContainer
+          faqs={[
+            {
+              question: "Ist Zapier kostenlos?",
+              answer:
+                "Es gibt einen dauerhaft kostenlosen Free-Plan, er ist aber eng geschnitten: 100 Tasks pro Monat, nur Zwei-Schritt-Zaps, 15-Minuten-Polling und ein Nutzer. Multi-Step-Zaps, Webhooks und kürzere Polling-Intervalle beginnen erst im Professional-Plan. Der Free-Plan reicht zum Ausprobieren und für eine einzelne einfache Verknüpfung, für einen produktiven Prozess in der Regel nicht.",
+            },
+            {
+              question: "Was kostet Zapier?",
+              answer:
+                "Free kostet 0 Euro mit 100 Tasks pro Monat, Professional ab 29,99 Euro mit 750 Tasks, Team ab 103,50 Euro mit 2.000 Tasks und unbegrenzten Nutzern, Enterprise wird individuell verhandelt. Entscheidend ist nicht der Listenpreis, sondern der Task-Verbrauch: Zapier rechnet pro Aktionsschritt ab, nicht pro Workflow. Bei Überschreitung greift eine automatische Pay-per-Task-Abrechnung, die die Monatsrechnung verdoppeln bis verdreifachen kann.",
+            },
+            {
+              question: "Was ist ein Task bei Zapier?",
+              answer:
+                "Ein Task ist ein einzelner Aktionsschritt, nicht ein kompletter Workflow-Durchlauf. Ein Zap mit vier Aktionen verbraucht also vier Tasks pro Ausführung. Im Professional-Plan mit 750 Tasks sind das rund 187 Durchläufe im Monat, etwa sechs pro Tag. Bei einem Workflow mit zehn Schritten sinkt die Zahl auf 75 Durchläufe im Monat.",
+            },
+            {
+              question: "Was ist die günstigste Alternative zu Zapier?",
+              answer:
+                "Bei hohem Volumen ist selbst gehostetes n8n die deutlich günstigere Variante: 10 Workflows mit je 5 Schritten und 100 Durchläufen pro Monat kosten bei Zapier rund 103 Euro im Team-Plan, auf einem eigenen Server rund 10 bis 15 Euro. Bei 30 Workflows mit je 8 Schritten und 300 Durchläufen liegt die Ersparnis bei 93 bis 95 Prozent. Der Preis dafür sind Betrieb und Wartung der eigenen Instanz.",
+            },
+          ]}
+        >
+          <FaqContainer.Headline>
+            Häufige Fragen zu Zapier
+          </FaqContainer.Headline>
+        </FaqContainer>
       </ContentWrapper>
 
       {/* 8. CTA */}

@@ -23,6 +23,7 @@ import IntroBox from "@/components/ui/intro-box";
 import GeoSummary from "@/components/ui/geo-summary";
 import NumberedList from "@/components/ui/numbered-list";
 import SoftwareApplicationSchema from "@/components/ui/software-application-schema";
+import { FaqContainer } from "@/components/ui/faqs";
 
 export const metadata: Metadata = {
   title:
@@ -481,6 +482,38 @@ export default function Page() {
           </Link>
           .
         </Typo.Paragraph>
+      </ContentWrapper>
+
+      {/* FAQ */}
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
+        <FaqContainer
+          faqs={[
+            {
+              question: "Was kostet Make?",
+              answer:
+                "Der Free-Plan kostet 0 Euro mit 1.000 Credits pro Monat, Core startet bei 10,59 Euro mit 10.000 Credits, Pro bei 18,82 Euro, Teams bei 34,12 Euro, Enterprise wird individuell verhandelt. Zusätzliche Credits kosten rund 10 Euro je 10.000. Der Listenpreis sagt allein wenig aus, weil seit August 2025 nach Credits statt nach Operations abgerechnet wird und jede einzelne Aktion mindestens einen Credit verbraucht.",
+            },
+            {
+              question: "Ist Make kostenlos?",
+              answer:
+                "Es gibt einen dauerhaft kostenlosen Free-Plan mit 1.000 Credits im Monat und Zugriff auf alle 3.000 plus Integrationen. Zum Testen reicht das, für den produktiven Betrieb selten: Ein Szenario mit acht Modulen verbraucht acht Credits pro Durchlauf, bei 1.000 Durchläufen im Monat sind das 8.000 Credits und damit ein Vielfaches des Free-Kontingents.",
+            },
+            {
+              question: "Was ist im Core-Plan von Make enthalten?",
+              answer:
+                "Der Core-Plan startet bei 10,59 Euro im Monat und enthält 10.000 Credits, unbegrenzt viele aktive Szenarien und ein Intervall-Minimum von 5 Minuten. Er ist der übliche Einstieg für kleine Teams. Die Grenze zeigt sich beim Volumen: Ein einziges Szenario mit zehn Modulen und 1.000 Durchläufen im Monat verbraucht das komplette Core-Budget.",
+            },
+            {
+              question: "Warum verbraucht Make mehr Credits als erwartet?",
+              answer:
+                "Weil jede Aktion zählt, auch die ergebnislose. Ein Polling-Trigger, der nichts Neues findet, kostet trotzdem einen Credit, und die Modulanzahl multipliziert den Verbrauch pro Durchlauf. AI-Module werden variabel nach Token, Dateigröße oder Seitenzahl abgerechnet und liegen zwischen 5 und über 50 Credits je Schritt. Wer das Budget überschreitet, zahlt rund 10 Euro je zusätzliche 10.000 Credits.",
+            },
+          ]}
+        >
+          <FaqContainer.Headline>
+            Häufige Fragen zu Make
+          </FaqContainer.Headline>
+        </FaqContainer>
       </ContentWrapper>
 
       {/* 9. CTA */}
