@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title:
     "KI-Agenten erstellen: Tool-Vergleich und Entscheidungshilfe für den Mittelstand",
   description:
-    "Welches Tool für welchen KI-Agenten? Ehrlicher Vergleich von n8n, Make, Copilot Studio, LangGraph und Co. mit Preisen, DSGVO-Lage und vier Praxis-Use-Cases.",
+    "Welches Tool für welchen KI-Agenten? Ehrlicher Vergleich von n8n, Make, Copilot Studio, LangGraph und Co. mit Preisen, DSGVO-Lage, vier Praxis-Use-Cases und sieben Schritten von der Idee zum laufenden Agenten.",
   openGraph: {
     title:
       "KI-Agenten erstellen: Der Tool-Vergleich für den deutschen Mittelstand",
@@ -59,7 +59,9 @@ export default function Page() {
           umgekehrt gemacht. Der Guide ordnet vier Plattform-Kategorien entlang
           von sechs Bewertungsdimensionen, zeigt vier Use-Cases mit konkreter
           Tool-Empfehlung und die neun Bausteine, die einen produktionsreifen
-          Agenten vom Prototyp trennen.
+          Agenten vom Prototyp trennen. Dazu die sieben Schritte von der Idee
+          zum laufenden Agenten, tool-unabhängig und mit dem Erfolgskriterium
+          als Zahl statt als Bauchgefühl.
         </GeoSummary>
 
         <BlogHero.Meta>
@@ -649,6 +651,109 @@ export default function Page() {
           <Separator />
 
           <div>
+            <Typo.H2 id="schritte">
+              KI-Agenten erstellen: die Schritte von der Idee zum laufenden
+              Agenten
+            </Typo.H2>
+            <Typo.Paragraph>
+              Die Tool-Frage ist die zweite Frage. Der Ablauf davor ist bei
+              n8n, LangGraph und Copilot Studio derselbe, und er entscheidet
+              darüber, ob am Ende ein Agent in Produktion läuft oder eine
+              Demo im Sandbox stehen bleibt. Sieben Schritte, tool-unabhängig.
+            </Typo.Paragraph>
+
+            <BlogImage
+              src="/blog/ki-agenten-erstellen/schritte.png"
+              alt="Sieben Schritte beim Erstellen eines KI-Agenten von der Aufgabenabgrenzung über Testset und Freigabe bis zum Betrieb"
+              width={1200}
+              height={630}
+            />
+
+            <Typo.Paragraph>
+              <strong>Schritt 1: Eine Aufgabe abgrenzen, nicht einen
+              Bereich.</strong> „Einkauf automatisieren" ist keine
+              Agenten-Aufgabe, „eingehende Auftragsbestätigungen mit der
+              Bestellung abgleichen und Abweichungen melden" ist eine. Die
+              Abgrenzung braucht drei Angaben: was den Agenten auslöst (eine
+              E-Mail, ein neuer Datensatz, ein Zeitplan), was er am Ende
+              erzeugt (ein Datensatz im ERP, eine Nachricht, eine
+              Freigabe-Aufgabe) und woran man Erfolg misst. Das
+              Erfolgskriterium muss eine Zahl sein, zum Beispiel 70 Prozent
+              der Vorgänge ohne manuelle Korrektur.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              <strong>Schritt 2: Den Datenzugriff klären, bevor irgendein
+              Tool geöffnet wird.</strong> Ein Agent ist nur so gut wie seine
+              Zugriffe. Für jedes beteiligte System gehört auf den Tisch, ob
+              es eine API, einen MCP-Server, eine Datenbank-Sicht oder nur
+              einen CSV-Export gibt, und wer die Zugangsdaten freigibt. Das
+              ist in der Praxis der häufigste Grund, warum ein Pilot drei
+              Wochen später startet als geplant: nicht das Modell fehlt,
+              sondern der Lesezugriff auf die Warenwirtschaft.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              <strong>Schritt 3: Den Ablauf in Prosa aufschreiben.</strong>{" "}
+              Eine halbe Seite Text, die Schritt für Schritt beschreibt, was
+              ein erfahrener Mitarbeiter mit dem Vorgang macht, inklusive der
+              Ausnahmen. Wer diese halbe Seite nicht schreiben kann, hat den
+              Prozess nicht verstanden und wird ihn auch nicht automatisieren.
+              Nebeneffekt: Der Text ist später die Grundlage für den
+              System-Prompt. Wenn sich der Ablauf als Ablaufdiagramm zeichnen
+              lässt, ist ein Workflow die richtige Bauform und kein Agent
+              (siehe{" "}
+              <Link
+                href="#zwei-entscheidungen"
+                className="text-primary-600 hover:underline"
+              >
+                Entscheidung 1
+              </Link>
+              ).
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              <strong>Schritt 4: Die Werkzeuge definieren.</strong> Jede
+              Handlung, die der Agent ausführen soll, wird ein eigenes Tool
+              mit klarem Namen, klarer Beschreibung und einem festen
+              Eingabe- und Ausgabeschema. Drei bis sieben gut beschriebene
+              Tools schlagen zwanzig unscharfe. Wo es einen MCP-Server für
+              das Zielsystem gibt, ist er der kürzere Weg als eine eigene
+              Integration.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              <strong>Schritt 5: Klein anfangen beim Modell.</strong> Zuerst
+              das günstige, schnelle Modell nehmen und erst eskalieren, wenn
+              das Testset zeigt, dass es nicht reicht. Der umgekehrte Weg
+              kostet dauerhaft Geld für eine Leistung, die niemand geprüft
+              hat. Der erste Durchlauf soll bewusst nur zwei oder drei
+              Beispiele verarbeiten, nicht den ganzen Posteingang.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              <strong>Schritt 6: Gegen ein goldenes Testset messen.</strong>{" "}
+              200 bis 500 historische Vorgänge sammeln, davon 20 Prozent
+              zurückhalten und den Agenten dagegen laufen lassen. Erst diese
+              Zahl beantwortet die Frage, ob der Agent produktiv gehen darf.
+              Ein Agent, der im Demo-Fall funktioniert und nie gegen echte
+              Altdaten gemessen wurde, ist ein Versprechen, kein Ergebnis.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              <strong>Schritt 7: Mit Freigabe-Schleife und Limits in
+              Betrieb.</strong> Die ersten drei bis sechs Monate läuft jede
+              Aktion mit finanzieller, rechtlicher oder kundenseitiger
+              Wirkung über eine menschliche Freigabe. Dazu Logging jeder
+              Entscheidung, ein Kosten-Budget pro Lauf, Timeouts und
+              Loop-Erkennung. Erst wenn die Korrekturquote über mehrere
+              Wochen stabil unter der Schwelle aus Schritt 1 liegt, wird die
+              Freigabe schrittweise gelockert.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
+              Wer diese sieben Schritte hinter sich hat, kann die Tool-Frage
+              in einer halben Stunde beantworten. Wer sie überspringt, wählt
+              ein Tool für eine Aufgabe, die noch niemand aufgeschrieben hat.
+            </Typo.Paragraph>
+          </div>
+
+          <Separator />
+
+          <div>
             <Typo.H2 id="entwicklungen-2026">
               Was sich 2026 verändert hat
             </Typo.H2>
@@ -875,6 +980,22 @@ export default function Page() {
             <FaqContainer
               faqs={[
                 {
+                  question: "Wie erstelle ich einen KI-Agenten?",
+                  answer:
+                    "In sieben Schritten, unabhängig vom Tool: Erstens eine einzelne Aufgabe abgrenzen und ein Erfolgskriterium als Zahl festlegen (zum Beispiel 70 Prozent der Vorgänge ohne Korrektur). Zweitens klären, über welche Schnittstelle der Agent an die beteiligten Systeme kommt. Drittens den Ablauf in einer halben Seite Prosa aufschreiben, inklusive Ausnahmen. Viertens die Werkzeuge definieren, drei bis sieben klar beschriebene statt zwanzig unscharfe. Fünftens mit dem günstigen Modell und zwei bis drei Beispielen starten. Sechstens gegen ein goldenes Testset aus 200 bis 500 historischen Vorgängen messen. Siebtens mit menschlicher Freigabe, Logging und Kosten-Limits in Betrieb gehen. Die Tool-Wahl ist erst danach dran und dauert dann eine halbe Stunde.",
+                },
+                {
+                  question: "Kann ich einen KI-Agenten selbst erstellen?",
+                  answer:
+                    "Ja, für die meisten Mittelstands-Use-Cases ohne eigene Entwickler. Mit einer No-Code-Plattform wie n8n oder Make plus einem AI-Agent-Node baut eine prozessversierte Person aus dem Fachbereich einen funktionierenden Agenten. Die Grenze liegt nicht bei der Oberfläche, sondern beim Betrieb: Freigabe-Schleife, Logging, Kosten-Limits und der Zugriff auf ERP oder Warenwirtschaft brauchen in der Regel jemanden aus der IT. Sobald Multi-Agent-Systeme, hoher Durchsatz oder ein eigenes Frontend dazukommen, ist ein Pro-Code-Framework wie LangGraph und damit ein Engineering-Team die richtige Wahl.",
+                },
+                {
+                  question:
+                    "Wie lange dauert es, einen KI-Agenten zu erstellen?",
+                  answer:
+                    "Ein erster lauffähiger Agent für einen abgegrenzten Use-Case entsteht in ein bis zwei Wochen, wenn der Datenzugriff steht. Bis zur belastbaren Go-/No-Go-Entscheidung sind vier Wochen realistisch: eine Woche Use-Case und Testset, eine Woche Prototyp, eine Woche Pilot mit echten Vorgängen parallel zum bestehenden Prozess, eine Woche Auswertung. Der häufigste Verzögerungsgrund ist nicht die Technik, sondern der fehlende Lesezugriff auf das Zielsystem.",
+                },
+                {
                   question:
                     "Was ist der Unterschied zwischen einem KI-Agenten und einem KI-Workflow?",
                   answer:
@@ -940,6 +1061,9 @@ export default function Page() {
           </BlogLayout.NavigationItem>
           <BlogLayout.NavigationItem idLink="bausteine">
             Neun Bausteine
+          </BlogLayout.NavigationItem>
+          <BlogLayout.NavigationItem idLink="schritte">
+            Schritt für Schritt
           </BlogLayout.NavigationItem>
           <BlogLayout.NavigationItem idLink="entwicklungen-2026">
             Entwicklungen 2026
