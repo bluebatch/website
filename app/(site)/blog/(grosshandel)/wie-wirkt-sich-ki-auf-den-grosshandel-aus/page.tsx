@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "wie-wirkt-sich-ki-auf-den-grosshandel-aus",
@@ -48,6 +49,16 @@ export default function Page() {
           Wie wirkt sich KI auf den Großhandel aus? Der komplette Überblick für
           2026
         </BlogHero.Headline>
+
+        <GeoSummary>
+          KI wirkt im Großhandel heute vor allem an vier Stellen: Bedarfsprognose,
+          Lieferkette, Lager und Vertrieb. 63 Prozent der Großhändler stufen KI als
+          extrem relevant ein, eingesetzt wird sie aber nur von 24 Prozent, und
+          genau diese Lücke beschreibt der Beitrag mit Zahlen: 20 bis 30 Prozent
+          weniger Lagerbestand durch bessere Prognosen, 25 Prozent kürzere
+          Lieferzeiten durch Echtzeit-Transparenz, dazu die Fehlerquellen, an denen
+          KI-Projekte im Handel typischerweise scheitern.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

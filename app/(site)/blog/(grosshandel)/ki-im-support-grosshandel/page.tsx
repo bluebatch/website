@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 import { resolveHref } from "@/lib/get-canonical-path";
 
 export const metaCustom: BlogMeta = {
@@ -49,6 +50,16 @@ export default function Page() {
           KI im Support für den Großhandel: Wie n8n und Freshdesk euer
           Service-Team entlasten
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Der Beitrag zeigt Großhändlern, wie sie ihren Kundensupport mit Freshdesk,
+          n8n und einem Sprachmodell automatisieren, ohne das ERP zu verlassen. Die
+          Ticket-Klassifizierung erreicht dabei über 90 Prozent Trefferquote,
+          Standard-Statusanfragen werden in unter 30 Sekunden ohne menschliches
+          Zutun beantwortet, und in Summe sinkt die durchschnittliche
+          Erstantwortzeit um rund 60 Prozent, während etwa 40 Prozent der
+          eingehenden Tickets vollständig automatisch laufen.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

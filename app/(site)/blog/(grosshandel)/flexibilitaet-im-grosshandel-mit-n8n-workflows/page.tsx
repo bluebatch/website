@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 import ToolLink from "@/components/ui/tool-link";
 
 export const metaCustom: BlogMeta = {
@@ -50,6 +51,15 @@ export default function Page() {
           Flexibilität im Großhandel: Was Intralogistik vormacht, können
           n8n-Workflows für dein Backoffice
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Die Intralogistik automatisiert seit Jahren modular statt starr, und
+          dieselben Prinzipien lassen sich mit n8n auf das Backoffice im Großhandel
+          übertragen. Der Beitrag überträgt drei davon auf konkrete Workflows,
+          darunter eine Bestellfreigabe, die unter 500 Euro automatisch durchläuft
+          und über 5.000 Euro an den Vertriebsleiter geht. Ausgangspunkt: 82 Prozent
+          der deutschen Mittelständler arbeiten in diesen Prozessen noch manuell.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
