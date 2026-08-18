@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
@@ -492,11 +493,14 @@ export default function Page() {
           <h1 className="mt-4 text-4xl font-bold text-gray-900 sm:text-5xl">
             Ein System, das mit euch wächst.
           </h1>
-          <Typo.Paragraph className="mx-auto mt-5 max-w-2xl text-lg text-gray-600">
-            Vom ersten Use-Case-Workshop bis zur eigenen AI-Plattform, in drei Größen.
-            Transparente Preise, klare Leistung, keine Black-Box-Angebote. Ihr steigt da
-            ein, wo ihr gerade steht, und wachst von dort.
-          </Typo.Paragraph>
+          <GeoSummary align="center" className="mt-5">
+            Bluebatch begleitet Mittelständler in drei Größen von der ersten
+            Automatisierung bis zur eigenen AI-Plattform: S ist der Einstieg über
+            einen Use-Case-Workshop ab 1.000 Euro, M feste Engineer-Kapazität pro
+            Monat, L die eigene Enterprise-Plattform ab 60.000 Euro. Jede Größe hat
+            einen genannten Preis und einen festen Leistungsumfang, kein
+            Black-Box-Angebot. Ihr steigt da ein, wo ihr gerade steht.
+          </GeoSummary>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <ContactButton icon="calendar" size="lg">Passende Größe finden</ContactButton>
           </div>

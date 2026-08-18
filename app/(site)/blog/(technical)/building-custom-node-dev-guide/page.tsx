@@ -3,6 +3,7 @@ import type { BlogTagId } from "@/lib/blog-tags";
 import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
+import GeoSummary from "@/components/ui/geo-summary";
 import {
   BlogImage,
   CodeBlockFile,
@@ -54,6 +55,15 @@ export default function Page() {
           Benutzerdefinierte Nodes in n8n erstellen: Ein vollständiger
           Entwickler-Leitfaden
         </BlogHero.Headline>
+
+        <GeoSummary>
+          n8n bringt über 400 fertige Nodes mit, deckt damit aber kein
+          hausinternes ERP und keine Branchen-API ab. Dieser Leitfaden führt
+          Entwickler durch die komplette Custom-Node-Entwicklung: Projekt-Setup,
+          die Wahl zwischen deklarativem und programmatischem Stil, Inputs,
+          Outputs, Parameter und Credentials, dazu Error-Handling, Tests und das
+          Deployment in die eigene n8n-Instanz.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

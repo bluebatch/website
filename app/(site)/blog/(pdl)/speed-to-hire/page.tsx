@@ -7,6 +7,7 @@ import ContentWrapper from "@/components/layout/content-wrapper";
 import IntroBox from "@/components/ui/intro-box";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "speed-to-hire",
@@ -51,6 +52,15 @@ export default function Page() {
           Speed to Hire: Warum deine besten Kandidaten weg sind, bevor du
           anrufst
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Personaldienstleister verlieren Kandidaten nicht am Angebot, sondern an
+          der Reaktionszeit: Die Time-to-Hire liegt bei 50,2 Tagen, bei nur 9
+          Bewerbungen und 6,4 Interviews je Stelle. Der Beitrag zeigt drei
+          n8n-Workflows, die Bewerbereingang, Abgleich und Disposition
+          automatisieren und die Benachrichtigung auf unter 3 Minuten drücken,
+          ohne dass jemand manuell nachfassen muss.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
