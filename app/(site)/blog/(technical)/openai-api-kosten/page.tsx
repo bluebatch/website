@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import DataTable from "@/components/ui/data-table";
 import { FaqContainer } from "@/components/ui/faqs";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "openai-api-kosten",
@@ -49,6 +50,17 @@ export default function Page() {
         <BlogHero.Headline>
           OpenAI API Kosten 2026: Was ein eigener KI-Use-Case wirklich kostet
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Die OpenAI-API rechnet nach Token ab, nicht nach Lizenzen, und
+          deutscher Text kostet dabei systematisch mehr: 1.000 deutsche Wörter
+          erzeugen rund 1.800 Token statt der etwa 1.330 im Englischen, also 30
+          bis 40 Prozent Aufschlag gegenüber jeder englischen
+          Beispielrechnung. Der Beitrag rechnet drei Mittelstands-Szenarien
+          durch, darunter ein Kundenservice-Agent mit 10.000 Anfragen im Monat
+          für rund 12 US-Dollar mit einem kleinen Modell gegenüber 195 US-Dollar
+          mit dem Flaggschiff, und nennt sechs Hebel, die die Rechnung senken.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

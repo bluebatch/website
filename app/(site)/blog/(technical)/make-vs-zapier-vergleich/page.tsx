@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { Separator, BlogLayout, BlogHero, BlogImage } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
   slug: "make-vs-zapier-vergleich",
@@ -46,6 +47,17 @@ export default function Page() {
         <BlogHero.Headline>
           Make vs Zapier: Welches No-Code-Tool passt zu Ihren Workflows?
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Make und Zapier lösen dieselbe Aufgabe mit zwei Philosophien, und die
+          Kostenkurve entscheidet: Ein Workflow mit fünf Schritten und 100
+          Durchläufen am Tag verbraucht 15.000 Tasks im Monat, wofür bei Zapier
+          der Team-Plan für deutlich über 100 Euro fällig wird, während bei Make
+          derselbe Verbrauch noch in den Core-Plan für rund 10 Euro passt. Der
+          Vergleich ordnet beide Tools nach Workflow-Typ zu und benennt die
+          Fälle, in denen keins von beiden reicht: Self-Hosting, echte
+          Datenhoheit, KI-Agenten mit Memory und Tool-Calls oder eigene Nodes.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author

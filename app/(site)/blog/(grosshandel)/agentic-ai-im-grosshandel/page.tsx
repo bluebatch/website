@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import GeoSummary from "@/components/ui/geo-summary";
 import { resolveHref } from "@/lib/get-canonical-path";
 
 export const metaCustom: BlogMeta = {
@@ -49,6 +50,17 @@ export default function Page() {
           Agentic AI im Großhandel: Wie autonome KI-Agenten eure Prozesse
           übernehmen
         </BlogHero.Headline>
+
+        <GeoSummary>
+          Agentic AI beschreibt KI-Systeme, die im Großhandel eigenständig
+          entscheiden, statt ein festes Skript aus Trigger, Bedingung und
+          Aktion abzuarbeiten. Der Beitrag zeigt fünf Praxisbeispiele vom
+          Bestellvorschlag bis zur Auftragsprüfung, darunter 8 bis 15 Prozent
+          Einsparung bei den Beschaffungskosten durch bessere Timing- und
+          Mengenentscheidungen und eine manuelle Prüfquote von typischerweise
+          unter 10 Prozent aller Bestellungen. Dazu die technische Umsetzung mit
+          n8n und die Grenzen, an denen ein Agent heute noch scheitert.
+        </GeoSummary>
 
         <BlogHero.Meta>
           <BlogHero.Author
