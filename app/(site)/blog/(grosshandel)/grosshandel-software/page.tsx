@@ -19,9 +19,9 @@ export const metaCustom: BlogMeta = {
 
 export const metadata: Metadata = {
   title:
-    "Großhandel-Software 2026: Der komplette Überblick über alle Kategorien | Bluebatch",
+    "Großhandel-Software 2026: ERP, Warenwirtschaft, WMS und EDI | Bluebatch",
   description:
-    "ERP ist nur ein Teil: Welche Software ein B2B-Großhändler mit 50 bis 1.000 Mitarbeitenden wirklich braucht (CRM, Shop, EDI, PIM, DMS, BI, WMS) und warum der KI-Layer auf der bestehenden Software heute den größten Hebel bringt.",
+    "Welche Software ein B2B-Großhändler mit 50 bis 1.000 Mitarbeitenden braucht: ERP und Warenwirtschaft, WMS, EDI, CRM, Shop, PIM, DMS und BI im Überblick. Dazu der KI-Layer, der ohne Rip-and-Replace auf der bestehenden Software ansetzt.",
   openGraph: {
     title:
       "Großhandel-Software 2026: alle Kategorien im Überblick und der KI-Layer",
