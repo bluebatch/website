@@ -539,6 +539,21 @@ export default function Page() {
               wartet, wartet vermutlich vergeblich.
             </Typo.Paragraph>
             <Typo.Paragraph>
+              Dieser Vergleich stellt zwei Agenten gegeneinander, die beide im
+              Terminal zu Hause sind. Die häufigere Frage im Mittelstand ist
+              eine andere, nämlich ob es überhaupt ein Agent sein soll oder ein
+              KI-Editor, in dem jemand weiter selbst tippt. Genau darum geht es
+              in{" "}
+              <Link
+                href="/blog/claude-code-vs-cursor"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code vs. Cursor
+              </Link>
+              , inklusive der Rechnung für ein Team und der Frage, wann die
+              ehrliche Antwort keins von beiden lautet.
+            </Typo.Paragraph>
+            <Typo.Paragraph>
               Die belastbare Antwort lautet deshalb: Nehmt das Werkzeug, das zu
               eurer bestehenden Arbeitsumgebung passt, prüft die Datenroute
               bevor produktiver Code hineingeht, und ersetzt die Diskussion

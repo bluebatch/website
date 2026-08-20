@@ -248,6 +248,17 @@ export default function Page() {
               Terminal-Anwendung, eine VS-Code-Erweiterung, die auch in Cursor
               läuft, ein JetBrains-Plugin, eine Desktop-App für macOS und
               Windows, den Zugang über den Browser und die Claude-Mobile-App.
+              Dass die Erweiterung ausgerechnet auch in Cursor läuft, macht die
+              beiden übrigens nicht austauschbar: Der eine erledigt Aufgaben,
+              der andere hilft beim Tippen. Was das für Preis, Team-Kosten und
+              Einführungsaufwand bedeutet, steht in{" "}
+              <Link
+                href="/blog/claude-code-vs-cursor"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code vs. Cursor
+              </Link>
+              .
             </Typo.Paragraph>
             <Typo.Paragraph>
               Dazu kommen die Stellen, an denen kein Mensch daneben sitzt:
