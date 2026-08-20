@@ -305,7 +305,14 @@ export default function Page() {
           </InternalLink>
           : kontrolliertes Lesen und Schreiben über die OpenEngine,
           rollenbasiert und protokolliert. Dieselbe Bauweise setzen wir auf
-          jedes System, das eine belastbare Schnittstelle hat.
+          jedes System, das eine belastbare Schnittstelle hat. Für SAP hat der
+          Weg dorthin eigene Regeln, weil dort schon drei verschiedene Dinge
+          unter demselben Namen angeboten werden. Welche davon Geschäftsdaten
+          liefern und welche nicht, steht in{" "}
+          <InternalLink href="/services/sap-mcp-server" variant="underline">
+            unserer Einordnung zum SAP MCP Server
+          </InternalLink>
+          .
         </Typo.Paragraph>
       </ContentWrapper>
 
