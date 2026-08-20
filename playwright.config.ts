@@ -38,7 +38,11 @@ export default defineConfig({
     {
       name: "seo-audit",
       testMatch: /\/seo\/.+\.spec\.ts$/,
-      timeout: 300_000,
+      // 600s wie im technical-Projekt. Die SEO-Specs crawlen die komplette
+      // Seite und besuchen sie danach ein zweites Mal; bei 190 Seiten und
+      // gleichzeitig laufenden technical-Workern reichten 300s nicht mehr.
+      // Ein Test, der in den Timeout laeuft, liefert gar kein Signal.
+      timeout: 600_000,
       workers: 1,
       use: { browserName: "chromium" },
     },
