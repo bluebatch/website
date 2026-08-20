@@ -9,7 +9,7 @@
 import { test, expect } from "./fixtures";
 import { seoConfig } from "./seo-config";
 import { collectPageLinks, verdict, reportScore } from "./helpers";
-import { crawlSite, BASE_URL } from "../helpers/crawl";
+import { crawlSite, visitPathnames } from "../helpers/crawl";
 
 const cfg = seoConfig.anchorText;
 
@@ -33,16 +33,16 @@ test("Anchor Text Quality", async ({ page }) => {
   const issues: AnchorIssue[] = [];
   const bannedSet = new Set(cfg.bannedAnchors.map((a) => a.toLowerCase()));
 
-  for (const crawledPage of pages) {
-    const pathname = crawledPage.finalPathname;
+  const collected = await visitPathnames(
+    page,
+    pages.map((p) => p.finalPathname),
+    async (browserPage, pathname) => ({
+      pathname,
+      links: await collectPageLinks(browserPage),
+    }),
+  );
 
-    await page.goto(`${BASE_URL}${pathname}`, {
-      waitUntil: "domcontentloaded",
-      timeout: 30_000,
-    });
-
-    const links = await collectPageLinks(page);
-
+  for (const { pathname, links } of collected) {
     for (const link of links) {
       totalAnchors++;
       const textLower = link.text.toLowerCase().trim();

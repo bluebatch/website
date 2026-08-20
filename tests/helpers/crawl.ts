@@ -161,3 +161,49 @@ export async function crawlSite(
 
   return results;
 }
+
+/**
+ * Visit a fixed list of pathnames using the same page pool as crawlSite().
+ *
+ * Die SEO-Specs haben ihren zweiten Durchlauf bisher sequenziell auf einer
+ * einzigen Page gefahren. Das skaliert linear mit der Seitenzahl und ist am
+ * 2026-08-20 bei 187 Seiten in den 300s-Timeout des seo-audit-Projekts
+ * gelaufen. Der Handler bekommt hier eine Page aus dem Pool, die Ergebnisse
+ * behalten die Reihenfolge der Eingabe.
+ */
+export async function visitPathnames<T>(
+  page: Page,
+  pathnames: string[],
+  handler: (browserPage: Page, pathname: string) => Promise<T>,
+): Promise<T[]> {
+  const context = page.context();
+  const pages: Page[] = [page];
+  for (let i = 1; i < Math.min(CONCURRENCY, pathnames.length); i++) {
+    pages.push(await context.newPage());
+  }
+
+  const results = new Array<T>(pathnames.length);
+  let next = 0;
+
+  async function worker(browserPage: Page): Promise<void> {
+    while (next < pathnames.length) {
+      const index = next++;
+      const pathname = pathnames[index];
+      await browserPage.goto(`${BASE_URL}${pathname}`, {
+        waitUntil: "domcontentloaded",
+        timeout: 30_000,
+      });
+      results[index] = await handler(browserPage, pathname);
+    }
+  }
+
+  try {
+    await Promise.all(pages.map((p) => worker(p)));
+  } finally {
+    for (let i = 1; i < pages.length; i++) {
+      await pages[i].close();
+    }
+  }
+
+  return results;
+}
