@@ -4,6 +4,7 @@ import type { BlogMeta } from "@/lib/meta-custom";
 import Link from "next/link";
 import Typo from "@/components/ui/typo";
 import { BlogImage, Separator, BlogLayout, BlogHero } from "@/components/blog";
+import { FaqContainer } from "@/components/ui/faqs";
 import GeoSummary from "@/components/ui/geo-summary";
 
 export const metaCustom: BlogMeta = {
@@ -1289,52 +1290,54 @@ export default function Page() {  return (
           <Separator />
 
           {/* 11. FAQ */}
-          <div>
-            <Typo.H2 id="faq">FAQ</Typo.H2>
+          <div id="faq">
+            <FaqContainer
+              faqs={[
+                {
+                  question: "Ist n8n wirklich kostenlos?",
+                  answer:
+                    "Ja. Die Community Edition ist kostenlos und lässt sich ohne Einschränkungen auf dem eigenen Server betreiben. Du zahlst nur für den Server selbst (ab rund 5 Euro im Monat).",
+                },
+                {
+                  question: "Brauche ich Programmierkenntnisse?",
+                  answer:
+                    "Für einfache Workflows nicht. Der visuelle Editor funktioniert per Drag-and-Drop. Für komplexere Anwendungsfälle sind Grundkenntnisse in JavaScript oder Python hilfreich, aber nicht zwingend.",
+                },
+                {
+                  question: "Ist n8n DSGVO-konform?",
+                  answer:
+                    "Ja, besonders im Self-Hosting-Modus. Die n8n GmbH sitzt in Berlin, die Cloud-Daten liegen in Frankfurt. Ein AVV (Auftragsverarbeitungsvertrag) ist verfügbar.",
+                },
+                {
+                  question: "Kann n8n sich mit SAP verbinden?",
+                  answer:
+                    "Ja. Über den HTTP Request Node, die SAP Service Layer oder Community-Integrationen. Es gibt fertige Templates für SAP Business One.",
+                },
+                {
+                  question: "Wie unterscheidet sich n8n von Zapier?",
+                  answer:
+                    "n8n ist Open Source, kann selbst gehostet werden, hat stärkere KI-Funktionen und rechnet pro Workflow-Durchlauf ab statt pro einzelner Aktion. Zapier ist einfacher zu bedienen und hat mehr native Integrationen.",
+                },
+                {
+                  question:
+                    "Was passiert, wenn n8n als Unternehmen scheitert?",
+                  answer:
+                    "Da der Quellcode öffentlich ist (GitHub, 178K Stars), kann die Community das Projekt weiterführen. Das ist ein Vorteil gegenüber proprietären Tools, bei denen ein Shutdown das Ende bedeutet.",
+                },
+              ]}
+            >
+              <FaqContainer.Headline>
+                Häufige Fragen zu n8n
+              </FaqContainer.Headline>
+            </FaqContainer>
 
-            <Typo.H3>Ist n8n wirklich kostenlos?</Typo.H3>
-            <Typo.Paragraph>
-              Ja. Die Community Edition ist kostenlos und lässt sich ohne
-              Einschränkungen auf dem eigenen Server betreiben. Du zahlst nur für
-              den Server selbst (ab ~5 &euro;/Monat).
-            </Typo.Paragraph>
-
-            <Typo.H3>Brauche ich Programmierkenntnisse?</Typo.H3>
-            <Typo.Paragraph>
-              Für einfache Workflows nicht. Der visuelle Editor funktioniert per
-              Drag-and-Drop. Für komplexere Anwendungsfälle sind Grundkenntnisse
-              in JavaScript oder Python hilfreich, aber nicht zwingend.
-            </Typo.Paragraph>
-
-            <Typo.H3>Ist n8n DSGVO-konform?</Typo.H3>
-            <Typo.Paragraph>
-              Ja, besonders im Self-Hosting-Modus. n8n GmbH sitzt in Berlin, die
-              Cloud-Daten liegen in Frankfurt. Ein AVV
-              (Auftragsverarbeitungsvertrag) ist verfügbar.
-            </Typo.Paragraph>
-
-            <Typo.H3>Kann n8n sich mit SAP verbinden?</Typo.H3>
-            <Typo.Paragraph>
-              Ja. Über den HTTP Request Node, die SAP Service Layer oder
-              Community-Integrationen. Es gibt fertige Templates für SAP
-              Business One.
-            </Typo.Paragraph>
-
-            <Typo.H3>Wie unterscheidet sich n8n von Zapier?</Typo.H3>
-            <Typo.Paragraph>
-              n8n ist Open Source, kann selbst gehostet werden, hat stärkere
-              KI-Funktionen und rechnet pro Workflow-Durchlauf ab statt pro
-              einzelner Aktion. Zapier ist einfacher zu bedienen und hat mehr
-              native Integrationen.
-            </Typo.Paragraph>
-
-            <Typo.H3>
-              Was passiert, wenn n8n als Unternehmen scheitert?
-            </Typo.H3>
-            <Typo.Paragraph>
-              Da der Quellcode öffentlich ist (GitHub, 178K Stars), kann die
-              Community das Projekt weiterführen. Das ist ein Vorteil gegenüber
-              proprietären Tools, bei denen ein Shutdown das Ende bedeutet.
+            <Typo.Paragraph className="text-gray-600">
+              Die Kostenfrage im Detail, inklusive der Grenzen der Community
+              Edition und der Preise der Cloud-Tarife, steht in{" "}
+              <Link href="/blog/ist-n8n-kostenlos" className="text-primary-500 hover:underline">
+                Ist n8n kostenlos?
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 
