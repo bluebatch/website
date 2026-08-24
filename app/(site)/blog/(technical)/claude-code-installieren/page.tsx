@@ -314,7 +314,14 @@ claude`}
               Auftrag, <code>claude -c</code> setzt die letzte Unterhaltung
               fort, <code>/help</code> zeigt alle Befehle, und mit
               Shift+Tab wechseln Sie zwischen den Permission-Modes, etwa in
-              den Plan-Modus, in dem Claude erst plant und nichts verändert.
+              den{" "}
+              <Link
+                href="/blog/claude-code-plan-mode"
+                className="text-primary-600 hover:underline"
+              >
+                Plan-Modus
+              </Link>
+              , in dem Claude erst plant und nichts verändert.
               Updates erledigt die native Installation im Hintergrund von
               selbst; <code>claude update</code> stößt sie manuell an. Und
               falls Claude Code wieder vom Rechner soll: Die Deinstallation

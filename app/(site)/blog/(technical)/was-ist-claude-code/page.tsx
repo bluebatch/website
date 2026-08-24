@@ -516,7 +516,15 @@ export default function Page() {
               Das ist der Teil, den fast keine Erklärseite behandelt, und der im
               Unternehmen zuerst geklärt sein will. Ein Werkzeug, das
               Projektdateien liest und Befehle ausführt, ist eine
-              Berechtigungsfrage, keine Geschmacksfrage.
+              Berechtigungsfrage, keine Geschmacksfrage. Den vorsichtigsten
+              Einstieg liefert Claude Code selbst mit dem{" "}
+              <Link
+                href="/blog/claude-code-plan-mode"
+                className="text-primary-600 hover:underline"
+              >
+                Plan Mode
+              </Link>
+              , in dem der Agent nur liest und plant, aber nichts schreibt.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Beim Zugangsweg gibt es vier Varianten, und sie unterscheiden sich
