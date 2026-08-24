@@ -18,9 +18,9 @@ export const metaCustom: BlogMeta = {
 };
 
 export const metadata: Metadata = {
-  title: "ChatGPT Agent erstellen: Anleitung und Wege im Vergleich 2026",
+  title: "ChatGPT Agent erstellen: Schritt-für-Schritt-Anleitung (2026)",
   description:
-    "ChatGPT Agent erstellen 2026: die vier Wege von Custom GPT über Agent Mode bis Responses API, Schritt für Schritt, Preise, DSGVO für den Mittelstand und welche OpenAI-Wege 2026 abgeschaltet werden.",
+    "In einer Stunde steht euer erster ChatGPT-Agent und arbeitet mit euren Daten. Schritt für Schritt durch alle vier Wege, mit Preisen und DSGVO-Regeln.",
   openGraph: {
     title: "ChatGPT Agent erstellen: die vier Wege im Vergleich 2026",
     description:
