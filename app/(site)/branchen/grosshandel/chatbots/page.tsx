@@ -6,6 +6,7 @@ import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { ProductTileGrid } from "@/components/cards/product-tile";
+import InternalLink from "@/components/buttons/internal-link";
 
 export const metadata: Metadata = {
   title: "KI-Chatbots für den Großhandel | Bluebatch",
@@ -62,6 +63,21 @@ export default function Page() {
         </div>
 
         <ProductTileGrid items={chatbots} cols={2} />
+      </ContentWrapper>
+
+      <ContentWrapper bodyWidth="small">
+        <Typo.H2 className="mb-4">Was kostet so ein Chatbot?</Typo.H2>
+        <Typo.Paragraph className="text-gray-600 mb-6">
+          Der Pilot oben startet bei 1.000 € Setup und 50 € Betrieb pro Monat.
+          Sobald mehr Systeme dranhängen, mehr Nutzer darauf zugreifen oder
+          eigene Datenschutzanforderungen dazukommen, verschiebt sich das. Wir
+          haben aufgeschrieben, aus welchen Blöcken sich der Preis zusammensetzt
+          und woran Sie vorab erkennen, in welche Größenordnung Ihr Projekt
+          fällt.
+        </Typo.Paragraph>
+        <InternalLink href="/branchen/grosshandel/chatbots/was-kostet-ein-chatbot">
+          Was ein KI-Chatbot kostet
+        </InternalLink>
       </ContentWrapper>
 
       <ContentWrapper noPadding bodyWidth="full">
