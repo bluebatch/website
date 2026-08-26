@@ -10,8 +10,11 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  // "Bluebatch_dark-*" = das WEISSE Logo (der Dateiname meint den Hintergrund,
+  // nicht die Logo-Farbe). Der OG-Hintergrund ist navy, also gehoert diese
+  // Variante hierher. Siehe design-system/foundations/logos/.
   const logo = readFileSync(
-    join(process.cwd(), "public/logo/Bluebatch_white-with-text.png"),
+    join(process.cwd(), "public/logo/Bluebatch_dark-with-text.png"),
   );
   const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
 
