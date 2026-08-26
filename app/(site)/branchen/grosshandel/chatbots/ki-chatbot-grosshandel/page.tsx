@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
+import InternalLink from "@/components/buttons/internal-link";
 import type { PageConfig } from "@/lib/get-subpages";
 import ContactButton from "@/components/buttons/contact-button";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -683,6 +684,17 @@ export default function Page() {
             </svg>
           </Link>
         </div>
+
+        <Typo.Paragraph className="mt-6 text-center text-gray-600">
+          Die 1.000 € gelten für diesen Piloten mit den fertigen Connectoren.
+          Wie sich der Preis verschiebt, sobald weitere Systeme, mehr Nutzer
+          oder eigene Datenschutzanforderungen dazukommen, steht in der
+          Kostenübersicht:{" "}
+          <InternalLink href="/branchen/grosshandel/chatbots/was-kostet-ein-chatbot">
+            was ein KI-Chatbot kostet
+          </InternalLink>
+          .
+        </Typo.Paragraph>
       </ContentWrapper>
 
       {/* 7. UPGRADE-PATH */}
