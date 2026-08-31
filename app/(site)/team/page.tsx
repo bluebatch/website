@@ -11,18 +11,7 @@ import Hero2Column, {
 } from "@/components/heroes/hero-2-column";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import Customer from "@/components/sections/customer/customer";
-import Hiring, {
-  HiringPosition,
-  HiringTitle,
-  HiringType,
-  HiringLocation,
-  HiringDescription,
-  HiringRequirements,
-  HiringRequirement,
-  HiringTags,
-  HiringTag,
-  HiringApply,
-} from "@/components/hiring/hiring";
+import InternalLink from "@/components/buttons/internal-link";
 import IntroBox from "@/components/ui/intro-box";
 import SimpleGrid from "@/components/layout/simple-grid";
 import Team, {
@@ -187,17 +176,18 @@ export default function TeamPage() {
             </TeamMember>
 
             <TeamMember>
-              <TeamImage initials="JK" />
-              <TeamName>Jonas Krüger</TeamName>
-              <TeamRole>Senior Workflow Developer</TeamRole>
+              <TeamImage initials="NB" />
+              <TeamName>Niklas Belser</TeamName>
+              <TeamRole>AI Solutions Engineer</TeamRole>
               <TeamDescription>
-                Jonas entwickelt skalierbare Automatisierungslösungen mit n8n
-                und bringt jahrelange Erfahrung als Full-Stack-Entwickler mit.
+                Niklas bringt KI dahin, wo sie Arbeit abnimmt: KI-Agenten mit
+                Zugriff auf ERP- und Dokumentendaten, MCP-Server und
+                LLM-gestützte Auswertungen in produktiven Workflows.
               </TeamDescription>
               <TeamTags>
-                <TeamTag variant="primary">Entwickler</TeamTag>
-                <TeamTag variant="secondary">TypeScript</TeamTag>
-                <TeamTag variant="accent">n8n Expert</TeamTag>
+                <TeamTag variant="primary">KI-Agenten</TeamTag>
+                <TeamTag variant="secondary">MCP</TeamTag>
+                <TeamTag variant="accent">LLM Integration</TeamTag>
               </TeamTags>
             </TeamMember>
 
@@ -279,208 +269,31 @@ export default function TeamPage() {
           <IntroBox.Paragraph>
             Bei Bluebatch dreht sich alles um Ergebnisse. Wir messen unseren
             Erfolg nicht an Projektlaufzeiten, sondern an der Zeit, die wir
-            unseren Kunden zurückgeben.
+            unseren Kunden zurückgeben. Wie aus dem ersten Workflow über die
+            Jahre eine eigene AI-Plattform wird, zeigt{" "}
+            <InternalLink href="/mit-euch-wachsen" variant="underline">
+              unser Wachstumsmodell
+            </InternalLink>
+            .
           </IntroBox.Paragraph>
         </IntroBox>
       </ContentWrapper>
 
-      {/* Open Positions */}
-      <ContentWrapper colorScheme="gray-light">
+      {/* Karriere */}
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <IntroBox>
           <IntroBox.PreHeadline>Karriere</IntroBox.PreHeadline>
           <IntroBox.Headline>Werde Teil von Bluebatch</IntroBox.Headline>
           <IntroBox.Subline>
             Wir wachsen und suchen talentierte Menschen, die mit uns die Zukunft
-            der Automatisierung gestalten wollen.
+            der Automatisierung gestalten wollen. Alle offenen Stellen, unser
+            Tech-Stack und das Bewerbungsformular stehen auf der Karriereseite.
           </IntroBox.Subline>
         </IntroBox>
-
-        <div className="mt-12">
-          <Hiring>
-            <HiringPosition>
-              <HiringTitle>n8n Workflow Developer</HiringTitle>
-              <HiringType>Vollzeit / Teilzeit</HiringType>
-              <HiringLocation>Remote / Hybrid</HiringLocation>
-              <HiringDescription>
-                Du baust komplexe Automatisierungs-Workflows mit n8n und
-                integrierst APIs, Datenbanken und KI-Services zu
-                leistungsstarken Lösungen für unsere Kunden.
-              </HiringDescription>
-              <HiringRequirements>
-                <HiringRequirement>
-                  Erfahrung mit n8n oder vergleichbaren Automation-Tools
-                </HiringRequirement>
-                <HiringRequirement>
-                  Kenntnisse in REST APIs und Webhooks
-                </HiringRequirement>
-                <HiringRequirement>
-                  Grundlagen in JavaScript/TypeScript
-                </HiringRequirement>
-                <HiringRequirement>
-                  Verständnis für Geschäftsprozesse
-                </HiringRequirement>
-              </HiringRequirements>
-              <HiringTags>
-                <HiringTag variant="primary">n8n</HiringTag>
-                <HiringTag variant="secondary">Automation</HiringTag>
-                <HiringTag variant="accent">API Integration</HiringTag>
-              </HiringTags>
-              <HiringApply />
-            </HiringPosition>
-
-            <HiringPosition>
-              <HiringTitle>Key Account Manager</HiringTitle>
-              <HiringType>Vollzeit</HiringType>
-              <HiringLocation>Remote / Hybrid</HiringLocation>
-              <HiringDescription>
-                Du betreust unsere wichtigsten Kunden, identifizierst
-                Automatisierungs-Potenziale und baust langfristige
-                Partnerschaften auf.
-              </HiringDescription>
-              <HiringRequirements>
-                <HiringRequirement>
-                  Erfahrung im B2B Account Management
-                </HiringRequirement>
-                <HiringRequirement>
-                  Technisches Verständnis für SaaS & Automation
-                </HiringRequirement>
-                <HiringRequirement>
-                  Starke Kommunikationsfähigkeiten
-                </HiringRequirement>
-                <HiringRequirement>
-                  Erfahrung mit CRM-Systemen
-                </HiringRequirement>
-              </HiringRequirements>
-              <HiringTags>
-                <HiringTag variant="primary">B2B</HiringTag>
-                <HiringTag variant="secondary">Account Management</HiringTag>
-                <HiringTag variant="accent">SaaS</HiringTag>
-              </HiringTags>
-              <HiringApply />
-            </HiringPosition>
-
-            <HiringPosition>
-              <HiringTitle>Backoffice Manager</HiringTitle>
-              <HiringType>Vollzeit / Teilzeit</HiringType>
-              <HiringLocation>Remote / Hybrid</HiringLocation>
-              <HiringDescription>
-                Du hältst den Laden am Laufen - von Rechnungsstellung über
-                Vertragsmanagement bis hin zur Organisation interner Prozesse.
-              </HiringDescription>
-              <HiringRequirements>
-                <HiringRequirement>
-                  Erfahrung in Büroorganisation oder Verwaltung
-                </HiringRequirement>
-                <HiringRequirement>
-                  Sicherer Umgang mit digitalen Tools
-                </HiringRequirement>
-                <HiringRequirement>
-                  Strukturierte und eigenständige Arbeitsweise
-                </HiringRequirement>
-                <HiringRequirement>
-                  Grundkenntnisse in Buchhaltung von Vorteil
-                </HiringRequirement>
-              </HiringRequirements>
-              <HiringTags>
-                <HiringTag variant="primary">Organisation</HiringTag>
-                <HiringTag variant="secondary">Verwaltung</HiringTag>
-                <HiringTag variant="accent">Digitale Tools</HiringTag>
-              </HiringTags>
-              <HiringApply />
-            </HiringPosition>
-
-            <HiringPosition>
-              <HiringTitle>AI Solutions Engineer</HiringTitle>
-              <HiringType>Vollzeit</HiringType>
-              <HiringLocation>Remote</HiringLocation>
-              <HiringDescription>
-                Du entwickelst KI-gestützte Lösungen und integrierst LLMs,
-                Computer Vision und NLP-Modelle in die Workflows unserer Kunden.
-              </HiringDescription>
-              <HiringRequirements>
-                <HiringRequirement>
-                  Erfahrung mit LLMs und AI APIs (OpenAI, Claude, etc.)
-                </HiringRequirement>
-                <HiringRequirement>
-                  Python oder TypeScript Kenntnisse
-                </HiringRequirement>
-                <HiringRequirement>
-                  Verständnis für Prompt Engineering
-                </HiringRequirement>
-                <HiringRequirement>
-                  Interesse an neuen KI-Technologien
-                </HiringRequirement>
-              </HiringRequirements>
-              <HiringTags>
-                <HiringTag variant="primary">KI</HiringTag>
-                <HiringTag variant="secondary">LLM</HiringTag>
-                <HiringTag variant="accent">Python</HiringTag>
-              </HiringTags>
-              <HiringApply />
-            </HiringPosition>
-
-            <HiringPosition>
-              <HiringTitle>Sales Development Representative</HiringTitle>
-              <HiringType>Vollzeit</HiringType>
-              <HiringLocation>Remote / Hybrid</HiringLocation>
-              <HiringDescription>
-                Du generierst neue Leads, qualifizierst potenzielle Kunden und
-                legst den Grundstein für erfolgreiche Geschäftsbeziehungen.
-              </HiringDescription>
-              <HiringRequirements>
-                <HiringRequirement>
-                  Erste Erfahrung im B2B-Vertrieb oder SDR-Rolle
-                </HiringRequirement>
-                <HiringRequirement>
-                  Kommunikationsstärke und Überzeugungskraft
-                </HiringRequirement>
-                <HiringRequirement>
-                  Eigeninitiative und Zielorientierung
-                </HiringRequirement>
-                <HiringRequirement>
-                  Affinität zu Tech & Automation
-                </HiringRequirement>
-              </HiringRequirements>
-              <HiringTags>
-                <HiringTag variant="primary">Sales</HiringTag>
-                <HiringTag variant="secondary">B2B</HiringTag>
-                <HiringTag variant="accent">Lead Gen</HiringTag>
-              </HiringTags>
-              <HiringApply />
-            </HiringPosition>
-
-            <HiringPosition>
-              <HiringTitle>Werkstudent:in Workflow Automation</HiringTitle>
-              <HiringType>Teilzeit (15-20h/Woche)</HiringType>
-              <HiringLocation>Remote</HiringLocation>
-              <HiringDescription>
-                Du unterstützt unser Team bei der Entwicklung und Optimierung
-                von Automatisierungs-Workflows und sammelst Praxiserfahrung mit
-                modernsten Tools.
-              </HiringDescription>
-              <HiringRequirements>
-                <HiringRequirement>
-                  Laufendes Studium (Informatik, BWL, o.ä.)
-                </HiringRequirement>
-                <HiringRequirement>
-                  Interesse an Automatisierung und No-Code/Low-Code
-                </HiringRequirement>
-                <HiringRequirement>
-                  Schnelle Auffassungsgabe und Lernbereitschaft
-                </HiringRequirement>
-                <HiringRequirement>
-                  Erste Erfahrung mit Tools wie n8n, Make oder Zapier von
-                  Vorteil
-                </HiringRequirement>
-              </HiringRequirements>
-              <HiringTags>
-                <HiringTag variant="primary">Werkstudent</HiringTag>
-                <HiringTag variant="secondary">No-Code</HiringTag>
-                <HiringTag variant="accent">Einstieg</HiringTag>
-              </HiringTags>
-              <HiringApply />
-            </HiringPosition>
-          </Hiring>
+        <div className="mt-8 flex justify-center">
+          <InternalLink href="/karriere">
+            Offene Stellen bei Bluebatch ansehen
+          </InternalLink>
         </div>
       </ContentWrapper>
 

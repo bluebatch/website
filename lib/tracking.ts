@@ -28,6 +28,7 @@ export enum Ga4Event {
   CtaChannelSelect = "cta_channel_select",
   ContactFormSubmitted = "contact_form_submitted",
   MeetingBooked = "meeting_booked",
+  JobApplicationSubmitted = "job_application_submitted",
 }
 
 /** Meta (Facebook) standard event names. Sent to Pixel + CAPI together. */

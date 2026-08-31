@@ -38,6 +38,12 @@ const uberUnsMenu = {
           href: "/team",
         },
         {
+          icon: "/icons/rocket-launch.svg",
+          title: "Karriere",
+          description: "Offene Stellen & Bewerbung",
+          href: "/karriere",
+        },
+        {
           icon: "/icons/phone.svg",
           title: "Kontakt",
           description: "Nehmen Sie Kontakt auf",

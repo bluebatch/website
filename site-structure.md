@@ -329,6 +329,11 @@ Grundsätze:
 ├── contact ................................... [MONEY]  finales Ziel aller Ketten
 ├── mit-euch-wachsen .......................... [CONTENT] Prozess & Positionierung (Trust)
 ├── team ...................................... [CONTENT] Trust
+├── karriere .................................. [CONTENT] Trust/Recruiting;
+│                                                Stellen aus lib/career-jobs.ts,
+│                                                Bewerbung nur per Formular
+│                                                (/api/karriere → eigenes
+│                                                HubSpot-Formular)
 │
 ├── impressum ................................. [SYS]
 └── datenschutz ............................... [SYS]
@@ -393,7 +398,7 @@ Services ▾ ──────────────────────�
 │  ├─ Performance Scaling     └─ Alle Tools → Hub
 │  └─ Zertifizierung
 
-Über uns ▾: Mit euch wachsen · Team · Kontakt
+Über uns ▾: Mit euch wachsen · Team · Karriere · Kontakt
 Blog ▾:     die 5 neuesten Artikel · Alle Artikel → Hub
 ```
 

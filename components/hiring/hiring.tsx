@@ -2,6 +2,7 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import ContactButton from "@/components/buttons/contact-button";
+import Button from "@/components/ui/button";
 
 interface HiringProps {
   children: ReactNode;
@@ -50,7 +51,10 @@ interface HiringTagProps {
 }
 
 interface HiringApplyProps {
+  /** Link-Modus (Default). Wird ignoriert, sobald onClick gesetzt ist. */
   href?: string;
+  /** Aktions-Modus: scrollt z.B. zum Bewerbungsformular und wählt die Stelle vor. */
+  onClick?: () => void;
   children?: ReactNode;
   className?: string;
 }
@@ -199,14 +203,22 @@ export function HiringTag({
 
 export function HiringApply({
   href = "/contact",
+  onClick,
   children,
   className = "",
 }: HiringApplyProps) {
+  const label = children || "Jetzt bewerben";
   return (
     <div className={`mt-auto pt-4 ${className}`}>
-      <ContactButton href={href} icon="mail" size="sm">
-        {children || "Jetzt bewerben"}
-      </ContactButton>
+      {onClick ? (
+        <Button onClick={onClick} className="!px-4 !py-2 text-sm">
+          {label}
+        </Button>
+      ) : (
+        <ContactButton href={href} icon="mail" size="sm">
+          {label}
+        </ContactButton>
+      )}
     </div>
   );
 }

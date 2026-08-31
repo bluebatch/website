@@ -14,6 +14,7 @@ const uberUns = [
   { label: "Startseite", href: "/" },
   { label: "Mit euch wachsen", href: "/mit-euch-wachsen" },
   { label: "Das Team", href: "/team" },
+  { label: "Karriere", href: "/karriere" },
   { label: "Kontakt", href: "/contact" },
 ];
 
