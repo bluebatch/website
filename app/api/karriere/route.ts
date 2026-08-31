@@ -12,12 +12,12 @@ const FORM_GUID = "9ff50a22-af98-49e8-aefa-6e3602a314ca";
 const SUBMIT_URL = `https://api-eu1.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_GUID}`;
 
 // Attribution ist hier konstant, nicht aus UTM-Parametern gemappt: eine
-// Bewerbung kommt immer über die Website herein. lead_content="application"
+// Bewerbung kommt immer über die Website herein. lead_content="Bewerbung"
 // macht Bewerber in HubSpot mit einem Filter von Sales-Leads trennbar.
 const LEAD_ATTRIBUTION = {
   lead_source: "inbound",
   lead_medium: "website",
-  lead_content: "application",
+  lead_content: "Bewerbung",
 } as const;
 
 // Felder, die jedes unserer HubSpot-Formulare kennt. Alles darüber hinaus
