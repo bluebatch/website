@@ -12,9 +12,6 @@ import Hero2Column, {
 import IntroBox from "@/components/ui/intro-box";
 import ProseColumns from "@/components/ui/prose-columns";
 import SimpleCard from "@/components/cards/simple-card";
-import TimelineAsSteps, {
-  TimelineAsStepsStep,
-} from "@/components/ui/timeline-as-steps";
 import { FaqContainer } from "@/components/ui/faqs";
 import Typo from "@/components/ui/typo";
 import InternalLink from "@/components/buttons/internal-link";
@@ -302,60 +299,16 @@ export default function KarrierePage() {
         <SimpleGrid cols={3} className="mt-12 gap-8">
           {benefits.map((benefit) => (
             <SimpleCard key={benefit.title} align="left">
-              <Typo.H3 className="mt-0! mb-3 text-xl">{benefit.title}</Typo.H3>
+              {/* Farbe explizit: die Sektion setzt text-white, die Karte ist weiß. */}
+              <Typo.H3 className="mt-0! mb-3 text-xl text-gray-900">
+                {benefit.title}
+              </Typo.H3>
               <Typo.Paragraph className="text-sm text-gray-600">
                 {benefit.description}
               </Typo.Paragraph>
             </SimpleCard>
           ))}
         </SimpleGrid>
-      </ContentWrapper>
-
-      {/* Ablauf */}
-      <ContentWrapper bodyWidth="small">
-        <IntroBox>
-          <IntroBox.PreHeadline>Ablauf</IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            Vom Formular zur Zusage in drei Wochen
-          </IntroBox.Headline>
-        </IntroBox>
-
-        <div className="mt-12">
-          <TimelineAsSteps>
-            <TimelineAsStepsStep value={1}>
-              <Typo.H3 className="mt-2!">Bewerbung über das Formular</Typo.H3>
-              <Typo.Paragraph>
-                Name, E-Mail, Stelle und ein paar Sätze zu dir. Wir bestätigen
-                den Eingang sofort und melden uns innerhalb einer Woche.
-              </Typo.Paragraph>
-            </TimelineAsStepsStep>
-
-            <TimelineAsStepsStep value={2}>
-              <Typo.H3 className="mt-2!">Kennenlernen per Video</Typo.H3>
-              <Typo.Paragraph>
-                30 Minuten mit Max und der Person, mit der du am meisten
-                arbeiten würdest. Gegenseitige Fragen, keine Fangfragen.
-              </Typo.Paragraph>
-            </TimelineAsStepsStep>
-
-            <TimelineAsStepsStep value={3}>
-              <Typo.H3 className="mt-2!">Fachlicher Teil</Typo.H3>
-              <Typo.Paragraph>
-                Eine kleine Aufgabe aus unserem Alltag oder ein Fachgespräch,
-                je nach Rolle. Zeitaufwand maximal zwei Stunden, keine
-                unbezahlten Probeprojekte.
-              </Typo.Paragraph>
-            </TimelineAsStepsStep>
-
-            <TimelineAsStepsStep value={4} isLast>
-              <Typo.H3 className="mt-2!">Entscheidung und Start</Typo.H3>
-              <Typo.Paragraph>
-                Rückmeldung in beide Richtungen, dann Vertrag und
-                Onboarding-Plan für die ersten 30 Tage.
-              </Typo.Paragraph>
-            </TimelineAsStepsStep>
-          </TimelineAsSteps>
-        </div>
       </ContentWrapper>
 
       {/* Offene Stellen + Bewerbungsformular */}
