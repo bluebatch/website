@@ -1,4 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
+import {
+  createNote,
+  ensureContact,
+  hubspotConfigured,
+} from "@/lib/server/hubspot-lead";
 
 export const runtime = "nodejs";
 
@@ -20,10 +25,9 @@ const LEAD_ATTRIBUTION = {
   lead_content: "Bewerbung",
 } as const;
 
-// Felder, die jedes unserer HubSpot-Formulare kennt. Alles darüber hinaus
-// (z.B. ein eigenes "position"-Property) wird optimistisch mitgeschickt und
-// beim Retry weggelassen — sonst gingen Bewerbungen verloren, nur weil das
-// Formular ein Feld noch nicht führt.
+// Felder, die jedes unserer HubSpot-Formulare kennt. Alles darüber hinaus wird
+// optimistisch mitgeschickt und beim Retry weggelassen, falls HubSpot den
+// Submit wegen eines unbekannten Feldes ablehnt.
 const CORE_FIELDS = ["email", "firstname", "lastname", "ihre_anfrage"];
 
 interface Payload {
@@ -39,13 +43,25 @@ interface Payload {
 
 type Field = { name: string; value: string };
 
-/** Baut den Freitext, der auch im Fallback-Formular die ganze Bewerbung enthält. */
+/** Freitext für das Formularfeld ihre_anfrage, falls das Formular es führt. */
 function buildMessage(body: Payload): string {
   const parts: string[] = [];
   if (body.position?.trim()) parts.push(`Bewerbung als: ${body.position.trim()}`);
   if (body.profileUrl?.trim()) parts.push(`Profil: ${body.profileUrl.trim()}`);
   if (body.message?.trim()) parts.push(body.message.trim());
   return parts.join("\n\n");
+}
+
+/** Dieselben Inhalte als Notiz-HTML für die Kontakt-Timeline. */
+function buildNoteBody(body: Payload, email: string): string {
+  const lines = [`<strong>E-Mail:</strong> ${email}`];
+  if (body.position?.trim())
+    lines.push(`<strong>Stelle:</strong> ${body.position.trim()}`);
+  if (body.profileUrl?.trim())
+    lines.push(`<strong>Profil:</strong> ${body.profileUrl.trim()}`);
+  if (body.message?.trim())
+    lines.push(`<strong>Nachricht:</strong> ${body.message.trim()}`);
+  return `<p><strong>Bewerbung über bluebatch.io/karriere</strong></p><p>${lines.join("<br>")}</p>`;
 }
 
 function submit(fields: Field[], context: Record<string, string>) {
@@ -80,7 +96,6 @@ export async function POST(req: NextRequest) {
   push("firstname", body.firstname);
   push("lastname", body.lastname);
   push("ihre_anfrage", buildMessage(body));
-  push("position", body.position);
   for (const [name, value] of Object.entries(LEAD_ATTRIBUTION)) push(name, value);
 
   // hubspotutk ist ein First-Party-Cookie auf unserer Domain und kommt daher
@@ -90,6 +105,14 @@ export async function POST(req: NextRequest) {
   if (hutk) context.hutk = hutk;
   if (body.pageUri) context.pageUri = body.pageUri;
   if (body.pageName) context.pageName = body.pageName;
+
+  // Kontakt VOR dem Form-Submit anlegen: HubSpot verwirft Formularfelder, die
+  // das Formular nicht führt, kommentarlos und antwortet trotzdem mit 200. Der
+  // eigentliche Bewerbungsinhalt (Stelle, Profil, Nachricht) geht deshalb nicht
+  // über das Formular, sondern als Notiz an den Kontakt. Vor dem Submit, weil
+  // die Suche einen gerade per Formular angelegten Kontakt noch nicht findet
+  // und ensureContact dann an der Dublettenprüfung scheitern würde.
+  const contactId = hubspotConfigured() ? await ensureContact(email) : null;
 
   try {
     let res = await submit(fields, context);
@@ -107,7 +130,13 @@ export async function POST(req: NextRequest) {
         { status: 502 },
       );
     }
-    return NextResponse.json({ ok: true });
+    if (contactId) {
+      await createNote(buildNoteBody(body, email), {
+        object: "contacts",
+        id: contactId,
+      });
+    }
+    return NextResponse.json({ ok: true, noted: Boolean(contactId) });
   } catch {
     return NextResponse.json({ ok: false, error: "network" }, { status: 502 });
   }
