@@ -46,9 +46,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "email required" }, { status: 400 });
   }
 
-  // Jedes Feld hier muss auch AUF dem Formular liegen. HubSpot verwirft Felder,
-  // die das Formular nicht führt, kommentarlos und antwortet trotzdem mit 200 —
-  // ein Tippfehler im Feldnamen fällt also nicht auf, der Wert fehlt einfach.
+  // Jedes Feld hier muss als Kontakt-Property existieren UND auf dem Formular
+  // liegen. HubSpot verwirft alles andere kommentarlos und antwortet trotzdem
+  // mit 200 — ein falscher Feldname fällt also nicht auf, der Wert fehlt still.
   const fields: Field[] = [];
   const push = (name: string, value?: string) => {
     if (value && value.trim()) fields.push({ name, value: value.trim() });
@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
   push("firstname", body.firstname);
   push("lastname", body.lastname);
   push("stelle", body.position);
-  push("hs_linkedin_handle", body.profileUrl);
+  push("profil_link", body.profileUrl);
   push("warum_du_zu_uns_passt", body.message);
   for (const [name, value] of Object.entries(LEAD_ATTRIBUTION)) push(name, value);
 
