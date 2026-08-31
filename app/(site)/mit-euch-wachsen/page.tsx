@@ -6,6 +6,7 @@ import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
 import ContactButton from "@/components/buttons/contact-button";
+import InternalLink from "@/components/buttons/internal-link";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import Icon from "@/components/ui/icon";
 import { ArrowRight, User } from "lucide-react";
@@ -679,7 +680,11 @@ export default function Page() {
           <IntroBox.Headline>Welche Größe passt zu euch?</IntroBox.Headline>
           <IntroBox.Paragraph>
             In 15 Minuten sortieren wir gemeinsam ein, wo ihr steht, und welche Größe der
-            richtige nächste Schritt ist. Unverbindlich.
+            richtige nächste Schritt ist. Unverbindlich. Ihr sprecht dabei direkt mit{" "}
+            <InternalLink href="/team" variant="underline">
+              den Leuten, die eure Workflows später bauen
+            </InternalLink>
+            , nicht mit einem Vertriebsteam.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex justify-center">

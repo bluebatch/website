@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
+import InternalLink from "@/components/buttons/internal-link";
 import Typo from "@/components/ui/typo";
 import BackgroundHero from "@/components/heroes/background-hero";
 import ContactButton from "@/components/buttons/contact-button";
@@ -177,7 +178,12 @@ export default function Home() {
                 wir keine klassische Software - durch Automatisierung mit n8n
                 erschaffen wir digitale Mitarbeiter. Unsere AI-Workflows
                 übernehmen die kognitive Routinearbeit, damit Ihre Teams wieder
-                das tun können, wofür sie eingestellt wurden.
+                das tun können, wofür sie eingestellt wurden. Dahinter steht
+                ein kleines Team aus{" "}
+                <InternalLink href="/team" variant="underline">
+                  Workflow-Architekten und Entwicklern
+                </InternalLink>
+                , das die Projekte selbst umsetzt.
               </IntroBox.Subline>
             </IntroBox>
           </div>
