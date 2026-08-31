@@ -35,16 +35,6 @@ export default function JobApplicationForm({
     if (status === "sending") return;
     setStatus("sending");
 
-    // Meta-/UTM-Attribution liegt im localStorage (vom MetaAdsTracker), nicht im
-    // Cookie. Backend mappt sie auf die lead_*-Felder des Karriere-Formulars.
-    let attribution: unknown;
-    try {
-      const raw = window.localStorage.getItem("bb_meta_attribution");
-      if (raw) attribution = JSON.parse(raw);
-    } catch {
-      // kein/ungültiges Storage — Bewerbung läuft trotzdem
-    }
-
     try {
       const res = await fetch("/api/karriere", {
         method: "POST",
@@ -56,7 +46,6 @@ export default function JobApplicationForm({
           position,
           profileUrl: profileUrl.trim(),
           message: message.trim(),
-          attribution,
           pageUri: window.location.href,
           pageName: document.title,
         }),

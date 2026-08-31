@@ -1,31 +1,30 @@
 import { NextRequest, NextResponse } from "next/server";
-import { mapLead } from "@/lib/server/lead-mapping";
 
 export const runtime = "nodejs";
 
 // Bewerbungen laufen bewusst NICHT über /api/contact. Dort feuert jeder Submit
 // ein Meta-"Lead"-Event, und ein Bewerber als Meta-Conversion verzerrt die
-// Ads-Optimierung. Hier also: eigenes HubSpot-Formular, kein Meta-Event. Die
-// UTM-Attribution kommt mit, das Formular heißt nicht umsonst "mit-utm".
+// Ads-Optimierung. Hier also: eigenes HubSpot-Formular "Bewerbung-mit-utm",
+// kein Meta-Event. Die Submission-API adressiert das Formular über die GUID,
+// nicht über die kurze Embed-ID aus dem Einbettungscode.
 const PORTAL_ID = "146998643";
-
-// Dediziertes Karriere-Formular in HubSpot. Die Submission-API adressiert das
-// Formular über die GUID, nicht über die kurze Embed-ID aus dem Einbettungscode.
-const KARRIERE_FORM_GUID = "9ff50a22-af98-49e8-aefa-6e3602a314ca";
-const FORM_GUID = process.env.HUBSPOT_KARRIERE_FORM_GUID || KARRIERE_FORM_GUID;
+const FORM_GUID = "9ff50a22-af98-49e8-aefa-6e3602a314ca";
 const SUBMIT_URL = `https://api-eu1.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_GUID}`;
+
+// Attribution ist hier konstant, nicht aus UTM-Parametern gemappt: eine
+// Bewerbung kommt immer über die Website herein. lead_content="application"
+// macht Bewerber in HubSpot mit einem Filter von Sales-Leads trennbar.
+const LEAD_ATTRIBUTION = {
+  lead_source: "inbound",
+  lead_medium: "website",
+  lead_content: "application",
+} as const;
 
 // Felder, die jedes unserer HubSpot-Formulare kennt. Alles darüber hinaus
 // (z.B. ein eigenes "position"-Property) wird optimistisch mitgeschickt und
 // beim Retry weggelassen — sonst gingen Bewerbungen verloren, nur weil das
 // Formular ein Feld noch nicht führt.
 const CORE_FIELDS = ["email", "firstname", "lastname", "ihre_anfrage"];
-
-interface Attribution {
-  fbclid?: string | null;
-  // utm enthält utm_*, hsa_* und ggf. fbclid — so wie MetaAdsTracker es ablegt.
-  utm?: Record<string, string>;
-}
 
 interface Payload {
   firstname?: string;
@@ -34,7 +33,6 @@ interface Payload {
   position?: string; // beworbene Stelle bzw. "Initiativbewerbung"
   profileUrl?: string; // LinkedIn, GitHub oder Portfolio
   message?: string;
-  attribution?: Attribution;
   pageUri?: string;
   pageName?: string;
 }
@@ -83,12 +81,7 @@ export async function POST(req: NextRequest) {
   push("lastname", body.lastname);
   push("ihre_anfrage", buildMessage(body));
   push("position", body.position);
-
-  const mapped = mapLead(body.attribution?.utm ?? {}, body.attribution?.fbclid);
-  push("lead_source", mapped.lead_source);
-  push("lead_medium", mapped.lead_medium);
-  push("lead_campaign", mapped.lead_campaign);
-  push("lead_content", mapped.lead_content);
+  for (const [name, value] of Object.entries(LEAD_ATTRIBUTION)) push(name, value);
 
   // hubspotutk ist ein First-Party-Cookie auf unserer Domain und kommt daher
   // automatisch mit dem Request — HubSpot hängt die Bewerbung so an die Session.
