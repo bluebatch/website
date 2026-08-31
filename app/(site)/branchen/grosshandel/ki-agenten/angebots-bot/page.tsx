@@ -16,6 +16,7 @@ import Hero2Column, {
 } from "@/components/heroes/hero-2-column";
 import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
+import InternalLink from "@/components/buttons/internal-link";
 import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
 import PhaseCard, {
@@ -324,13 +325,13 @@ export default async function Page({
 
       <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <IntroBox>
-          <IntroBox.PreHeadline>Der Workflow</IntroBox.PreHeadline>
+          <IntroBox.PreHeadline>Leistungsumfang</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            So funktioniert automatisiertes Angebotsmanagement
+            Kalkulation, Versand und Nachfassen in einem Bot
           </IntroBox.Headline>
           <IntroBox.Subline>
-            Vier automatisierte Schritte - von der Kundenanfrage zum versendeten
-            Angebot.
+            Vier Schritte, die der Bot für Ihr Vertriebsteam übernimmt - mit
+            Preisen aus Ihrem ERP und lückenloser Dokumentation im CRM.
           </IntroBox.Subline>
         </IntroBox>
 
@@ -370,7 +371,14 @@ export default async function Page({
               <IntroBox.Subline>
                 Der Angebots-Bot übernimmt die repetitiven Aufgaben: Preise
                 nachschlagen, Dokumente formatieren, E-Mails versenden,
-                Follow-ups planen.
+                Follow-ups planen. Wie{" "}
+                <InternalLink
+                  href="/blog/automatische-angebotserstellung-grosshandel"
+                  variant="underline"
+                >
+                  automatische Angebotserstellung
+                </InternalLink>{" "}
+                im Großhandel Schritt für Schritt abläuft, erklärt unser Guide.
               </IntroBox.Subline>
             </IntroBox>
           </div>
