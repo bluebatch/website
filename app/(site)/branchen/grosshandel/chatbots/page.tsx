@@ -66,6 +66,21 @@ export default function Page() {
       </ContentWrapper>
 
       <ContentWrapper bodyWidth="small">
+        <Typo.H2 className="mb-4">Was ist ein KI-Chatbot überhaupt?</Typo.H2>
+        <Typo.Paragraph className="text-gray-600 mb-6">
+          Der Begriff wird für sehr Unterschiedliches benutzt: für
+          regelbasierte Frage-Antwort-Bäume genauso wie für Systeme, die auf
+          einem Sprachmodell laufen und auf Ihre eigenen Daten zugreifen. Wir
+          haben aufgeschrieben, wie ein KI-Chatbot technisch funktioniert,
+          woher er seine Antworten nimmt und wo der Unterschied zu einem
+          klassischen Chatbot liegt.
+        </Typo.Paragraph>
+        <InternalLink href="/branchen/grosshandel/chatbots/was-ist-ein-ki-chatbot">
+          Was ein KI-Chatbot ist
+        </InternalLink>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <Typo.H2 className="mb-4">Was kostet so ein Chatbot?</Typo.H2>
         <Typo.Paragraph className="text-gray-600 mb-6">
           Der Pilot oben startet bei 1.000 € Setup und 50 € Betrieb pro Monat.

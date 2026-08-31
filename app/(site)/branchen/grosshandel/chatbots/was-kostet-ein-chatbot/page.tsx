@@ -26,6 +26,7 @@ import ProsCons from "@/components/sections/pros-cons";
 import CrossSellGrid from "@/components/sections/cross-sell-grid";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import ContactButton from "@/components/buttons/contact-button";
+import InternalLink from "@/components/buttons/internal-link";
 
 const meta = {
   title: "Was kostet ein KI-Chatbot? Preise 2026 für den Großhandel | Bluebatch",
@@ -192,7 +193,15 @@ export default function Page() {
           <IntroBox.Paragraph>
             Die Preisspannen im Netz mischen zwei Produkte, die wenig
             miteinander zu tun haben. Das erklärt, warum die Angebote zwischen
-            49 € und fünfstellig auseinanderlaufen.
+            49 € und fünfstellig auseinanderlaufen. Wenn Sie zuerst wissen
+            wollen,{" "}
+            <InternalLink
+              href="/branchen/grosshandel/chatbots/was-ist-ein-ki-chatbot"
+              variant="underline"
+            >
+              was ein KI-Chatbot technisch ist
+            </InternalLink>{" "}
+            und woher er seine Antworten nimmt, fangen Sie dort an.
           </IntroBox.Paragraph>
         </IntroBox>
 
