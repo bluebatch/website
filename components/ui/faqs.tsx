@@ -42,13 +42,23 @@ function FAQItem({ title, children }: PropsWithChildren<FAQItemProps>) {
 
 export interface FaqContainerProps {
   faqs: { question: string; answer: string }[];
+  /**
+   * Überschrift. Als Prop, weil die Sub-Komponente FaqContainer.Headline über
+   * die Server-/Client-Grenze nicht erkannt wird (Server-Pages sehen nur eine
+   * Client-Referenz, der Typvergleich unten greift dort nicht).
+   */
+  headline?: ReactNode;
+  /** Einleitungssatz über den Fragen — überschreibbar für Seiten, die duzen. */
+  intro?: ReactNode;
 }
 
 export function FaqContainer({
   faqs,
+  headline: headlineProp,
+  intro = "Hier finden Sie die Antworten auf häufig gestellte Fragen.",
   children,
 }: PropsWithChildren<FaqContainerProps>) {
-  let headline: ReactNode = "Häufig gestellte Fragen";
+  let headline: ReactNode = headlineProp ?? "Häufig gestellte Fragen";
 
   Children.forEach(children, (child) => {
     if (isValidElement<PropsWithChildren>(child) && child.type === FaqContainerHeadline) {
@@ -82,9 +92,7 @@ export function FaqContainer({
         />
       )}
       <Typo.H3>{headline}</Typo.H3>
-      <Typo.Paragraph>
-        Hier finden Sie die Antworten auf häufig gestellte Fragen.
-      </Typo.Paragraph>
+      <Typo.Paragraph>{intro}</Typo.Paragraph>
       {faqs.map((faq, i) => (
         <FAQItem key={`${faq.question}-${i}`} title={faq.question}>
           <Typo.Paragraph>{faq.answer}</Typo.Paragraph>

@@ -6,6 +6,7 @@ export { default as ChatConversation } from "./chat-conversation";
 export { default as ComplianceNoticeBox } from "./compliance-notice-box";
 export { default as DataTable } from "./data-table";
 export { FaqContainer } from "./faqs";
+export { FormField, FormSelect, FormTextarea } from "./form-field";
 export { default as GeoSummary } from "./geo-summary";
 export { default as Icon } from "./icon";
 export { default as IntroBox } from "./intro-box";

@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { FormField, FormTextarea } from "@/components/ui/form-field";
 import { tracking, Ga4Event } from "@/lib/tracking";
 
 type FormStatus = "idle" | "sending" | "done" | "error";
@@ -93,14 +94,14 @@ export default function ContactForm({
   return (
     <form onSubmit={submit} className={`text-left ${className}`}>
       <div className="grid gap-3 sm:grid-cols-2">
-        <Field
+        <FormField
           label="Vorname"
           value={firstname}
           onChange={setFirstname}
           autoComplete="given-name"
           required
         />
-        <Field
+        <FormField
           label="Nachname"
           value={lastname}
           onChange={setLastname}
@@ -108,7 +109,7 @@ export default function ContactForm({
           required
         />
       </div>
-      <Field
+      <FormField
         label="E-Mail"
         type="email"
         value={email}
@@ -117,7 +118,7 @@ export default function ContactForm({
         required
         className="mt-3"
       />
-      <Field
+      <FormField
         label="Telefon"
         type="tel"
         value={phone}
@@ -125,17 +126,13 @@ export default function ContactForm({
         autoComplete="tel"
         className="mt-3"
       />
-      <label className="mt-3 block">
-        <span className="mb-1 block text-sm font-medium text-gray-700">
-          Ihre Anfrage
-        </span>
-        <textarea
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          rows={4}
-          className="w-full resize-y rounded-lg border border-gray-300 px-4 py-2.5 text-gray-900 outline-none transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-100"
-        />
-      </label>
+      <FormTextarea
+        label="Ihre Anfrage"
+        value={message}
+        onChange={setMessage}
+        rows={4}
+        className="mt-3"
+      />
       <button
         type="submit"
         disabled={status === "sending"}
@@ -149,40 +146,5 @@ export default function ContactForm({
         </p>
       )}
     </form>
-  );
-}
-
-function Field({
-  label,
-  value,
-  onChange,
-  type = "text",
-  autoComplete,
-  required = false,
-  className = "",
-}: {
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-  type?: string;
-  autoComplete?: string;
-  required?: boolean;
-  className?: string;
-}) {
-  return (
-    <label className={`block ${className}`}>
-      <span className="mb-1 block text-sm font-medium text-gray-700">
-        {label}
-        {required && <span className="text-cta-600"> *</span>}
-      </span>
-      <input
-        type={type}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        autoComplete={autoComplete}
-        required={required}
-        className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-gray-900 outline-none transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-100"
-      />
-    </label>
   );
 }
