@@ -95,6 +95,20 @@ export default function Page() {
         </InternalLink>
       </ContentWrapper>
 
+      <ContentWrapper bodyWidth="small">
+        <Typo.H2 className="mb-4">Und wie entsteht so ein Chatbot?</Typo.H2>
+        <Typo.Paragraph className="text-gray-600 mb-6">
+          Die eigentliche Arbeit steckt nicht im Chatfenster, sondern in den
+          Datenquellen dahinter: ERP, Dateiablage, Preislisten, samt
+          Berechtigungen. Wir haben aufgeschrieben, was vorher bei Ihnen
+          vorhanden sein muss, was in den fünf Arbeitstagen technisch entsteht
+          und an welcher Stelle ein Baukasten-Tool ausreicht.
+        </Typo.Paragraph>
+        <InternalLink href="/branchen/grosshandel/chatbots/ki-chatbot-implementierung">
+          Wie man einen KI-Chatbot erstellt
+        </InternalLink>
+      </ContentWrapper>
+
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />
       </ContentWrapper>

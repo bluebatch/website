@@ -473,6 +473,17 @@ export default function Page() {
           <IntroBox.Headline>
             Diese beiden Varianten gibt es zum Festpreis
           </IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Was in den fünf Tagen dahinter passiert, welche Zugänge Sie vorher
+            bereitstellen und wer was übernimmt, steht in der{" "}
+            <InternalLink
+              href="/branchen/grosshandel/chatbots/ki-chatbot-implementierung"
+              variant="underline"
+            >
+              Anleitung zum Erstellen eines KI-Chatbots
+            </InternalLink>
+            .
+          </IntroBox.Paragraph>
         </IntroBox>
 
         <SimpleGrid cols={2} className="mt-10 gap-8">
