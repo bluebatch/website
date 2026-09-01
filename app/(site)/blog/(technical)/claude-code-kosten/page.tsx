@@ -23,13 +23,13 @@ export const metaCustom: BlogMeta = {
 };
 
 export const metadata: Metadata = {
-  title: "Claude Code Preis 2026: Abos, API-Kosten und reale Zahlen",
+  title: "Claude Abo Preise 2026: Pro, Max und Team im Vergleich",
   description:
-    "Was kostet Claude Code wirklich? Alle Abo-Preise (Pro, Max, Team), API-Tarife, reale Kosten pro Arbeitstag und die Team-Rechnung für den Mittelstand.",
+    "Alle Claude-Abo-Stufen im Vergleich: Was Pro, Max und Team im Monat kosten, welche Claude-Code-Kontingente enthalten sind und wann die API günstiger wird.",
   openGraph: {
-    title: "Claude Code Preis 2026: Abos, API-Kosten und reale Zahlen",
+    title: "Claude Abo Preise 2026: Pro, Max und Team im Vergleich",
     description:
-      "Ab 20 Dollar im Monat oder unkalkulierbar über die API? Alle Claude-Code-Preise mit realen Arbeitstag-Kosten und der Team-Rechnung für den Mittelstand.",
+      "Pro ab 20 Dollar, Max 100 bis 200 Dollar, Team pro Sitz: Alle Claude-Abos mit ihren Claude-Code-Kontingenten und der Rechnung gegen die API.",
     type: "article",
     locale: "de_DE",
     siteName: "Bluebatch",
