@@ -248,13 +248,15 @@ export default async function Page({
               </>
             )}
           </BackgroundHero.Headline>
-          <BackgroundHero.Description>
-            KIT, FZI, Fraunhofer IOSB, CyberForum, dm-drogerie markt mit
-            dmTECH, EnBW, 1&amp;1, IONOS, United Internet, Bundesverfassungsgericht,
-            BGH - Karlsruhe ist Hauptstadt der IT-Sicherheit und Sitz der
-            Residenz des Rechts. Wir bauen n8n-Workflows für Omnichannel-
-            Handel, Cybersecurity-Compliance, Energiewende und
-            Drittmittel-Forschung.
+          <BackgroundHero.Description geo>
+            Bluebatch ist eine n8n und KI Agentur für Karlsruhe: wir
+            automatisieren Omnichannel-Handel, Cybersecurity-Compliance,
+            Energiewende-Prozesse und die Abrechnung von Drittmittel-Forschung
+            für Unternehmen im Umfeld von KIT, FZI, CyberForum, dmTECH, EnBW und
+            IONOS, self-hosted und DSGVO-konform auf eigener Infrastruktur. Von
+            der Prozess-Analyse bis zum operativen Betrieb arbeiten wir in 6
+            festen Phasen, damit ein Workflow planbar produktiv geht statt im
+            Pilotstatus zu bleiben.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">
