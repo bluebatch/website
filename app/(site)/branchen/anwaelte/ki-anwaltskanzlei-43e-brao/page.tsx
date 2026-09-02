@@ -1,6 +1,27 @@
 import type { Metadata } from "next";
+import {
+  Cpu,
+  FileSignature,
+  KeyRound,
+  Lock,
+  Network,
+  Scale,
+  Send,
+  ShieldCheck,
+  UserCheck,
+  Users,
+} from "lucide-react";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import SimpleGrid from "@/components/layout/simple-grid";
+import Hero2Column, {
+  Hero2ColumnCallToAction,
+  Hero2ColumnHeadline,
+  Hero2ColumnImage,
+  Hero2ColumnMediaColumn,
+  Hero2ColumnPreHeadline,
+  Hero2ColumnTextColumn,
+} from "@/components/heroes/hero-2-column";
+import { FlowDiagram, HubDiagram } from "@/components/diagrams";
 import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
@@ -131,20 +152,36 @@ export default function Page() {
     <>
       {/* Hero */}
       <ContentWrapper isFirstSection>
-        <div className="mx-auto max-w-3xl text-center">
-          <Typo.H1>
-            KI in der Anwaltskanzlei nach § 43e BRAO: Freigabe vor Versand
-          </Typo.H1>
-          <GeoSummary align="center" className="mt-4">
-            § 43e BRAO erlaubt Kanzleien, Dienstleister an Mandatsdaten zu
-            lassen, verlangt dafür aber einen Vertrag in Textform mit Belehrung
-            über § 203 StGB. Bluebatch baut dafür ein Gateway: einen
-            kontrollierten Weg ins Sprachmodell mit Einwilligungs-Flag,
-            Kill-Switch und Endkontrolle durch den Anwalt vor jedem Versand an
-            Gericht oder Mandant.
-          </GeoSummary>
-          <ContactButton icon="chat">Erstgespräch vereinbaren</ContactButton>
-        </div>
+        <Hero2Column>
+          <Hero2ColumnTextColumn>
+            <Hero2ColumnPreHeadline>
+              Private AI für Anwaltskanzleien
+            </Hero2ColumnPreHeadline>
+            <Hero2ColumnHeadline>
+              KI in der Anwaltskanzlei nach § 43e BRAO: Freigabe vor Versand
+            </Hero2ColumnHeadline>
+            <GeoSummary>
+              § 43e BRAO erlaubt Kanzleien, Dienstleister an Mandatsdaten zu
+              lassen, verlangt dafür aber einen Vertrag in Textform mit
+              Belehrung über § 203 StGB. Bluebatch baut dafür ein Gateway:
+              einen kontrollierten Weg ins Sprachmodell mit
+              Einwilligungs-Flag, Kill-Switch und Endkontrolle durch den Anwalt
+              vor jedem Versand an Gericht oder Mandant.
+            </GeoSummary>
+            <Hero2ColumnCallToAction>
+              <ContactButton icon="chat">
+                Erstgespräch vereinbaren
+              </ContactButton>
+            </Hero2ColumnCallToAction>
+          </Hero2ColumnTextColumn>
+          <Hero2ColumnMediaColumn>
+            <Hero2ColumnImage
+              src="/images/compliance-signs.jpg"
+              type="image"
+              alt="Anwaltskanzlei mit kontrolliertem KI-Zugang nach § 43e BRAO"
+            />
+          </Hero2ColumnMediaColumn>
+        </Hero2Column>
       </ContentWrapper>
 
       {/* Problem */}
@@ -233,6 +270,38 @@ export default function Page() {
             </ProseColumns.Item>
           </ProseColumns>
 
+          <HubDiagram
+            className="mt-12"
+            center={{
+              icon: <FileSignature className="h-5 w-5" />,
+              label: "Anlage nach § 43e Abs. 3",
+              sublabel: "Textform, neben der bestehenden AVV",
+            }}
+            spokes={[
+              {
+                icon: <Lock className="h-5 w-5" />,
+                label: "Verschwiegen\u00ADheit",
+                sublabel: "vertraglich verpflichtet",
+              },
+              {
+                icon: <Scale className="h-5 w-5" />,
+                label: "Belehrung",
+                sublabel: "über § 203 StGB",
+              },
+              {
+                icon: <KeyRound className="h-5 w-5" />,
+                label: "Zugang begrenzt",
+                sublabel: "nur soweit erforderlich",
+              },
+              {
+                icon: <Network className="h-5 w-5" />,
+                label: "Unterauftrag\u00ADnehmer",
+                sublabel: "gleich verpflichtet",
+              },
+            ]}
+            caption="Vier Inhalte, die der Vertrag nach Abs. 3 tragen muss. Eine AVV nach Art. 28 DSGVO deckt keinen davon ab."
+          />
+
           <Typo.Paragraph className="mt-10 rounded-xl bg-gray-50 p-6 text-sm text-gray-600">
             Diese Seite ordnet die technischen Anforderungen ein und ist keine
             Rechtsberatung. Die berufsrechtliche Bewertung im Einzelfall trifft
@@ -255,6 +324,39 @@ export default function Page() {
             gibt es zwei Wege.
           </IntroBox.Paragraph>
         </IntroBox>
+
+        <FlowDiagram
+          className="mt-12"
+          nodes={[
+            {
+              icon: <Users className="h-5 w-5" />,
+              label: "Kanzlei-Arbeitsplatz",
+              sublabel: "Zugang nur über SSO",
+            },
+            {
+              icon: <UserCheck className="h-5 w-5" />,
+              label: "Einwilligungs-Flag",
+              sublabel: "Abs. 5: Mandat eingewilligt?",
+            },
+            {
+              icon: <ShieldCheck className="h-5 w-5" />,
+              label: "Gateway",
+              sublabel: "Whitelist, Zweckfilter, Audit, Kill-Switch",
+              highlight: true,
+            },
+            {
+              icon: <Cpu className="h-5 w-5" />,
+              label: "Modell",
+              sublabel: "Weg A im Haus oder Weg B EU-API",
+            },
+            {
+              icon: <Send className="h-5 w-5" />,
+              label: "Endkontrolle",
+              sublabel: "Anwalt gibt frei, dann Versand",
+            },
+          ]}
+          caption="Der kontrollierte Weg: ohne gesetztes Flag nimmt das Gateway mandatsbezogene Anfragen gar nicht erst an, und ohne Freigabe geht nichts an Gericht oder Mandant."
+        />
 
         <SimpleGrid cols={2} className="mt-12">
           <SimpleCard align="left" className="h-full">

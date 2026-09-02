@@ -35,7 +35,14 @@ function NodeBox({ node }: { node: DiagramNode }) {
           {node.icon}
         </span>
       )}
-      <span className="text-sm font-bold leading-tight">{node.label}</span>
+      {/* w-full + min-w-0 sind nötig, damit der Umbruch greift: als Flex-Item hat
+          das Label min-width:auto, und break-words allein senkt die
+          min-content-Breite nicht. Lange Komposita wie "Unterauftragnehmer"
+          liefen sonst aus der schmalen Box. hyphens-auto trennt zusätzlich
+          sauber, weil das Root-Layout lang="de" setzt. */}
+      <span className="w-full min-w-0 hyphens-auto break-words text-sm font-bold leading-tight">
+        {node.label}
+      </span>
       {node.sublabel && (
         <span
           className={`text-xs leading-snug ${
@@ -109,7 +116,9 @@ export function HubDiagram({
 }: HubDiagramProps) {
   return (
     <figure className={`rounded-3xl bg-gray-50 p-6 md:p-8 ${className}`}>
-      <div className="mx-auto max-w-md">
+      {/* max-w-2xl statt md: bei vier Speichen blieben sonst rund 100px pro
+          Spalte, zu wenig für deutsche Komposita wie "Unterauftragnehmer". */}
+      <div className="mx-auto max-w-2xl">
         <div className="mx-auto mb-6 w-2/3">
           <NodeBox node={{ ...center, highlight: true }} />
         </div>
