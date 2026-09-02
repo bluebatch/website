@@ -112,7 +112,7 @@ export const metaCustom: CityMeta = {
   name: "Karlsruhe",
   slug: "karlsruhe",
   bundesland: "Baden-Württemberg",
-  publish: false,
+  publish: true,
   nearbySmall: [
     "Ettlingen",
     "Bruchsal",
