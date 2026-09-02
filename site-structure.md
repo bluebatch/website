@@ -169,7 +169,13 @@ Grundsätze:
 │   │   │                                        claude-cowork, ki-agenten, workflows)
 │   │   ├── actaport-cloud-connector .......... [CONTENT] actaport-Anbindung (REST-API,
 │   │   │                                        n8n, beA) erklärt
-│   │   └── actaport-cloud-connector-implementierung [MONEY] Connector zu actaport bauen
+│   │   ├── actaport-cloud-connector-implementierung [MONEY] Connector zu actaport bauen
+│   │   └── ki-anwaltskanzlei-43e-brao ........ [MONEY]  Vertragskette + Gateway nach
+│   │                                            § 43e BRAO; Schwesterseite zu
+│   │                                            steuerberater/private-ai/
+│   │                                            ki-steuerberater-62a-stberg.
+│   │                                            Slug bewusst identisch zur
+│   │                                            Pexon-Seite (Partner-Cluster)
 │   │
 │   └── steuerberater/ ........................ [HUB]    Branchen-Hub, Fokus-Branche
 │       │
@@ -184,8 +190,11 @@ Grundsätze:
 │       │   ├── lokale-llms-fuer-kanzleien .... [CONTENT] (geplant)
 │       │   ├── paragraph-203-und-ki .......... [CONTENT] (geplant)
 │       │   ├── private-ai-erfolgreich-einfuehren [CONTENT] (geplant)
-│       │   └── kanzlei-wissensdatenbank ...... [CONTENT] durchsuchbares
-│       │                                        Kanzlei-Wissen inkl. Call-Aufzeichnungen
+│       │   ├── kanzlei-wissensdatenbank ...... [CONTENT] durchsuchbares
+│       │   │                                    Kanzlei-Wissen inkl. Call-Aufzeichnungen
+│       │   └── ki-steuerberater-62a-stberg ... [MONEY]   Vertragskette + Gateway nach
+│       │                                        § 62a StBerG; Schwesterseite zu
+│       │                                        anwaelte/ki-anwaltskanzlei-43e-brao
 │       │
 │       ├── claude-cowork/ .................... [HUB]     „KI als Werkzeug fürs Team",
 │       │   │                                    § 203-konform (heute einzelne Seite)

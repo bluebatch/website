@@ -147,6 +147,9 @@ export default function Page() {
               auf - mit derselben geschützten Basis.
             </Typo.Paragraph>
             <div className="flex flex-col items-start gap-3">
+              <InternalLink href="/branchen/steuerberater/private-ai/ki-steuerberater-62a-stberg">
+                Berufsrecht: KI für Steuerberater nach § 62a StBerG
+              </InternalLink>
               <InternalLink href="/branchen/steuerberater/private-ai/kanzlei-wissensdatenbank">
                 Anwendungsfall: die durchsuchbare Kanzlei-Wissensdatenbank
               </InternalLink>

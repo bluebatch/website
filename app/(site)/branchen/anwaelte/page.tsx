@@ -45,6 +45,7 @@ const bausteine = [
     href: "/branchen/anwaelte/actaport-cloud-connector",
     title: "Cloud Connector zu actaport",
     tag: "Grundlage",
+    linkLabel: "actaport Cloud Connector im Detail",
     description:
       "actaport ist eine cloudbasierte Kanzleisoftware mit REST-API und nativer beA-Integration. Der Cloud Connector macht diese Daten für Automatisierung und KI erreichbar.",
   },
@@ -52,8 +53,17 @@ const bausteine = [
     href: "/branchen/anwaelte/actaport-cloud-connector-implementierung",
     title: "Connector implementieren",
     tag: "Angebot",
+    linkLabel: "actaport-Connector implementieren lassen",
     description:
       "Wir binden actaport über die REST-API und n8n an Ihre Prozesse an: Fristen, Akten und Dokumente fließen automatisch, Ihre Kanzlei behält die Kontrolle.",
+  },
+  {
+    href: "/branchen/anwaelte/ki-anwaltskanzlei-43e-brao",
+    title: "KI nach § 43e BRAO",
+    tag: "Berufsrecht",
+    linkLabel: "KI-Gateway nach § 43e BRAO ansehen",
+    description:
+      "Die Vertragskette nach § 43e BRAO als Gateway gebaut: Textform mit § 203-Belehrung, Einwilligungs-Flag pro Mandat, Kill-Switch und Freigabe vor jedem Versand.",
   },
 ];
 
@@ -148,12 +158,12 @@ export default function Page() {
       <ContentWrapper>
         <div className="mb-10 text-center max-w-3xl mx-auto">
           <Typo.H2 className="mb-4">
-            Der Einstieg: Ihre Kanzleisoftware anbinden
+            Womit Kanzleien bei uns starten
           </Typo.H2>
           <Typo.Paragraph className="text-gray-600">
-            Viele Kanzleien arbeiten bereits mit einer Cloud-Kanzleisoftware.
-            actaport bringt dafür eine REST-API und n8n-Unterstützung mit. Wir
-            nutzen genau das, damit Ihre Daten arbeiten.
+            Zwei Einstiege, je nach Ausgangslage: die Anbindung der
+            Kanzleisoftware, mit der Sie ohnehin arbeiten, oder der
+            berufsrechtliche Rahmen für den KI-Einsatz nach § 43e BRAO.
           </Typo.Paragraph>
         </div>
         <SimpleGrid cols={2}>
@@ -167,7 +177,7 @@ export default function Page() {
                 {b.description}
               </Typo.Paragraph>
               <span className="mt-auto pt-4">
-                <InternalLink href={b.href}>Mehr erfahren</InternalLink>
+                <InternalLink href={b.href}>{b.linkLabel}</InternalLink>
               </span>
             </SimpleCard>
           ))}
