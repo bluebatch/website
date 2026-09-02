@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import SimpleGrid from "@/components/layout/simple-grid";
 import SimpleCard from "@/components/cards/simple-card";
@@ -100,6 +101,19 @@ export default function Page() {
           </GeoSummary>
           <ContactButton icon="chat">Beratung anfragen</ContactButton>
         </div>
+
+        <div className="mx-auto mt-12 max-w-3xl">
+          <div className="relative aspect-video overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <Image
+              src="/images/bea-nachrichten-automatisieren/foto.png"
+              alt="Kartenleser mit gesteckter Karte auf einem Anwaltsschreibtisch"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 768px) 768px, 100vw"
+            />
+          </div>
+        </div>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light" bodyWidth="small">
@@ -133,6 +147,18 @@ export default function Page() {
             </SimpleCard>
           ))}
         </SimpleGrid>
+
+        <div className="mx-auto mt-12 max-w-3xl">
+          <div className="relative aspect-video overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <Image
+              src="/images/bea-nachrichten-automatisieren/ablauf.png"
+              alt="Verarbeitung einer beA-Nachricht vom Entpacken bis zur Ablage"
+              fill
+              className="object-contain"
+              sizes="(min-width: 768px) 768px, 100vw"
+            />
+          </div>
+        </div>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light" bodyWidth="small">

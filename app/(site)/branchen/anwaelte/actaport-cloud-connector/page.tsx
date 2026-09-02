@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -91,6 +92,19 @@ export default function Page() {
           </GeoSummary>
           <ContactButton icon="chat">Beratung anfragen</ContactButton>
         </div>
+
+        <div className="mx-auto mt-12 max-w-3xl">
+          <div className="relative aspect-video overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <Image
+              src="/images/actaport-cloud-connector/foto.png"
+              alt="Leerer Kanzleiraum hinter einer Glaswand"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 768px) 768px, 100vw"
+            />
+          </div>
+        </div>
       </ContentWrapper>
 
       {/* Datenfluss-Diagramm */}
@@ -148,6 +162,18 @@ export default function Page() {
             </SimpleCard>
           ))}
         </SimpleGrid>
+
+        <div className="mx-auto mt-12 max-w-3xl">
+          <div className="relative aspect-video overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <Image
+              src="/images/actaport-cloud-connector/ablauf.png"
+              alt="Was der actaport Cloud Connector miteinander verbindet"
+              fill
+              className="object-contain"
+              sizes="(min-width: 768px) 768px, 100vw"
+            />
+          </div>
+        </div>
       </ContentWrapper>
 
       {/* Überleitung zur Money Page */}

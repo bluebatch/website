@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import SimpleGrid from "@/components/layout/simple-grid";
@@ -110,6 +111,19 @@ export default function Page() {
           </GeoSummary>
           <ContactButton icon="chat">Angebot anfragen</ContactButton>
         </div>
+
+        <div className="mx-auto mt-12 max-w-3xl">
+          <div className="relative aspect-video overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <Image
+              src="/images/actaport-cloud-connector-implementierung/foto.png"
+              alt="Hände über einer Checkliste und einem Notizbuch"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 768px) 768px, 100vw"
+            />
+          </div>
+        </div>
       </ContentWrapper>
 
       {/* Was enthalten ist */}
@@ -128,6 +142,18 @@ export default function Page() {
             </SimpleCard>
           ))}
         </SimpleGrid>
+
+        <div className="mx-auto mt-12 max-w-3xl">
+          <div className="relative aspect-video overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <Image
+              src="/images/actaport-cloud-connector-implementierung/ablauf.png"
+              alt="In vier Schritten zum fertigen actaport Cloud Connector"
+              fill
+              className="object-contain"
+              sizes="(min-width: 768px) 768px, 100vw"
+            />
+          </div>
+        </div>
       </ContentWrapper>
 
       {/* Ablauf */}
