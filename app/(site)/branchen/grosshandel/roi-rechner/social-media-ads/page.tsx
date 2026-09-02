@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ogImages } from "@/lib/og";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import ContactButton from "@/components/buttons/contact-button";
@@ -48,6 +49,15 @@ export default async function SocialMediaAdsPage({
             sich in dieser Voreinstellung nach gut 17 Monaten.
           </GeoSummary>
           <SocialMediaAdsCalculator initialParams={params} />
+        </div>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light">
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-gray-900">Weitere ROI-Rechner</h2>
+          <p className="text-gray-700">
+            Social-Media-Automatisierung ist nur ein Anfang. Erkunde dein Potenzial auch mit unserem <Link href="/branchen/grosshandel/roi-rechner/service-requests" className="text-primary hover:underline">ROI-Rechner für Service Requests</Link> oder dem <Link href="/branchen/grosshandel/roi-rechner/document" className="text-primary hover:underline">ROI-Rechner für Dokumentenbearbeitung</Link>, um alle Automatisierungsmöglichkeiten auszuschöpfen.
+          </p>
         </div>
       </ContentWrapper>
 

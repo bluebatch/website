@@ -620,6 +620,16 @@ export default async function Page({
         </SimpleGrid>
       </ContentWrapper>
 
+      {/* Related Services */}
+      <ContentWrapper colorScheme="gray-light">
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-gray-900">Weitere Services rund um n8n</h2>
+          <p className="text-gray-700">
+            Neben der Wartung bestehender Workflows unterstützen wir Sie auch beim Aufbau: Entdecken Sie unsere <Link href="/services/n8n-hosting" className="text-primary hover:underline">Hosting-Services in Deutschland</Link> oder lassen Sie sich von unserem Team neue <Link href="/blog/(hub)/automatisierung" className="text-primary hover:underline">Automatisierungsmöglichkeiten für Ihre Prozesse</Link> aufzeigen.
+          </p>
+        </div>
+      </ContentWrapper>
+
       {/* Contact CTA */}
       <ContentWrapper noPadding bodyWidth="full">
         <ConsultationCtaDefault />

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ogImages } from "@/lib/og";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import ContactButton from "@/components/buttons/contact-button";
@@ -46,6 +47,15 @@ export default async function ServiceRequestsPage({
             amortisiert sich nach rund zwei Monaten.
           </GeoSummary>
           <ServiceRequestsCalculator initialParams={params} />
+        </div>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light">
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-gray-900">Weitere ROI-Rechner</h2>
+          <p className="text-gray-700">
+            Neben Service Requests lohnt sich die Automatisierung auch in anderen Bereichen. Nutze unsere weitere <Link href="/branchen/grosshandel/roi-rechner/document" className="text-primary hover:underline">ROI-Rechner für Dokumentenbearbeitung</Link> oder den <Link href="/branchen/grosshandel/roi-rechner/social-media-ads" className="text-primary hover:underline">ROI-Rechner für Social-Media-Anzeigen</Link>, um dein Einsparpotenzial in anderen Prozessen zu erkunden.
+          </p>
         </div>
       </ContentWrapper>
 

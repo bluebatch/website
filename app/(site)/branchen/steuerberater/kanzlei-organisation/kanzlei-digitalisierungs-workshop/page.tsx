@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ogImages } from "@/lib/og";
 import Image from "next/image";
 import {
@@ -300,6 +301,16 @@ export default function Page() {
 
         <div className="text-center mt-12">
           <ContactButton icon="chat">Erstgespräch vereinbaren</ContactButton>
+        </div>
+      </ContentWrapper>
+
+      {/* Related Workshops */}
+      <ContentWrapper colorScheme="white">
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-gray-900">Verwandte Workshops und Services</h2>
+          <p className="text-gray-700">
+            Der Digitalisierungs-Workshop ist der ideale Einstieg. Danach folgen oft konkrete Umsetzungsprojekte wie die <Link href="/branchen/steuerberater/kanzlei-organisation/kanzleihandbuch-aufbauen" className="text-primary hover:underline">Erstellung eines Kanzleihandbuchs</Link> oder die <Link href="/branchen/steuerberater/kanzlei-organisation/rollenbasierte-kanzlei" className="text-primary hover:underline">Etablierung eines Rollen-Modells</Link>.
+          </p>
         </div>
       </ContentWrapper>
 

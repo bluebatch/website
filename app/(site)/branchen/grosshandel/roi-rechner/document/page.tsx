@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ogImages } from "@/lib/og";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import ContactButton from "@/components/buttons/contact-button";
@@ -47,6 +48,15 @@ export default async function DocumentPage({
             knapp zwei Monaten.
           </GeoSummary>
           <DocumentCalculator initialParams={params} />
+        </div>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light">
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-gray-900">Weitere ROI-Rechner</h2>
+          <p className="text-gray-700">
+            Dokumentenprüfung ist nur der Anfang. Berechne auch dein Einsparpotenzial mit dem <Link href="/branchen/grosshandel/roi-rechner/service-requests" className="text-primary hover:underline">ROI-Rechner für Service Requests</Link> oder dem <Link href="/branchen/grosshandel/roi-rechner/social-media-ads" className="text-primary hover:underline">ROI-Rechner für Social-Media-Anzeigen</Link>.
+          </p>
         </div>
       </ContentWrapper>
 
