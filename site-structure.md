@@ -162,20 +162,33 @@ Grundsätze:
 │   │       ├── service-requests .............. [TOOL]   Rechner Service-Anfragen
 │   │       └── social-media-ads .............. [TOOL]   Rechner Social-Media-Ads
 │   │
-│   ├── anwaelte/ ............................. [HUB]    dritte Fokus-Branche, im Aufbau;
-│   │   │                                        Struktur analog Steuerberater
-│   │   │                                        (§ 203 → claude-cowork relevant).
-│   │   │                                        Vier Unter-Hubs geplant (private-ai,
-│   │   │                                        claude-cowork, ki-agenten, workflows)
+│   ├── anwaelte/ ............................. [HUB]    dritte Fokus-Branche, Struktur
+│   │   │                                        analog Steuerberater. Zwei
+│   │   │                                        Kanzleisoftwares im Fokus:
+│   │   │                                        actaport (REST-API) und RA-MICRO
+│   │   │                                        (keine offene REST-API, Anbindung
+│   │   │                                        über Ablage, Export, beA)
 │   │   ├── actaport-cloud-connector .......... [CONTENT] actaport-Anbindung (REST-API,
 │   │   │                                        n8n, beA) erklärt
 │   │   ├── actaport-cloud-connector-implementierung [MONEY] Connector zu actaport bauen
-│   │   └── ki-anwaltskanzlei-43e-brao ........ [MONEY]  Vertragskette + Gateway nach
-│   │                                            § 43e BRAO; Schwesterseite zu
-│   │                                            steuerberater/private-ai/
-│   │                                            ki-steuerberater-62a-stberg.
-│   │                                            Slug bewusst identisch zur
-│   │                                            Pexon-Seite (Partner-Cluster)
+│   │   ├── ki-anwaltskanzlei-43e-brao ........ [MONEY]  Vertragskette + Gateway nach
+│   │   │                                        § 43e BRAO; Schwesterseite zu
+│   │   │                                        steuerberater/private-ai/
+│   │   │                                        ki-steuerberater-62a-stberg.
+│   │   │                                        Slug bewusst identisch zur
+│   │   │                                        Pexon-Seite (Partner-Cluster)
+│   │   ├── private-ai/ ....................... [HUB]     „Wo läuft die KI?"
+│   │   │   ├── private-ai-implementierung .... [MONEY]   Umgebung bauen und übergeben
+│   │   │   └── kanzlei-wissensdatenbank ...... [CONTENT] RAG auf eigenen Schriftsätzen
+│   │   ├── claude-cowork/ .................... [HUB]     verwaltete KI fürs Team
+│   │   │   ├── schriftsatz-entwuerfe ......... [MONEY]   Rohling aus Aktenlage
+│   │   │   └── rechtsrecherche-mit-ki ........ [CONTENT] Einstieg mit Fundstellen
+│   │   ├── ki-agenten/ ....................... [HUB]     Vorschlag, Prüfung, Ausführung
+│   │   │   ├── posteingang-agent ............. [MONEY]   beA, Mail, Scan zuordnen
+│   │   │   └── fristen-agent ................. [MONEY]   Fristen erkennen und rechnen
+│   │   └── workflows/ ........................ [HUB]     feste Abläufe mit n8n
+│   │       ├── ra-micro-anbindung ............ [MONEY]   ohne offene API anbinden
+│   │       └── bea-nachrichten-automatisieren  [MONEY]   Eingang verarbeiten
 │   │
 │   └── steuerberater/ ........................ [HUB]    Branchen-Hub, Fokus-Branche
 │       │
@@ -458,7 +471,7 @@ Unternehmens-Seiten.
 BRANCHEN            SERVICES & WISSEN    UNTERNEHMEN         RECHTLICHES
 Großhandel          Services             Mit euch wachsen    Impressum
 Steuerberater       Tools                Team                Datenschutz
-Anwälte (bald)      Blog                 Standorte
+Anwälte             Blog                 Standorte
                                          Kontakt
 ```
 

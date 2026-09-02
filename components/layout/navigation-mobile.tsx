@@ -54,6 +54,16 @@ const branchenGroups = [
       },
     ],
   },
+  {
+    label: "Anwälte",
+    href: "/branchen/anwaelte",
+    hubs: [
+      { label: "Private AI", href: "/branchen/anwaelte/private-ai" },
+      { label: "Claude Cowork", href: "/branchen/anwaelte/claude-cowork" },
+      { label: "KI-Agenten", href: "/branchen/anwaelte/ki-agenten" },
+      { label: "Workflows", href: "/branchen/anwaelte/workflows" },
+    ],
+  },
 ];
 
 function Accordion({

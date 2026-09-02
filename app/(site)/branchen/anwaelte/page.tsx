@@ -67,26 +67,34 @@ const bausteine = [
   },
 ];
 
-const geplant = [
+const hubs = [
   {
+    href: "/branchen/anwaelte/private-ai",
     title: "Private AI",
     description:
-      "Sprachmodelle in eigener, geschützter Umgebung - für Mandantendaten, die die Kanzlei nicht verlassen dürfen.",
+      "Sprachmodelle in eigener, geschützter Umgebung, für Mandatsdaten, die die Kanzlei nicht verlassen dürfen. Inklusive Wissensdatenbank auf den eigenen Schriftsätzen.",
+    linkLabel: "Private AI für Kanzleien ansehen",
   },
   {
+    href: "/branchen/anwaelte/claude-cowork",
     title: "Claude Cowork",
     description:
-      "Verwaltete, § 203-konforme KI-Umgebung als Werkzeug fürs Team: Schriftsätze, Recherche, Zusammenfassungen.",
+      "Verwaltete, § 203-konforme KI-Umgebung als Werkzeug fürs Team: Schriftsatz-Entwürfe, Recherche und Zusammenfassungen, ohne eigene Server.",
+    linkLabel: "Claude Cowork für Kanzleien ansehen",
   },
   {
+    href: "/branchen/anwaelte/ki-agenten",
     title: "KI-Agenten",
     description:
-      "Digitale Sachbearbeiter, die Posteingang, Fristen und Standardschreiben vorbereiten. Der Anwalt gibt frei.",
+      "Digitale Sachbearbeiter, die Posteingang und Fristen vorbereiten und zur Prüfung vorlegen. Die Entscheidung bleibt beim Anwalt.",
+    linkLabel: "KI-Agenten für Kanzleien ansehen",
   },
   {
+    href: "/branchen/anwaelte/workflows",
     title: "Workflows",
     description:
-      "Fest automatisierte Kanzlei-Prozesse rund um beA, Akten und Dokumente, zuverlässig und nachvollziehbar.",
+      "Fest automatisierte Abläufe rund um beA, Akten und Dokumente, angebunden an actaport über REST-API und an RA-MICRO über Ablage und Export.",
+    linkLabel: "Kanzlei-Workflows ansehen",
   },
 ];
 
@@ -102,9 +110,9 @@ const faqs = [
       "Mit der Anbindung der Software, die Sie ohnehin nutzen. Wenn Ihre Kanzlei mit actaport arbeitet, ist der Cloud Connector der schnellste erste Schritt: Er macht Ihre Akten- und Fristendaten für Automatisierung und KI erreichbar, ohne dass Sie das System wechseln.",
   },
   {
-    question: "Ist die Anwalts-Branche bei Bluebatch schon vollständig?",
+    question: "Funktioniert das auch mit RA-MICRO?",
     answer:
-      "Wir bauen die Anwalts-Angebote gerade auf, analog zu unserer Steuerberater-Branche. Der actaport Cloud Connector ist der erste Baustein. Private AI, Claude Cowork, KI-Agenten und Workflows folgen. Sprechen Sie uns an, wenn Sie ein konkretes Thema vorziehen möchten.",
+      "Ja, nur auf einem anderen Weg als bei actaport. actaport ist cloudbasiert und stellt eine REST-API bereit, dort läuft die Anbindung direkt über die Schnittstelle. RA-MICRO dokumentiert für Drittsysteme keine offene REST-API, dort führt der Weg über Dokumentenablage, Exporte und das beA-Postfach. Lesen, Verstehen und Zuordnen funktionieren in beiden Fällen, der Unterschied liegt beim Zurückschreiben.",
   },
 ];
 
@@ -187,23 +195,27 @@ export default function Page() {
       {/* Ausblick: analog Steuerberater */}
       <ContentWrapper colorScheme="gray-light">
         <div className="mb-10 text-center max-w-3xl mx-auto">
-          <Typo.H2 className="mb-4">Was für Kanzleien noch entsteht</Typo.H2>
+          <Typo.H2 className="mb-4">Die vier Bausteine für Kanzleien</Typo.H2>
           <Typo.Paragraph className="text-gray-600">
-            Wir bauen die Anwalts-Branche analog zu unserer bereits
-            ausgebauten{" "}
+            Aufgebaut analog zu unserer{" "}
             <InternalLink href="/branchen/steuerberater" variant="underline">
               Steuerberater-Branche
-            </InternalLink>{" "}
-            auf. Diese vier Bausteine folgen:
+            </InternalLink>
+            . Jeder Baustein beantwortet eine eigene Frage: wo die KI läuft,
+            womit das Team arbeitet, was eingeschätzt wird und was fest
+            abläuft.
           </Typo.Paragraph>
         </div>
         <SimpleGrid cols={2}>
-          {geplant.map((g) => (
-            <SimpleCard key={g.title} align="left">
-              <Typo.H3>{g.title}</Typo.H3>
+          {hubs.map((h) => (
+            <SimpleCard key={h.href} align="left" className="h-full">
+              <Typo.H3 className="mt-0!">{h.title}</Typo.H3>
               <Typo.Paragraph className="text-gray-600">
-                {g.description}
+                {h.description}
               </Typo.Paragraph>
+              <span className="mt-auto pt-4">
+                <InternalLink href={h.href}>{h.linkLabel}</InternalLink>
+              </span>
             </SimpleCard>
           ))}
         </SimpleGrid>

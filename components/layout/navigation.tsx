@@ -208,6 +208,33 @@ const branchenMenu = {
         },
       ],
     },
+    {
+      title: "Anwälte",
+      icon: "/icons/law-round.svg",
+      href: "/branchen/anwaelte",
+      cases: [
+        {
+          icon: "/icons/privacy.svg",
+          title: "Private AI",
+          href: "/branchen/anwaelte/private-ai",
+        },
+        {
+          icon: "/icons/cloud.svg",
+          title: "Claude Cowork",
+          href: "/branchen/anwaelte/claude-cowork",
+        },
+        {
+          icon: "/icons/admin-with-cogwheels.svg",
+          title: "KI-Agenten",
+          href: "/branchen/anwaelte/ki-agenten",
+        },
+        {
+          icon: "/icons/workflow.svg",
+          title: "Workflows",
+          href: "/branchen/anwaelte/workflows",
+        },
+      ],
+    },
   ],
 };
 
