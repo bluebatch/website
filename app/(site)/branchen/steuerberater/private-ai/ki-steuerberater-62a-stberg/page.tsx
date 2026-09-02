@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Cpu,
   FileSignature,
@@ -177,9 +178,9 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/tax-consulting-workspace.jpg"
+              src="/images/berufsrecht/hero-62a-stberg.jpg"
               type="image"
-              alt="Steuerkanzlei mit kontrolliertem KI-Zugang nach § 62a StBerG"
+              alt="Gebundene Gesetzestexte im Regal einer Steuerkanzlei"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
@@ -187,22 +188,33 @@ export default function Page() {
 
       {/* Problem */}
       <ContentWrapper colorScheme="gray-light">
-        <IntroBox>
-          <IntroBox.PreHeadline>Ausgangslage</IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            Warum Consumer-KI auf der Mandatsakte teuer wird
-          </IntroBox.Headline>
-          <IntroBox.Subline>
-            KI ist in den Kanzleien angekommen. Laut DATEV-Seismograf 2025
-            nutzt rund ein Viertel der Steuerberater generative KI regelmäßig,
-            im Jahr davor waren es 9 Prozent. Rund 40 Prozent derjenigen, die
-            noch nicht nutzen, nennen rechtliche Unsicherheit als Hürde.
-          </IntroBox.Subline>
-          <IntroBox.Paragraph>
-            Die Unsicherheit ist berechtigt, aber sie lässt sich auflösen. Drei
-            Lücken tauchen in fast jeder Kanzlei auf, die wir uns ansehen.
-          </IntroBox.Paragraph>
-        </IntroBox>
+        <SimpleGrid cols={2} className="items-center gap-8 md:gap-12">
+          <div>
+            <Typo.H2 className="mt-0! mb-4">
+              Warum Consumer-KI auf der Mandatsakte teuer wird
+            </Typo.H2>
+            <Typo.Paragraph className="mb-4 text-gray-600">
+              KI ist in den Kanzleien angekommen. Laut DATEV-Seismograf 2025
+              nutzt rund ein Viertel der Steuerberater generative KI
+              regelmäßig, im Jahr davor waren es 9 Prozent. Rund 40 Prozent
+              derjenigen, die noch nicht nutzen, nennen rechtliche Unsicherheit
+              als Hürde.
+            </Typo.Paragraph>
+            <Typo.Paragraph className="text-gray-600">
+              Die Unsicherheit ist berechtigt, aber sie lässt sich auflösen.
+              Drei Lücken tauchen in fast jeder Kanzlei auf, die wir uns
+              ansehen.
+            </Typo.Paragraph>
+          </div>
+          <div className="relative mx-auto aspect-video w-4/5 md:w-full">
+            <Image
+              src="/images/berufsrecht/stberg-kanzlei.jpg"
+              alt="Besprechungsraum einer Steuerkanzlei mit Regalwand voller Gesetzeskommentare"
+              fill
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
+        </SimpleGrid>
 
         <SimpleGrid cols={3} className="mt-12">
           {risiken.map((r) => (
@@ -462,15 +474,27 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Vorgehen */}
-      <ContentWrapper bodyWidth="small">
-        <IntroBox size="small">
-          <IntroBox.PreHeadline>Vorgehen</IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            Wie wir die 62a-Kette bauen und in Betrieb nehmen
-          </IntroBox.Headline>
-        </IntroBox>
+      <ContentWrapper>
+        <SimpleGrid cols={2} className="gap-8 md:gap-12">
+          <div>
+            <Typo.H2 className="mt-0! mb-4">
+              Wie wir die 62a-Kette bauen und in Betrieb nehmen
+            </Typo.H2>
+            <Typo.Paragraph className="mb-8 text-gray-600">
+              Sechs Schritte, in dieser Reihenfolge. Der Vertrag steht vor dem
+              ersten Prompt, und der erste Use Case geht erst live, wenn der
+              Weg dorthin dicht ist.
+            </Typo.Paragraph>
+            <div className="relative aspect-video w-full">
+              <Image
+                src="/images/berufsrecht/stberg-vorgehen.jpg"
+                alt="Aufgeschlagene Mappe mit Füller und Brille auf einem Konferenztisch"
+                fill
+                className="rounded-lg object-cover shadow-lg"
+              />
+            </div>
+          </div>
 
-        <div className="mt-12">
           <TimelineAsSteps>
             <TimelineAsStepsStep value={1}>
               <Typo.H3 className="mt-2!">Bestand aufnehmen</Typo.H3>
@@ -522,7 +546,7 @@ export default function Page() {
               </Typo.Paragraph>
             </TimelineAsStepsStep>
           </TimelineAsSteps>
-        </div>
+        </SimpleGrid>
       </ContentWrapper>
 
       {/* Vergleich */}

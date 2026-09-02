@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Cpu,
   FileSignature,
@@ -176,9 +177,9 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/compliance-signs.jpg"
+              src="/images/berufsrecht/hero-43e-brao.jpg"
               type="image"
-              alt="Anwaltskanzlei mit kontrolliertem KI-Zugang nach § 43e BRAO"
+              alt="Blick aus einer Anwaltskanzlei auf ein Gerichtsgebäude"
             />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
@@ -186,22 +187,32 @@ export default function Page() {
 
       {/* Problem */}
       <ContentWrapper colorScheme="gray-light">
-        <IntroBox>
-          <IntroBox.PreHeadline>Ausgangslage</IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            Warum ungeregelte KI in der Akte teuer wird
-          </IntroBox.Headline>
-          <IntroBox.Subline>
-            KI ist in den Kanzleien längst angekommen. In der Legal-Tech-Umfrage
-            von Wolters Kluwer für 2026 gaben rund 63 Prozent der deutschen
-            Befragten an, KI-Werkzeuge zu nutzen. Der praktische Ist-Zustand ist
-            dabei häufig Consumer-ChatGPT auf der Akte.
-          </IntroBox.Subline>
-          <IntroBox.Paragraph>
-            Das ist nachvollziehbar und trotzdem riskant. Drei Lücken finden wir
-            in fast jeder Kanzlei, die wir uns ansehen.
-          </IntroBox.Paragraph>
-        </IntroBox>
+        <SimpleGrid cols={2} className="items-center gap-8 md:gap-12">
+          <div>
+            <Typo.H2 className="mt-0! mb-4">
+              Warum ungeregelte KI in der Akte teuer wird
+            </Typo.H2>
+            <Typo.Paragraph className="mb-4 text-gray-600">
+              KI ist in den Kanzleien längst angekommen. In der
+              Legal-Tech-Umfrage von Wolters Kluwer für 2026 gaben rund 63
+              Prozent der deutschen Befragten an, KI-Werkzeuge zu nutzen. Der
+              praktische Ist-Zustand ist dabei häufig Consumer-ChatGPT auf der
+              Akte.
+            </Typo.Paragraph>
+            <Typo.Paragraph className="text-gray-600">
+              Das ist nachvollziehbar und trotzdem riskant. Drei Lücken finden
+              wir in fast jeder Kanzlei, die wir uns ansehen.
+            </Typo.Paragraph>
+          </div>
+          <div className="relative mx-auto aspect-video w-4/5 md:w-full">
+            <Image
+              src="/images/berufsrecht/brao-bibliothek.jpg"
+              alt="Bibliothek einer Anwaltskanzlei mit gebundenen Gesetzessammlungen"
+              fill
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
+        </SimpleGrid>
 
         <SimpleGrid cols={3} className="mt-12">
           {risiken.map((r) => (
@@ -458,15 +469,27 @@ export default function Page() {
       </ContentWrapper>
 
       {/* Vorgehen */}
-      <ContentWrapper bodyWidth="small">
-        <IntroBox size="small">
-          <IntroBox.PreHeadline>Vorgehen</IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            Wie wir die 43e-Kette bauen und in Betrieb nehmen
-          </IntroBox.Headline>
-        </IntroBox>
+      <ContentWrapper>
+        <SimpleGrid cols={2} className="gap-8 md:gap-12">
+          <div>
+            <Typo.H2 className="mt-0! mb-4">
+              Wie wir die 43e-Kette bauen und in Betrieb nehmen
+            </Typo.H2>
+            <Typo.Paragraph className="mb-8 text-gray-600">
+              Fünf Schritte, in dieser Reihenfolge. Die Textform steht vor dem
+              ersten Prompt, und der erste Use Case geht erst live, wenn die
+              Consumer-Wege geschlossen sind.
+            </Typo.Paragraph>
+            <div className="relative aspect-video w-full">
+              <Image
+                src="/images/berufsrecht/brao-textform.jpg"
+                alt="Unterzeichnung eines Vertrags in Textform am Kanzleitisch"
+                fill
+                className="rounded-lg object-cover shadow-lg"
+              />
+            </div>
+          </div>
 
-        <div className="mt-12">
           <TimelineAsSteps>
             <TimelineAsStepsStep value={1}>
               <Typo.H3 className="mt-2!">Bestand und Sperre</Typo.H3>
@@ -511,7 +534,7 @@ export default function Page() {
               </Typo.Paragraph>
             </TimelineAsStepsStep>
           </TimelineAsSteps>
-        </div>
+        </SimpleGrid>
       </ContentWrapper>
 
       {/* Vergleich */}
