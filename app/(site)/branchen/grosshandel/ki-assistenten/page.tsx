@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ogImages } from "@/lib/og";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
@@ -83,6 +84,15 @@ export default function Page() {
           </GeoSummary>
           <ContactButton icon="chat">Beratung anfragen</ContactButton>
         </div>
+        <div className="relative aspect-video mt-10">
+          <Image
+            src="/images/ki-assistenten/arbeitsplatz.png"
+            alt="Arbeitsplatz im Großhandel mit Laptop, Lieferantenkatalogen und Telefon"
+            fill
+            priority
+            className="object-cover rounded-lg shadow-lg"
+          />
+        </div>
       </ContentWrapper>
 
       {/* Die drei großen Assistenten */}
@@ -119,6 +129,14 @@ export default function Page() {
           Und wenn Einkaufspreise oder Kundendaten ins Spiel kommen, gehört die
           KI in eine eigene Umgebung statt in die öffentliche Cloud.
         </Typo.Paragraph>
+        <div className="relative aspect-video mb-6">
+          <Image
+            src="/images/ki-assistenten/assistent-vs-agent.png"
+            alt="Vergleich: beim Assistenten arbeitet der Mitarbeiter und die KI hilft, beim Agenten bearbeitet die KI die Anfrage und der Mitarbeiter gibt frei"
+            fill
+            className="object-contain"
+          />
+        </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:gap-8">
           <InternalLink href="/branchen/grosshandel/ki-agenten">
             Zu den KI-Agenten
