@@ -327,11 +327,14 @@ export default async function Page({
         <IntroBox>
           <IntroBox.PreHeadline>Leistungsumfang</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Kalkulation, Versand und Nachfassen in einem Bot
+            Angebotsmanagement-Software: Kalkulation, Versand und Nachfassen in
+            einem Bot
           </IntroBox.Headline>
           <IntroBox.Subline>
             Vier Schritte, die der Bot für Ihr Vertriebsteam übernimmt - mit
-            Preisen aus Ihrem ERP und lückenloser Dokumentation im CRM.
+            Preisen aus Ihrem ERP und lückenloser Dokumentation im CRM. Anders
+            als klassische Angebotsmanagement-Software wartet der Bot nicht auf
+            manuelle Eingaben, sondern arbeitet die vier Schritte selbst ab.
           </IntroBox.Subline>
         </IntroBox>
 
@@ -371,7 +374,9 @@ export default async function Page({
               <IntroBox.Subline>
                 Der Angebots-Bot übernimmt die repetitiven Aufgaben: Preise
                 nachschlagen, Dokumente formatieren, E-Mails versenden,
-                Follow-ups planen. Wie{" "}
+                Follow-ups planen. Das ist der Unterschied zu reiner
+                Angebotsmanagement-Software, die diese Schritte zwar bündelt,
+                aber weiterhin von Hand bedient werden will. Wie{" "}
                 <InternalLink
                   href="/blog/automatische-angebotserstellung-grosshandel"
                   variant="underline"
