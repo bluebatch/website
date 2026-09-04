@@ -298,6 +298,19 @@ export default async function Page({
             </Link>
           ))}
         </div>
+
+        <Typo.Paragraph className="mx-auto mt-12 max-w-3xl text-center text-gray-600">
+          Du weißt noch nicht, welcher Service zu deinem Vorhaben passt? Für den
+          häufigsten Einstieg haben wir eine eigene Übersicht:{" "}
+          <Link
+            href={resolveHref("/services/ki-chatbot-fuer-unternehmen")}
+            className="text-primary-600 hover:underline"
+          >
+            KI-Chatbot für Unternehmen
+          </Link>{" "}
+          erklärt die drei Bauarten, was sie jeweils kosten und woran du
+          erkennst, welche davon für deinen Anwendungsfall reicht.
+        </Typo.Paragraph>
       </ContentWrapper>
 
       {/* Benefits */}

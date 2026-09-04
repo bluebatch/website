@@ -273,6 +273,15 @@ export default function Page() {
           >
             KI-Agenten für den Großhandel
           </Link>
+          . Wenn Sie die drei Bauarten ohne Großhandels-Bezug gegeneinander
+          stellen wollen, samt Preisrahmen und Berechtigungsfrage, hilft die
+          branchenübergreifende Übersicht zum{" "}
+          <Link
+            href="/services/ki-chatbot-fuer-unternehmen"
+            className="text-primary-600 hover:underline"
+          >
+            KI-Chatbot für Unternehmen
+          </Link>
           .
         </Typo.Paragraph>
       </ContentWrapper>
