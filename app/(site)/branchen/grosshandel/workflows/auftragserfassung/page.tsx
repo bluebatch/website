@@ -138,11 +138,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 
 const defaultMeta = {
   title:
-    "Bestellung erfassen - Automatische Auftragserfassung im Großhandel | Bluebatch",
+    "Auftragserfassung im Großhandel - Bestellung erfassen | Bluebatch",
   description:
-    "Bestellung erfassen leicht gemacht: Bluebatch automatisiert den Bestellprozess im Einkauf. Bestellungen aus E-Mails, PDFs und Portalen automatisch erfassen.",
+    "Automatische Auftragserfassung für den Großhandel: Bestellungen aus E-Mails, PDFs, Fax und Portalen erfassen, gegen das ERP validieren und buchen.",
   ogDescription:
-    "Bestellung erfassen aus E-Mails, PDFs und Portalen - automatisch und fehlerfrei.",
+    "Automatische Auftragserfassung aus E-Mails, PDFs und Portalen - ohne Abtippen, mit Fehlerquote unter 1%.",
 };
 
 export async function generateMetadata({
@@ -157,10 +157,11 @@ export async function generateMetadata({
   const description = overrides?.metaDescription ?? defaultMeta.description;
 
   const defaultKeywords = [
-    "Bestellung erfassen",
-    "Bestellprozess Einkauf",
     "Auftragserfassung",
     "automatische Auftragserfassung",
+    "Auftragserfassung Prozess",
+    "Bestellung erfassen",
+    "Bestellprozess Einkauf",
     "Bestellungen erfassen",
     "Großhandel Auftragserfassung",
     "E-Mail Bestellungen verarbeiten",
@@ -228,12 +229,12 @@ export default async function Page({
           <BackgroundHero.Headline>
             {overrides?.headline ?? (
               <>
-                Bestellung erfassen:{" "}
+                Automatische Auftragserfassung:{" "}
                 <BackgroundHero.Highlight>
                   Alle Kanäle
                 </BackgroundHero.Highlight>
                 <br />
-                automatisch verarbeiten
+                ohne Abtippen
               </>
             )}
           </BackgroundHero.Headline>
@@ -371,12 +372,13 @@ export default async function Page({
         <IntroBox>
           <IntroBox.PreHeadline>Die Lösung</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            5 Schritte. Von der Inbox direkt ins ERP.
+            Bestellung erfassen in 5 Schritten: von der Inbox direkt ins ERP
           </IntroBox.Headline>
           <IntroBox.Subline>
             Ein n8n-Workflow mit KI-Agenten liest, versteht, validiert und bucht
-            Bestellungen ein. Aus jedem Format, in jeder Sprache, rund um die
-            Uhr.
+            Bestellungen ein. Wer heute jede Bestellung erfassen muss, indem er
+            sie abtippt, gibt diesen Schritt komplett ab: aus jedem Format, in
+            jeder Sprache, rund um die Uhr.
           </IntroBox.Subline>
         </IntroBox>
 
