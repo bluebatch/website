@@ -99,6 +99,14 @@ export default function Page() {
               <Link href="/blog/ki-agenten-erstellen" className="text-primary-600 hover:underline">
                 KI-Agenten erstellen
               </Link>
+              . Die saubere Abgrenzung gegen Chatbot, Assistent und klassischen
+              Workflow steht unter{" "}
+              <Link
+                href="/branchen/grosshandel/ki-agenten/was-ist-ein-ki-agent"
+                className="text-primary-600 hover:underline"
+              >
+                Was ist ein KI-Agent
+              </Link>
               .
             </Typo.Paragraph>
             <Typo.Paragraph>

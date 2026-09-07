@@ -4,6 +4,7 @@ import ContentWrapper from "@/components/layout/content-wrapper";
 import Typo from "@/components/ui/typo";
 import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
+import InternalLink from "@/components/buttons/internal-link";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { ProductTileGrid } from "@/components/cards/product-tile";
 
@@ -80,6 +81,20 @@ export default function Page() {
           </GeoSummary>
           <ContactButton icon="chat">Beratung anfragen</ContactButton>
         </div>
+
+        <Typo.Paragraph className="text-center max-w-3xl mx-auto mb-10">
+          Beide Agenten arbeiten nach demselben Muster: wahrnehmen, entscheiden,
+          handeln, und das in einer Schleife statt in einem starren Ablauf. Wenn
+          Sie zuerst wissen wollen, was einen Agenten von einem Chatbot und von
+          einem klassischen Workflow unterscheidet, klärt das die Seite{" "}
+          <InternalLink
+            href="/branchen/grosshandel/ki-agenten/was-ist-ein-ki-agent"
+            variant="underline"
+          >
+            Was ist ein KI-Agent
+          </InternalLink>
+          .
+        </Typo.Paragraph>
 
         <ProductTileGrid items={agents} cols={2} />
       </ContentWrapper>

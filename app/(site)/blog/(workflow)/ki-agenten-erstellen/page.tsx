@@ -128,7 +128,15 @@ export default function Page() {
               >
                 Beispielkatalog für KI-Agenten
               </Link>
-              {" "}praxisnahe Use-Cases für Mittelstand und Großhandel.
+              {" "}praxisnahe Use-Cases für Mittelstand und Großhandel. Und wer
+              vorher die Begriffe sortieren will, findet die Abgrenzung unter{" "}
+              <Link
+                href="/branchen/grosshandel/ki-agenten/was-ist-ein-ki-agent"
+                className="text-primary-600 hover:underline"
+              >
+                Was ist ein KI-Agent
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 
