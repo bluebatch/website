@@ -308,11 +308,8 @@ export default function Page() {
           jedes System, das eine belastbare Schnittstelle hat. Für SAP hat der
           Weg dorthin eigene Regeln, weil dort schon drei verschiedene Dinge
           unter demselben Namen angeboten werden. Welche davon Geschäftsdaten
-          liefern und welche nicht, steht in{" "}
-          <InternalLink href="/services/sap-mcp-server" variant="underline">
-            unserer Einordnung zum SAP MCP Server
-          </InternalLink>
-          .
+          liefern und welche nicht, klären wir dort zuerst, bevor eine Zeile
+          Code entsteht.
         </Typo.Paragraph>
       </ContentWrapper>
 
