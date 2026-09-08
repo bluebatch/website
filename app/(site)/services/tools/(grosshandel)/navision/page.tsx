@@ -17,6 +17,7 @@ import ContactButton from "@/components/buttons/contact-button";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
+import ProseColumns from "@/components/ui/prose-columns";
 import SimpleCard from "@/components/cards/simple-card";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
@@ -198,6 +199,38 @@ export default function Page() {
             </SimpleCard>
           ))}
         </SimpleGrid>
+
+        <div className="mt-16">
+          <Typo.H2>
+            Navision als Buchhaltungsprogramm: Was das Finanzmodul kann
+          </Typo.H2>
+          <Typo.Paragraph textColor="muted">
+            Wer Navision als Buchhaltungsprogramm einsetzt, führt keine zweite
+            Finanzsoftware neben dem ERP. Debitoren, Kreditoren, Sachkonten und
+            Anlagen liegen in derselben Datenbank wie Artikel, Aufträge und
+            Lieferantenpreise. Genau das unterscheidet es von einem
+            eigenständigen Buchhaltungsprogramm: keine Übergabedateien, kein
+            nächtlicher Abgleich, keine doppelte Stammdatenpflege.
+          </Typo.Paragraph>
+
+          <ProseColumns cols={2} wide className="mt-10">
+            <ProseColumns.Item title="Was das Finanzmodul abdeckt">
+              Finanzbuchhaltung mit Debitoren, Kreditoren und Sachkonten,
+              Anlagenbuchhaltung, Zahlungsverkehr per SEPA-Datei, Mahnwesen,
+              Umsatzsteuervoranmeldung und die Vorbereitung des
+              Jahresabschlusses. Für den deutschen Mittelstand kommen
+              GoBD-konforme Belegablage und der Export an den Steuerberater
+              dazu.
+            </ProseColumns.Item>
+            <ProseColumns.Item title="Wo trotzdem Handarbeit bleibt">
+              Als Buchhaltungsprogramm bucht Navision zuverlässig, es erfasst
+              aber nichts von allein. Eingangsrechnungen werden ausgelesen,
+              kontiert und freigegeben, Zahlungsavise abgeglichen, Belege
+              zugeordnet. Genau diese Schritte hängen wir über n8n an das
+              Finanzmodul, statt sie im ERP nachzubauen.
+            </ProseColumns.Item>
+          </ProseColumns>
+        </div>
       </ContentWrapper>
 
       <ContentWrapper>
