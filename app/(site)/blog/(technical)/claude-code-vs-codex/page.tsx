@@ -23,13 +23,13 @@ export const metaCustom: BlogMeta = {
 };
 
 export const metadata: Metadata = {
-  title: "Codex vs. Claude Code 2026: Vergleich für Teams",
+  title: "Claude Code vs. Codex: Welcher Agent für welches Team? | Bluebatch",
   description:
-    "Codex vs. Claude Code im Vergleich: Preise, Oberflächen, MCP, EU-Datenroute und Team-Rollout. Warum der Preis nicht entscheidet und was stattdessen zählt.",
+    "Terminal und CI sprechen für Claude Code, ein ausgerolltes ChatGPT für Codex, harte Compliance für keins von beiden. Drei Regeln plus Zwei-Wochen-Pilot.",
   openGraph: {
-    title: "Codex vs. Claude Code 2026: Vergleich für Teams",
+    title: "Claude Code vs. Codex: Welcher Agent für welches Team? | Bluebatch",
     description:
-      "Beide kosten 20 Dollar im Einstieg. Der Vergleich zeigt, woran die Entscheidung wirklich hängt: Oberflächen, Automatisierung, Datenroute und Rollout.",
+      "Beide kosten 20 Dollar im Einstieg, der Preis entscheidet also nicht. Drei Regeln zeigen, welcher Coding-Agent zu eurem Team passt, plus ein Zwei-Wochen-Pilot.",
     type: "article",
     locale: "de_DE",
     siteName: "Bluebatch",
