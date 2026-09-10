@@ -16,7 +16,7 @@ import GeoSummary from "@/components/ui/geo-summary";
 export const metaCustom: BlogMeta = {
   slug: "opencode-vs-claude-code",
   author: "Max Hänsel",
-  date: "2026-10-19",
+  date: "2026-10-01",
   image: "/blog/opencode-vs-claude-code/hero.png",
   tags: ["ki", "development", "security"] as BlogTagId[],
   publish: true,
@@ -75,7 +75,7 @@ export default function Page() {
             Max Hänsel
           </BlogHero.Author>
           <BlogHero.ReadTime>12 Min. Lesezeit</BlogHero.ReadTime>
-          <BlogHero.Date dateTime="2026-10-19">19. Oktober 2026</BlogHero.Date>
+          <BlogHero.Date dateTime="2026-10-01">1. Oktober 2026</BlogHero.Date>
         </BlogHero.Meta>
 
         <BlogHero.Image
