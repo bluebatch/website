@@ -796,7 +796,16 @@ export default function Page() {
             <Typo.Paragraph>
               Wer alle drei mit ja beantwortet, hat einen Agent-Bauplan. Wer
               nicht, hat einen Workflow-Bauplan. Beides ist okay. Nur das
-              Vermischen ist teuer.
+              Vermischen ist teuer. Und wer den Bauplan hat, aber nicht die
+              Kapazität, findet die Alternativen zum Selbstbauen mit Preis und
+              Dauer unter{" "}
+              <Link
+                href="/services/ki-agent-kaufen"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Agent kaufen
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>Wir helfen beim Mappen</Typo.H3>

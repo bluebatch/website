@@ -202,7 +202,16 @@ export default function Page() {
               Bedrock Frankfurt oder Azure OpenAI Sweden Central. Hosted-
               Services sinnvoll für klar umrissene Wissens-Chatbots oder
               MS-365-zentrierte Office-Automation, weniger sinnvoll für tiefe
-              ERP-Integration.
+              ERP-Integration. Wer die Make-or-Buy-Frage mit Zahlen statt mit
+              Bauchgefühl entscheiden will, findet die drei Bezugswege mit Preis
+              und Dauer nebeneinander unter{" "}
+              <Link
+                href="/services/ki-agent-kaufen"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Agent kaufen
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 

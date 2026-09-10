@@ -609,6 +609,14 @@ export default function Page() {
               >
                 KI-Agenten erstellen
               </Link>
+              . Wer den Piloten lieber einkauft als selbst baut, vergleicht die
+              drei Bezugswege samt Preis und Dauer unter{" "}
+              <Link
+                href="/services/ki-agent-kaufen"
+                className="text-primary-600 hover:underline"
+              >
+                KI-Agent kaufen
+              </Link>
               . Die Beispiele aus diesem Beitrag sind der Startpunkt, nicht das
               Ziel.
             </Typo.Paragraph>

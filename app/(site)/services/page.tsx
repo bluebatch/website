@@ -309,7 +309,16 @@ export default async function Page({
             KI-Chatbot für Unternehmen
           </Link>{" "}
           erklärt die drei Bauarten, was sie jeweils kosten und woran du
-          erkennst, welche davon für deinen Anwendungsfall reicht.
+          erkennst, welche davon für deinen Anwendungsfall reicht. Und wenn die
+          Frage eher lautet, ob ihr einen KI-Agenten fertig einkauft oder bauen
+          lasst, stellt{" "}
+          <Link
+            href={resolveHref("/services/ki-agent-kaufen")}
+            className="text-primary-600 hover:underline"
+          >
+            KI-Agent kaufen
+          </Link>{" "}
+          die drei Bezugswege mit Preis und Dauer nebeneinander.
         </Typo.Paragraph>
       </ContentWrapper>
 
