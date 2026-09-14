@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ogImages } from "@/lib/og";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
-import { enforceMainRewrite } from "@/lib/enforce-main-rewrite";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import BlogListFiltered from "@/components/blog/blog-list-filtered";
 import { getBlogPosts } from "@/lib/get-blog-posts";
@@ -39,18 +38,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function BlogPage({
-  searchParams,
-}: {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}) {
-  await enforceMainRewrite(rewriteSiteConfig, searchParams);
-
-  const params = await searchParams;
-  const rawTags = params.tags;
-  const tagsParam = Array.isArray(rawTags) ? rawTags[0] : rawTags;
-  const activeTags = tagsParam ? tagsParam.split(",").filter(Boolean) : [];
-
+// Kein searchParams-Zugriff: der Tag-Filter laeuft clientseitig in
+// BlogListFiltered. Dadurch bleibt der Hub statisch prerendert und alle
+// Post-Links stehen im ausgelieferten HTML.
+export default async function BlogPage() {
   const posts = await getBlogPosts();
 
   return (
@@ -84,7 +75,7 @@ export default async function BlogPage({
 
       {/* Blog Posts Grid with Filter */}
       <ContentWrapper>
-        <BlogListFiltered posts={posts} activeTags={activeTags} />
+        <BlogListFiltered posts={posts} />
       </ContentWrapper>
 
       <ContentWrapper noPadding>
