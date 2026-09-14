@@ -258,7 +258,15 @@ export default function Page() {
               >
                 Claude Code vs. Cursor
               </Link>
-              .
+              . Und wer nach dem Lesen zu dem Schluss kommt, dass es gar nicht
+              Claude Code sein muss, findet in{" "}
+              <Link
+                href="/blog/claude-code-alternativen"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code Alternativen
+              </Link>{" "}
+              die Kandidaten nach Wechselgrund sortiert.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Dazu kommen die Stellen, an denen kein Mensch daneben sitzt:

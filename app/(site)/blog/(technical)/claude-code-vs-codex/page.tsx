@@ -551,7 +551,16 @@ export default function Page() {
                 Claude Code vs. Cursor
               </Link>
               , inklusive der Rechnung für ein Team und der Frage, wann die
-              ehrliche Antwort keins von beiden lautet.
+              ehrliche Antwort keins von beiden lautet. Wer den Kreis weiter
+              zieht, also auch Editoren, Open-Source-Agenten und lokale Modelle
+              einbezieht, bekommt in{" "}
+              <Link
+                href="/blog/claude-code-alternativen"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code Alternativen
+              </Link>{" "}
+              die Kandidaten nach dem Grund für den Wechsel sortiert.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Die belastbare Antwort lautet deshalb: Nehmt das Werkzeug, das zu

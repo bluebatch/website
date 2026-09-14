@@ -492,6 +492,12 @@ export default function Page() {
               <Link href="/blog/claude-code-vs-codex">
                 Codex vs. Claude Code
               </Link>
+              . Und wer nicht wegen des Preises, sondern wegen Datenschutz,
+              Modellbindung oder Arbeitsweise nach etwas anderem sucht, findet
+              die Kandidaten nach Grund sortiert in{" "}
+              <Link href="/blog/claude-code-alternativen">
+                Claude Code Alternativen
+              </Link>
               .
             </Typo.Paragraph>
             <Typo.Paragraph>
