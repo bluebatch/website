@@ -318,7 +318,16 @@ export default async function Page({
           >
             KI-Agent kaufen
           </Link>{" "}
-          die drei Bezugswege mit Preis und Dauer nebeneinander.
+          die drei Bezugswege mit Preis und Dauer nebeneinander. Und wenn ihr
+          erst einmal ohne Budget testen wollt, zeigt{" "}
+          <Link
+            href={resolveHref("/services/ki-agent-kostenlos")}
+            className="text-primary-600 hover:underline"
+          >
+            KI-Agent kostenlos
+          </Link>
+          , wie weit Gratis-Kontingente und Open Source tragen und was danach
+          an Server- und Modellkosten anfällt.
         </Typo.Paragraph>
       </ContentWrapper>
 
