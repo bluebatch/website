@@ -13,7 +13,14 @@ export interface MetaCustom {
  */
 export interface BlogMeta extends MetaCustom {
   author: string;
+  /** Publish-Datum (datePublished) — folgt dem planned_date der publish-db */
   date: string;
+  /**
+   * Optionaler manueller Ueberschreiber fuer dateModified/Sitemap-lastmod.
+   * Regelfall ist der Commit-Stand aus lib/page-lastmod.json; setzen nur,
+   * wenn ein inhaltlicher Umbau ausdruecklich datiert werden soll.
+   */
+  updated?: string;
   image: string;
   tags: string[];
 }

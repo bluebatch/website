@@ -4,6 +4,7 @@ import Typo from "@/components/ui/typo";
 import ContentWrapper from "../layout/content-wrapper";
 import type { BlogMeta } from "@/lib/meta-custom";
 import { getAuthor } from "@/lib/blog-authors";
+import { resolveDateModified } from "@/lib/page-lastmod";
 
 const SITE_ORIGIN = "https://bluebatch.io";
 
@@ -34,7 +35,9 @@ function articleSchema(meta: BlogMeta, metadata?: Metadata) {
     description: metadata?.description ?? undefined,
     image: meta.image ? `${SITE_ORIGIN}${meta.image}` : undefined,
     datePublished: meta.date,
-    dateModified: meta.date,
+    // Aenderungsdatum aus dem letzten Commit an der Seite (lib/page-lastmod.json),
+    // nicht das Publish-Datum: sonst sieht Google auch im Markup keinen Umbau.
+    dateModified: resolveDateModified(meta.date, `/blog/${meta.slug}`, meta.updated),
     author: {
       "@type": "Person",
       name: author.name,

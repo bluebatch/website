@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
 import { getMainRewriteMap } from "@/lib/get-rewrites";
+import { getPageLastmod } from "@/lib/page-lastmod";
 
 const BASE_URL = "https://bluebatch.io";
 
@@ -60,6 +61,27 @@ function isUnpublished(filePath: string): boolean {
 }
 
 /**
+ * lastmod einer Route: manuelles `updated` aus metaCustom (Blog) schlaegt den
+ * Commit-Stand aus lib/page-lastmod.json. Kein `new Date()`-Fallback — eine
+ * Route ohne bekanntes Datum bekommt lieber kein lastmod als ein falsches
+ * (Google ignoriert lastmod, wenn es fuer alle URLs gleich ist oder bei
+ * jedem Build springt; Guard-Report 2026-09-16).
+ */
+function lastModifiedFor(routePath: string, filePath?: string): Date | undefined {
+  let date: string | undefined;
+  if (filePath) {
+    try {
+      const m = fs.readFileSync(filePath, "utf-8").match(/updated:\s*"(\d{4}-\d{2}-\d{2})"/);
+      if (m) date = m[1];
+    } catch {
+      // kein manuelles updated
+    }
+  }
+  date ??= getPageLastmod(routePath);
+  return date ? new Date(`${date}T00:00:00Z`) : undefined;
+}
+
+/**
  * Check if a page is noindex (robots: { index: false }).
  * Noindex pages (e.g. paid-ad funnel landing pages, legal pages) must not
  * appear in the sitemap — listing a noindex URL sends Google a contradictory
@@ -85,7 +107,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes: MetadataRoute.Sitemap = [
     {
       url: rootRewrite ? `${BASE_URL}${rootRewrite}` : BASE_URL,
-      lastModified: new Date(),
+      lastModified: lastModifiedFor("/"),
       changeFrequency: "weekly",
       priority: 1,
     },
@@ -103,7 +125,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     routes.push({
       url,
-      lastModified: new Date(),
+      lastModified: lastModifiedFor(routePath, filePath),
       changeFrequency: "weekly",
       priority: routePath.split("/").length <= 2 ? 0.8 : 0.6,
     });
