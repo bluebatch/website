@@ -157,7 +157,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/tools/power-automate/hero.png"
+              alt="Leerer Besprechungsraum mit geschlossenen Laptops und Papierablage: Power Automate in der Office-Welt"
               type="image"
             />
           </Hero2ColumnMediaColumn>

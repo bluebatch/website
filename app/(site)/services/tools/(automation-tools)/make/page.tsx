@@ -94,7 +94,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/tools/make/hero.png"
+              alt="Hände setzen Holzbausteine zu einer Kette zusammen: Make als visueller Workflow-Builder"
               type="image"
             />
           </Hero2ColumnMediaColumn>

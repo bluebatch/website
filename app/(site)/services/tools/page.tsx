@@ -174,7 +174,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/tools/hero.png"
+              alt="Präzisionswerkzeuge in Reihen auf einer Werkbank: Überblick über die Automatisierungs-Tools"
               type="image"
             />
           </Hero2ColumnMediaColumn>

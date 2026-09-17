@@ -92,7 +92,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/tools/pipedream/hero.png"
+              alt="Person am Stehpult blickt auf eine neblige Skyline: Pipedream mit unsicherer Zukunft"
               type="image"
             />
           </Hero2ColumnMediaColumn>

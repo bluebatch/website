@@ -93,7 +93,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/tools/tray-io/hero.png"
+              alt="Leerer Glaskorridor eines Bürogebäudes: Tray.io als Enterprise-iPaaS"
               type="image"
             />
           </Hero2ColumnMediaColumn>

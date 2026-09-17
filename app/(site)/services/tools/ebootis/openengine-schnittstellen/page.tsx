@@ -129,7 +129,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/tools/openengine-schnittstellen/hero.png"
+              alt="Lagerbüro mit Barcodescanner und Lieferschein-Ablage vor Hochregalen: Schnittstellen der e.bootis-OpenEngine"
               type="image"
             />
           </Hero2ColumnMediaColumn>

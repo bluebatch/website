@@ -160,7 +160,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/tools/workato/hero.png"
+              alt="Leerer Vorstandsraum mit Lederstühlen und Stadtblick: Workato als teure Enterprise-iPaaS"
               type="image"
             />
           </Hero2ColumnMediaColumn>

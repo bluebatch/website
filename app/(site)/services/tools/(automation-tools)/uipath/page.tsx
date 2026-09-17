@@ -93,7 +93,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/tools/uipath/hero.png"
+              alt="Leere Schreibtischreihe im Morgengrauen mit einer brennenden Lampe: UiPath-Bots arbeiten, wenn niemand da ist"
               type="image"
             />
           </Hero2ColumnMediaColumn>

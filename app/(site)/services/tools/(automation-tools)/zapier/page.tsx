@@ -117,7 +117,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/tools/zapier/hero.png"
+              alt="Viele gebündelte Netzwerkkabel in einem Switch: Zapier als größte Plattform mit tausenden Verbindungen"
               type="image"
             />
           </Hero2ColumnMediaColumn>

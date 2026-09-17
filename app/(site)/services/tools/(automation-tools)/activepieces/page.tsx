@@ -91,7 +91,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/tools/activepieces/hero.png"
+              alt="Halb fertiges Holzpuzzle mit losen Teilen: Activepieces ist noch nicht vollständig"
               type="image"
             />
           </Hero2ColumnMediaColumn>
