@@ -142,7 +142,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/machine-learning.jpg"
+              src="/images/tools/ki-anwendungsfaelle/hero.png"
+              alt="Sortierte Kleinteile in Lagerkästen: Artikelvielfalt im Großhandel, die KI auf e.bootis beherrschbar macht"
               type="image"
             />
           </Hero2ColumnMediaColumn>

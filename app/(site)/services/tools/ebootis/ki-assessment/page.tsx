@@ -111,8 +111,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/business-roadmap.jpg"
-              alt="Priorisierte Roadmap fuer KI-Projekte auf e.bootis"
+              src="/images/tools/ki-assessment/hero.png"
+              alt="Hand ordnet Haftnotizen an einer Glaswand: priorisierte Roadmap für KI-Projekte auf e.bootis"
               type="image"
             />
           </Hero2ColumnMediaColumn>

@@ -136,7 +136,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/digital-workflow.jpg"
+              src="/images/tools/edi-automatisierung/hero.png"
+              alt="Pakete laufen ohne Eingriff über ein Förderband: EDI-Nachrichten, die e.bootis automatisch verarbeitet"
               type="image"
             />
           </Hero2ColumnMediaColumn>

@@ -284,7 +284,8 @@ export default async function Page({
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/digital-workflow.jpg"
+              src="/images/tools/n8n/hero.png"
+              alt="Kompakter Server auf einem Sideboard im hellen Büro: n8n selbst gehostet auf eigener Hardware"
               type="image"
             />
           </Hero2ColumnMediaColumn>

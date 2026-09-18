@@ -116,8 +116,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/agentic-ai.jpg"
-              alt="KI-Chatbot beantwortet Fragen aus e.bootis-Daten"
+              src="/images/tools/chatbot-integration/hero.png"
+              alt="Person mit Tablet im Lagergang: Bestände und Preise aus e.bootis direkt im Chat abfragen"
               type="image"
             />
           </Hero2ColumnMediaColumn>

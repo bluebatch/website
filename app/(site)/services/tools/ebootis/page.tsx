@@ -159,7 +159,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/digital-marketplace.jpg"
+              src="/images/tools/ebootis/hero.png"
+              alt="Laderampe eines Großhandels mit Lkw und Paletten: der Warenfluss, den e.bootis mit KI abbildet"
               type="image"
             />
           </Hero2ColumnMediaColumn>

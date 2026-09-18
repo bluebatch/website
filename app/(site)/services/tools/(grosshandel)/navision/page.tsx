@@ -169,7 +169,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/business-analytics.jpg"
+              src="/images/tools/navision/hero.png"
+              alt="Geschlossenes Hauptbuch mit Brille und leerer Ablage: Buchhaltung, die Navision-Automatisierung übernimmt"
               type="image"
             />
           </Hero2ColumnMediaColumn>

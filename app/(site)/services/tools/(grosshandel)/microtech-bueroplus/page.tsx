@@ -92,7 +92,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/business-analytics.jpg"
+              src="/images/tools/microtech-bueroplus/hero.png"
+              alt="Hochregalgang eines Großhandelslagers mit Paletten: Bestände, die microtech per GraphQL und PostgreSQL abgleicht"
               type="image"
             />
           </Hero2ColumnMediaColumn>

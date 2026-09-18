@@ -114,8 +114,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/data-flow.jpg"
-              alt="Datenfluss zwischen e.bootis und anderen Systemen per n8n"
+              src="/images/tools/n8n-integration/hero.png"
+              alt="Glasbrücke zwischen zwei Bürogebäuden: Datenfluss zwischen e.bootis und anderen Systemen per n8n"
               type="image"
             />
           </Hero2ColumnMediaColumn>

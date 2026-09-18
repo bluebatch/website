@@ -168,7 +168,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/invoice-processing.jpg"
+              src="/images/tools/easybill/hero.png"
+              alt="Leerer Papierstapel, Umschlag und Füller auf einem Schreibtisch: Rechnungen, die Easybill automatisch erstellt"
               type="image"
             />
           </Hero2ColumnMediaColumn>

@@ -113,8 +113,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/machine-learning.jpg"
-              alt="KI-Agent greift ueber einen MCP-Server auf e.bootis zu"
+              src="/images/tools/mcp-server/hero.png"
+              alt="Ein Hub mit vier Kabeln aus vier Richtungen: der MCP-Server als eine Schnittstelle zu e.bootis für alle KI-Agenten"
               type="image"
             />
           </Hero2ColumnMediaColumn>

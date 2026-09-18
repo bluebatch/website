@@ -96,7 +96,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/business-analytics.jpg"
+              src="/images/tools/freshworks/hero.png"
+              alt="Abgelegtes Service-Headset im leeren Support-Büro: Anfragen, die Freshworks-Automatisierung ohne Zutun beantwortet"
               type="image"
             />
           </Hero2ColumnMediaColumn>
