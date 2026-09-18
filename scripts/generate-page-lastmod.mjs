@@ -30,8 +30,15 @@ function git(args) {
   return execFileSync("git", args, { cwd: root, encoding: "utf8" }).trim();
 }
 
+// Nicht ueber git(): dessen trim() frisst das fuehrende Leerzeichen der
+// ersten Zeile (" M app/..."), und slice(3) schnitt dann das "a" von "app"
+// ab — die alphabetisch erste geaenderte Seite bekam so ihr altes
+// Commit-Datum statt heute (so beim Activepieces-Hero am 2026-09-17).
 const dirty = new Set(
-  git(["status", "--porcelain", "--untracked-files=all", "--", "app"])
+  execFileSync("git", ["status", "--porcelain", "--untracked-files=all", "--", "app"], {
+    cwd: root,
+    encoding: "utf8",
+  })
     .split("\n")
     .filter(Boolean)
     .map((line) => line.slice(3).trim().replace(/^"|"$/g, "")),
