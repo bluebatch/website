@@ -40,15 +40,50 @@ function isNavigableHref(href: string): boolean {
   return !SKIP_HREF_PREFIXES.some((p) => href.startsWith(p));
 }
 
-async function collectLinks(page: Page): Promise<string[]> {
-  const hrefs: string[] = [];
-  const links = await page.locator("a[href]").all();
-  for (const link of links) {
-    const href = await link.getAttribute("href");
-    if (!href || !isNavigableHref(href) || !isInternalUrl(href)) continue;
-    hrefs.push(normalizePathname(href));
+/**
+ * Alle href-Attribute einer Seite in EINEM Round-Trip lesen.
+ *
+ * Bis 2026-09-18 lief hier `locator("a[href]").all()` plus ein
+ * `getAttribute("href")` pro Link — bei ~150 Links je Seite und ~217 Seiten
+ * über 30.000 CDP-Round-Trips pro Crawl. Unter Last (zwei Playwright-Läufe
+ * hintereinander, Load 20 auf 12 Kernen) trieb genau diese Schleife den
+ * externen Link-Check in den 600s-Timeout (`waiting for
+ * locator('a[href]').nth(120)`), obwohl die Seite selbst fehlerfrei war.
+ */
+export async function collectHrefs(page: Page): Promise<string[]> {
+  return page.$$eval("a[href]", (anchors) =>
+    anchors
+      .map((a) => a.getAttribute("href"))
+      .filter((href): href is string => !!href),
+  );
+}
+
+function isHttpUrl(href: string): boolean {
+  try {
+    const url = new URL(href);
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch {
+    return false;
   }
-  return hrefs;
+}
+
+interface PageLinks {
+  internal: string[];
+  external: string[];
+}
+
+async function collectLinks(page: Page): Promise<PageLinks> {
+  const internal: string[] = [];
+  const external: string[] = [];
+  for (const href of await collectHrefs(page)) {
+    if (!isNavigableHref(href)) continue;
+    if (isInternalUrl(href)) {
+      internal.push(normalizePathname(href));
+    } else if (isHttpUrl(href)) {
+      external.push(href);
+    }
+  }
+  return { internal, external };
 }
 
 export interface CrawledPage {
@@ -57,6 +92,8 @@ export interface CrawledPage {
   finalPathname: string;
   redirected: boolean;
   error?: string;
+  /** Absolute http(s)-Links auf fremde Origins, wie sie im HTML stehen. */
+  externalLinks: string[];
 }
 
 /**
@@ -98,20 +135,22 @@ export async function crawlSite(
         status,
         finalPathname,
         redirected: finalPathname !== pathname,
+        externalLinks: [],
       };
-
-      results.push(crawled);
-      onPage?.(crawled);
 
       if (status < 400) {
         const links = await collectLinks(browserPage);
-        for (const link of links) {
+        crawled.externalLinks = links.external;
+        for (const link of links.internal) {
           if (!visited.has(link) && !queued.has(link)) {
             queued.add(link);
             toVisit.push(link);
           }
         }
       }
+
+      results.push(crawled);
+      onPage?.(crawled);
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       const crawled: CrawledPage = {
@@ -120,6 +159,7 @@ export async function crawlSite(
         finalPathname: pathname,
         redirected: false,
         error: message,
+        externalLinks: [],
       };
       results.push(crawled);
       onPage?.(crawled);

@@ -1,10 +1,5 @@
 import { test, expect } from "@playwright/test";
-import {
-  crawlSite,
-  BASE_URL,
-  isInternalUrl,
-  normalizePathname,
-} from "../helpers/crawl";
+import { crawlSite } from "../helpers/crawl";
 
 test("no broken internal links (4xx/5xx)", async ({ page }) => {
   test.setTimeout(600_000);
@@ -39,48 +34,18 @@ test("no broken internal links (4xx/5xx)", async ({ page }) => {
 test("no broken external links", async ({ page }) => {
   test.setTimeout(600_000);
 
+  // Bis 2026-09-18 lief der Sammel-Crawl hier sequenziell auf einer einzigen
+  // Page mit einem getAttribute-Round-Trip pro Link — doppelt so langsam wie
+  // crawlSite() bei identischer Seitenmenge (6,5 min sauber, 10 min = Timeout
+  // unter Last, während derselbe Crawl im internen Check 4 min brauchte).
+  // Der Sechser-Pool aus crawlSite() liefert die externen Links jetzt mit.
   const externalLinks = new Map<string, string[]>();
-  const visited = new Set<string>();
-  const toVisit: string[] = ["/"];
-
-  while (toVisit.length > 0) {
-    const pathname = toVisit.shift()!;
-    if (visited.has(pathname)) continue;
-    visited.add(pathname);
-    if (/\.(xml|json|ico|png|jpg|svg|css|js|woff|woff2|ttf|webp|pdf)$/i.test(pathname)) continue;
-    if (["/ingest", "/_next", "/api"].some((p) => pathname.startsWith(p))) continue;
-
-    try {
-      await page.goto(`${BASE_URL}${pathname}`, {
-        waitUntil: "domcontentloaded",
-        timeout: 30_000,
-      });
-    } catch {
-      console.log(`  Skipping ${pathname} (connection error)`);
-      continue;
-    }
-
-    const links = await page.locator("a[href]").all();
-    for (const link of links) {
-      const href = await link.getAttribute("href");
-      if (!href) continue;
-      if (["#", "mailto:", "tel:", "javascript:"].some((p) => href.startsWith(p))) continue;
-
-      if (isInternalUrl(href)) {
-        const norm = normalizePathname(href);
-        if (!visited.has(norm) && !toVisit.includes(norm)) toVisit.push(norm);
-      } else {
-        try {
-          const url = new URL(href);
-          if (url.protocol === "http:" || url.protocol === "https:") {
-            const pages = externalLinks.get(href) || [];
-            pages.push(pathname);
-            externalLinks.set(href, pages);
-          }
-        } catch {
-          // skip invalid URLs
-        }
-      }
+  const crawled = await crawlSite(page);
+  for (const { pathname, externalLinks: hrefs } of crawled) {
+    for (const href of hrefs) {
+      const pages = externalLinks.get(href) || [];
+      pages.push(pathname);
+      externalLinks.set(href, pages);
     }
   }
 
