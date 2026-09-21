@@ -10,7 +10,7 @@ const SKIP_EXTENSIONS = /\.(xml|json|ico|png|jpg|svg|css|js|woff|woff2|ttf|webp|
 const SKIP_PREFIXES = ["/ingest", "/_next", "/api"];
 const SKIP_HREF_PREFIXES = ["#", "mailto:", "tel:", "javascript:"];
 
-const CONCURRENCY = 6;
+export const CONCURRENCY = 6;
 
 export function isInternalUrl(href: string): boolean {
   try {

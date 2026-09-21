@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { BASE_URL } from "../helpers/crawl";
+import { BASE_URL, CONCURRENCY } from "../helpers/crawl";
 
 const CANONICAL_ORIGIN = "https://bluebatch.io";
 
@@ -30,7 +30,11 @@ function countH1(html: string): number {
 }
 
 test("each sitemap URL has correct metadata", async ({ request }) => {
-  test.setTimeout(300_000);
+  // Gleiche Grenze wie navigation.spec.ts und broken-links.spec.ts. Der
+  // frühere 300s-Deckel lag unter dem Projekt-Timeout und riss bei Load > 30
+  // wiederholt, obwohl kein Seiten-Defekt vorlag (2026-09-21, 5,0 m bei
+  // sonst 2,3–3,8 m).
+  test.setTimeout(600_000);
 
   // Fetch sitemap
   console.log(`\nFetching ${BASE_URL}/sitemap.xml\n`);
@@ -43,9 +47,7 @@ test("each sitemap URL has correct metadata", async ({ request }) => {
   );
   console.log(`Found ${urls.length} URLs\n`);
 
-  const failed: string[] = [];
-
-  for (const url of urls) {
+  async function checkUrl(url: string): Promise<string[]> {
     const pathname = new URL(url).pathname || "/";
     const errors: string[] = [];
 
@@ -96,13 +98,35 @@ test("each sitemap URL has correct metadata", async ({ request }) => {
       errors.push(`fetch failed: ${err instanceof Error ? err.message : err}`);
     }
 
+    return errors;
+  }
+
+  // Bis 2026-09-21 lief die Schleife sequenziell (211 URLs, 2,3–3,8 m).
+  // Derselbe Sechser-Pool wie crawlSite(); die Ausgabe behält die
+  // Sitemap-Reihenfolge.
+  const results = new Array<string[]>(urls.length);
+  let next = 0;
+  async function worker(): Promise<void> {
+    while (next < urls.length) {
+      const index = next++;
+      results[index] = await checkUrl(urls[index]);
+    }
+  }
+  await Promise.all(
+    Array.from({ length: Math.min(CONCURRENCY, urls.length) }, () => worker()),
+  );
+
+  const failed: string[] = [];
+  urls.forEach((url, index) => {
+    const pathname = new URL(url).pathname || "/";
+    const errors = results[index];
     if (errors.length > 0) {
       console.log(`  ✗ ${pathname} — ${errors.join(", ")}`);
       failed.push(`${pathname}: ${errors.join(", ")}`);
     } else {
       console.log(`  ✓ ${pathname}`);
     }
-  }
+  });
 
   if (failed.length > 0) {
     console.log(`\n--- ${failed.length} FAILED ---`);
