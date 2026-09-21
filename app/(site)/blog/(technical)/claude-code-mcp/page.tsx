@@ -505,7 +505,15 @@ claude mcp reset-project-choices   # Genehmigungen für dieses Projekt zurückse
               >
                 Leitfaden zur Prozessautomatisierung
               </Link>
-              .
+              . Fehlt für euer ERP oder eure Datenbank noch ein passender
+              Server, klärt{" "}
+              <Link
+                href="/services/mcp-server-erstellen"
+                className="text-primary-600 hover:underline"
+              >
+                MCP-Server erstellen
+              </Link>
+              , ob ihr einen fertigen nehmt oder einen eigenen bauen lasst.
             </Typo.Paragraph>
           </div>
 

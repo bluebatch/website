@@ -327,7 +327,17 @@ export default async function Page({
             KI-Agent kostenlos
           </Link>
           , wie weit Gratis-Kontingente und Open Source tragen und was danach
-          an Server- und Modellkosten anfällt.
+          an Server- und Modellkosten anfällt. Geht es darum, ein ERP, eine
+          Datenbank oder SharePoint für einen KI-Assistenten erreichbar zu
+          machen, zeigt{" "}
+          <Link
+            href={resolveHref("/services/mcp-server-erstellen")}
+            className="text-primary-600 hover:underline"
+          >
+            MCP-Server erstellen
+          </Link>
+          , wann ein fertiger Server reicht und wann ein eigener mit
+          Rechteschnitt und Freigaben gebaut werden sollte.
         </Typo.Paragraph>
       </ContentWrapper>
 

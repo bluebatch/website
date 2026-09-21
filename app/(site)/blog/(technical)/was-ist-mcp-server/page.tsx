@@ -445,7 +445,16 @@ export default function Page() {
               Rechte sauber schneiden, Freigaben definieren, testen. Ein
               erster nutzbarer Anschluss eines Standardsystems ist eher ein
               Projekt von Tagen, ein abgesicherter Produktivbetrieb über
-              mehrere Systeme eines von Wochen, nicht von Monaten.
+              mehrere Systeme eines von Wochen, nicht von Monaten. Wann ein
+              fertiger Server reicht und wann sich der Eigenbau lohnt, steht
+              auf unserer Seite{" "}
+              <Link
+                href="/services/mcp-server-erstellen"
+                className="text-primary-600 hover:underline"
+              >
+                MCP-Server erstellen
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 
