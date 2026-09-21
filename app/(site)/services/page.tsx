@@ -89,7 +89,7 @@ const services = [
       "Ab €50/Monat",
     ],
     color: "from-blue-500 to-blue-600",
-    image: "/images/technology-integration.jpg",
+    image: "/images/services/n8n-hosting/hero.png",
   },
   {
     slug: "workflow-wartung",
@@ -105,7 +105,7 @@ const services = [
       "Ab €250/Monat",
     ],
     color: "from-green-500 to-green-600",
-    image: "/images/business-analytics.jpg",
+    image: "/images/services/workflow-wartung/hero.png",
   },
   {
     slug: "custom-nodes",
@@ -121,7 +121,7 @@ const services = [
       "Ab 3-7 Tage",
     ],
     color: "from-purple-500 to-purple-600",
-    image: "/images/web-development.jpg",
+    image: "/images/services/custom-nodes/hero.png",
   },
   {
     slug: "schulungen",
@@ -137,7 +137,7 @@ const services = [
       "Individuelle Inhalte",
     ],
     color: "from-orange-500 to-orange-600",
-    image: "/images/training-seminar.jpg",
+    image: "/images/services/schulungen/hero.png",
   },
   {
     slug: "performance-scaling",
@@ -153,7 +153,7 @@ const services = [
       "Ab €1.500 Audit",
     ],
     color: "from-red-500 to-red-600",
-    image: "/images/process-automation.jpg",
+    image: "/images/services/performance-scaling/hero.png",
   },
 ];
 
@@ -219,7 +219,8 @@ export default async function Page({
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/business-automation.jpg"
+              src="/images/services/hero.png"
+              alt="Helles Großraumbüro vor Arbeitsbeginn, Laptops geschlossen: alles vorbereitet, bevor das Team kommt"
               type="image"
             />
           </Hero2ColumnMediaColumn>

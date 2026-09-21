@@ -266,7 +266,11 @@ export default async function Page({
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/web-development.jpg" type="image" />
+            <Hero2ColumnImage
+              src="/images/services/custom-nodes/hero.png"
+              alt="Hände fügen einen Holzbaustein passgenau in eine Reihe gleicher Bausteine: der maßgeschneiderte n8n Node, der in den Workflow passt"
+              type="image"
+            />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>

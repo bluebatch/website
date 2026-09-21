@@ -251,7 +251,8 @@ export default async function Page({
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/business-analytics.jpg"
+              src="/images/services/performance-scaling/hero.png"
+              alt="Heller Gang aus identischen Serverschränken, die sich in die Tiefe wiederholen: Kapazität, die mit n8n mitwächst"
               type="image"
             />
           </Hero2ColumnMediaColumn>

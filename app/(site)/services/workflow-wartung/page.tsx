@@ -183,7 +183,8 @@ export default async function Page({
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/business-analytics.jpg"
+              src="/images/services/workflow-wartung/hero.png"
+              alt="Pinzette im offenen Uhrwerk auf einer Werkbank: Wartung, die einen Workflow über Jahre am Laufen hält"
               type="image"
             />
           </Hero2ColumnMediaColumn>

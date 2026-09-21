@@ -180,7 +180,8 @@ export default async function Page({
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/technology-integration.jpg"
+              src="/images/services/n8n-hosting/hero.png"
+              alt="Schlüssel im Schloss eines Rack-Servers: n8n auf eigener Hardware, unter eigener Kontrolle"
               type="image"
             />
           </Hero2ColumnMediaColumn>

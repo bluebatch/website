@@ -234,7 +234,11 @@ export default async function Page({
             </Hero2ColumnSubtext>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
-            <Hero2ColumnImage src="/images/training-seminar.jpg" type="image" />
+            <Hero2ColumnImage
+              src="/images/services/schulungen/hero.png"
+              alt="Trainer von hinten am leeren Flipchart, davor ein Halbkreis leerer Stühle: der Moment vor Beginn einer n8n Schulung"
+              type="image"
+            />
           </Hero2ColumnMediaColumn>
         </Hero2Column>
       </ContentWrapper>

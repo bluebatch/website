@@ -167,7 +167,8 @@ export default async function KiAgenturZertifizierungPage({
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/certificate-check.jpg"
+              src="/images/services/zertifizierung/hero.png"
+              alt="Verschnürte Dokumentenmappe mit blankem Goldsiegel auf einem Schreibtisch: dokumentierte, geprüfte Prozesse"
               type="image"
             />
           </Hero2ColumnMediaColumn>
