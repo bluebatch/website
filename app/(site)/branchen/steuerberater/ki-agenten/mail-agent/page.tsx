@@ -275,8 +275,8 @@ export default function Page() {
           />
         </StatsLeadHero.Stats>
         <StatsLeadHero.Media
-          src="/images/data-flow.jpg"
-          alt="Automatisierter Mail-Fluss in der Steuerkanzlei"
+          src="/images/steuerberater/ki-agenten/mail-agent/hero.png"
+          alt="Drahtkorb mit sauber gestapelten Briefumschlägen, davor ein bereits geöffneter Umschlag mit halb herausgezogenem Blatt: Eingang gelesen, Antwortentwurf liegt bereit"
         />
       </StatsLeadHero>
 

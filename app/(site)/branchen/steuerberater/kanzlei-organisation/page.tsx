@@ -203,8 +203,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/process-mapping.jpg"
-              alt="Prozesslandkarte einer organisierten Kanzlei"
+              src="/images/steuerberater/kanzlei-organisation/hero.png"
+              alt="Offene Schreibtischschublade von oben, acht Fächer mit sauber einsortierten leeren Karten: in einer organisierten Kanzlei hat jeder Vorgang seinen festen Platz"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

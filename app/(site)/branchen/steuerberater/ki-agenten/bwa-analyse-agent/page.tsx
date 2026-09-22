@@ -132,8 +132,8 @@ export default function Page() {
           />
         </StatsLeadHero.Stats>
         <StatsLeadHero.Media
-          src="/images/business-analytics.jpg"
-          alt="Auswertung von Geschäftszahlen und Diagrammen am Bildschirm"
+          src="/images/steuerberater/ki-agenten/bwa-analyse-agent/hero.png"
+          alt="Zwei gleich gesetzte Papierstapel nebeneinander, der rechte etwa dreimal so hoch: die Abweichung zwischen zwei Monaten auf einen Blick"
         />
       </StatsLeadHero>
 

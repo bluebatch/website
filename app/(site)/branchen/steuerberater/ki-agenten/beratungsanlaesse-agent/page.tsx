@@ -137,8 +137,8 @@ export default function Page() {
           />
         </StatsLeadHero.Stats>
         <StatsLeadHero.Media
-          src="/images/opportunity-doors.jpg"
-          alt="Symbolbild für neue Chancen und Gesprächsanlässe"
+          src="/images/steuerberater/ki-agenten/beratungsanlaesse-agent/hero.png"
+          alt="Viele gleich aussehende helle Kiesel auf einem Tisch, einer davon bernsteinfarben und scharf im Fokus: der eine Beratungsanlass, den der Agent im Mandantenbestand findet"
         />
       </StatsLeadHero>
 

@@ -141,8 +141,8 @@ export default function Page() {
           />
         </StatsLeadHero.Stats>
         <StatsLeadHero.Media
-          src="/images/tax-consulting-workspace.jpg"
-          alt="Arbeitsplatz in einer Steuerkanzlei mit Bescheiden und Notebook"
+          src="/images/steuerberater/ki-agenten/einspruch-agent/hero.png"
+          alt="Aufgeschlagener Kommentarband mit rotem Lesebändchen auf einem Schreibtisch: die Fundstelle, auf die sich der Einspruch stützt"
         />
       </StatsLeadHero>
 

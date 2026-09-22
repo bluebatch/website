@@ -64,7 +64,7 @@ const agents = [
     stat: "-60%",
     description:
       "Liest Mandanten-Mails, erkennt den Mandanten in DATEV und schreibt Antwortentwürfe im Kanzlei-Ton. Ihr Team gibt frei, der E-Mail-Aufwand sinkt um 40-60%.",
-    image: "/images/data-flow.jpg",
+    image: "/images/steuerberater/ki-agenten/mail-agent/hero.png",
     features: [
       "Liest und ordnet Mandanten-Mails ein",
       "Erkennt den Mandanten direkt in DATEV",
@@ -116,7 +116,7 @@ const agents = [
     stat: "8h zu 2h",
     description:
       "Einspruch gegen den Steuerbescheid mit Rechtsprechungs-Recherche, Argumentation und fertigem Schriftsatz-Entwurf - der Steuerberater prüft und verantwortet.",
-    image: "/images/tax-consulting-workspace.jpg",
+    image: "/images/steuerberater/ki-agenten/einspruch-agent/hero.png",
     features: [
       "Recherchiert einschlägige Rechtsprechung",
       "Baut die Argumentation auf",
@@ -134,7 +134,7 @@ const agents = [
     stat: "je Mandant",
     description:
       "Analysiert jede BWA automatisch, markiert Auffälligkeiten und erstellt einen Steuer-Forecast je Mandant - als Grundlage für proaktive Beratung.",
-    image: "/images/business-analytics.jpg",
+    image: "/images/steuerberater/ki-agenten/bwa-analyse-agent/hero.png",
     features: [
       "BWA automatisch analysiert",
       "Auffälligkeiten markiert",
@@ -151,7 +151,7 @@ const agents = [
     stat: "4x/Jahr",
     description:
       "Erkennt Beratungsanlässe systematisch aus Mandantendaten - anstehende Übergaben, ungewöhnliche Belastungen, Fristen - inkl. quartalsweisem Vorauszahlungs-Check.",
-    image: "/images/opportunity-doors.jpg",
+    image: "/images/steuerberater/ki-agenten/beratungsanlaesse-agent/hero.png",
     features: [
       "Scannt Mandantendaten auf Anlässe",
       { label: "Vorauszahlungs-Check je Quartal", badge: "4x/Jahr" },

@@ -114,7 +114,7 @@ const topics = [
       "Bevor eine Kanzlei über konkrete KI-Anwendungen entscheidet, steht die Grundsatzfrage: In welcher Umgebung dürfen Mandantendaten verarbeitet werden? Private AI beantwortet sie strukturell: Offene Sprachmodelle wie Llama oder Mistral laufen auf Infrastruktur, die Ihre Kanzlei kontrolliert - mit Open WebUI als Chat-Oberfläche, vLLM als Modell-Server, EU-Hosting oder on-premise.",
       "AVV, dedizierter Tenant, kein Training mit Ihren Daten: konform mit DSGVO und § 203 StGB, einsatzbereit in wenigen Tagen.",
     ],
-    image: "/images/technology-integration.jpg",
+    image: "/images/steuerberater/private-ai/hero.png",
   },
   {
     id: "claude-cowork",
@@ -211,7 +211,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/tax-consulting-workspace.jpg"
+              src="/images/steuerberater/hero.png"
+              alt="Aufgeräumter Kanzlei-Schreibtisch mit geschlossenem Laptop und einem Stapel verschnürter Mappen im warmen Nachmittagslicht"
               type="image"
             />
           </Hero2ColumnMediaColumn>

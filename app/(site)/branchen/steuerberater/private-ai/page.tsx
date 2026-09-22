@@ -160,8 +160,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/machine-learning.jpg"
-              alt="Private AI Infrastruktur"
+              src="/images/steuerberater/private-ai/hero.png"
+              alt="Ruhiger, durch eine Milchglaswand abgetrennter Arbeitsraum in einem hellen Büro: die eigene, geschützte Umgebung für Mandantendaten"
               fill
               className="object-cover rounded-lg shadow-lg"
             />
