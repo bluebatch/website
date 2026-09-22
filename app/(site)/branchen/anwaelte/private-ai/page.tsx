@@ -191,7 +191,13 @@ export default function Page() {
               vLLM, Zugriff nur aus dem eigenen Verzeichnisdienst. Für
               Kanzleien, bei denen intern gilt, dass Mandatsdaten das Haus
               physisch nicht verlassen. Wir richten ein, dokumentieren und
-              übergeben, auf Wunsch mit laufender Wartung.
+              übergeben, auf Wunsch mit laufender Wartung. Was ein lokales
+              Modell im Alltag leistet und wo die Grenzen liegen, zeigt
+              beispielhaft unser Beitrag zu{" "}
+              <InternalLink href="/blog/claude-code-mit-ollama" variant="underline">
+                Claude Code mit Ollama
+              </InternalLink>
+              .
             </Typo.Paragraph>
           </ProseColumns.Item>
           <ProseColumns.Item title="Dedizierter EU-Server">

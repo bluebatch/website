@@ -211,7 +211,13 @@ export default function Page() {
             Chat-Oberfläche für das Team, dahinter ein Modell-Server wie vLLM
             (performant, mehrbenutzerfähig) oder Ollama (einfacher Einstieg),
             darauf offene Sprachmodelle wie Llama, Mistral oder Qwen. Der
-            Unterschied liegt darin, wo das Ganze läuft.
+            Unterschied liegt darin, wo das Ganze läuft. Wie sich ein lokales
+            Modell über Ollama in der Praxis anfühlt, inklusive Hardware und
+            Kosten, beschreibt unser Beitrag zu{" "}
+            <InternalLink href="/blog/claude-code-mit-ollama" variant="underline">
+              Claude Code mit Ollama
+            </InternalLink>
+            .
           </IntroBox.Paragraph>
         </IntroBox>
 

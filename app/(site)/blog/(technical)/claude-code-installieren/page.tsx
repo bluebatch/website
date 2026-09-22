@@ -169,7 +169,16 @@ export default function Page() {
               Windows 10 (1809) oder neuer, Ubuntu 20.04+ bzw. Debian 10+,
               4 GB RAM und eine Internetverbindung. Eine GPU braucht es
               nicht, die Modelle laufen bei Anthropic, nicht auf Ihrem
-              Rechner.
+              Rechner. Wer die Modelle stattdessen lokal betreiben will, etwa
+              aus Datenschutzgründen, findet die Einrichtung, die
+              Hardware-Anforderungen und die Kostenrechnung im Artikel zu{" "}
+              <Link
+                href="/blog/claude-code-mit-ollama"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code mit Ollama
+              </Link>
+              .
             </Typo.Paragraph>
           </div>
 
