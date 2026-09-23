@@ -125,8 +125,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/process-automation.jpg"
-              alt="Team richtet automatisierte Buchungsprüfung am Bildschirm ein"
+              src="/images/steuerberater/workflows/fibu-monatsreview-implementierung/hero.png"
+              alt="Leerer Besprechungsraum, Whiteboard mit vier Spalten Haftnotizen, von links nach rechts abnehmend gefüllt: Einführung in vier Schritten"
               type="image"
             />
           </Hero2ColumnMediaColumn>

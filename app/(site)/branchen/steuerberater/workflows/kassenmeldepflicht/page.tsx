@@ -102,8 +102,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/compliance-signs.jpg"
-              alt="Compliance-Anforderungen der Kassenmeldepflicht im Überblick"
+              src="/images/steuerberater/workflows/kassenmeldepflicht/hero.png"
+              alt="Kasse auf der Theke einer kleinen Bäckerei vor Ladenöffnung"
               type="image"
             />
           </Hero2ColumnMediaColumn>

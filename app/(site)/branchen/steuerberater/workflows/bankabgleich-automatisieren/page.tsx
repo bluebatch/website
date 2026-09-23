@@ -104,8 +104,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/invoice-verification.jpg"
-              alt="Kontoumsätze werden automatisch offenen Posten zugeordnet"
+              src="/images/steuerberater/workflows/bankabgleich-automatisieren/hero.png"
+              alt="Zettel paarweise verklammert, einer bleibt ohne Partner: Zuordnung mit gemeldeter Differenz"
               type="image"
             />
           </Hero2ColumnMediaColumn>

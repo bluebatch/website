@@ -100,8 +100,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/document-automation.jpg"
-              alt="Unterlagen zu einem Mietobjekt werden automatisch ausgelesen"
+              src="/images/steuerberater/workflows/anlage-v-mit-ki/hero.png"
+              alt="Hausschlüssel auf einer geschlossenen Mappe am Fenster: die Unterlagen eines Mietobjekts an einem Ort"
               type="image"
             />
           </Hero2ColumnMediaColumn>

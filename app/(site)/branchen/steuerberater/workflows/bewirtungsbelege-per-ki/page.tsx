@@ -101,8 +101,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/invoice-verification.jpg"
-              alt="Bewirtungsbeleg mit handschriftlichen Angaben wird per KI geprüft"
+              src="/images/steuerberater/workflows/bewirtungsbelege-per-ki/hero.png"
+              alt="Restauranttisch nach dem Geschäftsessen, der Beleg liegt auf dem Tablett"
               type="image"
             />
           </Hero2ColumnMediaColumn>

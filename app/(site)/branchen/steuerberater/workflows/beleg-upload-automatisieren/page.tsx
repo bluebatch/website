@@ -102,8 +102,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/document-automation.jpg"
-              alt="Digitaler Belegfluss vom Mandanten in die Kanzlei"
+              src="/images/steuerberater/workflows/beleg-upload-automatisieren/hero.png"
+              alt="Umschläge liegen unter dem Briefschlitz der Kanzleitür: Belege kommen an einem festen Eingang an"
               type="image"
             />
           </Hero2ColumnMediaColumn>

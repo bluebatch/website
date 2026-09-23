@@ -102,8 +102,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/human-resources.jpg"
-              alt="Lohn- und Personaldaten in einem digitalen Prozess"
+              src="/images/steuerberater/workflows/lohnprozess-automatisieren/hero.png"
+              alt="Jacken der Belegschaft an der Garderobe eines kleinen Betriebs"
               type="image"
             />
           </Hero2ColumnMediaColumn>

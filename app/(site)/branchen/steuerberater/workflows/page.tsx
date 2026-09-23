@@ -142,7 +142,7 @@ const workflows = [
     stat: "je Monat",
     description:
       "Jede Buchung geprüft, bevor der Monat schließt: KI-Review via MCP-Server an DATEV-Connect, inkl. Kreditoren- und Ordnungsmäßigkeitsprüfung.",
-    image: "/images/datev-integration.jpg",
+    image: "/images/steuerberater/workflows/fibu-monatsreview/hero.png",
     linkLabel: "Zum FiBu-Monatsreview",
   },
   {
@@ -153,7 +153,7 @@ const workflows = [
     stat: "ohne Abtippen",
     description:
       "Anlage V per KI erstellen und prüfen: Vermietungseinkünfte aus Unterlagen erfasst, plausibilisiert und vorbereitet.",
-    image: "/images/document-automation.jpg",
+    image: "/images/steuerberater/workflows/anlage-v-mit-ki/hero.png",
     linkLabel: "Zur Anlage V mit KI",
   },
   {
@@ -164,7 +164,7 @@ const workflows = [
     stat: "SKR 03/04",
     description:
       "Buchungsstapel per KI generieren: aus Belegen wird ein fertiger, kontierter DATEV-Stapel zur Übernahme.",
-    image: "/images/invoice-processing.jpg",
+    image: "/images/steuerberater/workflows/buchungsstapel-per-ki/hero.png",
     linkLabel: "Zum Buchungsstapel per KI",
   },
   {
@@ -175,7 +175,7 @@ const workflows = [
     stat: "täglich",
     description:
       "Bankabstimmung automatisiert per KI: Zahlungseingänge zuordnen, offene Posten abgleichen, Differenzen melden.",
-    image: "/images/business-analytics.jpg",
+    image: "/images/steuerberater/workflows/bankabgleich-automatisieren/hero.png",
     linkLabel: "Zum Bankabgleich",
   },
   {
@@ -186,7 +186,7 @@ const workflows = [
     stat: "§ 4 EStG",
     description:
       "Bewirtungsbelege per KI auslesen und buchen, auch handschriftliche - inklusive 70/30-Aufteilung und Pflichtangaben-Check.",
-    image: "/images/invoice-verification.jpg",
+    image: "/images/steuerberater/workflows/bewirtungsbelege-per-ki/hero.png",
     linkLabel: "Zu den Bewirtungsbelegen",
   },
   {
@@ -197,7 +197,7 @@ const workflows = [
     stat: "je Mandant",
     description:
       "Belege automatisch beim Mandanten einsammeln: E-Mail-Weiterleitung, GetMyInvoices und Co., passend zu DATEV Unternehmen Online oder lexware.",
-    image: "/images/data-flow.jpg",
+    image: "/images/steuerberater/workflows/beleg-upload-automatisieren/hero.png",
     linkLabel: "Zum Beleg-Upload",
   },
   {
@@ -208,7 +208,7 @@ const workflows = [
     stat: "SEPA",
     description:
       "Serienrechnung, SEPA-Lastschrift und vollautomatischer Mahnprozess - damit Honorare pünktlich kommen, ohne Hinterhertelefonieren.",
-    image: "/images/pricing-calculator.jpg",
+    image: "/images/steuerberater/workflows/honorarprozess-automatisieren/hero.png",
     linkLabel: "Zum Honorarprozess",
   },
   {
@@ -219,7 +219,7 @@ const workflows = [
     stat: "1 Klick",
     description:
       "Vom Mandanten-Formular über den Konverter zur XML - und per 1-Klick-Import in ELSTER gemeldet.",
-    image: "/images/process-automation.jpg",
+    image: "/images/steuerberater/workflows/kassenmeldepflicht/hero.png",
     linkLabel: "Zur Kassenmeldepflicht",
   },
   {
@@ -230,7 +230,7 @@ const workflows = [
     stat: "monatlich",
     description:
       "Lohnprozess automatisieren - von der Datenerfassung bis zur White-Label-Plattform, die die Kanzlei ihren Mandanten anbietet.",
-    image: "/images/human-resources.jpg",
+    image: "/images/steuerberater/workflows/lohnprozess-automatisieren/hero.png",
     linkLabel: "Zum Lohnprozess",
   },
 ];

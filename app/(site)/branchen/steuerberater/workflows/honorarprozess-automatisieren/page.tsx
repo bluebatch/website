@@ -103,8 +103,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/invoice-processing.jpg"
-              alt="Automatisierte Honorarrechnung mit Zahlungsstatus"
+              src="/images/steuerberater/workflows/honorarprozess-automatisieren/hero.png"
+              alt="Reihe gleicher, versandfertiger Umschläge auf dem Sideboard"
               type="image"
             />
           </Hero2ColumnMediaColumn>

@@ -107,8 +107,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/invoice-processing.jpg"
-              alt="Belege werden automatisch zu Buchungssätzen verarbeitet"
+              src="/images/steuerberater/workflows/buchungsstapel-per-ki/hero.png"
+              alt="Hände richten lose Belege zu einem sauberen Stapel aus"
               type="image"
             />
           </Hero2ColumnMediaColumn>

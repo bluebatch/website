@@ -107,8 +107,8 @@ export default function Page() {
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
             <Hero2ColumnImage
-              src="/images/datev-integration.jpg"
-              alt="Buchungsjournal auf dem Bildschirm, KI markiert auffällige Positionen"
+              src="/images/steuerberater/workflows/fibu-monatsreview/hero.png"
+              alt="Ein markiertes Blatt ragt aus einem sauberen Stapel: die auffällige Buchung vor Monatsschluss"
               type="image"
             />
           </Hero2ColumnMediaColumn>
