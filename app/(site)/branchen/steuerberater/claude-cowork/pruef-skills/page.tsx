@@ -104,8 +104,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/invoice-verification.jpg"
-              alt="Provisionsanspruch-Prüfung als KI-Skill"
+              src="/images/steuerberater/claude-cowork/pruef-skills/hero.png"
+              alt="Fünf gleiche Blätter in einer Reihe, ein Lineal als Maßstab, eines markiert: dieselbe Prüfung für jedes Dokument"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

@@ -128,8 +128,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/communication-tools.jpg"
-              alt="Steuerberaterin diktiert eine E-Mail per Spracheingabe"
+              src="/images/steuerberater/claude-cowork/diktat-zu-text/hero.png"
+              alt="Person am Fenster spricht eine Nachricht ins Smartphone: sprechen statt tippen"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

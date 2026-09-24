@@ -192,8 +192,8 @@ export default function Page() {
         <SimpleGrid cols={2} className="items-center gap-8 md:gap-12">
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/document-automation.jpg"
-              alt="Sachbearbeiterin prüft ein KI-generiertes Begleitschreiben vor der Freigabe"
+              src="/images/steuerberater/claude-cowork/begleitschreiben-veranlagung/hero.png"
+              alt="Fertiges Begleitschreiben mit Füller und Umschlag auf der Akte: das Schreiben zur Veranlagung liegt versandbereit"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

@@ -49,7 +49,7 @@ const fundament = [
     stat: "200 S.",
     description:
       "Alle Prozesse und Standards der Kanzlei in einem durchsuchbaren Notion-Wiki. Ein Muster-Handbuch mit circa 200 Seiten dient als Vorlage, statt bei null zu starten.",
-    image: "/images/document-automation.jpg",
+    image: "/images/steuerberater/kanzlei-organisation/kanzleihandbuch-aufbauen/hero.png",
     features: [
       "Fundament für Delegation und Führung",
       "Basis für jeden KI-Einsatz",
@@ -65,7 +65,7 @@ const fundament = [
     stat: "0 h",
     description:
       "Screen-Recording aufnehmen, KI transkribiert und schreibt den Handbuch-Artikel. Die Dokumentation entsteht ohne Extra-Zeit im Tagesgeschäft.",
-    image: "/images/digital-workflow.jpg",
+    image: "/images/steuerberater/kanzlei-organisation/prozessdoku-mit-ki/hero.png",
     features: [
       { label: "Doku ohne Extra-Zeit", badge: "0 h" },
       "KI-Transkription zu fertigen Artikeln",
@@ -81,7 +81,7 @@ const fundament = [
     stat: "1 Wo.",
     description:
       "Neue Mitarbeiter lernen Abläufe und DATEV über einen strukturierten Video-Kurs, statt erfahrene Kollegen wochenlang zu binden. Ziel: DATEV-fit in einer Woche.",
-    image: "/images/human-resources.jpg",
+    image: "/images/steuerberater/kanzlei-organisation/mitarbeiter-onboarding-digital/hero.png",
     features: [
       "Video-Kurs aus dem Kanzleihandbuch",
       { label: "Neue Mitarbeiter DATEV-fit", badge: "1 Wo." },

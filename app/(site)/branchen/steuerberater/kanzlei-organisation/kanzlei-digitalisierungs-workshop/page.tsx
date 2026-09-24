@@ -156,8 +156,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/strategic-thinking.jpg"
-              alt="Workshop-Situation: Prozesse einer Kanzlei an der Wand"
+              src="/images/steuerberater/kanzlei-organisation/kanzlei-digitalisierungs-workshop/hero.png"
+              alt="Leerer Besprechungsraum nach dem Workshop, Whiteboard mit vier verbundenen Gruppen von Haftnotizen: die Prozesslandschaft der Kanzlei"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

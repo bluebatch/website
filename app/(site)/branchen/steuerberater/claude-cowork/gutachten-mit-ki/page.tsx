@@ -136,8 +136,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/tax-consulting-workspace.jpg"
-              alt="Steuerberater prüft ein KI-erstelltes Gutachten am Arbeitsplatz"
+              src="/images/steuerberater/claude-cowork/gutachten-mit-ki/hero.png"
+              alt="Aufgeschlagenes Gutachten neben Kommentaren und Lesebrille auf dem Lesesaaltisch"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

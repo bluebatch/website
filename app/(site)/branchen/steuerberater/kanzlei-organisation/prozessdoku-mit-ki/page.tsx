@@ -133,8 +133,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/digital-workflow.jpg"
-              alt="Screen-Recording eines Kanzleiprozesses"
+              src="/images/steuerberater/kanzlei-organisation/prozessdoku-mit-ki/hero.png"
+              alt="Kamera mit Aufnahmelicht und Mikrofon neben frisch entstandenen Blättern: Arbeit wird nebenbei aufgezeichnet und dokumentiert"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

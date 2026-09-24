@@ -133,8 +133,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/human-resources.jpg"
-              alt="Neuer Mitarbeiter beim digitalen Onboarding"
+              src="/images/steuerberater/kanzlei-organisation/mitarbeiter-onboarding-digital/hero.png"
+              alt="Vorbereiteter Arbeitsplatz am ersten Tag mit Laptop, Kopfhörern und neuem Notizbuch"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

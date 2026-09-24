@@ -220,8 +220,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/client-communication.jpg"
-              alt="Strukturierte Mandantenkommunikation im Ticketsystem"
+              src="/images/steuerberater/kanzlei-organisation/ticketsystem-kanzlei/hero.png"
+              alt="Drei Ablagekörbe von links nach rechts, vom Eingang bis erledigt: jede Anfrage wandert sichtbar durch"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

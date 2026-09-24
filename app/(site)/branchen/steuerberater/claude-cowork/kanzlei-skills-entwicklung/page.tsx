@@ -139,8 +139,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/document-automation.jpg"
-              alt="Fachwissen der Kanzlei als KI-Skill kodieren"
+              src="/images/steuerberater/claude-cowork/kanzlei-skills-entwicklung/hero.png"
+              alt="Zwei Paar Hände ordnen Karteikarten zu einer festen Reihenfolge: Fachwissen wird gemeinsam in eine wiederholbare Form gebracht"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

@@ -129,8 +129,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/document-automation.jpg"
-              alt="Digitales Kanzleihandbuch als Wiki"
+              src="/images/steuerberater/kanzlei-organisation/kanzleihandbuch-aufbauen/hero.png"
+              alt="Ein Ordner mit Registerreitern ragt aus der Regalreihe: das eine Nachschlagewerk der Kanzlei"
               fill
               className="object-cover rounded-lg shadow-lg"
             />

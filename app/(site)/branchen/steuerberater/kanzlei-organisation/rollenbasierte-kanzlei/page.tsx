@@ -129,8 +129,8 @@ export default function Page() {
           </div>
           <div className="relative aspect-video mx-auto w-1/2 md:w-full">
             <Image
-              src="/images/team-collaboration.jpg"
-              alt="Kanzlei-Team mit klar verteilten Rollen"
+              src="/images/steuerberater/kanzlei-organisation/rollenbasierte-kanzlei/hero.png"
+              alt="Aufgeräumte Arbeitsplätze, jeder mit einer Mappe in eigener Farbe: klar getrennte Rollen"
               fill
               className="object-cover rounded-lg shadow-lg"
             />
