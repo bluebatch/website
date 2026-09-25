@@ -461,7 +461,13 @@ export default function Page() {
               ROI-Rechner
             </Link>{" "}
             können Sie Anfragezahl, Bearbeitungsdauer und Stundensatz selbst
-            setzen und sehen, wo Ihr Break-even liegt.
+            setzen und sehen, wo Ihr Break-even liegt. Wie dieselbe Rechnung
+            für Agenten und Automatisierungen jenseits des Chatbots aussieht,
+            steht in{" "}
+            <InternalLink href="/services/was-kostet-ki" variant="underline">
+              was KI im Unternehmen kostet
+            </InternalLink>
+            .
           </Typo.Paragraph>
         </div>
       </ContentWrapper>

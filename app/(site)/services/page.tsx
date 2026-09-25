@@ -338,7 +338,16 @@ export default async function Page({
             MCP-Server erstellen
           </Link>
           , wann ein fertiger Server reicht und wann ein eigener mit
-          Rechteschnitt und Freigaben gebaut werden sollte.
+          Rechteschnitt und Freigaben gebaut werden sollte. Und wenn vor allem
+          die Budgetfrage offen ist, rechnet{" "}
+          <Link
+            href={resolveHref("/services/was-kostet-ki")}
+            className="text-primary-600 hover:underline"
+          >
+            Was kostet KI
+          </Link>{" "}
+          die drei Kostenblöcke gegen das, was der Prozess heute manuell
+          kostet.
         </Typo.Paragraph>
       </ContentWrapper>
 

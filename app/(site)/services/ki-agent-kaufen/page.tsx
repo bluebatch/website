@@ -452,7 +452,12 @@ export default function Page() {
           >
             ein KI-Chatbot für Unternehmen
           </InternalLink>{" "}
-          der günstigere Weg.
+          der günstigere Weg. Welche Kosten neben dem Setup anfallen und wie
+          Sie sie gegen den heutigen Aufwand rechnen, zeigt{" "}
+          <InternalLink href="/services/was-kostet-ki" variant="underline">
+            unsere Kostenrechnung für KI im Unternehmen
+          </InternalLink>
+          .
         </Typo.Paragraph>
       </ContentWrapper>
 
