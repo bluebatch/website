@@ -10,11 +10,11 @@ import { ContactButton } from "@/components/buttons";
 export const metadata: Metadata = {
   title: "Claude mit Microsoft 365 verbinden | Bluebatch",
   description:
-    "Claude und Microsoft 365: Bluebatch verbindet Claude mit Outlook, Teams, SharePoint und OneDrive, damit euer Team mit Claude auf vorhandenes Wissen zugreift.",
+    "Claude und Microsoft 365: Bluebatch verbindet Claude im eigenen AWS-Konto mit Outlook, Teams, SharePoint und OneDrive, damit euer Team mit vorhandenem Wissen arbeitet.",
   openGraph: {
     title: "Claude mit Microsoft 365 verbinden",
     description:
-      "Claude und Microsoft 365: Bluebatch verbindet Claude mit Outlook, Teams, SharePoint und OneDrive, damit euer Team mit Claude auf vorhandenes Wissen zugreift.",
+      "Claude und Microsoft 365: Bluebatch verbindet Claude im eigenen AWS-Konto mit Outlook, Teams, SharePoint und OneDrive, damit euer Team mit vorhandenem Wissen arbeitet.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -41,7 +41,7 @@ export default function Page() {
         </IntroBox>
         <Typo.H1 className="text-center">Claude mit Microsoft 365 verbinden</Typo.H1>
         <GeoSummary align="center">
-          Die Microsoft-365-Integration verbindet Claude mit Outlook, Teams, SharePoint und OneDrive. Euer Team fragt Claude nach Inhalten aus Dokumenten, Mails und Chats, ohne sie hineinzukopieren. Bluebatch richtet die Verbindung ein, setzt die Berechtigungen und betreut sie im laufenden Betrieb.
+          Die Microsoft-365-Anbindung verbindet Claude mit Outlook, Teams, SharePoint und OneDrive. Euer Team fragt Claude nach Inhalten aus Dokumenten, Mails und Chats, ohne sie hineinzukopieren. Bluebatch richtet den Connector im Rahmen der optionalen Betreuung von Managed Claude ein und setzt die Berechtigungen.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -74,10 +74,10 @@ export default function Page() {
             Anmeldung und Rechte laufen über euer bestehendes Microsoft-Konto.
           </ProseColumns.Item>
           <ProseColumns.Item title="Berechtigungen">
-            Claude sieht nur, worauf die Person ohnehin Zugriff hat.
+            Claude sieht nur, worauf die jeweilige Person ohnehin Zugriff hat.
           </ProseColumns.Item>
           <ProseColumns.Item title="Betrieb">
-            Monitoring, Anpassungen und Support aus einer Hand.
+            Pflege des Connectors als Teil der optionalen Betreuung.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
@@ -86,7 +86,7 @@ export default function Page() {
         <IntroBox dark textCentered>
           <IntroBox.Headline>Microsoft 365 und Claude verbinden?</IntroBox.Headline>
           <IntroBox.Paragraph>
-            In 30 Minuten klären wir, wo Claude bei euch den größten Hebel hat, welche Systeme angebunden werden und wie der Start aussieht.
+            30 Minuten reichen: Wie viele Nutzer, gibt es schon ein AWS-Konto, welche Daten sollen zu Claude und womit startet ihr. Danach wisst ihr, ob das Setup passt.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex justify-center">

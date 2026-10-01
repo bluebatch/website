@@ -8,22 +8,22 @@ import { ContactButton } from "@/components/buttons";
 // Repositionierung auf Managed Claude, Inhalte werden noch geschärft.
 
 export const metadata: Metadata = {
-  title: "Claude Onboarding: in wenigen Wochen produktiv | Bluebatch",
+  title: "Managed Claude Onboarding: in wenigen Tagen startklar | Bluebatch",
   description:
-    "Claude Onboarding mit Bluebatch: Bestandsaufnahme, Einrichtung, Integration und Schulung. So kommt euer Team strukturiert und datenschutzkonform mit Claude an den Start.",
+    "Das Managed Claude Onboarding: AWS-Konto in der EU, Claude über Bedrock, Claude Desktop für bis zu 10 Nutzer, Modellregeln, Nachweis-Paket und Team-Onboarding. 1.500 € Festpreis.",
   openGraph: {
-    title: "Claude Onboarding: in wenigen Wochen produktiv",
+    title: "Managed Claude Onboarding: in wenigen Tagen startklar",
     description:
-      "Claude Onboarding mit Bluebatch: Bestandsaufnahme, Einrichtung, Integration und Schulung. So kommt euer Team strukturiert und datenschutzkonform mit Claude an den Start.",
+      "Das Managed Claude Onboarding: AWS-Konto in der EU, Claude über Bedrock, Claude Desktop für bis zu 10 Nutzer, Modellregeln, Nachweis-Paket und Team-Onboarding. 1.500 € Festpreis.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=Claude%20Onboarding%3A%20strukturiert%20an%20den%20Start&eyebrow=Managed%20Claude",
+        url: "/og?title=Onboarding%3A%20in%20wenigen%20Tagen%20startklar&eyebrow=Managed%20Claude",
         width: 1200,
         height: 630,
-        alt: "Claude Onboarding: strukturiert an den Start",
+        alt: "Onboarding: in wenigen Tagen startklar",
       },
     ],
   },
@@ -39,9 +39,9 @@ export default function Page() {
         <IntroBox textCentered>
           <IntroBox.PreHeadline>Onboarding</IntroBox.PreHeadline>
         </IntroBox>
-        <Typo.H1 className="text-center">Claude Onboarding: strukturiert an den Start</Typo.H1>
+        <Typo.H1 className="text-center">Onboarding: in wenigen Tagen startklar</Typo.H1>
         <GeoSummary align="center">
-          Das Claude Onboarding von Bluebatch bringt ein Team in wenigen Wochen von der ersten Lizenz zur produktiven Nutzung. Es umfasst Bestandsaufnahme, Einrichtung von Single Sign-on und Rechten, die ersten Integrationen etwa zu Microsoft 365 und Schulungen pro Abteilung.
+          Das Onboarding von Managed Claude bringt euer Team in wenigen Tagen zur Arbeit mit Claude. Bluebatch richtet das AWS-Konto in der EU, Claude über Amazon Bedrock, Claude Desktop für bis zu 10 Nutzer und die Modellregeln ein und liefert das Nachweis-Paket. Festpreis: 1.500 € einmalig.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -50,32 +50,32 @@ export default function Page() {
 
       <ContentWrapper>
         <IntroBox textCentered>
-          <IntroBox.Headline>Die Phasen im Onboarding</IntroBox.Headline>
+          <IntroBox.Headline>In vier Schritten startklar</IntroBox.Headline>
         </IntroBox>
         <div className="mx-auto max-w-3xl">
           <TimelineAsSteps>
             <TimelineAsStepsStep value={1}>
-              <Typo.H3 className="mt-2!">Kick-off und Bestandsaufnahme</Typo.H3>
+              <Typo.H3 className="mt-2!">Kurzer Check</Typo.H3>
               <Typo.Paragraph className="text-gray-600">
-                Ziele, Teams, Systeme und Datenschutz-Rahmen klären. Ergebnis ist ein Einführungsplan mit den ersten Use Cases.
+                Drei Fragen klären, ob das Setup zu euch passt: vertrauliche Daten, Claude-App fürs Team, vorhandenes AWS-Konto.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
             <TimelineAsStepsStep value={2}>
-              <Typo.H3 className="mt-2!">Setup</Typo.H3>
+              <Typo.H3 className="mt-2!">Gespräch, 30 Minuten</Typo.H3>
               <Typo.Paragraph className="text-gray-600">
-                Claude-Organisation anlegen, SSO und Nutzerverwaltung einrichten, Projekte und Berechtigungen strukturieren.
+                Nutzerzahl, AWS-Konto, Datenarten und der erste Anwendungsfall. Danach steht der Plan.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
             <TimelineAsStepsStep value={3}>
-              <Typo.H3 className="mt-2!">Integrationen</Typo.H3>
+              <Typo.H3 className="mt-2!">Setup</Typo.H3>
               <Typo.Paragraph className="text-gray-600">
-                Die wichtigsten Datenquellen anbinden, zum Beispiel Microsoft 365, DATEV oder eure Websuche.
+                AWS-Konto in der EU, Claude über Amazon Bedrock, Claude Desktop, Modellregeln und Nachweis-Paket. Dauer: wenige Tage.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
             <TimelineAsStepsStep value={4}>
-              <Typo.H3 className="mt-2!">Schulung und Go-live</Typo.H3>
+              <Typo.H3 className="mt-2!">Übergabe und Start</Typo.H3>
               <Typo.Paragraph className="text-gray-600">
-                Schulungen pro Team, Vorlagen für typische Aufgaben, danach Übergang in den laufenden Betrieb.
+                Onboarding fürs Team, Doku an euch. Auf Wunsch betreuen wir weiter, das Konto bleibt in jedem Fall eures.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
           </TimelineAsSteps>
@@ -84,17 +84,26 @@ export default function Page() {
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
-          <IntroBox.Headline>Was ihr am Ende habt</IntroBox.Headline>
+          <IntroBox.Headline>Was im Setup steckt</IntroBox.Headline>
         </IntroBox>
         <ProseColumns cols={3}>
-          <ProseColumns.Item title="Eingerichtete Organisation">
-            Alle Nutzer, Rollen und Projekte sauber aufgesetzt und dokumentiert.
+          <ProseColumns.Item title="AWS-Konto in der EU">
+            Wir nutzen euer bestehendes Konto oder legen es gemeinsam mit euch an. Es gehört in jedem Fall euch.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Angebundene Systeme">
-            Claude greift auf die Daten zu, die euer Team wirklich braucht, mit klaren Rechten.
+          <ProseColumns.Item title="Claude über Bedrock">
+            Modellzugang mit EU-Profil, Opus 5 und Sonnet 5, Modellregeln nach euren Vorgaben.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Befähigtes Team">
-            Jede Abteilung weiß, wofür sie Claude einsetzt, und hat Vorlagen für den Einstieg.
+          <ProseColumns.Item title="Claude Desktop">
+            Für bis zu 10 Nutzer eingerichtet, verteilt über eure Geräteverwaltung, mit SSO.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Nachweis-Paket">
+            Datenfluss, Löschkonzept, TOMs und unsere Verschwiegenheitserklärung für eure Prüfung.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Onboarding fürs Team">
+            Einführung in Cowork und Code mit euren ersten Anwendungsfällen.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Dokumentation">
+            Alles, was eingerichtet wurde, geht an euch. Ihr seid nicht von uns abhängig.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
@@ -103,7 +112,7 @@ export default function Page() {
         <IntroBox dark textCentered>
           <IntroBox.Headline>Bereit für den Start?</IntroBox.Headline>
           <IntroBox.Paragraph>
-            In 30 Minuten klären wir, wo Claude bei euch den größten Hebel hat, welche Systeme angebunden werden und wie der Start aussieht.
+            30 Minuten reichen: Wie viele Nutzer, gibt es schon ein AWS-Konto, welche Daten sollen zu Claude und womit startet ihr. Danach wisst ihr, ob das Setup passt.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex justify-center">

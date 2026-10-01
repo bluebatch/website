@@ -10,11 +10,11 @@ import { ContactButton } from "@/components/buttons";
 export const metadata: Metadata = {
   title: "Claude mit Websuche: aktuelle Antworten mit Quellen | Bluebatch",
   description:
-    "Claude mit Websuche: Bluebatch richtet die Websuche für Claude ein, damit euer Team aktuelle Informationen mit Quellenangabe bekommt, gesteuert über erlaubte und gesperrte Domains.",
+    "Claude mit Websuche: Bluebatch bindet eine Websuche an Claude im eigenen AWS-Konto an, mit Fundstellen und gesteuerten Domains, etwa nur Fachquellen oder Gesetzestexte.",
   openGraph: {
     title: "Claude mit Websuche: aktuelle Antworten mit Quellen",
     description:
-      "Claude mit Websuche: Bluebatch richtet die Websuche für Claude ein, damit euer Team aktuelle Informationen mit Quellenangabe bekommt, gesteuert über erlaubte und gesperrte Domains.",
+      "Claude mit Websuche: Bluebatch bindet eine Websuche an Claude im eigenen AWS-Konto an, mit Fundstellen und gesteuerten Domains, etwa nur Fachquellen oder Gesetzestexte.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -41,7 +41,7 @@ export default function Page() {
         </IntroBox>
         <Typo.H1 className="text-center">Claude mit Websuche</Typo.H1>
         <GeoSummary align="center">
-          Mit der Websuche greift Claude auf aktuelle Informationen aus dem Internet zu und belegt Antworten mit Quellen. Bluebatch richtet die Websuche in der Claude App und in API-Anwendungen ein und legt fest, welche Domains erlaubt oder gesperrt sind, etwa nur Fachquellen oder Gesetzestexte.
+          Mit einer angebundenen Websuche greift Claude auf aktuelle Informationen aus dem Internet zu und belegt Antworten mit Quellen. Bluebatch bindet die Websuche als Connector an Claude in eurem AWS-Konto an und legt fest, welche Domains erlaubt sind, zum Beispiel nur Fachquellen oder Gesetzestexte.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -69,7 +69,7 @@ export default function Page() {
         <IntroBox dark textCentered>
           <IntroBox.Headline>Websuche für Claude einrichten?</IntroBox.Headline>
           <IntroBox.Paragraph>
-            In 30 Minuten klären wir, wo Claude bei euch den größten Hebel hat, welche Systeme angebunden werden und wie der Start aussieht.
+            30 Minuten reichen: Wie viele Nutzer, gibt es schon ein AWS-Konto, welche Daten sollen zu Claude und womit startet ihr. Danach wisst ihr, ob das Setup passt.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex justify-center">

@@ -9,22 +9,22 @@ import { ContactButton } from "@/components/buttons";
 // Repositionierung auf Managed Claude, Inhalte werden noch geschärft.
 
 export const metadata: Metadata = {
-  title: "Claude API: Claude in eigene Systeme integrieren | Bluebatch",
+  title: "Claude API über Amazon Bedrock: Claude in eigenen Anwendungen | Bluebatch",
   description:
-    "Claude API mit Bluebatch: Wir integrieren Claude per API in eure Systeme und Prozesse, mit Hosting in der EU, Kostenkontrolle und laufendem Betrieb.",
+    "Claude API über Amazon Bedrock: Claude in euren eigenen Anwendungen und Prozessen, im eigenen AWS-Konto mit Verarbeitung in der EU. Bluebatch integriert und betreut.",
   openGraph: {
-    title: "Claude API: Claude in eigene Systeme integrieren",
+    title: "Claude API über Amazon Bedrock: Claude in eigenen Anwendungen",
     description:
-      "Claude API mit Bluebatch: Wir integrieren Claude per API in eure Systeme und Prozesse, mit Hosting in der EU, Kostenkontrolle und laufendem Betrieb.",
+      "Claude API über Amazon Bedrock: Claude in euren eigenen Anwendungen und Prozessen, im eigenen AWS-Konto mit Verarbeitung in der EU. Bluebatch integriert und betreut.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=Claude%20API%3A%20Claude%20in%20euren%20eigenen%20Systemen&eyebrow=Managed%20Claude",
+        url: "/og?title=Claude%20in%20euren%20eigenen%20Anwendungen&eyebrow=Managed%20Claude",
         width: 1200,
         height: 630,
-        alt: "Claude API: Claude in euren eigenen Systemen",
+        alt: "Claude in euren eigenen Anwendungen",
       },
     ],
   },
@@ -40,9 +40,9 @@ export default function Page() {
         <IntroBox textCentered>
           <IntroBox.PreHeadline>Claude API · Priorität 2</IntroBox.PreHeadline>
         </IntroBox>
-        <Typo.H1 className="text-center">Claude API: Claude in euren eigenen Systemen</Typo.H1>
+        <Typo.H1 className="text-center">Claude in euren eigenen Anwendungen</Typo.H1>
         <GeoSummary align="center">
-          Über die Claude API wird Claude Teil eurer eigenen Software und Prozesse, etwa im ERP, im Ticketsystem oder in automatisierten Abläufen. Bluebatch integriert die Claude API mit Betrieb in der EU, überwacht Kosten und Zugriffe und betreut die Anbindung laufend.
+          Wenn Claude nicht im Chat, sondern in euren eigenen Anwendungen arbeiten soll, braucht ihr keine App. Bluebatch bindet Claude über Amazon Bedrock in eurem AWS-Konto an eure Systeme an, mit Verarbeitung in der EU, Modellregeln und Kosten je Anwendung. Die Abrechnung läuft nach Tokens direkt über AWS.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -54,11 +54,11 @@ export default function Page() {
           <IntroBox.Headline>Wann die API statt der App</IntroBox.Headline>
         </IntroBox>
         <ProseColumns cols={3}>
-          <ProseColumns.Item title="Prozesse statt Chat">
-            Claude arbeitet im Hintergrund, zum Beispiel beim Posteingang oder bei der Belegprüfung.
+          <ProseColumns.Item title="Prozesse im Hintergrund">
+            Claude sortiert den Posteingang, prüft Belege oder fasst Dokumente zusammen, ohne dass jemand chattet.
           </ProseColumns.Item>
           <ProseColumns.Item title="Eigene Oberflächen">
-            Claude steckt in eurem Kundenportal, Intranet oder einer internen Anwendung.
+            Claude steckt im Kundenportal, im Intranet oder in einer internen Fachanwendung.
           </ProseColumns.Item>
           <ProseColumns.Item title="Große Mengen">
             Viele Dokumente oder Anfragen automatisch verarbeiten, nach Verbrauch abgerechnet.
@@ -71,14 +71,14 @@ export default function Page() {
           <IntroBox.Headline>Was wir übernehmen</IntroBox.Headline>
         </IntroBox>
         <ProseColumns cols={3}>
-          <ProseColumns.Item title="Architektur">
-            Welche Modelle, welche Region, welche Daten. Betrieb über Anthropic oder Cloud-Anbieter in der EU.
+          <ProseColumns.Item title="Bedrock einrichten">
+            Modellzugang mit EU-Profil in eurem AWS-Konto, Opus 5 und Sonnet 5, Modellregeln.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Integration">
-            Anbindung an eure Systeme, inklusive Tools und MCP-Server für eure Daten.
+          <ProseColumns.Item title="Anbindung">
+            Integration in eure Systeme, bei Bedarf mit eigenem MCP-Server für ERP oder Datenbank.
           </ProseColumns.Item>
           <ProseColumns.Item title="Betrieb">
-            Monitoring, Kostenkontrolle, Updates auf neue Modelle und Support.
+            Monitoring, Kostenkontrolle je Anwendung und Wechsel auf neue Modelle.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
@@ -91,7 +91,7 @@ export default function Page() {
           <OfferCard
             href="/managed-claude/use-cases"
             title="Use Cases"
-            description="Was wir mit der Claude API konkret bauen."
+            description="Was wir mit Claude konkret bauen."
             linkLabel="Mehr erfahren"
           />
           <OfferCard
@@ -105,9 +105,9 @@ export default function Page() {
 
       <ContentWrapper colorScheme="primary-darker">
         <IntroBox dark textCentered>
-          <IntroBox.Headline>Claude in eure Systeme bringen?</IntroBox.Headline>
+          <IntroBox.Headline>Claude in eure Anwendungen bringen?</IntroBox.Headline>
           <IntroBox.Paragraph>
-            In 30 Minuten klären wir, wo Claude bei euch den größten Hebel hat, welche Systeme angebunden werden und wie der Start aussieht.
+            30 Minuten reichen: Wie viele Nutzer, gibt es schon ein AWS-Konto, welche Daten sollen zu Claude und womit startet ihr. Danach wisst ihr, ob das Setup passt.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex justify-center">

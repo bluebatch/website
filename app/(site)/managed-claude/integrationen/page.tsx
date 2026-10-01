@@ -11,11 +11,11 @@ import { ContactButton } from "@/components/buttons";
 export const metadata: Metadata = {
   title: "Claude Integrationen: DATEV, Microsoft 365 und Websuche | Bluebatch",
   description:
-    "Claude Integrationen von Bluebatch: Wir binden Claude an DATEV, Microsoft 365 und die Websuche an, mit sauberem Rechteschnitt und laufendem Betrieb.",
+    "Integrationen für Managed Claude: DATEV über das AI Gateway, Microsoft 365 und Websuche als Connectoren. Bluebatch richtet ein und betreut, die Daten bleiben in eurem Konto.",
   openGraph: {
     title: "Claude Integrationen: DATEV, Microsoft 365 und Websuche",
     description:
-      "Claude Integrationen von Bluebatch: Wir binden Claude an DATEV, Microsoft 365 und die Websuche an, mit sauberem Rechteschnitt und laufendem Betrieb.",
+      "Integrationen für Managed Claude: DATEV über das AI Gateway, Microsoft 365 und Websuche als Connectoren. Bluebatch richtet ein und betreut, die Daten bleiben in eurem Konto.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -42,7 +42,7 @@ export default function Page() {
         </IntroBox>
         <Typo.H1 className="text-center">Claude an eure Systeme anbinden</Typo.H1>
         <GeoSummary align="center">
-          Claude Integrationen verbinden Claude mit den Systemen, in denen eure Daten liegen. Bluebatch bindet Claude an DATEV, Microsoft 365 mit Outlook, Teams und SharePoint sowie an die Websuche an und baut bei Bedarf eigene MCP-Server für ERP und Datenbanken.
+          Integrationen machen Claude im eigenen AWS-Konto erst richtig nützlich, weil Claude dann mit euren echten Daten arbeitet. Bluebatch bindet DATEV über ein AI Gateway an, verbindet Microsoft 365 und die Websuche als Connectoren und baut bei Bedarf eigene MCP-Server für ERP und Datenbanken.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -57,20 +57,21 @@ export default function Page() {
           <OfferCard
             highlight
             href="/managed-claude/integrationen/datev"
+            price="ab 85 € je Kanzlei"
             title="DATEV"
-            description="Mandanten- und Buchungsdaten für Claude nutzbar machen."
+            description="DATEV-Daten über das AI Gateway, für Steuerkanzleien."
             linkLabel="Mehr erfahren"
           />
           <OfferCard
             href="/managed-claude/integrationen/microsoft"
             title="Microsoft 365"
-            description="Outlook, Teams und SharePoint als Wissensquelle."
+            description="Outlook, Teams und SharePoint als Kontext für Claude."
             linkLabel="Mehr erfahren"
           />
           <OfferCard
             href="/managed-claude/integrationen/websearch"
             title="Websuche"
-            description="Aktuelle Informationen aus dem Web mit Quellenangabe."
+            description="Aktuelle Quellen aus dem Web, mit Fundstellen."
             linkLabel="Mehr erfahren"
           />
         </SimpleGrid>
@@ -94,7 +95,7 @@ export default function Page() {
         <IntroBox dark textCentered>
           <IntroBox.Headline>Welche Systeme sollen an Claude?</IntroBox.Headline>
           <IntroBox.Paragraph>
-            In 30 Minuten klären wir, wo Claude bei euch den größten Hebel hat, welche Systeme angebunden werden und wie der Start aussieht.
+            30 Minuten reichen: Wie viele Nutzer, gibt es schon ein AWS-Konto, welche Daten sollen zu Claude und womit startet ihr. Danach wisst ihr, ob das Setup passt.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex justify-center">

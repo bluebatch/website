@@ -56,7 +56,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 export const metadata: Metadata = {
   title: "Bluebatch - Managed Service Provider für Claude | Managed Claude",
   description:
-    "Bluebatch ist Managed Service Provider für Claude von Anthropic: Claude App einführen, Claude per API integrieren, Use Cases bauen. Mit DATEV- und Microsoft-365-Anbindung, Betrieb und Schulung aus einer Hand.",
+    "Bluebatch ist Managed Service Provider für Claude: Claude über Amazon Bedrock im eigenen AWS-Konto, Verarbeitung in der EU, Claude Desktop ohne Seat-Lizenz. Setup für 1.500 € Festpreis.",
   keywords: [
     "Claude Managed Service Provider",
     "Managed Claude",
@@ -125,38 +125,38 @@ export default function Home() {
             Managed Service Provider für Claude
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
-            Claude von Anthropic,
+            Claude in Ihrem
             <br />
-            als{" "}
+            eigenen{" "}
             <BackgroundHero.Highlight>
-              Managed Service
+              AWS-Konto
             </BackgroundHero.Highlight>
           </BackgroundHero.Headline>
           <BackgroundHero.Description geo>
-            Bluebatch ist Managed Service Provider für Claude von Anthropic und
-            betreut Unternehmen mit 50 bis 1.000 Mitarbeitenden. Bluebatch führt
-            die Claude App im Team ein, integriert Claude per API in eigene
-            Systeme wie DATEV und Microsoft 365 und baut konkrete Use Cases.
-            Einrichtung, Betrieb und Schulung kommen aus einer Hand.
+            Bluebatch ist Managed Service Provider für Claude von Anthropic.
+            Claude läuft über Amazon Bedrock in Ihrem eigenen AWS-Konto mit
+            Verarbeitung in der EU, Ihr Team arbeitet in Claude Desktop ohne
+            Seat-Lizenz, auch mit Mandanten-, Personal- und Vertragsdaten. Das
+            Setup kostet einmalig 1.500 €, die Tokens zahlen Sie direkt an AWS.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
           </BackgroundHero.CallToAction>
           <BackgroundHero.Stats>
             <BackgroundHero.Stat
-              value={3}
-              suffix=" Bausteine"
-              label="App, API, Use Cases"
+              value={1500}
+              suffix=" €"
+              label="Festpreis Setup"
             />
             <BackgroundHero.Stat
-              value={1}
-              suffix=" Partner"
-              label="Einrichtung bis Betrieb"
+              value={0}
+              suffix=" €"
+              label="Seat-Lizenz pro Nutzer"
             />
             <BackgroundHero.Stat
-              value={24}
-              suffix="/7"
-              label="Automatisierung"
+              value={100}
+              suffix=" %"
+              label="Verarbeitung in der EU"
             />
           </BackgroundHero.Stats>
         </BackgroundHero>
