@@ -612,7 +612,7 @@ export default function Page() {
               . Wer den Piloten lieber einkauft als selbst baut, vergleicht die
               drei Bezugswege samt Preis und Dauer unter{" "}
               <Link
-                href="/services/ki-agent-kaufen"
+                href="/managed-claude/use-cases/ki-agent-kaufen"
                 className="text-primary-600 hover:underline"
               >
                 KI-Agent kaufen

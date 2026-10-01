@@ -742,7 +742,7 @@ export default function Page() {
                 unsere Großhandel Use Cases
               </Link>{" "}
               an, oder erfahren Sie mehr über{" "}
-              <Link href="/services" className="text-primary-500 hover:underline">
+              <Link href="/managed-claude" className="text-primary-500 hover:underline">
                 unsere Implementierungsservices
               </Link>
               . Einen tieferen Einstieg in autonome KI-Systeme geben wir in{" "}

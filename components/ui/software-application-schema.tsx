@@ -9,7 +9,7 @@ type SoftwareApplicationSchemaProps = {
 };
 
 /**
- * SoftwareApplication-JSON-LD für die Tool-Seiten unter /services/tools/.
+ * SoftwareApplication-JSON-LD für die Tool-Seiten unter /managed-claude/weitere-tools/.
  *
  * Die Seite braucht nur den Slug zu nennen, Inhalt und Pflege liegen zentral
  * in `lib/tool-schema-data.ts` — sonst hängt die Auszeichnung wie früher die
@@ -34,7 +34,7 @@ export default function SoftwareApplicationSchema({
     description: entry.description,
     applicationCategory: entry.applicationCategory,
     operatingSystem: entry.operatingSystem,
-    url: `${SITE_ORIGIN}/services/tools/${slug}`,
+    url: `${SITE_ORIGIN}/managed-claude/weitere-tools/${slug}`,
     provider: {
       "@type": "Organization",
       name: entry.provider.name,

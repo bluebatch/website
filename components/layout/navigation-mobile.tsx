@@ -18,13 +18,13 @@ const uberUns = [
   { label: "Kontakt", href: "/contact" },
 ];
 
-const services = [
-  { label: "n8n Hosting", href: "/services/n8n-hosting" },
-  { label: "Workflow-Wartung", href: "/services/workflow-wartung" },
-  { label: "Custom Nodes", href: "/services/custom-nodes" },
-  { label: "Schulungen", href: "/services/schulungen" },
-  { label: "Performance Scaling", href: "/services/performance-scaling" },
-  { label: "Zertifizierung", href: "/services/zertifizierung" },
+const managedClaude = [
+  { label: "Wie es funktioniert", href: "/managed-claude/wie-es-funktioniert" },
+  { label: "Onboarding", href: "/managed-claude/onboarding" },
+  { label: "Preise", href: "/managed-claude/preise" },
+  { label: "Claude App", href: "/managed-claude/claude-app" },
+  { label: "Claude API", href: "/managed-claude/claude-api" },
+  { label: "Use Cases", href: "/managed-claude/use-cases" },
 ];
 
 const branchenGroups = [
@@ -140,26 +140,14 @@ export default function NavigationMobile() {
 
       <div className="absolute left-0 right-0 top-full mt-1 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden">
         <div className="px-4 py-4 space-y-1 max-h-[calc(100vh-8rem)] overflow-y-auto">
-          <Accordion title="Über uns">
-            {uberUns.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </Accordion>
-
-          <Accordion title="Services">
+          <Accordion title="Managed Claude">
             <Link
-              href="/services"
+              href="/managed-claude"
               className="block px-6 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
             >
-              Alle Services
+              Übersicht
             </Link>
-            {services.map((item) => (
+            {managedClaude.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -169,10 +157,16 @@ export default function NavigationMobile() {
               </Link>
             ))}
             <Link
-              href="/services/tools"
+              href="/managed-claude/integrationen"
               className="block px-6 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
             >
-              Tools
+              Integrationen
+            </Link>
+            <Link
+              href="/managed-claude/weitere-tools"
+              className="block px-6 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
+            >
+              Weitere Tools
             </Link>
           </Accordion>
 
@@ -204,6 +198,18 @@ export default function NavigationMobile() {
           >
             Blog
           </Link>
+
+          <Accordion title="Über uns">
+            {uberUns.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </Accordion>
 
           <div className="pt-2 sticky bottom-0 bg-white">
             <ContactButton showIcon={false} className="w-full justify-center">

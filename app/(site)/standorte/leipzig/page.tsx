@@ -302,9 +302,9 @@ export default async function Page({
               n8n-Workflows abbilden, die APIs von Carriern,
               Zollsystemen und ERP-Plattformen nahtlos verbinden. Dafür setzen
               wir auf{" "}
-              <Link href="/services/n8n-hosting" className="text-primary-600 hover:underline">n8n-Hosting in Deutschland</Link>{" "}
+              <Link href="/managed-claude/weitere-tools/n8n/n8n-hosting" className="text-primary-600 hover:underline">n8n-Hosting in Deutschland</Link>{" "}
               mit professioneller{" "}
-              <Link href="/services/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>.
+              <Link href="/managed-claude/weitere-tools/n8n/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>.
             </Typo.Paragraph>
           </BoundlessImageCard.Content>
         </BoundlessImageCard>

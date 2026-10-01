@@ -336,7 +336,7 @@ export default function Page() {
               und einzelne Forum-Antworten zu langsam findet, kommt mit einem
               kuratierten Setup oft schneller voran. Bei{" "}
               <Link
-                href="/services/n8n-hosting"
+                href="/managed-claude/weitere-tools/n8n/n8n-hosting"
                 className="text-primary-600 hover:underline"
               >
                 n8n-Hosting in Deutschland
@@ -391,7 +391,7 @@ export default function Page() {
               Wer als Dienstleister sichtbar werden will und das offizielle
               Zertifizierungsprogramm parallel nutzt, findet auf unserer{" "}
               <Link
-                href="/services/zertifizierung"
+                href="/managed-claude/weitere-tools/n8n/zertifizierung"
                 className="text-primary-600 hover:underline"
               >
                 Seite zur zertifizierten KI-Agentur

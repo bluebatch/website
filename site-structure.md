@@ -1,7 +1,10 @@
 # Site-Struktur — Zielbild (Draft)
 
-> Stand 2026-07-22. Die **Struktur ist umgesetzt** (Branch
-> `refactor/site-structure`); Seiten mit `(geplant)` werden stückweise gebaut.
+> Stand 2026-10-01. **Repositionierung auf Claude Managed Service Provider**
+> (Branch `anthropic-managed-service-provider`): `services/` wird durch
+> `managed-claude/` ersetzt, n8n wandert unter „Weitere Tools".
+> Die Struktur bis 2026-07-22 (Branch `refactor/site-structure`) ist umgesetzt;
+> Seiten mit `(geplant)` werden stückweise gebaut.
 > Struktur = native Folder-/URL-Struktur. Links der Pfad, rechts Typ + Inhalt.
 > Marker: ohne Marker = existiert schon unter dieser URL · `(geplant)` = neu
 > zu bauen · `(Umzug)` = existiert, liegt heute aber unter anderer URL.
@@ -20,6 +23,19 @@
 
 Grundsätze:
 
+- **Fokus: Claude Managed Service Provider (ab 2026-10).** Hauptangebot der
+  ganzen Website ist Claude von Anthropic als Managed Service. Homepage und
+  Hauptnavigation erzählen diese Geschichte, nicht mehr n8n. Priorität
+  innerhalb des Angebots: **1. Claude App** (Claude für Teams/Enterprise
+  einführen und betreiben) · **2. Claude API** (Claude in eigene Systeme
+  bringen) · **3. Use Cases bauen** (wir setzen konkrete Anwendungen auf
+  Claude um). n8n und die übrigen Automation-Tools bleiben als „Weitere
+  Tools" erhalten, sind aber kein Hauptthema mehr.
+- **Branchen: Richtung Use Cases statt Technik (später).** Die Branchen-Hubs
+  bleiben vorerst wie sie sind. Mittelfristig rücken sie weg von
+  Private AI & Co. hin zu „Was kann ich mit Claude in meiner Branche
+  umsetzen?". Private-AI-Hubs werden nicht weiter ausgebaut, Workflows-Hubs
+  sind **Future** (bleiben stehen, keine neuen Seiten).
 - **Doppelte Hub-Struktur bei Branchen:** `branchen/` ist Hub, jede Branche
   darunter ist selbst wieder ein Hub, darunter vier Themen-Unter-Hubs
   (Hub → Hub → Hub → Pages).
@@ -49,8 +65,11 @@ Grundsätze:
   kostet X?") — Preisfragen sind Bottom-Funnel und zählen als Money. Content
   und Money zum selben Thema bleiben erlaubt, aber nie als bloße Dublette
   („mail-agent" vs. „mail-agent-implementierung" allein reicht nicht).
-- **Tools liegen unter Services** (ein Nav-Button weniger). Tool-Seiten sind
-  Content, auf die Branchen-, Service- und Blog-Seiten kontextuell verlinken.
+- **Tools liegen unter Claude Managed Service Provider → weitere-tools/**
+  (ein Nav-Button weniger). Tool-Seiten sind Content, auf die Branchen-,
+  Angebots- und Blog-Seiten kontextuell verlinken. **n8n ist dort selbst ein
+  Hub**: die bisherigen n8n-Services (Hosting, Wartung, Schulungen, Custom
+  Nodes, Performance, Zertifizierung) sind seine Unterseiten.
 - **Blogs sind grundsätzlich Content** — einzelne Artikel werden hier nicht
   gelistet. Abgrenzung zur Content Page: Ein **Blogpost ist eine
   Momentaufnahme, von einem Menschen geschrieben** (Meinung, Erfahrung,
@@ -84,13 +103,88 @@ Grundsätze:
 
 ```
 /
-├── (Homepage) ................................ [MONEY]  Brand + Einstieg
+├── (Homepage) ................................ [MONEY]  Brand + Einstieg, positioniert
+│                                                als Claude Managed Service Provider
 │
-├── branchen/ ................................. [HUB]    Verteiler nach Zielgruppe
+├── managed-claude/ ........................... [HUB]    (geplant) Hauptangebot, ersetzt
+│   │                                            services/ (alte URL → legacyRedirect)
+│   │
+│   │   ── Basis: so arbeiten wir ──
+│   ├── wie-es-funktioniert ................... [CONTENT] (geplant) Ablauf, Rollen,
+│   │                                            Verantwortung Kunde vs. bluebatch
+│   ├── onboarding ............................ [MONEY]   (geplant) Einstieg & Setup
+│   ├── preise ................................ [MONEY]   (geplant) Preise & Pakete,
+│   │                                            direkt unter dem Haupt-Hub
+│   ├── was-kostet-ki ......................... [MONEY]   (Umzug von services/was-kostet-ki)
+│   ├── (weitere Basisseiten folgen) .......... z.B. Betrieb & Support,
+│   │                                            Datenschutz/DSGVO
+│   │
+│   ├── integrationen/ ........................ [HUB]     (geplant) Claude an die
+│   │   │                                        Systeme der Kunden anbinden
+│   │   ├── datev ............................. [MONEY]   (geplant) Claude + DATEV
+│   │   ├── microsoft ......................... [MONEY]   (geplant) Claude + Microsoft 365
+│   │   │                                        (Outlook, Teams, SharePoint)
+│   │   ├── websearch ......................... [MONEY]   (geplant) Claude mit Websuche
+│   │   └── mcp-server-erstellen .............. [MONEY]   (Umzug von services/mcp-server-erstellen)
+│   │
+│   │   ── Angebot, nach Priorität ──
+│   ├── claude-app/ ........................... [HUB]     (geplant) Prio 1: Claude für
+│   │   │                                        Teams/Enterprise einführen + betreiben
+│   │   └── (Seiten folgen)
+│   ├── claude-api/ ........................... [HUB]     (geplant) Prio 2: Claude per API
+│   │   │                                        in eigene Systeme und Prozesse
+│   │   └── (Seiten folgen)
+│   ├── use-cases/ ............................ [HUB]     (geplant) Prio 3: Wir bauen
+│   │   │                                        Use Cases auf Claude
+│   │   ├── ki-agent-kaufen ................... [MONEY]   (Umzug von services/ki-agent-kaufen)
+│   │   ├── ki-agent-kostenlos ................ [CONTENT] (Umzug von services/ki-agent-kostenlos)
+│   │   └── ki-chatbot-fuer-unternehmen ....... [MONEY]   (Umzug von services/ki-chatbot-fuer-unternehmen)
+│   │
+│   │   ── Nebenthema ──
+│   └── weitere-tools/ ........................ [HUB]    (Umzug von services/tools/)
+│       │                                        Software-Ökosystem; Ziel kontextueller
+│       │                                        Links aus Branchen, Angebot und Blog
+│       ├── n8n/ .............................. [HUB]     (Umzug von services/tools/n8n)
+│       │   │                                    n8n als eigenes Hauptthema, die
+│       │   │                                    bisherigen n8n-Services darunter
+│       │   ├── n8n-hosting ................... [MONEY]   (Umzug von services/n8n-hosting)
+│       │   ├── workflow-wartung .............. [MONEY]   (Umzug von services/workflow-wartung)
+│       │   ├── schulungen .................... [MONEY]   (Umzug von services/schulungen)
+│       │   ├── custom-nodes .................. [MONEY]   (Umzug von services/custom-nodes)
+│       │   ├── performance-scaling ........... [MONEY]   (Umzug von services/performance-scaling)
+│       │   └── zertifizierung ................ [MONEY]   (Umzug von services/zertifizierung),
+│       │                                        auch Trust
+│       ├── make .............................. [CONTENT] Automation-Tool  ┐
+│       ├── zapier ............................ [CONTENT] Automation-Tool  │
+│       ├── power-automate .................... [CONTENT] Automation-Tool  │
+│       ├── activepieces ...................... [CONTENT] Automation-Tool  │
+│       ├── pipedream ......................... [CONTENT] Automation-Tool  │ alle
+│       ├── tray-io ........................... [CONTENT] Automation-Tool  │ (Umzug von
+│       ├── uipath ............................ [CONTENT] Automation-Tool  │ services/
+│       ├── workato ........................... [CONTENT] Automation-Tool  │ tools/…)
+│       ├── freshworks ........................ [CONTENT] Automation-Tool  │
+│       ├── navision .......................... [CONTENT] Großhandel-Tool  │
+│       ├── easybill .......................... [CONTENT] Großhandel-Tool  │
+│       ├── microtech-bueroplus ............... [CONTENT] Großhandel-Tool  ┘
+│       └── ebootis/ .......................... [HUB]     (Umzug von services/tools/ebootis/)
+│           │                                    e.bootis ERP - Tool-Portrait +
+│           │                                    Integrations-Hub
+│           ├── ki-assessment .................. [MONEY]   500 € Festpreis-Einstieg
+│           ├── n8n-integration ............... [MONEY]
+│           ├── chatbot-integration ........... [MONEY]
+│           ├── mcp-server .................... [MONEY]
+│           ├── openengine-schnittstellen ..... [CONTENT]
+│           ├── ki-anwendungsfaelle ........... [CONTENT]
+│           └── edi-automatisierung ........... [CONTENT]
+│
+├── branchen/ ................................. [HUB]    Verteiler nach Zielgruppe;
+│   │                                            vorerst unverändert, später Fokus
+│   │                                            „Was kann ich mit Claude umsetzen?"
 │   │
 │   ├── grosshandel/ .......................... [HUB]    Branchen-Hub (Hub-Hub)
 │   │   │
 │   │   ├── private-ai/ ....................... [HUB]     „Wo läuft die KI?" (heute Dummy)
+│   │   │                                    EINGEFROREN: kein weiterer Ausbau
 │   │   │   ├── implementierung-open-webui .... [MONEY]   (geplant)
 │   │   │   ├── implementierung-vllm .......... [MONEY]   (geplant)
 │   │   │   ├── managed-private-ai ............ [MONEY]   (geplant)
@@ -142,7 +236,7 @@ Grundsätze:
 │   │   │   ├── chatbot-dsgvo ................. [CONTENT] (geplant)
 │   │   │   └── chatbot-erfolgreich-einfuehren  [CONTENT] (geplant)
 │   │   │
-│   │   ├── workflows/ ........................ [HUB]     „Fest automatisierte
+│   │   ├── workflows/ ........................ [HUB]     FUTURE · „Fest automatisierte
 │   │   │   │                                    Prozesse" — Workflow-Katalog
 │   │   │   ├── auftragserfassung-implementierung [MONEY] (geplant)
 │   │   │   ├── rechnungspruefung-implementierung [MONEY] (geplant)
@@ -177,7 +271,7 @@ Grundsätze:
 │   │   │                                        ki-steuerberater-62a-stberg.
 │   │   │                                        Slug bewusst identisch zur
 │   │   │                                        Pexon-Seite (Partner-Cluster)
-│   │   ├── private-ai/ ....................... [HUB]     „Wo läuft die KI?"
+│   │   ├── private-ai/ ....................... [HUB]     „Wo läuft die KI?" · EINGEFROREN
 │   │   │   ├── private-ai-implementierung .... [MONEY]   Umgebung bauen und übergeben
 │   │   │   └── kanzlei-wissensdatenbank ...... [CONTENT] RAG auf eigenen Schriftsätzen
 │   │   ├── claude-cowork/ .................... [HUB]     verwaltete KI fürs Team
@@ -186,13 +280,14 @@ Grundsätze:
 │   │   ├── ki-agenten/ ....................... [HUB]     Vorschlag, Prüfung, Ausführung
 │   │   │   ├── posteingang-agent ............. [MONEY]   beA, Mail, Scan zuordnen
 │   │   │   └── fristen-agent ................. [MONEY]   Fristen erkennen und rechnen
-│   │   └── workflows/ ........................ [HUB]     feste Abläufe mit n8n
+│   │   └── workflows/ ........................ [HUB]     FUTURE · feste Abläufe mit n8n
 │   │       ├── ra-micro-anbindung ............ [MONEY]   ohne offene API anbinden
 │   │       └── bea-nachrichten-automatisieren  [MONEY]   Eingang verarbeiten
 │   │
 │   └── steuerberater/ ........................ [HUB]    Branchen-Hub, Fokus-Branche
 │       │
 │       ├── private-ai/ ....................... [HUB]     „Wo läuft die KI?" (heute Dummy)
+│       │   │                                    EINGEFROREN: kein weiterer Ausbau
 │       │   ├── implementierung-open-webui .... [MONEY]   (geplant)
 │       │   ├── implementierung-vllm .......... [MONEY]   (geplant)
 │       │   ├── managed-private-ai ............ [MONEY]   (geplant)
@@ -254,7 +349,7 @@ Grundsätze:
 │       │   ├── was-ist-ein-ki-agent .......... [CONTENT] (geplant)
 │       │   └── ki-agenten-erfolgreich-einfuehren [CONTENT] (geplant)
 │       │
-│       ├── workflows/ ........................ [HUB]     „Fest automatisierte Prozesse"
+│       ├── workflows/ ........................ [HUB]     FUTURE · „Fest automatisierte Prozesse"
 │       │   │                                    — Workflow-Katalog
 │       │   ├── belegpruefung-implementierung . [MONEY]   (geplant)
 │       │   ├── e-rechnung-implementierung .... [MONEY]   (geplant)
@@ -291,41 +386,6 @@ Grundsätze:
 │           ├── mitarbeiter-onboarding-digital  [CONTENT] DATEV-fit in 1 Woche
 │           ├── rollenbasierte-kanzlei ........ [CONTENT] Rollen + Dashboards
 │           └── ticketsystem-kanzlei .......... [CONTENT] statt Mail-Chaos
-│
-├── services/ ................................. [HUB]    Angebots-Verteiler
-│   ├── n8n-hosting ........................... [MONEY]
-│   ├── workflow-wartung ...................... [MONEY]
-│   ├── schulungen ............................ [MONEY]
-│   ├── custom-nodes .......................... [MONEY]
-│   ├── performance-scaling ................... [MONEY]
-│   ├── zertifizierung ........................ [MONEY]  auch Trust
-│   │
-│   └── tools/ ................................ [HUB]    Software-
-│       │                                       Ökosystem; Ziel kontextueller Links
-│       │                                       aus Branchen, Services und Blog
-│       ├── n8n ............................... [CONTENT] wichtigste Tool-Seite
-│       ├── make .............................. [CONTENT] Automation-Tool
-│       ├── zapier ............................ [CONTENT] Automation-Tool
-│       ├── power-automate .................... [CONTENT] Automation-Tool
-│       ├── activepieces ...................... [CONTENT] Automation-Tool
-│       ├── pipedream ......................... [CONTENT] Automation-Tool
-│       ├── tray-io ........................... [CONTENT] Automation-Tool
-│       ├── uipath ............................ [CONTENT] Automation-Tool
-│       ├── workato ........................... [CONTENT] Automation-Tool
-│       ├── freshworks ........................ [CONTENT] Automation-Tool
-│       ├── navision .......................... [CONTENT] Großhandel-Tool
-│       ├── easybill .......................... [CONTENT] Großhandel-Tool
-│       ├── microtech-bueroplus ............... [CONTENT] Großhandel-Tool
-│       └── ebootis/ .......................... [HUB]     e.bootis ERP - Tool-Portrait +
-│           │                                    Integrations-Hub (neues Muster:
-│           │                                    ein Tool wird selbst zum Hub)
-│           ├── ki-assessment .................. [MONEY]   500 € Festpreis-Einstieg
-│           ├── n8n-integration ............... [MONEY]
-│           ├── chatbot-integration ........... [MONEY]
-│           ├── mcp-server .................... [MONEY]
-│           ├── openengine-schnittstellen ..... [CONTENT]
-│           ├── ki-anwendungsfaelle ........... [CONTENT]
-│           └── edi-automatisierung ........... [CONTENT]
 │
 ├── blog/ ..................................... [HUB]    Blog-Übersicht
 │   └── <artikel> (~60 Stück) ................. [CONTENT] Blogs sind immer Content
@@ -388,8 +448,10 @@ Quelle: `steuerberater-50-cases.md`. Alle 50 Cases sind eingeordnet:
 
 ## Navigation (Zielbild)
 
-Vier Buttons statt fünf: **Über uns · Services · Branchen · Blog** plus
-Kontakt-CTA. Tools-Button entfällt (Tools-Sektion im Services-Mega-Menü).
+Vier Buttons: **Managed Claude · Branchen · Blog · Über uns** plus
+Kontakt-CTA. Der Button **Services entfällt** und wird durch „Claude Managed
+Service" ersetzt (Hauptangebot steht vorne). Weitere Tools inkl. n8n sind eine
+Spalte in dessen Mega-Menü.
 
 **Hub-first-Prinzip (löst unser Platzproblem):** Die Navigation erreicht nur
 Hubs, nie einzelne Money-/Content-Seiten. Das Mega-Menü geht maximal bis
@@ -400,7 +462,7 @@ bleibt so in maximal 2 Klicks erreichbar: Nav → Hub → Seite.
 ### Desktop (Mega-Menüs)
 
 ```
-[Logo]   Über uns ▾   Services ▾   Branchen ▾   Blog ▾          [Kontakt-CTA]
+[Logo]   Managed Claude ▾   Branchen ▾   Blog ▾   Über uns ▾   [Kontakt-CTA]
 
 Branchen ▾ ──────────────────────────────────────────────
 │  GROSSHANDEL (→ Hub)        STEUERBERATER (→ Hub)
@@ -411,21 +473,20 @@ Branchen ▾ ──────────────────────�
 │  ├─ Workflows
 │  └─ ROI-Rechner [TOOL]      (ANWÄLTE als dritte Spalte, sobald live)
 
-Services ▾ ──────────────────────────────────────────────
-│  SERVICES (→ Hub)           TOOLS (→ services/tools/)
-│  ├─ n8n Hosting             ├─ n8n
-│  ├─ Workflow-Wartung        ├─ Make
-│  ├─ Schulungen              ├─ Zapier
-│  ├─ Custom Nodes            ├─ Power Automate
-│  ├─ Performance Scaling     └─ Alle Tools → Hub
-│  └─ Zertifizierung
+Managed Claude ▾ ─────────────────────────────────────────────
+│  SO ARBEITEN WIR (→ Hub)  ANGEBOT          INTEGRATIONEN (→ Hub)  WEITERE TOOLS (→ Hub)
+│  ├─ Wie es funktioniert   ├─ Claude App    ├─ DATEV               ├─ n8n (→ Hub)
+│  ├─ Onboarding            ├─ Claude API    ├─ Microsoft 365       ├─ Make
+│  └─ Preise                └─ Use Cases     └─ Websuche            ├─ Zapier
+│                                                                   └─ Alle Tools → Hub
 
 Über uns ▾: Mit euch wachsen · Team · Karriere · Kontakt
 Blog ▾:     die 5 neuesten Artikel · Alle Artikel → Hub
 ```
 
-Erreichbar aus der Desktop-Nav: alle Hubs, alle 6 Service-Money-Pages, Top-4-
-Tools, ROI-Rechner. NICHT in der Nav (bewusst, via Hub 1 Klick entfernt):
+Erreichbar aus der Desktop-Nav: alle Hubs, Basisseiten des Claude-Angebots,
+n8n-Hub + Top-Tools, ROI-Rechner. Die 6 n8n-Money-Pages (Hosting, Wartung,
+Schulungen, …) sind NICHT mehr in der Nav, sondern 1 Klick unter dem n8n-Hub. NICHT in der Nav (bewusst, via Hub 1 Klick entfernt):
 alle Money-/Content-/Katalog-Seiten der Unter-Hubs, restliche 9 Tools,
 einzelne Rechner, Standorte (nur Footer), Blog-Artikel jenseits der Top 5.
 
@@ -437,12 +498,12 @@ Gruppen-Überschriften (Überschrift = Link auf den Hub).
 
 ```
 ☰ Drawer
-├─ Über uns
-├─ Services ▾              (Akkordeon)
-│   ├─ Alle Services → Hub
-│   ├─ n8n Hosting · Wartung · Schulungen ·
-│   │  Custom Nodes · Performance · Zertifizierung
-│   └─ Tools → Hub         (einzelne Tools NICHT im Drawer)
+├─ Managed Claude ▾ (Akkordeon)
+│   ├─ Übersicht → Hub
+│   ├─ Wie es funktioniert · Onboarding · Preise
+│   ├─ Claude App · Claude API · Use Cases
+│   ├─ Integrationen → Hub
+│   └─ Weitere Tools → Hub  (n8n + einzelne Tools NICHT im Drawer)
 ├─ Branchen ▾              (Akkordeon)
 │   ├─ Großhandel → Hub            (Gruppen-Überschrift, tappbar)
 │   │   Private AI · KI-Assistenten · KI-Agenten · Chatbots ·
@@ -450,6 +511,7 @@ Gruppen-Überschriften (Überschrift = Link auf den Hub).
 │   └─ Steuerberater → Hub         (Gruppen-Überschrift, tappbar)
 │       Private AI · Claude Cowork · KI-Agenten · Workflows
 ├─ Blog                    (direkter Link, kein Akkordeon)
+├─ Über uns
 └─ [Kontakt-CTA, sticky am Drawer-Ende]
 ```
 
@@ -463,14 +525,14 @@ Listen-Übersicht.
 ### Footer (Desktop: 4 Spalten · Mobile: gleiche Inhalte, gestapelt)
 
 Der Footer spiegelt die Pillars, keine Einzelseiten: keine einzelnen
-Service-Angebote (die trägt das Services-Mega-Menü), stattdessen die drei
+Angebotsseiten (die trägt das Claude-Mega-Menü), stattdessen die drei
 Branchen (inkl. der geplanten dritten), die Hub-Einstiege und die
 Unternehmens-Seiten.
 
 ```
-BRANCHEN            SERVICES & WISSEN    UNTERNEHMEN         RECHTLICHES
-Großhandel          Services             Mit euch wachsen    Impressum
-Steuerberater       Tools                Team                Datenschutz
+BRANCHEN            ANGEBOT & WISSEN     UNTERNEHMEN         RECHTLICHES
+Großhandel          Claude Managed Svc.  Mit euch wachsen    Impressum
+Steuerberater       Weitere Tools        Team                Datenschutz
 Anwälte             Blog                 Standorte
                                          Kontakt
 ```
@@ -490,10 +552,10 @@ Money Pages verlinken selbst nur sparsam nach außen.
 
 ```
 Blog-Artikel ──────────────┬──> passende Content Page (Agent/Workflow/Thema)
-   (kontextuell, 2-4 Links)└──> passendes Software-Portrait (services/tools/…)
+   (kontextuell, 2-4 Links)└──> passendes Software-Portrait (…/weitere-tools/…)
 
-Software-Portrait ─────────┬──> Services (Hosting, Wartung)
-  (services/tools/, CONTENT)└──> Branchen-Content-Pages mit Tool-Bezug
+Software-Portrait ─────────┬──> Claude-Angebot (App/API) bzw. n8n-Hub
+  (weitere-tools/, CONTENT) └──> Branchen-Content-Pages mit Tool-Bezug
 
 Tool Page ([TOOL], z.B. ───==> contact (CTA nach Nutzung); wird von Content-
   roi-rechner)                 und Money-Pages der eigenen Branche verlinkt,
@@ -514,7 +576,7 @@ Unter-Hub ─────────────────┬──> eigene M
 Branchen-Hub ──────────────┬──> seine vier Unter-Hubs (runter)
                            └──> contact (CTA)
 
-Standort-Seite ────────────┬──> Services
+Standort-Seite ────────────┬──> Claude Managed Service (Hub)
                            └──> mit-euch-wachsen (Trust)
 
 Funnel-LP ─────────────────==> nur eigenes Formular / Kontakt (keine Ausgänge)
@@ -535,6 +597,32 @@ Funnel-LP ─────────────────==> nur eigenes For
 6. Neue Seiten zuerst hier einordnen (Typ + Knoten), dann bauen.
 
 ## Nächste Schritte (Umsetzung des Zielbilds)
+
+### Repositionierung Claude Managed Service Provider (Branch `anthropic-managed-service-provider`)
+
+- [x] **site-structure.md umgebaut** (dieser Stand).
+- [x] **Umbau auf dem Branch umgesetzt** (2026-10-01): Seiten verschoben,
+      Redirects in next.config.ts, Nav/Footer/Mobile, Breadcrumb-Labels,
+      Startseite umpositioniert, Gerüst-Seiten als ENTWURF angelegt.
+      Offen: Inhalte der Gerüst-Seiten schärfen, Preise eintragen,
+      Keyword-Aliasse der Startseite (`/n8n-automatisierung`) neu bewerten.
+- [ ] **Hub `managed-claude/` anlegen**, Basisseiten
+      (wie-es-funktioniert, onboarding, preise), die drei Angebots-Hubs
+      (claude-app, claude-api, use-cases) und den Hub integrationen/
+      (datev, microsoft, websearch) als Gerüst.
+- [ ] **services/ → managed-claude/weitere-tools/ umziehen:**
+      n8n-Services unter `weitere-tools/n8n/`, Tool-Portraits unter
+      `weitere-tools/`, alle alten URLs als `legacyRedirects` (301), auch
+      die erst seit Juli bestehenden `services/tools/…`-URLs.
+- [ ] **Navigation + Footer** auf das neue Zielbild (oben) umstellen.
+- [ ] **Homepage** auf Claude Managed Service Provider umpositionieren
+      (Hero, GEO-Summary, Angebotsreihenfolge App → API → Use Cases).
+- [ ] **Interne Links** auf `services/…` im ganzen Repo auf die neuen URLs
+      umbiegen (nicht nur über Redirects laufen lassen).
+- [ ] **Branchen-Hubs** später auf „Was kann ich mit Claude umsetzen?"
+      ausrichten; Private AI eingefroren, Workflows Future.
+
+### Bisherige Schritte
 
 - [x] **Tools → services/tools/ umgezogen:** Ordner verschieben, `legacyRedirects`
       für alle /tools/-URLs, Tools-Button aus der Nav, Tools-Sektion ins

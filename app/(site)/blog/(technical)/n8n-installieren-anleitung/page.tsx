@@ -509,7 +509,7 @@ npx n8n`}
               . Wer die Infrastruktur nicht selbst betreiben will, findet
               mit{" "}
               <Link
-                href="/services/n8n-hosting"
+                href="/managed-claude/weitere-tools/n8n/n8n-hosting"
                 className="text-primary-600 hover:underline"
               >
                 Managed n8n-Hosting

@@ -377,7 +377,7 @@ export default function Page() {
               zum Thema KI im Großhandel und wie sie Datenqualität
               verbessert, findet ihr auf unserer Seite zur{" "}
               <Link
-                href={resolveHref("/services")}
+                href={resolveHref("/managed-claude")}
                 className="text-primary-600 hover:underline"
               >
                 KI-Implementierung

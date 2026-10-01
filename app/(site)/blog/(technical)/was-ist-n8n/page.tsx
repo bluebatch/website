@@ -1348,11 +1348,11 @@ export default function Page() {  return (
             <Typo.H2>Weiterführende Informationen</Typo.H2>
             <Typo.Paragraph className="text-gray-600">
               Interessiert an n8n? Informieren Sie sich über{" "}
-              <Link href="/services" className="text-primary-500 hover:underline">
+              <Link href="/managed-claude" className="text-primary-500 hover:underline">
                 unsere n8n-Implementierungsservices
               </Link>
               , erfahren Sie mehr über{" "}
-              <Link href="/services/n8n-hosting" className="text-primary-500 hover:underline">
+              <Link href="/managed-claude/weitere-tools/n8n/n8n-hosting" className="text-primary-500 hover:underline">
                 n8n Hosting in Deutschland
               </Link>{" "}
               oder lesen Sie unsere{" "}

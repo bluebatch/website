@@ -449,7 +449,7 @@ export default function Page() {
               fertiger Server reicht und wann sich der Eigenbau lohnt, steht
               auf unserer Seite{" "}
               <Link
-                href="/services/mcp-server-erstellen"
+                href="/managed-claude/integrationen/mcp-server-erstellen"
                 className="text-primary-600 hover:underline"
               >
                 MCP-Server erstellen

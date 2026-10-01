@@ -64,7 +64,7 @@ const sizeS: Tier[] = [
       "Ein Mini-Workflow startklar",
       "Hands-on-Schulung fürs Team",
     ],
-    href: { label: "Zu den Schulungen", url: "/services/schulungen" },
+    href: { label: "Zu den Schulungen", url: "/managed-claude/weitere-tools/n8n/schulungen" },
   },
   {
     id: "S2",
@@ -131,7 +131,7 @@ const mIncluded = [
   {
     title: "Betrieb, Wartung & Monitoring",
     description: "Wir halten eure Systeme am Laufen, 24/7-Monitoring inklusive.",
-    url: "/services/workflow-wartung",
+    url: "/managed-claude/weitere-tools/n8n/workflow-wartung",
   },
   {
     title: "Claude-Code-Support-Team",
@@ -144,7 +144,7 @@ const mIncluded = [
   {
     title: "Privater AI-Stack",
     description: "Eigener, DSGVO-konformer AI-Stack, On-Premise oder in Frankfurt.",
-    url: "/services/n8n-hosting",
+    url: "/managed-claude/weitere-tools/n8n/n8n-hosting",
   },
 ];
 

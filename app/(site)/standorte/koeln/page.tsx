@@ -322,7 +322,7 @@ export default async function Page({
               Rechtemanagement, Prozesse, die in Medienhäusern täglich
               Stunden kosten, laufen mit n8n im Hintergrund. Dafür bieten wir auch
               professionelle{" "}
-              <Link href="/services/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>{" "}
+              <Link href="/managed-claude/weitere-tools/n8n/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>{" "}
               an.
             </Typo.Paragraph>
           </BoundlessImageCard.Content>

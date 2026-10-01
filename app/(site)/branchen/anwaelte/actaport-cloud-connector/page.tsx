@@ -146,7 +146,7 @@ export default function Page() {
             Sobald actaport angebunden ist, lassen sich die typischen
             Kanzlei-Prozesse automatisieren und mit KI unterstützen. Technisch
             ist der Connector genau der Fall, für den wir{" "}
-            <InternalLink href="/services/custom-nodes" variant="underline">
+            <InternalLink href="/managed-claude/weitere-tools/n8n/custom-nodes" variant="underline">
               eigene n8n-Nodes für Fachsoftware
             </InternalLink>{" "}
             bauen: eine Schnittstelle, die es als Standardbaustein nicht gibt.

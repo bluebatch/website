@@ -409,7 +409,7 @@ export default async function Page({
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-gray-900">Weitere Services und Standorte</h2>
           <p className="text-gray-700">
-            Neben dem Standort Stuttgart verstärken wir auch Teams in anderen Regionen. Entdecken Sie unsere Leistungen für <Link href="/standorte/karlsruhe" className="text-primary hover:underline">Unternehmen in Karlsruhe</Link> oder informieren Sie sich über unsere <Link href="/services" className="text-primary hover:underline">vollständigen Service-Portfolio</Link> in anderen Bereichen wie n8n-Hosting und KI-Integration.
+            Neben dem Standort Stuttgart verstärken wir auch Teams in anderen Regionen. Entdecken Sie unsere Leistungen für <Link href="/standorte/karlsruhe" className="text-primary hover:underline">Unternehmen in Karlsruhe</Link> oder informieren Sie sich über unsere <Link href="/managed-claude" className="text-primary hover:underline">vollständigen Service-Portfolio</Link> in anderen Bereichen wie n8n-Hosting und KI-Integration.
           </p>
         </div>
       </ContentWrapper>

@@ -525,7 +525,7 @@ export default function Page() {
               den Datenschutz bis zum produktiven Betrieb kennt, findet in
               unseren{" "}
               <Link
-                href="/services"
+                href="/managed-claude"
                 className="text-primary-600 hover:underline"
               >
                 Leistungen

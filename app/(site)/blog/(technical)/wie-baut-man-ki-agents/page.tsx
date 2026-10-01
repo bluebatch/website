@@ -800,7 +800,7 @@ export default function Page() {
               Kapazität, findet die Alternativen zum Selbstbauen mit Preis und
               Dauer unter{" "}
               <Link
-                href="/services/ki-agent-kaufen"
+                href="/managed-claude/use-cases/ki-agent-kaufen"
                 className="text-primary-600 hover:underline"
               >
                 KI-Agent kaufen

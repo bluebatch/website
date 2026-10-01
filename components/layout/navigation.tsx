@@ -54,83 +54,101 @@ const uberUnsMenu = {
   ],
 };
 
-const servicesMenu = {
+const managedClaudeMenu = {
   sections: [
     {
-      title: "Services",
-      href: "/services",
+      title: "So arbeiten wir",
+      href: "/managed-claude",
       items: [
         {
-          icon: "/icons/server-minimalistic.svg",
-          title: "n8n Hosting",
-          description: "OnPrem oder Cloud",
-          href: "/services/n8n-hosting",
+          icon: "/icons/process.svg",
+          title: "Wie es funktioniert",
+          description: "Ablauf & Verantwortung",
+          href: "/managed-claude/wie-es-funktioniert",
         },
         {
-          icon: "/icons/monitor-camera.svg",
-          title: "Workflow-Wartung",
-          description: "24/7 Monitoring",
-          href: "/services/workflow-wartung",
+          icon: "/icons/rocket-launch.svg",
+          title: "Onboarding",
+          description: "Start in wenigen Wochen",
+          href: "/managed-claude/onboarding",
         },
         {
-          icon: "/icons/puzzle.svg",
-          title: "Custom Nodes",
-          description: "Maßgeschneiderte Integrationen",
-          href: "/services/custom-nodes",
-        },
-        {
-          icon: "/icons/academic-cap.svg",
-          title: "Schulungen",
-          description: "Workshops & Training",
-          href: "/services/schulungen",
-        },
-        {
-          icon: "/icons/speedometer.svg",
-          title: "Performance Scaling",
-          description: "High-Performance Setup",
-          href: "/services/performance-scaling",
-        },
-        {
-          icon: "/icons/badge-check.svg",
-          title: "Zertifizierung",
-          description: "Nachweisbare Qualität",
-          href: "/services/zertifizierung",
+          icon: "/icons/calculator.svg",
+          title: "Preise",
+          description: "Pakete & Lizenzen",
+          href: "/managed-claude/preise",
         },
       ],
     },
     {
-      title: "Tools",
-      href: "/services/tools",
+      title: "Angebot",
+      href: "/managed-claude",
       items: [
         {
-          icon: "/icons/process.svg",
+          icon: "/icons/people-group.svg",
+          title: "Claude App",
+          description: "Claude fürs ganze Team",
+          href: "/managed-claude/claude-app",
+        },
+        {
+          icon: "/icons/puzzle.svg",
+          title: "Claude API",
+          description: "Claude in eigenen Systemen",
+          href: "/managed-claude/claude-api",
+        },
+        {
+          icon: "/icons/admin-with-cogwheels.svg",
+          title: "Use Cases",
+          description: "Wir bauen Anwendungen",
+          href: "/managed-claude/use-cases",
+        },
+      ],
+    },
+    {
+      title: "Integrationen",
+      href: "/managed-claude/integrationen",
+      items: [
+        {
+          icon: "/icons/calculator.svg",
+          title: "DATEV",
+          description: "Claude mit DATEV-Daten",
+          href: "/managed-claude/integrationen/datev",
+        },
+        {
+          icon: "/icons/cloud.svg",
+          title: "Microsoft 365",
+          description: "Outlook, Teams, SharePoint",
+          href: "/managed-claude/integrationen/microsoft",
+        },
+        {
+          icon: "/icons/lightning-bolt.svg",
+          title: "Websuche",
+          description: "Aktuelle Quellen aus dem Web",
+          href: "/managed-claude/integrationen/websearch",
+        },
+      ],
+    },
+    {
+      title: "Weitere Tools",
+      href: "/managed-claude/weitere-tools",
+      items: [
+        {
+          icon: "/icons/workflow.svg",
           title: "n8n",
-          description: "Workflow-Automatisierung",
-          href: "/services/tools/n8n",
+          description: "Hosting, Wartung, Schulungen",
+          href: "/managed-claude/weitere-tools/n8n",
         },
         {
           icon: "/icons/settings.svg",
           title: "Make",
           description: "Visueller Szenario-Builder",
-          href: "/services/tools/make",
-        },
-        {
-          icon: "/icons/lightning-bolt.svg",
-          title: "Zapier",
-          description: "No-Code Automatisierung",
-          href: "/services/tools/zapier",
-        },
-        {
-          icon: "/icons/adjustments.svg",
-          title: "Power Automate",
-          description: "Microsoft-Automatisierung",
-          href: "/services/tools/power-automate",
+          href: "/managed-claude/weitere-tools/make",
         },
         {
           icon: "/icons/wrench.svg",
           title: "Alle Tools",
-          description: "Navision, easybill, Workato u.m.",
-          href: "/services/tools",
+          description: "Zapier, Navision, easybill u.m.",
+          href: "/managed-claude/weitere-tools",
         },
       ],
     },
@@ -245,6 +263,10 @@ const triggerIconClass =
 const panelBase =
   "hidden absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-1 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden";
 
+// Erstes Mega-Menü links ausrichten, sonst ragt das breite Panel links aus dem Viewport
+const panelLeft =
+  "hidden absolute top-full left-0 mt-0 pt-1 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden";
+
 function NavIcon({ src, className }: { src: string; className?: string }) {
   const paths = navIcons[src];
   if (!paths) {
@@ -336,71 +358,12 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-2">
-              {/* Über uns */}
+              {/* Managed Claude */}
               <div
-                className="nav-fade-in relative group/about"
+                className="nav-fade-in relative group/claude"
                 style={{ animationDelay: "200ms" }}
               >
-                <Link href="/" className={triggerClass}>
-                  <svg
-                    className={triggerIconClass}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                    />
-                  </svg>
-                  Über uns
-                  <ChevronDown className={triggerIconClass} />
-                </Link>
-
-                <div
-                  className={`${panelBase} group-hover/about:block group-focus-within/about:block w-[500px]`}
-                >
-                  <div className="p-4 grid grid-cols-2 gap-6">
-                    {uberUnsMenu.sections.map((section, sectionIndex) => (
-                      <div key={sectionIndex}>
-                        <div className="space-y-2">
-                          {section.items.map((item, itemIndex) => (
-                            <Link
-                              key={itemIndex}
-                              href={item.href}
-                              className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
-                            >
-                              {"icon" in item && item.icon && (
-                                <NavIcon
-                                  src={item.icon}
-                                  className="w-5 h-5 text-gray-700 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5"
-                                />
-                              )}
-                              <div>
-                                <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
-                                  {item.title}
-                                </h5>
-                                <p className="text-xs text-gray-500 mt-0.5">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Services */}
-              <div
-                className="nav-fade-in relative group/services"
-                style={{ animationDelay: "250ms" }}
-              >
-                <Link href="/services" className={triggerClass}>
+                <Link href="/managed-claude" className={triggerClass}>
                   <svg
                     className={triggerIconClass}
                     fill="none"
@@ -414,15 +377,15 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                       d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  Services
+                  Managed Claude
                   <ChevronDown className={triggerIconClass} />
                 </Link>
 
                 <div
-                  className={`${panelBase} group-hover/services:block group-focus-within/services:block w-[750px]`}
+                  className={`${panelLeft} group-hover/claude:block group-focus-within/claude:block w-[960px]`}
                 >
-                  <div className="p-4 grid grid-cols-3 gap-6">
-                    {servicesMenu.sections.map((section, sectionIndex) => (
+                  <div className="p-4 grid grid-cols-4 gap-6">
+                    {managedClaudeMenu.sections.map((section, sectionIndex) => (
                       <div key={sectionIndex}>
                         <Link
                           href={section.href}
@@ -463,7 +426,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
               {/* Branchen */}
               <div
                 className="nav-fade-in relative group/branchen"
-                style={{ animationDelay: "300ms" }}
+                style={{ animationDelay: "250ms" }}
               >
                 <Link href="/branchen" className={triggerClass}>
                   <svg
@@ -529,7 +492,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
               {/* Blog */}
               <div
                 className="nav-fade-in relative group/blog"
-                style={{ animationDelay: "350ms" }}
+                style={{ animationDelay: "300ms" }}
               >
                 <Link href="/blog" className={triggerClass}>
                   <svg
@@ -610,6 +573,65 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                   </div>
                 )}
               </div>
+              {/* Über uns */}
+              <div
+                className="nav-fade-in relative group/about"
+                style={{ animationDelay: "350ms" }}
+              >
+                <Link href="/" className={triggerClass}>
+                  <svg
+                    className={triggerIconClass}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                    />
+                  </svg>
+                  Über uns
+                  <ChevronDown className={triggerIconClass} />
+                </Link>
+
+                <div
+                  className={`${panelBase} group-hover/about:block group-focus-within/about:block w-[500px]`}
+                >
+                  <div className="p-4 grid grid-cols-2 gap-6">
+                    {uberUnsMenu.sections.map((section, sectionIndex) => (
+                      <div key={sectionIndex}>
+                        <div className="space-y-2">
+                          {section.items.map((item, itemIndex) => (
+                            <Link
+                              key={itemIndex}
+                              href={item.href}
+                              className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                            >
+                              {"icon" in item && item.icon && (
+                                <NavIcon
+                                  src={item.icon}
+                                  className="w-5 h-5 text-gray-700 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5"
+                                />
+                              )}
+                              <div>
+                                <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
+                                  {item.title}
+                                </h5>
+                                <p className="text-xs text-gray-500 mt-0.5">
+                                  {item.description}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             {/* Right Side - Actions */}

@@ -23,6 +23,7 @@ import LatestBlogPosts from "@/components/sections/latest-blog-posts";
 import CardShowcase from "@/components/cards/card-showcase";
 import Customer from "@/components/sections/customer/customer";
 import IntroBox from "@/components/ui/intro-box";
+import OfferCard from "@/components/cards/offer-card";
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
   rewrites: [
@@ -53,11 +54,15 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Bluebatch - Automatisierung mit n8n | KI Agentur für Workflows",
+  title: "Bluebatch - Managed Service Provider für Claude | Managed Claude",
   description:
-    "Workflow-Automatisierung mit n8n vom Experten: Bluebatch ist Ihre KI Agentur für intelligente Prozessautomatisierung auf Enterprise-Niveau - live in nur 5 Tagen.",
+    "Bluebatch ist Managed Service Provider für Claude von Anthropic: Claude App einführen, Claude per API integrieren, Use Cases bauen. Mit DATEV- und Microsoft-365-Anbindung, Betrieb und Schulung aus einer Hand.",
   keywords: [
-    "Automatisierung mit n8n",
+    "Claude Managed Service Provider",
+    "Managed Claude",
+    "Claude für Unternehmen",
+    "Claude Enterprise einführen",
+    "Managed Service Provider Claude",
     "KI Agentur",
     "AI Agentur",
     "Workflow Engineering",
@@ -75,27 +80,27 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Bluebatch" }],
   openGraph: {
-    title: "Bluebatch - Automatisierung mit n8n | KI Agentur",
+    title: "Bluebatch - Managed Service Provider für Claude",
     description:
-      "Workflow-Automatisierung mit n8n vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount - live in nur 5 Tagen.",
+      "Claude von Anthropic als Managed Service: App, API und Use Cases aus einer Hand, mit DATEV- und Microsoft-365-Anbindung.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=Bluebatch%20-%20Automatisierung%20mit%20n8n&eyebrow=Bluebatch",
+        url: "/og?title=Bluebatch%20-%20Managed%20Service%20Provider%20f%C3%BCr%20Claude&eyebrow=Bluebatch",
         width: 1200,
         height: 630,
-        alt: "Bluebatch - Automatisierung mit n8n | KI Agentur",
+        alt: "Bluebatch - Managed Service Provider für Claude",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bluebatch - Automatisierung mit n8n | KI Agentur",
+    title: "Bluebatch - Managed Service Provider für Claude",
     description:
-      "Workflow-Automatisierung mit n8n vom Experten. Skalieren Sie Ihren Umsatz, nicht Ihren Headcount - live in nur 5 Tagen.",
-    images: ["/og?title=Bluebatch%20-%20Automatisierung%20mit%20n8n&eyebrow=Bluebatch"],
+      "Claude von Anthropic als Managed Service: App, API und Use Cases aus einer Hand, mit DATEV- und Microsoft-365-Anbindung.",
+    images: ["/og?title=Bluebatch%20-%20Managed%20Service%20Provider%20f%C3%BCr%20Claude&eyebrow=Bluebatch"],
   },
   robots: {
     index: true,
@@ -117,36 +122,36 @@ export default function Home() {
           opacityBackground="white"
         >
           <BackgroundHero.TopLabel>
-            Ihre KI Agentur für Workflow Engineering
+            Managed Service Provider für Claude
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
-            n8n Automatisierung für
+            Claude von Anthropic,
             <br />
-            Ihren{" "}
+            als{" "}
             <BackgroundHero.Highlight>
-              Enterprise-Erfolg
+              Managed Service
             </BackgroundHero.Highlight>
           </BackgroundHero.Headline>
           <BackgroundHero.Description geo>
-            Bluebatch ist eine KI- und Automatisierungsagentur aus Deutschland,
-            die manuelle Backoffice-Prozesse im Mittelstand mit n8n-Workflows
-            und KI-Agenten automatisiert. Von der Rechnungsprüfung bis zur
-            Auftragserfassung: Die ersten Workflows gehen in nur 5 Tagen live,
-            DSGVO-konform und auf Wunsch auf Ihrer eigenen Infrastruktur.
+            Bluebatch ist Managed Service Provider für Claude von Anthropic und
+            betreut Unternehmen mit 50 bis 1.000 Mitarbeitenden. Bluebatch führt
+            die Claude App im Team ein, integriert Claude per API in eigene
+            Systeme wie DATEV und Microsoft 365 und baut konkrete Use Cases.
+            Einrichtung, Betrieb und Schulung kommen aus einer Hand.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
-            <ContactButton icon="chat">ROI-Analyse anfragen</ContactButton>
+            <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
           </BackgroundHero.CallToAction>
           <BackgroundHero.Stats>
             <BackgroundHero.Stat
-              value={5}
-              suffix=" Tage"
-              label="Time-to-Value"
+              value={3}
+              suffix=" Bausteine"
+              label="App, API, Use Cases"
             />
             <BackgroundHero.Stat
-              value={80}
-              suffix="%"
-              label="Weniger manueller Aufwand"
+              value={1}
+              suffix=" Partner"
+              label="Einrichtung bis Betrieb"
             />
             <BackgroundHero.Stat
               value={24}
@@ -157,6 +162,44 @@ export default function Home() {
         </BackgroundHero>
       </ContentWrapper>
 
+      {/* Managed Claude: drei Bausteine */}
+      <ContentWrapper>
+        <IntroBox>
+          <IntroBox.PreHeadline>Managed Claude</IntroBox.PreHeadline>
+          <IntroBox.Headline>Drei Bausteine, ein Ansprechpartner</IntroBox.Headline>
+          <IntroBox.Subline>
+            Die meisten Kunden starten mit der Claude App und wachsen von dort in
+            API-Integrationen und eigene Use Cases.
+          </IntroBox.Subline>
+        </IntroBox>
+        <SimpleGrid cols={3} className="gap-6">
+          <OfferCard
+            highlight
+            href="/managed-claude/claude-app"
+            title="Claude App"
+            description="Claude für das ganze Team: Lizenzen, SSO, Rechte, Projekte und Connectoren eingerichtet und betreut."
+            linkLabel="Zur Claude App"
+          />
+          <OfferCard
+            href="/managed-claude/claude-api"
+            title="Claude API"
+            description="Claude in Ihren eigenen Systemen und Prozessen, mit Betrieb in der EU und Kostenkontrolle."
+            linkLabel="Zur Claude API"
+          />
+          <OfferCard
+            href="/managed-claude/use-cases"
+            title="Use Cases"
+            description="Wir bauen konkrete Anwendungen auf Claude, die einen echten Prozess entlasten."
+            linkLabel="Zu den Use Cases"
+          />
+        </SimpleGrid>
+        <div className="mt-10 flex justify-center">
+          <InternalLink href="/managed-claude">
+            Alles über Managed Claude
+          </InternalLink>
+        </div>
+      </ContentWrapper>
+
       {/* About Bluebatch Section */}
       <ContentWrapper colorScheme="gray-light">
         <SimpleGrid cols={2} className="items-center gap-12">
@@ -164,7 +207,7 @@ export default function Home() {
             <IntroBox textCentered={false}>
               <IntroBox.PreHeadline>The DNA</IntroBox.PreHeadline>
               <IntroBox.Headline>
-                Ihre KI Agentur für radikale Automatisierung mit n8n
+                Ihr Managed Service Provider für Claude
               </IntroBox.Headline>
               <IntroBox.Subline>
                 Im Herzen des Mittelstands und des Großhandels liegt ein
@@ -175,7 +218,7 @@ export default function Home() {
               <IntroBox.Subline>
                 Bluebatch wurde gegründet, um diese Fehlallokation von
                 Humankapital zu beenden. Als KI Automatisierung Agentur bauen
-                wir keine klassische Software - durch Automatisierung mit n8n
+                wir keine klassische Software - mit Claude von Anthropic
                 erschaffen wir digitale Mitarbeiter. Unsere AI-Workflows
                 übernehmen die kognitive Routinearbeit, damit Ihre Teams wieder
                 das tun können, wofür sie eingestellt wurden. Dahinter steht
@@ -190,7 +233,7 @@ export default function Home() {
           <div className="relative aspect-video">
             <Image
               src="/images/consulting-services.jpg"
-              alt="Automatisierung mit n8n"
+              alt="Managed Claude im Unternehmen"
               fill
               className="object-cover rounded-lg shadow-lg"
             />
@@ -277,7 +320,7 @@ export default function Home() {
                 „Time-to-Market"-Falle
               </IntroBox.PreHeadline>
               <IntroBox.Headline>
-                Automatisierung mit n8n als Lösung
+                KI-Automatisierung als Lösung
               </IntroBox.Headline>
               <IntroBox.Paragraph>
                 Besonders im Großhandel und Retail ist Geschwindigkeit die
@@ -288,7 +331,7 @@ export default function Home() {
               </IntroBox.Paragraph>
               <IntroBox.Paragraph>
                 Wir lösen dieses Problem durch Workflow Engineering. Mit einer
-                Kombination aus moderner KI und n8n-basierter Automatisierung
+                Kombination aus Claude und gezielter Automatisierung
                 schaffen wir „Daten-Autobahnen".
               </IntroBox.Paragraph>
             </IntroBox>
@@ -345,8 +388,8 @@ export default function Home() {
             />
             <Typo.H3>Tag 1-5: Live</Typo.H3>
             <Typo.Paragraph>
-              Durch Automatisierung mit n8n bringen wir Ihren ersten produktiven
-              Workflow live. Keine monatelangen Planungsphasen, sondern direkte
+              Mit Claude bringen wir Ihren ersten produktiven Use Case
+              live. Keine monatelangen Planungsphasen, sondern direkte
               Ergebnisse.
             </Typo.Paragraph>
           </SimpleCard>
@@ -401,8 +444,7 @@ export default function Home() {
                 Weg. Bluebatch ist kein anonymes Tool, sondern eine
                 Workflow-Engineering-Unit. Wir analysieren Ihre manuellen
                 Prozesse, entwerfen die passende Architektur und implementieren
-                individuelle Lösungen auf Basis von n8n-basierter
-                Automatisierung.
+                individuelle Lösungen auf Basis von Claude.
               </IntroBox.Subline>
               <IntroBox.Subline>
                 Das Besondere: Ihre Daten gehören Ihnen. Wir bauen die Workflows
@@ -558,8 +600,7 @@ export default function Home() {
           </IntroBox.Subline>
           <IntroBox.Paragraph>
             Bluebatch ist die Brücke zwischen Ihrer heutigen manuellen Arbeit
-            und einer skalierbaren Zukunft - powered by Workflow-Automatisierung
-            über n8n.
+            und einer skalierbaren Zukunft - powered by Claude von Anthropic.
           </IntroBox.Paragraph>
           <div>
             <ContactButton icon="calendar" size="lg">

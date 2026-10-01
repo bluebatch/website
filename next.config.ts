@@ -29,21 +29,67 @@ const nextConfig: NextConfig = {
     const { redirects } = collectRewriteRules();
     return [
       ...redirects,
-      // Legacy tool URLs → Tools liegen jetzt unter services/
+      // Repositionierung Claude Managed Service (2026-10): services/ ist
+      // jetzt managed-claude/. n8n-Services hängen unter dem n8n-Hub in
+      // weitere-tools/. Explizite Slugs statt Catch-all, weil public/services/
+      // weiterhin Bild-Assets ausliefert.
+      {
+        source: "/services",
+        destination: "/managed-claude",
+        permanent: true,
+      },
+      {
+        source:
+          "/services/:slug(n8n-hosting|workflow-wartung|schulungen|custom-nodes|performance-scaling|zertifizierung)",
+        destination: "/managed-claude/weitere-tools/n8n/:slug",
+        permanent: true,
+      },
+      {
+        source:
+          "/services/:slug(ki-agent-kaufen|ki-agent-kostenlos|ki-chatbot-fuer-unternehmen)",
+        destination: "/managed-claude/use-cases/:slug",
+        permanent: true,
+      },
+      {
+        source: "/services/mcp-server-erstellen",
+        destination: "/managed-claude/integrationen/mcp-server-erstellen",
+        permanent: true,
+      },
+      {
+        source: "/services/was-kostet-ki",
+        destination: "/managed-claude/was-kostet-ki",
+        permanent: true,
+      },
+      {
+        source: "/services/tools",
+        destination: "/managed-claude/weitere-tools",
+        permanent: true,
+      },
+      {
+        source:
+          "/services/tools/:slug(n8n|make|zapier|power-automate|activepieces|pipedream|tray-io|uipath|workato|freshworks|navision|easybill|microtech-bueroplus)",
+        destination: "/managed-claude/weitere-tools/:slug",
+        permanent: true,
+      },
+      {
+        source: "/services/tools/ebootis/:path*",
+        destination: "/managed-claude/weitere-tools/ebootis/:path*",
+        permanent: true,
+      },
+      // Legacy tool URLs → direkt aufs finale Ziel (kein 2-Hop über services/)
       {
         source: "/tools/automation-tools/:slug*",
-        destination: "/services/tools/:slug*",
+        destination: "/managed-claude/weitere-tools/:slug*",
         permanent: true,
       },
       {
         source: "/tools/grosshandel/:slug*",
-        destination: "/services/tools/:slug*",
+        destination: "/managed-claude/weitere-tools/:slug*",
         permanent: true,
       },
-      // Tools wurde unter Services verschoben
       {
         source: "/tools/:path*",
-        destination: "/services/tools/:path*",
+        destination: "/managed-claude/weitere-tools/:path*",
         permanent: true,
       },
       // ROI-Rechner gehört zum Großhandel

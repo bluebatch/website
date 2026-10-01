@@ -446,7 +446,7 @@ export default async function Page({
               Produktionssteuerung über Lieferketten-Management bis zur
               Integration von IoT-Daten in Echtzeit-Workflows. Als Ihre Agentur für KI
               in Berlin setzen wir genau hier mit n8n-basierten Lösungen an, gehostet auf{" "}
-              <Link href="/services/n8n-hosting" className="text-primary-600 hover:underline">deutscher Infrastruktur</Link>.
+              <Link href="/managed-claude/weitere-tools/n8n/n8n-hosting" className="text-primary-600 hover:underline">deutscher Infrastruktur</Link>.
             </Typo.Paragraph>
           </BoundlessImageCard.Content>
         </BoundlessImageCard>

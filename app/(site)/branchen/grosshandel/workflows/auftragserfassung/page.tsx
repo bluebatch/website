@@ -868,7 +868,7 @@ export default async function Page({
               Neue Lieferanten, neue Bestellformate, ERP-Updates, neue Kanäle —
               wir bleiben drauf. Mehr dazu unter{" "}
               <Link
-                href="/services/workflow-wartung"
+                href="/managed-claude/weitere-tools/n8n/workflow-wartung"
                 className="text-primary-600 hover:underline"
               >
                 Workflow-Wartung
@@ -990,13 +990,13 @@ export default async function Page({
           </Typo.Paragraph>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Link
-              href="/services/workflow-wartung"
+              href="/managed-claude/weitere-tools/n8n/workflow-wartung"
               className="inline-flex items-center gap-2 rounded-full border border-primary-600 px-5 py-2 text-sm font-semibold text-primary-700 transition hover:bg-primary-50"
             >
               Workflow-Wartung
             </Link>
             <Link
-              href="/services/n8n-hosting"
+              href="/managed-claude/weitere-tools/n8n/n8n-hosting"
               className="inline-flex items-center gap-2 rounded-full border border-primary-600 px-5 py-2 text-sm font-semibold text-primary-700 transition hover:bg-primary-50"
             >
               On-Premise &amp; GPU-Hosting

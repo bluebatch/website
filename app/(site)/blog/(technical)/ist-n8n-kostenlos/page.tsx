@@ -136,7 +136,7 @@ export default function Page() {
               </Link>{" "}
               Schritt für Schritt. Wer Self-Hosting nicht selbst stemmen will,
               findet bei unserem{" "}
-              <Link href="/services/n8n-hosting" className="text-primary-600 hover:underline">
+              <Link href="/managed-claude/weitere-tools/n8n/n8n-hosting" className="text-primary-600 hover:underline">
                 n8n-Hosting in Deutschland
               </Link>{" "}
               eine Managed-Variante mit DSGVO-konformer Infrastruktur.
@@ -269,7 +269,7 @@ export default function Page() {
               ein. Wer eine Managed-Variante mit Monitoring und Updates
               möchte, landet schnell bei 80 bis 150 Euro. Genau diese Lücke
               decken wir mit unserem{" "}
-              <Link href="/services/n8n-hosting" className="text-primary-600 hover:underline">
+              <Link href="/managed-claude/weitere-tools/n8n/n8n-hosting" className="text-primary-600 hover:underline">
                 n8n-Hosting in Deutschland
               </Link>{" "}
               ab.

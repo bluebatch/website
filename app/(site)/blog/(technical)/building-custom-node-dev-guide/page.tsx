@@ -1039,11 +1039,11 @@ export default function Page() {
             <Typo.H2>Weiterführende Informationen</Typo.H2>
             <Typo.Paragraph className="text-gray-600">
               Sie brauchen Unterstützung bei der Custom-Node-Entwicklung? Erfahren Sie mehr über{" "}
-              <Link href="/services/custom-nodes" className="text-primary-500 hover:underline">
+              <Link href="/managed-claude/weitere-tools/n8n/custom-nodes" className="text-primary-500 hover:underline">
                 unseren Custom-Node-Service
               </Link>
               , oder informieren Sie sich über{" "}
-              <Link href="/services" className="text-primary-500 hover:underline">
+              <Link href="/managed-claude" className="text-primary-500 hover:underline">
                 unsere Implementierungsservices
               </Link>
               .

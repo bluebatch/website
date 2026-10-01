@@ -464,7 +464,7 @@ export default function Page() {
             setzen und sehen, wo Ihr Break-even liegt. Wie dieselbe Rechnung
             für Agenten und Automatisierungen jenseits des Chatbots aussieht,
             steht in{" "}
-            <InternalLink href="/services/was-kostet-ki" variant="underline">
+            <InternalLink href="/managed-claude/was-kostet-ki" variant="underline">
               was KI im Unternehmen kostet
             </InternalLink>
             .
@@ -502,7 +502,7 @@ export default function Page() {
             linkLabel="Zum Chatbot-Piloten"
           />
           <OfferCard
-            href="/services/tools/ebootis/chatbot-integration"
+            href="/managed-claude/weitere-tools/ebootis/chatbot-integration"
             price="1.000 €"
             title="Chatbot direkt auf e.bootis"
             description="Die e.bootis-Variante im Detail: Bestände, Preise und Aufträge über die OpenEngine, für Team und Kunden. Gleicher Festpreis, gleiche fünf Tage."
@@ -535,7 +535,7 @@ export default function Page() {
               Der Überblick über alle Chatbot-Varianten mit ERP-Anbindung.
             </CrossSellGrid.Description>
           </CrossSellGrid.Card>
-          <CrossSellGrid.Card href="/services/tools/navision">
+          <CrossSellGrid.Card href="/managed-claude/weitere-tools/navision">
             <CrossSellGrid.Title>Navision automatisieren</CrossSellGrid.Title>
             <CrossSellGrid.Description>
               Rechnungsverarbeitung, EDI und Buchhaltung in Navision, die

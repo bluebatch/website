@@ -508,7 +508,7 @@ claude mcp reset-project-choices   # Genehmigungen für dieses Projekt zurückse
               . Fehlt für euer ERP oder eure Datenbank noch ein passender
               Server, klärt{" "}
               <Link
-                href="/services/mcp-server-erstellen"
+                href="/managed-claude/integrationen/mcp-server-erstellen"
                 className="text-primary-600 hover:underline"
               >
                 MCP-Server erstellen

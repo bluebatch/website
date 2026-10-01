@@ -421,7 +421,7 @@ export default function Page() {
               KI-Agenten für den Großhandel
             </Link>
             . Und wer erst ohne Budget ausprobieren möchte, liest vorher{" "}
-            <Link href="/services/ki-agent-kostenlos">KI-Agent kostenlos</Link>:
+            <Link href="/managed-claude/use-cases/ki-agent-kostenlos">KI-Agent kostenlos</Link>:
             dort steht, wo Gratis-Kontingente und Open Source enden und welche
             Server- und Modellkosten danach anfallen.
           </Typo.Paragraph>

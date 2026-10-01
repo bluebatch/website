@@ -273,7 +273,7 @@ export default async function Page({
             AML-Monitoring in Echtzeit, automatische Sanktionslistenabgleiche
             gegen EU-, UN- und OFAC-Listen, und regulatorische Reportings
             direkt an BaFin, EZB und AMLA.{" "}
-            <Link href="/services/n8n-hosting" className="text-primary-600 hover:underline">Self-hosted auf Ihrer Infrastruktur</Link>,
+            <Link href="/managed-claude/weitere-tools/n8n/n8n-hosting" className="text-primary-600 hover:underline">Self-hosted auf Ihrer Infrastruktur</Link>,
             ohne dass ein einziges Dokument Ihr Rechenzentrum verlässt.
             Wie wir dabei vorgehen, erfahren Sie auf unserer Seite{" "}
             <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">Unser Prozess</Link>.

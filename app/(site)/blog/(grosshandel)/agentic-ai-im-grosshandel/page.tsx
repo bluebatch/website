@@ -252,7 +252,7 @@ export default function Page() {
               Ergebnisse zurück ins ERP. Alles transparent und nachvollziehbar
               im Workflow-Log. Mehr zur technischen Infrastruktur bei{" "}
               <Link
-                href={resolveHref("/services/n8n-hosting")}
+                href={resolveHref("/managed-claude/weitere-tools/n8n/n8n-hosting")}
                 className="text-primary-600 hover:underline"
               >
                 n8n-Hosting für Unternehmen

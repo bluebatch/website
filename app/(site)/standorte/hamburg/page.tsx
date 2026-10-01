@@ -559,7 +559,7 @@ export default async function Page({
               zur automatisierten Zollabwicklung entwickeln wir Workflows, die
               exakt zu Ihren Prozessen passen.
             </Typo.Paragraph>
-            <Link href="/services/custom-nodes" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
+            <Link href="/managed-claude/weitere-tools/n8n/custom-nodes" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
               Mehr erfahren <span aria-hidden="true">&rarr;</span>
             </Link>
           </SimpleCard>
@@ -598,7 +598,7 @@ export default async function Page({
               Reederei-Daten — besonders wichtig für Hamburgs regulierte
               Logistik- und Luftfahrtbranchen.
             </Typo.Paragraph>
-            <Link href="/services/n8n-hosting" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
+            <Link href="/managed-claude/weitere-tools/n8n/n8n-hosting" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
               Mehr erfahren <span aria-hidden="true">&rarr;</span>
             </Link>
           </SimpleCard>
@@ -613,7 +613,7 @@ export default async function Page({
               Hafenlogistik, Medienproduktion und E-Commerce-Fulfillment,
               damit Sie Workflows eigenständig erstellen und anpassen können.
             </Typo.Paragraph>
-            <Link href="/services/schulungen" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
+            <Link href="/managed-claude/weitere-tools/n8n/schulungen" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
               Mehr erfahren <span aria-hidden="true">&rarr;</span>
             </Link>
           </SimpleCard>
@@ -628,7 +628,7 @@ export default async function Page({
               Reaktionszeiten — damit Ihre Hafen-, Fulfillment- und
               Redaktions-Workflows rund um die Uhr zuverlässig laufen.
             </Typo.Paragraph>
-            <Link href="/services/workflow-wartung" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
+            <Link href="/managed-claude/weitere-tools/n8n/workflow-wartung" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 hover:text-primary-800 transition-colors">
               Mehr erfahren <span aria-hidden="true">&rarr;</span>
             </Link>
           </SimpleCard>

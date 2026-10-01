@@ -206,7 +206,7 @@ export default function Page() {
               Bauchgefühl entscheiden will, findet die drei Bezugswege mit Preis
               und Dauer nebeneinander unter{" "}
               <Link
-                href="/services/ki-agent-kaufen"
+                href="/managed-claude/use-cases/ki-agent-kaufen"
                 className="text-primary-600 hover:underline"
               >
                 KI-Agent kaufen

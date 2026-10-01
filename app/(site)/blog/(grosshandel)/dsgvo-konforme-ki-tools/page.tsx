@@ -340,7 +340,7 @@ export default function Page() {
               kein Risiko, dass Prompts in einem externen Trainingslauf landen.
               Mehr dazu in unserem Leitfaden zum{" "}
               <Link
-                href="/services/n8n-hosting"
+                href="/managed-claude/weitere-tools/n8n/n8n-hosting"
                 className="text-primary-600 hover:underline"
               >
                 n8n-Hosting in der EU
@@ -479,7 +479,7 @@ export default function Page() {
               Wer unsicher ist, ob die eigene KI-Architektur trägt, findet in
               unserer{" "}
               <Link
-                href={resolveHref("/services")}
+                href={resolveHref("/managed-claude")}
                 className="text-primary-600 hover:underline"
               >
                 KI-Implementierung

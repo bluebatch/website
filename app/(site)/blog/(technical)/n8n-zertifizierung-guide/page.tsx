@@ -325,7 +325,7 @@ export default function Page() {
               zertifizierte Agenturen in immer mehr Filterkriterien. Genau
               deshalb ist auch unsere{" "}
               <Link
-                href="/services/zertifizierung"
+                href="/managed-claude/weitere-tools/n8n/zertifizierung"
                 className="text-primary-600 hover:underline"
               >
                 Bluebatch-Seite zur zertifizierten KI-Agentur
@@ -412,7 +412,7 @@ export default function Page() {
             <Typo.Paragraph>
               Wer kein eigenes Lab aufsetzen will, findet bei unserem{" "}
               <Link
-                href="/services/n8n-hosting"
+                href="/managed-claude/weitere-tools/n8n/n8n-hosting"
                 className="text-primary-600 hover:underline"
               >
                 n8n-Hosting in Deutschland

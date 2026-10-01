@@ -316,7 +316,7 @@ export default function Page() {
               Backups und Monitoring liegen typischerweise bei 80 bis
               150 Euro pro Monat. Genau diese Lücke decken wir mit
               unserem{" "}
-              <Link href="/services/n8n-hosting" className="text-primary-600 hover:underline">
+              <Link href="/managed-claude/weitere-tools/n8n/n8n-hosting" className="text-primary-600 hover:underline">
                 n8n-Hosting in Deutschland
               </Link>{" "}
               ab. Vergleich zur Cloud: Bei 8.000 Executions und 80 Euro

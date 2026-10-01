@@ -2,11 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const tools = [
-  { key: "n8n", label: "n8n", href: "/services/tools/n8n", logo: "/services/tools/N8n-logo.png" },
-  { key: "make", label: "Make", href: "/services/tools/make", logo: "/services/tools/make.svg" },
-  { key: "zapier", label: "Zapier", href: "/services/tools/zapier", logo: "/services/tools/zapier.svg" },
-  { key: "navision", label: "Navision", href: "/services/tools/navision", logo: "/services/tools/ms-dynamics-nav.png" },
-  { key: "easybill", label: "Easybill", href: "/services/tools/easybill", logo: "/services/tools/easybill.png" },
+  { key: "n8n", label: "n8n", href: "/managed-claude/weitere-tools/n8n", logo: "/services/tools/N8n-logo.png" },
+  { key: "make", label: "Make", href: "/managed-claude/weitere-tools/make", logo: "/services/tools/make.svg" },
+  { key: "zapier", label: "Zapier", href: "/managed-claude/weitere-tools/zapier", logo: "/services/tools/zapier.svg" },
+  { key: "navision", label: "Navision", href: "/managed-claude/weitere-tools/navision", logo: "/services/tools/ms-dynamics-nav.png" },
+  { key: "easybill", label: "Easybill", href: "/managed-claude/weitere-tools/easybill", logo: "/services/tools/easybill.png" },
 ] as const;
 
 const sizeConfig = {

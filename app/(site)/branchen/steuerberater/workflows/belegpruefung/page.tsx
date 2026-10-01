@@ -429,7 +429,7 @@ export default function Page() {
               Mandant für Mandant wird das Regelwerk kopiert und auf die
               jeweilige Buchungspraxis getuned. Mehr dazu unter{" "}
               <Link
-                href="/services/workflow-wartung"
+                href="/managed-claude/weitere-tools/n8n/workflow-wartung"
                 className="text-primary-600 hover:underline"
               >
                 Workflow-Wartung

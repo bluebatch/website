@@ -498,7 +498,7 @@ export default function Page() {
             <Typo.Paragraph>
               Für Unternehmen, die n8n im Mittelstand einsetzen wollen, aber keine
               internen Ops-Kapazitäten aufbauen möchten: Bluebatch übernimmt als{" "}
-              <Link href="/services/zertifizierung" className="text-primary-600 hover:underline">
+              <Link href="/managed-claude/weitere-tools/n8n/zertifizierung" className="text-primary-600 hover:underline">
                 zertifizierter n8n-Partner
               </Link>{" "}
               Architektur, Hosting, Custom-Node-Entwicklung und laufenden Betrieb.

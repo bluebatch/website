@@ -705,7 +705,7 @@ echo "Prüfen: Login, Credentials, ein Workflow manuell ausführen."`}
             <Typo.Paragraph>
               Wer den gesamten Betrieb nicht selbst stemmen will, findet mit
               unserem{" "}
-              <Link href="/services/n8n-hosting" className="text-primary-600 hover:underline">
+              <Link href="/managed-claude/weitere-tools/n8n/n8n-hosting" className="text-primary-600 hover:underline">
                 Managed-n8n-Hosting
               </Link>{" "}
               eine Alternative, bei der Server-Härtung, Monitoring und Updates

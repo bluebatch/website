@@ -277,7 +277,7 @@ export default function Page() {
           stellen wollen, samt Preisrahmen und Berechtigungsfrage, hilft die
           branchenübergreifende Übersicht zum{" "}
           <Link
-            href="/services/ki-chatbot-fuer-unternehmen"
+            href="/managed-claude/use-cases/ki-chatbot-fuer-unternehmen"
             className="text-primary-600 hover:underline"
           >
             KI-Chatbot für Unternehmen

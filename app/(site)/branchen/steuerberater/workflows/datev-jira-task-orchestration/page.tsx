@@ -421,7 +421,7 @@ export default function Page() {
                 Reporting-Workflow, zwei Wochen begleiteter Betrieb, danach
                 Übergang in die{" "}
                 <Link
-                  href="/services/workflow-wartung"
+                  href="/managed-claude/weitere-tools/n8n/workflow-wartung"
                   className="text-primary-600 hover:underline"
                 >
                   Workflow-Wartung

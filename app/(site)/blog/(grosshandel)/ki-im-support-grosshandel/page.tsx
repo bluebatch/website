@@ -397,7 +397,7 @@ export default function Page() {
               Workflows dauert typischerweise zwei bis vier Wochen. Wer den
               Aufwand einer{" "}
               <Link
-                href={resolveHref("/services")}
+                href={resolveHref("/managed-claude")}
                 className="text-primary-600 hover:underline"
               >
                 KI-Implementierung

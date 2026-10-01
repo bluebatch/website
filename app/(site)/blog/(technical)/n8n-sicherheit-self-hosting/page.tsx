@@ -156,7 +156,7 @@ export default async function Page({
             <Typo.Paragraph>
               Hier wird es richtig unangenehm. n8n ist keine isolierte App. Es
               ist eine Integrationsplattform, die oft im{" "}
-              <Link href="/services/n8n-hosting" className="text-primary-600 hover:underline">Self-Hosting</Link>{" "}
+              <Link href="/managed-claude/weitere-tools/n8n/n8n-hosting" className="text-primary-600 hover:underline">Self-Hosting</Link>{" "}
               betrieben wird (siehe unsere{" "}
               <Link href="/blog/n8n-selbst-hosten-anleitung" className="text-primary-600 hover:underline">Self-Hosting-Anleitung</Link>
               ). Das heißt, in einer typischen
@@ -538,7 +538,7 @@ export default async function Page({
               Die gute Nachricht: Netzwerk-Absicherung ist kein Raketenwissen.
               Wenn ihr Docker und ein paar Basics kennt, kriegt ihr das an einem
               Nachmittag hin. Und mit einer professionellen{" "}
-              <Link href="/services/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>{" "}
+              <Link href="/managed-claude/weitere-tools/n8n/workflow-wartung" className="text-primary-600 hover:underline">Workflow-Wartung</Link>{" "}
               bleibt eure Instanz auch langfristig sicher.
             </Typo.Paragraph>
 

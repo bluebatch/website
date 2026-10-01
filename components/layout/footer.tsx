@@ -12,8 +12,8 @@ export default function Footer() {
   ];
 
   const wissenMenu = [
-    { label: "Services", href: "/services" },
-    { label: "Tools", href: "/services/tools" },
+    { label: "Managed Claude", href: "/managed-claude" },
+    { label: "Weitere Tools", href: "/managed-claude/weitere-tools" },
     { label: "Blog", href: "/blog" },
   ];
 
@@ -141,10 +141,10 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Services & Wissen Menu */}
+            {/* Angebot & Wissen Menu */}
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-                Services & Wissen
+                Angebot & Wissen
               </h3>
               <ul className="space-y-3">
                 {wissenMenu.map((item, index) => (
