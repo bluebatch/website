@@ -10,11 +10,11 @@ import { ContactButton } from "@/components/buttons";
 export const metadata: Metadata = {
   title: "Claude mit Websuche: aktuelle Antworten mit Quellen | Bluebatch",
   description:
-    "Claude mit Websuche: Bluebatch bindet eine Websuche per MCP an das Private Claude AI Gateway an, mit Fundstellen und gesteuerten Domains, etwa nur Fachquellen oder Gesetzestexte.",
+    "Websuche im Private Claude AI Gateway: Claude recherchiert über Brave Search aktuelle Quellen im Web und belegt Antworten mit Fundstellen. Standardmäßig inklusive, ohne Aufpreis.",
   openGraph: {
     title: "Claude mit Websuche: aktuelle Antworten mit Quellen",
     description:
-      "Claude mit Websuche: Bluebatch bindet eine Websuche per MCP an das Private Claude AI Gateway an, mit Fundstellen und gesteuerten Domains, etwa nur Fachquellen oder Gesetzestexte.",
+      "Websuche im Private Claude AI Gateway: Claude recherchiert über Brave Search aktuelle Quellen im Web und belegt Antworten mit Fundstellen. Standardmäßig inklusive, ohne Aufpreis.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -41,7 +41,7 @@ export default function Page() {
         </IntroBox>
         <Typo.H1 className="text-center">Claude mit Websuche</Typo.H1>
         <GeoSummary align="center">
-          Mit einer angebundenen Websuche greift Claude im Private Claude AI Gateway auf aktuelle Informationen aus dem Internet zu und belegt Antworten mit Quellen. Bluebatch bindet die Websuche als MCP-Anbindung an und legt fest, welche Domains erlaubt sind, zum Beispiel nur Fachquellen oder Gesetzestexte. Abgerechnet wird nach Aufwand, mit Schätzung vorab.
+          Im Private Claude AI Gateway ist die Websuche standardmäßig inklusive. Claude recherchiert über Brave Search aktuelle Informationen im Internet und belegt Antworten mit Quellen, zum Beispiel zu Gesetzesänderungen, Urteilen oder Marktdaten. Die Suche läuft über das Gateway, mit Protokoll und denselben Limits wie jede andere Nutzung.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -54,20 +54,37 @@ export default function Page() {
         </IntroBox>
         <ProseColumns cols={3}>
           <ProseColumns.Item title="Aktuelle Recherche">
-            Gesetzesänderungen, Urteile oder Marktdaten auf dem neuesten Stand.
+            Gesetzesänderungen, Urteile oder Marktdaten auf dem neuesten Stand, statt nur auf dem Wissensstand des Modells.
           </ProseColumns.Item>
           <ProseColumns.Item title="Mit Fundstellen">
             Jede Aussage mit Quelle, damit Ihr Team sie prüfen kann.
           </ProseColumns.Item>
+          <ProseColumns.Item title="Standardmäßig dabei">
+            Die Websuche ist ab der Einrichtung aktiv, ohne Aufpreis und ohne zusätzliches Abo.
+          </ProseColumns.Item>
+        </ProseColumns>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light">
+        <IntroBox textCentered>
+          <IntroBox.Headline>Wie die Websuche läuft</IntroBox.Headline>
+        </IntroBox>
+        <ProseColumns cols={3}>
+          <ProseColumns.Item title="Brave Search">
+            Gesucht wird über die Brave Search API, einen unabhängigen Suchindex.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Über das Gateway">
+            Jede Suche läuft durch das Gateway und ist im Protokoll nachvollziehbar.
+          </ProseColumns.Item>
           <ProseColumns.Item title="Gesteuert">
-            Erlaubte und gesperrte Domains, Protokoll und Budget wie bei jeder Anbindung.
+            Auf Wunsch schränken wir die Suche auf bestimmte Domains ein, etwa Fachquellen oder Gesetzestexte.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="primary-darker">
         <IntroBox dark textCentered>
-          <IntroBox.Headline>Websuche für Claude einrichten?</IntroBox.Headline>
+          <IntroBox.Headline>Fragen zur Websuche?</IntroBox.Headline>
           <IntroBox.Paragraph>
             Im Scoping-Gespräch klären wir in 30 Minuten Stand der IT, Anmeldung, wer Zugriff bekommt und welche Systeme später relevant sind. Drei Tage danach haben Sie ein Angebot mit Festpreis, Verbrauchsschätzung und Limit-Vorschlag.
           </IntroBox.Paragraph>

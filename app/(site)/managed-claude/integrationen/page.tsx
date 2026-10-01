@@ -148,8 +148,9 @@ export default function Page() {
           />
           <OfferCard
             href="/managed-claude/integrationen/websearch"
+            price="inklusive"
             title="Websuche"
-            description="Aktuelle Quellen aus dem Web, mit Fundstellen."
+            description="Aktuelle Quellen aus dem Web über Brave Search, mit Fundstellen."
             linkLabel="Mehr erfahren"
           />
           <OfferCard

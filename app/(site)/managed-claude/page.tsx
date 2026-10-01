@@ -271,7 +271,7 @@ export default function Page() {
           <OfferCard
             href="/managed-claude/claude-api"
             title="Claude API"
-            description="Claude in eigenen Anwendungen, über dasselbe Gateway."
+            description="Eigene Apps bauen: API-Key über uns, Kosten je Agent und Use Case getrackt."
             linkLabel="Mehr erfahren"
           />
           <OfferCard

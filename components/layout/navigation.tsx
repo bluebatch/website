@@ -93,7 +93,7 @@ const managedClaudeMenu = {
         {
           icon: "/icons/puzzle.svg",
           title: "Claude API",
-          description: "Claude in eigenen Systemen",
+          description: "Eigene Apps, Kosten je Use Case",
           href: "/managed-claude/claude-api",
         },
         {
