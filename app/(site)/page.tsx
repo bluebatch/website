@@ -56,7 +56,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 export const metadata: Metadata = {
   title: "Bluebatch - Managed Service Provider für Claude | Managed Claude",
   description:
-    "Bluebatch ist Managed Service Provider für Claude: Claude über Amazon Bedrock im eigenen AWS-Konto, Verarbeitung in der EU, Claude Desktop ohne Seat-Lizenz. Setup für 1.500 € Festpreis.",
+    "Bluebatch ist Managed Service Provider für Claude: das Private Claude AI Gateway im eigenen Konto, AWS Bedrock Frankfurt, nach § 203 StGB und § 62a StBerG. Einrichtung 1.500 € Festpreis.",
   keywords: [
     "Claude Managed Service Provider",
     "Managed Claude",
@@ -122,22 +122,22 @@ export default function Home() {
           opacityBackground="white"
         >
           <BackgroundHero.TopLabel>
-            Managed Service Provider für Claude
+            Private Claude AI Gateway
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
-            Claude in Ihrem
+            KI mit einem Partner
             <br />
-            eigenen{" "}
+            statt mit{" "}
             <BackgroundHero.Highlight>
-              AWS-Konto
+              fünfzehn Tools
             </BackgroundHero.Highlight>
           </BackgroundHero.Headline>
           <BackgroundHero.Description geo>
             Bluebatch ist Managed Service Provider für Claude von Anthropic.
-            Claude läuft über Amazon Bedrock in Ihrem eigenen AWS-Konto mit
-            Verarbeitung in der EU, Ihr Team arbeitet in Claude Desktop ohne
-            Seat-Lizenz, auch mit Mandanten-, Personal- und Vertragsdaten. Das
-            Setup kostet einmalig 1.500 €, die Tokens zahlen Sie direkt an AWS.
+            Das Private Claude AI Gateway läuft in Ihrem eigenen Konto über AWS
+            Bedrock in Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und
+            § 62a StBerG. Die Einrichtung kostet einmalig 1.500 €, danach zahlen
+            Sie nur den Verbrauch, ohne Lizenz pro Kopf.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -151,7 +151,7 @@ export default function Home() {
             <BackgroundHero.Stat
               value={0}
               suffix=" €"
-              label="Seat-Lizenz pro Nutzer"
+              label="Lizenz pro Kopf"
             />
             <BackgroundHero.Stat
               value={100}
@@ -166,31 +166,31 @@ export default function Home() {
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Managed Claude</IntroBox.PreHeadline>
-          <IntroBox.Headline>Drei Bausteine, ein Ansprechpartner</IntroBox.Headline>
+          <IntroBox.Headline>Ein Fundament, drei Schritte</IntroBox.Headline>
           <IntroBox.Subline>
-            Die meisten Kunden starten mit der Claude App und wachsen von dort in
-            API-Integrationen und eigene Use Cases.
+            Erst arbeiten, dann gut werden, dann automatisieren. Sie entscheiden
+            zuerst nur über Schritt 1: klein, zum Festpreis und umkehrbar.
           </IntroBox.Subline>
         </IntroBox>
         <SimpleGrid cols={3} className="gap-6">
           <OfferCard
             highlight
             href="/managed-claude/claude-app"
-            title="Claude App"
-            description="Claude für das ganze Team: Lizenzen, SSO, Rechte, Projekte und Connectoren eingerichtet und betreut."
-            linkLabel="Zur Claude App"
+            title="Schritt 1: Chat"
+            description="Der Chat für jeden Mitarbeiter ab Tag 1: Chat, Co-Work und Projekte mit SSO, Rollen, Protokoll und Limits."
+            linkLabel="Zum Chat"
           />
           <OfferCard
-            href="/managed-claude/claude-api"
-            title="Claude API"
-            description="Claude in Ihren eigenen Systemen und Prozessen, mit Betrieb in der EU und Kostenkontrolle."
-            linkLabel="Zur Claude API"
+            href="/managed-claude/onboarding"
+            title="Schritt 2: Coaching"
+            description="Schulung und Kanzlei-Handbuch über drei Monate, mit zertifizierter KI-Kompetenzschulung nach Art. 4 EU AI Act."
+            linkLabel="Zum Onboarding"
           />
           <OfferCard
             href="/managed-claude/use-cases"
-            title="Use Cases"
-            description="Wir bauen konkrete Anwendungen auf Claude, die einen echten Prozess entlasten."
-            linkLabel="Zu den Use Cases"
+            title="Schritt 3: Agenten"
+            description="Mail-Agent, Anbindung eigener Systeme und DATEV, auf derselben Infrastruktur."
+            linkLabel="Zu den Agenten"
           />
         </SimpleGrid>
         <div className="mt-10 flex justify-center">

@@ -9,22 +9,22 @@ import { ContactButton } from "@/components/buttons";
 // Repositionierung auf Managed Claude, Inhalte werden noch geschärft.
 
 export const metadata: Metadata = {
-  title: "Managed Claude Preise: 1.500 € Setup, Tokens zum Listenpreis | Bluebatch",
+  title: "Preise Private Claude AI Gateway: Einrichtung, Tokens, Pakete | Bluebatch",
   description:
-    "Managed Claude kostet einmalig 1.500 € für das Setup. Danach zahlt ihr nur die Tokens direkt an AWS zum Listenpreis, ohne Seat-Lizenz. Betreuung und DATEV-Anbindung sind optional.",
+    "Preise für das Private Claude AI Gateway: Einrichtung 1.500 € einmalig, Modellkosten nach Verbrauch 1:1 ohne Aufschlag, Onboarding-Pakete 3.000 € und 8.000 €, DATEV MCP 100 € pro Monat, Outlook Connector 500 €.",
   openGraph: {
-    title: "Managed Claude Preise: 1.500 € Setup, Tokens zum Listenpreis",
+    title: "Preise Private Claude AI Gateway: Einrichtung, Tokens, Pakete",
     description:
-      "Managed Claude kostet einmalig 1.500 € für das Setup. Danach zahlt ihr nur die Tokens direkt an AWS zum Listenpreis, ohne Seat-Lizenz. Betreuung und DATEV-Anbindung sind optional.",
+      "Preise für das Private Claude AI Gateway: Einrichtung 1.500 € einmalig, Modellkosten nach Verbrauch 1:1 ohne Aufschlag, Onboarding-Pakete 3.000 € und 8.000 €, DATEV MCP 100 € pro Monat, Outlook Connector 500 €.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=Was%20kostet%20Managed%20Claude%3F&eyebrow=Managed%20Claude",
+        url: "/og?title=Preise%20f%C3%BCr%20Claude%20in%20Kanzlei%20und%20Unternehmen&eyebrow=Managed%20Claude",
         width: 1200,
         height: 630,
-        alt: "Was kostet Managed Claude?",
+        alt: "Preise für Claude in Kanzlei und Unternehmen",
       },
     ],
   },
@@ -40,9 +40,9 @@ export default function Page() {
         <IntroBox textCentered>
           <IntroBox.PreHeadline>Preise</IntroBox.PreHeadline>
         </IntroBox>
-        <Typo.H1 className="text-center">Was kostet Managed Claude?</Typo.H1>
+        <Typo.H1 className="text-center">Preise für Claude in Kanzlei und Unternehmen</Typo.H1>
         <GeoSummary align="center">
-          Managed Claude kostet einmalig 1.500 € für das Setup mit AWS-Konto, Amazon Bedrock, Claude Desktop für bis zu 10 Nutzer und Nachweis-Paket. Danach fallen nur die Tokens an, die ihr direkt an AWS zum Listenpreis zahlt. Seat-Lizenzen gibt es nicht, Betreuung und DATEV-Anbindung sind optional.
+          Das Private Claude AI Gateway kostet einmalig 1.500 € für Vertrag, Tenant-Einrichtung und Anbindung ans Gateway. Danach zahlen Sie die Modellkosten nach Verbrauch, 1:1 ohne Aufschlag aus Ihrer AWS-Rechnung durchgereicht, zum Beispiel 2,60 € je Million Input-Tokens bei Claude Sonnet 5. Eine Lizenz pro Kopf gibt es nicht. Alle Preise zzgl. USt.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -51,142 +51,184 @@ export default function Page() {
 
       <ContentWrapper>
         <IntroBox textCentered>
-          <IntroBox.Headline>Die Bausteine</IntroBox.Headline>
+          <IntroBox.Headline>Einmalig und wiederkehrend</IntroBox.Headline>
         </IntroBox>
         <SimpleGrid cols={3} className="gap-6">
           <OfferCard
             highlight
             href="/managed-claude/onboarding"
             price="1.500 € einmalig"
-            title="Managed Claude Setup"
-            description="AWS-Konto in der EU, Claude über Bedrock, Claude Desktop für bis zu 10 Nutzer, Modellregeln, Nachweis-Paket und Onboarding."
-            linkLabel="Was im Setup steckt"
+            title="Einrichtung"
+            description="Vertrag, Tenant-Einrichtung und Anbindung ans Gateway: Gateway, Chat, SSO, Rollen, Protokoll und Limits, startklar übergeben."
+            linkLabel="Zum Ablauf"
           />
           <OfferCard
             href="/managed-claude/wie-es-funktioniert"
             price="nach Verbrauch"
-            title="Tokens bei AWS"
-            description="Laufende Nutzung direkt über eure AWS-Rechnung, zum Listenpreis und je Nutzer sichtbar. Keine Seat-Lizenz."
+            title="Modellkosten"
+            description="Nach Verbrauch, 1:1 ohne Aufschlag aus Ihrer AWS-Rechnung durchgereicht. Wir verdienen nicht an Ihrem Verbrauch."
             linkLabel="Wie die Abrechnung läuft"
           />
           <OfferCard
-            href="/managed-claude/integrationen/datev"
-            price="ab 85 € je Kanzlei"
-            title="DATEV-Anbindung"
-            description="Zugriff auf DATEV-Daten über das AI Gateway, für Steuerkanzleien."
-            linkLabel="Zur DATEV-Anbindung"
+            href="/contact"
+            price="optional"
+            title="Laufende Betreuung"
+            description="Optional, als Monatspauschale, jederzeit kündbar. Kein Pflicht-Abo."
+            linkLabel="Betreuung anfragen"
           />
         </SimpleGrid>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
-          <IntroBox.Headline>Optional: Betreuung im Monat</IntroBox.Headline>
+          <IntroBox.Headline>Modellkosten nach Verbrauch</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Nach der Übergabe könnt ihr selbst weitermachen. Wer möchte, gibt den laufenden Betrieb an uns ab.
-          </IntroBox.Paragraph>
-        </IntroBox>
-        <ProseColumns cols={3}>
-          <ProseColumns.Item title="Modellwechsel">
-            Neue Claude-Modelle prüfen und einspielen, sobald sie mit EU-Profil verfügbar sind.
-          </ProseColumns.Item>
-          <ProseColumns.Item title="Connectoren">
-            Weitere Anbindungen wie DATEV, Microsoft 365 oder Websuche einrichten und pflegen.
-          </ProseColumns.Item>
-          <ProseColumns.Item title="Nutzer und Kosten">
-            Nutzer anlegen, Kosten im Blick behalten, Fragen aus dem Team beantworten.
-          </ProseColumns.Item>
-        </ProseColumns>
-      </ContentWrapper>
-
-      <ContentWrapper>
-        <IntroBox textCentered>
-          <IntroBox.Headline>Abo, Chat-Plattform oder eigenes Konto?</IntroBox.Headline>
-          <IntroBox.Paragraph>
-            Das normale Claude-Abo verarbeitet nicht in der EU. Im eigenen AWS-Konto zahlt ihr den Listenpreis und behaltet die Kontrolle.
+            Preise je Million Tokens. 1 Million Tokens entsprechen etwa 750.000 Wörtern.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="overflow-x-auto">
           <DataTable>
             <DataTable.Head>
               <DataTable.Row>
-                <DataTable.HeaderCell>Kriterium</DataTable.HeaderCell>
-                <DataTable.HeaderCell>Claude-Abo</DataTable.HeaderCell>
-                <DataTable.HeaderCell>Chat-Plattform</DataTable.HeaderCell>
-                <DataTable.HeaderCell>Managed Claude</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Modell</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Einsatz</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Input / Mio.</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Output / Mio.</DataTable.HeaderCell>
               </DataTable.Row>
             </DataTable.Head>
             <DataTable.Body>
               <DataTable.Row>
-                <DataTable.Cell bold>Kosten fürs Team</DataTable.Cell>
-                <DataTable.Cell>Pro Nutzer und Monat</DataTable.Cell>
-                <DataTable.Cell>Paket mit Limits</DataTable.Cell>
-                <DataTable.Cell bold>1.500 € einmalig, danach Tokens zum Listenpreis</DataTable.Cell>
+                <DataTable.Cell bold>Claude Opus 5.5</DataTable.Cell>
+                <DataTable.Cell>Die harten Fälle: komplexe Analysen, Agenten</DataTable.Cell>
+                <DataTable.Cell>6,35 €</DataTable.Cell>
+                <DataTable.Cell>31,50 €</DataTable.Cell>
               </DataTable.Row>
               <DataTable.Row>
-                <DataTable.Cell bold>Verarbeitung in der EU</DataTable.Cell>
-                <DataTable.Cell>Nein, USA oder global</DataTable.Cell>
-                <DataTable.Cell>Je nach Anbieter</DataTable.Cell>
-                <DataTable.Cell bold>Ja, EU-Profil in eurem AWS-Konto</DataTable.Cell>
+                <DataTable.Cell bold>Claude Opus 5</DataTable.Cell>
+                <DataTable.Cell>Die harten Fälle: komplexe Analysen, Agenten</DataTable.Cell>
+                <DataTable.Cell>6,35 €</DataTable.Cell>
+                <DataTable.Cell>31,50 €</DataTable.Cell>
               </DataTable.Row>
               <DataTable.Row>
-                <DataTable.Cell bold>Mandanten- und Personaldaten</DataTable.Cell>
-                <DataTable.Cell>Nicht vorgesehen</DataTable.Cell>
-                <DataTable.Cell>Je nach Vertrag</DataTable.Cell>
-                <DataTable.Cell bold>Mit Nachweis-Paket, Bewertung durch euch</DataTable.Cell>
+                <DataTable.Cell bold>Claude Sonnet 5</DataTable.Cell>
+                <DataTable.Cell>Der Alltag: Schreiben, Prüfen, Chat</DataTable.Cell>
+                <DataTable.Cell>2,60 €</DataTable.Cell>
+                <DataTable.Cell>12,60 €</DataTable.Cell>
               </DataTable.Row>
               <DataTable.Row>
-                <DataTable.Cell bold>Anbieter-Lock-in</DataTable.Cell>
-                <DataTable.Cell>Hoch</DataTable.Cell>
-                <DataTable.Cell>Hoch</DataTable.Cell>
-                <DataTable.Cell bold>Keiner, das Konto gehört euch</DataTable.Cell>
-              </DataTable.Row>
-              <DataTable.Row>
-                <DataTable.Cell bold>Modellwahl</DataTable.Cell>
-                <DataTable.Cell>Fest im Abo</DataTable.Cell>
-                <DataTable.Cell>Vorgabe des Anbieters</DataTable.Cell>
-                <DataTable.Cell bold>Frei: Opus 5 und Sonnet 5 über Bedrock</DataTable.Cell>
-              </DataTable.Row>
-              <DataTable.Row>
-                <DataTable.Cell bold>Startklar</DataTable.Cell>
-                <DataTable.Cell>Sofort</DataTable.Cell>
-                <DataTable.Cell>Sofort</DataTable.Cell>
-                <DataTable.Cell bold>In wenigen Tagen</DataTable.Cell>
-              </DataTable.Row>
-              <DataTable.Row>
-                <DataTable.Cell bold>Betreuung</DataTable.Cell>
-                <DataTable.Cell>Anbieter-Support</DataTable.Cell>
-                <DataTable.Cell>Anbieter-Support</DataTable.Cell>
-                <DataTable.Cell bold>Übergabe an euch, Betreuung optional</DataTable.Cell>
+                <DataTable.Cell bold>Claude Haiku 4.5</DataTable.Cell>
+                <DataTable.Cell>Einfaches: sortieren, extrahieren</DataTable.Cell>
+                <DataTable.Cell>1,50 €</DataTable.Cell>
+                <DataTable.Cell>6,50 €</DataTable.Cell>
               </DataTable.Row>
             </DataTable.Body>
           </DataTable>
         </div>
         <Typo.Paragraph className="mx-auto mt-6 max-w-3xl text-center text-gray-600">
-          Mit dem Abo zahlt ihr pro Kopf und lasst alles Vertrauliche draußen. Mit Managed Claude richtet Bluebatch ein, und das Konto bleibt eures.
+          Die Tokenpreise unterliegen Kursschwankungen und können daher leicht variieren.
         </Typo.Paragraph>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <IntroBox textCentered>
+          <IntroBox.Headline>Ein Gateway, eine Abrechnung, Limits pro Mitarbeiter und pro Agent</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Verbrauchsgenau, sichtbar pro Mitarbeiter und pro Agent, gedeckelt, wo Sie es wollen.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <ProseColumns cols={3}>
+          <ProseColumns.Item title="Keine Lizenz pro Kopf">
+            Sie zahlen, was benutzt wird, nicht, wer angelegt ist. Erfahrungsgemäß tragen 20 bis 30 % der Belegschaft den Großteil der Nutzung.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Modellkosten 1:1">
+            Ohne Aufschlag aus Ihrer AWS-Rechnung durchgereicht. Wir verdienen nicht an Ihrem Verbrauch.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Alles in einer Abrechnung">
+            Chat, Routinen, Agenten und Anbindungen: eine Rechnung, eine Auswertung.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Sichtbar pro Mitarbeiter">
+            Wer nutzt was, wie viel: pro Person, Team und Anwendung.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Limits pro Mitarbeiter">
+            Budget pro Person oder Team, mit Warnschwelle. Erreicht ist erreicht.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Limits pro Agent">
+            Jeder Agent ist ein eigener Verbraucher mit eigenem Budget, auch selbst gebaute. Ein Agent in der Schleife kostet maximal sein Budget, der Chat der Mitarbeiter läuft normal weiter.
+          </ProseColumns.Item>
+        </ProseColumns>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light">
+        <IntroBox textCentered>
+          <IntroBox.Headline>Schulung und Onboarding</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Zwei Pakete, die Einrichtung wird verrechnet. Je mehr Schulung, desto mehr der Einrichtung bekommen Sie zurück.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <SimpleGrid cols={2} className="gap-6">
+          <OfferCard
+            href="/managed-claude/onboarding"
+            price="3.000 €"
+            title="3 PT Onboarding"
+            description="KI-Kompetenzschulung, Grundlagen, erste Arbeitsanleitungen. Outlook Connector inklusive. 50 % der Einrichtung werden verrechnet."
+            linkLabel="Zum Onboarding"
+          />
+          <OfferCard
+            highlight
+            href="/managed-claude/onboarding"
+            price="8.000 €"
+            title="8 PT Onboarding"
+            description="Alles aus dem kleinen Paket plus Kanzlei-Handbuch, Routinen und Skills. Outlook Connector inklusive. 100 % der Einrichtung werden verrechnet."
+            linkLabel="Zum Onboarding"
+          />
+        </SimpleGrid>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <IntroBox textCentered>
+          <IntroBox.Headline>Add-ons: zubuchen, wenn der Alltag es verlangt</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Zwei Anbindungen, die Kanzleien am häufigsten brauchen. Agenten und weitere Anbindungen rechnen wir nach Aufwand ab, mit Schätzung vorab.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <SimpleGrid cols={2} className="gap-6">
+          <OfferCard
+            href="/managed-claude/integrationen/datev"
+            price="100 € / Monat"
+            title="DATEV MCP (Beta)"
+            description="Die KI fragt Ihren DATEV-Bestand direkt ab, über die von DATEV vorgesehenen Schnittstellen, lesend, mit Mandantentrennung und Protokoll."
+            linkLabel="Zur DATEV-Anbindung"
+          />
+          <OfferCard
+            href="/managed-claude/integrationen/microsoft"
+            price="500 € einmalig"
+            title="Outlook Connector"
+            description="Posteingang, Kalender und Entwürfe direkt in Claude, die Grundlage für den Mail-Agenten. Inklusive bei Buchung von 3 PT oder 8 PT Onboarding."
+            linkLabel="Zum Outlook Connector"
+          />
+        </SimpleGrid>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <FaqContainer
           headline="Fragen zu den Kosten"
-          intro="Was beim Budget zuerst gefragt wird."
+          intro="Was bei der Kalkulation zuerst gefragt wird."
           faqs={[
             {
-              "question": "Was genau ist im Festpreis enthalten?",
-              "answer": "Ein AWS-Konto in der EU, Claude über Amazon Bedrock, Claude Desktop für bis zu 10 Nutzer, Modellregeln, das Nachweis-Paket und das Onboarding fürs Team. Festpreis 1.500 € einmalig."
+              "question": "Was ist im Einrichtungspreis enthalten?",
+              "answer": "Vertrag, Tenant-Einrichtung und Anbindung ans Gateway: Gateway, Chat, SSO, Rollen, Protokoll und Verbrauchslimits, startklar übergeben. Festpreis 1.500 € zzgl. USt."
             },
             {
-              "question": "Welche laufenden Kosten kommen dazu?",
-              "answer": "Nur die Tokens bei AWS, zum Listenpreis und je Nutzer sichtbar. Die Rechnung kommt direkt von AWS. Eine Betreuung durch Bluebatch ist optional."
+              "question": "Was kostet der Betrieb im Monat?",
+              "answer": "Die Modellkosten nach Verbrauch, gedeckelt durch Limits pro Mitarbeiter und pro Agent. Eine Hausnummer nennen wir bewusst nicht: Nach dem Scoping rechnen wir mit Ihren echten Fallzahlen und schlagen Limits vor, mit denen die Zahl planbar wird."
             },
             {
-              "question": "Was kostet es bei mehr als 10 Nutzern?",
-              "answer": "Seat-Lizenzen gibt es nicht, auch nicht bei 50 Nutzern. Mehr Nutzer bedeuten nur mehr Tokens. Den Aufwand für die Einrichtung weiterer Nutzer klären wir im Gespräch."
+              "question": "Binden wir uns für Jahre?",
+              "answer": "Nein. Der Einstieg ist ein Festpreis, der Betrieb ist Verbrauch mit Deckel, alles Weitere entscheiden Sie einzeln. Die laufende Betreuung ist jederzeit kündbar."
             },
             {
-              "question": "Ist das günstiger als das Abo?",
-              "answer": "Das hängt von der Nutzung ab. Wer wenig nutzt, zahlt über Tokens oft weniger als pro Kopf. Vor allem aber dürft ihr im eigenen Konto mit Daten arbeiten, die ins Abo nicht gehören."
+              "question": "Was kosten Agenten und Anbindungen?",
+              "answer": "Schritt 3 rechnen wir nach Aufwand ab, mit Schätzung vorab. Ob sich ein Agent lohnt, wird gerechnet, nicht vermutet."
             }
           ]}
         />
@@ -194,9 +236,9 @@ export default function Page() {
 
       <ContentWrapper colorScheme="primary-darker">
         <IntroBox dark textCentered>
-          <IntroBox.Headline>Ihr wollt eine konkrete Rechnung?</IntroBox.Headline>
+          <IntroBox.Headline>Sie wollen eine planbare Zahl?</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Schreibt uns Teamgröße und geplante Anwendungsfälle, dann schätzen wir Setup und Token-Kosten gemeinsam ab.
+            Im Scoping-Gespräch klären wir in 30 Minuten Stand der IT, Anmeldung, wer Zugriff bekommt und welche Systeme später relevant sind. Drei Tage danach haben Sie ein Angebot mit Festpreis, Verbrauchsschätzung und Limit-Vorschlag.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex justify-center">

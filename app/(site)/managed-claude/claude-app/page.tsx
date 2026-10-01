@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ContentWrapper, SimpleGrid } from "@/components/layout";
-import { Typo, IntroBox, GeoSummary, ProseColumns } from "@/components/ui";
+import { Typo, IntroBox, GeoSummary, ProseColumns, DataTable } from "@/components/ui";
 import { OfferCard } from "@/components/cards";
 import { ConsultationCtaDefault } from "@/components/sections";
 import { ContactButton } from "@/components/buttons";
@@ -9,22 +9,22 @@ import { ContactButton } from "@/components/buttons";
 // Repositionierung auf Managed Claude, Inhalte werden noch geschärft.
 
 export const metadata: Metadata = {
-  title: "Claude App über Amazon Bedrock: Cowork und Code ohne Seat-Lizenz | Bluebatch",
+  title: "Claude App über das Gateway: der Chat für jeden Mitarbeiter | Bluebatch",
   description:
-    "Claude Desktop mit Cowork und Code über Amazon Bedrock: die Claude-App für euer Team in der EU, ohne Seat-Lizenz, abgerechnet nach Tokens, verteilt per Geräteverwaltung mit SSO.",
+    "Schritt 1 des Private Claude AI Gateway: die Claude-App mit Chat, Co-Work und Projekten für jeden Mitarbeiter, ab Tag 1. Mit SSO, Rollen, Protokoll und Verbrauchslimits, Mandantendaten im Rahmen von § 203 StGB.",
   openGraph: {
-    title: "Claude App über Amazon Bedrock: Cowork und Code ohne Seat-Lizenz",
+    title: "Claude App über das Gateway: der Chat für jeden Mitarbeiter",
     description:
-      "Claude Desktop mit Cowork und Code über Amazon Bedrock: die Claude-App für euer Team in der EU, ohne Seat-Lizenz, abgerechnet nach Tokens, verteilt per Geräteverwaltung mit SSO.",
+      "Schritt 1 des Private Claude AI Gateway: die Claude-App mit Chat, Co-Work und Projekten für jeden Mitarbeiter, ab Tag 1. Mit SSO, Rollen, Protokoll und Verbrauchslimits, Mandantendaten im Rahmen von § 203 StGB.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=Die%20Claude-App%20f%C3%BCr%20euer%20Team%2C%20in%20der%20EU&eyebrow=Managed%20Claude",
+        url: "/og?title=Der%20Chat%20f%C3%BCr%20jeden%20Mitarbeiter&eyebrow=Managed%20Claude",
         width: 1200,
         height: 630,
-        alt: "Die Claude-App für euer Team, in der EU",
+        alt: "Der Chat für jeden Mitarbeiter",
       },
     ],
   },
@@ -38,11 +38,11 @@ export default function Page() {
     <>
       <ContentWrapper isFirstSection bodyWidth="small">
         <IntroBox textCentered>
-          <IntroBox.PreHeadline>Claude App · Priorität 1</IntroBox.PreHeadline>
+          <IntroBox.PreHeadline>Schritt 1 · Claude App</IntroBox.PreHeadline>
         </IntroBox>
-        <Typo.H1 className="text-center">Die Claude-App für euer Team, in der EU</Typo.H1>
+        <Typo.H1 className="text-center">Der Chat für jeden Mitarbeiter</Typo.H1>
         <GeoSummary align="center">
-          Claude Desktop ist die Claude-App für Windows und macOS mit Cowork und Claude Code. Über Amazon Bedrock läuft sie in eurem eigenen AWS-Konto mit Verarbeitung in der EU, ohne Seat-Lizenz und abgerechnet nach Tokens. Bluebatch richtet Claude Desktop für bis zu 10 Nutzer im Setup ein und verteilt die App über eure Geräteverwaltung.
+          Schritt 1 des Private Claude AI Gateway ist kein Pilotprojekt für drei Leute: Ab Tag 1 arbeitet die ganze Kanzlei oder das ganze Unternehmen mit der Claude-App, mit Chat, Co-Work und Projekten. Der Unterschied zum öffentlichen Chatbot: Die Daten laufen in Ihrem Konto, Mandantendaten sind im Rahmen von § 203 StGB und § 62a StBerG erlaubt, und es gibt Rollen, Protokoll und Limits.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -51,88 +51,171 @@ export default function Page() {
 
       <ContentWrapper>
         <IntroBox textCentered>
-          <IntroBox.Headline>Was ihr bekommt</IntroBox.Headline>
+          <IntroBox.Headline>Drei Arbeitsweisen in einer App</IntroBox.Headline>
         </IntroBox>
         <ProseColumns cols={3}>
-          <ProseColumns.Item title="Gewohnte Oberfläche">
-            Claude Desktop sieht aus und arbeitet wie die bekannte Claude-App, nur eben in eurem Konto.
+          <ProseColumns.Item title="Chat">
+            Die schnelle Frage: ein Dokument, eine Auskunft, ein Entwurf. Zum Beispiel einen Bescheid gegen die eingereichte Erklärung prüfen und Abweichungen einzeln auflisten.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Cowork">
-            Dokumente auswerten, Mails vorbereiten, Aufgaben erledigen lassen, mit euren Dateien als Kontext.
+          <ProseColumns.Item title="Co-Work">
+            Gemeinsam am Schriftstück: Der Text steht neben dem Gespräch, einzelne Abschnitte werden gezielt überarbeitet.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Claude Code">
-            Für Entwicklerteams: Claude Code über Bedrock statt privater Konten, mit festen Modellen und Kosten je Team.
+          <ProseColumns.Item title="Projekte">
+            Ein Arbeitsbereich pro Mandat: Unterlagen und Zusammenhang bleiben liegen.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
-          <IntroBox.Headline>Unterschied zum Abo</IntroBox.Headline>
+          <IntroBox.Headline>Was jeder ab Tag 1 macht</IntroBox.Headline>
         </IntroBox>
         <ProseColumns cols={3}>
-          <ProseColumns.Item title="Keine Seat-Lizenz">
-            Ihr zahlt nicht pro Kopf, sondern nur die Tokens, die wirklich anfallen.
+          <ProseColumns.Item title="Dokumente lesen">
+            Bescheid, Vertrag oder Abschluss befragen.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Verarbeitung in der EU">
-            Über Bedrock mit EU-Profil statt Verarbeitung in den USA oder global.
+          <ProseColumns.Item title="Schreiben">
+            Anschreiben, Mails und Vermerke im Ton der Kanzlei.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Nur Desktop">
-            Mobile App und claude.ai im Browser gibt es in diesem Setup nicht.
+          <ProseColumns.Item title="Auswerten">
+            Listen, Belegstapel und Salden strukturieren.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Nachschlagen">
+            Einordnen, mit Fundstelle statt aus dem Bauch.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Einarbeiten">
+            Neue fragen die KI, bevor sie die Kollegin fragen.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
 
       <ContentWrapper>
         <IntroBox textCentered>
-          <IntroBox.Headline>Wofür Teams Managed Claude nutzen</IntroBox.Headline>
-          <IntroBox.Paragraph>
-            Ob Mittelstand oder Kanzlei: Claude arbeitet dort, wo die Daten ohnehin hingehören.
-          </IntroBox.Paragraph>
+          <IntroBox.Headline>Was Ihren Chat vom öffentlichen Chatbot unterscheidet</IntroBox.Headline>
+        </IntroBox>
+        <div className="overflow-x-auto">
+          <DataTable>
+            <DataTable.Head>
+              <DataTable.Row>
+                <DataTable.HeaderCell>Kriterium</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Consumer-Chatbot</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Ihr Chat über das Gateway</DataTable.HeaderCell>
+              </DataTable.Row>
+            </DataTable.Head>
+            <DataTable.Body>
+              <DataTable.Row>
+                <DataTable.Cell bold>Wo laufen die Daten</DataTable.Cell>
+                <DataTable.Cell>Beim Anbieter</DataTable.Cell>
+                <DataTable.Cell bold>In Ihrem Konto, AWS Frankfurt</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Mandantendaten</DataTable.Cell>
+                <DataTable.Cell>Nein</DataTable.Cell>
+                <DataTable.Cell bold>Ja, im Rahmen von § 203 StGB und § 62a StBerG</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Wer darf was</DataTable.Cell>
+                <DataTable.Cell>Jeder alles</DataTable.Cell>
+                <DataTable.Cell bold>Rollen und Rechte</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Nachvollziehbarkeit</DataTable.Cell>
+                <DataTable.Cell>Keine</DataTable.Cell>
+                <DataTable.Cell bold>Vollständiges Protokoll</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Kanzleiwissen</DataTable.Cell>
+                <DataTable.Cell>Jedes Mal neu erklären</DataTable.Cell>
+                <DataTable.Cell bold>Als Arbeitsanleitung hinterlegt</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Kosten</DataTable.Cell>
+                <DataTable.Cell>Pro Kopf, pro Monat</DataTable.Cell>
+                <DataTable.Cell bold>Nach Verbrauch, Limit pro Mitarbeiter</DataTable.Cell>
+              </DataTable.Row>
+            </DataTable.Body>
+          </DataTable>
+        </div>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light">
+        <IntroBox textCentered>
+          <IntroBox.Headline>Was zum Start dazugehört</IntroBox.Headline>
         </IntroBox>
         <ProseColumns cols={3}>
-          <ProseColumns.Item title="Schriftsätze prüfen">
-            Entwürfe in Minuten gegen die Akte prüfen. Die Mandantendaten bleiben im eigenen Konto.
+          <ProseColumns.Item title="Zugänge für alle Mitarbeiter">
+            Nicht für drei Pilotnutzer, sondern für die ganze Organisation.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Mails vorsortieren">
-            Eingänge einordnen und Antworten vorbereiten. Entscheiden tut weiterhin ein Mensch.
+          <ProseColumns.Item title="Anmeldung per SSO">
+            Mit Ihrem bestehenden Konto, Rollen und Rechte gesetzt.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Akten durchsuchen">
-            Fragen direkt an Verträge und Gutachten stellen, ohne vorher alles zu anonymisieren.
+          <ProseColumns.Item title="Protokoll und Limits">
+            Protokollierung aktiv, Verbrauchslimits pro Mitarbeiter hinterlegt.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Claude Code fürs Team">
-            Claude Code über Bedrock statt privater Konten: feste Modelle, Kosten je Team sichtbar.
+        </ProseColumns>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <IntroBox textCentered>
+          <IntroBox.Headline>Gut zu wissen</IntroBox.Headline>
+        </IntroBox>
+        <ProseColumns cols={2}>
+          <ProseColumns.Item title="Die KI ersetzt keine fachliche Prüfung">
+            Sie liefert Entwürfe und Fundstellen. Gezeichnet wird von einem Berufsträger, daran ändert sich nichts.
           </ProseColumns.Item>
-          <ProseColumns.Item title="DATEV-Anbindung">
-            Claude greift über ein AI Gateway auf DATEV-Daten zu. Optional ab 85 € je Kanzlei.
-          </ProseColumns.Item>
-          <ProseColumns.Item title="Personaldaten auswerten">
-            Profile und Bewerbungsunterlagen auswerten, ohne sie in ein Abo zu kopieren.
+          <ProseColumns.Item title="Nicht jeder nutzt sie täglich">
+            Erfahrungsgemäß tragen 20 bis 30 % der Belegschaft den Großteil der Nutzung. Genau deshalb zahlen Sie Verbrauch, keinen Preis pro Kopf.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
+          <IntroBox.Headline>Was in der Private-Umgebung nicht geht</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Transparenz vorab: Diese Funktionen der öffentlichen Claude-App gibt es über das Gateway nicht.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <ProseColumns cols={3}>
+          <ProseColumns.Item title="Speech to Text">
+            Diktieren und Sprachmodus sind nicht verfügbar. Eingaben erfolgen per Text oder Dokument.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Mobile-App">
+            Die mobile Claude-App kann nicht mit dem Gateway genutzt werden.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Design">
+            Die Design-Funktionen von Claude sind nicht enthalten.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Chat-Speicherung">
+            Chats liegen nur auf dem jeweiligen Endgerät und lassen sich nicht auf einem anderen Gerät abrufen.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Claude Marketplace">
+            Standard-Apps aus dem Claude Marketplace, zum Beispiel der Google-Drive-Connector, sind nicht verfügbar.
+          </ProseColumns.Item>
+        </ProseColumns>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <IntroBox textCentered>
           <IntroBox.Headline>Weiter geht es hier</IntroBox.Headline>
         </IntroBox>
         <SimpleGrid cols={3} className="gap-6">
           <OfferCard
             href="/managed-claude/onboarding"
-            title="Onboarding"
-            description="So kommt die Claude-App zu eurem Team."
+            title="Schritt 2: Schulung und Coaching"
+            description="Das Team wird gut und zertifiziert, das Wissen bleibt im Haus."
             linkLabel="Mehr erfahren"
           />
           <OfferCard
-            href="/managed-claude/integrationen"
-            title="Integrationen"
-            description="DATEV, Microsoft 365 und Websuche anbinden."
+            href="/managed-claude/use-cases"
+            title="Schritt 3: Agenten"
+            description="Mail-Agent und weitere Agenten auf derselben Infrastruktur."
             linkLabel="Mehr erfahren"
           />
           <OfferCard
             href="/managed-claude/preise"
             title="Preise"
-            description="1.500 € Setup, danach nur Tokens."
+            description="1.500 € Einrichtung, danach Verbrauch mit Deckel."
             linkLabel="Mehr erfahren"
           />
         </SimpleGrid>
@@ -140,9 +223,9 @@ export default function Page() {
 
       <ContentWrapper colorScheme="primary-darker">
         <IntroBox dark textCentered>
-          <IntroBox.Headline>Claude-App bei euch einführen?</IntroBox.Headline>
+          <IntroBox.Headline>Chat für alle Mitarbeiter einführen?</IntroBox.Headline>
           <IntroBox.Paragraph>
-            30 Minuten reichen: Wie viele Nutzer, gibt es schon ein AWS-Konto, welche Daten sollen zu Claude und womit startet ihr. Danach wisst ihr, ob das Setup passt.
+            Im Scoping-Gespräch klären wir in 30 Minuten Stand der IT, Anmeldung, wer Zugriff bekommt und welche Systeme später relevant sind. Drei Tage danach haben Sie ein Angebot mit Festpreis, Verbrauchsschätzung und Limit-Vorschlag.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex justify-center">

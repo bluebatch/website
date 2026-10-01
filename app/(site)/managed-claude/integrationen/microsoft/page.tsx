@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ContentWrapper, SimpleGrid } from "@/components/layout";
 import { Typo, IntroBox, GeoSummary, ProseColumns } from "@/components/ui";
+import { OfferCard } from "@/components/cards";
 import { ConsultationCtaDefault } from "@/components/sections";
 import { ContactButton } from "@/components/buttons";
 
@@ -8,22 +9,22 @@ import { ContactButton } from "@/components/buttons";
 // Repositionierung auf Managed Claude, Inhalte werden noch geschärft.
 
 export const metadata: Metadata = {
-  title: "Claude mit Microsoft 365 verbinden | Bluebatch",
+  title: "Outlook Connector: Posteingang, Kalender und Entwürfe in Claude | Bluebatch",
   description:
-    "Claude und Microsoft 365: Bluebatch verbindet Claude im eigenen AWS-Konto mit Outlook, Teams, SharePoint und OneDrive, damit euer Team mit vorhandenem Wissen arbeitet.",
+    "Der Outlook Connector für das Private Claude AI Gateway bringt Posteingang, Kalender und Entwürfe direkt in Claude und ist die Grundlage für den Mail-Agenten. 500 € einmalig, inklusive bei 3 PT oder 8 PT Onboarding.",
   openGraph: {
-    title: "Claude mit Microsoft 365 verbinden",
+    title: "Outlook Connector: Posteingang, Kalender und Entwürfe in Claude",
     description:
-      "Claude und Microsoft 365: Bluebatch verbindet Claude im eigenen AWS-Konto mit Outlook, Teams, SharePoint und OneDrive, damit euer Team mit vorhandenem Wissen arbeitet.",
+      "Der Outlook Connector für das Private Claude AI Gateway bringt Posteingang, Kalender und Entwürfe direkt in Claude und ist die Grundlage für den Mail-Agenten. 500 € einmalig, inklusive bei 3 PT oder 8 PT Onboarding.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=Claude%20mit%20Microsoft%20365%20verbinden&eyebrow=Managed%20Claude",
+        url: "/og?title=Outlook%20Connector%20f%C3%BCr%20Claude&eyebrow=Managed%20Claude",
         width: 1200,
         height: 630,
-        alt: "Claude mit Microsoft 365 verbinden",
+        alt: "Outlook Connector für Claude",
       },
     ],
   },
@@ -39,9 +40,9 @@ export default function Page() {
         <IntroBox textCentered>
           <IntroBox.PreHeadline>Integration · Microsoft 365</IntroBox.PreHeadline>
         </IntroBox>
-        <Typo.H1 className="text-center">Claude mit Microsoft 365 verbinden</Typo.H1>
+        <Typo.H1 className="text-center">Outlook Connector für Claude</Typo.H1>
         <GeoSummary align="center">
-          Die Microsoft-365-Anbindung verbindet Claude mit Outlook, Teams, SharePoint und OneDrive. Euer Team fragt Claude nach Inhalten aus Dokumenten, Mails und Chats, ohne sie hineinzukopieren. Bluebatch richtet den Connector im Rahmen der optionalen Betreuung von Managed Claude ein und setzt die Berechtigungen.
+          Der Outlook Connector bringt Posteingang, Kalender und Entwürfe aus Microsoft 365 direkt in Claude, über das Private Claude AI Gateway in Ihrem Konto. Er ist die Grundlage für den Mail-Agenten. Der Connector kostet einmalig 500 € und ist bei Buchung eines Onboarding-Pakets mit 3 oder 8 Personentagen inklusive.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -53,40 +54,69 @@ export default function Page() {
           <IntroBox.Headline>Was damit möglich wird</IntroBox.Headline>
         </IntroBox>
         <ProseColumns cols={3}>
-          <ProseColumns.Item title="SharePoint und OneDrive">
-            Claude findet und fasst Dokumente aus euren Ablagen zusammen.
+          <ProseColumns.Item title="Posteingang">
+            Claude liest Mails im Zusammenhang und bereitet Antworten im Ton der Kanzlei vor.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Outlook">
-            Mails und Termine als Kontext für Antworten und Entwürfe.
+          <ProseColumns.Item title="Kalender">
+            Termine als Kontext, etwa für Fristen und Wiedervorlagen.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Teams">
-            Besprechungen und Chats nachvollziehen und Aufgaben ableiten.
+          <ProseColumns.Item title="Entwürfe">
+            Antworten landen als Entwurf im Postfach, gesendet wird erst nach Freigabe.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
-          <IntroBox.Headline>Wie wir anbinden</IntroBox.Headline>
+          <IntroBox.Headline>Die Grundlage für den Mail-Agenten</IntroBox.Headline>
         </IntroBox>
         <ProseColumns cols={3}>
-          <ProseColumns.Item title="Entra ID">
-            Anmeldung und Rechte laufen über euer bestehendes Microsoft-Konto.
+          <ProseColumns.Item title="Vorsortieren">
+            Der Mail-Agent ordnet neue Mails nach Mandant und Vorgang zu, bevor jemand das Postfach öffnet.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Berechtigungen">
-            Claude sieht nur, worauf die jeweilige Person ohnehin Zugriff hat.
+          <ProseColumns.Item title="Nachhaken">
+            Er erkennt fehlende Unterlagen und bereitet die Erinnerung vor.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Betrieb">
-            Pflege des Connectors als Teil der optionalen Betreuung.
+          <ProseColumns.Item title="Gleiche Regeln">
+            Rollen, Protokoll und eigenes Budget wie bei jeder Nutzung über das Gateway.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
 
+      <ContentWrapper>
+        <IntroBox textCentered>
+          <IntroBox.Headline>So buchen Sie den Connector</IntroBox.Headline>
+        </IntroBox>
+        <SimpleGrid cols={3} className="gap-6">
+          <OfferCard
+            href="/managed-claude/preise"
+            price="500 € einmalig"
+            title="Outlook Connector"
+            description="Als einzelnes Add-on zum Gateway."
+            linkLabel="Zu den Preisen"
+          />
+          <OfferCard
+            highlight
+            href="/managed-claude/onboarding"
+            price="inklusive"
+            title="Mit Onboarding-Paket"
+            description="Inklusive bei 3 PT oder 8 PT Onboarding."
+            linkLabel="Zu den Paketen"
+          />
+          <OfferCard
+            href="/managed-claude/use-cases"
+            title="Mail-Agent"
+            description="Was der Mail-Agent im Alltag übernimmt."
+            linkLabel="Zum Mail-Agenten"
+          />
+        </SimpleGrid>
+      </ContentWrapper>
+
       <ContentWrapper colorScheme="primary-darker">
         <IntroBox dark textCentered>
-          <IntroBox.Headline>Microsoft 365 und Claude verbinden?</IntroBox.Headline>
+          <IntroBox.Headline>Outlook mit Claude verbinden?</IntroBox.Headline>
           <IntroBox.Paragraph>
-            30 Minuten reichen: Wie viele Nutzer, gibt es schon ein AWS-Konto, welche Daten sollen zu Claude und womit startet ihr. Danach wisst ihr, ob das Setup passt.
+            Im Scoping-Gespräch klären wir in 30 Minuten Stand der IT, Anmeldung, wer Zugriff bekommt und welche Systeme später relevant sind. Drei Tage danach haben Sie ein Angebot mit Festpreis, Verbrauchsschätzung und Limit-Vorschlag.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex justify-center">

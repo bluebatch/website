@@ -15,22 +15,22 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 // Repositionierung auf Managed Claude, Inhalte werden noch geschärft.
 
 export const metadata: Metadata = {
-  title: "Managed Claude: Claude im eigenen AWS-Konto, Verarbeitung in der EU | Bluebatch",
+  title: "Private Claude AI Gateway: KI mit einem Partner statt fünfzehn Tools | Bluebatch",
   description:
-    "Managed Claude von Bluebatch: Claude über Amazon Bedrock in eurem eigenen AWS-Konto, Verarbeitung in der EU, Claude Desktop ohne Seat-Lizenz. Setup für 1.500 € Festpreis, Tokens direkt über AWS.",
+    "Managed Claude von Bluebatch: das Private Claude AI Gateway in Ihrem Konto, AWS Bedrock Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und § 62a StBerG. Einrichtung 1.500 €, Modellkosten 1:1.",
   openGraph: {
-    title: "Managed Claude: Claude im eigenen AWS-Konto, Verarbeitung in der EU",
+    title: "Private Claude AI Gateway: KI mit einem Partner statt fünfzehn Tools",
     description:
-      "Managed Claude von Bluebatch: Claude über Amazon Bedrock in eurem eigenen AWS-Konto, Verarbeitung in der EU, Claude Desktop ohne Seat-Lizenz. Setup für 1.500 € Festpreis, Tokens direkt über AWS.",
+      "Managed Claude von Bluebatch: das Private Claude AI Gateway in Ihrem Konto, AWS Bedrock Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und § 62a StBerG. Einrichtung 1.500 €, Modellkosten 1:1.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=Claude%20in%20eurem%20eigenen%20AWS-Konto&eyebrow=Managed%20Claude",
+        url: "/og?title=KI%20mit%20einem%20Partner%20statt%20mit%20f%C3%BCnfzehn%20Tools&eyebrow=Managed%20Claude",
         width: 1200,
         height: 630,
-        alt: "Claude in eurem eigenen AWS-Konto",
+        alt: "KI mit einem Partner statt mit fünfzehn Tools",
       },
     ],
   },
@@ -44,18 +44,18 @@ export default function Page() {
     <>
       <ContentWrapper isFirstSection bodyWidth="small">
         <IntroBox textCentered>
-          <IntroBox.PreHeadline>Managed Claude</IntroBox.PreHeadline>
+          <IntroBox.PreHeadline>Private Claude AI Gateway</IntroBox.PreHeadline>
         </IntroBox>
-        <Typo.H1 className="text-center">Claude in eurem eigenen AWS-Konto</Typo.H1>
+        <Typo.H1 className="text-center">KI mit einem Partner statt mit fünfzehn Tools</Typo.H1>
         <GeoSummary align="center">
-          Managed Claude ist das Setup von Bluebatch für Unternehmen und Kanzleien, die Claude mit vertraulichen Daten nutzen wollen. Claude läuft über Amazon Bedrock in eurem eigenen AWS-Konto mit Verarbeitung in der EU, euer Team arbeitet in Claude Desktop ohne Seat-Lizenz. Das Setup kostet einmalig 1.500 €, die Tokens zahlt ihr direkt an AWS.
+          Das Private Claude AI Gateway von Bluebatch ist eine eigene KI-Infrastruktur für Kanzleien und Unternehmen: Claude von Anthropic über AWS Bedrock in Frankfurt, in Ihrem eigenen Konto, DSGVO-konform und berufsrechtlich tragfähig nach § 203 StGB und § 62a StBerG. Die Einrichtung kostet einmalig 1.500 €, die Modellkosten werden 1:1 ohne Aufschlag abgerechnet.
         </GeoSummary>
         <div className="mx-auto mb-8 max-w-xl">
           <Typo.List>
-            <Typo.ListItem>Claude über Amazon Bedrock, Verarbeitung in der EU</Typo.ListItem>
-            <Typo.ListItem>Claude Desktop mit Cowork und Code, ohne Seat-Lizenz</Typo.ListItem>
-            <Typo.ListItem>Nachweis-Paket mit Löschkonzept und Verschwiegenheitserklärung</Typo.ListItem>
-            <Typo.ListItem>1.500 € Festpreis, Tokens direkt über AWS</Typo.ListItem>
+            <Typo.ListItem>Eigenes Konto, AWS Bedrock in Frankfurt (EU)</Typo.ListItem>
+            <Typo.ListItem>Tragfähig nach § 203 StGB, § 43e BRAO und § 62a StBerG</Typo.ListItem>
+            <Typo.ListItem>Keine Lizenz pro Kopf, Modellkosten 1:1 ohne Aufschlag</Typo.ListItem>
+            <Typo.ListItem>Einrichtung 1.500 € Festpreis, startklar in maximal 1 Woche</Typo.ListItem>
           </Typo.List>
         </div>
         <div className="flex justify-center">
@@ -65,146 +65,180 @@ export default function Page() {
 
       <ContentWrapper>
         <IntroBox textCentered>
-          <IntroBox.Headline>Zwei Bausteine, ein Setup</IntroBox.Headline>
-          <IntroBox.Paragraph>
-            Amazon Bedrock in eurem AWS-Konto plus die Claude-App für euer Team. Verarbeitung in der EU, Kosten je Nutzer sichtbar.
-          </IntroBox.Paragraph>
+          <IntroBox.Headline>Das Problem ist nicht die Technik</IntroBox.Headline>
         </IntroBox>
-        <ProseColumns cols={2}>
-          <ProseColumns.Item title="Amazon Bedrock als Modell-Backend">
-            Claude läuft in eurem AWS-Konto mit EU-Profil. Bedrock speichert Anfragen standardmäßig nicht, Modellregeln legen fest, was erlaubt ist, und weder AWS noch Anthropic sehen eure Inhalte.
+        <ProseColumns cols={3}>
+          <ProseColumns.Item title="Jedes Tool bringt dieselbe Frage mit">
+            Wo laufen die Daten hin? In Kanzleien heißt sie § 203 StGB und § 62a StBerG, nicht nur DSGVO. Wer sie für jedes Tool einzeln beantwortet, prüft sechsmal, verhandelt sechsmal und zahlt sechs Abos.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Claude Desktop fürs Team">
-            Cowork und Code in der gewohnten Claude-Oberfläche, verteilt über eure Geräteverwaltung, mit SSO. Keine Seat-Lizenz, abgerechnet wird nach Tokens.
+          <ProseColumns.Item title="Ohne Freigabe läuft es trotzdem">
+            Solange niemand etwas freigibt, wird KI trotzdem genutzt: mit privaten Konten und echten Mandantendaten. Das ist ein persönliches Risiko der Berufsträger.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Ein Partner, eine Struktur">
+            Sie brauchen nicht ein KI-Tool, sondern mehrere. Und darunter einen Partner, der die Modelle mitbringt und die Struktur, in der sie bei Ihnen laufen dürfen.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
-          <IntroBox.Headline>Wofür Teams Managed Claude nutzen</IntroBox.Headline>
+          <IntroBox.Headline>Der KI-Partner: Modelle und Struktur</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Ob Mittelstand oder Kanzlei: Claude arbeitet dort, wo die Daten ohnehin hingehören.
+            Ein KI-Partner bringt zwei Dinge mit: die Modelle und die Struktur, in der sie bei Ihnen laufen dürfen. Das eine ohne das andere nützt Ihnen nichts.
           </IntroBox.Paragraph>
         </IntroBox>
         <ProseColumns cols={3}>
-          <ProseColumns.Item title="Schriftsätze prüfen">
-            Entwürfe in Minuten gegen die Akte prüfen. Die Mandantendaten bleiben im eigenen Konto.
+          <ProseColumns.Item title="Die Modelle">
+            Claude von Anthropic: Haiku für Einfaches, Sonnet im Alltag, Opus für die harten Fälle. Umschaltbar je Aufgabe.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Mails vorsortieren">
-            Eingänge einordnen und Antworten vorbereiten. Entscheiden tut weiterhin ein Mensch.
+          <ProseColumns.Item title="Die Struktur">
+            Das Private Claude AI Gateway: eine abgesicherte Tür, durch die jede KI-Nutzung läuft, mit Rechten, Protokoll und Abrechnung.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Akten durchsuchen">
-            Fragen direkt an Verträge und Gutachten stellen, ohne vorher alles zu anonymisieren.
-          </ProseColumns.Item>
-          <ProseColumns.Item title="Claude Code fürs Team">
-            Claude Code über Bedrock statt privater Konten: feste Modelle, Kosten je Team sichtbar.
-          </ProseColumns.Item>
-          <ProseColumns.Item title="DATEV-Anbindung">
-            Claude greift über ein AI Gateway auf DATEV-Daten zu. Optional ab 85 € je Kanzlei.
-          </ProseColumns.Item>
-          <ProseColumns.Item title="Personaldaten auswerten">
-            Profile und Bewerbungsunterlagen auswerten, ohne sie in ein Abo zu kopieren.
+          <ProseColumns.Item title="Der Aufbau">
+            Einrichtung, Schulung, Kanzlei-Handbuch, Agenten, Anbindung. Wir bauen, bis Sie es selbst können.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
 
       <ContentWrapper>
         <IntroBox textCentered>
-          <IntroBox.Headline>Abo, Chat-Plattform oder eigenes Konto?</IntroBox.Headline>
+          <IntroBox.Headline>Das Fundament und drei Schritte darauf</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Das normale Claude-Abo verarbeitet nicht in der EU. Im eigenen AWS-Konto zahlt ihr den Listenpreis und behaltet die Kontrolle.
+            Das Gateway ist kein Schritt, sondern die Voraussetzung: einmal geklärt, strafrechtlich wie berufsrechtlich, und alles läuft darauf. Erst arbeiten, dann gut werden, dann automatisieren. Wer mit Agenten anfängt, automatisiert Abläufe, die noch niemand im Haus wirklich verstanden hat.
           </IntroBox.Paragraph>
+        </IntroBox>
+        <SimpleGrid cols={3} className="gap-6">
+          <OfferCard
+            highlight
+            href="/managed-claude/claude-app"
+            title="Schritt 1: Chat"
+            description="Der Chat für jeden Mitarbeiter, ab Tag 1. Chat, Co-Work und Projekte in einer Umgebung, in der das erlaubt ist."
+            linkLabel="Zum Chat"
+          />
+          <OfferCard
+            href="/managed-claude/onboarding"
+            title="Schritt 2: Coaching und Kanzlei-Handbuch"
+            description="Das Team wird gut und zertifiziert, das Wissen bleibt im Haus. Inklusive KI-Kompetenzschulung nach Art. 4 EU AI Act."
+            linkLabel="Zu Schulung und Onboarding"
+          />
+          <OfferCard
+            href="/managed-claude/use-cases"
+            title="Schritt 3: Agenten und Integration"
+            description="Mail-Agent, Anbindung eigener Systeme und DATEV, auf derselben Infrastruktur."
+            linkLabel="Zu Agenten und Use Cases"
+          />
+        </SimpleGrid>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light">
+        <IntroBox textCentered>
+          <IntroBox.Headline>KI im Alltag</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Was mit dem Gateway in Kanzlei und Büro möglich wird.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <ProseColumns cols={3}>
+          <ProseColumns.Item title="Chat mit Dokumenten">
+            Bescheid, Vertrag oder Jahresabschluss befragen statt blättern.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Mandantenkommunikation">
+            Entwürfe für Mails und Anschreiben, im Ton der Kanzlei.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Mail-Agent">
+            Posteingang vorsortiert, Entwürfe liegen vorbereitet da.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Fachliche Routinen">
+            Wiederkehrende Prüfschritte, immer nach Ihrer Methodik.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Belege und Listen">
+            Strukturiert auswerten, Auffälligkeiten vorab markiert.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Zugriff auf DATEV">
+            Die KI fragt Ihren Datenbestand, statt zu raten.
+          </ProseColumns.Item>
+        </ProseColumns>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <IntroBox textCentered>
+          <IntroBox.Headline>Was Ihren Chat vom öffentlichen Chatbot unterscheidet</IntroBox.Headline>
         </IntroBox>
         <div className="overflow-x-auto">
           <DataTable>
             <DataTable.Head>
               <DataTable.Row>
                 <DataTable.HeaderCell>Kriterium</DataTable.HeaderCell>
-                <DataTable.HeaderCell>Claude-Abo</DataTable.HeaderCell>
-                <DataTable.HeaderCell>Chat-Plattform</DataTable.HeaderCell>
-                <DataTable.HeaderCell>Managed Claude</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Consumer-Chatbot</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Ihr Chat über das Gateway</DataTable.HeaderCell>
               </DataTable.Row>
             </DataTable.Head>
             <DataTable.Body>
               <DataTable.Row>
-                <DataTable.Cell bold>Kosten fürs Team</DataTable.Cell>
-                <DataTable.Cell>Pro Nutzer und Monat</DataTable.Cell>
-                <DataTable.Cell>Paket mit Limits</DataTable.Cell>
-                <DataTable.Cell bold>1.500 € einmalig, danach Tokens zum Listenpreis</DataTable.Cell>
+                <DataTable.Cell bold>Wo laufen die Daten</DataTable.Cell>
+                <DataTable.Cell>Beim Anbieter</DataTable.Cell>
+                <DataTable.Cell bold>In Ihrem Konto, AWS Frankfurt</DataTable.Cell>
               </DataTable.Row>
               <DataTable.Row>
-                <DataTable.Cell bold>Verarbeitung in der EU</DataTable.Cell>
-                <DataTable.Cell>Nein, USA oder global</DataTable.Cell>
-                <DataTable.Cell>Je nach Anbieter</DataTable.Cell>
-                <DataTable.Cell bold>Ja, EU-Profil in eurem AWS-Konto</DataTable.Cell>
+                <DataTable.Cell bold>Mandantendaten</DataTable.Cell>
+                <DataTable.Cell>Nein</DataTable.Cell>
+                <DataTable.Cell bold>Ja, im Rahmen von § 203 StGB und § 62a StBerG</DataTable.Cell>
               </DataTable.Row>
               <DataTable.Row>
-                <DataTable.Cell bold>Mandanten- und Personaldaten</DataTable.Cell>
-                <DataTable.Cell>Nicht vorgesehen</DataTable.Cell>
-                <DataTable.Cell>Je nach Vertrag</DataTable.Cell>
-                <DataTable.Cell bold>Mit Nachweis-Paket, Bewertung durch euch</DataTable.Cell>
+                <DataTable.Cell bold>Wer darf was</DataTable.Cell>
+                <DataTable.Cell>Jeder alles</DataTable.Cell>
+                <DataTable.Cell bold>Rollen und Rechte</DataTable.Cell>
               </DataTable.Row>
               <DataTable.Row>
-                <DataTable.Cell bold>Anbieter-Lock-in</DataTable.Cell>
-                <DataTable.Cell>Hoch</DataTable.Cell>
-                <DataTable.Cell>Hoch</DataTable.Cell>
-                <DataTable.Cell bold>Keiner, das Konto gehört euch</DataTable.Cell>
+                <DataTable.Cell bold>Nachvollziehbarkeit</DataTable.Cell>
+                <DataTable.Cell>Keine</DataTable.Cell>
+                <DataTable.Cell bold>Vollständiges Protokoll</DataTable.Cell>
               </DataTable.Row>
               <DataTable.Row>
-                <DataTable.Cell bold>Modellwahl</DataTable.Cell>
-                <DataTable.Cell>Fest im Abo</DataTable.Cell>
-                <DataTable.Cell>Vorgabe des Anbieters</DataTable.Cell>
-                <DataTable.Cell bold>Frei: Opus 5 und Sonnet 5 über Bedrock</DataTable.Cell>
+                <DataTable.Cell bold>Kanzleiwissen</DataTable.Cell>
+                <DataTable.Cell>Jedes Mal neu erklären</DataTable.Cell>
+                <DataTable.Cell bold>Als Arbeitsanleitung hinterlegt</DataTable.Cell>
               </DataTable.Row>
               <DataTable.Row>
-                <DataTable.Cell bold>Startklar</DataTable.Cell>
-                <DataTable.Cell>Sofort</DataTable.Cell>
-                <DataTable.Cell>Sofort</DataTable.Cell>
-                <DataTable.Cell bold>In wenigen Tagen</DataTable.Cell>
-              </DataTable.Row>
-              <DataTable.Row>
-                <DataTable.Cell bold>Betreuung</DataTable.Cell>
-                <DataTable.Cell>Anbieter-Support</DataTable.Cell>
-                <DataTable.Cell>Anbieter-Support</DataTable.Cell>
-                <DataTable.Cell bold>Übergabe an euch, Betreuung optional</DataTable.Cell>
+                <DataTable.Cell bold>Kosten</DataTable.Cell>
+                <DataTable.Cell>Pro Kopf, pro Monat</DataTable.Cell>
+                <DataTable.Cell bold>Nach Verbrauch, Limit pro Mitarbeiter</DataTable.Cell>
               </DataTable.Row>
             </DataTable.Body>
           </DataTable>
         </div>
-        <Typo.Paragraph className="mx-auto mt-6 max-w-3xl text-center text-gray-600">
-          Mit dem Abo zahlt ihr pro Kopf und lasst alles Vertrauliche draußen. Mit Managed Claude richtet Bluebatch ein, und das Konto bleibt eures.
-        </Typo.Paragraph>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
-          <IntroBox.Headline>In vier Schritten startklar</IntroBox.Headline>
+          <IntroBox.Headline>Sie entscheiden zuerst nur über Schritt 1</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Der ist klein, hat einen Festpreis und ist umkehrbar. Schulung, Agenten, Systemanbindung und DATEV entscheiden Sie, wenn Sie aus dem Alltag wissen, was sich lohnt.
+          </IntroBox.Paragraph>
         </IntroBox>
         <div className="mx-auto max-w-3xl">
           <TimelineAsSteps>
             <TimelineAsStepsStep value={1}>
-              <Typo.H3 className="mt-2!">Kurzer Check</Typo.H3>
+              <Typo.H3 className="mt-2!">Scoping-Gespräch, 30 Minuten</Typo.H3>
               <Typo.Paragraph className="text-gray-600">
-                Drei Fragen klären, ob das Setup zu euch passt: vertrauliche Daten, Claude-App fürs Team, vorhandenes AWS-Konto.
+                Stand der IT, Anmeldung, wer Zugriff bekommt, welche Systeme später relevant sind. Mit Ihnen, Ihrer IT und uns.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
             <TimelineAsStepsStep value={2}>
-              <Typo.H3 className="mt-2!">Gespräch, 30 Minuten</Typo.H3>
+              <Typo.H3 className="mt-2!">Angebot, 3 Tage danach</Typo.H3>
               <Typo.Paragraph className="text-gray-600">
-                Nutzerzahl, AWS-Konto, Datenarten und der erste Anwendungsfall. Danach steht der Plan.
+                Einrichtung zum Festpreis, mit Verbrauchsschätzung und Limit-Vorschlag.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
             <TimelineAsStepsStep value={3}>
-              <Typo.H3 className="mt-2!">Setup</Typo.H3>
+              <Typo.H3 className="mt-2!">Einrichtung, maximal 1 Woche nach Auftrag</Typo.H3>
               <Typo.Paragraph className="text-gray-600">
-                AWS-Konto in der EU, Claude über Amazon Bedrock, Claude Desktop, Modellregeln und Nachweis-Paket. Dauer: wenige Tage.
+                Gateway und Chat startklar, alle Mitarbeiter haben Zugang. Wir, gemeinsam mit Ihrer IT.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
             <TimelineAsStepsStep value={4}>
-              <Typo.H3 className="mt-2!">Übergabe und Start</Typo.H3>
+              <Typo.H3 className="mt-2!">Rückblick nach 4 bis 6 Wochen</Typo.H3>
               <Typo.Paragraph className="text-gray-600">
-                Onboarding fürs Team, Doku an euch. Auf Wunsch betreuen wir weiter, das Konto bleibt in jedem Fall eures.
+                Was wird genutzt, wo lohnt sich Schritt 2, welcher Vorgang ist der Kandidat für Schritt 3. Gemeinsam.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
           </TimelineAsSteps>
@@ -213,56 +247,37 @@ export default function Page() {
 
       <ContentWrapper>
         <IntroBox textCentered>
-          <IntroBox.Headline>Alles zu Managed Claude</IntroBox.Headline>
+          <IntroBox.Headline>Alles zum Private Claude AI Gateway</IntroBox.Headline>
         </IntroBox>
         <SimpleGrid cols={3} className="gap-6">
           <OfferCard
-            highlight
-            href="/managed-claude/claude-app"
-            title="Claude App"
-            description="Claude Desktop mit Cowork und Code über Bedrock, ohne Seat-Lizenz."
-            linkLabel="Zur Claude App"
-          />
-          <OfferCard
-            href="/managed-claude/claude-api"
-            title="Claude API"
-            description="Claude über Bedrock in euren eigenen Anwendungen, ganz ohne App."
-            linkLabel="Zur Claude API"
-          />
-          <OfferCard
-            href="/managed-claude/use-cases"
-            title="Use Cases"
-            description="Was wir mit Claude für euch bauen, von Schriftsatz bis DATEV."
-            linkLabel="Zu den Use Cases"
-          />
-          <OfferCard
             href="/managed-claude/wie-es-funktioniert"
             title="Wie es funktioniert"
-            description="Architektur, Datenfluss und wer wofür verantwortlich ist."
-            linkLabel="Mehr erfahren"
-          />
-          <OfferCard
-            href="/managed-claude/onboarding"
-            title="Onboarding"
-            description="Was im Setup steckt und wie die Übergabe abläuft."
+            description="Architektur, Rechtsrahmen nach § 203 StGB und § 62a StBerG, kein Lock-in."
             linkLabel="Mehr erfahren"
           />
           <OfferCard
             href="/managed-claude/preise"
             title="Preise"
-            description="1.500 € Setup, Tokens zum Listenpreis, Betreuung optional."
+            description="1.500 € Einrichtung, Tokenpreise je Modell, Pakete und Add-ons."
             linkLabel="Mehr erfahren"
           />
           <OfferCard
             href="/managed-claude/integrationen"
             title="Integrationen"
-            description="DATEV, Microsoft 365 und Websuche für Claude."
+            description="DATEV MCP, Outlook Connector und eigene Systeme per MCP."
+            linkLabel="Mehr erfahren"
+          />
+          <OfferCard
+            href="/managed-claude/claude-api"
+            title="Claude API"
+            description="Claude in eigenen Anwendungen, über dasselbe Gateway."
             linkLabel="Mehr erfahren"
           />
           <OfferCard
             href="/managed-claude/weitere-tools/n8n"
             title="n8n"
-            description="Hosting, Wartung und Schulungen für n8n bieten wir weiterhin an."
+            description="Auf n8n laufen unsere Agenten. Hosting, Wartung und Schulungen gibt es weiterhin."
             linkLabel="Zum n8n-Hub"
           />
           <OfferCard
@@ -276,44 +291,40 @@ export default function Page() {
 
       <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <FaqContainer
-          headline="Fragen, die zuerst kommen"
-          intro="Was Entscheider vor dem Start wissen wollen."
+          headline="Häufige Fragen zum Private Claude AI Gateway"
+          intro="Was Kanzleien und Unternehmen vor dem Start wissen wollen."
           faqs={[
             {
-              "question": "Reicht nicht das normale Claude-Abo?",
-              "answer": "Für allgemeine Aufgaben ja. Claude Pro oder Team reichen, solange keine vertraulichen Daten im Spiel sind. Wer Mandanten-, Personal- oder Vertragsdaten mit Claude verarbeiten will, braucht ein eigenes Konto. Wir sagen euch ehrlich, was bei euch zutrifft."
+              "question": "Was ist das Private Claude AI Gateway?",
+              "answer": "Eine abgesicherte Tür, durch die jede KI-Nutzung in Ihrer Organisation läuft: mit Rollen und Rechten, vollständigem Protokoll und einer Abrechnung. Dahinter läuft Claude von Anthropic über AWS Bedrock in der Region Frankfurt, in Ihrem eigenen Konto."
             },
             {
-              "question": "Was ist der Unterschied zum Abo?",
-              "answer": "Im Abo verarbeitet Anthropic in den USA oder global. Bei Managed Claude liegen Modellzugang, Nutzer und Kosten in eurem eigenen AWS-Konto in der EU. Vertragspartner für die Modelle ist AWS, Bluebatch richtet ein und betreut auf Wunsch."
+              "question": "Ist das mit § 203 StGB und § 62a StBerG vereinbar?",
+              "answer": "Beide Vorschriften erlauben seit 2017 ausdrücklich, IT-Dienstleister einzubeziehen, soweit erforderlich. Wir liefern Verpflichtungserklärung, AV-Vertrag nach Art. 28 DSGVO, dokumentierte Maßnahmen und die Benennung aller Unterauftragnehmer. Die berufsrechtliche Bewertung und die Dokumentation Ihrer Auswahl bleiben bei Ihnen. Wir liefern die Unterlagen, keine Rechtsberatung."
             },
             {
-              "question": "Bleiben unsere Daten in der EU?",
-              "answer": "Ja. Claude läuft über Amazon Bedrock mit EU-Profil in eurem AWS-Konto. Bedrock speichert Anfragen standardmäßig nicht, nutzt sie nicht für Training und gibt sie nicht an Anthropic weiter."
+              "question": "Werden unsere Daten für Training genutzt?",
+              "answer": "Nein. Kein Training mit Ihren Daten ist vertraglich zugesichert, beim Anbieter wird kein Verlauf gespeichert (zero data retention), und die Datenresidenz in der EU ist dokumentiert."
             },
             {
               "question": "Was kostet das?",
-              "answer": "Das Setup kostet einmalig 1.500 €. Danach zahlt ihr nur die Tokens direkt an AWS, zum Listenpreis und je Nutzer sichtbar. Eine laufende Betreuung durch Bluebatch ist optional."
+              "answer": "Die Einrichtung kostet einmalig 1.500 € zzgl. USt. Danach zahlen Sie die Modellkosten nach Verbrauch, 1:1 ohne Aufschlag aus Ihrer AWS-Rechnung durchgereicht. Eine Lizenz pro Kopf gibt es nicht."
             },
             {
-              "question": "Gibt es Lizenzkosten pro Nutzer?",
-              "answer": "Nein. Claude Desktop über Bedrock hat keine Seat-Lizenz, auch nicht bei 50 Nutzern. Es bleiben das Setup und die Tokens."
+              "question": "Brauchen wir alle Schritte auf einmal?",
+              "answer": "Nein. Sie entscheiden zuerst nur über Schritt 1, den Chat für alle Mitarbeiter. Schulung, Agenten, Systemanbindung und DATEV kommen, wenn der Alltag zeigt, wo sie sich lohnen."
             },
             {
-              "question": "Wie ist das mit dem Berufsgeheimnis?",
-              "answer": "Wir liefern ein Nachweis-Paket für eure Prüfung: Datenfluss, Löschkonzept, TOMs und unsere Verschwiegenheitserklärung. Die berufsrechtliche Bewertung, etwa nach § 43e BRAO oder § 62a StBerG, bleibt bei euch."
+              "question": "Wie schnell sind wir startklar?",
+              "answer": "Maximal eine Woche nach Auftrag sind Gateway und Chat eingerichtet und alle Mitarbeiter haben Zugang."
             },
             {
-              "question": "Wir haben noch kein AWS-Konto. Geht das trotzdem?",
-              "answer": "Ja. Wir legen das Konto gemeinsam mit euch an. Die Rechnung für die Tokens kommt dann direkt von AWS."
+              "question": "Sind wir danach an Bluebatch gebunden?",
+              "answer": "Nein. Konto, Zugänge, Kanzlei-Handbuch und Abläufe gehören Ihnen. Wenn Sie uns morgen nicht mehr brauchen, läuft alles weiter. Die laufende Betreuung ist optional und jederzeit kündbar."
             },
             {
-              "question": "Welche Modelle sind dabei?",
-              "answer": "Opus 5 und Sonnet 5, beide ohne Speicherung und mit EU-Profil. Fable 5 setzen wir bewusst nicht ein: Es hat auf Bedrock kein EU-Profil und speichert alle Anfragen 30 Tage."
-            },
-            {
-              "question": "Was passiert nach dem Setup?",
-              "answer": "Euer Team arbeitet mit Claude, die Dokumentation geht an euch. Auf Wunsch übernimmt Bluebatch die Betreuung, Modellwechsel und weitere Connectoren, zum Beispiel zu DATEV oder Microsoft 365."
+              "question": "Was geht in der Private-Umgebung nicht?",
+              "answer": "Diktieren und Sprachmodus, die mobile App, die Design-Funktionen, Standard-Apps aus dem Claude Marketplace und die geräteübergreifende Chat-Speicherung. Chats liegen nur auf dem jeweiligen Endgerät."
             }
           ]}
         />
@@ -321,9 +332,9 @@ export default function Page() {
 
       <ContentWrapper colorScheme="primary-darker">
         <IntroBox dark textCentered>
-          <IntroBox.Headline>Passt Managed Claude zu euch?</IntroBox.Headline>
+          <IntroBox.Headline>Sprechen wir über Schritt 1</IntroBox.Headline>
           <IntroBox.Paragraph>
-            30 Minuten reichen: Wie viele Nutzer, gibt es schon ein AWS-Konto, welche Daten sollen zu Claude und womit startet ihr. Danach wisst ihr, ob das Setup passt.
+            Im Scoping-Gespräch klären wir in 30 Minuten Stand der IT, Anmeldung, wer Zugriff bekommt und welche Systeme später relevant sind. Drei Tage danach haben Sie ein Angebot mit Festpreis, Verbrauchsschätzung und Limit-Vorschlag.
           </IntroBox.Paragraph>
         </IntroBox>
         <div className="flex justify-center">
