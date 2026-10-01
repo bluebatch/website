@@ -69,13 +69,19 @@ const managedClaudeMenu = {
         {
           icon: "/icons/rocket-launch.svg",
           title: "Onboarding",
-          description: "Start in wenigen Wochen",
+          description: "Startklar in einer Woche",
           href: "/managed-claude/onboarding",
+        },
+        {
+          icon: "/icons/academic-cap.svg",
+          title: "Coaching",
+          description: "Paket S und Paket L",
+          href: "/managed-claude/coaching",
         },
         {
           icon: "/icons/calculator.svg",
           title: "Preise",
-          description: "Pakete & Lizenzen",
+          description: "Kostenrechner & Pakete",
           href: "/managed-claude/preise",
         },
       ],

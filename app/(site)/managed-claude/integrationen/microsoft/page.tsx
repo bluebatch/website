@@ -11,11 +11,11 @@ import { ContactButton } from "@/components/buttons";
 export const metadata: Metadata = {
   title: "Outlook Connector: Posteingang, Kalender und Entwürfe in Claude | Bluebatch",
   description:
-    "Der Outlook Connector für das Private Claude AI Gateway bringt Posteingang, Kalender und Entwürfe direkt in Claude und ist die Grundlage für den Mail-Agenten. 500 € einmalig, inklusive bei 3 PT oder 8 PT Onboarding.",
+    "Der Outlook Connector für das Private Claude AI Gateway bringt Posteingang, Kalender und Entwürfe direkt in Claude und ist die Grundlage für den Mail-Agenten. 500 € einmalig, inklusive bei Coaching-Paket S oder L.",
   openGraph: {
     title: "Outlook Connector: Posteingang, Kalender und Entwürfe in Claude",
     description:
-      "Der Outlook Connector für das Private Claude AI Gateway bringt Posteingang, Kalender und Entwürfe direkt in Claude und ist die Grundlage für den Mail-Agenten. 500 € einmalig, inklusive bei 3 PT oder 8 PT Onboarding.",
+      "Der Outlook Connector für das Private Claude AI Gateway bringt Posteingang, Kalender und Entwürfe direkt in Claude und ist die Grundlage für den Mail-Agenten. 500 € einmalig, inklusive bei Coaching-Paket S oder L.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -42,7 +42,7 @@ export default function Page() {
         </IntroBox>
         <Typo.H1 className="text-center">Outlook Connector für Claude</Typo.H1>
         <GeoSummary align="center">
-          Der Outlook Connector bringt Posteingang, Kalender und Entwürfe aus Microsoft 365 direkt in Claude, über das Private Claude AI Gateway in Ihrem Konto. Er ist die Grundlage für den Mail-Agenten. Der Connector kostet einmalig 500 € und ist bei Buchung eines Onboarding-Pakets mit 3 oder 8 Personentagen inklusive.
+          Der Outlook Connector bringt Posteingang, Kalender und Entwürfe aus Microsoft 365 direkt in Claude, über das Private Claude AI Gateway in Ihrem Konto. Er ist die Grundlage für den Mail-Agenten. Der Connector kostet einmalig 500 € und ist bei Buchung von Coaching-Paket S oder L inklusive.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -97,11 +97,11 @@ export default function Page() {
           />
           <OfferCard
             highlight
-            href="/managed-claude/onboarding"
+            href="/managed-claude/coaching"
             price="inklusive"
-            title="Mit Onboarding-Paket"
-            description="Inklusive bei 3 PT oder 8 PT Onboarding."
-            linkLabel="Zu den Paketen"
+            title="Mit Coaching-Paket"
+            description="Inklusive bei Paket S oder Paket L."
+            linkLabel="Zu den Coaching-Paketen"
           />
           <OfferCard
             href="/managed-claude/use-cases"

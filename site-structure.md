@@ -112,8 +112,12 @@ Grundsätze:
 │   │   ── Basis: so arbeiten wir ──
 │   ├── wie-es-funktioniert ................... [CONTENT] (geplant) Ablauf, Rollen,
 │   │                                            Verantwortung Kunde vs. bluebatch
-│   ├── onboarding ............................ [MONEY]   (geplant) Einstieg & Setup
-│   ├── preise ................................ [MONEY]   (geplant) Preise & Pakete,
+│   ├── onboarding ............................ [MONEY]   Go-live-Roadmap, Einrichtung
+│   ├── coaching/ ............................. [HUB]     Schritt 2: Schulung, Kanzlei-
+│   │   │                                        Handbuch, KI-Kompetenzschulung
+│   │   ├── paket-s ........................... [MONEY]   3 PT, 3.000 €, 50 % Anrechnung
+│   │   └── paket-l ........................... [MONEY]   8 PT, 8.000 €, 100 % Anrechnung
+│   ├── preise ................................ [MONEY]   Preise, Kostenrechner [TOOL],
 │   │                                            direkt unter dem Haupt-Hub
 │   ├── was-kostet-ki ......................... [MONEY]   (Umzug von services/was-kostet-ki)
 │   ├── (weitere Basisseiten folgen) .......... z.B. Betrieb & Support,

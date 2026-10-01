@@ -116,10 +116,10 @@ export default function Page() {
             linkLabel="Zum Chat"
           />
           <OfferCard
-            href="/managed-claude/onboarding"
+            href="/managed-claude/coaching"
             title="Schritt 2: Coaching und Kanzlei-Handbuch"
-            description="Das Team wird gut und zertifiziert, das Wissen bleibt im Haus. Inklusive KI-Kompetenzschulung nach Art. 4 EU AI Act."
-            linkLabel="Zu Schulung und Onboarding"
+            description="Das Team wird gut und zertifiziert, das Wissen bleibt im Haus. Paket S 3.000 €, Paket L 8.000 €."
+            linkLabel="Zum Coaching"
           />
           <OfferCard
             href="/managed-claude/use-cases"

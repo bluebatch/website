@@ -4,6 +4,7 @@ import { Typo, IntroBox, GeoSummary, ProseColumns, DataTable, FaqContainer } fro
 import { OfferCard } from "@/components/cards";
 import { ConsultationCtaDefault } from "@/components/sections";
 import { ContactButton } from "@/components/buttons";
+import KostenRechner from "./kosten-rechner";
 
 // ENTWURF (Branch anthropic-managed-service-provider): Gerüst für die
 // Repositionierung auf Managed Claude, Inhalte werden noch geschärft.
@@ -59,7 +60,7 @@ export default function Page() {
             href="/managed-claude/onboarding"
             price="1.500 € einmalig"
             title="Einrichtung"
-            description="Vertrag, Tenant-Einrichtung und Anbindung ans Gateway: Gateway, Chat, SSO, Rollen, Protokoll und Limits, startklar übergeben."
+            description="Vertrag, Tenant-Einrichtung und Anbindung ans Gateway: Gateway, Chat, SSO, Rollen, Protokoll und Limits, startklar übergeben. Wird mit Coaching-Paket S zu 50 %, mit Paket L zu 100 % angerechnet."
             linkLabel="Zum Ablauf"
           />
           <OfferCard
@@ -79,7 +80,11 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper colorScheme="gray-light">
+      <ContentWrapper colorScheme="gray-light" id="rechner">
+        <KostenRechner />
+      </ContentWrapper>
+
+      <ContentWrapper>
         <IntroBox textCentered>
           <IntroBox.Headline>Modellkosten nach Verbrauch</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -129,7 +134,7 @@ export default function Page() {
         </Typo.Paragraph>
       </ContentWrapper>
 
-      <ContentWrapper>
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
           <IntroBox.Headline>Ein Gateway, eine Abrechnung, Limits pro Mitarbeiter und pro Agent</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -158,28 +163,73 @@ export default function Page() {
         </ProseColumns>
       </ContentWrapper>
 
+      <ContentWrapper>
+        <IntroBox textCentered>
+          <IntroBox.Headline>Anrechnung der Einrichtung</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Mit einem Coaching-Paket bekommen Sie die Einrichtung (1.500 €) ganz oder zur Hälfte zurück.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <div className="overflow-x-auto">
+          <DataTable>
+            <DataTable.Head>
+              <DataTable.Row>
+                <DataTable.HeaderCell>Paket</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Umfang</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Preis</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Anrechnung Einrichtung</DataTable.HeaderCell>
+                <DataTable.HeaderCell>Effektiv für die Einrichtung</DataTable.HeaderCell>
+              </DataTable.Row>
+            </DataTable.Head>
+            <DataTable.Body>
+              <DataTable.Row>
+                <DataTable.Cell bold>Ohne Coaching</DataTable.Cell>
+                <DataTable.Cell>Nur Einrichtung</DataTable.Cell>
+                <DataTable.Cell>0 €</DataTable.Cell>
+                <DataTable.Cell>0 %</DataTable.Cell>
+                <DataTable.Cell>1.500 €</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Paket S</DataTable.Cell>
+                <DataTable.Cell>3 Personentage</DataTable.Cell>
+                <DataTable.Cell>3.000 €</DataTable.Cell>
+                <DataTable.Cell>50 % (750 €)</DataTable.Cell>
+                <DataTable.Cell>750 €</DataTable.Cell>
+              </DataTable.Row>
+              <DataTable.Row>
+                <DataTable.Cell bold>Paket L</DataTable.Cell>
+                <DataTable.Cell>8 Personentage</DataTable.Cell>
+                <DataTable.Cell>8.000 €</DataTable.Cell>
+                <DataTable.Cell>100 % (1.500 €)</DataTable.Cell>
+                <DataTable.Cell>0 €</DataTable.Cell>
+              </DataTable.Row>
+            </DataTable.Body>
+          </DataTable>
+        </div>
+        <Typo.Paragraph className="mx-auto mt-6 max-w-3xl text-center text-gray-600">
+          Alle Preise zzgl. USt. Der Outlook Connector ist in beiden Paketen inklusive.
+        </Typo.Paragraph>
+      </ContentWrapper>
+
       <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
-          <IntroBox.Headline>Schulung und Onboarding</IntroBox.Headline>
-          <IntroBox.Paragraph>
-            Zwei Pakete, die Einrichtung wird verrechnet. Je mehr Schulung, desto mehr der Einrichtung bekommen Sie zurück.
-          </IntroBox.Paragraph>
+          <IntroBox.Headline>Die Coaching-Pakete</IntroBox.Headline>
         </IntroBox>
         <SimpleGrid cols={2} className="gap-6">
           <OfferCard
-            href="/managed-claude/onboarding"
+            href="/managed-claude/coaching/paket-s"
             price="3.000 €"
-            title="3 PT Onboarding"
-            description="KI-Kompetenzschulung, Grundlagen, erste Arbeitsanleitungen. Outlook Connector inklusive. 50 % der Einrichtung werden verrechnet."
-            linkLabel="Zum Onboarding"
+            title="Paket S: 3 Personentage"
+            description="KI-Kompetenzschulung, Grundlagen, erste Arbeitsanleitungen. Outlook Connector inklusive. 50 % der Einrichtung angerechnet."
+            linkLabel="Zu Paket S"
           />
           <OfferCard
             highlight
-            href="/managed-claude/onboarding"
+            href="/managed-claude/coaching/paket-l"
             price="8.000 €"
-            title="8 PT Onboarding"
-            description="Alles aus dem kleinen Paket plus Kanzlei-Handbuch, Routinen und Skills. Outlook Connector inklusive. 100 % der Einrichtung werden verrechnet."
-            linkLabel="Zum Onboarding"
+            title="Paket L: 8 Personentage"
+            description="Alles aus Paket S plus Kanzlei-Handbuch, Routinen und Skills. Outlook Connector inklusive. 100 % der Einrichtung angerechnet."
+            linkLabel="Zu Paket L"
           />
         </SimpleGrid>
       </ContentWrapper>
@@ -203,7 +253,7 @@ export default function Page() {
             href="/managed-claude/integrationen/microsoft"
             price="500 € einmalig"
             title="Outlook Connector"
-            description="Posteingang, Kalender und Entwürfe direkt in Claude, die Grundlage für den Mail-Agenten. Inklusive bei Buchung von 3 PT oder 8 PT Onboarding."
+            description="Posteingang, Kalender und Entwürfe direkt in Claude, die Grundlage für den Mail-Agenten. Inklusive bei Coaching-Paket S oder L."
             linkLabel="Zum Outlook Connector"
           />
         </SimpleGrid>

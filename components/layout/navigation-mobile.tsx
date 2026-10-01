@@ -21,6 +21,7 @@ const uberUns = [
 const managedClaude = [
   { label: "Wie es funktioniert", href: "/managed-claude/wie-es-funktioniert" },
   { label: "Onboarding", href: "/managed-claude/onboarding" },
+  { label: "Coaching", href: "/managed-claude/coaching" },
   { label: "Preise", href: "/managed-claude/preise" },
   { label: "Claude App", href: "/managed-claude/claude-app" },
   { label: "Claude API", href: "/managed-claude/claude-api" },

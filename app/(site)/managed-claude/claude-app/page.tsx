@@ -201,8 +201,8 @@ export default function Page() {
         </IntroBox>
         <SimpleGrid cols={3} className="gap-6">
           <OfferCard
-            href="/managed-claude/onboarding"
-            title="Schritt 2: Schulung und Coaching"
+            href="/managed-claude/coaching"
+            title="Schritt 2: Coaching"
             description="Das Team wird gut und zertifiziert, das Wissen bleibt im Haus."
             linkLabel="Mehr erfahren"
           />
