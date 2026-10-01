@@ -17,6 +17,7 @@ import {
 // mit Anrechnung der Einrichtung (S 50 %, L 100 %). Alle Werte zzgl. USt.
 
 const SETUP_EUR = 1500;
+const OUTLOOK_EUR = 500;
 
 const USER_CLASSES = [
   { key: "normal", label: "Normale Nutzer", hint: "gelegentlich Chat und Entwürfe", eurPerMonth: 40, initial: 10 },
@@ -43,15 +44,18 @@ export default function KostenRechner() {
     Object.fromEntries(USER_CLASSES.map((c) => [c.key, c.initial])),
   );
   const [pkgKey, setPkgKey] = useState<PackageKey>("s");
+  const [outlook, setOutlook] = useState(false);
 
   const r = useMemo(() => {
     const pkg = PACKAGES[pkgKey];
     const monthly = USER_CLASSES.reduce((sum, c) => sum + users[c.key] * c.eurPerMonth, 0);
     const credit = SETUP_EUR * pkg.credit;
-    const oneTime = SETUP_EUR + pkg.price - credit;
+    // Outlook Connector ist in Paket S und L inklusive, sonst 500 € einmalig
+    const outlookCost = pkgKey === "none" && outlook ? OUTLOOK_EUR : 0;
+    const oneTime = SETUP_EUR + pkg.price - credit + outlookCost;
     const totalUsers = USER_CLASSES.reduce((sum, c) => sum + users[c.key], 0);
-    return { pkg, monthly, credit, oneTime, totalUsers, year1: oneTime + monthly * 12 };
-  }, [users, pkgKey]);
+    return { pkg, monthly, credit, outlookCost, oneTime, totalUsers, year1: oneTime + monthly * 12 };
+  }, [users, pkgKey, outlook]);
 
   return (
     <CalculatorShell
@@ -86,6 +90,29 @@ export default function KostenRechner() {
             activeKey={pkgKey}
             onSelect={(k) => setPkgKey(k as PackageKey)}
           />
+          <label
+            className={`flex items-center justify-between gap-4 rounded-lg border px-4 py-3 ${
+              pkgKey === "none"
+                ? "border-gray-200 bg-white cursor-pointer"
+                : "border-gray-100 bg-gray-100 text-gray-400"
+            }`}
+          >
+            <span>
+              <span className="block text-sm font-semibold">Outlook Connector</span>
+              <span className="block text-xs text-gray-500">
+                {pkgKey === "none"
+                  ? "500 € einmalig, Grundlage für den Mail-Agenten"
+                  : "In Paket S und L inklusive"}
+              </span>
+            </span>
+            <input
+              type="checkbox"
+              className="h-5 w-5 accent-primary-600"
+              checked={pkgKey !== "none" || outlook}
+              disabled={pkgKey !== "none"}
+              onChange={(e) => setOutlook(e.target.checked)}
+            />
+          </label>
         </div>
 
         <div className="rounded-2xl border border-primary-200 bg-white p-6 space-y-6">
@@ -102,7 +129,7 @@ export default function KostenRechner() {
             <ResultMetric
               label="Einmalig"
               value={formatEur(r.oneTime)}
-              sub="Einrichtung plus Coaching, nach Anrechnung"
+              sub="Einrichtung, Coaching und Add-ons, nach Anrechnung"
             />
             <ResultMetric
               label="Erstes Jahr gesamt"
@@ -131,10 +158,12 @@ export default function KostenRechner() {
                 {r.credit > 0 ? `- ${formatEur(r.credit)}` : formatEur(0)}
               </dd>
             </div>
-            {pkgKey !== "none" && (
+            {(pkgKey !== "none" || outlook) && (
               <div className="flex justify-between py-2">
                 <dt className="text-gray-500">Outlook Connector</dt>
-                <dd className="font-medium">inklusive</dd>
+                <dd className="font-medium tabular-nums">
+                  {pkgKey !== "none" ? "inklusive" : formatEur(r.outlookCost)}
+                </dd>
               </div>
             )}
           </dl>
