@@ -142,7 +142,7 @@ export default function Page() {
         <IntroBox textCentered>
           <IntroBox.Headline>Was zum Start dazugehört</IntroBox.Headline>
         </IntroBox>
-        <ProseColumns cols={3}>
+        <ProseColumns cols={4}>
           <ProseColumns.Item title="Zugänge für alle Mitarbeiter">
             Nicht für drei Pilotnutzer, sondern für die ganze Organisation.
           </ProseColumns.Item>
@@ -151,6 +151,9 @@ export default function Page() {
           </ProseColumns.Item>
           <ProseColumns.Item title="Protokoll und Limits">
             Protokollierung aktiv, Verbrauchslimits pro Mitarbeiter hinterlegt.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Zentrale Profile">
+            Über das Managed Claude Interface gelten Ordner-Freigaben und gesperrte Tools für alle Nutzer, ohne jedes Gerät einzeln einzurichten.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
@@ -199,7 +202,13 @@ export default function Page() {
         <IntroBox textCentered>
           <IntroBox.Headline>Weiter geht es hier</IntroBox.Headline>
         </IntroBox>
-        <SimpleGrid cols={3} className="gap-6">
+        <SimpleGrid cols={2} className="gap-6">
+          <OfferCard
+            href="/managed-claude/zentrale-steuerung"
+            title="Managed Claude Interface"
+            description="Was die App darf, zentral über Profile steuern."
+            linkLabel="Mehr erfahren"
+          />
           <OfferCard
             href="/managed-claude/coaching"
             title="Schritt 2: Coaching"

@@ -24,6 +24,7 @@ const managedClaude = [
   { label: "Coaching", href: "/managed-claude/coaching" },
   { label: "Preise", href: "/managed-claude/preise" },
   { label: "Claude App", href: "/managed-claude/claude-app" },
+  { label: "Managed Claude Interface", href: "/managed-claude/zentrale-steuerung" },
   { label: "Claude API", href: "/managed-claude/claude-api" },
   { label: "Use Cases", href: "/managed-claude/use-cases" },
 ];

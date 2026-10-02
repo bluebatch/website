@@ -169,8 +169,11 @@ export default function KostenRechner() {
           </dl>
           <p className="text-xs text-gray-400">
             Schätzung, alle Preise zzgl. USt. Die Token-Werte je Nutzerklasse
-            sind Erfahrungswerte; die tatsächlichen Kosten hängen von Nutzung
-            und Modellwahl ab und werden über Limits pro Mitarbeiter gedeckelt.
+            sind Erfahrungswerte. Abgerechnet wird nach Verbrauch laut{" "}
+            <a href="#modellkosten" className="underline hover:text-primary-600">
+              Preisliste je 1 Mio. Tokens
+            </a>
+            , gedeckelt über Limits pro Mitarbeiter.
           </p>
           <ContactButton className="w-full justify-center">
             Angebot mit echten Fallzahlen anfragen

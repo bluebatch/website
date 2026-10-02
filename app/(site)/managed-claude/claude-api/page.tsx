@@ -80,8 +80,8 @@ export default function Page() {
           <ProseColumns.Item title="Eigenes Budget">
             Jeder Key hat einen Deckel mit Warnschwelle. Ein Agent in der Schleife kostet maximal sein Budget.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Modellkosten 1:1">
-            Ohne Aufschlag durchgereicht. Haiku für Einfaches, Sonnet im Alltag, Opus für die harten Fälle.
+          <ProseColumns.Item title="Modellkosten laut Preisliste">
+            Abgerechnet nach Verbrauch zu den Preisen je 1 Million Tokens aus unserer Preisliste. Haiku für Einfaches, Sonnet im Alltag, Opus für die harten Fälle.
           </ProseColumns.Item>
         </ProseColumns>
       </ContentWrapper>
@@ -115,10 +115,10 @@ export default function Page() {
             linkLabel="Mehr erfahren"
           />
           <OfferCard
-            href="/managed-claude/preise"
-            title="Preise"
-            description="Tokenpreise je Modell und wie die Abrechnung läuft."
-            linkLabel="Mehr erfahren"
+            href="/managed-claude/preise#modellkosten"
+            title="Preisliste"
+            description="Kosten je 1 Million Tokens, je Modell."
+            linkLabel="Zur Preisliste"
           />
           <OfferCard
             href="/managed-claude/integrationen/mcp-server-erstellen"

@@ -27,6 +27,7 @@ const LABELS: Record<string, string> = {
   onboarding: "Onboarding",
   preise: "Preise",
   coaching: "Coaching",
+  "zentrale-steuerung": "Managed Claude Interface",
   "paket-s": "Paket S",
   "paket-l": "Paket L",
   integrationen: "Integrationen",

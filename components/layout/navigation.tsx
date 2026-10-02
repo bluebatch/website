@@ -97,6 +97,12 @@ const managedClaudeMenu = {
           href: "/managed-claude/claude-app",
         },
         {
+          icon: "/icons/adjustments.svg",
+          title: "Managed Claude Interface",
+          description: "Compliance zentral steuern",
+          href: "/managed-claude/zentrale-steuerung",
+        },
+        {
           icon: "/icons/puzzle.svg",
           title: "Claude API",
           description: "Eigene Apps, Kosten je Use Case",

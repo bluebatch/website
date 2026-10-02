@@ -17,11 +17,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 export const metadata: Metadata = {
   title: "Private Claude AI Gateway: KI mit einem Partner statt fünfzehn Tools | Bluebatch",
   description:
-    "Managed Claude von Bluebatch: das Private Claude AI Gateway in Ihrem Konto, AWS Bedrock Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und § 62a StBerG. Einrichtung 1.500 €, Modellkosten 1:1.",
+    "Managed Claude von Bluebatch: das Private Claude AI Gateway in Ihrem Konto, AWS Bedrock Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und § 62a StBerG. Einrichtung 1.500 €, Modellkosten laut Preisliste je 1 Mio. Tokens.",
   openGraph: {
     title: "Private Claude AI Gateway: KI mit einem Partner statt fünfzehn Tools",
     description:
-      "Managed Claude von Bluebatch: das Private Claude AI Gateway in Ihrem Konto, AWS Bedrock Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und § 62a StBerG. Einrichtung 1.500 €, Modellkosten 1:1.",
+      "Managed Claude von Bluebatch: das Private Claude AI Gateway in Ihrem Konto, AWS Bedrock Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und § 62a StBerG. Einrichtung 1.500 €, Modellkosten laut Preisliste je 1 Mio. Tokens.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -48,13 +48,13 @@ export default function Page() {
         </IntroBox>
         <Typo.H1 className="text-center">KI mit einem Partner statt mit fünfzehn Tools</Typo.H1>
         <GeoSummary align="center">
-          Das Private Claude AI Gateway von Bluebatch ist eine eigene KI-Infrastruktur für Kanzleien und Unternehmen: Claude von Anthropic über AWS Bedrock in Frankfurt, in Ihrem eigenen Konto, DSGVO-konform und berufsrechtlich tragfähig nach § 203 StGB und § 62a StBerG. Die Einrichtung kostet einmalig 1.500 €, die Modellkosten werden 1:1 ohne Aufschlag abgerechnet.
+          Das Private Claude AI Gateway von Bluebatch ist eine eigene KI-Infrastruktur für Kanzleien und Unternehmen: Claude von Anthropic über AWS Bedrock in Frankfurt, in Ihrem eigenen Konto, DSGVO-konform und berufsrechtlich tragfähig nach § 203 StGB und § 62a StBerG. Die Einrichtung kostet einmalig 1.500 €, die Modellkosten werden nach Verbrauch laut Preisliste je 1 Million Tokens abgerechnet.
         </GeoSummary>
         <div className="mx-auto mb-8 max-w-xl">
           <Typo.List>
             <Typo.ListItem>Eigenes Konto, AWS Bedrock in Frankfurt (EU)</Typo.ListItem>
             <Typo.ListItem>Tragfähig nach § 203 StGB, § 43e BRAO und § 62a StBerG</Typo.ListItem>
-            <Typo.ListItem>Keine Lizenz pro Kopf, Modellkosten 1:1 ohne Aufschlag</Typo.ListItem>
+            <Typo.ListItem>Keine Lizenz pro Kopf, Modellkosten laut Preisliste je 1 Mio. Tokens</Typo.ListItem>
             <Typo.ListItem>Einrichtung 1.500 € Festpreis, startklar in maximal 1 Woche</Typo.ListItem>
           </Typo.List>
         </div>
@@ -251,6 +251,13 @@ export default function Page() {
         </IntroBox>
         <SimpleGrid cols={3} className="gap-6">
           <OfferCard
+            highlight
+            href="/managed-claude/zentrale-steuerung"
+            title="Managed Claude Interface"
+            description="Compliance der Claude-App zentral steuern: Profile, Ordner-Freigaben, gesperrte Tools."
+            linkLabel="Zum Interface"
+          />
+          <OfferCard
             href="/managed-claude/wie-es-funktioniert"
             title="Wie es funktioniert"
             description="Architektur, Rechtsrahmen nach § 203 StGB und § 62a StBerG, kein Lock-in."
@@ -308,7 +315,7 @@ export default function Page() {
             },
             {
               "question": "Was kostet das?",
-              "answer": "Die Einrichtung kostet einmalig 1.500 € zzgl. USt. Danach zahlen Sie die Modellkosten nach Verbrauch, 1:1 ohne Aufschlag aus Ihrer AWS-Rechnung durchgereicht. Eine Lizenz pro Kopf gibt es nicht."
+              "answer": "Die Einrichtung kostet einmalig 1.500 € zzgl. USt. Danach zahlen Sie die Modellkosten nach Verbrauch, zu den Preisen je 1 Million Tokens aus unserer Preisliste. Eine Lizenz pro Kopf gibt es nicht."
             },
             {
               "question": "Brauchen wir alle Schritte auf einmal?",

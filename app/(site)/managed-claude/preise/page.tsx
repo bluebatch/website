@@ -12,11 +12,11 @@ import KostenRechner from "./kosten-rechner";
 export const metadata: Metadata = {
   title: "Preise Private Claude AI Gateway: Einrichtung, Tokens, Pakete | Bluebatch",
   description:
-    "Preise für das Private Claude AI Gateway: Einrichtung 1.500 € einmalig, Modellkosten nach Verbrauch 1:1 ohne Aufschlag, Onboarding-Pakete 3.000 € und 8.000 €, DATEV MCP 100 € pro Monat, Outlook Connector 500 €.",
+    "Preise für das Private Claude AI Gateway: Einrichtung 1.500 € einmalig, Modellkosten nach Verbrauch laut Preisliste je 1 Mio. Tokens, Coaching-Pakete 3.000 € und 8.000 €, DATEV MCP 100 € pro Monat, Outlook Connector 500 €.",
   openGraph: {
     title: "Preise Private Claude AI Gateway: Einrichtung, Tokens, Pakete",
     description:
-      "Preise für das Private Claude AI Gateway: Einrichtung 1.500 € einmalig, Modellkosten nach Verbrauch 1:1 ohne Aufschlag, Onboarding-Pakete 3.000 € und 8.000 €, DATEV MCP 100 € pro Monat, Outlook Connector 500 €.",
+      "Preise für das Private Claude AI Gateway: Einrichtung 1.500 € einmalig, Modellkosten nach Verbrauch laut Preisliste je 1 Mio. Tokens, Coaching-Pakete 3.000 € und 8.000 €, DATEV MCP 100 € pro Monat, Outlook Connector 500 €.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -43,7 +43,7 @@ export default function Page() {
         </IntroBox>
         <Typo.H1 className="text-center">Preise für Claude in Kanzlei und Unternehmen</Typo.H1>
         <GeoSummary align="center">
-          Das Private Claude AI Gateway kostet einmalig 1.500 € für Vertrag, Tenant-Einrichtung und Anbindung ans Gateway. Danach zahlen Sie die Modellkosten nach Verbrauch, 1:1 ohne Aufschlag aus Ihrer AWS-Rechnung durchgereicht, zum Beispiel 2,60 € je Million Input-Tokens bei Claude Sonnet 5. Eine Lizenz pro Kopf gibt es nicht. Alle Preise zzgl. USt.
+          Das Private Claude AI Gateway kostet einmalig 1.500 € für Vertrag, Tenant-Einrichtung und Anbindung ans Gateway. Danach zahlen Sie die Modellkosten nach Verbrauch laut unserer Preisliste je 1 Million Tokens, zum Beispiel 2,60 € je Million Input-Tokens bei Claude Sonnet 5. Eine Lizenz pro Kopf gibt es nicht. Alle Preise zzgl. USt.
         </GeoSummary>
         <div className="flex justify-center">
           <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -64,11 +64,11 @@ export default function Page() {
             linkLabel="Zum Ablauf"
           />
           <OfferCard
-            href="/managed-claude/wie-es-funktioniert"
+            href="/managed-claude/preise#modellkosten"
             price="nach Verbrauch"
             title="Modellkosten"
-            description="Nach Verbrauch, 1:1 ohne Aufschlag aus Ihrer AWS-Rechnung durchgereicht. Wir verdienen nicht an Ihrem Verbrauch."
-            linkLabel="Wie die Abrechnung läuft"
+            description="Nach Verbrauch, zu den Preisen je 1 Million Tokens aus unserer Preisliste. Sichtbar pro Mitarbeiter und pro Agent."
+            linkLabel="Zur Preisliste"
           />
           <OfferCard
             href="/contact"
@@ -84,9 +84,9 @@ export default function Page() {
         <KostenRechner />
       </ContentWrapper>
 
-      <ContentWrapper>
+      <ContentWrapper id="modellkosten">
         <IntroBox textCentered>
-          <IntroBox.Headline>Modellkosten nach Verbrauch</IntroBox.Headline>
+          <IntroBox.Headline>Preisliste: Modellkosten nach Verbrauch</IntroBox.Headline>
           <IntroBox.Paragraph>
             Preise je Million Tokens. 1 Million Tokens entsprechen etwa 750.000 Wörtern.
           </IntroBox.Paragraph>
@@ -145,8 +145,8 @@ export default function Page() {
           <ProseColumns.Item title="Keine Lizenz pro Kopf">
             Sie zahlen, was benutzt wird, nicht, wer angelegt ist. Erfahrungsgemäß tragen 20 bis 30 % der Belegschaft den Großteil der Nutzung.
           </ProseColumns.Item>
-          <ProseColumns.Item title="Modellkosten 1:1">
-            Ohne Aufschlag aus Ihrer AWS-Rechnung durchgereicht. Wir verdienen nicht an Ihrem Verbrauch.
+          <ProseColumns.Item title="Modellkosten laut Preisliste">
+            Abgerechnet wird nach Verbrauch zu den Preisen je 1 Million Tokens aus der Preisliste oben, je Modell.
           </ProseColumns.Item>
           <ProseColumns.Item title="Alles in einer Abrechnung">
             Chat, Routinen, Agenten und Anbindungen: eine Rechnung, eine Auswertung.

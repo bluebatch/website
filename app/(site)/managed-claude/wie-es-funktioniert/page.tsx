@@ -193,6 +193,20 @@ export default function Page() {
 
       <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
+          <IntroBox.Headline>Zentral gesteuert</IntroBox.Headline>
+        </IntroBox>
+        <SimpleGrid cols={2} className="gap-6">
+          <OfferCard
+            href="/managed-claude/zentrale-steuerung"
+            title="Managed Claude Interface"
+            description="Ordner-Freigaben, gesperrte Tools, Modelle und Limits als Profile, für alle Nutzer zentral."
+            linkLabel="Zum Interface"
+          />
+        </SimpleGrid>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <IntroBox textCentered>
           <IntroBox.Headline>Was in der Private-Umgebung nicht geht</IntroBox.Headline>
           <IntroBox.Paragraph>
             Transparenz vorab: Diese Funktionen der öffentlichen Claude-App gibt es über das Gateway nicht.
@@ -217,7 +231,7 @@ export default function Page() {
         </ProseColumns>
       </ContentWrapper>
 
-      <ContentWrapper>
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
           <IntroBox.Headline>Mehr zum Berufsrecht</IntroBox.Headline>
         </IntroBox>

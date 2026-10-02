@@ -120,6 +120,8 @@ Grundsätze:
 │   ├── preise ................................ [MONEY]   Preise, Kostenrechner [TOOL],
 │   │                                            direkt unter dem Haupt-Hub
 │   ├── was-kostet-ki ......................... [MONEY]   (Umzug von services/was-kostet-ki)
+│   ├── zentrale-steuerung .................... [MONEY]   Managed Claude Interface: Profile,
+│   │                                            Ordner-Freigaben, Tools sperren
 │   ├── (weitere Basisseiten folgen) .......... z.B. Betrieb & Support,
 │   │                                            Datenschutz/DSGVO
 │   │
