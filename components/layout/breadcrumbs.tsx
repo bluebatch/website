@@ -28,7 +28,7 @@ const LABELS: Record<string, string> = {
   preise: "Preise",
   coaching: "Coaching",
   "zentrale-steuerung": "Managed Claude Interface",
-  "paket-s": "Paket S",
+  "paket-m": "Paket M",
   "paket-l": "Paket L",
   integrationen: "Integrationen",
   microsoft: "Microsoft 365",
