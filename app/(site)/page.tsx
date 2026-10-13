@@ -24,6 +24,7 @@ import CardShowcase from "@/components/cards/card-showcase";
 import Customer from "@/components/sections/customer/customer";
 import IntroBox from "@/components/ui/intro-box";
 import OfferCard from "@/components/cards/offer-card";
+import { FaqContainer } from "@/components/ui/faqs";
 
 export const rewriteSiteConfig: RewriteSiteConfig = {
   rewrites: [
@@ -54,10 +55,14 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 export const metadata: Metadata = {
-  title: "Bluebatch - Managed Service Provider für Claude | Managed Claude",
+  title: "Claude AI Deutschland: Claude von Anthropic im eigenen Konto | Bluebatch",
   description:
-    "Bluebatch ist Managed Service Provider für Claude: das Private Claude AI Gateway im eigenen Konto, AWS Bedrock Frankfurt, nach § 203 StGB und § 62a StBerG. Einrichtung 1.500 € Festpreis.",
+    "Claude AI in Deutschland nutzen: Bluebatch betreibt Claude von Anthropic in Ihrem Konto über AWS Bedrock Frankfurt, nach § 203 StGB. Einrichtung 1.500 €.",
   keywords: [
+    "Claude AI Deutschland",
+    "Claude AI deutsch",
+    "Claude von Anthropic",
+    "Anthropic Partner",
     "Claude Managed Service Provider",
     "Managed Claude",
     "Claude für Unternehmen",
@@ -80,27 +85,27 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Bluebatch" }],
   openGraph: {
-    title: "Bluebatch - Managed Service Provider für Claude",
+    title: "Claude AI Deutschland: Claude von Anthropic im eigenen Konto",
     description:
-      "Claude von Anthropic als Managed Service: App, API und Use Cases aus einer Hand, mit DATEV- und Microsoft-365-Anbindung.",
+      "Claude AI in Deutschland nutzen: Bluebatch betreibt Claude von Anthropic in Ihrem Konto über AWS Bedrock Frankfurt, nach § 203 StGB. Einrichtung 1.500 €.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=Bluebatch%20-%20Managed%20Service%20Provider%20f%C3%BCr%20Claude&eyebrow=Bluebatch",
+        url: "/og?title=Claude%20AI%20in%20Deutschland%2C%20sicher%20im%20eigenen%20Konto&eyebrow=Bluebatch",
         width: 1200,
         height: 630,
-        alt: "Bluebatch - Managed Service Provider für Claude",
+        alt: "Claude AI in Deutschland, sicher im eigenen Konto",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bluebatch - Managed Service Provider für Claude",
+    title: "Claude AI Deutschland: Claude von Anthropic im eigenen Konto",
     description:
-      "Claude von Anthropic als Managed Service: App, API und Use Cases aus einer Hand, mit DATEV- und Microsoft-365-Anbindung.",
-    images: ["/og?title=Bluebatch%20-%20Managed%20Service%20Provider%20f%C3%BCr%20Claude&eyebrow=Bluebatch"],
+      "Claude AI in Deutschland nutzen: Bluebatch betreibt Claude von Anthropic in Ihrem Konto über AWS Bedrock Frankfurt, nach § 203 StGB. Einrichtung 1.500 €.",
+    images: ["/og?title=Claude%20AI%20in%20Deutschland%2C%20sicher%20im%20eigenen%20Konto&eyebrow=Bluebatch"],
   },
   robots: {
     index: true,
@@ -122,22 +127,22 @@ export default function Home() {
           opacityBackground="white"
         >
           <BackgroundHero.TopLabel>
-            Private Claude AI Gateway
+            Managed Service Provider für Claude
           </BackgroundHero.TopLabel>
           <BackgroundHero.Headline>
-            KI mit einem Partner
+            Claude AI in Deutschland,
             <br />
-            statt mit{" "}
+            sicher im{" "}
             <BackgroundHero.Highlight>
-              fünfzehn Tools
+              eigenen Konto
             </BackgroundHero.Highlight>
           </BackgroundHero.Headline>
           <BackgroundHero.Description geo>
-            Bluebatch ist Managed Service Provider für Claude von Anthropic.
-            Das Private Claude AI Gateway läuft in Ihrem eigenen Konto über AWS
-            Bedrock in Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und
-            § 62a StBerG. Die Einrichtung kostet einmalig 1.500 €, danach zahlen
-            Sie nur den Verbrauch, ohne Lizenz pro Kopf.
+            Bluebatch bringt Claude von Anthropic in Deutschland in Ihr eigenes
+            Konto: Das Private Claude AI Gateway läuft über AWS Bedrock in
+            Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und § 62a
+            StBerG. Die Einrichtung kostet einmalig 1.500 €, danach zahlen Sie
+            nur den Verbrauch, ohne Lizenz pro Kopf.
           </BackgroundHero.Description>
           <BackgroundHero.CallToAction>
             <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -166,7 +171,9 @@ export default function Home() {
       <ContentWrapper>
         <IntroBox>
           <IntroBox.PreHeadline>Managed Claude</IntroBox.PreHeadline>
-          <IntroBox.Headline>Ein Fundament, drei Schritte</IntroBox.Headline>
+          <IntroBox.Headline>
+            Claude von Anthropic einführen: ein Fundament, drei Schritte
+          </IntroBox.Headline>
           <IntroBox.Subline>
             Erst arbeiten, dann gut werden, dann automatisieren. Sie entscheiden
             zuerst nur über Schritt 1: klein, zum Festpreis und umkehrbar.
@@ -177,14 +184,14 @@ export default function Home() {
             highlight
             href="/managed-claude/claude-app"
             title="Schritt 1: Chat"
-            description="Der Chat für jeden Mitarbeiter ab Tag 1: Chat, Co-Work und Projekte mit SSO, Rollen, Protokoll und Limits."
+            description="Claude Desktop für jeden Mitarbeiter ab Tag 1: Chat, Cowork und Projekte mit SSO, Rollen, Protokoll und Limits."
             linkLabel="Zum Chat"
           />
           <OfferCard
-            href="/managed-claude/onboarding"
+            href="/managed-claude/coaching"
             title="Schritt 2: Coaching"
-            description="Schulung und Kanzlei-Handbuch über drei Monate, mit zertifizierter KI-Kompetenzschulung nach Art. 4 EU AI Act."
-            linkLabel="Zum Onboarding"
+            description="KI-Schulung im Haus mit Kompetenzschulung nach Art. 4 EU AI Act: Paket M mit 5 Personentagen für 5.000 €, Paket L mit 10 für 10.000 €. Einrichtung und Outlook Connector werden voll angerechnet."
+            linkLabel="Zum Coaching"
           />
           <OfferCard
             href="/managed-claude/use-cases"
@@ -207,7 +214,7 @@ export default function Home() {
             <IntroBox textCentered={false}>
               <IntroBox.PreHeadline>The DNA</IntroBox.PreHeadline>
               <IntroBox.Headline>
-                Ihr Managed Service Provider für Claude
+                Ihr Partner für Claude von Anthropic in Deutschland
               </IntroBox.Headline>
               <IntroBox.Subline>
                 Im Herzen des Mittelstands und des Großhandels liegt ein
@@ -251,7 +258,7 @@ export default function Home() {
         <IntroBox>
           <IntroBox.PreHeadline>Enterprise Heritage</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            AI Agentur mit Enterprise-Expertise statt „Clicky-Bude"
+            AI Agentur mit Enterprise-Expertise statt „Clicky-Bude“
           </IntroBox.Headline>
           <IntroBox.Subline>
             Bluebatch ist eine spezialisierte Tochter der Pexon Consulting. Als
@@ -271,7 +278,7 @@ export default function Home() {
             <Typo.H3>Cloud-Native & Sicher</Typo.H3>
             <Typo.Paragraph>
               Wir wissen, wie man Systeme skaliert, die höchsten
-              Sicherheitsansprüchen genügen. Als Software Agentur „basteln" wir
+              Sicherheitsansprüchen genügen. Als Software Agentur „basteln“ wir
               nicht mit Tools, sondern bauen robuste, architekturell saubere
               Lösungen.
             </Typo.Paragraph>
@@ -317,7 +324,7 @@ export default function Home() {
           <div>
             <IntroBox textCentered={false}>
               <IntroBox.PreHeadline>
-                „Time-to-Market"-Falle
+                „Time-to-Market“-Falle
               </IntroBox.PreHeadline>
               <IntroBox.Headline>
                 KI-Automatisierung als Lösung
@@ -332,7 +339,7 @@ export default function Home() {
               <IntroBox.Paragraph>
                 Wir lösen dieses Problem durch Workflow Engineering. Mit einer
                 Kombination aus Claude und gezielter Automatisierung
-                schaffen wir „Daten-Autobahnen".
+                schaffen wir „Daten-Autobahnen“.
               </IntroBox.Paragraph>
             </IntroBox>
           </div>
@@ -440,7 +447,7 @@ export default function Home() {
               <IntroBox.PreHeadline>Keine Plattform-Logik</IntroBox.PreHeadline>
               <IntroBox.Headline>Wir bauen Ihre Lösung.</IntroBox.Headline>
               <IntroBox.Subline>
-                In einer Welt voller „Blackbox"-Software gehen wir einen anderen
+                In einer Welt voller „Blackbox“-Software gehen wir einen anderen
                 Weg. Bluebatch ist kein anonymes Tool, sondern eine
                 Workflow-Engineering-Unit. Wir analysieren Ihre manuellen
                 Prozesse, entwerfen die passende Architektur und implementieren
@@ -577,7 +584,7 @@ export default function Home() {
               <TimelineAsStepsStep value={3} isLast>
                 <Typo.H3 className="mt-2!">Quality Assurance</Typo.H3>
                 <Typo.Paragraph>
-                  Durch „Human-in-the-Loop"-Schnittstellen stellen wir sicher,
+                  Durch „Human-in-the-Loop“-Schnittstellen stellen wir sicher,
                   dass die KI nur vorbereitet und der Mensch dort steuert, wo es
                   kritisch ist.
                 </Typo.Paragraph>
@@ -691,6 +698,41 @@ export default function Home() {
         <Customer type="band" />
       </ContentWrapper>
 
+      {/* FAQ */}
+      <ContentWrapper colorScheme="gray-light" bodyWidth="small">
+        <FaqContainer
+          headline="Häufige Fragen zu Claude AI in Deutschland"
+          intro="Was Kanzleien und Unternehmen vor dem Start wissen wollen."
+          faqs={[
+            {
+              question: "Kann man Claude AI in Deutschland datenschutzkonform nutzen?",
+              answer:
+                "Ja, wenn die Verarbeitung in der EU läuft und die Verträge stimmen. Beim Private Claude AI Gateway läuft Claude von Anthropic über AWS Bedrock in Frankfurt, in Ihrem eigenen Konto, mit AV-Vertrag nach Art. 28 DSGVO. Kein Training mit Ihren Daten, kein Verlauf beim Anbieter. Für Kanzleien liefern wir zusätzlich die Unterlagen für § 203 StGB und § 62a StBerG.",
+            },
+            {
+              question: "Versteht und schreibt Claude AI Deutsch?",
+              answer:
+                "Ja. Claude von Anthropic versteht und schreibt Deutsch auf hohem Niveau, auch die Fachsprache aus Steuerrecht, Recht und Technik. Mails, Schriftsätze und Zusammenfassungen entstehen direkt auf Deutsch, im Ton, den Sie über firmenweite Anweisungen vorgeben.",
+            },
+            {
+              question: "Brauche ich einen Anthropic Partner, um Claude im Unternehmen zu nutzen?",
+              answer:
+                "Nicht zwingend, aber es spart viel Arbeit. Claude gibt es als Abo direkt bei Anthropic oder über AWS Bedrock im eigenen Konto. Für den zweiten Weg braucht es jemanden, der Gateway, Anmeldung, Rechte, Limits und Abrechnung aufsetzt und das Team schult. Das übernimmt Bluebatch als Managed Service Provider für Claude.",
+            },
+            {
+              question: "Was kostet Claude von Anthropic über Bluebatch?",
+              answer:
+                "Die Einrichtung des Private Claude AI Gateway kostet einmalig 1.500 € zzgl. USt. Danach zahlen Sie die Modellkosten nach Verbrauch laut Preisliste, zum Beispiel 2,60 € je 1 Million Input-Tokens bei Claude Sonnet 5.5. Eine Lizenz pro Kopf gibt es nicht.",
+            },
+            {
+              question: "Wie schnell können wir mit Claude starten?",
+              answer:
+                "Nach einem Scoping-Gespräch von 30 Minuten bekommen Sie drei Tage später ein Angebot. Maximal eine Woche nach Auftrag sind Gateway und Claude Desktop eingerichtet und alle Mitarbeiter haben Zugang.",
+            },
+          ]}
+        />
+      </ContentWrapper>
+
       {/* Final Statement Section */}
       <ContentWrapper colorScheme="dark">
         <div className="py-12">
@@ -701,7 +743,7 @@ export default function Home() {
               Wir kombinieren die Agilität eines KI-Startups mit der
               Zuverlässigkeit einer Enterprise-Beratung. Lassen Sie uns
               gemeinsam die manuelle Ära beenden und Ihr Unternehmen auf
-              „Autopilot" für Routineprozesse stellen.
+              „Autopilot“ für Routineprozesse stellen.
             </IntroBox.Subline>
             <div className="flex flex-col items-center gap-4">
               <ContactButton icon="chat">
