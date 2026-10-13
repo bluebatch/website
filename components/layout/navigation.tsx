@@ -4,25 +4,16 @@ import { ArrowRight } from "lucide-react";
 import ContactButton from "@/components/buttons/contact-button";
 import Button from "@/components/ui/button";
 import NavigationMobile from "@/components/layout/navigation-mobile";
-
-const navIcons: Record<string, string[]> = {
-  "/icons/phone.svg": [
-    "M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z",
-  ],
-  "/icons/factory.svg": [
-    "M2 20a2 2 0 002 2h16a2 2 0 002-2V8l-7 5V8l-7 5V4a2 2 0 00-2-2H4a2 2 0 00-2 2z",
-    "M17 18h1",
-    "M12 18h1",
-    "M7 18h1",
-  ],
-};
+import NavIcon, { type NavIconName } from "@/components/layout/nav-icon";
+import { ClaudeLogo } from "@/components/icons/brand-logos";
+import { BookOpen, Building2, Users } from "lucide-react";
 
 const uberUnsMenu = {
   sections: [
     {
       items: [
         {
-          icon: "/icons/award.svg",
+          icon: "grow" as NavIconName,
           title: "Mit euch wachsen",
           description: "Vom ersten Workflow zur AI-Plattform",
           href: "/mit-euch-wachsen",
@@ -32,19 +23,19 @@ const uberUnsMenu = {
     {
       items: [
         {
-          icon: "/icons/people-group.svg",
+          icon: "team" as NavIconName,
           title: "Das Team",
           description: "lernen Sie uns kennen",
           href: "/team",
         },
         {
-          icon: "/icons/rocket-launch.svg",
+          icon: "career" as NavIconName,
           title: "Karriere",
           description: "Offene Stellen & Bewerbung",
           href: "/karriere",
         },
         {
-          icon: "/icons/phone.svg",
+          icon: "phone" as NavIconName,
           title: "Kontakt",
           description: "Nehmen Sie Kontakt auf",
           href: "/contact",
@@ -61,25 +52,25 @@ const managedClaudeMenu = {
       href: "/managed-claude",
       items: [
         {
-          icon: "/icons/process.svg",
+          icon: "route" as NavIconName,
           title: "Wie es funktioniert",
           description: "Ablauf & Verantwortung",
           href: "/managed-claude/wie-es-funktioniert",
         },
         {
-          icon: "/icons/rocket-launch.svg",
+          icon: "rocket" as NavIconName,
           title: "Onboarding",
           description: "Startklar in einer Woche",
           href: "/managed-claude/onboarding",
         },
         {
-          icon: "/icons/academic-cap.svg",
+          icon: "coaching" as NavIconName,
           title: "Coaching",
-          description: "Paket S und Paket L",
+          description: "Paket M und Paket L",
           href: "/managed-claude/coaching",
         },
         {
-          icon: "/icons/calculator.svg",
+          icon: "euro" as NavIconName,
           title: "Preise",
           description: "Kostenrechner & Pakete",
           href: "/managed-claude/preise",
@@ -91,25 +82,25 @@ const managedClaudeMenu = {
       href: "/managed-claude",
       items: [
         {
-          icon: "/icons/people-group.svg",
+          icon: "claude" as NavIconName,
           title: "Claude App",
           description: "Claude fürs ganze Team",
           href: "/managed-claude/claude-app",
         },
         {
-          icon: "/icons/adjustments.svg",
+          icon: "dashboard" as NavIconName,
           title: "Managed Claude Interface",
           description: "Compliance zentral steuern",
           href: "/managed-claude/zentrale-steuerung",
         },
         {
-          icon: "/icons/puzzle.svg",
+          icon: "key" as NavIconName,
           title: "Claude API",
           description: "Eigene Apps, Kosten je Use Case",
           href: "/managed-claude/claude-api",
         },
         {
-          icon: "/icons/admin-with-cogwheels.svg",
+          icon: "bot" as NavIconName,
           title: "Use Cases",
           description: "Wir bauen Anwendungen",
           href: "/managed-claude/use-cases",
@@ -121,19 +112,19 @@ const managedClaudeMenu = {
       href: "/managed-claude/integrationen",
       items: [
         {
-          icon: "/icons/calculator.svg",
+          icon: "datev" as NavIconName,
           title: "DATEV",
           description: "Claude mit DATEV-Daten",
           href: "/managed-claude/integrationen/datev",
         },
         {
-          icon: "/icons/cloud.svg",
+          icon: "microsoft" as NavIconName,
           title: "Microsoft 365",
           description: "Outlook, Teams, SharePoint",
           href: "/managed-claude/integrationen/microsoft",
         },
         {
-          icon: "/icons/lightning-bolt.svg",
+          icon: "brave" as NavIconName,
           title: "Websuche",
           description: "Aktuelle Quellen aus dem Web",
           href: "/managed-claude/integrationen/websearch",
@@ -145,19 +136,19 @@ const managedClaudeMenu = {
       href: "/managed-claude/weitere-tools",
       items: [
         {
-          icon: "/icons/workflow.svg",
+          icon: "n8n" as NavIconName,
           title: "n8n",
           description: "Hosting, Wartung, Schulungen",
           href: "/managed-claude/weitere-tools/n8n",
         },
         {
-          icon: "/icons/settings.svg",
+          icon: "make" as NavIconName,
           title: "Make",
           description: "Visueller Szenario-Builder",
           href: "/managed-claude/weitere-tools/make",
         },
         {
-          icon: "/icons/wrench.svg",
+          icon: "grid" as NavIconName,
           title: "Alle Tools",
           description: "Zapier, Navision, easybill u.m.",
           href: "/managed-claude/weitere-tools",
@@ -171,36 +162,36 @@ const branchenMenu = {
   topics: [
     {
       title: "Großhandel",
-      icon: "/icons/factory.svg",
+      icon: "factory" as NavIconName,
       href: "/branchen/grosshandel",
       cases: [
         {
-          icon: "/icons/privacy.svg",
+          icon: "shield" as NavIconName,
           title: "Private AI",
           href: "/branchen/grosshandel/private-ai",
         },
         {
-          icon: "/icons/people-group.svg",
+          icon: "assistant" as NavIconName,
           title: "KI-Assistenten",
           href: "/branchen/grosshandel/ki-assistenten",
         },
         {
-          icon: "/icons/admin-with-cogwheels.svg",
+          icon: "bot" as NavIconName,
           title: "KI-Agenten",
           href: "/branchen/grosshandel/ki-agenten",
         },
         {
-          icon: "/icons/personal-connections.svg",
+          icon: "chat" as NavIconName,
           title: "Chatbots",
           href: "/branchen/grosshandel/chatbots",
         },
         {
-          icon: "/icons/workflow.svg",
+          icon: "workflow" as NavIconName,
           title: "Workflows",
           href: "/branchen/grosshandel/workflows",
         },
         {
-          icon: "/icons/calculator.svg",
+          icon: "roi" as NavIconName,
           title: "ROI-Rechner",
           href: "/branchen/grosshandel/roi-rechner",
         },
@@ -208,31 +199,31 @@ const branchenMenu = {
     },
     {
       title: "Steuerberater",
-      icon: "/icons/calculator.svg",
+      icon: "calculator" as NavIconName,
       href: "/branchen/steuerberater",
       cases: [
         {
-          icon: "/icons/privacy.svg",
+          icon: "shield" as NavIconName,
           title: "Private AI",
           href: "/branchen/steuerberater/private-ai",
         },
         {
-          icon: "/icons/cloud.svg",
+          icon: "claude" as NavIconName,
           title: "Claude Cowork",
           href: "/branchen/steuerberater/claude-cowork",
         },
         {
-          icon: "/icons/admin-with-cogwheels.svg",
+          icon: "bot" as NavIconName,
           title: "KI-Agenten",
           href: "/branchen/steuerberater/ki-agenten",
         },
         {
-          icon: "/icons/workflow.svg",
+          icon: "workflow" as NavIconName,
           title: "Workflows",
           href: "/branchen/steuerberater/workflows",
         },
         {
-          icon: "/icons/settings.svg",
+          icon: "organisation" as NavIconName,
           title: "Kanzlei-Organisation",
           href: "/branchen/steuerberater/kanzlei-organisation",
         },
@@ -240,26 +231,26 @@ const branchenMenu = {
     },
     {
       title: "Anwälte",
-      icon: "/icons/law-round.svg",
+      icon: "scale" as NavIconName,
       href: "/branchen/anwaelte",
       cases: [
         {
-          icon: "/icons/privacy.svg",
+          icon: "shield" as NavIconName,
           title: "Private AI",
           href: "/branchen/anwaelte/private-ai",
         },
         {
-          icon: "/icons/cloud.svg",
+          icon: "claude" as NavIconName,
           title: "Claude Cowork",
           href: "/branchen/anwaelte/claude-cowork",
         },
         {
-          icon: "/icons/admin-with-cogwheels.svg",
+          icon: "bot" as NavIconName,
           title: "KI-Agenten",
           href: "/branchen/anwaelte/ki-agenten",
         },
         {
-          icon: "/icons/workflow.svg",
+          icon: "workflow" as NavIconName,
           title: "Workflows",
           href: "/branchen/anwaelte/workflows",
         },
@@ -278,46 +269,6 @@ const panelBase =
 // Erstes Mega-Menü links ausrichten, sonst ragt das breite Panel links aus dem Viewport
 const panelLeft =
   "hidden absolute top-full left-0 mt-0 pt-1 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden";
-
-function NavIcon({ src, className }: { src: string; className?: string }) {
-  const paths = navIcons[src];
-  if (!paths) {
-    return (
-      <span
-        className={className}
-        role="img"
-        aria-hidden
-        style={{
-          display: "inline-block",
-          backgroundColor: "currentColor",
-          WebkitMaskImage: `url(${src})`,
-          WebkitMaskSize: "contain",
-          WebkitMaskRepeat: "no-repeat",
-          WebkitMaskPosition: "center",
-          maskImage: `url(${src})`,
-          maskSize: "contain",
-          maskRepeat: "no-repeat",
-          maskPosition: "center",
-        }}
-      />
-    );
-  }
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      {paths.map((d, i) => (
-        <path key={i} d={d} />
-      ))}
-    </svg>
-  );
-}
 
 function ChevronDown({ className }: { className?: string }) {
   return (
@@ -376,19 +327,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 style={{ animationDelay: "200ms" }}
               >
                 <Link href="/managed-claude" className={triggerClass}>
-                  <svg
-                    className={triggerIconClass}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
+                  <ClaudeLogo className="w-[18px] h-[18px] transition-transform duration-300 group-hover:rotate-45" />
                   Managed Claude
                   <ChevronDown className={triggerIconClass} />
                 </Link>
@@ -410,13 +349,10 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                             <Link
                               key={itemIndex}
                               href={item.href}
-                              className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                              className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
                             >
                               {"icon" in item && item.icon && (
-                                <NavIcon
-                                  src={item.icon}
-                                  className="w-5 h-5 text-gray-700 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5"
-                                />
+                                <NavIcon name={item.icon} />
                               )}
                               <div>
                                 <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
@@ -441,19 +377,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 style={{ animationDelay: "250ms" }}
               >
                 <Link href="/branchen" className={triggerClass}>
-                  <svg
-                    className={triggerIconClass}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
+                  <Building2 className={triggerIconClass} />
                   Branchen
                   <ChevronDown className={triggerIconClass} />
                 </Link>
@@ -468,10 +392,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                           href={topic.href}
                           className="flex items-center gap-2 mb-3 hover:text-primary-500 transition-colors group"
                         >
-                          <NavIcon
-                            src={topic.icon}
-                            className="w-6 h-6 text-gray-700 group-hover:text-primary-500 transition-colors"
-                          />
+                          <NavIcon name={topic.icon} />
                           <h4 className="font-bold text-gray-900 group-hover:text-primary-500 text-sm uppercase tracking-wide">
                             {topic.title}
                           </h4>
@@ -484,10 +405,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                               className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
                             >
                               {"icon" in caseItem && caseItem.icon && (
-                                <NavIcon
-                                  src={caseItem.icon}
-                                  className="w-4 h-4 shrink-0 text-gray-700 group-hover:text-primary-500 transition-colors"
-                                />
+                                <NavIcon name={caseItem.icon} size="sm" />
                               )}
                               <p className="text-sm font-medium text-gray-900 group-hover:text-primary-500">
                                 {caseItem.title}
@@ -507,19 +425,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 style={{ animationDelay: "300ms" }}
               >
                 <Link href="/blog" className={triggerClass}>
-                  <svg
-                    className={triggerIconClass}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                    />
-                  </svg>
+                  <BookOpen className={triggerIconClass} />
                   Blog
                   {latestBlogPosts.length > 0 && (
                     <ChevronDown className={triggerIconClass} />
@@ -591,19 +497,7 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 style={{ animationDelay: "350ms" }}
               >
                 <Link href="/" className={triggerClass}>
-                  <svg
-                    className={triggerIconClass}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                    />
-                  </svg>
+                  <Users className={triggerIconClass} />
                   Über uns
                   <ChevronDown className={triggerIconClass} />
                 </Link>
@@ -619,13 +513,10 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                             <Link
                               key={itemIndex}
                               href={item.href}
-                              className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                              className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
                             >
                               {"icon" in item && item.icon && (
-                                <NavIcon
-                                  src={item.icon}
-                                  className="w-5 h-5 text-gray-700 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5"
-                                />
+                                <NavIcon name={item.icon} />
                               )}
                               <div>
                                 <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
