@@ -15,3 +15,6 @@ export { RoiAssumption, RoiRow, RoiSource, RoiTotal } from "./roi-calculation";
 export { default as StepJourneyRow } from "./step-journey-row";
 export { default as ToolComparisonTable } from "./tool-comparison-table";
 export { default as WorkflowDiagram } from "./workflow-diagram";
+export { default as FeatureRow } from "./feature-row";
+export { FeatureIndex } from "./feature-row";
+export type { FeatureIndexGroup } from "./feature-row";

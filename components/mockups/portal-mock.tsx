@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Image from "next/image";
 import {
   Activity,
   ChartColumn,
@@ -69,19 +68,46 @@ function BetaBadge() {
   );
 }
 
+// Bluebatch-Zeichen wie im echten Portal (brand-mark.tsx): Bogen mit
+// Verlauf #004172 → #33f8fb um ein „B" in #04507d.
+function BrandMark() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-6 w-6 shrink-0" aria-hidden>
+      <defs>
+        <linearGradient id="portal-mock-arc" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stopColor="#33f8fb" />
+          <stop offset="1" stopColor="#004172" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M6.3 19.2A9 9 0 1 1 19.6 16.8"
+        fill="none"
+        stroke="url(#portal-mock-arc)"
+        strokeWidth="2.6"
+        strokeLinecap="round"
+      />
+      <text
+        x="12"
+        y="16.2"
+        textAnchor="middle"
+        fontSize="11"
+        fontWeight="700"
+        fill="#04507d"
+        fontFamily="ui-sans-serif, system-ui, sans-serif"
+      >
+        B
+      </text>
+    </svg>
+  );
+}
+
 function Sidebar({ active }: { active: PortalPage }) {
   const entries = Object.entries(nav) as [PortalPage, (typeof nav)[PortalPage]][];
   let lastGroup: string | undefined;
   return (
     <aside className="hidden w-48 shrink-0 flex-col border-r border-gray-200 bg-gray-50/80 p-3 md:flex">
       <div className="mb-4 flex items-center gap-2 px-1">
-        <Image
-          src="/logo/Bluebatch_white-logo-only.svg"
-          alt=""
-          width={22}
-          height={22}
-          className="h-[22px] w-[22px]"
-        />
+        <BrandMark />
         <span className="text-[12px] font-semibold text-gray-900">Claude AI Gateway</span>
       </div>
       <nav className="space-y-0.5">
