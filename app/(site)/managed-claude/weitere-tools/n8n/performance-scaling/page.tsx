@@ -18,7 +18,6 @@ import Hero2Column, {
 import Link from "next/link";
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
-import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { AnimatedNumber } from "@/components/cards/kpi-card";
 import SimpleCard from "@/components/cards/simple-card";
 import IntroBox from "@/components/ui/intro-box";
@@ -489,9 +488,6 @@ export default async function Page({
       </ContentWrapper>
 
       {/* Contact CTA */}
-      <ContentWrapper noPadding bodyWidth="full">
-        <ConsultationCtaDefault />
-      </ContentWrapper>
     </>
   );
 }

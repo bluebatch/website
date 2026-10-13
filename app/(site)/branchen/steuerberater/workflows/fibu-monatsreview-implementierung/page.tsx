@@ -14,7 +14,6 @@ import Hero2Column, {
 } from "@/components/heroes/hero-2-column";
 import GeoSummary from "@/components/ui/geo-summary";
 import ContactButton from "@/components/buttons/contact-button";
-import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { FaqContainer } from "@/components/ui/faqs";
 import IntroBox from "@/components/ui/intro-box";
 import TimelineAsSteps, {
@@ -312,9 +311,6 @@ export default function Page() {
       </ContentWrapper>
 
       {/* 6. FINAL CTA */}
-      <ContentWrapper noPadding bodyWidth="full">
-        <ConsultationCtaDefault />
-      </ContentWrapper>
     </>
   );
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ContentWrapper, SimpleGrid } from "@/components/layout";
 import { Typo, IntroBox, GeoSummary, ProseColumns } from "@/components/ui";
-import { ConsultationCtaDefault } from "@/components/sections";
 import { ContactButton } from "@/components/buttons";
 
 // ENTWURF (Branch anthropic-managed-service-provider): Gerüst für die
@@ -92,10 +91,6 @@ export default function Page() {
         <div className="flex justify-center">
           <ContactButton size="lg">Gespräch vereinbaren</ContactButton>
         </div>
-      </ContentWrapper>
-
-      <ContentWrapper noPadding bodyWidth="full">
-        <ConsultationCtaDefault />
       </ContentWrapper>
     </>
   );

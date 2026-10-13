@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ContentWrapper, SimpleGrid } from "@/components/layout";
 import { Typo, IntroBox, GeoSummary, ProseColumns, DataTable, FaqContainer } from "@/components/ui";
 import { OfferCard } from "@/components/cards";
-import { ConsultationCtaDefault } from "@/components/sections";
 import { ContactButton } from "@/components/buttons";
 import KostenRechner from "./kosten-rechner";
 
@@ -294,10 +293,6 @@ export default function Page() {
         <div className="flex justify-center">
           <ContactButton size="lg">Gespräch vereinbaren</ContactButton>
         </div>
-      </ContentWrapper>
-
-      <ContentWrapper noPadding bodyWidth="full">
-        <ConsultationCtaDefault />
       </ContentWrapper>
     </>
   );

@@ -18,7 +18,6 @@ import ContactButton from "@/components/buttons/contact-button";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
 } from "@/components/ui/timeline-as-steps";
-import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { FaqContainer } from "@/components/ui/faqs";
 import IntroBox from "@/components/ui/intro-box";
 
@@ -276,9 +275,6 @@ export default function Page() {
       </ContentWrapper>
 
       {/* 5. FINAL CTA */}
-      <ContentWrapper noPadding bodyWidth="full">
-        <ConsultationCtaDefault />
-      </ContentWrapper>
     </>
   );
 }

@@ -18,7 +18,6 @@ import Hero2Column, {
 } from "@/components/heroes/hero-2-column";
 import ContactButton from "@/components/buttons/contact-button";
 import Customer from "@/components/sections/customer/customer";
-import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import GeoSummary from "@/components/ui/geo-summary";
 import IntroBox from "@/components/ui/intro-box";
 import SimpleCard from "@/components/cards/simple-card";
@@ -332,10 +331,6 @@ export default async function KiAgenturZertifizierungPage({
         <div className="flex gap-4 justify-center">
           <ContactButton size="lg">Erstberatung vereinbaren</ContactButton>
         </div>
-      </ContentWrapper>
-
-      <ContentWrapper noPadding bodyWidth="full">
-        <ConsultationCtaDefault />
       </ContentWrapper>
     </>
   );

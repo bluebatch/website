@@ -26,7 +26,6 @@ import ComparisonCard, {
 import TimelineAsSteps, {
   TimelineAsStepsStep,
 } from "@/components/ui/timeline-as-steps";
-import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { FaqContainer } from "@/components/ui/faqs";
 import IntroBox from "@/components/ui/intro-box";
 import SavingsCard, {
@@ -573,9 +572,6 @@ export default function Page() {
       </ContentWrapper>
 
       {/* 8. FINAL CTA */}
-      <ContentWrapper noPadding bodyWidth="full">
-        <ConsultationCtaDefault />
-      </ContentWrapper>
     </>
   );
 }

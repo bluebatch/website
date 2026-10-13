@@ -18,7 +18,6 @@ import Hero2Column, {
 } from "@/components/heroes/hero-2-column";
 import ContactButton from "@/components/buttons/contact-button";
 import InternalLink from "@/components/buttons/internal-link";
-import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import { FaqContainer } from "@/components/ui/faqs";
 import TimelineAsSteps, {
   TimelineAsStepsStep,
@@ -316,9 +315,6 @@ export default function Page() {
       </ContentWrapper>
 
       {/* 6. FINAL CTA */}
-      <ContentWrapper noPadding bodyWidth="full">
-        <ConsultationCtaDefault />
-      </ContentWrapper>
     </>
   );
 }
