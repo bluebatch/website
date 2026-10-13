@@ -1,6 +1,6 @@
 # Site-Struktur — Zielbild (Draft)
 
-> Stand 2026-10-01. **Repositionierung auf Claude Managed Service Provider**
+> Stand 2026-10-13. **Repositionierung auf Claude Managed Service Provider**
 > (Branch `anthropic-managed-service-provider`): `services/` wird durch
 > `managed-claude/` ersetzt, n8n wandert unter „Weitere Tools".
 > Die Struktur bis 2026-07-22 (Branch `refactor/site-structure`) ist umgesetzt;
@@ -115,8 +115,10 @@ Grundsätze:
 │   ├── onboarding ............................ [MONEY]   Go-live-Roadmap, Einrichtung
 │   ├── coaching/ ............................. [HUB]     Schritt 2: Schulung, Kanzlei-
 │   │   │                                        Handbuch, KI-Kompetenzschulung
-│   │   ├── paket-s ........................... [MONEY]   3 PT, 3.000 €, 50 % Anrechnung
-│   │   └── paket-l ........................... [MONEY]   8 PT, 8.000 €, 100 % Anrechnung
+│   │   ├── paket-m ........................... [MONEY]   5 PT, 5.000 €, Einrichtung + Outlook
+│   │   │                                        zu 100 % angerechnet (paket-s → 301)
+│   │   └── paket-l ........................... [MONEY]   10 PT, 10.000 €, Einrichtung + Outlook
+│   │                                            zu 100 % angerechnet
 │   ├── preise ................................ [MONEY]   Preise, Kostenrechner [TOOL],
 │   │                                            direkt unter dem Haupt-Hub
 │   ├── was-kostet-ki ......................... [MONEY]   (Umzug von services/was-kostet-ki)
@@ -472,7 +474,7 @@ H2, FAQ, Fließtext. Je Keyword genau **eine** Zielseite (Kannibalisierung).
 | `managed-claude/wie-es-funktioniert` | aws bedrock claude 140/16 | amazon bedrock claude 50, claude aws bedrock 50, bedrock claude 40 |
 | `managed-claude/onboarding` | ki einführung 140/8 | einführung in die ki 90/6, claude cowork einrichten 40 |
 | `managed-claude/coaching` | ki schulung 2400/8 | ki schulung für mitarbeiter 390/0, ki kompetenz schulung 260/2, ki coaching 260/0, ki schulung pflicht 210/7, ki-schulung für unternehmen 170/9 |
-| `managed-claude/coaching/paket-s` | ki workshop für unternehmen 50/0 | ki seminare für unternehmen 30 |
+| `managed-claude/coaching/paket-m` | ki workshop für unternehmen 50/0 | ki seminare für unternehmen 30 |
 | `managed-claude/coaching/paket-l` | ki beratung für unternehmen 170/6 | ki-beauftragter schulung 70/2, ki strategie für unternehmen 40 |
 | `managed-claude/integrationen` | claude mcp 1000/9 | claude mcp server 320/19, claude desktop mcp 140/15, claude cowork connectors 30 |
 | `managed-claude/integrationen/microsoft` | claude outlook 210/2 | claude for outlook 140/3, claude microsoft 110/0, claude outlook integration 90/0, claude for microsoft 365 70/5, claude für excel 210/7 |
@@ -658,21 +660,29 @@ Funnel-LP ─────────────────==> nur eigenes For
       Startseite umpositioniert, Gerüst-Seiten als ENTWURF angelegt.
       Offen: Inhalte der Gerüst-Seiten schärfen, Preise eintragen,
       Keyword-Aliasse der Startseite (`/n8n-automatisierung`) neu bewerten.
-- [ ] **Hub `managed-claude/` anlegen**, Basisseiten
+- [x] **Hub `managed-claude/` anlegen**, Basisseiten
       (wie-es-funktioniert, onboarding, preise), die drei Angebots-Hubs
       (claude-app, claude-api, use-cases) und den Hub integrationen/
       (datev, microsoft, websearch) als Gerüst.
-- [ ] **services/ → managed-claude/weitere-tools/ umziehen:**
+- [x] **services/ → managed-claude/weitere-tools/ umziehen:**
       n8n-Services unter `weitere-tools/n8n/`, Tool-Portraits unter
       `weitere-tools/`, alle alten URLs als `legacyRedirects` (301), auch
       die erst seit Juli bestehenden `services/tools/…`-URLs.
-- [ ] **Navigation + Footer** auf das neue Zielbild (oben) umstellen.
-- [ ] **Homepage** auf Claude Managed Service Provider umpositionieren
+- [x] **Navigation + Footer** auf das neue Zielbild (oben) umstellen.
+- [x] **Homepage** auf Claude Managed Service Provider umpositionieren
       (Hero, GEO-Summary, Angebotsreihenfolge App → API → Use Cases).
-- [ ] **Interne Links** auf `services/…` im ganzen Repo auf die neuen URLs
+- [x] **Interne Links** auf `services/…` im ganzen Repo auf die neuen URLs
       umbiegen (nicht nur über Redirects laufen lassen).
-- [ ] **Keywords einbauen** laut Keyword-Map Managed Claude: Title, H1,
-      GEO-Summary und FAQ je Seite auf Haupt- und Nebenkeywords ausrichten.
+- [x] **Keywords einbauen** laut Keyword-Map Managed Claude: Title, H1,
+      GEO-Summary und FAQ je Seite auf Haupt- und Nebenkeywords ausrichten
+      (2026-10-13).
+- [x] **Design-Runde Managed Claude** (2026-10-13): farbige Nav-Icons mit
+      Markenlogos, unterschiedliche Heroes je Seite, Mock-Screenshots
+      (`components/mockups/`: Portal, Claude Desktop, Code), Managed Claude
+      Interface mit allen Portal-Features, Coaching auf Paket M (5 PT) und
+      Paket L (10 PT) mit 100 % Anrechnung von Einrichtung und Outlook
+      Connector, Token-Kundenpreise aus dem Preisblatt des Gateways,
+      Porträt-CTA auf Seiten mit eigenem CTA entfernt.
 - [ ] **Neue Seiten aus der Keyword-Map:** `managed-claude/datenschutz`
       (zuerst), `managed-claude/chatgpt-alternative`, Blog „claude skills"
       und Blog „Claude Pro, Team, Enterprise".
