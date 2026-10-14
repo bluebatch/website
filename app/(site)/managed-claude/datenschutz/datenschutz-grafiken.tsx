@@ -192,25 +192,25 @@ export function DatenwegGrafik() {
         <Station
           icon={<Cloud className="h-5 w-5" />}
           titel="Claude auf Amazon Bedrock"
-          ort="AWS-Rechenzentren innerhalb der EU"
+          ort="Nur EU-Inference-Profile, Rechenzentren innerhalb der EU"
           bleibt="Kein Training, keine Speicherung"
         >
-          Claude berechnet die Antwort. Anthropic als Modellanbieter hat bei Bedrock keinen Zugriff auf Prompts und
-          Antworten.
+          Claude berechnet die Antwort. Modelle ohne EU-Profil bieten wir nicht an. Anthropic als Modellanbieter hat
+          bei Bedrock keinen Zugriff auf Prompts und Antworten.
         </Station>
       </div>
       <figcaption className="mt-6">
         <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-gray-500">
-          Daneben, nur wenn eingerichtet
+          Daneben
         </p>
         <div className="grid gap-3 md:grid-cols-3">
           <Nebenweg logo={<KeyRound className="h-4 w-4 text-primary-700" />} titel="Anmeldung über Clerk">
-            Name, E-Mail-Adresse und Organisation für das Login. Keine Chat-Inhalte.
+            SSO-Dienst nur für das Login: Name, E-Mail-Adresse und Organisation. Keine Anfragen, keine Chats.
           </Nebenweg>
-          <Nebenweg logo={<BraveLogo className="h-4 w-4" />} titel="Websuche über Brave">
+          <Nebenweg logo={<BraveLogo className="h-4 w-4" />} titel="Websuche über Brave, optional">
             Nur die Suchbegriffe, gesendet vom Gateway und standardmäßig erst nach Ihrer Freigabe.
           </Nebenweg>
-          <Nebenweg logo={<MicrosoftLogo className="h-4 w-4" />} titel="Microsoft 365">
+          <Nebenweg logo={<MicrosoftLogo className="h-4 w-4" />} titel="Microsoft 365, optional">
             Direkt vom Rechner zu Ihrem Tenant. Was Claude dort liest, geht als Teil der Anfrage den Weg oben.
           </Nebenweg>
         </div>

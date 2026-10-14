@@ -186,7 +186,7 @@ export default function Page() {
             </DataTable.Row>
             <DataTable.Row>
               <DataTable.Cell bold>Was wir liefern</DataTable.Cell>
-              <DataTable.Cell>Verpflichtungserklärung, AV-Vertrag nach Art. 28 DSGVO, dokumentierte Maßnahmen, Verarbeitung in Frankfurt, Benennung aller Unterauftragnehmer</DataTable.Cell>
+              <DataTable.Cell>Geheimhaltungserklärung, AV-Vertrag nach Art. 28 DSGVO, dokumentierte Maßnahmen, Verarbeitung in Frankfurt, Benennung aller Unterauftragnehmer</DataTable.Cell>
             </DataTable.Row>
             <DataTable.Row>
               <DataTable.Cell bold>Was bei Ihnen bleibt</DataTable.Cell>

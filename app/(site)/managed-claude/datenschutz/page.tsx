@@ -61,7 +61,7 @@ const VERGLEICH: [string, string, string, string][] = [
     "Wo verarbeitet wird",
     "Infrastruktur von Anthropic, ohne Zusage für die EU",
     "Anthropic, je nach Routing in den USA, Europa, Asien oder Australien, gespeichert in den USA",
-    "Amazon Bedrock innerhalb der EU, Gateway in Frankfurt",
+    "Amazon Bedrock, nur über EU-Inference-Profile, Gateway in Frankfurt",
   ],
   [
     "Training mit Ihren Daten",
@@ -76,7 +76,7 @@ const VERGLEICH: [string, string, string, string][] = [
     "Ja, Standardvertrag von Anthropic",
     "Ja, mit Bluebatch, Unterauftragnehmer benannt",
   ],
-  ["Verpflichtung nach § 203 StGB", "Nein", "Selbst prüfen und verhandeln", "Ja, Verpflichtungserklärung von Bluebatch"],
+  ["Verpflichtung nach § 203 StGB", "Nein", "Selbst prüfen und verhandeln", "Ja, Geheimhaltungserklärung von Bluebatch"],
   ["Verwaltung", "Einzelkonto", "Admin-Konsole mit Rollen", "Portal mit Rollen, Limits in Euro, Verbrauch je Person"],
   [
     "Abrechnung",
@@ -101,15 +101,15 @@ const BETEILIGTE: [string, string, string, string][] = [
   ],
   [
     "Clerk",
-    "Anmeldung und Benutzerkonten",
-    "Name, E-Mail-Adresse, Organisation und Anmeldungen, keine Inhalte",
-    "Anbieter aus den USA",
+    "SSO-Dienst, nur für Anmeldung und Benutzerkonten",
+    "Name, E-Mail-Adresse, Organisation und Anmeldungen. Anfragen und Chats laufen nicht über Clerk",
+    "Anbieter aus den USA, im AV-Vertrag geregelt",
   ],
   [
     "Brave Search",
-    "Websuche, wenn freigeschaltet",
+    "Optionaler Suchindex für die Websuche",
     "Nur die Suchbegriffe, gesendet vom Gateway, standardmäßig erst nach Freigabe der Person",
-    "Anbieter aus den USA",
+    "Anbieter aus den USA, im AV-Vertrag geregelt",
   ],
   [
     "Microsoft",
@@ -136,10 +136,10 @@ function MobilLabel({ children }: { children: string }) {
 }
 
 const UNTERLAGEN = [
-  "AV-Vertrag nach Art. 28 DSGVO",
-  "Verpflichtungserklärung nach § 203 StGB, passend zu § 43e BRAO und § 62a StBerG",
-  "Technische und organisatorische Maßnahmen (TOMs)",
-  "Liste aller Unterauftragnehmer",
+  "Dienstleistungsvertrag",
+  "AV-Vertrag nach Art. 28 DSGVO mit Liste aller Unterauftragnehmer",
+  "Technische und organisatorische Maßnahmen (TOMs) als Anlage",
+  "Geheimhaltungserklärung nach § 203 StGB, passend zu § 43e BRAO und § 62a StBerG",
 ];
 
 export default function Page() {
@@ -273,8 +273,10 @@ export default function Page() {
           </DataTable.Body>
         </DataTable>
         <Typo.Paragraph className="mx-auto mt-6 max-w-3xl text-center text-sm text-gray-500">
-          Die Liste mit Anschriften ist Teil des AV-Vertrags. Weitere Connectors, etwa ein eigener MCP-Server oder
-          DATEV, kommen nur mit Ihrer Freigabe dazu und werden dort ergänzt.
+          Clerk und Brave speichern die Daten, die bei ihnen ankommen, also Anmeldedaten und Suchbegriffe. Beide
+          stehen mit Anschrift als Unterauftragnehmer im AV-Vertrag, die Übermittlung in die USA regeln AV-Vertrag
+          und Dienstleistungsvertrag. Weitere Connectors, etwa ein eigener MCP-Server oder DATEV, kommen nur mit
+          Ihrer Freigabe dazu und werden dort ergänzt.
         </Typo.Paragraph>
       </ContentWrapper>
 
@@ -439,8 +441,9 @@ export default function Page() {
               <TimelineAsStepsStep value={2}>
                 <Typo.H3 className="mt-1!">Verträge abschließen</Typo.H3>
                 <Typo.Paragraph textColor="muted">
-                  AV-Vertrag und Verpflichtungserklärung unterschreiben, TOMs und Unterauftragnehmer ablegen, das
-                  Verzeichnis der Verarbeitungstätigkeiten nach Art. 30 DSGVO ergänzen.
+                  Dienstleistungsvertrag, AV-Vertrag und Geheimhaltungserklärung unterschreiben, TOMs und
+                  Unterauftragnehmer ablegen, das Verzeichnis der Verarbeitungstätigkeiten nach Art. 30 DSGVO
+                  ergänzen.
                 </Typo.Paragraph>
               </TimelineAsStepsStep>
               <TimelineAsStepsStep value={3}>
@@ -505,12 +508,12 @@ export default function Page() {
             {
               question: "Wo werden meine Daten gespeichert?",
               answer:
-                "Der Chatverlauf liegt nur auf dem Rechner der Person, in Claude Desktop. Das Gateway in Frankfurt speichert je Anfrage Person, Modell, Tokens und Kosten, nicht den Inhalt. Amazon Bedrock verarbeitet die Anfrage innerhalb der EU und speichert Prompts und Antworten der Claude-Modelle im Gateway nicht.",
+                "Der Chatverlauf liegt nur auf dem Rechner der Person, in Claude Desktop. Das Gateway in Frankfurt speichert je Anfrage Person, Modell, Tokens und Kosten, nicht den Inhalt. Amazon Bedrock verarbeitet die Anfrage über EU-Inference-Profile innerhalb der EU und speichert Prompts und Antworten nicht. Modelle, die Bedrock nicht über ein EU-Profil anbietet, nehmen wir nicht ins Gateway.",
             },
             {
               question: "Dürfen Steuerberater und Anwälte Claude mit Mandantendaten nutzen?",
               answer:
-                "Ja, wenn der Weg stimmt. § 203 StGB erlaubt seit 2017, IT-Dienstleister einzubeziehen, soweit das erforderlich ist und sie sorgfältig ausgewählt und zur Verschwiegenheit verpflichtet sind. Für Anwälte konkretisiert das § 43e BRAO, für Steuerberater § 62a StBerG. Bluebatch liefert Verpflichtungserklärung, AV-Vertrag, TOMs und die Liste der Unterauftragnehmer. Die berufsrechtliche Bewertung bleibt bei Ihnen.",
+                "Ja, wenn der Weg stimmt. § 203 StGB erlaubt seit 2017, IT-Dienstleister einzubeziehen, soweit das erforderlich ist und sie sorgfältig ausgewählt und zur Verschwiegenheit verpflichtet sind. Für Anwälte konkretisiert das § 43e BRAO, für Steuerberater § 62a StBerG. Bluebatch liefert Dienstleistungsvertrag, AV-Vertrag mit TOMs und Liste der Unterauftragnehmer sowie die Geheimhaltungserklärung. Die berufsrechtliche Bewertung bleibt bei Ihnen.",
             },
             {
               question: "Können Admins die Chats der Mitarbeiter lesen?",
