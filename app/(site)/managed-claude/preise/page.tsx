@@ -315,7 +315,7 @@ export default function Page() {
             },
             {
               question: "Was ist der Unterschied zu den Kosten von Claude Team oder Claude Enterprise?",
-              answer: "Claude Team und Claude Enterprise sind Abos direkt bei Anthropic und werden pro Kopf und Monat abgerechnet, auch für Kollegen, die Claude kaum nutzen. Über das Gateway zahlen Sie keine Lizenz pro Kopf, sondern die Tokens, die tatsächlich verbraucht werden. Dazu kommt der Rahmen für Kanzleien: eigenes Konto, AWS Frankfurt, Unterlagen für § 203 StGB und § 62a StBerG.",
+              answer: "Claude Team und Claude Enterprise sind Abos direkt bei Anthropic und werden pro Kopf und Monat abgerechnet, auch für Kollegen, die Claude kaum nutzen. Über das Gateway zahlen Sie keine Lizenz pro Kopf, sondern die Tokens, die tatsächlich verbraucht werden. Dazu kommt der Rahmen für Kanzleien: Verarbeitung in der EU, Gateway in Frankfurt, Unterlagen für § 203 StGB und § 62a StBerG.",
             },
             {
               question: "Was kostet Claude Cowork?",

@@ -233,7 +233,7 @@ export default function Page() {
             {
               question: "Ist Paket M ein KI-Seminar?",
               answer:
-                "Nein. Anders als die meisten KI-Seminare für Unternehmen arbeiten wir nicht an Übungsbeispielen, sondern an Ihren echten Fällen und in Ihrer eigenen Umgebung im Private Claude AI Gateway. Was entsteht, bleibt im Haus: Anleitungen, Routinen und das Grundgerüst des Kanzlei-Handbuchs.",
+                "Nein. Anders als die meisten KI-Seminare für Unternehmen arbeiten wir nicht an Übungsbeispielen, sondern an Ihren echten Fällen und in Ihrer Organisation im Private Claude AI Gateway. Was entsteht, bleibt im Haus: Anleitungen, Routinen und das Grundgerüst des Kanzlei-Handbuchs.",
             },
             {
               question: "Wie läuft die Anrechnung?",

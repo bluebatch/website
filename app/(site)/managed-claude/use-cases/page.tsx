@@ -240,7 +240,7 @@ export default function Page() {
             },
             {
               question: "Wo laufen die Daten, wenn ein KI-Agent mit Claude arbeitet?",
-              answer: "Auf derselben Infrastruktur wie der Chat: Claude über AWS Bedrock in Frankfurt, über das Private Claude AI Gateway in Ihrem Konto. Keine zweite Datenschutzprüfung, keine zweite Vertragskette.",
+              answer: "Auf derselben Infrastruktur wie der Chat: Claude über AWS Bedrock in der EU, über das Private Claude AI Gateway in Frankfurt. Keine zweite Datenschutzprüfung, keine zweite Vertragskette.",
             },
           ]}
         />

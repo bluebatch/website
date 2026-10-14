@@ -111,7 +111,7 @@ const faqs = [
   {
     question: "Ist das Managed Claude Interface dasselbe wie die Claude Admin Console?",
     answer:
-      "Nein. Die Claude Admin Console gehört zu den Abos von Anthropic, etwa Claude Team und Enterprise. Das Managed Claude Interface ist die Verwaltung für Claude über Ihr eigenes Gateway in AWS Frankfurt. Es übernimmt dieselbe Rolle, also Team, Rollen, Verbrauch und Einstellungen, dazu kommen Budgets in Euro, Ordner- und Netzwerk-Richtlinien und die Konfiguration je Person.",
+      "Nein. Die Claude Admin Console gehört zu den Abos von Anthropic, etwa Claude Team und Enterprise. Das Managed Claude Interface ist die Verwaltung Ihrer Organisation im Private Claude AI Gateway. Es übernimmt dieselbe Rolle, also Team, Rollen, Verbrauch und Einstellungen, dazu kommen Budgets in Euro, Ordner- und Netzwerk-Richtlinien und die Konfiguration je Person.",
   },
   {
     question: "Wie hilft das Interface bei der KI-Compliance?",
@@ -170,7 +170,7 @@ export default function Page() {
           <IntroBox.Headline className="text-balance">12 Funktionen, vier Aufgaben</IntroBox.Headline>
           <IntroBox.Paragraph>
             Was bei Anthropic die Claude Admin Console ist, ist hier das Managed Claude Interface: die Verwaltung
-            für Claude in Ihrem eigenen Gateway. Mitglieder sehen ihren Verbrauch und die Einrichtung, alles andere
+            Ihrer Organisation im Private Claude AI Gateway. Mitglieder sehen ihren Verbrauch und die Einrichtung, alles andere
             steuern Admins.
           </IntroBox.Paragraph>
         </IntroBox>
@@ -560,7 +560,7 @@ export default function Page() {
           <AfterCard>
             <ComparisonHeadline>KI-Richtlinie im Interface</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>Alle arbeiten über das Gateway in Ihrem Konto, Anmeldung per SSO.</ComparisonListItem>
+              <ComparisonListItem>Alle arbeiten über das Gateway in Ihrer Organisation, Anmeldung per SSO.</ComparisonListItem>
               <ComparisonListItem>Anweisungen, Skills und Connectors kommen zentral auf jeden Rechner.</ComparisonListItem>
               <ComparisonListItem>Budgets je Person, das Gateway setzt sie durch.</ComparisonListItem>
               <ComparisonListItem>Ordner, Netzwerk und Konfiguration je Person einsehbar.</ComparisonListItem>
@@ -583,7 +583,7 @@ export default function Page() {
           <OfferCard
             href="/managed-claude/wie-es-funktioniert"
             title="Wie es funktioniert"
-            description="Claude über AWS Bedrock in Frankfurt, in Ihrem eigenen Konto."
+            description="Claude über AWS Bedrock in der EU, Gateway in Frankfurt."
             linkLabel="Architektur ansehen"
           />
           <OfferCard

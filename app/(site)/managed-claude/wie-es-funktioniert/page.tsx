@@ -17,7 +17,7 @@ import IconTitle from "../icon-title";
 import { ArchitekturGrafik, KonfigMock } from "./architektur-grafik";
 
 const description =
-  "Wie Claude über Amazon Bedrock in Frankfurt in Ihrem Konto läuft: SSO, Gateway mit Rechten und Protokoll, kein Training, AVV, § 203 StGB und § 62a StBerG.";
+  "Wie Claude über Amazon Bedrock in der EU läuft, mit Gateway in Frankfurt: SSO, Rechte und Protokoll, kein Training, AVV, § 203 StGB und § 62a StBerG.";
 
 export const metadata: Metadata = {
   title: "AWS Bedrock Claude: Architektur, Datenschutz, Rechtsrahmen | Bluebatch",
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=So%20l%C3%A4uft%20Claude%20%C3%BCber%20AWS%20Bedrock%20in%20Ihrem%20Konto&eyebrow=Managed%20Claude",
+        url: "/og?title=So%20l%C3%A4uft%20Claude%20%C3%BCber%20AWS%20Bedrock%20in%20der%20EU&eyebrow=Managed%20Claude",
         width: 1200,
         height: 630,
-        alt: "So läuft Claude über AWS Bedrock in Ihrem Konto",
+        alt: "So läuft Claude über AWS Bedrock in der EU",
       },
     ],
   },
@@ -49,9 +49,9 @@ export default function Page() {
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Wie es funktioniert</Hero2ColumnPreHeadline>
-            <Hero2ColumnHeadline>So läuft Claude über AWS Bedrock in Ihrem Konto</Hero2ColumnHeadline>
+            <Hero2ColumnHeadline>So läuft Claude über AWS Bedrock in der EU</Hero2ColumnHeadline>
             <Hero2ColumnDescription geo>
-              Beim Private Claude AI Gateway läuft Claude von Anthropic über AWS Bedrock in der Region Frankfurt, angebunden über Ihr eigenes Konto. Mitarbeiter melden sich per SSO in Claude Desktop an, jede Anfrage geht über das Gateway mit Rechten, Protokoll und Limits zu den Claude-Modellen auf Amazon Bedrock. § 203 StGB, § 43e BRAO, § 62a StBerG und Art. 28 DSGVO sind ab Tag 1 vertraglich abgedeckt.
+              Beim Private Claude AI Gateway läuft Claude von Anthropic über AWS Bedrock innerhalb der EU. Das Gateway betreibt Bluebatch bei AWS in Frankfurt, mit einer eigenen Organisation für Ihr Unternehmen. Mitarbeiter melden sich per SSO in Claude Desktop an, jede Anfrage geht über das Gateway mit Rechten, Protokoll und Limits zu den Claude-Modellen auf Amazon Bedrock. § 203 StGB, § 43e BRAO, § 62a StBerG und Art. 28 DSGVO sind ab Tag 1 vertraglich abgedeckt.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -141,7 +141,7 @@ export default function Page() {
             <DataTable.Row>
               <DataTable.Cell bold>Connectoren</DataTable.Cell>
               <DataTable.Cell>Teilweise über die USA</DataTable.Cell>
-              <DataTable.Cell bold>Über das Gateway in Ihrem Konto</DataTable.Cell>
+              <DataTable.Cell bold>Über das Gateway in Frankfurt, Websuche optional über Brave</DataTable.Cell>
             </DataTable.Row>
             <DataTable.Row>
               <DataTable.Cell bold>DSGVO</DataTable.Cell>

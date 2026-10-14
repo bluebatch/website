@@ -25,6 +25,7 @@ import {
   TimelineAsSteps,
   TimelineAsStepsStep,
   FaqContainer,
+  BetaBadge,
 } from "@/components/ui";
 import {
   OfferCard,
@@ -68,11 +69,11 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
   rewrites: [],
 };
 
-const title = "Claude AI Deutschland: Claude für Unternehmen im eigenen Konto";
+const title = "Claude AI Deutschland: Claude für Unternehmen, DSGVO-konform";
 const description =
-  "Claude AI in Deutschland für Unternehmen und Kanzleien: Bluebatch betreibt Claude von Anthropic in Ihrem Konto über AWS Bedrock Frankfurt. Einrichtung 1.500 €.";
+  "Claude AI in Deutschland für Unternehmen und Kanzleien: Bluebatch betreibt Claude von Anthropic über AWS Bedrock in der EU. Einrichtung 1.500 €.";
 const ogImage =
-  "/og?title=Claude%20AI%20in%20Deutschland%2C%20sicher%20im%20eigenen%20Konto&eyebrow=Bluebatch";
+  "/og?title=Claude%20AI%20in%20Deutschland%2C%20sicher%20und%20DSGVO-konform&eyebrow=Bluebatch";
 
 export const metadata: Metadata = {
   title: `${title} | Bluebatch`,
@@ -101,7 +102,7 @@ export const metadata: Metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: "Claude AI in Deutschland, sicher im eigenen Konto",
+        alt: "Claude AI in Deutschland, sicher und DSGVO-konform",
       },
     ],
   },
@@ -131,7 +132,7 @@ const standorte = [
   {
     name: "München",
     slug: "muenchen",
-    fact: "Claude im eigenen Konto für Industrie, Kanzleien und Tech im Süden.",
+    fact: "Claude mit Verarbeitung in der EU für Industrie, Kanzleien und Tech im Süden.",
     image: "/images/cities/muenchen.jpg",
     delay: "0.8s",
   },
@@ -151,9 +152,9 @@ export default function Home() {
         <Hero2Column>
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Managed Service Provider für Claude</Hero2ColumnPreHeadline>
-            <Hero2ColumnHeadline>Claude AI in Deutschland, sicher im eigenen Konto</Hero2ColumnHeadline>
+            <Hero2ColumnHeadline>Claude AI in Deutschland, sicher und DSGVO-konform</Hero2ColumnHeadline>
             <Hero2ColumnDescription geo>
-              Bluebatch bringt Claude von Anthropic in Deutschland in Ihr eigenes Konto: Das Private Claude AI Gateway läuft über AWS Bedrock in Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und § 62a StBerG, für Kanzleien und Mittelstand. Die Einrichtung kostet einmalig 1.500 €, danach zahlen Sie nur den Verbrauch, ohne Lizenz pro Kopf.
+              Bluebatch bringt Claude von Anthropic in Deutschland sicher in Ihr Unternehmen: Das Private Claude AI Gateway läuft bei AWS in Frankfurt, Claude selbst über AWS Bedrock innerhalb der EU, DSGVO-konform und tragfähig nach § 203 StGB und § 62a StBerG, für Kanzleien und Mittelstand. Die Einrichtung kostet einmalig 1.500 €, danach zahlen Sie nur den Verbrauch, ohne Lizenz pro Kopf.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -208,7 +209,7 @@ export default function Home() {
           center={{
             icon: <ShieldCheck className="h-5 w-5" />,
             label: "Private Claude AI Gateway",
-            sublabel: "In Ihrem Konto: Rechte, Protokoll, Limits",
+            sublabel: "Eigene Organisation: Rechte, Protokoll, Limits",
           }}
           spokes={[
             { icon: <Monitor className="h-5 w-5" />, label: "Claude Desktop", sublabel: "Chat, Cowork, Code" },
@@ -311,7 +312,7 @@ export default function Home() {
           <ProseColumns.Item title={<IconTitle icon={ReceiptText}>Belege und Listen</IconTitle>}>
             Strukturiert auswerten, Auffälligkeiten vorab markiert.
           </ProseColumns.Item>
-          <ProseColumns.Item title={<IconTitle icon={Database}>Zugriff auf DATEV</IconTitle>}>
+          <ProseColumns.Item title={<IconTitle icon={Database}>Zugriff auf DATEV <BetaBadge className="ml-1" /></IconTitle>}>
             Claude fragt Ihren Datenbestand, statt zu raten.
           </ProseColumns.Item>
         </ProseColumns>
@@ -335,7 +336,7 @@ export default function Home() {
           <AfterCard className="rounded-2xl">
             <ComparisonHeadline>Ihr Chat über das Gateway</ComparisonHeadline>
             <ComparisonList>
-              <ComparisonListItem>In Ihrem Konto, AWS Frankfurt</ComparisonListItem>
+              <ComparisonListItem>Gateway in Frankfurt, Verarbeitung in der EU</ComparisonListItem>
               <ComparisonListItem>Mandantendaten im Rahmen von § 203 StGB und § 62a StBerG</ComparisonListItem>
               <ComparisonListItem>Rollen, Rechte und vollständiges Protokoll</ComparisonListItem>
               <ComparisonListItem>Kanzleiwissen als Anweisung und Skill hinterlegt</ComparisonListItem>
@@ -449,12 +450,12 @@ export default function Home() {
           <IntroBox.PreHeadline>Wer dahintersteht</IntroBox.PreHeadline>
           <IntroBox.Headline>Cloud-Erfahrung aus dem Enterprise-Umfeld</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Bluebatch ist eine Tochter der Pexon Consulting, einer IT- und Cloud-Beratung für Konzerne und Mittelstand. Das Gateway läuft deshalb so, wie wir auch große AWS-Umgebungen betreiben: dokumentiert, überwacht und in Ihrem Konto.
+            Bluebatch ist eine Tochter der Pexon Consulting, einer IT- und Cloud-Beratung für Konzerne und Mittelstand. Das Gateway läuft deshalb so, wie wir auch große AWS-Umgebungen betreiben: dokumentiert, überwacht und abgesichert.
           </IntroBox.Paragraph>
         </IntroBox>
         <ProseColumns cols={3}>
-          <ProseColumns.Item title={<IconTitle icon={Cloud}>AWS im eigenen Konto</IconTitle>}>
-            Konto, Zugänge und Daten gehören Ihnen. Wir richten ein und betreuen, Sie behalten die Kontrolle und könnten jederzeit ohne uns weitermachen.
+          <ProseColumns.Item title={<IconTitle icon={Cloud}>Eigene Organisation bei AWS</IconTitle>}>
+            Ihr Team bekommt im Gateway eine eigene Organisation, getrennt von anderen Kunden. Die Chats liegen auf Ihren Rechnern, im Gateway nur Verbrauch und Kosten.
           </ProseColumns.Item>
           <ProseColumns.Item title={<IconTitle icon={ShieldCheck}>Compliance mitgedacht</IconTitle>}>
             AV-Vertrag, Verpflichtung nach § 203 StGB, dokumentierte Maßnahmen und eine Liste aller Unterauftragnehmer gehören zur Einrichtung dazu.
@@ -531,7 +532,7 @@ export default function Home() {
             {
               question: "Kann man Claude AI in Deutschland datenschutzkonform nutzen?",
               answer:
-                "Ja, wenn die Verarbeitung in der EU läuft und die Verträge stimmen. Beim Private Claude AI Gateway läuft Claude von Anthropic über AWS Bedrock in Frankfurt, in Ihrem eigenen Konto, mit AV-Vertrag nach Art. 28 DSGVO. Kein Training mit Ihren Daten, kein Verlauf beim Anbieter. Für Kanzleien liefern wir zusätzlich die Unterlagen für § 203 StGB und § 62a StBerG.",
+                "Ja, wenn die Verarbeitung in der EU läuft und die Verträge stimmen. Beim Private Claude AI Gateway läuft Claude von Anthropic über AWS Bedrock innerhalb der EU, das Gateway steht in Frankfurt, mit AV-Vertrag nach Art. 28 DSGVO. Kein Training mit Ihren Daten, kein Verlauf beim Anbieter. Für Kanzleien liefern wir zusätzlich die Unterlagen für § 203 StGB und § 62a StBerG.",
             },
             {
               question: "Versteht und schreibt Claude AI Deutsch?",
@@ -546,7 +547,7 @@ export default function Home() {
             {
               question: "Brauche ich einen Anthropic Partner, um Claude im Unternehmen zu nutzen?",
               answer:
-                "Nicht zwingend, aber es spart viel Arbeit. Claude gibt es als Abo direkt bei Anthropic oder über AWS Bedrock im eigenen Konto. Für den zweiten Weg braucht es jemanden, der Gateway, Anmeldung, Rechte, Limits und Abrechnung aufsetzt und das Team schult. Das übernimmt Bluebatch als Managed Service Provider für Claude.",
+                "Nicht zwingend, aber es spart viel Arbeit. Claude gibt es als Abo direkt bei Anthropic oder über AWS Bedrock. Für den zweiten Weg braucht es ein Gateway mit Anmeldung, Rechten, Limits und Abrechnung und jemanden, der das Team schult. Das übernimmt Bluebatch als Managed Service Provider für Claude: Ihr Team bekommt eine eigene Organisation in unserem Gateway, ein eigenes AWS-Konto brauchen Sie nicht.",
             },
             {
               question: "Was kostet Claude für Unternehmen bei Bluebatch?",

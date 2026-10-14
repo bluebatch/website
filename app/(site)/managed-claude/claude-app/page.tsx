@@ -27,7 +27,7 @@ import { BannerScreen, SetupScreen } from "@/components/mockups/portal-screens";
 import { FeatureRow } from "@/components/sections";
 
 const description =
-  "Claude fürs ganze Team: Claude Desktop für Windows und Mac mit Chat, Cowork und Projekten, über Ihr Gateway in AWS Frankfurt. Verbrauch statt Claude Team Abo.";
+  "Claude fürs ganze Team: Claude Desktop für Windows und Mac mit Chat, Cowork und Projekten, über unser Gateway in Frankfurt. Verbrauch statt Claude Team Abo.";
 
 export const metadata: Metadata = {
   title: "Claude im Team: Claude Desktop für alle, ohne Lizenz pro Kopf | Bluebatch",
@@ -99,7 +99,7 @@ const faqs = [
   {
     question: "Claude Team vs. Enterprise: Was passt zu einer Kanzlei?",
     answer:
-      "Beide sind Abos von Anthropic: Team für kleinere Teams mit festen Lizenzen, Enterprise mit individuellem Vertrag für größere Organisationen. Für Kanzleien mit Mandantendaten kommt eine dritte Frage dazu, nämlich wo Claude läuft und wer Vertragspartner ist. Managed Claude beantwortet sie mit AWS Frankfurt im eigenen Konto und einer Auslegung auf § 203 StGB und § 62a StBerG.",
+      "Beide sind Abos von Anthropic: Team für kleinere Teams mit festen Lizenzen, Enterprise mit individuellem Vertrag für größere Organisationen. Für Kanzleien mit Mandantendaten kommt eine dritte Frage dazu, nämlich wo Claude läuft und wer Vertragspartner ist. Managed Claude beantwortet sie mit Bluebatch als Vertragspartner, Claude über AWS Bedrock in der EU und einer Auslegung auf § 203 StGB und § 62a StBerG.",
   },
   {
     question: "Brauche ich für jede Person einen Claude Team Account?",
@@ -135,7 +135,7 @@ export default function Page() {
               Die Claude App ist Schritt 1 des Private Claude AI Gateway: Claude Desktop für Windows und Mac mit
               Chat, Cowork und Projekten, für jede Person im Team ab Tag 1. Anders als bei Claude Team oder
               Enterprise von Anthropic zahlen Sie keine Lizenz pro Kopf, sondern Verbrauch, und Claude läuft über
-              AWS Bedrock in Frankfurt in Ihrem eigenen Konto.
+              AWS Bedrock innerhalb der EU.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -289,7 +289,7 @@ export default function Page() {
             </Typo.H2>
             <Typo.Paragraph textColor="muted" spacing="lg">
               Ihr Team nutzt die Claude Desktop App von Anthropic. Verbunden wird sie nicht mit einem Claude Team
-              Account, sondern mit Ihrem Gateway. Das erledigt eine Datei aus dem Managed Claude Interface.
+              Account, sondern mit dem Private Claude AI Gateway. Das erledigt eine Datei aus dem Managed Claude Interface.
             </Typo.Paragraph>
             <TimelineAsSteps>
               <TimelineAsStepsStep value={1}>
@@ -355,10 +355,10 @@ export default function Page() {
       <ContentWrapper colorScheme="gray-light" id="vergleich">
         <IntroBox textCentered>
           <IntroBox.PreHeadline>Claude Team vs. Enterprise</IntroBox.PreHeadline>
-          <IntroBox.Headline className="text-balance">Claude Team, Enterprise oder eigenes Gateway?</IntroBox.Headline>
+          <IntroBox.Headline className="text-balance">Claude Team, Enterprise oder Managed Claude?</IntroBox.Headline>
           <IntroBox.Paragraph>
             Claude Team und Claude Enterprise sind die Abos von Anthropic. Managed Claude bringt dieselbe Desktop-App
-            über Ihr eigenes Gateway. Die Unterschiede liegen bei Abrechnung, Ort der Verarbeitung und Verwaltung.
+            über das Private Claude AI Gateway. Die Unterschiede liegen bei Abrechnung, Ort der Verarbeitung und Verwaltung.
           </IntroBox.Paragraph>
         </IntroBox>
         <DataTable className="mx-auto max-w-6xl [&_table]:min-w-[720px]">
@@ -385,7 +385,7 @@ export default function Page() {
             </DataTable.Row>
             <DataTable.Row>
               <DataTable.Cell bold>Wo Claude läuft</DataTable.Cell>
-              <DataTable.Cell bold>AWS Frankfurt, in Ihrem eigenen Konto</DataTable.Cell>
+              <DataTable.Cell bold>AWS Bedrock in der EU, Gateway in Frankfurt</DataTable.Cell>
               <DataTable.Cell>Infrastruktur von Anthropic</DataTable.Cell>
               <DataTable.Cell>Infrastruktur von Anthropic</DataTable.Cell>
             </DataTable.Row>
@@ -499,7 +499,7 @@ export default function Page() {
         <FaqContainer
           faqs={faqs}
           headline="Fragen zu Claude im Team"
-          intro="Was Kanzleien vor der Entscheidung zwischen Abo und eigenem Gateway fragen."
+          intro="Was Kanzleien vor der Entscheidung zwischen Abo und Gateway fragen."
         />
       </ContentWrapper>
 

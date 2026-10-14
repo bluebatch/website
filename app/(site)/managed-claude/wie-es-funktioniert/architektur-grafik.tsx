@@ -74,11 +74,11 @@ export function ArchitekturGrafik() {
         Claude Desktop mit Chat, Cowork und Code, Anmeldung mit dem Firmenkonto
       </Layer>
       <Connector>jede Anfrage</Connector>
-      <Layer icon={<ShieldCheck className="h-6 w-6" />} title="Private Claude AI Gateway" badge="Ihr Konto" dark>
+      <Layer icon={<ShieldCheck className="h-6 w-6" />} title="Private Claude AI Gateway" badge="Frankfurt" dark>
         Rollen, Protokoll, Limits in Euro, Connectors und Anweisungen
       </Layer>
       <Connector>eigene Anbindung</Connector>
-      <Layer icon={<Cloud className="h-6 w-6" />} title="AWS Bedrock" badge="Frankfurt">
+      <Layer icon={<Cloud className="h-6 w-6" />} title="AWS Bedrock" badge="EU">
         Verarbeitung in der EU, kein Training, kein Verlauf beim Anbieter
       </Layer>
       <Connector>Modellaufruf</Connector>
