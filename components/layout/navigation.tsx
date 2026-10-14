@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import ContactButton from "@/components/buttons/contact-button";
 import Button from "@/components/ui/button";
+import BetaBadge from "@/components/ui/beta-badge";
 import NavigationMobile from "@/components/layout/navigation-mobile";
 import NavIcon, { type NavIconName } from "@/components/layout/nav-icon";
 import { ClaudeLogo } from "@/components/icons/brand-logos";
@@ -120,6 +121,7 @@ const managedClaudeMenu = {
           title: "DATEV",
           description: "Claude mit DATEV-Daten",
           href: "/managed-claude/integrationen/datev",
+          beta: true,
         },
         {
           icon: "microsoft" as NavIconName,
@@ -366,8 +368,9 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                                 <NavIcon name={item.icon} />
                               )}
                               <div>
-                                <h5 className="font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
+                                <h5 className="flex items-center gap-1.5 font-semibold text-gray-900 group-hover:text-primary-500 text-sm">
                                   {item.title}
+                                  {"beta" in item && item.beta && <BetaBadge />}
                                 </h5>
                                 <p className="text-xs text-gray-500 mt-0.5">
                                   {item.description}

@@ -8,6 +8,7 @@ import {
   TimelineAsSteps,
   TimelineAsStepsStep,
   Button,
+  BetaBadge,
 } from "@/components/ui";
 import { OfferCard, SimpleCard } from "@/components/cards";
 import { ContactButton, InternalLink } from "@/components/buttons";
@@ -146,7 +147,7 @@ export default function Page() {
       <ContentWrapper isFirstSection colorScheme="gradient-cool">
         <Hero2Column>
           <Hero2ColumnTextColumn>
-            <Hero2ColumnPreHeadline>Integration · DATEV</Hero2ColumnPreHeadline>
+            <Hero2ColumnPreHeadline>Integration · DATEV <BetaBadge size="md" className="ml-1" /></Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>DATEV KI: Claude arbeitet mit Ihrem Bestand</Hero2ColumnHeadline>
             <Hero2ColumnDescription geo>
               Mit dem DATEV MCP von Bluebatch fragt Claude Ihren DATEV-Bestand direkt ab, statt mit Listen von gestern zu arbeiten. Ein Dienst auf Ihrem DATEV-Server nutzt DATEVconnect und ruft DATEV als die jeweilige Person auf, mit deren Rechten und Mandantentrennung. Standard ist lesen. Das Add-on ist in der Beta und kostet 100 € pro Monat.

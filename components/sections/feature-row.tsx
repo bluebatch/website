@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Check, type LucideIcon } from "lucide-react";
+import BetaBadge from "@/components/ui/beta-badge";
 
 // Bausteine der Produkt-Tour durch das Managed Claude Interface: eine Zeile
 // Text + Screenshot (abwechselnd gespiegelt), eine schmale Kachel für kleinere
@@ -59,18 +60,11 @@ function Label({ children, beta = false }: { children: ReactNode; beta?: boolean
   return (
     <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-primary-50 px-3 py-1 text-sm font-semibold text-primary-700 ring-1 ring-primary-100 [&_svg]:h-4 [&_svg]:w-4">
       {children}
-      {beta && <BetaBadge />}
+      {beta && <BetaBadge size="md" />}
     </div>
   );
 }
 
-function BetaBadge() {
-  return (
-    <span className="rounded-full bg-amber-100 px-2 py-px text-[11px] font-semibold uppercase tracking-wide text-amber-800">
-      Beta
-    </span>
-  );
-}
 
 function Points({ children }: { children: ReactNode }) {
   return (
@@ -154,7 +148,7 @@ export function FeatureIndex({ groups }: { groups: FeatureIndexGroup[] }) {
                   <span className="min-w-0">
                     <span className="flex items-center gap-2 font-semibold text-gray-900">
                       {label}
-                      {beta && <BetaBadge />}
+                      {beta && <BetaBadge size="md" />}
                     </span>
                     <span className="block text-sm leading-snug text-gray-600">{text}</span>
                   </span>

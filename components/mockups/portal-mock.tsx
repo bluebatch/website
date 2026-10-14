@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import BetaBadge from "@/components/ui/beta-badge";
 import {
   Activity,
   ChartColumn,
@@ -60,13 +61,6 @@ interface PortalMockProps {
   className?: string;
 }
 
-function BetaBadge() {
-  return (
-    <span className="rounded-full bg-amber-50 px-1.5 py-px text-[9px] font-semibold uppercase tracking-wide text-amber-700 ring-1 ring-amber-200">
-      Beta
-    </span>
-  );
-}
 
 // Bluebatch-Zeichen wie im echten Portal (brand-mark.tsx): Bogen mit
 // Verlauf #004172 → #33f8fb um ein „B" in #04507d.
@@ -134,7 +128,7 @@ function Sidebar({ active }: { active: PortalPage }) {
               >
                 <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden />
                 <span className="flex-1">{item.label}</span>
-                {"beta" in item && item.beta && <BetaBadge />}
+                {"beta" in item && item.beta && <BetaBadge size="xs" />}
               </div>
             </div>
           );
@@ -160,7 +154,7 @@ function PortalMock({ children, active, compact = false, className = "" }: Porta
             <Icon className="h-4 w-4" aria-hidden />
           </span>
           <span className="text-[14px] font-semibold">{page.label}</span>
-          {"beta" in page && page.beta && <BetaBadge />}
+          {"beta" in page && page.beta && <BetaBadge size="xs" />}
         </div>
         <div className="flex items-center gap-1 px-5 pt-3 text-[10px] text-gray-400">
           <House className="h-3 w-3" aria-hidden />

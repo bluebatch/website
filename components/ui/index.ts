@@ -1,6 +1,7 @@
 // Auto-Barrel: zentrale Re-Exports dieser Kategorie.
 // Damit der Content-Writer-Agent Komponenten findet, ohne Deep-Import.
 
+export { default as BetaBadge } from "./beta-badge";
 export { default as Button } from "./button";
 export { default as ChatConversation } from "./chat-conversation";
 export { default as ComplianceNoticeBox } from "./compliance-notice-box";
