@@ -16,7 +16,7 @@ import Hero2Column, {
 } from "@/components/heroes/hero-2-column";
 import Link from "next/link";
 import ContactButton from "@/components/buttons/contact-button";
-import Customer, { allLogos } from "@/components/sections/customer/customer";
+import Customer from "@/components/sections/customer/customer";
 import ConsultationCtaDefault from "@/components/sections/consultation-cta-default";
 import SimpleCard from "@/components/cards/simple-card";
 import BoundlessImageCard from "@/components/cards/boundless-image-card";

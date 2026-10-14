@@ -133,7 +133,7 @@ export default function CustomerBand({ logos }: CustomerBandProps) {
   return (
     <section className="bg-white py-12">
       <p className="text-center text-sm font-medium uppercase tracking-widest text-gray-400 mb-4">
-        Vertraut von führenden Unternehmen
+        Kanzleien und Unternehmen, die mit uns arbeiten
       </p>
 
       <div

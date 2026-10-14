@@ -1,43 +1,12 @@
 import LogoGrid from "../../media/logo-grid";
 import IntroBox from "../../ui/intro-box";
 import CustomerBand from "./customer-band";
+import { kunden } from "./kunden";
 
-const allLogos = [
-  {
-    src: "/customer/Big_Dutchman_Logo.png",
-    alt: "Big Dutchman",
-    scale: "lg" as const,
-  },
-  {
-    src: "/customer/Esprit-Logo_SS18_CMYK_Black_2-01.png",
-    alt: "Esprit",
-    scale: "lg" as const,
-  },
-  {
-    src: "/customer/Flaschenpost_Logo_2020.svg.png",
-    alt: "Flaschenpost",
-    scale: "md" as const,
-  },
-  {
-    src: "/customer/Fressnapf_Logo_2023.svg.png",
-    alt: "Fressnapf",
-    scale: "sm" as const,
-  },
-  { src: "/customer/Logo_Markant.svg", alt: "Markant", scale: "md" as const },
-  {
-    src: "/customer/Logo_rossmann_2024.svg",
-    alt: "Rossmann",
-    scale: "xs" as const,
-  },
-  {
-    src: "/customer/Schwarz-Gruppe_Lidl_Kaufland_Logo_9.2019.svg.png",
-    alt: "Schwarz Gruppe",
-    scale: "lg" as const,
-  },
-  { src: "/customer/edeka.png", alt: "Edeka", scale: "md" as const },
-  { src: "/customer/images.png", alt: "Partner", scale: "lg" as const },
-  { src: "/customer/steinbach.webp", alt: "Steinbach", scale: "lg" as const },
-];
+// Logos kommen aus kunden.ts (gemeinsam mit CustomerTiles und CustomerQuotes)
+const allLogos = kunden.flatMap((k) =>
+  k.logo ? [{ src: k.logo.src, alt: k.name, scale: k.logo.scale ?? ("md" as const) }] : [],
+);
 
 interface CustomerProps {
   logos?: typeof allLogos;
@@ -59,8 +28,7 @@ export default function Customer({
           <IntroBox.PreHeadline>Highlight</IntroBox.PreHeadline>
           <IntroBox.Headline>Unsere Kunden</IntroBox.Headline>
           <IntroBox.Subline>
-            Das sind die Kunden, die uns vertrauen und mit AI-Workflows ihre
-            prozesse automatisieren
+            Kanzleien und Unternehmen, die mit uns arbeiten
           </IntroBox.Subline>
         </IntroBox>
       </div>
