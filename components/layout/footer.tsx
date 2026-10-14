@@ -12,7 +12,7 @@ export default function Footer() {
   ];
 
   const wissenMenu = [
-    { label: "Managed Claude", href: "/managed-claude" },
+    { label: "Claude Preise", href: "/managed-claude/preise" },
     { label: "Weitere Tools", href: "/managed-claude/weitere-tools" },
     { label: "Blog", href: "/blog" },
   ];

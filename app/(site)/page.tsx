@@ -1,99 +1,105 @@
 import type { Metadata } from "next";
 import type { RewriteSiteConfig } from "@/lib/get-rewrites";
 import Image from "next/image";
-import ContentWrapper from "@/components/layout/content-wrapper";
-import InternalLink from "@/components/buttons/internal-link";
-import Typo from "@/components/ui/typo";
-import BackgroundHero from "@/components/heroes/background-hero";
-import ContactButton from "@/components/buttons/contact-button";
-import SimpleGrid from "@/components/layout/simple-grid";
-import SimpleCard from "@/components/cards/simple-card";
-import TimelineAsSteps, {
-  TimelineAsStepsStep,
-} from "@/components/ui/timeline-as-steps";
 import Link from "next/link";
-import { resolveHref } from "@/lib/get-canonical-path";
-import GlassCard from "@/components/cards/glass-card";
+import {
+  Cloud,
+  Database,
+  FileSearch,
+  Handshake,
+  Inbox,
+  LifeBuoy,
+  ListChecks,
+  MessagesSquare,
+  Monitor,
+  ReceiptText,
+  Scale,
+  ShieldAlert,
+  ShieldCheck,
+} from "lucide-react";
+import { ContentWrapper, SimpleGrid } from "@/components/layout";
+import {
+  Typo,
+  IntroBox,
+  ProseColumns,
+  TimelineAsSteps,
+  TimelineAsStepsStep,
+  FaqContainer,
+} from "@/components/ui";
+import {
+  OfferCard,
+  ComparisonCard,
+  BeforeCard,
+  AfterCard,
+  ComparisonHeadline,
+  ComparisonList,
+  ComparisonListItem,
+  ComparisonFooter,
+  GlassCard,
+} from "@/components/cards";
 import {
   GlassCardTitle,
   GlassCardDescription,
   GlassCardArrow,
 } from "@/components/cards/glass-card";
+import { ContactButton, InternalLink } from "@/components/buttons";
+import {
+  Hero2Column,
+  Hero2ColumnTextColumn,
+  Hero2ColumnMediaColumn,
+  Hero2ColumnPreHeadline,
+  Hero2ColumnHeadline,
+  Hero2ColumnDescription,
+  Hero2ColumnCallToAction,
+  HeroStatBand,
+} from "@/components/heroes";
+import { HubDiagram } from "@/components/diagrams";
 import LatestBlogPosts from "@/components/sections/latest-blog-posts";
-import CardShowcase from "@/components/cards/card-showcase";
-import Customer from "@/components/sections/customer/customer";
-import IntroBox from "@/components/ui/intro-box";
-import OfferCard from "@/components/cards/offer-card";
-import { FaqContainer } from "@/components/ui/faqs";
+import CustomerTiles from "@/components/sections/customer/customer-tiles";
+import CustomerQuotes from "@/components/sections/customer/customer-quotes";
+import { ClaudeLogo, DatevLogo, MicrosoftLogo } from "@/components/icons/brand-logos";
+import { resolveHref } from "@/lib/get-canonical-path";
+import IconTitle from "./managed-claude/icon-title";
+import { ConnectorsMock, HubHeroVisual } from "./startseite-grafiken";
 
+// Startseite = Hauptseite von Managed Claude. Der frühere Hub /managed-claude
+// leitet per 308 hierher, im Mega-Menü ist „Managed Claude" nur noch Trigger.
 export const rewriteSiteConfig: RewriteSiteConfig = {
-  rewrites: [
-    {
-      source: "/n8n-automatisierung",
-      metaTitle: "n8n Automatisierung - Enterprise AI-Automation | Bluebatch",
-      metaDescription:
-        "n8n Automatisierung für Ihr Unternehmen. KI Agentur für Workflow Engineering mit Enterprise-Fokus.",
-      keywords: ["n8n Automatisierung", "n8n Workflow", "Bluebatch"],
-    },
-    {
-      source: "/ki-agentur",
-      metaTitle:
-        "KI Agentur - n8n Automatisierung & Workflow Engineering | Bluebatch",
-      metaDescription:
-        "Ihre KI Agentur für n8n Automatisierung. Enterprise-Workflows, Custom Nodes und AI-Agenten aus einer Hand.",
-      keywords: ["KI Agentur", "KI Agentur Deutschland", "Bluebatch"],
-    },
-    {
-      source: "/ai-agentur",
-      metaTitle:
-        "AI Agentur - n8n Automatisierung & Workflow Engineering | Bluebatch",
-      metaDescription:
-        "Ihre AI Agentur für n8n Automatisierung. Enterprise-Workflows, Custom Nodes und AI-Agenten aus einer Hand.",
-      keywords: ["AI Agentur", "AI Agentur Deutschland", "Bluebatch"],
-    },
-  ],
+  legacyRedirects: ["/managed-claude", "/ki-implementierung"],
+  rewrites: [],
 };
 
+const title = "Claude AI Deutschland: Claude für Unternehmen im eigenen Konto";
+const description =
+  "Claude AI in Deutschland für Unternehmen und Kanzleien: Bluebatch betreibt Claude von Anthropic in Ihrem Konto über AWS Bedrock Frankfurt. Einrichtung 1.500 €.";
+const ogImage =
+  "/og?title=Claude%20AI%20in%20Deutschland%2C%20sicher%20im%20eigenen%20Konto&eyebrow=Bluebatch";
+
 export const metadata: Metadata = {
-  title: "Claude AI Deutschland: Claude von Anthropic im eigenen Konto | Bluebatch",
-  description:
-    "Claude AI in Deutschland nutzen: Bluebatch betreibt Claude von Anthropic in Ihrem Konto über AWS Bedrock Frankfurt, nach § 203 StGB. Einrichtung 1.500 €.",
+  title: `${title} | Bluebatch`,
+  description,
   keywords: [
     "Claude AI Deutschland",
     "Claude AI deutsch",
     "Claude von Anthropic",
     "Anthropic Partner",
-    "Claude Managed Service Provider",
-    "Managed Claude",
     "Claude für Unternehmen",
-    "Claude Enterprise einführen",
-    "Managed Service Provider Claude",
-    "KI Agentur",
-    "AI Agentur",
-    "Workflow Engineering",
-    "Enterprise AI",
-    "Backoffice Automatisierung",
-    "KI Workflows",
-    "KI Automatisierung Agentur",
-    "Software Agentur",
-    "Agentur Digitale Transformation",
-    "KI Readiness Check",
-    "KI-Implementierung",
-    "Großhandel",
-    "Retail",
-    "Digitale Mitarbeiter",
+    "Claude AI Unternehmen",
+    "Claude Enterprise",
+    "KI-Lösungen für Unternehmen",
+    "Managed Claude",
+    "Claude Managed Service Provider",
   ],
   authors: [{ name: "Bluebatch" }],
   openGraph: {
-    title: "Claude AI Deutschland: Claude von Anthropic im eigenen Konto",
-    description:
-      "Claude AI in Deutschland nutzen: Bluebatch betreibt Claude von Anthropic in Ihrem Konto über AWS Bedrock Frankfurt, nach § 203 StGB. Einrichtung 1.500 €.",
+    title,
+    description,
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
     images: [
       {
-        url: "/og?title=Claude%20AI%20in%20Deutschland%2C%20sicher%20im%20eigenen%20Konto&eyebrow=Bluebatch",
+        url: ogImage,
         width: 1200,
         height: 630,
         alt: "Claude AI in Deutschland, sicher im eigenen Konto",
@@ -102,10 +108,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Claude AI Deutschland: Claude von Anthropic im eigenen Konto",
-    description:
-      "Claude AI in Deutschland nutzen: Bluebatch betreibt Claude von Anthropic in Ihrem Konto über AWS Bedrock Frankfurt, nach § 203 StGB. Einrichtung 1.500 €.",
-    images: ["/og?title=Claude%20AI%20in%20Deutschland%2C%20sicher%20im%20eigenen%20Konto&eyebrow=Bluebatch"],
+    title,
+    description,
+    images: [ogImage],
   },
   robots: {
     index: true,
@@ -116,508 +121,360 @@ export const metadata: Metadata = {
   },
 };
 
+const standorte = [
+  {
+    name: "Berlin",
+    slug: "berlin",
+    fact: "Managed Claude für Kanzleien, Start-ups und Mittelstand in der Hauptstadt.",
+    image: "/images/cities/berlin.jpg",
+    delay: "0s",
+  },
+  {
+    name: "München",
+    slug: "muenchen",
+    fact: "Claude im eigenen Konto für Industrie, Kanzleien und Tech im Süden.",
+    image: "/images/cities/muenchen.jpg",
+    delay: "0.8s",
+  },
+  {
+    name: "Hamburg",
+    slug: "hamburg",
+    fact: "Claude für Handel, Logistik und Kanzleien im Norden.",
+    image: "/images/cities/hamburg.jpg",
+    delay: "1.6s",
+  },
+];
+
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <ContentWrapper isFirstSection noPadding>
-        <BackgroundHero
-          videoSrc="/videos/video-of-Person-drawing-workflows.mp4"
-          overlayOpacity={0.85}
-          opacityBackground="white"
-        >
-          <BackgroundHero.TopLabel>
-            Managed Service Provider für Claude
-          </BackgroundHero.TopLabel>
-          <BackgroundHero.Headline>
-            Claude AI in Deutschland,
-            <br />
-            sicher im{" "}
-            <BackgroundHero.Highlight>
-              eigenen Konto
-            </BackgroundHero.Highlight>
-          </BackgroundHero.Headline>
-          <BackgroundHero.Description geo>
-            Bluebatch bringt Claude von Anthropic in Deutschland in Ihr eigenes
-            Konto: Das Private Claude AI Gateway läuft über AWS Bedrock in
-            Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und § 62a
-            StBerG. Die Einrichtung kostet einmalig 1.500 €, danach zahlen Sie
-            nur den Verbrauch, ohne Lizenz pro Kopf.
-          </BackgroundHero.Description>
-          <BackgroundHero.CallToAction>
-            <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
-          </BackgroundHero.CallToAction>
-          <BackgroundHero.Stats>
-            <BackgroundHero.Stat
-              value={1500}
-              suffix=" €"
-              label="Festpreis Setup"
-            />
-            <BackgroundHero.Stat
-              value={0}
-              suffix=" €"
-              label="Lizenz pro Kopf"
-            />
-            <BackgroundHero.Stat
-              value={100}
-              suffix=" %"
-              label="Verarbeitung in der EU"
-            />
-          </BackgroundHero.Stats>
-        </BackgroundHero>
+      <ContentWrapper isFirstSection>
+        <Hero2Column>
+          <Hero2ColumnTextColumn>
+            <Hero2ColumnPreHeadline>Managed Service Provider für Claude</Hero2ColumnPreHeadline>
+            <Hero2ColumnHeadline>Claude AI in Deutschland, sicher im eigenen Konto</Hero2ColumnHeadline>
+            <Hero2ColumnDescription geo>
+              Bluebatch bringt Claude von Anthropic in Deutschland in Ihr eigenes Konto: Das Private Claude AI Gateway läuft über AWS Bedrock in Frankfurt, DSGVO-konform und tragfähig nach § 203 StGB und § 62a StBerG, für Kanzleien und Mittelstand. Die Einrichtung kostet einmalig 1.500 €, danach zahlen Sie nur den Verbrauch, ohne Lizenz pro Kopf.
+            </Hero2ColumnDescription>
+            <Hero2ColumnCallToAction>
+              <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
+              <InternalLink href="/managed-claude/preise" className="self-center sm:ml-4">
+                Preise ansehen
+              </InternalLink>
+            </Hero2ColumnCallToAction>
+          </Hero2ColumnTextColumn>
+          <Hero2ColumnMediaColumn>
+            <HubHeroVisual />
+          </Hero2ColumnMediaColumn>
+        </Hero2Column>
+        <HeroStatBand
+          className="mt-14"
+          stats={[
+            { value: "1.500 €", label: "Einrichtung, Festpreis" },
+            { value: "0 €", label: "Lizenz pro Kopf" },
+            { value: "Frankfurt", label: "AWS Bedrock, EU" },
+            { value: "1 Woche", label: "bis startklar" },
+          ]}
+        />
+        <CustomerTiles className="mt-20" />
       </ContentWrapper>
 
-      {/* Managed Claude: drei Bausteine */}
+      <ContentWrapper colorScheme="gray-light">
+        <IntroBox textCentered>
+          <IntroBox.Headline>Das Problem ist nicht die Technik</IntroBox.Headline>
+        </IntroBox>
+        <ProseColumns cols={3}>
+          <ProseColumns.Item title={<IconTitle icon={Scale}>Jedes Tool bringt dieselbe Frage mit</IconTitle>}>
+            Wo laufen die Daten hin? In Kanzleien heißt sie § 203 StGB und § 62a StBerG, nicht nur DSGVO. Wer sie für jedes Tool einzeln beantwortet, prüft sechsmal, verhandelt sechsmal und zahlt sechs Abos.
+          </ProseColumns.Item>
+          <ProseColumns.Item title={<IconTitle icon={ShieldAlert}>Ohne Freigabe läuft es trotzdem</IconTitle>}>
+            Solange niemand etwas freigibt, wird KI trotzdem genutzt: mit privaten Konten und echten Mandantendaten. Das ist ein persönliches Risiko der Berufsträger.
+          </ProseColumns.Item>
+          <ProseColumns.Item title={<IconTitle icon={Handshake}>Ein Partner, eine Struktur</IconTitle>}>
+            Sie brauchen nicht ein KI-Tool, sondern mehrere. Und darunter einen Partner, der die Modelle mitbringt und die Struktur, in der sie bei Ihnen laufen dürfen.
+          </ProseColumns.Item>
+        </ProseColumns>
+      </ContentWrapper>
+
       <ContentWrapper>
-        <IntroBox>
-          <IntroBox.PreHeadline>Managed Claude</IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            Claude von Anthropic einführen: ein Fundament, drei Schritte
-          </IntroBox.Headline>
-          <IntroBox.Subline>
-            Erst arbeiten, dann gut werden, dann automatisieren. Sie entscheiden
-            zuerst nur über Schritt 1: klein, zum Festpreis und umkehrbar.
-          </IntroBox.Subline>
+        <IntroBox textCentered>
+          <IntroBox.PreHeadline>Ihr Partner für Claude von Anthropic</IntroBox.PreHeadline>
+          <IntroBox.Headline>Claude für Unternehmen: Modelle und Struktur aus einer Hand</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Ein KI-Partner bringt zwei Dinge mit: die Modelle und die Struktur, in der sie bei Ihnen laufen dürfen. Das eine ohne das andere nützt Ihnen nichts.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <HubDiagram
+          className="mx-auto max-w-4xl"
+          center={{
+            icon: <ShieldCheck className="h-5 w-5" />,
+            label: "Private Claude AI Gateway",
+            sublabel: "In Ihrem Konto: Rechte, Protokoll, Limits",
+          }}
+          spokes={[
+            { icon: <Monitor className="h-5 w-5" />, label: "Claude Desktop", sublabel: "Chat, Cowork, Code" },
+            { icon: <ClaudeLogo className="h-5 w-5" />, label: "Claude-Modelle", sublabel: "Opus, Sonnet, Haiku auf AWS Bedrock" },
+            { icon: <MicrosoftLogo className="h-5 w-5" />, label: "Microsoft 365", sublabel: "Outlook, Kalender, OneDrive" },
+            { icon: <DatevLogo className="h-5 w-5" />, label: "DATEV", sublabel: "DATEV MCP (Beta)" },
+          ]}
+        />
+        <ProseColumns cols={3} className="mt-14">
+          <ProseColumns.Item title="Die Modelle">
+            Claude von Anthropic: Haiku für Einfaches, Sonnet im Alltag, Opus für die harten Fälle. Umschaltbar je Aufgabe, auf Deutsch wie auf Englisch.
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Die Struktur">
+            Das Private Claude AI Gateway: eine abgesicherte Tür, durch die jede KI-Nutzung läuft, mit Rechten, Protokoll und Abrechnung.{" "}
+            <InternalLink href="/managed-claude/datenschutz" variant="underline">
+              Claude und Datenschutz
+            </InternalLink>
+          </ProseColumns.Item>
+          <ProseColumns.Item title="Der Aufbau">
+            Einrichtung, Schulung, Kanzlei-Handbuch, Agenten, Anbindung. Wir bauen, bis Sie es selbst können.
+          </ProseColumns.Item>
+        </ProseColumns>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light">
+        <IntroBox textCentered>
+          <IntroBox.Headline>KI-Lösungen für Unternehmen: ein Fundament, drei Schritte</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Das Gateway ist kein Schritt, sondern die Voraussetzung: einmal geklärt, strafrechtlich wie berufsrechtlich, und alles läuft darauf. Erst arbeiten, dann gut werden, dann automatisieren. Wer mit Agenten anfängt, automatisiert Abläufe, die noch niemand im Haus wirklich verstanden hat.
+          </IntroBox.Paragraph>
         </IntroBox>
         <SimpleGrid cols={3} className="gap-6">
           <OfferCard
             highlight
             href="/managed-claude/claude-app"
+            price="1.500 €"
             title="Schritt 1: Chat"
-            description="Claude Desktop für jeden Mitarbeiter ab Tag 1: Chat, Cowork und Projekte mit SSO, Rollen, Protokoll und Limits."
+            description="Claude Desktop für jeden Mitarbeiter ab Tag 1: Chat, Cowork und Projekte, in einer Umgebung, in der das erlaubt ist."
             linkLabel="Zum Chat"
           />
           <OfferCard
             href="/managed-claude/coaching"
+            price="ab 5.000 €"
             title="Schritt 2: Coaching"
-            description="KI-Schulung im Haus mit Kompetenzschulung nach Art. 4 EU AI Act: Paket M mit 5 Personentagen für 5.000 €, Paket L mit 10 für 10.000 €. Einrichtung und Outlook Connector werden voll angerechnet."
+            description="KI-Schulung im Haus: Paket M mit 5 Personentagen für 5.000 €, Paket L mit 10 Personentagen für 10.000 €. Einrichtung und Outlook Connector werden voll angerechnet."
             linkLabel="Zum Coaching"
           />
           <OfferCard
             href="/managed-claude/use-cases"
+            price="nach Aufwand"
             title="Schritt 3: Agenten"
-            description="Mail-Agent, Anbindung eigener Systeme und DATEV, auf derselben Infrastruktur."
+            description="Mail-Agent, Anbindung eigener Systeme und DATEV, auf derselben Infrastruktur und mit eigenem Budget je Agent."
             linkLabel="Zu den Agenten"
           />
         </SimpleGrid>
-        <div className="mt-10 flex justify-center">
-          <InternalLink href="/managed-claude">
-            Alles über Managed Claude
-          </InternalLink>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <SimpleGrid cols={2} className="items-center gap-12">
+          <div>
+            <IntroBox textCentered={false} size="wide">
+              <IntroBox.PreHeadline>Managed Claude Interface</IntroBox.PreHeadline>
+              <IntroBox.Headline className="lg:text-4xl!">Claude zentral steuern, ohne jedes Gerät anzufassen</IntroBox.Headline>
+              <IntroBox.Subline>
+                Im Kundenportal des Gateways legen Sie fest, was Claude in Ihrer Organisation darf. Claude Desktop holt sich die Einstellungen selbst.
+              </IntroBox.Subline>
+            </IntroBox>
+            <Typo.List className="mb-8">
+              <Typo.ListItem>Team einladen, Rollen vergeben, Zugänge sperren</Typo.ListItem>
+              <Typo.ListItem>Connectors wie Microsoft 365 für alle oder ausgewählte Personen</Typo.ListItem>
+              <Typo.ListItem>Firmenweite Anweisungen, Skills und Banner</Typo.ListItem>
+              <Typo.ListItem>Verbrauch und Limits in Euro, je Person</Typo.ListItem>
+            </Typo.List>
+            <InternalLink href="/managed-claude/zentrale-steuerung">Zum Managed Claude Interface</InternalLink>
+          </div>
+          <ConnectorsMock />
+        </SimpleGrid>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light">
+        <IntroBox textCentered>
+          <IntroBox.Headline>Claude AI im Unternehmen: was im Alltag möglich wird</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Was mit dem Gateway in Kanzlei und Büro ab der ersten Woche geht.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <ProseColumns cols={3}>
+          <ProseColumns.Item title={<IconTitle icon={FileSearch}>Chat mit Dokumenten</IconTitle>}>
+            Bescheid, Vertrag oder Jahresabschluss befragen statt blättern.
+          </ProseColumns.Item>
+          <ProseColumns.Item title={<IconTitle icon={MessagesSquare}>Mandantenkommunikation</IconTitle>}>
+            Entwürfe für Mails und Anschreiben, im Ton der Kanzlei.
+          </ProseColumns.Item>
+          <ProseColumns.Item title={<IconTitle icon={Inbox}>Mail-Agent</IconTitle>}>
+            Posteingang vorsortiert, Entwürfe liegen vorbereitet da.
+          </ProseColumns.Item>
+          <ProseColumns.Item title={<IconTitle icon={ListChecks}>Fachliche Routinen</IconTitle>}>
+            Wiederkehrende Prüfschritte, immer nach Ihrer Methodik.
+          </ProseColumns.Item>
+          <ProseColumns.Item title={<IconTitle icon={ReceiptText}>Belege und Listen</IconTitle>}>
+            Strukturiert auswerten, Auffälligkeiten vorab markiert.
+          </ProseColumns.Item>
+          <ProseColumns.Item title={<IconTitle icon={Database}>Zugriff auf DATEV</IconTitle>}>
+            Claude fragt Ihren Datenbestand, statt zu raten.
+          </ProseColumns.Item>
+        </ProseColumns>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <IntroBox textCentered>
+          <IntroBox.Headline>Was Ihren Chat vom öffentlichen Chatbot unterscheidet</IntroBox.Headline>
+        </IntroBox>
+        <ComparisonCard className="mx-auto max-w-5xl">
+          <BeforeCard className="rounded-2xl">
+            <ComparisonHeadline>Öffentlicher Chatbot</ComparisonHeadline>
+            <ComparisonList>
+              <ComparisonListItem>Daten laufen beim Anbieter</ComparisonListItem>
+              <ComparisonListItem>Keine Mandantendaten erlaubt</ComparisonListItem>
+              <ComparisonListItem>Jeder darf alles, kein Protokoll</ComparisonListItem>
+              <ComparisonListItem>Kanzleiwissen jedes Mal neu erklären</ComparisonListItem>
+            </ComparisonList>
+            <ComparisonFooter>Kosten: pro Kopf, pro Monat</ComparisonFooter>
+          </BeforeCard>
+          <AfterCard className="rounded-2xl">
+            <ComparisonHeadline>Ihr Chat über das Gateway</ComparisonHeadline>
+            <ComparisonList>
+              <ComparisonListItem>In Ihrem Konto, AWS Frankfurt</ComparisonListItem>
+              <ComparisonListItem>Mandantendaten im Rahmen von § 203 StGB und § 62a StBerG</ComparisonListItem>
+              <ComparisonListItem>Rollen, Rechte und vollständiges Protokoll</ComparisonListItem>
+              <ComparisonListItem>Kanzleiwissen als Anweisung und Skill hinterlegt</ComparisonListItem>
+            </ComparisonList>
+            <ComparisonFooter>Kosten: nach Verbrauch, Limit pro Mitarbeiter</ComparisonFooter>
+          </AfterCard>
+        </ComparisonCard>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gray-light">
+        <CustomerQuotes />
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <IntroBox textCentered>
+          <IntroBox.Headline>Sie entscheiden zuerst nur über Schritt 1</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Der ist klein, hat einen Festpreis und ist umkehrbar. Schulung, Agenten, Systemanbindung und DATEV entscheiden Sie, wenn Sie aus dem Alltag wissen, was sich lohnt.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <div className="mx-auto max-w-3xl">
+          <TimelineAsSteps>
+            <TimelineAsStepsStep value={1}>
+              <Typo.H3 className="mt-2!">Scoping-Gespräch, 30 Minuten</Typo.H3>
+              <Typo.Paragraph className="text-gray-600">
+                Stand der IT, Anmeldung, wer Zugriff bekommt, welche Systeme später relevant sind. Mit Ihnen, Ihrer IT und uns.
+              </Typo.Paragraph>
+            </TimelineAsStepsStep>
+            <TimelineAsStepsStep value={2}>
+              <Typo.H3 className="mt-2!">Angebot, 3 Tage danach</Typo.H3>
+              <Typo.Paragraph className="text-gray-600">
+                Einrichtung zum Festpreis, mit Verbrauchsschätzung und Limit-Vorschlag.
+              </Typo.Paragraph>
+            </TimelineAsStepsStep>
+            <TimelineAsStepsStep value={3}>
+              <Typo.H3 className="mt-2!">Einrichtung, maximal 1 Woche nach Auftrag</Typo.H3>
+              <Typo.Paragraph className="text-gray-600">
+                Gateway und Claude Desktop startklar, alle Mitarbeiter haben Zugang. Wir, gemeinsam mit Ihrer IT.
+              </Typo.Paragraph>
+            </TimelineAsStepsStep>
+            <TimelineAsStepsStep value={4} isLast>
+              <Typo.H3 className="mt-2!">Rückblick nach 4 bis 6 Wochen</Typo.H3>
+              <Typo.Paragraph className="text-gray-600">
+                Was wird genutzt, wo lohnt sich Schritt 2, welcher Vorgang ist der Kandidat für Schritt 3. Gemeinsam.
+              </Typo.Paragraph>
+            </TimelineAsStepsStep>
+          </TimelineAsSteps>
         </div>
       </ContentWrapper>
 
-      {/* About Bluebatch Section */}
       <ContentWrapper colorScheme="gray-light">
-        <SimpleGrid cols={2} className="items-center gap-12">
-          <div>
-            <IntroBox textCentered={false}>
-              <IntroBox.PreHeadline>The DNA</IntroBox.PreHeadline>
-              <IntroBox.Headline>
-                Ihr Partner für Claude von Anthropic in Deutschland
-              </IntroBox.Headline>
-              <IntroBox.Subline>
-                Im Herzen des Mittelstands und des Großhandels liegt ein
-                ungenutztes Potenzial. Während Unternehmen händeringend nach
-                Fachkräften suchen, verbringen ihre besten Mitarbeiter oft mehr
-                als die Hälfte ihrer Arbeitszeit mit mechanischen Aufgaben.
-              </IntroBox.Subline>
-              <IntroBox.Subline>
-                Bluebatch wurde gegründet, um diese Fehlallokation von
-                Humankapital zu beenden. Als KI Automatisierung Agentur bauen
-                wir keine klassische Software - mit Claude von Anthropic
-                erschaffen wir digitale Mitarbeiter. Unsere AI-Workflows
-                übernehmen die kognitive Routinearbeit, damit Ihre Teams wieder
-                das tun können, wofür sie eingestellt wurden. Dahinter steht
-                ein kleines Team aus{" "}
-                <InternalLink href="/team" variant="underline">
-                  Workflow-Architekten und Entwicklern
-                </InternalLink>
-                , das die Projekte selbst umsetzt.
-              </IntroBox.Subline>
-            </IntroBox>
-          </div>
-          <div className="relative aspect-video">
-            <Image
-              src="/images/consulting-services.jpg"
-              alt="Managed Claude im Unternehmen"
-              fill
-              className="object-cover rounded-lg shadow-lg"
-            />
-          </div>
-        </SimpleGrid>
-      </ContentWrapper>
-
-      {/* Client Logos */}
-      <ContentWrapper noPadding bodyWidth="full">
-        <Customer />
-      </ContentWrapper>
-
-      {/* Enterprise Heritage Section */}
-      <ContentWrapper colorScheme="gray-light">
-        <IntroBox>
-          <IntroBox.PreHeadline>Enterprise Heritage</IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            AI Agentur mit Enterprise-Expertise statt „Clicky-Bude“
-          </IntroBox.Headline>
-          <IntroBox.Subline>
-            Bluebatch ist eine spezialisierte Tochter der Pexon Consulting. Als
-            Teil einer etablierten IT-Cloud-Beratung auf Enterprise-Niveau
-            bringen wir eine technologische Reife mit, die man bei reinen
-            Automatisierungs-Agenturen selten findet.
-          </IntroBox.Subline>
+        <IntroBox textCentered>
+          <IntroBox.Headline>Alles zum Private Claude AI Gateway</IntroBox.Headline>
         </IntroBox>
-
-        <SimpleGrid cols={3} className="mt-10">
-          <SimpleCard>
-            <SimpleCard.Icon
-              src="/icons/cloud.svg"
-              alt="Cloud-Native"
-              color="primary-gradient"
-            />
-            <Typo.H3>Cloud-Native & Sicher</Typo.H3>
-            <Typo.Paragraph>
-              Wir wissen, wie man Systeme skaliert, die höchsten
-              Sicherheitsansprüchen genügen. Als Software Agentur „basteln“ wir
-              nicht mit Tools, sondern bauen robuste, architekturell saubere
-              Lösungen.
-            </Typo.Paragraph>
-          </SimpleCard>
-
-          <SimpleCard>
-            <SimpleCard.Icon
-              src="/icons/shield-check.svg"
-              alt="Enterprise-Standards"
-              color="primary-gradient"
-            />
-            <Typo.H3>Enterprise-Standards</Typo.H3>
-            <Typo.Paragraph>
-              Durch unsere Wurzeln bei Pexon verstehen wir komplexe
-              IT-Landschaften, Compliance-Vorgaben und die Notwendigkeit von
-              stabiler Governance.
-            </Typo.Paragraph>
-          </SimpleCard>
-
-          <SimpleCard>
-            <SimpleCard.Icon
-              src="/icons/wrench.svg"
-              alt="Professionalität"
-              color="primary-gradient"
-            />
-            <Typo.H3>Agentur Digitale Transformation</Typo.H3>
-            <Typo.Paragraph>
-              Wir kennen den Unterschied zwischen einem Prototyp und einer
-              geschäftskritischen Anwendung. Unsere Workflows sind darauf
-              ausgelegt, 24/7 reibungslos zu funktionieren - von der
-              KI-Implementierung bis zum laufenden Betrieb.
-            </Typo.Paragraph>
-          </SimpleCard>
+        <SimpleGrid cols={3} className="gap-6">
+          <OfferCard
+            href="/managed-claude/wie-es-funktioniert"
+            title="Wie es funktioniert"
+            description="Architektur mit AWS Bedrock, Rechtsrahmen nach § 203 StGB und § 62a StBerG, kein Lock-in."
+            linkLabel="Mehr erfahren"
+          />
+          <OfferCard
+            href="/managed-claude/datenschutz"
+            title="Datenschutz und DSGVO"
+            description="Wo Ihre Daten laufen, was protokolliert wird und welche Unterlagen Sie für DSGVO und Berufsgeheimnis bekommen."
+            linkLabel="Zum Datenschutz"
+          />
+          <OfferCard
+            href="/managed-claude/preise"
+            title="Preise"
+            description="1.500 € Einrichtung, Tokenpreise je Modell, Coaching-Pakete M und L, Kostenrechner."
+            linkLabel="Zu den Preisen"
+          />
+          <OfferCard
+            href="/managed-claude/zentrale-steuerung"
+            title="Managed Claude Interface"
+            description="Team, Limits, Connectors, Anweisungen und Skills zentral im Kundenportal."
+            linkLabel="Zum Interface"
+          />
+          <OfferCard
+            href="/managed-claude/integrationen"
+            title="Integrationen"
+            description="DATEV MCP, Outlook Connector, Websuche und eigene Systeme per MCP."
+            linkLabel="Zu den Integrationen"
+          />
+          <OfferCard
+            href="/managed-claude/claude-api"
+            title="Claude API"
+            description="Eigene Apps bauen: API-Key über uns, Kosten je Agent und Use Case getrackt."
+            linkLabel="Zur Claude API"
+          />
+          <OfferCard
+            href="/managed-claude/onboarding"
+            title="Onboarding"
+            description="Vom Scoping-Gespräch bis zum Go-live: wer was macht und wann Ihr Team startklar ist."
+            linkLabel="Zum Onboarding"
+          />
+          <OfferCard
+            href="/managed-claude/weitere-tools/n8n"
+            title="n8n"
+            description="Auf n8n laufen unsere Agenten. Hosting, Wartung und Schulungen gibt es weiterhin."
+            linkLabel="Zum n8n-Hub"
+          />
+          <OfferCard
+            href="/managed-claude/weitere-tools"
+            title="Weitere Tools"
+            description="Make, Zapier, Navision, easybill, e.bootis und mehr."
+            linkLabel="Zu allen Tools"
+          />
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Latest Blog Posts */}
+      <ContentWrapper>
+        <IntroBox textCentered>
+          <IntroBox.PreHeadline>Wer dahintersteht</IntroBox.PreHeadline>
+          <IntroBox.Headline>Cloud-Erfahrung aus dem Enterprise-Umfeld</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Bluebatch ist eine Tochter der Pexon Consulting, einer IT- und Cloud-Beratung für Konzerne und Mittelstand. Das Gateway läuft deshalb so, wie wir auch große AWS-Umgebungen betreiben: dokumentiert, überwacht und in Ihrem Konto.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <ProseColumns cols={3}>
+          <ProseColumns.Item title={<IconTitle icon={Cloud}>AWS im eigenen Konto</IconTitle>}>
+            Konto, Zugänge und Daten gehören Ihnen. Wir richten ein und betreuen, Sie behalten die Kontrolle und könnten jederzeit ohne uns weitermachen.
+          </ProseColumns.Item>
+          <ProseColumns.Item title={<IconTitle icon={ShieldCheck}>Compliance mitgedacht</IconTitle>}>
+            AV-Vertrag, Verpflichtung nach § 203 StGB, dokumentierte Maßnahmen und eine Liste aller Unterauftragnehmer gehören zur Einrichtung dazu.
+          </ProseColumns.Item>
+          <ProseColumns.Item title={<IconTitle icon={LifeBuoy}>Betrieb mit Ansprechpartner</IconTitle>}>
+            Neue Modelle, neue Mitarbeiter, neue Connectors: Sie haben einen festen Ansprechpartner, der das Gateway kennt.{" "}
+            <InternalLink href="/team" variant="underline">
+              Das Team
+            </InternalLink>
+          </ProseColumns.Item>
+        </ProseColumns>
+      </ContentWrapper>
+
       <LatestBlogPosts />
 
-      {/* What Drives Us Section */}
-      <ContentWrapper colorScheme="gray-light">
-        <SimpleGrid cols={2} className="items-center gap-12">
-          <div>
-            <IntroBox textCentered={false}>
-              <IntroBox.PreHeadline>
-                „Time-to-Market“-Falle
-              </IntroBox.PreHeadline>
-              <IntroBox.Headline>
-                KI-Automatisierung als Lösung
-              </IntroBox.Headline>
-              <IntroBox.Paragraph>
-                Besonders im Großhandel und Retail ist Geschwindigkeit die
-                härteste Währung. Manuelle Prozesse wirken hier wie eine Bremse.
-                Wenn neue Produkte wochenlang im Lager liegen, weil die
-                PIM-Daten manuell eingepflegt werden müssen, oder wenn Angebote
-                Tage brauchen, ist das verlorener Umsatz.
-              </IntroBox.Paragraph>
-              <IntroBox.Paragraph>
-                Wir lösen dieses Problem durch Workflow Engineering. Mit einer
-                Kombination aus Claude und gezielter Automatisierung
-                schaffen wir „Daten-Autobahnen“.
-              </IntroBox.Paragraph>
-            </IntroBox>
-          </div>
-          <div>
-            <TimelineAsSteps>
-              <TimelineAsStepsStep value={1}>
-                <Typo.H3 className="mt-2!">
-                  Entkopplung von Wachstum und Headcount
-                </Typo.H3>
-                <Typo.Paragraph>
-                  Sie skalieren Ihren Umsatz, ohne linear neue Stellen im
-                  Backoffice schaffen zu müssen.
-                </Typo.Paragraph>
-              </TimelineAsStepsStep>
-
-              <TimelineAsStepsStep value={2}>
-                <Typo.H3 className="mt-2!">Nutzung von Dark Data</Typo.H3>
-                <Typo.Paragraph>
-                  Wir machen Informationen aus Belegen und Rechnungen
-                  strategisch nutzbar (Transactional Intelligence).
-                </Typo.Paragraph>
-              </TimelineAsStepsStep>
-
-              <TimelineAsStepsStep value={3} isLast>
-                <Typo.H3 className="mt-2!">Fehlerresistenz</Typo.H3>
-                <Typo.Paragraph>
-                  Wo Menschen bei monotonen Aufgaben ermüden, bleibt unsere KI
-                  bei 100% Präzision.
-                </Typo.Paragraph>
-              </TimelineAsStepsStep>
-            </TimelineAsSteps>
-          </div>
-        </SimpleGrid>
-      </ContentWrapper>
-
-      {/* Time-to-Value Promise Section */}
-      <ContentWrapper>
-        <IntroBox>
-          <IntroBox.PreHeadline>Rapid Implementation</IntroBox.PreHeadline>
-          <IntroBox.Headline>Time-to-Value in 5 Tagen</IntroBox.Headline>
-          <IntroBox.Subline>
-            Wir glauben nicht an monatelange Beratungszyklen ohne Ergebnis.
-            Unser Ansatz ist agil und messbar.
-          </IntroBox.Subline>
-        </IntroBox>
-
-        <SimpleGrid cols={3} className="mt-10">
-          <SimpleCard>
-            <SimpleCard.Icon
-              src="/icons/rocket-launch.svg"
-              alt="Schneller Start"
-              color="primary-gradient"
-            />
-            <Typo.H3>Tag 1-5: Live</Typo.H3>
-            <Typo.Paragraph>
-              Mit Claude bringen wir Ihren ersten produktiven Use Case
-              live. Keine monatelangen Planungsphasen, sondern direkte
-              Ergebnisse.
-            </Typo.Paragraph>
-          </SimpleCard>
-
-          <SimpleCard>
-            <SimpleCard.Icon
-              src="/icons/adjustments.svg"
-              alt="Managed Operations"
-              color="primary-gradient"
-            />
-            <Typo.H3>Managed Operations</Typo.H3>
-            <Typo.Paragraph>
-              Wir übernehmen den Betrieb. Wir monitoren die KI-Qualität,
-              optimieren die Token-Kosten und sorgen dafür, dass die
-              Automatisierung mit Ihrem Unternehmen mitwächst.
-            </Typo.Paragraph>
-          </SimpleCard>
-
-          <SimpleCard>
-            <SimpleCard.Icon
-              src="/icons/users-group.svg"
-              alt="Human-in-the-Loop"
-              color="primary-gradient"
-            />
-            <Typo.H3>Human-in-the-Loop</Typo.H3>
-            <Typo.Paragraph>
-              Wir integrieren Ihre Mitarbeiter sinnvoll in den Prozess. Die KI
-              arbeitet vor, der Mensch gibt die finale Freigabe. 100% Qualität
-              bei minimalem Zeitaufwand.
-            </Typo.Paragraph>
-          </SimpleCard>
-        </SimpleGrid>
-      </ContentWrapper>
-
-      {/* Individual Solutions Section */}
-      <ContentWrapper colorScheme="gray-light">
-        <SimpleGrid cols={2} className="items-center gap-12">
-          <div className="relative aspect-video">
-            <Image
-              src="/images/business-automation.jpg"
-              alt="Workflow Engineering"
-              fill
-              className="object-cover rounded-lg shadow-lg"
-            />
-          </div>
-          <div>
-            <IntroBox textCentered={false}>
-              <IntroBox.PreHeadline>Keine Plattform-Logik</IntroBox.PreHeadline>
-              <IntroBox.Headline>Wir bauen Ihre Lösung.</IntroBox.Headline>
-              <IntroBox.Subline>
-                In einer Welt voller „Blackbox“-Software gehen wir einen anderen
-                Weg. Bluebatch ist kein anonymes Tool, sondern eine
-                Workflow-Engineering-Unit. Wir analysieren Ihre manuellen
-                Prozesse, entwerfen die passende Architektur und implementieren
-                individuelle Lösungen auf Basis von Claude.
-              </IntroBox.Subline>
-              <IntroBox.Subline>
-                Das Besondere: Ihre Daten gehören Ihnen. Wir bauen die Workflows
-                direkt in Ihrer Infrastruktur oder auf dedizierten Instanzen.
-                Ihre sensiblen Geschäftsdaten verlassen niemals Ihren
-                Kontrollbereich.
-              </IntroBox.Subline>
-            </IntroBox>
-          </div>
-        </SimpleGrid>
-      </ContentWrapper>
-
-      {/* Engineering Approach Section */}
-      <ContentWrapper colorScheme="dark">
-        <IntroBox dark>
-          <IntroBox.PreHeadline>Our Approach</IntroBox.PreHeadline>
-          <IntroBox.Headline>
-            Warum Bluebatch? Der Engineering-Ansatz
-          </IntroBox.Headline>
-          <IntroBox.Subline>
-            Wir setzen auf Transparenz, bewährte Patterns und Enterprise-DNA.
-          </IntroBox.Subline>
-        </IntroBox>
-
-        <CardShowcase>
-          <CardShowcase.Item size="large">
-            <CardShowcase.Image
-              src="/images/training-seminar.jpg"
-              alt="Kein Lock-in"
-            />
-            <CardShowcase.Content>
-              <CardShowcase.Title>
-                Kein Lock-in, volle Souveränität
-              </CardShowcase.Title>
-              <CardShowcase.Description>
-                Wir nutzen Open-Source-Power (wie n8n) und
-                Cloud-Native-Technologien. Die Logik der Workflows ist
-                transparent und bleibt in Ihrem Besitz.
-              </CardShowcase.Description>
-            </CardShowcase.Content>
-          </CardShowcase.Item>
-
-          <CardShowcase.Item size="small">
-            <CardShowcase.Image
-              src="/images/human-resources.jpg"
-              alt="Bewährte Patterns"
-            />
-            <CardShowcase.Content>
-              <CardShowcase.Title>
-                Bewährte Patterns - Individuelle Umsetzung
-              </CardShowcase.Title>
-              <CardShowcase.Description>
-                Wir nutzen erprobte Blueprints für Belegverarbeitung und
-                Stammdatenpflege, individualisiert für Ihre Systemlandschaft.
-              </CardShowcase.Description>
-            </CardShowcase.Content>
-          </CardShowcase.Item>
-
-          <CardShowcase.Item size="small">
-            <CardShowcase.Image
-              src="/images/business-growth.jpg"
-              alt="Enterprise-DNA"
-            />
-            <CardShowcase.Content>
-              <CardShowcase.Title>
-                Enterprise-DNA durch Pexon
-              </CardShowcase.Title>
-              <CardShowcase.Description>
-                Als Tochter der Pexon Consulting bringen wir Erfahrung aus
-                hochkomplexen Cloud-Projekten mit. Production-Ready.
-              </CardShowcase.Description>
-            </CardShowcase.Content>
-          </CardShowcase.Item>
-
-          <CardShowcase.Item size="large">
-            <CardShowcase.Image
-              src="/images/office-building.jpg"
-              alt="Managed Operations"
-            />
-            <CardShowcase.Content>
-              <CardShowcase.Title>
-                Workflow-as-a-Service: Wir bauen und betreiben
-              </CardShowcase.Title>
-              <CardShowcase.Description>
-                Ein komplexer Workflow ist ein lebendes System. Wir überwachen,
-                optimieren und sichern Ihre Automatisierung nach dem Go-Live.
-              </CardShowcase.Description>
-            </CardShowcase.Content>
-          </CardShowcase.Item>
-        </CardShowcase>
-      </ContentWrapper>
-
-      {/* Workflow-as-a-Service Section */}
-      <ContentWrapper colorScheme="gray-light">
-        <SimpleGrid cols={2} className="items-center gap-12">
-          <div>
-            <IntroBox textCentered={false}>
-              <IntroBox.PreHeadline>
-                Workflow-as-a-Service (WAAS)
-              </IntroBox.PreHeadline>
-              <IntroBox.Headline>
-                Wir bauen und wir betreiben.
-              </IntroBox.Headline>
-              <IntroBox.Subline>
-                Ein komplexer Workflow ist kein einmaliges Projekt, sondern ein
-                lebendes System. APIs ändern sich, Dokumentenformate variieren,
-                KI-Modelle entwickeln sich weiter. Wir lassen Sie nach dem
-                Go-Live nicht allein.
-              </IntroBox.Subline>
-            </IntroBox>
-          </div>
-          <div>
-            <TimelineAsSteps>
-              <TimelineAsStepsStep value={1}>
-                <Typo.H3 className="mt-2!">Managed Operations</Typo.H3>
-                <Typo.Paragraph>
-                  Wir überwachen die Ausführungen Ihrer Workflows in Echtzeit
-                  und reagieren proaktiv auf Anomalien.
-                </Typo.Paragraph>
-              </TimelineAsStepsStep>
-
-              <TimelineAsStepsStep value={2}>
-                <Typo.H3 className="mt-2!">Continuous Optimization</Typo.H3>
-                <Typo.Paragraph>
-                  Wir verfeinern die Prompts und Logiken laufend, um die
-                  Treffsicherheit zu erhöhen und Token-Kosten zu senken.
-                </Typo.Paragraph>
-              </TimelineAsStepsStep>
-
-              <TimelineAsStepsStep value={3} isLast>
-                <Typo.H3 className="mt-2!">Quality Assurance</Typo.H3>
-                <Typo.Paragraph>
-                  Durch „Human-in-the-Loop“-Schnittstellen stellen wir sicher,
-                  dass die KI nur vorbereitet und der Mensch dort steuert, wo es
-                  kritisch ist.
-                </Typo.Paragraph>
-              </TimelineAsStepsStep>
-            </TimelineAsSteps>
-          </div>
-        </SimpleGrid>
-      </ContentWrapper>
-
-      {/* Philosophy Section */}
-      <ContentWrapper>
-        <IntroBox size="small">
-          <IntroBox.PreHeadline>Unsere Philosophie</IntroBox.PreHeadline>
-          <IntroBox.Headline>Ergebnisse statt Features</IntroBox.Headline>
-          <IntroBox.Subline>
-            Wir reden nicht über Software-Funktionen, sondern über
-            Business-Impact. Unser Ziel ist es, dass Ihr Einkauf schneller
-            verhandeln kann, Ihr Vertrieb schneller Angebote versendet und Ihr
-            Backoffice von monotonen Aufgaben befreit wird.
-          </IntroBox.Subline>
-          <IntroBox.Paragraph>
-            Bluebatch ist die Brücke zwischen Ihrer heutigen manuellen Arbeit
-            und einer skalierbaren Zukunft - powered by Claude von Anthropic.
-          </IntroBox.Paragraph>
-          <div>
-            <ContactButton icon="calendar" size="lg">
-              Erstgespräch vereinbaren
-            </ContactButton>
-          </div>
-        </IntroBox>
-      </ContentWrapper>
-
-      {/* Standorte */}
       <ContentWrapper colorScheme="gradient-night">
         <IntroBox dark>
           <IntroBox.Headline>Unsere Standorte</IntroBox.Headline>
@@ -628,29 +485,7 @@ export default function Home() {
         </IntroBox>
 
         <SimpleGrid cols={3} className="mt-10">
-          {[
-            {
-              name: "Berlin",
-              slug: "berlin",
-              fact: "AI-Workflows für Startups, Scale-ups und Konzerne in der Hauptstadt.",
-              image: "/images/cities/berlin.jpg",
-              delay: "0s",
-            },
-            {
-              name: "München",
-              slug: "muenchen",
-              fact: "Prozessautomatisierung für Industrie und Tech im Süden Deutschlands.",
-              image: "/images/cities/muenchen.jpg",
-              delay: "0.8s",
-            },
-            {
-              name: "Hamburg",
-              slug: "hamburg",
-              fact: "Workflow Engineering für Handel, Logistik und Maritime Wirtschaft.",
-              image: "/images/cities/hamburg.jpg",
-              delay: "1.6s",
-            },
-          ].map((city) => (
+          {standorte.map((city) => (
             <Link
               key={city.slug}
               href={resolveHref(`/standorte/${city.slug}`)}
@@ -693,12 +528,6 @@ export default function Home() {
         </div>
       </ContentWrapper>
 
-      {/* Customer Logo Band */}
-      <ContentWrapper noPadding bodyWidth="full">
-        <Customer type="band" />
-      </ContentWrapper>
-
-      {/* FAQ */}
       <ContentWrapper colorScheme="gray-light" bodyWidth="small">
         <FaqContainer
           headline="Häufige Fragen zu Claude AI in Deutschland"
@@ -715,42 +544,48 @@ export default function Home() {
                 "Ja. Claude von Anthropic versteht und schreibt Deutsch auf hohem Niveau, auch die Fachsprache aus Steuerrecht, Recht und Technik. Mails, Schriftsätze und Zusammenfassungen entstehen direkt auf Deutsch, im Ton, den Sie über firmenweite Anweisungen vorgeben.",
             },
             {
+              question: "Brauchen wir dafür den Claude Enterprise Plan?",
+              answer:
+                "Nein. Claude Enterprise ist das Abo direkt bei Anthropic und wird pro Kopf und Monat abgerechnet. Über das Gateway nutzen Sie die Claude-Modelle über AWS Bedrock in Frankfurt, zahlen nach Verbrauch und bekommen die Unterlagen für § 203 StGB und § 62a StBerG. Ein Abo bei Anthropic brauchen Sie dafür nicht.",
+            },
+            {
               question: "Brauche ich einen Anthropic Partner, um Claude im Unternehmen zu nutzen?",
               answer:
                 "Nicht zwingend, aber es spart viel Arbeit. Claude gibt es als Abo direkt bei Anthropic oder über AWS Bedrock im eigenen Konto. Für den zweiten Weg braucht es jemanden, der Gateway, Anmeldung, Rechte, Limits und Abrechnung aufsetzt und das Team schult. Das übernimmt Bluebatch als Managed Service Provider für Claude.",
             },
             {
-              question: "Was kostet Claude von Anthropic über Bluebatch?",
+              question: "Was kostet Claude für Unternehmen bei Bluebatch?",
               answer:
-                "Die Einrichtung des Private Claude AI Gateway kostet einmalig 1.500 € zzgl. USt. Danach zahlen Sie die Modellkosten nach Verbrauch laut Preisliste, zum Beispiel 2,60 € je 1 Million Input-Tokens bei Claude Sonnet 5.5. Eine Lizenz pro Kopf gibt es nicht.",
+                "Die Einrichtung des Private Claude AI Gateway kostet einmalig 1.500 € zzgl. USt. Danach zahlen Sie die Modellkosten nach Verbrauch laut Preisliste, zum Beispiel 2,60 € je 1 Million Input-Tokens bei Claude Sonnet 5.5, ohne Lizenz pro Kopf. Mit Coaching-Paket M (5.000 €) oder L (10.000 €) werden Einrichtung und Outlook Connector voll angerechnet.",
+            },
+            {
+              question: "Werden unsere Daten für Training genutzt?",
+              answer:
+                "Nein. Kein Training mit Ihren Daten ist vertraglich zugesichert, beim Anbieter wird kein Verlauf gespeichert, und die Datenresidenz in der EU ist dokumentiert.",
             },
             {
               question: "Wie schnell können wir mit Claude starten?",
               answer:
                 "Nach einem Scoping-Gespräch von 30 Minuten bekommen Sie drei Tage später ein Angebot. Maximal eine Woche nach Auftrag sind Gateway und Claude Desktop eingerichtet und alle Mitarbeiter haben Zugang.",
             },
+            {
+              question: "Sind wir danach an Bluebatch gebunden?",
+              answer:
+                "Nein. Konto, Zugänge, Kanzlei-Handbuch und Abläufe gehören Ihnen. Wenn Sie uns morgen nicht mehr brauchen, läuft alles weiter. Die laufende Betreuung ist optional und jederzeit kündbar.",
+            },
           ]}
         />
       </ContentWrapper>
 
-      {/* Final Statement Section */}
-      <ContentWrapper colorScheme="dark">
-        <div className="py-12">
-          <IntroBox dark>
-            <IntroBox.PreHeadline>Who We Are</IntroBox.PreHeadline>
-            <IntroBox.Headline>Wir sind Bluebatch.</IntroBox.Headline>
-            <IntroBox.Subline className="mb-8!">
-              Wir kombinieren die Agilität eines KI-Startups mit der
-              Zuverlässigkeit einer Enterprise-Beratung. Lassen Sie uns
-              gemeinsam die manuelle Ära beenden und Ihr Unternehmen auf
-              „Autopilot“ für Routineprozesse stellen.
-            </IntroBox.Subline>
-            <div className="flex flex-col items-center gap-4">
-              <ContactButton icon="chat">
-                Jetzt KI Readiness Check vereinbaren
-              </ContactButton>
-            </div>
-          </IntroBox>
+      <ContentWrapper colorScheme="primary-darker">
+        <IntroBox dark textCentered>
+          <IntroBox.Headline>Sprechen wir über Schritt 1</IntroBox.Headline>
+          <IntroBox.Paragraph>
+            Im Scoping-Gespräch klären wir in 30 Minuten Stand der IT, Anmeldung, wer Zugriff bekommt und welche Systeme später relevant sind. Drei Tage danach haben Sie ein Angebot mit Festpreis, Verbrauchsschätzung und Limit-Vorschlag.
+          </IntroBox.Paragraph>
+        </IntroBox>
+        <div className="flex justify-center">
+          <ContactButton size="lg">Gespräch vereinbaren</ContactButton>
         </div>
       </ContentWrapper>
     </>

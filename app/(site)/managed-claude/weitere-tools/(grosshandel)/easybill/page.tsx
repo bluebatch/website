@@ -316,7 +316,7 @@ export default function Page() {
         <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
           Sie nutzen Easybill? Sehen Sie sich unseren{" "}
           <Link href="/branchen/grosshandel/workflows/ai-automation-with-easybill" className="text-primary-500 hover:underline">Use Case für Easybill-Automatisierung</Link> an, oder erfahren Sie mehr über unsere{" "}
-          <Link href="/managed-claude" className="text-primary-500 hover:underline">Implementierungsservices</Link>.
+          <Link href="/managed-claude/use-cases" className="text-primary-500 hover:underline">Implementierungsservices</Link>.
         </Typo.Paragraph>
       </ContentWrapper>
 

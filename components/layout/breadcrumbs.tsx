@@ -22,7 +22,6 @@ const LABELS: Record<string, string> = {
   workflows: "Workflows",
   "claude-cowork": "Claude Cowork",
   "roi-rechner": "ROI-Rechner",
-  "managed-claude": "Managed Claude",
   "wie-es-funktioniert": "Wie es funktioniert",
   onboarding: "Onboarding",
   preise: "Preise",
@@ -36,6 +35,7 @@ const LABELS: Record<string, string> = {
   "claude-app": "Claude App",
   "claude-api": "Claude API",
   "use-cases": "Use Cases",
+  datenschutz: "Datenschutz",
   "weitere-tools": "Weitere Tools",
   "was-kostet-ki": "Was kostet KI?",
   blog: "Blog",
@@ -107,6 +107,12 @@ const LABELS: Record<string, string> = {
   "actaport-cloud-connector-implementierung": "Connector implementieren",
 };
 
+/**
+ * Segmente ohne eigene Seite: tauchen in der URL auf, aber nicht als Krümel.
+ * /managed-claude ist seit 2026-10 die Startseite (308 auf /).
+ */
+const HIDDEN_SEGMENTS = new Set(["managed-claude"]);
+
 const WORD_FIXES: Record<string, string> = {
   ki: "KI",
   ai: "AI",
@@ -131,11 +137,14 @@ export default function Breadcrumbs() {
   // Erst ab Ebene 2 sinnvoll — Ebene 1 erreicht man direkt aus der Nav
   if (segments.length < 2) return null;
 
-  const crumbs = segments.map((segment, i) => ({
-    label: labelFor(segment),
-    href: "/" + segments.slice(0, i + 1).join("/"),
-    isLast: i === segments.length - 1,
-  }));
+  const crumbs = segments
+    .map((segment, i) => ({
+      segment,
+      label: labelFor(segment),
+      href: "/" + segments.slice(0, i + 1).join("/"),
+      isLast: i === segments.length - 1,
+    }))
+    .filter((c) => !HIDDEN_SEGMENTS.has(c.segment));
 
   const jsonLd = {
     "@context": "https://schema.org",

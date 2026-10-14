@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { BrowserFrame, ClaudeDesktopMock, PortalMock } from "@/components/mockups";
 import { BraveLogo, MicrosoftLogo } from "@/components/icons/brand-logos";
 
-// Seitenspezifische Grafiken für den Managed-Claude-Hub: Hero-Komposition
+// Seitenspezifische Grafiken der Startseite (früher Managed-Claude-Hub): Hero-Komposition
 // (Portal hinten, Claude Desktop vorne) und der Connectors-Screen für den
 // Abschnitt zum Managed Claude Interface.
 

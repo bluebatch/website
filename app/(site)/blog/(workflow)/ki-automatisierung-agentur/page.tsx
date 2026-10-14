@@ -501,7 +501,7 @@ export default function Page() {
               </Link>{" "}
               oder werfen Sie einen Blick auf unsere{" "}
               <Link
-                href="/managed-claude"
+                href="/"
                 className="text-primary-600 hover:underline"
               >
                 Leistungen

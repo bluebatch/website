@@ -341,7 +341,7 @@ export default function Page() {
         <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
           Sie vergleichen Developer-Plattformen? Erfahren Sie{" "}
           <Link href="/managed-claude/weitere-tools/n8n" className="text-primary-500 hover:underline">was n8n ist und wie es funktioniert</Link>, oder informieren Sie sich über{" "}
-          <Link href="/managed-claude" className="text-primary-500 hover:underline">unsere Implementierungsservices</Link>.
+          <Link href="/managed-claude/weitere-tools/n8n" className="text-primary-500 hover:underline">unsere Implementierungsservices</Link>.
         </Typo.Paragraph>
       </ContentWrapper>
 

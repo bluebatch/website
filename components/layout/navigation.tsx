@@ -49,13 +49,18 @@ const managedClaudeMenu = {
   sections: [
     {
       title: "So arbeiten wir",
-      href: "/managed-claude",
       items: [
         {
           icon: "route" as NavIconName,
           title: "Wie es funktioniert",
           description: "Ablauf & Verantwortung",
           href: "/managed-claude/wie-es-funktioniert",
+        },
+        {
+          icon: "shield" as NavIconName,
+          title: "Datenschutz",
+          description: "DSGVO & Berufsgeheimnis",
+          href: "/managed-claude/datenschutz",
         },
         {
           icon: "rocket" as NavIconName,
@@ -79,7 +84,6 @@ const managedClaudeMenu = {
     },
     {
       title: "Angebot",
-      href: "/managed-claude",
       items: [
         {
           icon: "claude" as NavIconName,
@@ -326,11 +330,12 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                 className="nav-fade-in relative group/claude"
                 style={{ animationDelay: "200ms" }}
               >
-                <Link href="/managed-claude" className={triggerClass}>
+                {/* Kein Link: Die Übersicht ist die Startseite, der Punkt öffnet nur das Mega-Menü */}
+                <button type="button" aria-haspopup="true" className={`${triggerClass} cursor-default`}>
                   <ClaudeLogo className="w-[18px] h-[18px] transition-transform duration-300 group-hover:rotate-45" />
                   Managed Claude
                   <ChevronDown className={triggerIconClass} />
-                </Link>
+                </button>
 
                 <div
                   className={`${panelLeft} group-hover/claude:block group-focus-within/claude:block w-[960px]`}
@@ -338,12 +343,18 @@ export default function Navigation({ latestBlogPosts = [] }: NavigationProps) {
                   <div className="p-4 grid grid-cols-4 gap-6">
                     {managedClaudeMenu.sections.map((section, sectionIndex) => (
                       <div key={sectionIndex}>
-                        <Link
-                          href={section.href}
-                          className="block font-bold text-gray-900 hover:text-primary-500 mb-3 text-sm uppercase tracking-wide transition-colors"
-                        >
-                          {section.title}
-                        </Link>
+                        {"href" in section && section.href ? (
+                          <Link
+                            href={section.href}
+                            className="block font-bold text-gray-900 hover:text-primary-500 mb-3 text-sm uppercase tracking-wide transition-colors"
+                          >
+                            {section.title}
+                          </Link>
+                        ) : (
+                          <p className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wide">
+                            {section.title}
+                          </p>
+                        )}
                         <div className="space-y-2">
                           {section.items.map((item, itemIndex) => (
                             <Link

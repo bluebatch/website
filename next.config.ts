@@ -35,7 +35,7 @@ const nextConfig: NextConfig = {
       // weiterhin Bild-Assets ausliefert.
       {
         source: "/services",
-        destination: "/managed-claude",
+        destination: "/",
         permanent: true,
       },
       {

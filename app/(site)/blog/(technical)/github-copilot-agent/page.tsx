@@ -545,7 +545,7 @@ export default function Page() {
               hilfreich. Wer bei der Einführung Unterstützung braucht, findet sie
               in unseren{" "}
               <Link
-                href="/managed-claude"
+                href="/"
                 className="text-primary-600 hover:underline"
               >
                 Leistungen

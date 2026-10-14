@@ -477,12 +477,12 @@ export default function Page() {
               Anwendungsfall kommen weitere Punkte hinzu, etwa bei
               Gesundheitsdaten, Finanzinformationen oder Arbeitnehmerdaten.
               Wer unsicher ist, ob die eigene KI-Architektur trägt, findet in
-              unserer{" "}
+              unserer Seite zu{" "}
               <Link
-                href={resolveHref("/managed-claude")}
+                href={resolveHref("/managed-claude/datenschutz")}
                 className="text-primary-600 hover:underline"
               >
-                KI-Implementierung
+                Claude und Datenschutz
               </Link>{" "}
               eine fundierte Einschätzung.
             </Typo.Paragraph>

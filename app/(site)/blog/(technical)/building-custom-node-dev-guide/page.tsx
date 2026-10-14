@@ -1043,7 +1043,7 @@ export default function Page() {
                 unseren Custom-Node-Service
               </Link>
               , oder informieren Sie sich über{" "}
-              <Link href="/managed-claude" className="text-primary-500 hover:underline">
+              <Link href="/managed-claude/weitere-tools/n8n" className="text-primary-500 hover:underline">
                 unsere Implementierungsservices
               </Link>
               .

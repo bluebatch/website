@@ -274,7 +274,7 @@ export default function KarrierePage() {
 
         <Typo.Paragraph className="mt-10 text-center text-gray-600">
           Einen tieferen Blick auf unsere Arbeit gibt es bei den{" "}
-          <InternalLink href="/managed-claude" variant="underline">
+          <InternalLink href="/managed-claude/weitere-tools/n8n" variant="underline">
             Services rund um n8n
           </InternalLink>{" "}
           und in unseren{" "}

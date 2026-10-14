@@ -20,6 +20,7 @@ const uberUns = [
 
 const managedClaude = [
   { label: "Wie es funktioniert", href: "/managed-claude/wie-es-funktioniert" },
+  { label: "Datenschutz", href: "/managed-claude/datenschutz" },
   { label: "Onboarding", href: "/managed-claude/onboarding" },
   { label: "Coaching", href: "/managed-claude/coaching" },
   { label: "Preise", href: "/managed-claude/preise" },
@@ -143,12 +144,6 @@ export default function NavigationMobile() {
       <div className="absolute left-0 right-0 top-full mt-1 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden">
         <div className="px-4 py-4 space-y-1 max-h-[calc(100vh-8rem)] overflow-y-auto">
           <Accordion title="Managed Claude">
-            <Link
-              href="/managed-claude"
-              className="block px-6 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
-            >
-              Übersicht
-            </Link>
             {managedClaude.map((item) => (
               <Link
                 key={item.href}

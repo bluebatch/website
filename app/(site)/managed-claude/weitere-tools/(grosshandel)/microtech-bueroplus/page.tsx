@@ -603,7 +603,7 @@ export default function Page() {
         <Typo.Paragraph className="text-gray-600 text-center max-w-3xl mx-auto">
           Sie nutzen microtech büro+ im Großhandel? Erfahren Sie, wie wir{" "}
           <Link href="/branchen/grosshandel" className="text-primary-500 hover:underline">KI-Workflows für den Großhandel</Link> umsetzen, oder sehen Sie sich unsere{" "}
-          <Link href="/managed-claude" className="text-primary-500 hover:underline">Implementierungsservices</Link> an.
+          <Link href="/managed-claude/use-cases" className="text-primary-500 hover:underline">Implementierungsservices</Link> an.
         </Typo.Paragraph>
       </ContentWrapper>
 
