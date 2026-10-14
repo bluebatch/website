@@ -1,6 +1,6 @@
 # Site-Struktur — Zielbild (Draft)
 
-> Stand 2026-10-13. **Repositionierung auf Claude Managed Service Provider**
+> Stand 2026-10-14. **Repositionierung auf Claude Managed Service Provider**
 > (Branch `anthropic-managed-service-provider`): `services/` wird durch
 > `managed-claude/` ersetzt, n8n wandert unter „Weitere Tools".
 > Die Struktur bis 2026-07-22 (Branch `refactor/site-structure`) ist umgesetzt;
@@ -103,15 +103,21 @@ Grundsätze:
 
 ```
 /
-├── (Homepage) ................................ [MONEY]  Brand + Einstieg, positioniert
-│                                                als Claude Managed Service Provider
+├── (Homepage) ................................ [HUB]    Hauptseite Managed Claude: Brand,
+│                                                Einstieg und Verteiler aller Managed-
+│                                                Claude-Seiten (seit 2026-10-14; der
+│                                                frühere Hub /managed-claude → 308 auf /)
 │
-├── managed-claude/ ........................... [HUB]    (geplant) Hauptangebot, ersetzt
-│   │                                            services/ (alte URL → legacyRedirect)
+├── managed-claude/ ........................... Ordner ohne eigene Seite, nur URL-Präfix.
+│   │                                            Im Mega-Menü ist „Managed Claude" nur
+│   │                                            Trigger, kein Link; Breadcrumbs blenden
+│   │                                            das Segment aus.
 │   │
 │   │   ── Basis: so arbeiten wir ──
 │   ├── wie-es-funktioniert ................... [CONTENT] (geplant) Ablauf, Rollen,
 │   │                                            Verantwortung Kunde vs. bluebatch
+│   ├── datenschutz ........................... [MONEY]   Claude Datenschutz / DSGVO:
+│   │                                            Bedrock EU, § 203 StGB, Unterlagen
 │   ├── onboarding ............................ [MONEY]   Go-live-Roadmap, Einrichtung
 │   ├── coaching/ ............................. [HUB]     Schritt 2: Schulung, Kanzlei-
 │   │   │                                        Handbuch, KI-Kompetenzschulung
@@ -124,8 +130,7 @@ Grundsätze:
 │   ├── was-kostet-ki ......................... [MONEY]   (Umzug von services/was-kostet-ki)
 │   ├── zentrale-steuerung .................... [MONEY]   Managed Claude Interface: Profile,
 │   │                                            Ordner-Freigaben, Tools sperren
-│   ├── (weitere Basisseiten folgen) .......... z.B. Betrieb & Support,
-│   │                                            Datenschutz/DSGVO
+│   ├── (weitere Basisseiten folgen) .......... z.B. Betrieb & Support
 │   │
 │   ├── integrationen/ ........................ [HUB]     (geplant) Claude an die
 │   │   │                                        Systeme der Kunden anbinden
@@ -465,8 +470,8 @@ H2, FAQ, Fließtext. Je Keyword genau **eine** Zielseite (Kannibalisierung).
 
 | Seite | Hauptkeyword | Nebenkeywords |
 |---|---|---|
-| `/` (Startseite) | claude ai deutschland 140/39 | claude ai deutsch 3600/10, anthropic partner 30, claude von anthropic 590/0 |
-| `managed-claude/` | claude für unternehmen 140/0 | claude ai unternehmen 70/4, claude enterprise 1300/0, claude enterprise plan 140/0, ki-lösungen für unternehmen 210/0 |
+| `/` (Startseite, seit 2026-10-14 zugleich Managed-Claude-Hub) | claude ai deutschland 140/39, claude für unternehmen 140/0 | claude ai deutsch 3600/10, anthropic partner 30, claude von anthropic 590/0, claude ai unternehmen 70/4, claude enterprise 1300/0, claude enterprise plan 140/0, ki-lösungen für unternehmen 210/0 |
+| `managed-claude/datenschutz` | claude datenschutz 480/0 | claude dsgvo 260/0, claude ai datenschutz 170/0, claude dsgvo-konform 170/0, ist claude dsgvo konform 90, claude dsgvo-konform nutzen 90/0 |
 | `managed-claude/claude-app` | claude team 1900/0 | claude team plan 1300/0, claude desktop app 3600/14, claude cowork windows 390/0, claude team account 90/13, claude team vs enterprise 30 |
 | `managed-claude/preise` | claude kosten 5400/0 | claude preise 3600/0, claude ai kosten 3600/17, claude enterprise pricing 480/0, claude kosten pro monat 320/0, claude enterprise kosten 140/0, claude token kosten 110/0, claude team kosten 50, claude cowork kosten 170/0 |
 | `managed-claude/claude-api` | claude api key 3600/10 | anthropic api key 2900/20, claude api pricing 1600/11, claude api kosten 260/0, claude api preise 50, aws bedrock claude 140/16 |
@@ -486,7 +491,6 @@ H2, FAQ, Fließtext. Je Keyword genau **eine** Zielseite (Kannibalisierung).
 
 | Vorschlag | Typ | Keywords | Begründung |
 |---|---|---|---|
-| `managed-claude/datenschutz` | [MONEY] | claude datenschutz 480/0, claude dsgvo 260/0, claude ai datenschutz 170/0, claude dsgvo-konform 170/0, ist claude dsgvo konform 90, claude dsgvo-konform nutzen 90/0 | Zusammen ~1.300/Monat, KD 0, exakt unser Verkaufsargument (Bedrock Frankfurt, § 203 StGB). Höchste Priorität. |
 | `managed-claude/chatgpt-alternative` | [LANDING] | chatgpt alternative 9900/0, alternative zu chatgpt 8100/0, europäische alternative zu chatgpt 390/0, deutsche alternative zu chatgpt 110/0, chatgpt alternative europa 140/0 | Größtes Volumen bei KD 0. Viele Suchen wollen „kostenlos", daher auf Unternehmen/DSGVO zuspitzen. |
 | `blog/claude-skills` | [CONTENT] | claude skills 8100/0, best claude skills 390/0, claude skills marketplace 590/16 | Informativ, verlinkt auf zentrale-steuerung (Skills zentral verteilen). |
 | `blog/claude-pro-team-enterprise` | [CONTENT] | claude pro 8100/10, claude max 3600/0, claude pro kosten 1300/0, claude team vs pro 30 | Abo-Vergleich, verlinkt auf preise und claude-app. |
@@ -494,7 +498,7 @@ H2, FAQ, Fließtext. Je Keyword genau **eine** Zielseite (Kannibalisierung).
 ### Bereits besetzt (nicht doppelt targeten)
 
 - „claude api" → `/blog/claude-api`, deshalb zielt claude-api auf „claude api key".
-- „ki für unternehmen" → `/blog/ki-fuer-unternehmen`, deshalb zielt der Hub auf „claude für unternehmen".
+- „ki für unternehmen" → `/blog/ki-fuer-unternehmen`, deshalb zielt die Startseite auf „claude für unternehmen".
 - „dsgvo konforme ki" → `/blog/dsgvo-konforme-ki-tools`; die neue Datenschutz-Seite nimmt nur Claude-Varianten.
 - „claude vs chatgpt" → `/blog/claude-cowork-vs-copilot-chatgpt`.
 - „amazon bedrock" → `/blog/amazon-bedrock`, deshalb nur „aws bedrock claude" auf wie-es-funktioniert.
@@ -585,7 +589,7 @@ Unternehmens-Seiten.
 
 ```
 BRANCHEN            ANGEBOT & WISSEN     UNTERNEHMEN         RECHTLICHES
-Großhandel          Claude Managed Svc.  Mit euch wachsen    Impressum
+Großhandel          Claude Preise        Mit euch wachsen    Impressum
 Steuerberater       Weitere Tools        Team                Datenschutz
 Anwälte             Blog                 Standorte
                                          Kontakt
@@ -630,7 +634,7 @@ Unter-Hub ─────────────────┬──> eigene M
 Branchen-Hub ──────────────┬──> seine vier Unter-Hubs (runter)
                            └──> contact (CTA)
 
-Standort-Seite ────────────┬──> Claude Managed Service (Hub)
+Standort-Seite ────────────┬──> Startseite (Managed-Claude-Hub)
                            └──> mit-euch-wachsen (Trust)
 
 Funnel-LP ─────────────────==> nur eigenes Formular / Kontakt (keine Ausgänge)
@@ -683,9 +687,16 @@ Funnel-LP ─────────────────==> nur eigenes For
       Paket L (10 PT) mit 100 % Anrechnung von Einrichtung und Outlook
       Connector, Token-Kundenpreise aus dem Preisblatt des Gateways,
       Porträt-CTA auf Seiten mit eigenem CTA entfernt.
-- [ ] **Neue Seiten aus der Keyword-Map:** `managed-claude/datenschutz`
-      (zuerst), `managed-claude/chatgpt-alternative`, Blog „claude skills"
-      und Blog „Claude Pro, Team, Enterprise".
+- [x] **Startseite = Managed-Claude-Hub** (2026-10-14): Inhalte des Hubs
+      auf `/`, Workflow-Abschnitte raus, `/managed-claude` per 308 auf `/`,
+      Mega-Menü-Trigger ohne Link, Breadcrumbs ohne das Segment, Keyword-
+      Aliasse der alten Startseite (`/n8n-automatisierung`, `/ki-agentur`,
+      `/ai-agentur`) an den n8n-Hub umgehängt. Kundenlogos neu (Kanzleien
+      und Mittelstand) als Kacheln und Bewertungskarten; Zitate sind
+      Entwürfe, bis der Kunde sie freigibt.
+- [x] **`managed-claude/datenschutz`** gebaut (2026-10-14).
+- [ ] **Neue Seiten aus der Keyword-Map:** `managed-claude/chatgpt-alternative`,
+      Blog „claude skills" und Blog „Claude Pro, Team, Enterprise".
 - [ ] **Branchen-Hubs** später auf „Was kann ich mit Claude umsetzen?"
       ausrichten; Private AI eingefroren, Workflows Future.
 
