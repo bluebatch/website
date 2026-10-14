@@ -56,7 +56,6 @@ import {
 import { HubDiagram } from "@/components/diagrams";
 import LatestBlogPosts from "@/components/sections/latest-blog-posts";
 import CustomerTiles from "@/components/sections/customer/customer-tiles";
-import CustomerQuotes from "@/components/sections/customer/customer-quotes";
 import { ClaudeLogo, DatevLogo, MicrosoftLogo } from "@/components/icons/brand-logos";
 import { resolveHref } from "@/lib/get-canonical-path";
 import IconTitle from "./managed-claude/icon-title";
@@ -347,10 +346,6 @@ export default function Home() {
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light">
-        <CustomerQuotes />
-      </ContentWrapper>
-
-      <ContentWrapper>
         <IntroBox textCentered>
           <IntroBox.Headline>Sie entscheiden zuerst nur über Schritt 1</IntroBox.Headline>
           <IntroBox.Paragraph>
@@ -387,7 +382,7 @@ export default function Home() {
         </div>
       </ContentWrapper>
 
-      <ContentWrapper colorScheme="gray-light">
+      <ContentWrapper>
         <IntroBox textCentered>
           <IntroBox.Headline>Alles zum Private Claude AI Gateway</IntroBox.Headline>
         </IntroBox>
@@ -449,7 +444,7 @@ export default function Home() {
         </SimpleGrid>
       </ContentWrapper>
 
-      <ContentWrapper>
+      <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
           <IntroBox.PreHeadline>Wer dahintersteht</IntroBox.PreHeadline>
           <IntroBox.Headline>Cloud-Erfahrung aus dem Enterprise-Umfeld</IntroBox.Headline>

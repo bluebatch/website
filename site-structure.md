@@ -692,8 +692,8 @@ Funnel-LP ─────────────────==> nur eigenes For
       Mega-Menü-Trigger ohne Link, Breadcrumbs ohne das Segment, Keyword-
       Aliasse der alten Startseite (`/n8n-automatisierung`, `/ki-agentur`,
       `/ai-agentur`) an den n8n-Hub umgehängt. Kundenlogos neu (Kanzleien
-      und Mittelstand) als Kacheln und Bewertungskarten; Zitate sind
-      Entwürfe, bis der Kunde sie freigibt.
+      und Mittelstand) als Logo-Kacheln. Bewertungskarten mit Zitat
+      (`CustomerQuotes`) erst, wenn Kunden ihren Wortlaut freigeben.
 - [x] **`managed-claude/datenschutz`** gebaut (2026-10-14).
 - [ ] **Neue Seiten aus der Keyword-Map:** `managed-claude/chatgpt-alternative`,
       Blog „claude skills" und Blog „Claude Pro, Team, Enterprise".

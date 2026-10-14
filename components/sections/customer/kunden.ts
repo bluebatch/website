@@ -18,12 +18,8 @@ export interface Kunde {
     /** Logo ist nur eine Bildmarke ohne Schriftzug: Namen in der Kachel dazuschreiben */
     nurBildmarke?: boolean;
   };
+  /** Nur mit dem Wortlaut, den der Kunde schriftlich freigegeben hat */
   zitat?: string;
-  /**
-   * true erst, wenn der Kunde genau diesen Wortlaut freigegeben hat.
-   * Sonst ist das Zitat ein Platzhalter und wird als „Entwurf" markiert.
-   */
-  zitatFreigegeben?: boolean;
 }
 
 export const kunden: Kunde[] = [
@@ -31,15 +27,11 @@ export const kunden: Kunde[] = [
     name: "Langrock Voß & Soyka",
     branche: "Partnerschaft von Rechtsanwälten",
     logo: { src: "/customer/langrock-voss-soyka.png", width: 1195, height: 200, scale: "md" },
-    zitat:
-      "Wir wollten Claude nutzen, aber nicht auf Kosten des Mandatsgeheimnisses. Mit dem Private Gateway war diese Frage nach einem Termin geklärt.",
   },
   {
     name: "Steuerberatung Schopp",
     branche: "Steuerberatung",
     logo: { src: "/customer/steuerberatung-schopp.svg", width: 351, height: 183, scale: "sm", nurBildmarke: true },
-    zitat:
-      "Die Einrichtung lief in einer Woche, seitdem arbeitet das ganze Team mit Claude. Was es kostet, sehen wir pro Person im Portal, ohne Überraschungen.",
   },
   {
     name: "Steinbach",
@@ -50,15 +42,11 @@ export const kunden: Kunde[] = [
     name: "KEPPLER.Personalberatung",
     branche: "Personalberatung",
     logo: { src: "/customer/keppler-personalberatung.svg", width: 175, height: 48, scale: "md" },
-    zitat:
-      "Profile und Anschreiben gehen deutlich schneller. Das Coaching hat dafür gesorgt, dass nicht nur zwei Leute Claude nutzen, sondern alle.",
   },
   {
     name: "Dr. Hollitzer & Hiller",
     branche: "Fachkanzlei und Notariat",
     logo: { src: "/customer/hollitzer-hiller.svg", width: 681, height: 373, scale: "lg" },
-    zitat:
-      "Für uns zählte, dass Mandantendaten in der EU bleiben. Die Unterlagen für Datenschutz und Berufsgeheimnis kamen gleich mit, wir mussten nichts selbst zusammensuchen.",
   },
   {
     name: "TED Steuerberatungsgesellschaft",
@@ -74,15 +62,11 @@ export const kunden: Kunde[] = [
     name: "Eisner Rechtsanwälte",
     branche: "Rechtsanwaltskanzlei",
     logo: { src: "/customer/eisner-rechtsanwaelte.png", width: 219, height: 200, scale: "lg" },
-    zitat:
-      "Schriftsätze entwerfen, Akten zusammenfassen, Fristen gegenprüfen: Claude ist bei uns im Alltag angekommen, und wir wissen, wo die Daten liegen.",
   },
   {
     name: "Sachverständigenbüro Beier & Partner",
     branche: "Sachverständige für Immobilienbewertung",
     logo: { src: "/customer/beier-und-partner.png", width: 292, height: 200, scale: "lg" },
-    zitat:
-      "Gutachtentexte vorbereiten und Unterlagen auswerten erledigt Claude zuverlässig. Wichtig war uns, dass dafür niemand ein privates Konto braucht.",
   },
   {
     name: "Rechtsanwalt Jens Reuter",
