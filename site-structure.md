@@ -413,11 +413,14 @@ Grundsätze:
 │   │                                            Guard: tests/technical/funnel-isolation
 │   │                                            Regeln: .claude/rules/landingpage-funnel.md
 │   ├── sensitiv-ai ........................... [LANDING] passt zum Private-AI-Hub
-│   ├── ai-onboarding ......................... [LANDING]
-│   ├── ai-workflow ........................... [LANDING]
-│   ├── claude-cowork-schulung ................ [LANDING] passt zum Cowork-Hub
-│   ├── ai-maschinenbau-schulung-nuernberg .... [LANDING]
-│   ├── chat .................................. [SYS]    Chat-Funnel
+│   ├── sensitiv-ai-2 ......................... [LANDING] Vergleichsfassung: Handy
+│   │                                            zuerst, Portal, Startpaket 5.000 €
+│   ├── claude-insolvenzverwalter ............. [LANDING] Private Claude für
+│   │                                            Insolvenzkanzleien (Meta iv-run-0001)
+│   ├── claude-ma-private-equity .............. [LANDING] Private Claude für M&A,
+│   │                                            PE, VC (Meta ma-run-0001)
+│   ├── claude-cowork-schulung ................ [LANDING] passt zum Cowork-Hub,
+│   │                                            branchenoffen, 399 €
 │   ├── impressum-funnel ...................... [SYS]    Impressum im Funnel-Layout
 │   └── datenschutz-funnel .................... [SYS]    Datenschutz im Funnel-Layout
 │

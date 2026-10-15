@@ -6,6 +6,7 @@ import { ContactButton, InternalLink } from "@/components/buttons";
 import { HeroStatBand } from "@/components/heroes";
 import KostenRechner from "./kosten-rechner";
 import { LimitsMock, ModellWahl, Rechenbeispiel } from "./preis-grafiken";
+import { TOKEN_PRICES } from "@/lib/token-prices";
 
 const description =
   "Was Claude im Unternehmen kostet: 1.500 € Einrichtung, keine Lizenz pro Kopf, Tokens ab 0,13 € je 1 Mio. Mit Kostenrechner, Preisliste und Coaching-Paketen.";
@@ -32,18 +33,6 @@ export const metadata: Metadata = {
     canonical: "/managed-claude/preise",
   },
 };
-
-// Kundenpreise netto je 1 Mio. Tokens, Stand 12.10.2026
-const TOKEN_PRICES = [
-  { model: "Claude Opus 5.5", input: "5,15 €", output: "25,74 €", write5m: "6,44 €", write1h: "10,30 €", read: "0,26 €" },
-  { model: "Claude Opus 5", input: "6,35 €", output: "31,50 €", write5m: "8,05 €", write1h: "12,87 €", read: "0,65 €" },
-  { model: "Claude Sonnet 5.5", input: "2,60 €", output: "12,60 €", write5m: "3,22 €", write1h: "5,15 €", read: "0,13 €" },
-  { model: "Claude Sonnet 5", input: "2,60 €", output: "12,60 €", write5m: "3,22 €", write1h: "5,15 €", read: "0,26 €" },
-  { model: "Claude Sonnet 4.6", input: "3,87 €", output: "19,31 €", write5m: "4,83 €", write1h: "7,73 €", read: "0,39 €" },
-  { model: "Claude Haiku 5.5", input: "0,13 €", output: "0,65 €", write5m: "0,17 €", write1h: "0,26 €", read: "0,02 €" },
-  { model: "Claude Haiku 5.5, Prompt über 100K Tokens*", input: "0,65 €", output: "3,22 €", write5m: "0,81 €", write1h: "1,29 €", read: "0,07 €" },
-  { model: "Claude Haiku 4.5", input: "1,50 €", output: "6,50 €", write5m: "1,61 €", write1h: "2,58 €", read: "0,13 €" },
-];
 
 const PRICE_COLUMNS = [
   { key: "input", label: "Input" },

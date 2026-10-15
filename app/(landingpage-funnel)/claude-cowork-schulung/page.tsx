@@ -3,22 +3,21 @@ import FunnelPage from "../_engine/funnel-page";
 import ClaudeCoworkFunnel from "./funnel";
 
 export const metadata: Metadata = {
-  title:
-    "Claude CoWork Schulung für 399 € — KI, die in eurem Maschinenbau-Alltag arbeitet | Bluebatch",
+  title: "Claude Cowork Schulung für 399 €: KI, die im Alltag mitarbeitet | Bluebatch",
   description:
-    "Kompakte Claude CoWork Schulung für 399 €. In 4 Stunden lernt ihr, wie ihr Angebote, technische Doku und Auftragsabwicklung mit Claude CoWork beschleunigt. Kleine Gruppe, direkt am eigenen Fall.",
+    "Kompakte Claude Cowork Schulung für 399 €. In 4 Stunden lernt ihr, wie Claude Cowork Dokumente, Mails und Auswertungen für euch erledigt. Online, kleine Gruppe, am eigenen Fall.",
   keywords: [
-    "Claude CoWork Schulung",
-    "Claude CoWork",
-    "KI Schulung Maschinenbau",
-    "KI Veredler",
+    "Claude Cowork Schulung",
+    "Claude Cowork",
+    "KI Schulung",
+    "Claude Schulung",
     "AI Schulung",
     "Bluebatch",
   ],
   openGraph: {
-    title: "Claude CoWork Schulung für 399 € — KI für euren Maschinenbau-Alltag",
+    title: "Claude Cowork Schulung für 399 €",
     description:
-      "In 4 Stunden mit Claude CoWork loslegen: Angebote, technische Doku, Auftragsabwicklung. Kleine Gruppe, direkt am eigenen Fall.",
+      "In 4 Stunden mit Claude Cowork loslegen: Dokumente, Mails, Tabellen, Recherche. Online, kleine Gruppe, am eigenen Fall.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -28,25 +27,29 @@ export const metadata: Metadata = {
 };
 
 const facts = [
-  { bold: "399 €", rest: "— kompakt an einem Vormittag, kein Tagesseminar" },
-  { bold: "Direkt am eigenen Fall,", rest: "nicht an Demo-Spielzeug" },
-  { bold: "Für Maschinenbau & Veredler", rest: "gemacht, nicht generisch" },
-  { bold: "Kleine Gruppe", rest: "— max. 8 Teilnehmer, echte Fragen" },
-  { bold: "Danach arbeitet ihr live", rest: "mit Claude CoWork" },
+  { bold: "399 €,", rest: "kompakt an einem Vormittag, kein Tagesseminar." },
+  { bold: "Am eigenen Fall,", rest: "nicht an Demo-Beispielen." },
+  { bold: "Für jede Branche:", rest: "Dokumente, Mails, Tabellen und Recherche." },
+  { bold: "Kleine Gruppe,", rest: "höchstens 8 Teilnehmer." },
 ];
 
 export default function Page() {
   return (
     <FunnelPage
+      variant="mobile-first"
       preHeadline="Schulung · 399 € · online"
-      headline="Claude CoWork Schulung: KI, die in eurem Alltag wirklich mitarbeitet."
-      description="In einem kompakten Vormittag zeigen wir euch, wie ihr Angebote, technische Doku und Auftragsabwicklung mit Claude CoWork beschleunigt."
+      headline="Claude Cowork Schulung: KI, die im Alltag mitarbeitet."
+      description="An einem Vormittag zeigen wir euch, wie Claude Cowork Dokumente, Mails und Auswertungen für euch erledigt, an euren eigenen Aufgaben."
       facts={facts}
+      offer={{
+        price: "399 €",
+        label: "4 Stunden online, kleine Gruppe. Danach arbeitet ihr selbstständig mit Claude Cowork.",
+      }}
       image={{
         src: "/images/claude-cowork.png",
-        alt: "Claude CoWork Schulung für Maschinenbau und Veredler",
+        alt: "Claude Cowork Schulung",
       }}
-      startLabel="Schulung starten"
+      startLabel="Schulung anfragen"
     >
       <ClaudeCoworkFunnel />
     </FunnelPage>
