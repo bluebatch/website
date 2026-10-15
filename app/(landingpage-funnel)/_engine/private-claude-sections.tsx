@@ -14,80 +14,185 @@ import {
   Users,
   type LucideIcon,
 } from "lucide-react";
+import type { ReactNode } from "react";
 import { ContentWrapper, SimpleGrid } from "@/components/layout";
 import {
   BetaBadge,
   DataTable,
   IntroBox,
-  ProseColumns,
   TimelineAsSteps,
   TimelineAsStepsStep,
   Typo,
 } from "@/components/ui";
-import { SimpleCard } from "@/components/cards";
+import {
+  AfterCard,
+  BeforeCard,
+  ComparisonCard,
+  ComparisonFooter,
+  ComparisonHeadline,
+  ComparisonList,
+  ComparisonListItem,
+  SimpleCard,
+} from "@/components/cards";
 import { FeatureRow, StepJourneyRow } from "@/components/sections";
 import { ContactButton, ContactChannel } from "@/components/buttons";
 import { LimitsScreen, NetworkScreen, TeamScreen } from "@/components/mockups";
 import { tokenPrice } from "@/lib/token-prices";
 
-// Bausteine der Private-Claude-Landingpages (Funnel, noindex): Problem,
+// Bausteine der Private-Claude-Landingpages (Funnel, noindex): Beispiele aus
+// dem Alltag der Zielgruppe, Vergleich mit dem privaten KI-Konto,
 // Portal-Funktionen, Preise, Ablauf, Abschluss-CTA. Für Ads-Traffic vom Handy
 // gebaut: kurze Texte, eine Spalte bis md, Screenshots ohne Sidebar.
 // Keine Links nach außen (Sackgassen-Prinzip, siehe
 // .claude/rules/landingpage-funnel.md).
+//
+// Abschnittsfarben im Wechsel: Funnel grau, Beispiele weiß, Vergleich
+// hellblau, Portal grau, Preise weiß, Ablauf grau.
 
-// ── Problem ──────────────────────────────────────────────────────────────────
-
-export interface ProblemItem {
-  title: string;
-  body: string;
+function ChipList({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div className="mx-auto mt-14 max-w-5xl rounded-2xl bg-white/70 p-5 ring-1 ring-gray-200 sm:p-8">
+      <p className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+        {title}
+      </p>
+      <ul className="mt-4 flex flex-wrap gap-2">
+        {items.map((item) => (
+          <li
+            key={item}
+            className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-gray-800 ring-1 ring-gray-200"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export function ProblemSection({
+// ── Beispiele aus dem Alltag ─────────────────────────────────────────────────
+
+export function UseCaseSection({
   preHeadline,
   headline,
-  items,
-  useCasesTitle = "Wofür Ihr Team Claude nutzt",
-  useCases,
+  intro,
+  more,
+  children,
 }: {
   preHeadline: string;
   headline: string;
-  items: ProblemItem[];
-  useCasesTitle?: string;
-  useCases?: string[];
+  intro: string;
+  /** Weitere Aufgaben als Chips unter den Beispielen */
+  more?: string[];
+  /** <UseCase>-Zeilen */
+  children: ReactNode;
 }) {
   return (
     <ContentWrapper colorScheme="white">
+      <IntroBox textCentered size="small">
+        <IntroBox.PreHeadline>{preHeadline}</IntroBox.PreHeadline>
+        <IntroBox.Headline className="text-balance">
+          {headline}
+        </IntroBox.Headline>
+        <IntroBox.Paragraph className="mb-0!">{intro}</IntroBox.Paragraph>
+      </IntroBox>
+      <div className="mt-12 space-y-16 lg:mt-16 lg:space-y-24">{children}</div>
+      {more && <ChipList title="Außerdem" items={more} />}
+    </ContentWrapper>
+  );
+}
+
+/** Ein Beispiel: kurzer Text links, Claude-Fenster (children) rechts. */
+export function UseCase({
+  icon: Icon,
+  label,
+  beta = false,
+  title,
+  text,
+  note,
+  reverse = false,
+  children,
+}: {
+  icon: LucideIcon;
+  label: string;
+  beta?: boolean;
+  title: string;
+  text: string;
+  /** Kleingedrucktes unter dem Text, z. B. Preis eines Add-ons */
+  note?: string;
+  reverse?: boolean;
+  children: ReactNode;
+}) {
+  return (
+    <FeatureRow reverse={reverse}>
+      <FeatureRow.Text>
+        <FeatureRow.Label beta={beta}>
+          <Icon aria-hidden /> {label}
+        </FeatureRow.Label>
+        <Typo.H3 disableMargin className="mb-4 text-balance">
+          {title}
+        </Typo.H3>
+        <Typo.Paragraph textColor="muted" spacing={note ? undefined : "none"}>
+          {text}
+        </Typo.Paragraph>
+        {note && <p className="text-sm text-gray-500">{note}</p>}
+      </FeatureRow.Text>
+      <FeatureRow.Media>{children}</FeatureRow.Media>
+    </FeatureRow>
+  );
+}
+
+// ── Vergleich ────────────────────────────────────────────────────────────────
+
+interface CompareSide {
+  title: string;
+  items: string[];
+  footer?: string;
+}
+
+export function CompareSection({
+  preHeadline,
+  headline,
+  before,
+  after,
+  chipsTitle,
+  chips,
+}: {
+  preHeadline: string;
+  headline: string;
+  before: CompareSide;
+  after: CompareSide;
+  chipsTitle?: string;
+  chips?: string[];
+}) {
+  return (
+    <ContentWrapper colorScheme="gradient-cool">
       <IntroBox textCentered size="small">
         <IntroBox.PreHeadline>{preHeadline}</IntroBox.PreHeadline>
         <IntroBox.Headline className="mb-0! text-balance">
           {headline}
         </IntroBox.Headline>
       </IntroBox>
-      <ProseColumns cols={2} wide className="mt-10">
-        {items.map((item) => (
-          <ProseColumns.Item key={item.title} title={item.title}>
-            {item.body}
-          </ProseColumns.Item>
+      <ComparisonCard className="mx-auto mt-10 max-w-5xl gap-6!">
+        {[
+          { side: before, Card: BeforeCard },
+          { side: after, Card: AfterCard },
+        ].map(({ side, Card }) => (
+          <Card key={side.title} className="rounded-2xl">
+            <ComparisonHeadline>{side.title}</ComparisonHeadline>
+            <ComparisonList>
+              {side.items.map((item) => (
+                <ComparisonListItem key={item}>{item}</ComparisonListItem>
+              ))}
+            </ComparisonList>
+            {side.footer && (
+              <ComparisonFooter className="text-lg!">
+                {side.footer}
+              </ComparisonFooter>
+            )}
+          </Card>
         ))}
-      </ProseColumns>
-      {useCases && (
-        <div className="mt-12 rounded-2xl bg-gray-50 p-5 sm:p-8">
-          <p className="text-sm font-semibold uppercase tracking-wide text-gray-500">
-            {useCasesTitle}
-          </p>
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {useCases.map((u) => (
-              <li
-                key={u}
-                className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-gray-800 ring-1 ring-gray-200"
-              >
-                {u}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      </ComparisonCard>
+      {chips && chipsTitle && <ChipList title={chipsTitle} items={chips} />}
     </ContentWrapper>
   );
 }

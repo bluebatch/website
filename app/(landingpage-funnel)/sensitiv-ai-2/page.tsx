@@ -3,16 +3,17 @@ import FunnelPage from "../_engine/funnel-page";
 import {
   ClosingCta,
   CoachingSection,
+  CompareSection,
   PRIVATE_CLAUDE_FAQ,
   PortalSection,
   PriceSection,
-  ProblemSection,
   StartSteps,
 } from "../_engine/private-claude-sections";
 import { ContentWrapper } from "@/components/layout";
 import { FaqContainer } from "@/components/ui";
 import { UsageScreen } from "@/components/mockups";
 import SensitivAi2Funnel from "./funnel";
+import SensitivAi2UseCases from "./use-cases";
 
 // Zweite Fassung von /sensitiv-ai zum Vergleich: Handy zuerst, Portal-Funktionen,
 // Startpaket 5.000 € und Kurz-Preisliste. /sensitiv-ai bleibt unverändert.
@@ -44,28 +45,12 @@ export const metadata: Metadata = {
 
 const facts = [
   { bold: "DSGVO-konform", rest: "mit AV-Vertrag, Verarbeitung in der EU." },
-  { bold: "§ 203 StGB:", rest: "Verschwiegenheitsverpflichtung für Berufsgeheimnisträger." },
+  {
+    bold: "§ 203 StGB:",
+    rest: "Verschwiegenheitsverpflichtung für Berufsgeheimnisträger.",
+  },
   { bold: "Admin-Portal", rest: "für Team, Kosten und Regeln." },
   { bold: "Kein Training", rest: "mit Ihren Daten." },
-];
-
-const problems = [
-  {
-    title: "§ 203 StGB",
-    body: "Berufsgeheimnisse dürfen nur an Dienstleister gehen, die zur Verschwiegenheit verpflichtet sind. Ein KI-Abo ohne diese Verpflichtung reicht dafür nicht.",
-  },
-  {
-    title: "DSGVO",
-    body: "Für Mandanten-, Patienten- oder Personaldaten brauchen Sie einen AV-Vertrag nach Art. 28 DSGVO und eine klare Antwort, wo die Daten verarbeitet werden.",
-  },
-  {
-    title: "Private KI-Konten im Team",
-    body: "Ohne offizielle Lösung nutzt das Team private Konten. Dann wissen Sie nicht, welche Unterlagen dort liegen.",
-  },
-  {
-    title: "Nachweis",
-    body: "Fragen Kammer, Datenschutzbeauftragte oder Mandanten, wie Sie KI einsetzen, sind Vertrag, Portal und Konfiguration je Person Ihr Beleg.",
-  },
 ];
 
 const audiences = [
@@ -99,7 +84,8 @@ export default function Page() {
         offer={{
           price: "5.000 €",
           title: "inkl. 5 Tage Coaching",
-          label: "Für Ihr Team, dazu Einrichtung und Onboarding. Danach nur Verbrauch.",
+          label:
+            "Für Ihr Team, dazu Einrichtung und Onboarding. Danach nur Verbrauch.",
         }}
         media={<UsageScreen compact />}
         startLabel="In 3 Fragen prüfen"
@@ -109,12 +95,32 @@ export default function Page() {
 
       <CoachingSection />
 
-      <ProblemSection
+      <SensitivAi2UseCases />
+
+      <CompareSection
         preHeadline="Warum ein eigenes Claude"
-        headline="Warum ein normales KI-Abo nicht reicht"
-        items={problems}
-        useCasesTitle="Für wen"
-        useCases={audiences}
+        headline="Privates KI-Abo oder Ihr eigenes Claude?"
+        before={{
+          title: "Privates KI-Abo",
+          items: [
+            "Keine Verschwiegenheitsverpflichtung nach § 203 StGB",
+            "Kein AV-Vertrag nach Art. 28 DSGVO",
+            "Mandantendaten in privaten Konten",
+            "Kein Nachweis für Kammer, Datenschutz und Mandanten",
+          ],
+        }}
+        after={{
+          title: "Ihr Claude über Bluebatch",
+          items: [
+            "Verschwiegenheitsverpflichtung und AV-Vertrag",
+            "Betrieb in Frankfurt, Verarbeitung in der EU, kein Training",
+            "Ein Firmenkonto pro Person, gesteuert im Portal",
+            "Konfiguration je Person als Nachweis",
+          ],
+          footer: "Kosten nach Verbrauch, mit Limit",
+        }}
+        chipsTitle="Für wen"
+        chips={audiences}
       />
 
       <PortalSection />

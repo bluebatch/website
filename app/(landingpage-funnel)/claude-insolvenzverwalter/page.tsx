@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import FunnelPage from "../_engine/funnel-page";
 import {
   ClosingCta,
+  CompareSection,
   PRIVATE_CLAUDE_FAQ,
   PortalSection,
   PriceSection,
-  ProblemSection,
   StartSteps,
 } from "../_engine/private-claude-sections";
 import { ContentWrapper } from "@/components/layout";
 import { FaqContainer } from "@/components/ui";
 import { UsageScreen } from "@/components/mockups";
 import InsolvenzverwalterFunnel from "./funnel";
+import InsolvenzverwalterUseCases from "./use-cases";
 
 // Ads-Einstieg für lead-gen/insolvenzverwalter/meta-ads. Inhalte und Grenzen
 // („Was wir NICHT behaupten“): lead-gen/insolvenzverwalter/research/problem-statement.md
@@ -22,7 +23,8 @@ const description =
   "Eigenes Claude für Insolvenzkanzleien: Admin-Portal, AV-Vertrag und Verschwiegenheitsverpflichtung, Verarbeitung in der EU. Startpaket 5.000 €. In 3 Fragen prüfen.";
 
 export const metadata: Metadata = {
-  title: "Claude für Insolvenzverwalter: eigenes Claude für die Kanzlei | Bluebatch",
+  title:
+    "Claude für Insolvenzverwalter: eigenes Claude für die Kanzlei | Bluebatch",
   description,
   openGraph: {
     title: "Claude für Insolvenzverwalter",
@@ -44,38 +46,19 @@ export const metadata: Metadata = {
 };
 
 const facts = [
-  { bold: "Eigenes Claude", rest: "für Verwalter, Sachbearbeitung und Buchhaltung." },
-  { bold: "AV-Vertrag und Verschwiegenheit,", rest: "schriftlich mit deutschem Vertragspartner." },
-  { bold: "Kein Training", rest: "mit Ihren Verfahrensdaten, Verarbeitung in der EU." },
+  {
+    bold: "Eigenes Claude",
+    rest: "für Verwalter, Sachbearbeitung und Buchhaltung.",
+  },
+  {
+    bold: "AV-Vertrag und Verschwiegenheit,",
+    rest: "schriftlich mit deutschem Vertragspartner.",
+  },
+  {
+    bold: "Kein Training",
+    rest: "mit Ihren Verfahrensdaten, Verarbeitung in der EU.",
+  },
   { bold: "Admin-Portal", rest: "für Team, Kosten und Regeln." },
-];
-
-const problems = [
-  {
-    title: "Schuldnerauskünfte nach § 97 InsO",
-    body: "Was der Geschäftsführer offenbart, darf ohne seine Zustimmung nicht gegen ihn verwendet werden. Solche Protokolle gehören nicht in ein privates Chat-Konto.",
-  },
-  {
-    title: "Lohndaten der ganzen Belegschaft",
-    body: "Insolvenzgeld, Pfändungen, Entgeltumwandlung: Für diese Tabellen brauchen Sie einen AV-Vertrag nach Art. 28 DSGVO, kein Verbraucher-Abo.",
-  },
-  {
-    title: "Haftung und Nachweis",
-    body: "Sie haften nach § 60 InsO persönlich. Fragen Gericht, Gläubigerausschuss oder der GOI-Auditor, wo Verfahrensdaten verarbeitet werden, brauchen Sie eine belegbare Antwort.",
-  },
-  {
-    title: "Private KI-Konten im Team",
-    body: "Wer unter Zeitdruck steht, nutzt längst ChatGPT oder Claude mit privatem Konto. Ohne Kanzlei-Lösung wissen Sie nicht, welche Akten dort liegen.",
-  },
-];
-
-const useCases = [
-  "Entwürfe für Gutachten",
-  "Berichte nach § 156 InsO",
-  "Forderungsanmeldungen vorprüfen",
-  "Kontoauszüge für die Anfechtung",
-  "Insolvenzgeld-Listen",
-  "Gläubigerpost",
 ];
 
 const faqs = [
@@ -105,7 +88,8 @@ export default function Page() {
         facts={facts}
         offer={{
           price: "5.000 €",
-          label: "Startpaket mit Einrichtung, Onboarding und 5 Tagen Coaching. Danach nur Verbrauch.",
+          label:
+            "Startpaket mit Einrichtung, Onboarding und 5 Tagen Coaching. Danach nur Verbrauch.",
         }}
         media={<UsageScreen compact />}
         startLabel="In 3 Fragen prüfen"
@@ -113,11 +97,31 @@ export default function Page() {
         <InsolvenzverwalterFunnel />
       </FunnelPage>
 
-      <ProblemSection
-        preHeadline="Das Problem"
-        headline="Warum ein privates KI-Konto in der Insolvenzkanzlei nicht reicht"
-        items={problems}
-        useCases={useCases}
+      <InsolvenzverwalterUseCases />
+
+      <CompareSection
+        preHeadline="Warum ein eigenes Claude"
+        headline="Privates KI-Konto oder Claude für die Kanzlei?"
+        before={{
+          title: "Privates KI-Konto",
+          items: [
+            "Schuldnerauskünfte nach § 97 InsO im privaten Chatverlauf",
+            "Lohndaten ohne AV-Vertrag nach Art. 28 DSGVO",
+            "Kein Überblick, welche Akten wo liegen",
+            "Keine Antwort für Gericht, Gläubigerausschuss oder GOI-Audit",
+          ],
+          footer: "Haftung nach § 60 InsO: bei Ihnen",
+        }}
+        after={{
+          title: "Ihr Claude über Bluebatch",
+          items: [
+            "AV-Vertrag und schriftliche Verschwiegenheitsverpflichtung",
+            "Betrieb in Frankfurt, Verarbeitung in der EU, kein Training",
+            "Zugang nur für Ihr Team, gesperrt mit einem Klick",
+            "Konfiguration je Person als Nachweis",
+          ],
+          footer: "Kosten nach Verbrauch, mit Limit",
+        }}
       />
 
       <PortalSection />

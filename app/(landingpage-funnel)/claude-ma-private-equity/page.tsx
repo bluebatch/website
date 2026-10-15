@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import FunnelPage from "../_engine/funnel-page";
 import {
   ClosingCta,
+  CompareSection,
   PRIVATE_CLAUDE_FAQ,
   PortalSection,
   PriceSection,
-  ProblemSection,
   StartSteps,
 } from "../_engine/private-claude-sections";
 import { ContentWrapper } from "@/components/layout";
 import { FaqContainer } from "@/components/ui";
 import { UsageScreen } from "@/components/mockups";
 import MaPrivateEquityFunnel from "./funnel";
+import MaPrivateEquityUseCases from "./use-cases";
 
 // Ads-Einstieg für lead-gen/ma-private-equity/meta-ads. Inhalte und Grenzen
 // („Was wir NICHT behaupten“): lead-gen/ma-private-equity/research/problem-statement.md
@@ -23,7 +24,8 @@ const description =
   "Eigenes Claude für Deal-Teams: Admin-Portal, schriftliche Verschwiegenheitsverpflichtung, Verarbeitung in der EU. Startpaket 5.000 €. In 3 Fragen prüfen.";
 
 export const metadata: Metadata = {
-  title: "Claude für M&A und Private Equity: eigenes Claude fürs Deal-Team | Bluebatch",
+  title:
+    "Claude für M&A und Private Equity: eigenes Claude fürs Deal-Team | Bluebatch",
   description,
   openGraph: {
     title: "Claude für M&A und Private Equity",
@@ -45,39 +47,19 @@ export const metadata: Metadata = {
 };
 
 const facts = [
-  { bold: "Eigenes Claude", rest: "für Partner, Investment-Team und Analysten." },
-  { bold: "Verschwiegenheit schriftlich,", rest: "mit deutschem Vertragspartner." },
-  { bold: "Kein Training", rest: "mit Ihren Deal-Unterlagen, Verarbeitung in der EU." },
+  {
+    bold: "Eigenes Claude",
+    rest: "für Partner, Investment-Team und Analysten.",
+  },
+  {
+    bold: "Verschwiegenheit schriftlich,",
+    rest: "mit deutschem Vertragspartner.",
+  },
+  {
+    bold: "Kein Training",
+    rest: "mit Ihren Deal-Unterlagen, Verarbeitung in der EU.",
+  },
   { bold: "Admin-Portal:", rest: "Sie entscheiden, wer Zugang hat." },
-];
-
-const problems = [
-  {
-    title: "NDA und Representatives",
-    body: "Ihr NDA erlaubt die Weitergabe meist nur an Personen, die selbst zur Vertraulichkeit verpflichtet sind. Ein privates Chat-Konto ist das nicht.",
-  },
-  {
-    title: "Kontrolle über den Datenraum hinaus",
-    body: "Der Datenraum protokolliert jeden Download. Landet ein Absatz in einem privaten Chat-Fenster, endet diese Kontrolle.",
-  },
-  {
-    title: "Börsennotierte Beteiligte",
-    body: "Bei börsennotierten Targets gelten Need-to-know und Insiderliste nach MAR. Compliance fragt dann: welches Tool, welcher Anbieter, wer hat Zugriff?",
-  },
-  {
-    title: "Private KI-Konten unter Zeitdruck",
-    body: "Wenn das IM am Freitag raus muss, nutzt jemand den privaten Account. Mit einem Claude für das ganze Haus muss niemand ausweichen.",
-  },
-];
-
-const useCases = [
-  "Teaser und IM",
-  "Käufer-Longlist",
-  "Investment-Memo",
-  "DD-Fragenlisten",
-  "Q&A-Antworten",
-  "SPA-Markup",
-  "Übersetzung DE/EN",
 ];
 
 const faqs = [
@@ -107,7 +89,8 @@ export default function Page() {
         facts={facts}
         offer={{
           price: "5.000 €",
-          label: "Startpaket mit Einrichtung, Onboarding und 5 Tagen Coaching. Danach nur Verbrauch.",
+          label:
+            "Startpaket mit Einrichtung, Onboarding und 5 Tagen Coaching. Danach nur Verbrauch.",
         }}
         media={<UsageScreen compact />}
         startLabel="In 3 Fragen prüfen"
@@ -115,11 +98,30 @@ export default function Page() {
         <MaPrivateEquityFunnel />
       </FunnelPage>
 
-      <ProblemSection
-        preHeadline="Das Problem"
-        headline="Warum ein privates KI-Konto im Deal-Team nicht reicht"
-        items={problems}
-        useCases={useCases}
+      <MaPrivateEquityUseCases />
+
+      <CompareSection
+        preHeadline="Warum ein eigenes Claude"
+        headline="Privates KI-Konto oder Claude für das Deal-Team?"
+        before={{
+          title: "Privates KI-Konto",
+          items: [
+            "Kein Vertraulichkeitsvertrag, wie ihn Ihr NDA für Representatives meist verlangt",
+            "Inhalte aus dem Datenraum außerhalb jeder Protokollierung",
+            "Keine Antwort, wenn Compliance nach Tool, Anbieter und Zugriff fragt",
+            "Deal-Unterlagen in privaten Konten einzelner Leute",
+          ],
+        }}
+        after={{
+          title: "Ihr Claude über Bluebatch",
+          items: [
+            "Schriftliche Verschwiegenheitsverpflichtung von Bluebatch",
+            "Betrieb in Frankfurt, Verarbeitung in der EU, kein Training",
+            "Zugang nur für Ihr Team, gesperrt mit einem Klick",
+            "Ein Anbieter, ein Vertrag, ein Portal als Antwort für Compliance",
+          ],
+          footer: "Kosten nach Verbrauch, mit Limit",
+        }}
       />
 
       <PortalSection />
