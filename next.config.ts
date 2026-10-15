@@ -193,6 +193,23 @@ const nextConfig: NextConfig = {
         destination: "/mit-euch-wachsen",
         permanent: true,
       },
+      // Eingestellte Funnel-Landingpages (Oktober 2026): alte Anzeigen- und
+      // Blog-Links laufen auf das nächstliegende Angebot statt ins 404.
+      {
+        source: "/:slug(ai-maschinenbau-schulung-nuernberg|ai-workflow)",
+        destination: "/claude-cowork-schulung",
+        permanent: true,
+      },
+      {
+        source: "/ai-onboarding",
+        destination: "/managed-claude/onboarding",
+        permanent: true,
+      },
+      {
+        source: "/chat",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 

@@ -1,6 +1,6 @@
 // Server-seitiges Meta-Conversions-API. Single source of truth — genutzt von
-// /api/fb-events (Client-getriggert) UND vom Chat-Proxy (vollständig serverseitig,
-// hidden). PII wird hier SHA256-gehasht. Bewusst consent-unabhängig (CAPI).
+// /api/fb-events (Client-getriggert), /api/contact und /api/meeting-tracking.
+// PII wird hier SHA256-gehasht. Bewusst consent-unabhängig (CAPI).
 
 import { createHash } from "node:crypto";
 

@@ -529,29 +529,6 @@ export default function Page() {
         </div>
       </ContentWrapper>
 
-      {/* Kostenloser Einstieg / Lead-Magnet */}
-      <ContentWrapper>
-        <Link
-          href="/ai-onboarding"
-          className="group mx-auto flex max-w-4xl flex-col items-start gap-4 rounded-2xl border-2 border-dashed border-primary-200 bg-primary-50/50 p-6 transition-colors hover:border-primary-400 sm:flex-row sm:items-center sm:justify-between sm:p-8"
-        >
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary-700">
-              Kostenlos starten
-            </div>
-            <h2 className="mt-3 text-xl font-bold text-gray-900">Euer KI-Potenzial-Report</h2>
-            <p className="mt-1 max-w-xl text-sm text-gray-600">
-              Per Deep-Research aus unserer Kunden-Datenbank: eure individuelle
-              Use-Case-Roadmap als PDF. Ohne Kosten, ohne Verpflichtung.
-            </p>
-          </div>
-          <span className="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary-800 px-5 py-3 text-sm font-semibold text-white transition-colors group-hover:bg-primary-700">
-            Report erstellen
-            <ArrowRight className="h-4 w-4" />
-          </span>
-        </Link>
-      </ContentWrapper>
-
       {/* S — Einstieg */}
       <ContentWrapper colorScheme="white">
         <SizeHeader

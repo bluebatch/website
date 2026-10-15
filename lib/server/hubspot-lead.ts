@@ -1,5 +1,5 @@
-// Server-seitige HubSpot-Lead-Logik. Single source of truth — genutzt von
-// /api/hubspot/lead (Wizard) UND vom Chat-Proxy. Idempotent: sucht erst per
+// Server-seitige HubSpot-Lead-Logik. Single source of truth — genutzt vom
+// Meeting-Tracking (/api/meeting-tracking). Idempotent: sucht erst per
 // Domain/E-Mail, legt nur an wenn nicht vorhanden. Wirft nie hart.
 
 const TOKEN = process.env.HUBSPOT_ACCESS_TOKEN;

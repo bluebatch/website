@@ -724,7 +724,7 @@ export default function Page() {
               sagen ehrlich, welches Werkzeug wofür passt. Wenn die Wahl auf
               Claude fällt, übernehmen wir mit unserem{" "}
               <Link
-                href="/ai-onboarding"
+                href="/managed-claude/onboarding"
                 className="text-primary-600 hover:underline"
               >
                 Claude AI Setup für Unternehmen

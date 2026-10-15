@@ -1,6 +1,5 @@
 // Zentrales UTM→HubSpot-Mapping. Single source of truth — genutzt vom Kontakt-
-// formular (/api/contact), dem Meeting-Tracking (/api/meeting-tracking) UND dem
-// Homepage-Chat-Lead-Flow (lead-detect).
+// formular (/api/contact) und dem Meeting-Tracking (/api/meeting-tracking).
 //
 // Modell (Stand HubSpot-Dropdowns):
 //   lead_source  = referral | outbound | inbound  → unsere Web-Flows sind IMMER

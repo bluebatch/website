@@ -745,7 +745,7 @@ export default function Page() {
               Bedrock-Profile und MCP-Adapter schon aufgesetzt hat? Schaut euch
               unser{" "}
               <Link
-                href="/ai-onboarding"
+                href="/managed-claude/onboarding"
                 className="text-primary-600 hover:underline"
               >
                 Claude AI Setup für Unternehmen
