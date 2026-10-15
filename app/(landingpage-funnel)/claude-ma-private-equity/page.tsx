@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FunnelPage from "../_engine/funnel-page";
 import {
   ClosingCta,
+  CoachingSection,
   CompareSection,
   PRIVATE_CLAUDE_FAQ,
   PortalSection,
@@ -97,6 +98,8 @@ export default function Page() {
       >
         <MaPrivateEquityFunnel />
       </FunnelPage>
+
+      <CoachingSection />
 
       <MaPrivateEquityUseCases />
 
