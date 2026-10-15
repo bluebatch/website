@@ -17,6 +17,8 @@ export interface Fact {
 export interface FunnelOffer {
   /** z. B. "5.000 €" */
   price: string;
+  /** Optionale fette Zeile über dem Satz, z. B. "inkl. 5 Tage Coaching". */
+  title?: string;
   /** Was im Preis steckt, ein Satz. */
   label: string;
 }
@@ -246,6 +248,11 @@ function MobileFirstFunnelPage({
                   {offer.price}
                 </span>
                 <span className="text-sm leading-snug text-gray-700">
+                  {offer.title && (
+                    <span className="mb-0.5 block text-base font-bold text-primary-800">
+                      {offer.title}
+                    </span>
+                  )}
                   {offer.label}
                 </span>
               </div>

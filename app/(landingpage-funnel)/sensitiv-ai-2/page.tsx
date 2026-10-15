@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FunnelPage from "../_engine/funnel-page";
 import {
   ClosingCta,
+  CoachingSection,
   PRIVATE_CLAUDE_FAQ,
   PortalSection,
   PriceSection,
@@ -97,13 +98,16 @@ export default function Page() {
         facts={facts}
         offer={{
           price: "5.000 €",
-          label: "Startpaket mit Einrichtung, Onboarding und 5 Tagen Coaching. Danach nur Verbrauch.",
+          title: "inkl. 5 Tage Coaching",
+          label: "Für Ihr Team, dazu Einrichtung und Onboarding. Danach nur Verbrauch.",
         }}
         media={<UsageScreen compact />}
         startLabel="In 3 Fragen prüfen"
       >
         <SensitivAi2Funnel />
       </FunnelPage>
+
+      <CoachingSection />
 
       <ProblemSection
         preHeadline="Warum ein eigenes Claude"

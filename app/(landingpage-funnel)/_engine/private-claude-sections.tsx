@@ -25,7 +25,7 @@ import {
   Typo,
 } from "@/components/ui";
 import { SimpleCard } from "@/components/cards";
-import { FeatureRow } from "@/components/sections";
+import { FeatureRow, StepJourneyRow } from "@/components/sections";
 import { ContactButton, ContactChannel } from "@/components/buttons";
 import { LimitsScreen, NetworkScreen, TeamScreen } from "@/components/mockups";
 import { tokenPrice } from "@/lib/token-prices";
@@ -325,13 +325,83 @@ export function PortalSection() {
   );
 }
 
+// ── Coaching ─────────────────────────────────────────────────────────────────
+
+// Inhalt wie Paket M (/managed-claude/coaching/paket-m), branchenneutral
+// formuliert: "KI-Handbuch" statt "Kanzlei-Handbuch".
+const COACHING_BLOCKS = [
+  {
+    title: "KI-Kompetenz",
+    body: "Schulung nach Art. 4 EU AI Act für alle, die mit Claude arbeiten. Zertifikat je Person und Teilnehmerliste für Ihre Ablage.",
+  },
+  {
+    title: "Modelle und App",
+    body: "Welches Modell wofür voreingestellt ist. Teams und Rollen eingerichtet, die Oberfläche aufgeräumt.",
+  },
+  {
+    title: "Chat, Cowork und Projekte",
+    body: "Jede Person erledigt erste echte Vorgänge, ein Schriftstück bis zur fertigen Fassung. Die ersten Projekte sind angelegt.",
+  },
+  {
+    title: "Anleitungen und Routinen",
+    body: "Sie bringen das Fachwissen, wir bringen es in Form: erste Skills und eine Routine, zum Beispiel die Montagsübersicht.",
+  },
+  {
+    title: "KI-Handbuch",
+    body: "Das Grundgerüst steht: Anleitungen, Routinen und Projekte an einem Ort. Outlook läuft im Alltag.",
+  },
+];
+
+export function CoachingSection() {
+  return (
+    <ContentWrapper colorScheme="gradient-primary-dark">
+      <IntroBox dark textCentered size="small">
+        <IntroBox.PreHeadline>Im Startpaket enthalten</IntroBox.PreHeadline>
+        <div className="mb-6 flex items-center justify-center gap-4">
+          <span className="text-8xl font-bold leading-none tabular-nums text-white sm:text-9xl">
+            5
+          </span>
+          <span className="text-left text-2xl font-bold leading-tight text-white sm:text-3xl">
+            Tage Coaching
+            <span className="block text-lg font-semibold text-primary-200 sm:text-xl">
+              und Beratung mit Ihrem Team
+            </span>
+          </span>
+        </div>
+        <IntroBox.Paragraph className="mb-0!">
+          Fünf Personentage, Termine nach Absprache. Wir arbeiten an Ihren
+          echten Fällen statt an Übungsbeispielen, und was entsteht, bleibt bei
+          Ihnen.
+        </IntroBox.Paragraph>
+      </IntroBox>
+
+      <StepJourneyRow className="mt-10">
+        {COACHING_BLOCKS.map((block, i) => (
+          <StepJourneyRow.Step key={block.title} n={i + 1}>
+            <StepJourneyRow.Title>{block.title}</StepJourneyRow.Title>
+            <StepJourneyRow.Description>
+              {block.body}
+            </StepJourneyRow.Description>
+          </StepJourneyRow.Step>
+        ))}
+      </StepJourneyRow>
+
+      <p className="mx-auto mt-10 max-w-2xl text-center text-base text-white/90 sm:text-lg">
+        <span className="font-bold text-white">5.000 € einmalig</span> für die
+        fünf Tage Coaching, dazu Einrichtung und Onboarding. Danach zahlen Sie
+        nur den Verbrauch.
+      </p>
+    </ContentWrapper>
+  );
+}
+
 // ── Preise ───────────────────────────────────────────────────────────────────
 
 const START_PACKAGE = [
+  "5 Personentage Coaching und Beratung an Ihren echten Fällen",
+  "KI-Kompetenzschulung nach Art. 4 EU AI Act mit Zertifikat",
   "Einrichtung von Gateway und Portal, startklar in höchstens einer Woche",
   "Onboarding: Team, Rollen und Claude Desktop auf allen Rechnern",
-  "5 Personentage Coaching an Ihren echten Fällen",
-  "KI-Kompetenzschulung nach Art. 4 EU AI Act mit Zertifikat",
   "Outlook Connector inklusive",
 ];
 
@@ -377,9 +447,15 @@ export function PriceSection() {
           <p className="mt-1 text-4xl font-bold tabular-nums text-gray-900">
             5.000 €
           </p>
+          <p className="mt-1 text-lg font-bold text-primary-700">
+            inklusive 5 Tage Coaching
+          </p>
           <ul className="mt-5 space-y-3">
-            {START_PACKAGE.map((item) => (
-              <li key={item} className="flex gap-3 text-gray-700">
+            {START_PACKAGE.map((item, i) => (
+              <li
+                key={item}
+                className={`flex gap-3 ${i === 0 ? "font-semibold text-gray-900" : "text-gray-700"}`}
+              >
                 <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary-600 text-white">
                   <Check className="h-3 w-3" strokeWidth={3} aria-hidden />
                 </span>
