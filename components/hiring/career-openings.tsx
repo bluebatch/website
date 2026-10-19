@@ -45,7 +45,7 @@ export default function CareerOpenings() {
         </IntroBox>
 
         <div className="mt-12">
-          <Hiring>
+          <Hiring cols={jobs.length > 2 ? 3 : 2}>
             {jobs.map((job) => (
               <HiringPosition key={job.id} className="scroll-mt-32">
                 <HiringTitle>{job.title}</HiringTitle>

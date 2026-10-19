@@ -6,6 +6,8 @@ import Button from "@/components/ui/button";
 
 interface HiringProps {
   children: ReactNode;
+  /** Spalten ab Desktop-Breite, 2 bei wenigen offenen Stellen */
+  cols?: 2 | 3;
   className?: string;
 }
 
@@ -223,10 +225,10 @@ export function HiringApply({
   );
 }
 
-function Hiring({ children, className = "" }: HiringProps) {
+function Hiring({ children, cols = 3, className = "" }: HiringProps) {
   return (
     <div
-      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${className}`}
+      className={`grid grid-cols-1 md:grid-cols-2 ${cols === 3 ? "lg:grid-cols-3" : ""} gap-8 ${className}`}
     >
       {children}
     </div>

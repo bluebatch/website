@@ -18,20 +18,20 @@ import InternalLink from "@/components/buttons/internal-link";
 import CareerOpenings from "@/components/hiring/career-openings";
 
 export const metadata: Metadata = {
-  title: "Karriere bei Bluebatch | Jobs in Automatisierung & KI",
+  title: "Karriere bei Bluebatch | Jobs rund um Claude und KI",
   description:
-    "Offene Stellen bei Bluebatch: n8n Workflow Developer, AI Solutions Engineer, Sales und Werkstudierende. Remote, kleines Team, echte Kundenprojekte im Mittelstand.",
+    "Offene Stellen bei Bluebatch: Sales Consultant und Delivery Consultant für Claude. Du bringst Private Claude zu Anwalts- und Steuerkanzleien, remote.",
   keywords: [
     "Bluebatch Karriere",
-    "n8n Jobs",
+    "Claude Jobs",
     "KI Jobs Deutschland",
-    "Workflow Developer Stelle",
-    "AI Engineer Remote",
+    "Sales Consultant KI",
+    "Delivery Consultant Claude",
   ],
   openGraph: {
     title: "Karriere bei Bluebatch",
     description:
-      "Offene Stellen in Workflow-Automatisierung und KI: remote, kleines Team, echte Kundenprojekte im Mittelstand.",
+      "Offene Stellen rund um Claude: Vertrieb und Einführung bei Anwalts- und Steuerkanzleien, remote, kleines Team.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Karriere bei Bluebatch",
     description:
-      "Offene Stellen in Workflow-Automatisierung und KI: remote, kleines Team, echte Kundenprojekte.",
+      "Offene Stellen rund um Claude: Vertrieb und Einführung bei Kanzleien, remote, kleines Team.",
     images: ["/og?title=Karriere%20bei%20Bluebatch&eyebrow=Offene%20Stellen"],
   },
   alternates: {
@@ -58,40 +58,40 @@ export const metadata: Metadata = {
 
 const stack = [
   {
-    iconSrc: "/icons/workflow.svg",
-    title: "n8n als Kern",
-    description:
-      "Fast jeder Kundenworkflow läuft auf n8n, self-hosted auf unserer Infrastruktur. Dazu eigene Custom Nodes, wenn die Standard-Nodes nicht reichen.",
-  },
-  {
-    iconSrc: "/icons/code.svg",
-    title: "TypeScript und Python",
-    description:
-      "TypeScript für Nodes, Function-Steps und unsere eigenen Services, Python überall dort, wo Dokumente und Daten verarbeitet werden.",
-  },
-  {
     iconSrc: "/icons/admin-with-cogwheels.svg",
-    title: "LLMs und KI-Agenten",
+    title: "Claude von Anthropic",
     description:
-      "Claude und OpenAI über API, dazu MCP-Server, die Agenten kontrollierten Zugriff auf ERP, DMS und Datenbanken geben.",
+      "Claude als App für Chat, Cowork und Code, dazu die API. Das Werkzeug, das du verkaufst oder einführst, und mit dem du selbst jeden Tag arbeitest.",
   },
   {
-    iconSrc: "/icons/privacy.svg",
-    title: "Private AI",
+    iconSrc: "/icons/cloud.svg",
+    title: "AWS Bedrock in der EU",
     description:
-      "Für sensible Daten laufen Modelle wie Llama und Mistral mit Ollama oder vLLM auf eigener Hardware, DSGVO-konform und ohne Datenabfluss.",
+      "Claude läuft bei uns über AWS Bedrock mit EU-Inferenzprofilen. Prompts und Antworten speichern wir nicht.",
   },
   {
     iconSrc: "/icons/server-minimalistic.svg",
-    title: "Docker, AWS und Hetzner",
+    title: "Private Claude AI Gateway",
     description:
-      "Container statt Handarbeit, Deployments auf AWS oder deutschen Servern, Monitoring inklusive. Wer Infrastruktur mag, findet hier genug zu tun.",
+      "Unser Gateway in Frankfurt: eine eigene Organisation pro Kunde, Anmeldung per Single Sign-on, Budgets und Nutzung im Managed Claude Interface.",
   },
   {
     iconSrc: "/icons/puzzle.svg",
-    title: "Schnittstellen zu allem",
+    title: "DATEV, Microsoft 365, Websuche",
     description:
-      "SAP, Navision, Sage, DATEV, Shopsysteme, EDI, PostgreSQL und Vektordatenbanken. Der Alltag besteht daraus, Systeme zum Reden zu bringen.",
+      "Über Connectors arbeitet Claude mit den Daten der Kanzlei, etwa mit DATEV oder Outlook und SharePoint.",
+  },
+  {
+    iconSrc: "/icons/shield-check.svg",
+    title: "Datenschutz als Grundlage",
+    description:
+      "Dienstleistungsvertrag, AVV, TOMs und Geheimhaltungsvereinbarung gehören zu jedem Kunden. Bei uns kann jede Person erklären, wo welche Daten liegen.",
+  },
+  {
+    iconSrc: "/icons/code.svg",
+    title: "Skripte und API-Keys",
+    description:
+      "Für Teams, die weitergehen wollen: API-Keys, kleine Skripte in Python oder TypeScript und Claude Code für eigene Automatisierungen.",
   },
 ];
 
@@ -104,7 +104,7 @@ const benefits = [
   {
     title: "Eigene Projekte statt Zuarbeit",
     description:
-      "Du bekommst Kunden und Workflows, für die du verantwortlich bist. Kein Ticket-Abarbeiten in einer anonymen Delivery-Pipeline.",
+      "Du bekommst eigene Kanzleien, für die du verantwortlich bist. Kein Ticket-Abarbeiten in einer anonymen Delivery-Pipeline.",
   },
   {
     title: "Kurze Wege",
@@ -119,12 +119,12 @@ const benefits = [
   {
     title: "Ergebnisse zählen",
     description:
-      "Wir messen an eingesparter Zeit beim Kunden, nicht an Anwesenheit. Arbeitszeiten sind flexibel, Teilzeit ist bei den meisten Rollen möglich.",
+      "Wir messen an dem, was beim Kunden ankommt, nicht an Anwesenheit. Arbeitszeiten sind flexibel.",
   },
   {
     title: "Sichtbare Wirkung",
     description:
-      "Ein Workflow, den du baust, nimmt einem Team im Backoffice täglich Stunden ab. Das siehst du im ersten Reporting nach dem Go-live.",
+      "Wenn eine Kanzlei Claude im Alltag nutzt, siehst du es an der Nutzung im Portal und an den Rückmeldungen aus dem Team.",
   },
 ];
 
@@ -152,7 +152,7 @@ const faqs = [
   {
     question: "Mit welchen Technologien arbeitet Bluebatch?",
     answer:
-      "n8n als Automatisierungs-Engine, TypeScript und Python für eigene Services, Claude und OpenAI für KI-Funktionen, MCP-Server für den Systemzugriff, dazu Docker, PostgreSQL sowie AWS und deutsche Server für den Betrieb.",
+      "Mit Claude von Anthropic als App und über die API. Claude läuft über AWS Bedrock mit EU-Inferenzprofilen und unser Private Claude AI Gateway in Frankfurt, dazu kommen Connectors für DATEV, Microsoft 365 und die Websuche.",
   },
   {
     question: "Wie schnell bekomme ich eine Rückmeldung?",
@@ -170,15 +170,15 @@ export default function KarrierePage() {
           <Hero2ColumnTextColumn>
             <Hero2ColumnPreHeadline>Karriere</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>
-              Automatisierung bauen, die täglich läuft
+              Claude in die Kanzleien bringen
             </Hero2ColumnHeadline>
             <Hero2ColumnDescription geo>
-              Bluebatch ist eine KI- und Automatisierungsagentur aus
-              Deutschland. Wir automatisieren Backoffice-Prozesse im
-              Mittelstand mit n8n-Workflows und KI-Agenten, von der
-              Auftragserfassung bis zur Rechnungsprüfung. Aktuell suchen wir
-              Entwicklerinnen und Entwickler, Sales und Werkstudierende,
-              remote und ohne Konzernstrukturen.
+              Bluebatch bringt Claude von Anthropic sicher in Unternehmen und
+              Kanzleien in Deutschland, DSGVO-konform über unser Private Claude
+              AI Gateway in Frankfurt. Schwerpunkt sind Anwalts- und
+              Steuerkanzleien. Aktuell suchen wir eine Person für den Vertrieb
+              und eine für die Einführung beim Kunden, remote und ohne
+              Konzernstrukturen.
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>
@@ -197,46 +197,47 @@ export default function KarrierePage() {
           <IntroBox.Headline>Was du bei uns tatsächlich tust</IntroBox.Headline>
           <IntroBox.Subline>
             Keine Innovationslabore, keine Prototypen für die Schublade. Unsere
-            Workflows laufen produktiv und werden gemessen an der Zeit, die sie
-            unseren Kunden zurückgeben.
+            Kunden arbeiten jeden Tag mit Claude, und wir sorgen dafür, dass
+            das sicher und produktiv läuft.
           </IntroBox.Subline>
         </IntroBox>
 
         <div className="mt-12">
           <ProseColumns cols={3}>
-            <ProseColumns.Item title="Für wen wir bauen">
+            <ProseColumns.Item title="Für wen wir arbeiten">
               <Typo.Paragraph className="text-gray-600">
-                Mittelständische Unternehmen zwischen 50 und 1.000
-                Mitarbeitenden. Schwerpunkte sind{" "}
-                <InternalLink href="/branchen/grosshandel" variant="underline">
-                  Automatisierung im Großhandel
+                Vor allem{" "}
+                <InternalLink href="/branchen/anwaelte" variant="underline">
+                  Anwaltskanzleien
                 </InternalLink>{" "}
                 und{" "}
                 <InternalLink
                   href="/branchen/steuerberater"
                   variant="underline"
                 >
-                  KI für Steuerkanzleien
+                  Steuerkanzleien
                 </InternalLink>
-                . Firmen also, in denen Excel-Listen und Mail-Postfächer noch
-                echte Prozessschritte sind.
+                , dazu Unternehmen aus dem Mittelstand. Also Teams, die mit
+                vertraulichen Daten arbeiten und KI deshalb nicht einfach im
+                Browser nutzen dürfen.
               </Typo.Paragraph>
             </ProseColumns.Item>
             <ProseColumns.Item title="Woran wir arbeiten">
               <Typo.Paragraph className="text-gray-600">
-                Bestellungen aus PDFs und Mails ins ERP, Rechnungsprüfung,
-                Angebotserstellung, Dokumentenverarbeitung, KI-Assistenten auf
-                internen Daten. Jedes Projekt startet mit einem Prozess, der
-                heute Menschen Stunden kostet.
+                Claude für das ganze Team einrichten, Anbindung an DATEV und
+                Microsoft 365, Schulungen nach Art. 4 AI Act und Hilfe,
+                wenn jemand mit Skripten oder der API weitermachen will.
               </Typo.Paragraph>
             </ProseColumns.Item>
             <ProseColumns.Item title="Wie wir arbeiten">
               <Typo.Paragraph className="text-gray-600">
-                Kleine Teams, direkter Kundenkontakt, erste Workflows in fünf
-                Tagen live. Wie unsere Zusammenarbeit über die Zeit wächst,
-                steht auf{" "}
-                <InternalLink href="/mit-euch-wachsen" variant="underline">
-                  unserem Wachstumsmodell
+                Kleine Teams und direkter Kontakt zur Kanzlei. Wie eine
+                Einführung Schritt für Schritt abläuft, zeigt{" "}
+                <InternalLink
+                  href="/managed-claude/onboarding"
+                  variant="underline"
+                >
+                  unser Onboarding
                 </InternalLink>
                 .
               </Typo.Paragraph>
@@ -273,13 +274,16 @@ export default function KarrierePage() {
         </SimpleGrid>
 
         <Typo.Paragraph className="mt-10 text-center text-gray-600">
-          Einen tieferen Blick auf unsere Arbeit gibt es bei den{" "}
-          <InternalLink href="/managed-claude/weitere-tools/n8n" variant="underline">
-            Services rund um n8n
-          </InternalLink>{" "}
-          und in unseren{" "}
-          <InternalLink href="/managed-claude/weitere-tools/n8n/schulungen" variant="underline">
-            Automatisierungs-Schulungen
+          Wie das technisch zusammenhängt, steht unter{" "}
+          <InternalLink
+            href="/managed-claude/wie-es-funktioniert"
+            variant="underline"
+          >
+            So funktioniert Managed Claude
+          </InternalLink>
+          , die Datenschutz-Seite erklärt{" "}
+          <InternalLink href="/managed-claude/datenschutz" variant="underline">
+            wo welche Daten liegen
           </InternalLink>
           .
         </Typo.Paragraph>
