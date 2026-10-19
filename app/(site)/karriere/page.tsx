@@ -20,7 +20,7 @@ import CareerOpenings from "@/components/hiring/career-openings";
 export const metadata: Metadata = {
   title: "Karriere bei Bluebatch | Jobs rund um Claude und KI",
   description:
-    "Offene Stellen bei Bluebatch: Sales Consultant und Delivery Consultant für Claude. Du bringst Private Claude zu Anwalts- und Steuerkanzleien, remote.",
+    "Offene Stellen bei Bluebatch: Sales Consultant und Delivery Consultant für Claude. Bevorzugt an unserem Standort Nürnberg, remote möglich, kleines Team.",
   keywords: [
     "Bluebatch Karriere",
     "Claude Jobs",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Karriere bei Bluebatch",
     description:
-      "Offene Stellen rund um Claude: Vertrieb und Einführung bei Anwalts- und Steuerkanzleien, remote, kleines Team.",
+      "Offene Stellen rund um Claude: Vertrieb und Einführung beim Kunden, bevorzugt in Nürnberg, remote möglich, kleines Team.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Karriere bei Bluebatch",
     description:
-      "Offene Stellen rund um Claude: Vertrieb und Einführung bei Kanzleien, remote, kleines Team.",
+      "Offene Stellen rund um Claude: Vertrieb und Einführung, bevorzugt in Nürnberg, remote möglich.",
     images: ["/og?title=Karriere%20bei%20Bluebatch&eyebrow=Offene%20Stellen"],
   },
   alternates: {
@@ -97,14 +97,14 @@ const stack = [
 
 const benefits = [
   {
-    title: "Remote first",
+    title: "Nürnberg oder remote",
     description:
-      "Das Team arbeitet verteilt. Wo du sitzt, ist uns egal, solange die Zeitzone zu unseren Kunden im deutschsprachigen Raum passt.",
+      "Unser Standort ist Nürnberg, dort arbeiten wir am liebsten zusammen. Remote geht auch, solange die Zeitzone zu unseren Kunden im deutschsprachigen Raum passt.",
   },
   {
     title: "Eigene Projekte statt Zuarbeit",
     description:
-      "Du bekommst eigene Kanzleien, für die du verantwortlich bist. Kein Ticket-Abarbeiten in einer anonymen Delivery-Pipeline.",
+      "Du bekommst eigene Kunden, für die du verantwortlich bist. Kein Ticket-Abarbeiten in einer anonymen Delivery-Pipeline.",
   },
   {
     title: "Kurze Wege",
@@ -140,9 +140,9 @@ const faqs = [
       "Im ersten Schritt nicht. Uns reichen Name, E-Mail, die gewünschte Stelle und ein Link auf LinkedIn, GitHub oder ein Portfolio. Unterlagen fragen wir nur an, wenn wir sie wirklich brauchen.",
   },
   {
-    question: "Kann ich remote arbeiten?",
+    question: "Wo arbeite ich, in Nürnberg oder remote?",
     answer:
-      "Ja, alle ausgeschriebenen Stellen sind remote möglich. Wer lieber vor Ort arbeitet, kann das hybrid tun. Ein bis zwei Team-Treffen pro Jahr finden gemeinsam statt.",
+      "Unser Standort ist Nürnberg, dort sehen wir dich am liebsten, gern auch hybrid. Remote ist bei allen ausgeschriebenen Stellen möglich. Ein bis zwei Team-Treffen pro Jahr finden gemeinsam statt.",
   },
   {
     question: "Ist eine Initiativbewerbung möglich?",
@@ -177,8 +177,8 @@ export default function KarrierePage() {
               Kanzleien in Deutschland, DSGVO-konform über unser Private Claude
               AI Gateway in Frankfurt. Schwerpunkt sind Anwalts- und
               Steuerkanzleien. Aktuell suchen wir eine Person für den Vertrieb
-              und eine für die Einführung beim Kunden, remote und ohne
-              Konzernstrukturen.
+              und eine für die Einführung beim Kunden, am liebsten an unserem
+              Standort in Nürnberg, remote ist möglich.
             </Hero2ColumnDescription>
           </Hero2ColumnTextColumn>
           <Hero2ColumnMediaColumn>

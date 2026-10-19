@@ -39,7 +39,8 @@ export default function CareerOpenings() {
           <IntroBox.PreHeadline>Offene Stellen</IntroBox.PreHeadline>
           <IntroBox.Headline>Wo wir gerade Verstärkung suchen</IntroBox.Headline>
           <IntroBox.Subline>
-            Alle Stellen sind remote möglich, mit Büro-Option. Findest du deine
+            Unser Standort ist Nürnberg, dort arbeiten wir am liebsten
+            zusammen. Remote ist bei allen Stellen möglich. Findest du deine
             Rolle nicht dabei, bewirb dich initiativ.
           </IntroBox.Subline>
         </IntroBox>
