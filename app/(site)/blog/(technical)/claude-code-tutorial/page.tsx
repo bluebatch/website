@@ -19,7 +19,7 @@ const VIDEO = "https://www.youtube.com/watch?v=jdbOVepEtUE";
 export const metaCustom: BlogMeta = {
   slug: "claude-code-tutorial",
   author: "Max Hänsel",
-  date: "2026-11-06",
+  date: "2026-10-22",
   image: "/blog/claude-code-tutorial/hero.png",
   tags: ["ki", "development"] as BlogTagId[],
   publish: true,
@@ -93,7 +93,7 @@ export default function Page() {
             Max Hänsel
           </BlogHero.Author>
           <BlogHero.ReadTime>18 Min. Lesezeit</BlogHero.ReadTime>
-          <BlogHero.Date dateTime="2026-11-06">6. November 2026</BlogHero.Date>
+          <BlogHero.Date dateTime="2026-10-22">22. Oktober 2026</BlogHero.Date>
         </BlogHero.Meta>
 
         <BlogHero.Image
