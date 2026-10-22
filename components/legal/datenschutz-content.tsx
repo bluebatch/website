@@ -434,6 +434,29 @@ export default function DatenschutzContent() {
         - bleiben unberührt.
       </Typo.Paragraph>
 
+      <Typo.H3>Bewerbungen</Typo.H3>
+      <Typo.Paragraph>
+        Wenn Sie sich über das Formular auf unserer Karriereseite bewerben,
+        verarbeiten wir Ihre Angaben (Name, E-Mail-Adresse, gewünschte Stelle,
+        Profil-Link und Ihre Nachricht) ausschließlich für das
+        Bewerbungsverfahren. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
+      </Typo.Paragraph>
+      <Typo.Paragraph>
+        Wir speichern Bewerbungen in einer internen Tabelle in Google
+        Workspace. Anbieter ist die Google Ireland Limited, Gordon House,
+        Barrow Street, Dublin 4, Irland. Mit Google besteht ein Vertrag zur
+        Auftragsverarbeitung. Eine Übermittlung in die USA ist nicht
+        auszuschließen. Sie stützt sich auf das EU-US Data Privacy Framework,
+        unter dem Google zertifiziert ist.
+      </Typo.Paragraph>
+      <Typo.Paragraph>
+        Kommt keine Zusammenarbeit zustande, löschen wir Ihre Daten spätestens
+        sechs Monate nach Abschluss des Verfahrens. Diese Frist dient der
+        Abwehr möglicher Ansprüche nach dem AGG (Art. 6 Abs. 1 lit. f DSGVO).
+        Kommt ein Arbeitsverhältnis zustande, übernehmen wir die Daten in die
+        Personalakte.
+      </Typo.Paragraph>
+
       <Typo.H3>Verarbeiten von Daten (Kunden- und Vertragsdaten)</Typo.H3>
       <Typo.Paragraph>
         Wir erheben, verarbeiten und nutzen personenbezogene Daten nur, soweit

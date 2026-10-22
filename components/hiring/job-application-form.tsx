@@ -16,8 +16,8 @@ interface JobApplicationFormProps {
 }
 
 // Bewerbungsformular. Bewusst der einzige Bewerbungsweg: keine Telefonnummer,
-// keine Terminbuchung. Läuft über /api/karriere auf ein eigenes HubSpot-Formular,
-// damit Bewerbungen im CRM sauber von Sales-Leads getrennt bleiben.
+// keine Terminbuchung. Läuft über /api/karriere in ein Google Sheet, nicht ins
+// CRM, damit Bewerbungen HubSpot nicht mit Kontakten füllen.
 export default function JobApplicationForm({
   position,
   onPositionChange,
@@ -28,7 +28,9 @@ export default function JobApplicationForm({
   const [email, setEmail] = useState("");
   const [profileUrl, setProfileUrl] = useState("");
   const [message, setMessage] = useState("");
+  const [website, setWebsite] = useState(""); // Honeypot gegen Bots
   const [status, setStatus] = useState<FormStatus>("idle");
+  const [loadedAt] = useState(() => Date.now());
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
@@ -47,7 +49,8 @@ export default function JobApplicationForm({
           profileUrl: profileUrl.trim(),
           message: message.trim(),
           pageUri: window.location.href,
-          pageName: document.title,
+          website,
+          fillMs: Date.now() - loadedAt,
         }),
       });
       if (!res.ok) throw new Error("submit failed");
@@ -78,7 +81,7 @@ export default function JobApplicationForm({
   }
 
   return (
-    <form onSubmit={submit} className={`text-left ${className}`}>
+    <form onSubmit={submit} className={`relative text-left ${className}`}>
       <div className="grid gap-3 sm:grid-cols-2">
         <FormField
           label="Vorname"
@@ -129,6 +132,20 @@ export default function JobApplicationForm({
         placeholder="Woran hast du zuletzt gearbeitet, und was reizt dich an der Stelle?"
         className="mt-3"
       />
+      {/* Honeypot: für Menschen unsichtbar, Bots füllen jedes Feld aus */}
+      <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+        <label>
+          Website
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+          />
+        </label>
+      </div>
       <button
         type="submit"
         disabled={status === "sending"}

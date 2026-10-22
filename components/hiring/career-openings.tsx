@@ -90,9 +90,9 @@ export default function CareerOpenings() {
             onPositionChange={setPosition}
           />
           <Typo.Paragraph className="mt-6 text-xs text-gray-500">
-            Deine Angaben landen in unserem CRM und werden ausschließlich für
-            das Bewerbungsverfahren genutzt. Details stehen in der
-            Datenschutzerklärung.
+            Deine Angaben landen in unserer internen Bewerbungsliste und werden
+            ausschließlich für das Bewerbungsverfahren genutzt. Details stehen
+            in der Datenschutzerklärung.
           </Typo.Paragraph>
         </div>
       </ContentWrapper>
