@@ -337,6 +337,19 @@ claude`}
               ist ein <code>rm</code> auf zwei Verzeichnisse bzw.{" "}
               <code>winget uninstall</code>, ganz ohne Rückstände im System.
             </Typo.Paragraph>
+            <Typo.Paragraph>
+              Wer nicht programmiert und Claude Code für Berichte, Recherchen
+              oder wiederkehrende Abläufe nutzen will, findet den Weg ab hier
+              im{" "}
+              <Link
+                href="/blog/claude-code-tutorial"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code Tutorial auf Deutsch
+              </Link>
+              : sechs Schritte von der CLAUDE.md über Rechte und Skills bis zu
+              Routinen.
+            </Typo.Paragraph>
           </div>
 
           <Separator />

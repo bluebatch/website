@@ -361,7 +361,15 @@ export default function Page() {
               >
                 Claude-API-Guide
               </Link>
-              .
+              . Wie man Sessions im Alltag schlank hält, damit das
+              Abo-Kontingent nicht schon mittags aufgebraucht ist, zeigt unser{" "}
+              <Link
+                href="/blog/claude-code-tutorial"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code Tutorial
+              </Link>{" "}
+              im Abschnitt zu Kontext und Limits.
             </Typo.Paragraph>
             <Typo.Paragraph>
               Für Batch-Verarbeitung außerhalb von Claude Code gibt es 50

@@ -302,7 +302,15 @@ export default function Page() {
               Aus dem Werkzeug wird erst dann ein Automatisierungsunterbau, wenn
               man vier Dinge kennt. Sie sind der Grund, warum sich mit Claude
               Code Abläufe bauen lassen, die weit über Programmieren
-              hinausgehen.
+              hinausgehen. Wie man sie ohne Programmierkenntnisse Schritt für
+              Schritt aufbaut, zeigt unser{" "}
+              <Link
+                href="/blog/claude-code-tutorial"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Code Tutorial für Nicht-Programmierer
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>CLAUDE.md, das Projektgedächtnis</Typo.H3>
