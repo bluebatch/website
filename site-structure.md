@@ -140,19 +140,25 @@ Grundsätze:
 │   │   ├── websearch ......................... [MONEY]   (geplant) Claude mit Websuche
 │   │   └── mcp-server-erstellen .............. [MONEY]   (Umzug von services/mcp-server-erstellen)
 │   │
-│   │   ── Entry Offer: Einstiegsangebote ──
-│   ├── webinar ............................... [LANDING] (geplant) Kostenloses Webinar,
-│   │                                            Thema noch offen
-│   ├── studie ................................ [MONEY]   (geplant) Research: Claude
-│   │                                            Enterprise Compliance. Potenzielle
-│   │                                            Kunden werden in einen exklusiven
-│   │                                            Kreis eingeladen, Fragebogen über
-│   │                                            die nächsten 6 Wochen. Teilnehmer
-│   │                                            bekommen die Ergebnisse kostenlos,
-│   │                                            mitmachen kostet 1.000 €
-│   ├── schulung .............................. [MONEY]   (geplant) S-Angebot: 850 € pro
-│   │                                            Teilnehmer oder 7.500 € pro Gruppe
-│   │                                            eines Unternehmens. Keyword-Abgrenzung
+│   ├── governance-compliance/ ................ [HUB]     (geplant) Governance, Compliance
+│   │   │                                        und Guardrails für Claude Enterprise.
+│   │   │                                        Jede Unterseite zeigt ihren Preis und
+│   │   │                                        ist direkt buchbar
+│   │   ├── webinar ........................... [MONEY]   (geplant) Kostenloses Webinar:
+│   │   │                                        Governance, Compliance und Guardrails
+│   │   │                                        für Claude Enterprise von Anthropic
+│   │   │                                        konfigurieren. Anmeldung direkt
+│   │   │                                        auf der Seite
+│   │   ├── studie ............................ [MONEY]   (geplant) Research: Claude
+│   │   │                                        Enterprise Compliance. Potenzielle
+│   │   │                                        Kunden werden in einen exklusiven
+│   │   │                                        Kreis eingeladen, Fragebogen über
+│   │   │                                        die nächsten 6 Wochen. Teilnehmer
+│   │   │                                        bekommen die Ergebnisse kostenlos,
+│   │   │                                        mitmachen kostet 1.000 €
+│   │   └── schulung .......................... [MONEY]   (geplant) 850 € pro Teilnehmer
+│   │                                            oder 7.500 € pro Gruppe eines
+│   │                                            Unternehmens. Keyword-Abgrenzung
 │   │                                            zu coaching/ („ki schulung") klären
 │   │
 │   │   ── Angebot, nach Priorität ──
