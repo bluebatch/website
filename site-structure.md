@@ -140,6 +140,21 @@ Grundsätze:
 │   │   ├── websearch ......................... [MONEY]   (geplant) Claude mit Websuche
 │   │   └── mcp-server-erstellen .............. [MONEY]   (Umzug von services/mcp-server-erstellen)
 │   │
+│   │   ── Entry Offer: Einstiegsangebote ──
+│   ├── webinar ............................... [LANDING] (geplant) Kostenloses Webinar,
+│   │                                            Thema noch offen
+│   ├── studie ................................ [MONEY]   (geplant) Research: Claude
+│   │                                            Enterprise Compliance. Potenzielle
+│   │                                            Kunden werden in einen exklusiven
+│   │                                            Kreis eingeladen, Fragebogen über
+│   │                                            die nächsten 6 Wochen. Teilnehmer
+│   │                                            bekommen die Ergebnisse kostenlos,
+│   │                                            mitmachen kostet 1.000 €
+│   ├── schulung .............................. [MONEY]   (geplant) S-Angebot: 850 € pro
+│   │                                            Teilnehmer oder 7.500 € pro Gruppe
+│   │                                            eines Unternehmens. Keyword-Abgrenzung
+│   │                                            zu coaching/ („ki schulung") klären
+│   │
 │   │   ── Angebot, nach Priorität ──
 │   ├── claude-app/ ........................... [HUB]     (geplant) Prio 1: Claude für
 │   │   │                                        Teams/Enterprise einführen + betreiben
@@ -430,8 +445,8 @@ Grundsätze:
 ├── karriere .................................. [CONTENT] Trust/Recruiting;
 │                                                Stellen aus lib/career-jobs.ts,
 │                                                Bewerbung nur per Formular
-│                                                (/api/karriere → eigenes
-│                                                HubSpot-Formular)
+│                                                (/api/karriere → Google Sheet
+│                                                „Bewerbungen", nicht HubSpot)
 │
 ├── impressum ................................. [SYS]
 └── datenschutz ............................... [SYS]
