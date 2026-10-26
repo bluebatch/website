@@ -13,6 +13,7 @@ export { AnimatedNumber } from "./kpi-card";
 export { default as OfferCard } from "./offer-card";
 export { default as PhaseCard } from "./phase-card";
 export { PhaseCardBadge, PhaseCardDescription, PhaseCardDetailItem, PhaseCardDetails, PhaseCardHeader, PhaseCardSubtitle, PhaseCardTitle } from "./phase-card";
+export { default as PriceCard } from "./price-card";
 export { default as ProductTile } from "./product-tile";
 export { ProductTileDescription, ProductTileFeature, ProductTileFeatures, ProductTileFooter, ProductTileGrid, ProductTileImage, ProductTileRole, ProductTileStat, ProductTileTitle } from "./product-tile";
 export { default as SavingsCard } from "./savings-card";

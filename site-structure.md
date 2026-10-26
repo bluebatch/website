@@ -140,26 +140,23 @@ Grundsätze:
 │   │   ├── websearch ......................... [MONEY]   (geplant) Claude mit Websuche
 │   │   └── mcp-server-erstellen .............. [MONEY]   (Umzug von services/mcp-server-erstellen)
 │   │
-│   ├── governance-compliance/ ................ [HUB]     (geplant) Governance, Compliance
-│   │   │                                        und Guardrails für Claude Enterprise.
-│   │   │                                        Jede Unterseite zeigt ihren Preis und
-│   │   │                                        ist direkt buchbar
-│   │   ├── webinar ........................... [MONEY]   (geplant) Kostenloses Webinar:
-│   │   │                                        Governance, Compliance und Guardrails
-│   │   │                                        für Claude Enterprise von Anthropic
-│   │   │                                        konfigurieren. Anmeldung direkt
-│   │   │                                        auf der Seite
-│   │   ├── studie ............................ [MONEY]   (geplant) Research: Claude
-│   │   │                                        Enterprise Compliance. Potenzielle
-│   │   │                                        Kunden werden in einen exklusiven
-│   │   │                                        Kreis eingeladen, Fragebogen über
-│   │   │                                        die nächsten 6 Wochen. Teilnehmer
-│   │   │                                        bekommen die Ergebnisse kostenlos,
-│   │   │                                        mitmachen kostet 1.000 €
-│   │   └── schulung .......................... [MONEY]   (geplant) 850 € pro Teilnehmer
-│   │                                            oder 7.500 € pro Gruppe eines
-│   │                                            Unternehmens. Keyword-Abgrenzung
-│   │                                            zu coaching/ („ki schulung") klären
+│   ├── governance-compliance/ ................ [HUB]     Governance, Compliance und
+│   │   │                                        Guardrails für Claude Enterprise.
+│   │   │                                        Jede Unterseite zeigt ihren Preis,
+│   │   │                                        bestellt wird per Formular, bezahlt
+│   │   │                                        per Rechnung nach der Bestellung
+│   │   ├── webinar ........................... [MONEY]   Kostenloses Webinar: Governance,
+│   │   │                                        Compliance und Guardrails für Claude
+│   │   │                                        Enterprise von Anthropic konfigurieren
+│   │   ├── studie ............................ [MONEY]   Research: Claude Enterprise
+│   │   │                                        Compliance. Geladener, exklusiver
+│   │   │                                        Kreis, Fragebogen über 6 Wochen.
+│   │   │                                        Teilnahme 1.000 €, Ergebnisse
+│   │   │                                        inklusive
+│   │   └── schulung .......................... [MONEY]   850 € pro Teilnehmer oder 7.500 €
+│   │                                            pro Gruppe eines Unternehmens.
+│   │                                            Keyword-Abgrenzung zu coaching/
+│   │                                            („ki schulung") beachten
 │   │
 │   │   ── Angebot, nach Priorität ──
 │   ├── claude-app/ ........................... [HUB]     (geplant) Prio 1: Claude für
@@ -559,8 +556,9 @@ Managed Claude ▾ ────────────────────�
 │  SO ARBEITEN WIR (→ Hub)  ANGEBOT          INTEGRATIONEN (→ Hub)  WEITERE TOOLS (→ Hub)
 │  ├─ Wie es funktioniert   ├─ Claude App    ├─ DATEV               ├─ n8n (→ Hub)
 │  ├─ Onboarding            ├─ Claude API    ├─ Microsoft 365       ├─ Make
-│  └─ Preise                └─ Use Cases     └─ Websuche            ├─ Zapier
-│                                                                   └─ Alle Tools → Hub
+│  └─ Preise                ├─ Use Cases     └─ Websuche            ├─ Zapier
+│                           └─ Governance &                         └─ Alle Tools → Hub
+│                              Compliance (→ Hub)
 
 Über uns ▾: Mit euch wachsen · Team · Karriere · Kontakt
 Blog ▾:     die 5 neuesten Artikel · Alle Artikel → Hub
@@ -583,7 +581,7 @@ Gruppen-Überschriften (Überschrift = Link auf den Hub).
 ├─ Managed Claude ▾ (Akkordeon)
 │   ├─ Übersicht → Hub
 │   ├─ Wie es funktioniert · Onboarding · Preise
-│   ├─ Claude App · Claude API · Use Cases
+│   ├─ Claude App · Claude API · Use Cases · Governance & Compliance → Hub
 │   ├─ Integrationen → Hub
 │   └─ Weitere Tools → Hub  (n8n + einzelne Tools NICHT im Drawer)
 ├─ Branchen ▾              (Akkordeon)

@@ -110,6 +110,12 @@ const managedClaudeMenu = {
           description: "Wir bauen Anwendungen",
           href: "/managed-claude/use-cases",
         },
+        {
+          icon: "scale" as NavIconName,
+          title: "Governance & Compliance",
+          description: "Webinar, Studie, Schulung",
+          href: "/managed-claude/governance-compliance",
+        },
       ],
     },
     {

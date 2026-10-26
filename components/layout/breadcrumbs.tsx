@@ -105,6 +105,7 @@ const LABELS: Record<string, string> = {
   anwaelte: "Anwälte",
   "actaport-cloud-connector": "Cloud Connector zu actaport",
   "actaport-cloud-connector-implementierung": "Connector implementieren",
+  "governance-compliance": "Governance & Compliance",
 };
 
 /**

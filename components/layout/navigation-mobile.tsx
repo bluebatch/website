@@ -28,6 +28,7 @@ const managedClaude = [
   { label: "Managed Claude Interface", href: "/managed-claude/zentrale-steuerung" },
   { label: "Claude API", href: "/managed-claude/claude-api" },
   { label: "Use Cases", href: "/managed-claude/use-cases" },
+  { label: "Governance & Compliance", href: "/managed-claude/governance-compliance" },
 ];
 
 const branchenGroups = [
