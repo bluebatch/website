@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// Breadcrumbs ab Ebene 2 (site-structure.md): Orientierung bei 4 URL-Ebenen
+// Breadcrumbs ab Ebene 2 (docs/site-structure/grundsaetze.md): Orientierung bei 4 URL-Ebenen
 // plus BreadcrumbList-Schema für die SERP-Sitelinks. Wird in
 // app/(site)/layout.tsx gerendert und liegt in der Hero-Padding-Zone
 // unterhalb der fixen Navigation.

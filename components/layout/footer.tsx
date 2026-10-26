@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
-  // Footer spiegelt die Pillars, keine Einzelseiten (site-structure.md)
+  // Footer spiegelt die Pillars, keine Einzelseiten (docs/site-structure/navigation.md)
   const branchenMenu = [
     { label: "Großhandel", href: "/branchen/grosshandel" },
     { label: "Steuerberater", href: "/branchen/steuerberater" },

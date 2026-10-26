@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-// GEO-Kurzbeschreibung (site-structure.md, Grundsatz "GEO-Kurzbeschreibung
+// GEO-Kurzbeschreibung (docs/site-structure/grundsaetze.md, Grundsatz "GEO-Kurzbeschreibung
 // im Hero"): der erste Absatz jeder Seite, geschrieben für AI-Crawler
 // (AI Overviews, ChatGPT, Perplexity) UND Menschen.
 //

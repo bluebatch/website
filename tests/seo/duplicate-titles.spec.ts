@@ -5,7 +5,7 @@
  * bei Google um dieselbe Suchintention (Kannibalisierungs-Potenzial).
  *
  * Self-contained by design: prüft NUR Onsite-Signale über die eigene Sitemap —
- * keine Google-Credentials, keine GSC-/GA4-Daten (site-structure.md). Echte
+ * keine Google-Credentials, keine GSC-/GA4-Daten (docs/site-structure/grundsaetze.md). Echte
  * Kannibalisierung (Query → mehrere rankende URLs) erkennt und steuert der
  * Website-Agent außerhalb dieses Repos.
  *
@@ -104,6 +104,6 @@ test("Duplicate Titles & H1s — Kannibalisierungs-Potenzial", async ({
 
   expect(
     duplicates,
-    "Exakt gleiche Titles/H1s auf mehreren indexierbaren Seiten — Kannibalisierungs-Potenzial. Seiten branchenspezifisch differenzieren (site-structure.md, Grundsatz Kannibalisierung).",
+    "Exakt gleiche Titles/H1s auf mehreren indexierbaren Seiten — Kannibalisierungs-Potenzial. Seiten branchenspezifisch differenzieren (docs/site-structure/grundsaetze.md, Grundsatz Kannibalisierung).",
   ).toEqual([]);
 });

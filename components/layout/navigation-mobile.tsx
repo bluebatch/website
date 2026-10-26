@@ -5,7 +5,7 @@ import { ReactNode, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import ContactButton from "@/components/buttons/contact-button";
 
-// Mobile-Navigation nach Hub-first-Prinzip (site-structure.md):
+// Mobile-Navigation nach Hub-first-Prinzip (docs/site-structure/navigation.md):
 // genau EINE Akkordeon-Ebene, darunter flache Listen mit tappbaren
 // Gruppen-Überschriften. Erreichbar sind nur Hubs — einzelne Seiten
 // übernehmen die Hub-Seiten selbst.

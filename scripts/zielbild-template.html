@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zielbild bluebatch.io</title>
+<!-- Erzeugt von scripts/generate-zielbild.mjs aus docs/site-structure/zielbild.md. Nicht von Hand bearbeiten. -->
+<style>
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-2: #eef3f9;
+  --text: #0f1b2d;
+  --muted: #5b6b80;
+  --border: #dbe3ee;
+  --line: #b8c6d8;
+  --brand: #145cac;
+  --brand-soft: #e8f1fb;
+  --live: #16a34a;
+  --unv: #d97706;
+  --plan: #9aa8ba;
+  --t-hub: #4f46e5;
+  --t-money: #db2777;
+  --t-content: #0284c7;
+  --t-landing: #ea580c;
+  --t-tool: #0d9488;
+  --t-sys: #64748b;
+  --t-ordner: #a1a1aa;
+  --shadow: 0 1px 2px rgba(15, 27, 45, .06), 0 4px 16px rgba(15, 27, 45, .06);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a111d;
+    --surface: #111b2b;
+    --surface-2: #17243a;
+    --text: #e3eaf3;
+    --muted: #93a3b8;
+    --border: #22324a;
+    --line: #3a4d68;
+    --brand: #75abe7;
+    --brand-soft: #12294a;
+    --live: #22c55e;
+    --unv: #f59e0b;
+    --plan: #64748b;
+    --t-hub: #818cf8;
+    --t-money: #f472b6;
+    --t-content: #38bdf8;
+    --t-landing: #fb923c;
+    --t-tool: #2dd4bf;
+    --t-sys: #94a3b8;
+    --t-ordner: #71717a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a111d;
+  --surface: #111b2b;
+  --surface-2: #17243a;
+  --text: #e3eaf3;
+  --muted: #93a3b8;
+  --border: #22324a;
+  --line: #3a4d68;
+  --brand: #75abe7;
+  --brand-soft: #12294a;
+  --live: #22c55e;
+  --unv: #f59e0b;
+  --plan: #64748b;
+  --t-hub: #818cf8;
+  --t-money: #f472b6;
+  --t-content: #38bdf8;
+  --t-landing: #fb923c;
+  --t-tool: #2dd4bf;
+  --t-sys: #94a3b8;
+  --t-ordner: #71717a;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .3);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+code, .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .92em; }
+button { font: inherit; color: inherit; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 16px; }
+
+/* Kopf */
+header { padding: 28px 0 8px; }
+.titlebar { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
+.eyebrow { margin: 0 0 4px; color: var(--brand); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(24px, 4vw, 32px); line-height: 1.15; letter-spacing: -.01em; }
+.sub { margin: 6px 0 0; color: var(--muted); max-width: 70ch; }
+.views { display: inline-flex; background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 3px; }
+.views button { border: 0; background: none; padding: 6px 14px; border-radius: 7px; cursor: pointer; color: var(--muted); font-weight: 500; }
+.views button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+
+/* Kennzahlen */
+.stats { margin-top: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px; box-shadow: var(--shadow); }
+.stats-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+.stats-total { font-size: 15px; }
+.stats-total strong { font-size: 22px; margin-right: 4px; }
+.bigbar { display: flex; height: 10px; border-radius: 99px; overflow: hidden; background: var(--surface-2); margin: 12px 0; }
+.bigbar span { display: block; height: 100%; }
+.statchips { display: flex; flex-wrap: wrap; gap: 8px; }
+.statchip, .typechip, .btn {
+  display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 99px;
+  border: 1px solid var(--border); background: var(--surface); cursor: pointer; font-size: 13px; white-space: nowrap;
+}
+.statchip[aria-pressed="true"], .typechip[aria-pressed="true"] { border-color: var(--brand); background: var(--brand-soft); }
+.statchip b, .typechip b { font-variant-numeric: tabular-nums; }
+.btn { border-radius: 8px; }
+.btn:hover, .statchip:hover, .typechip:hover { border-color: var(--line); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-top: 14px; }
+.controls input {
+  flex: 1 1 220px; min-width: 0; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); font: inherit;
+}
+.controls input:focus { outline: 2px solid var(--brand); outline-offset: 1px; }
+.types, .actions { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* Punkte und Typ-Farben */
+.dot { width: 9px; height: 9px; border-radius: 50%; flex: none; background: var(--plan); }
+.s-live .dot, .dot.live { background: var(--live); }
+.s-unveroeffentlicht .dot, .dot.unveroeffentlicht { background: var(--unv); }
+.s-geplant .dot, .dot.geplant { background: transparent; border: 1.5px solid var(--plan); }
+.tc { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.tc-hub { background: var(--t-hub); } .tc-money { background: var(--t-money); } .tc-content { background: var(--t-content); }
+.tc-landing { background: var(--t-landing); } .tc-tool { background: var(--t-tool); } .tc-sys { background: var(--t-sys); }
+
+/* Hinweis: Seiten außerhalb des Zielbilds */
+.warn { margin: 16px 0 0; padding: 12px 14px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--unv) 45%, transparent); background: color-mix(in srgb, var(--unv) 10%, var(--surface)); }
+.warn summary { cursor: pointer; font-weight: 600; }
+.warn ul { margin: 8px 0 0; padding-left: 18px; }
+
+/* Mindmap */
+main { padding-bottom: 32px; }
+.map { margin-top: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: auto; box-shadow: var(--shadow); }
+.tree { display: inline-block; min-width: 100%; padding: 24px 32px 24px 20px; }
+.tree ul { list-style: none; margin: 0; padding: 0; }
+.tree li { display: flex; align-items: center; position: relative; }
+.kids { display: flex; flex-direction: column; position: relative; margin-left: 26px; }
+.kids::before { content: ""; position: absolute; left: -26px; top: 50%; width: 26px; border-top: 1.5px solid var(--line); }
+.kids > li { padding: 3px 0 3px 22px; }
+.kids > li::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; border-left: 1.5px solid var(--line); }
+.kids > li::after { content: ""; position: absolute; left: 0; top: 50%; width: 22px; border-top: 1.5px solid var(--line); }
+.kids > li:first-child::before { top: 50%; }
+.kids > li:last-child::before { bottom: 50%; }
+.kids > li:only-child::before { display: none; }
+
+.node {
+  position: relative; z-index: 1; display: inline-flex; flex-direction: column; gap: 5px; text-align: left;
+  min-width: 0; padding: 6px 10px 6px 11px; border-radius: 9px; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--t-ordner);
+  box-shadow: 0 1px 1px rgba(15, 27, 45, .04);
+}
+.node:hover { border-color: var(--line); }
+.node:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.node .row { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+.node .label { font-weight: 550; font-size: 13px; }
+.node .chip { font-size: 10px; font-weight: 700; letter-spacing: .04em; padding: 1px 6px; border-radius: 5px; background: var(--surface-2); color: var(--muted); }
+.node .flag { font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 5px; background: color-mix(in srgb, var(--t-content) 14%, transparent); color: var(--t-content); }
+.node .more { font-size: 11px; font-weight: 600; color: var(--brand); background: var(--brand-soft); padding: 0 7px; border-radius: 99px; }
+.node .bar { display: flex; height: 4px; border-radius: 99px; overflow: hidden; background: var(--surface-2); min-width: 60px; }
+.node .bar span { display: block; height: 100%; }
+.node.t-hub { border-left-color: var(--t-hub); }
+.node.t-money { border-left-color: var(--t-money); }
+.node.t-content { border-left-color: var(--t-content); }
+.node.t-landing { border-left-color: var(--t-landing); }
+.node.t-tool { border-left-color: var(--t-tool); }
+.node.t-sys { border-left-color: var(--t-sys); }
+.node.t-hub .label { font-weight: 650; }
+.node.s-geplant { background: transparent; border-style: dashed; border-left-style: solid; color: var(--muted); }
+.node.s-unveroeffentlicht { background: color-mix(in srgb, var(--unv) 8%, var(--surface)); }
+.node.coll .label { font-style: italic; }
+.node.hit { box-shadow: 0 0 0 2px color-mix(in srgb, var(--brand) 55%, transparent); }
+.node.sel { outline: 2px solid var(--brand); outline-offset: 2px; }
+.node.root { border: 0; background: #145cac; color: #fff; padding: 12px 18px; border-radius: 14px; }
+.node.root .label { font-size: 17px; font-weight: 700; }
+.node.root .bar { background: rgba(255, 255, 255, .25); }
+.node.root .more { background: rgba(255, 255, 255, .2); color: #fff; }
+.rootsub { font-size: 11px; opacity: .85; }
+.node.section { border: 0; border-left: 0; background: var(--brand-soft); color: var(--brand); padding: 7px 12px; border-radius: 99px; }
+.node.section .label { font-weight: 700; font-size: 13px; }
+.node.group { border: 1px dashed var(--line); border-left: 1px dashed var(--line); background: transparent; padding: 4px 10px; }
+.node.group .label { font-weight: 600; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.empty { padding: 32px; color: var(--muted); }
+
+/* Liste */
+.list { margin-top: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: auto; box-shadow: var(--shadow); }
+table { width: 100%; border-collapse: collapse; min-width: 640px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { position: sticky; top: 0; background: var(--surface-2); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+tbody tr { cursor: pointer; }
+tbody tr:hover { background: var(--surface-2); }
+tbody tr.sel { background: var(--brand-soft); }
+td .pill { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+td.desc { color: var(--muted); }
+
+/* Details */
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; margin-top: 16px; }
+.workspace.has-details { grid-template-columns: minmax(0, 1fr) 340px; }
+.workspace .map, .workspace .list { margin-top: 0; }
+#details {
+  position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: auto; z-index: 10;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); padding: 18px;
+}
+#details .close { position: absolute; right: 10px; top: 10px; border: 0; background: var(--surface-2); width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-size: 18px; line-height: 1; }
+#details h2 { margin: 2px 36px 6px 0; font-size: 18px; line-height: 1.3; }
+#details .path { color: var(--muted); word-break: break-all; }
+#details .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+#details .tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; padding: 3px 9px; border-radius: 99px; background: var(--surface-2); }
+#details p { margin: 0 0 12px; }
+#details dl { margin: 0; display: grid; grid-template-columns: 92px 1fr; gap: 8px 10px; font-size: 13px; }
+#details dt { color: var(--muted); }
+#details dd { margin: 0; word-break: break-word; }
+#details .open { display: inline-flex; margin-top: 16px; padding: 8px 14px; border-radius: 9px; background: #145cac; color: #fff; text-decoration: none; font-weight: 600; }
+@media (max-width: 900px) {
+  .workspace.has-details { grid-template-columns: minmax(0, 1fr); }
+  #details {
+    position: fixed; left: 0; right: 0; top: auto; bottom: 0; max-height: 62vh;
+    border-radius: 16px 16px 0 0; box-shadow: 0 -8px 32px rgba(15, 27, 45, .2);
+  }
+}
+
+/* Legende */
+.legend { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.legend section { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+.legend h3 { margin: 0 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.legend ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.legend li { display: grid; grid-template-columns: 14px 1fr; gap: 8px; align-items: baseline; }
+.legend li .tc, .legend li .dot { transform: translateY(1px); }
+.legend small { color: var(--muted); }
+footer { color: var(--muted); font-size: 12px; padding: 16px 0 40px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="titlebar">
+      <div>
+        <p class="eyebrow">Site-Struktur · Stand <span id="stand"></span></p>
+        <h1>Zielbild bluebatch.io</h1>
+        <p class="sub">Alle Seiten der Website nach URL, mit Seitentyp und Status. Klick auf einen Knoten klappt ihn auf und zeigt die Details.</p>
+      </div>
+      <div class="views" role="group" aria-label="Ansicht">
+        <button type="button" data-view="map" aria-pressed="true">Mindmap</button>
+        <button type="button" data-view="list" aria-pressed="false">Liste</button>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stats-head">
+        <div class="stats-total" id="total"></div>
+        <div class="statchips" id="statchips"></div>
+      </div>
+      <div class="bigbar" id="bigbar"></div>
+      <div class="controls">
+        <input type="search" id="q" placeholder="Seite suchen, z. B. datev oder kosten" aria-label="Seite suchen">
+        <div class="types" id="types"></div>
+        <div class="actions" id="actions">
+          <button type="button" class="btn" id="expand">Alles aufklappen</button>
+          <button type="button" class="btn" id="collapse">Zuklappen</button>
+          <button type="button" class="btn" id="reset">Filter löschen</button>
+        </div>
+      </div>
+    </div>
+    <div id="unplaced"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="workspace" id="workspace">
+    <div>
+      <section class="map" id="map" aria-label="Mindmap"></section>
+      <section class="list" id="list" aria-label="Liste" hidden></section>
+    </div>
+    <aside id="details" hidden aria-live="polite"></aside>
+  </div>
+
+  <div class="legend">
+    <section>
+      <h3>Seitentypen</h3>
+      <ul id="legend-types"></ul>
+    </section>
+    <section>
+      <h3>Status</h3>
+      <ul id="legend-status"></ul>
+    </section>
+  </div>
+</main>
+
+<footer class="wrap">
+  Erzeugt von <code>node scripts/generate-zielbild.mjs</code> aus <code>docs/site-structure/zielbild.md</code>. Änderungen am Baum dort eintragen, nicht in dieser Datei.
+</footer>
+
+<script id="data" type="application/json">/*__ZIELBILD_DATA__*/null</script>
+<script>
+(function () {
+  "use strict";
+  const DATA = JSON.parse(document.getElementById("data").textContent);
+
+  const TYPE_INFO = {
+    HUB: ["Hub", "Verteiler: bündelt ein Thema und sammelt interne Links."],
+    MONEY: ["Money Page", "Verkauft ein konkretes Angebot, Ziel jeder Conversion-Kette."],
+    LANDING: ["Landing Page", "Externer Einstieg über SEO-Keyword oder Ads, führt zur Money Page."],
+    CONTENT: ["Content Page", "Informiert, baut Topical Authority auf und verlinkt nach oben."],
+    TOOL: ["Tool Page", "Interaktives Werkzeug wie ein Rechner: qualifiziert Leads, verkauft nicht selbst."],
+    SYS: ["System", "Pflicht- und Betriebsseite ohne SEO-Rolle."],
+    ORDNER: ["Ordner", "Nur URL-Präfix, keine eigene Seite."],
+  };
+  const STATUS = [
+    ["live", "Live", "Veröffentlicht und erreichbar."],
+    ["unveroeffentlicht", "Unveröffentlicht", "Gebaut, aber nicht erreichbar: Ordner mit _ oder publish: false."],
+    ["geplant", "Geplant", "Die Seite gibt es noch nicht."],
+  ];
+  const FLAG_INFO = {
+    eingefroren: "Eingefroren: kein weiterer Ausbau",
+    future: "Future: bleibt stehen, keine neuen Seiten",
+  };
+  const COLORS = { live: "var(--live)", unveroeffentlicht: "var(--unv)", geplant: "var(--plan)" };
+
+  const skey = (s) =>
+    !s ? null : s.startsWith("live") ? "live" : s === "unveröffentlicht" ? "unveroeffentlicht" : s === "geplant" ? "geplant" : null;
+
+  // Baum vorbereiten: IDs, Eltern, Zähler je Teilbaum
+  const byId = new Map();
+  const order = [];
+  let seq = 0;
+  (function prep(n, parent, depth) {
+    n.id = seq++;
+    n.parent = parent;
+    n.depth = depth;
+    n.children = n.children || [];
+    n.key = n.collection ? null : skey(n.status);
+    byId.set(n.id, n);
+    order.push(n);
+    n.cnt = { live: 0, unveroeffentlicht: 0, geplant: 0 };
+    for (const c of n.children) {
+      prep(c, n, depth + 1);
+      if (c.key) n.cnt[c.key]++;
+      for (const k in n.cnt) n.cnt[k] += c.cnt[k];
+    }
+  })(DATA.tree, null, 0);
+  const total = (c) => c.live + c.unveroeffentlicht + c.geplant;
+  const pages = order.filter((n) => n.key);
+
+  const defaultOpen = () => new Set(order.filter((n) => n.depth < 2 || n.group).map((n) => n.id));
+  const state = { view: "map", expanded: defaultOpen(), status: new Set(), types: new Set(), q: "", selected: null };
+
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  };
+  const bar = (cnt, cls) => {
+    const b = el("span", cls);
+    const t = total(cnt) || 1;
+    for (const [k] of STATUS) {
+      if (!cnt[k]) continue;
+      const s = el("span");
+      s.style.width = (cnt[k] / t) * 100 + "%";
+      s.style.background = COLORS[k];
+      b.append(s);
+    }
+    return b;
+  };
+
+  const filtering = () => state.status.size > 0 || state.types.size > 0 || state.q !== "";
+  const hay = (n) => [n.label, n.path, n.desc, n.title].filter(Boolean).join(" ").toLowerCase();
+  const matches = (n) =>
+    !!n.key && !n.root &&
+    (!state.status.size || state.status.has(n.key)) &&
+    (!state.types.size || state.types.has(n.type)) &&
+    (!state.q || hay(n).includes(state.q));
+
+  // ── Kopf ──
+  $("stand").textContent = DATA.stand;
+  function renderStats() {
+    const s = DATA.summary;
+    const t = $("total");
+    t.replaceChildren(el("strong", "", String(s.gesamt)), document.createTextNode(" Seiten im Zielbild"));
+    $("bigbar").replaceChildren(...bar(s, "").childNodes);
+    const chips = STATUS.map(([k, label]) => {
+      const b = el("button", "statchip");
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(state.status.has(k)));
+      b.append(el("span", "dot " + k), el("b", "", String(s[k])), document.createTextNode(label.toLowerCase()));
+      b.onclick = () => toggle(state.status, k);
+      return b;
+    });
+    $("statchips").replaceChildren(...chips);
+    const typeCount = {};
+    for (const n of pages) typeCount[n.type] = (typeCount[n.type] || 0) + 1;
+    const types = ["HUB", "MONEY", "CONTENT", "LANDING", "TOOL", "SYS"].filter((k) => typeCount[k]).map((k) => {
+      const b = el("button", "typechip");
+      b.type = "button";
+      b.title = TYPE_INFO[k][1];
+      b.setAttribute("aria-pressed", String(state.types.has(k)));
+      b.append(el("span", "tc tc-" + k.toLowerCase()), document.createTextNode(TYPE_INFO[k][0]), el("b", "", String(typeCount[k])));
+      b.onclick = () => toggle(state.types, k);
+      return b;
+    });
+    $("types").replaceChildren(...types);
+  }
+  function toggle(set, k) {
+    set.has(k) ? set.delete(k) : set.add(k);
+    render();
+  }
+
+  function renderUnplaced() {
+    const u = DATA.unplaced || [];
+    if (!u.length) return;
+    const d = el("details", "warn");
+    d.append(el("summary", "", u.length + " Seiten in app/ fehlen im Zielbild"));
+    const ul = el("ul");
+    for (const r of u) {
+      const li = el("li");
+      li.append(el("code", "", r.path), document.createTextNode(" · " + r.status));
+      ul.append(li);
+    }
+    d.append(ul, el("p", "", "In docs/site-structure/zielbild.md einordnen und das Skript neu laufen lassen."));
+    $("unplaced").append(d);
+  }
+
+  // ── Mindmap ──
+  function nodeEl(n, open, kidCount, hit) {
+    const b = el("button", "node");
+    b.type = "button";
+    b.dataset.id = n.id;
+    if (n.root) b.classList.add("root");
+    if (n.group) b.classList.add(n.section ? "section" : "group");
+    if (!n.group && !n.root && n.type) b.classList.add("t-" + n.type.toLowerCase());
+    if (n.key && !n.root) b.classList.add("s-" + n.key);
+    if (n.collection) b.classList.add("coll");
+    if (hit) b.classList.add("hit");
+    if (state.selected === n.id) b.classList.add("sel");
+    if (kidCount) b.setAttribute("aria-expanded", String(open));
+
+    const row = el("span", "row");
+    if (n.key && !n.root) row.append(el("span", "dot"));
+    row.append(el("span", "label", n.collection ? "alle Unterseiten" : n.label));
+    if (!n.group && !n.root && n.type && n.type !== "ORDNER") row.append(el("span", "chip", n.type));
+    for (const f of n.flags || []) row.append(el("span", "flag", f));
+    const t = total(n.cnt);
+    if (kidCount && !open) row.append(el("span", "more", "+" + (t || kidCount)));
+    b.append(row);
+    if (n.root) b.append(el("span", "rootsub", "Startseite · Hub · " + n.status));
+    if (t >= 2) b.append(bar(n.cnt, "bar"));
+    return b;
+  }
+
+  function renderLi(n, filt, vis) {
+    const li = el("li");
+    const kids = filt ? n.children.filter((c) => vis.has(c.id)) : n.children;
+    const open = kids.length > 0 && (filt || state.expanded.has(n.id));
+    li.append(nodeEl(n, open, kids.length, filt && matches(n)));
+    if (open) {
+      const ul = el("ul", "kids");
+      for (const c of kids) ul.append(renderLi(c, filt, vis));
+      li.append(ul);
+    }
+    return li;
+  }
+
+  function renderMap() {
+    const filt = filtering();
+    let vis = null;
+    if (filt) {
+      vis = new Set();
+      (function walk(n) {
+        let any = matches(n);
+        for (const c of n.children) if (walk(c)) any = true;
+        if (any) vis.add(n.id);
+        return any;
+      })(DATA.tree);
+      if (vis.size === 0) {
+        $("map").replaceChildren(el("div", "empty", "Keine Seite passt zu den Filtern."));
+        return;
+      }
+      vis.add(DATA.tree.id);
+    }
+    const tree = el("div", "tree");
+    const ul = el("ul");
+    ul.append(renderLi(DATA.tree, filt, vis));
+    tree.append(ul);
+    $("map").replaceChildren(tree);
+  }
+
+  $("map").addEventListener("click", (e) => {
+    const b = e.target.closest(".node");
+    if (!b) return;
+    const n = byId.get(Number(b.dataset.id));
+    if (!filtering() && n.children.length) {
+      state.expanded.has(n.id) ? state.expanded.delete(n.id) : state.expanded.add(n.id);
+    }
+    if (!n.group) state.selected = n.id;
+    renderMap();
+    renderDetails();
+  });
+
+  // ── Liste ──
+  function renderList() {
+    const rows = pages.filter((n) => !filtering() || matches(n));
+    const table = el("table");
+    const head = el("tr");
+    for (const h of ["Pfad", "Typ", "Status", "Beschreibung"]) head.append(el("th", "", h));
+    const thead = el("thead");
+    thead.append(head);
+    const tbody = el("tbody");
+    for (const n of rows) {
+      const tr = el("tr");
+      tr.dataset.id = n.id;
+      if (state.selected === n.id) tr.className = "sel";
+      const p = el("td");
+      p.append(el("code", "", n.path || n.label));
+      const ty = el("td");
+      const tp = el("span", "pill");
+      tp.append(el("span", "tc tc-" + (n.type || "").toLowerCase()), document.createTextNode(n.type || ""));
+      ty.append(tp);
+      const st = el("td");
+      const sp = el("span", "pill");
+      sp.append(el("span", "dot " + n.key), document.createTextNode(n.status));
+      st.append(sp);
+      tr.append(p, ty, st, el("td", "desc", n.desc || n.title || ""));
+      tbody.append(tr);
+    }
+    table.append(thead, tbody);
+    $("list").replaceChildren(rows.length ? table : el("div", "empty", "Keine Seite passt zu den Filtern."));
+  }
+  $("list").addEventListener("click", (e) => {
+    const tr = e.target.closest("tr[data-id]");
+    if (!tr) return;
+    state.selected = Number(tr.dataset.id);
+    renderList();
+    renderDetails();
+  });
+
+  // ── Details ──
+  function renderDetails() {
+    const d = $("details");
+    const n = byId.get(state.selected);
+    const ws = $("workspace");
+    if (!n || n.group) {
+      d.hidden = true;
+      ws.classList.remove("has-details");
+      return;
+    }
+    ws.classList.add("has-details");
+    const close = el("button", "close", "×");
+    close.type = "button";
+    close.setAttribute("aria-label", "Details schließen");
+    close.onclick = () => {
+      state.selected = null;
+      render();
+    };
+    const parts = [close];
+    parts.push(el("code", "path", n.collection ? (n.parent.path || "") + "/*" : n.path || ""));
+    parts.push(el("h2", "", n.title || (n.collection ? "Alle Unterseiten" : n.label)));
+
+    const tags = el("div", "tags");
+    if (n.type) {
+      const t = el("span", "tag");
+      t.append(el("span", "tc tc-" + n.type.toLowerCase()), document.createTextNode(TYPE_INFO[n.type] ? TYPE_INFO[n.type][0] : n.type));
+      tags.append(t);
+    }
+    if (n.status) {
+      const s = el("span", "tag");
+      if (n.key) s.append(el("span", "dot " + n.key));
+      s.append(document.createTextNode(n.status));
+      tags.append(s);
+    }
+    for (const f of n.flags || []) tags.append(el("span", "tag", FLAG_INFO[f] || f));
+    parts.push(tags);
+    if (n.desc) parts.push(el("p", "", n.desc));
+
+    const dl = el("dl");
+    const row = (k, v) => {
+      if (!v) return;
+      dl.append(el("dt", "", k), el("dd", "", v));
+    };
+    if (n.type && TYPE_INFO[n.type]) row("Typ", TYPE_INFO[n.type][1]);
+    const si = STATUS.find(([k]) => k === n.key);
+    if (si) row("Status", si[2]);
+    if (n.file) row("Datei", n.file);
+    const t = total(n.cnt);
+    if (t) row("Darunter", `${t} Seiten: ${n.cnt.live} live, ${n.cnt.unveroeffentlicht} unveröffentlicht, ${n.cnt.geplant} geplant`);
+    if (n.parent && !n.parent.group && n.parent.path) row("Eltern", n.parent.path);
+    parts.push(dl);
+
+    if (n.key === "live" && n.path) {
+      const a = el("a", "open", "Seite öffnen ↗");
+      a.href = "https://bluebatch.io" + n.path;
+      a.target = "_blank";
+      a.rel = "noopener";
+      parts.push(a);
+    }
+    d.replaceChildren(...parts);
+    d.hidden = false;
+  }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && state.selected !== null) {
+      state.selected = null;
+      render();
+    }
+  });
+
+  // ── Steuerung ──
+  document.querySelectorAll(".views button").forEach((b) => {
+    b.onclick = () => {
+      state.view = b.dataset.view;
+      render();
+    };
+  });
+  $("q").addEventListener("input", (e) => {
+    state.q = e.target.value.trim().toLowerCase();
+    render();
+  });
+  $("expand").onclick = () => {
+    state.expanded = new Set(order.filter((n) => n.children.length).map((n) => n.id));
+    render();
+  };
+  $("collapse").onclick = () => {
+    state.expanded = defaultOpen();
+    render();
+  };
+  $("reset").onclick = () => {
+    state.status.clear();
+    state.types.clear();
+    state.q = "";
+    $("q").value = "";
+    render();
+  };
+
+  // ── Legende ──
+  $("legend-types").replaceChildren(
+    ...["HUB", "MONEY", "CONTENT", "LANDING", "TOOL", "SYS"].map((k) => {
+      const li = el("li");
+      const txt = el("span");
+      txt.append(el("strong", "", TYPE_INFO[k][0] + " "), el("small", "", TYPE_INFO[k][1]));
+      li.append(el("span", "tc tc-" + k.toLowerCase()), txt);
+      return li;
+    }),
+  );
+  $("legend-status").replaceChildren(
+    ...STATUS.map(([k, label, info]) => {
+      const li = el("li");
+      const txt = el("span");
+      txt.append(el("strong", "", label + " "), el("small", "", info));
+      li.append(el("span", "dot " + k), txt);
+      return li;
+    }),
+    ...Object.values(FLAG_INFO).map((info) => {
+      const li = el("li");
+      li.append(el("span"), el("small", "", info));
+      return li;
+    }),
+  );
+
+  function render() {
+    document.querySelectorAll(".views button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === state.view)));
+    $("map").hidden = state.view !== "map";
+    $("list").hidden = state.view !== "list";
+    $("expand").hidden = $("collapse").hidden = state.view !== "map";
+    $("reset").hidden = !filtering();
+    renderStats();
+    if (state.view === "map") renderMap();
+    else renderList();
+    renderDetails();
+  }
+  renderUnplaced();
+  render();
+})();
+</script>
+</body>
+</html>

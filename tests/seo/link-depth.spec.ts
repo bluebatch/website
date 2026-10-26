@@ -4,7 +4,7 @@
  * Checks how many clicks it takes from the homepage to reach each page.
  * Pages reachable in 1-3 clicks = good. More than 3 = score penalty.
  * More than MAX_HARD_DEPTH clicks = HARD FAIL — keine Seite darf mehr als
- * 4 Klicks von der Startseite entfernt sein (site-structure.md).
+ * 4 Klicks von der Startseite entfernt sein (docs/site-structure/grundsaetze.md).
  * Uses BFS from homepage, tracking depth per discovered URL.
  */
 
@@ -145,6 +145,6 @@ test("Link Depth — max 3 clicks from homepage", async ({ page }) => {
   const wayTooDeep = tooDeep.filter((p) => p.depth > MAX_HARD_DEPTH);
   expect(
     wayTooDeep.map((p) => `${p.url} (${p.depth} clicks)`),
-    `Seiten tiefer als ${MAX_HARD_DEPTH} Klicks — interne Verlinkung ergänzen (siehe site-structure.md, Verlinkungslogik)`,
+    `Seiten tiefer als ${MAX_HARD_DEPTH} Klicks — interne Verlinkung ergänzen (siehe docs/site-structure/verlinkung.md)`,
   ).toEqual([]);
 });

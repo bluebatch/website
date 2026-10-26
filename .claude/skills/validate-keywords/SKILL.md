@@ -1,14 +1,14 @@
 # Validate Keywords
 
-Validate keyword implementation across all pages that have keywords assigned in `keywords.md`. Score each page 0–100 and update the file with results.
+Validate keyword implementation across all pages that have keywords assigned in `docs/keywords.md`. Score each page 0–100 and update the file with results.
 
 ## Input
 
 Optional: `$ARGUMENTS` can be a specific section name (e.g., "Services", "Blog") or a specific page path (e.g., "/services/custom-nodes") to validate only that section/page. If no argument is given, validate ALL pages that have keywords assigned.
 
-## Step 1: Parse keywords.md
+## Step 1: Parse docs/keywords.md
 
-Read `/workspaces/website_blue_batch/keywords.md` and extract all pages that have a **non-empty Haupt-Keyword**. Skip pages with empty Haupt-Keyword — they have no keywords to validate, so no score, no review date.
+Read `docs/keywords.md` and extract all pages that have a **non-empty Haupt-Keyword**. Skip pages with empty Haupt-Keyword — they have no keywords to validate, so no score, no review date.
 
 For each page, collect:
 
@@ -134,9 +134,9 @@ Keywords: "ki dsgvo schulung", "ki workshop buchen", "ki accelerator"
   SCORE: 93/100
 ```
 
-## Step 5: Update keywords.md
+## Step 5: Update docs/keywords.md
 
-After scoring all pages, update `keywords.md`:
+After scoring all pages, update `docs/keywords.md`:
 
 1. Set the **Score** column to the numeric score: `93`
 2. Set the **Review** column to today's date

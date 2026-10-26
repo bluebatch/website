@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zielbild bluebatch.io</title>
+<!-- Erzeugt von scripts/generate-zielbild.mjs aus docs/site-structure/zielbild.md. Nicht von Hand bearbeiten. -->
+<style>
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-2: #eef3f9;
+  --text: #0f1b2d;
+  --muted: #5b6b80;
+  --border: #dbe3ee;
+  --line: #b8c6d8;
+  --brand: #145cac;
+  --brand-soft: #e8f1fb;
+  --live: #16a34a;
+  --unv: #d97706;
+  --plan: #9aa8ba;
+  --t-hub: #4f46e5;
+  --t-money: #db2777;
+  --t-content: #0284c7;
+  --t-landing: #ea580c;
+  --t-tool: #0d9488;
+  --t-sys: #64748b;
+  --t-ordner: #a1a1aa;
+  --shadow: 0 1px 2px rgba(15, 27, 45, .06), 0 4px 16px rgba(15, 27, 45, .06);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a111d;
+    --surface: #111b2b;
+    --surface-2: #17243a;
+    --text: #e3eaf3;
+    --muted: #93a3b8;
+    --border: #22324a;
+    --line: #3a4d68;
+    --brand: #75abe7;
+    --brand-soft: #12294a;
+    --live: #22c55e;
+    --unv: #f59e0b;
+    --plan: #64748b;
+    --t-hub: #818cf8;
+    --t-money: #f472b6;
+    --t-content: #38bdf8;
+    --t-landing: #fb923c;
+    --t-tool: #2dd4bf;
+    --t-sys: #94a3b8;
+    --t-ordner: #71717a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a111d;
+  --surface: #111b2b;
+  --surface-2: #17243a;
+  --text: #e3eaf3;
+  --muted: #93a3b8;
+  --border: #22324a;
+  --line: #3a4d68;
+  --brand: #75abe7;
+  --brand-soft: #12294a;
+  --live: #22c55e;
+  --unv: #f59e0b;
+  --plan: #64748b;
+  --t-hub: #818cf8;
+  --t-money: #f472b6;
+  --t-content: #38bdf8;
+  --t-landing: #fb923c;
+  --t-tool: #2dd4bf;
+  --t-sys: #94a3b8;
+  --t-ordner: #71717a;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .3);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+code, .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .92em; }
+button { font: inherit; color: inherit; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 16px; }
+
+/* Kopf */
+header { padding: 28px 0 8px; }
+.titlebar { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
+.eyebrow { margin: 0 0 4px; color: var(--brand); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(24px, 4vw, 32px); line-height: 1.15; letter-spacing: -.01em; }
+.sub { margin: 6px 0 0; color: var(--muted); max-width: 70ch; }
+.views { display: inline-flex; background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 3px; }
+.views button { border: 0; background: none; padding: 6px 14px; border-radius: 7px; cursor: pointer; color: var(--muted); font-weight: 500; }
+.views button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+
+/* Kennzahlen */
+.stats { margin-top: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px; box-shadow: var(--shadow); }
+.stats-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+.stats-total { font-size: 15px; }
+.stats-total strong { font-size: 22px; margin-right: 4px; }
+.bigbar { display: flex; height: 10px; border-radius: 99px; overflow: hidden; background: var(--surface-2); margin: 12px 0; }
+.bigbar span { display: block; height: 100%; }
+.statchips { display: flex; flex-wrap: wrap; gap: 8px; }
+.statchip, .typechip, .btn {
+  display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 99px;
+  border: 1px solid var(--border); background: var(--surface); cursor: pointer; font-size: 13px; white-space: nowrap;
+}
+.statchip[aria-pressed="true"], .typechip[aria-pressed="true"] { border-color: var(--brand); background: var(--brand-soft); }
+.statchip b, .typechip b { font-variant-numeric: tabular-nums; }
+.btn { border-radius: 8px; }
+.btn:hover, .statchip:hover, .typechip:hover { border-color: var(--line); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-top: 14px; }
+.controls input {
+  flex: 1 1 220px; min-width: 0; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); font: inherit;
+}
+.controls input:focus { outline: 2px solid var(--brand); outline-offset: 1px; }
+.types, .actions { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* Punkte und Typ-Farben */
+.dot { width: 9px; height: 9px; border-radius: 50%; flex: none; background: var(--plan); }
+.s-live .dot, .dot.live { background: var(--live); }
+.s-unveroeffentlicht .dot, .dot.unveroeffentlicht { background: var(--unv); }
+.s-geplant .dot, .dot.geplant { background: transparent; border: 1.5px solid var(--plan); }
+.tc { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.tc-hub { background: var(--t-hub); } .tc-money { background: var(--t-money); } .tc-content { background: var(--t-content); }
+.tc-landing { background: var(--t-landing); } .tc-tool { background: var(--t-tool); } .tc-sys { background: var(--t-sys); }
+
+/* Hinweis: Seiten außerhalb des Zielbilds */
+.warn { margin: 16px 0 0; padding: 12px 14px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--unv) 45%, transparent); background: color-mix(in srgb, var(--unv) 10%, var(--surface)); }
+.warn summary { cursor: pointer; font-weight: 600; }
+.warn ul { margin: 8px 0 0; padding-left: 18px; }
+
+/* Mindmap */
+main { padding-bottom: 32px; }
+.map { margin-top: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: auto; box-shadow: var(--shadow); }
+.tree { display: inline-block; min-width: 100%; padding: 24px 32px 24px 20px; }
+.tree ul { list-style: none; margin: 0; padding: 0; }
+.tree li { display: flex; align-items: center; position: relative; }
+.kids { display: flex; flex-direction: column; position: relative; margin-left: 26px; }
+.kids::before { content: ""; position: absolute; left: -26px; top: 50%; width: 26px; border-top: 1.5px solid var(--line); }
+.kids > li { padding: 3px 0 3px 22px; }
+.kids > li::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; border-left: 1.5px solid var(--line); }
+.kids > li::after { content: ""; position: absolute; left: 0; top: 50%; width: 22px; border-top: 1.5px solid var(--line); }
+.kids > li:first-child::before { top: 50%; }
+.kids > li:last-child::before { bottom: 50%; }
+.kids > li:only-child::before { display: none; }
+
+.node {
+  position: relative; z-index: 1; display: inline-flex; flex-direction: column; gap: 5px; text-align: left;
+  min-width: 0; padding: 6px 10px 6px 11px; border-radius: 9px; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--t-ordner);
+  box-shadow: 0 1px 1px rgba(15, 27, 45, .04);
+}
+.node:hover { border-color: var(--line); }
+.node:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.node .row { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+.node .label { font-weight: 550; font-size: 13px; }
+.node .chip { font-size: 10px; font-weight: 700; letter-spacing: .04em; padding: 1px 6px; border-radius: 5px; background: var(--surface-2); color: var(--muted); }
+.node .flag { font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 5px; background: color-mix(in srgb, var(--t-content) 14%, transparent); color: var(--t-content); }
+.node .more { font-size: 11px; font-weight: 600; color: var(--brand); background: var(--brand-soft); padding: 0 7px; border-radius: 99px; }
+.node .bar { display: flex; height: 4px; border-radius: 99px; overflow: hidden; background: var(--surface-2); min-width: 60px; }
+.node .bar span { display: block; height: 100%; }
+.node.t-hub { border-left-color: var(--t-hub); }
+.node.t-money { border-left-color: var(--t-money); }
+.node.t-content { border-left-color: var(--t-content); }
+.node.t-landing { border-left-color: var(--t-landing); }
+.node.t-tool { border-left-color: var(--t-tool); }
+.node.t-sys { border-left-color: var(--t-sys); }
+.node.t-hub .label { font-weight: 650; }
+.node.s-geplant { background: transparent; border-style: dashed; border-left-style: solid; color: var(--muted); }
+.node.s-unveroeffentlicht { background: color-mix(in srgb, var(--unv) 8%, var(--surface)); }
+.node.coll .label { font-style: italic; }
+.node.hit { box-shadow: 0 0 0 2px color-mix(in srgb, var(--brand) 55%, transparent); }
+.node.sel { outline: 2px solid var(--brand); outline-offset: 2px; }
+.node.root { border: 0; background: #145cac; color: #fff; padding: 12px 18px; border-radius: 14px; }
+.node.root .label { font-size: 17px; font-weight: 700; }
+.node.root .bar { background: rgba(255, 255, 255, .25); }
+.node.root .more { background: rgba(255, 255, 255, .2); color: #fff; }
+.rootsub { font-size: 11px; opacity: .85; }
+.node.section { border: 0; border-left: 0; background: var(--brand-soft); color: var(--brand); padding: 7px 12px; border-radius: 99px; }
+.node.section .label { font-weight: 700; font-size: 13px; }
+.node.group { border: 1px dashed var(--line); border-left: 1px dashed var(--line); background: transparent; padding: 4px 10px; }
+.node.group .label { font-weight: 600; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.empty { padding: 32px; color: var(--muted); }
+
+/* Liste */
+.list { margin-top: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: auto; box-shadow: var(--shadow); }
+table { width: 100%; border-collapse: collapse; min-width: 640px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { position: sticky; top: 0; background: var(--surface-2); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+tbody tr { cursor: pointer; }
+tbody tr:hover { background: var(--surface-2); }
+tbody tr.sel { background: var(--brand-soft); }
+td .pill { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+td.desc { color: var(--muted); }
+
+/* Details */
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; margin-top: 16px; }
+.workspace.has-details { grid-template-columns: minmax(0, 1fr) 340px; }
+.workspace .map, .workspace .list { margin-top: 0; }
+#details {
+  position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: auto; z-index: 10;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); padding: 18px;
+}
+#details .close { position: absolute; right: 10px; top: 10px; border: 0; background: var(--surface-2); width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-size: 18px; line-height: 1; }
+#details h2 { margin: 2px 36px 6px 0; font-size: 18px; line-height: 1.3; }
+#details .path { color: var(--muted); word-break: break-all; }
+#details .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+#details .tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; padding: 3px 9px; border-radius: 99px; background: var(--surface-2); }
+#details p { margin: 0 0 12px; }
+#details dl { margin: 0; display: grid; grid-template-columns: 92px 1fr; gap: 8px 10px; font-size: 13px; }
+#details dt { color: var(--muted); }
+#details dd { margin: 0; word-break: break-word; }
+#details .open { display: inline-flex; margin-top: 16px; padding: 8px 14px; border-radius: 9px; background: #145cac; color: #fff; text-decoration: none; font-weight: 600; }
+@media (max-width: 900px) {
+  .workspace.has-details { grid-template-columns: minmax(0, 1fr); }
+  #details {
+    position: fixed; left: 0; right: 0; top: auto; bottom: 0; max-height: 62vh;
+    border-radius: 16px 16px 0 0; box-shadow: 0 -8px 32px rgba(15, 27, 45, .2);
+  }
+}
+
+/* Legende */
+.legend { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.legend section { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+.legend h3 { margin: 0 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.legend ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.legend li { display: grid; grid-template-columns: 14px 1fr; gap: 8px; align-items: baseline; }
+.legend li .tc, .legend li .dot { transform: translateY(1px); }
+.legend small { color: var(--muted); }
+footer { color: var(--muted); font-size: 12px; padding: 16px 0 40px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="titlebar">
+      <div>
+        <p class="eyebrow">Site-Struktur · Stand <span id="stand"></span></p>
+        <h1>Zielbild bluebatch.io</h1>
+        <p class="sub">Alle Seiten der Website nach URL, mit Seitentyp und Status. Klick auf einen Knoten klappt ihn auf und zeigt die Details.</p>
+      </div>
+      <div class="views" role="group" aria-label="Ansicht">
+        <button type="button" data-view="map" aria-pressed="true">Mindmap</button>
+        <button type="button" data-view="list" aria-pressed="false">Liste</button>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stats-head">
+        <div class="stats-total" id="total"></div>
+        <div class="statchips" id="statchips"></div>
+      </div>
+      <div class="bigbar" id="bigbar"></div>
+      <div class="controls">
+        <input type="search" id="q" placeholder="Seite suchen, z. B. datev oder kosten" aria-label="Seite suchen">
+        <div class="types" id="types"></div>
+        <div class="actions" id="actions">
+          <button type="button" class="btn" id="expand">Alles aufklappen</button>
+          <button type="button" class="btn" id="collapse">Zuklappen</button>
+          <button type="button" class="btn" id="reset">Filter löschen</button>
+        </div>
+      </div>
+    </div>
+    <div id="unplaced"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="workspace" id="workspace">
+    <div>
+      <section class="map" id="map" aria-label="Mindmap"></section>
+      <section class="list" id="list" aria-label="Liste" hidden></section>
+    </div>
+    <aside id="details" hidden aria-live="polite"></aside>
+  </div>
+
+  <div class="legend">
+    <section>
+      <h3>Seitentypen</h3>
+      <ul id="legend-types"></ul>
+    </section>
+    <section>
+      <h3>Status</h3>
+      <ul id="legend-status"></ul>
+    </section>
+  </div>
+</main>
+
+<footer class="wrap">
+  Erzeugt von <code>node scripts/generate-zielbild.mjs</code> aus <code>docs/site-structure/zielbild.md</code>. Änderungen am Baum dort eintragen, nicht in dieser Datei.
+</footer>
+
+<script id="data" type="application/json">{"stand":"2026-10-26","summary":{"live":242,"unveroeffentlicht":81,"geplant":70,"gesamt":393},"tree":{"label":"bluebatch.io","path":"/","type":"HUB","status":"live","desc":"Hauptseite Managed Claude: Marke, Einstieg und Verteiler aller Managed-Claude-Seiten (seit 2026-10-14; `/managed-claude` leitet per 308 auf `/`)","title":"${title}","file":"app/(site)/page.tsx","root":true,"children":[{"label":"Managed Claude","group":true,"section":true,"children":[{"label":"managed-claude","path":"/managed-claude","type":"ORDNER","status":"nur Ordner","desc":"Nur URL-Präfix ohne eigene Seite. Im Mega-Menü ist „Managed Claude“ nur Auslöser, die Breadcrumbs blenden das Segment aus","children":[{"label":"So arbeiten wir","group":true,"children":[{"label":"wie-es-funktioniert","path":"/managed-claude/wie-es-funktioniert","type":"CONTENT","status":"live","desc":"Ablauf, Rollen, Verantwortung Kunde und Bluebatch","title":"AWS Bedrock Claude: Architektur, Datenschutz, Rechtsrahmen","file":"app/(site)/managed-claude/wie-es-funktioniert/page.tsx"},{"label":"datenschutz","path":"/managed-claude/datenschutz","type":"MONEY","status":"live","desc":"Claude Datenschutz und DSGVO: Bedrock EU, § 203 StGB, Unterlagen","title":"Claude Datenschutz: DSGVO-konform nutzen, Daten in der EU","file":"app/(site)/managed-claude/datenschutz/page.tsx"},{"label":"onboarding","path":"/managed-claude/onboarding","type":"MONEY","status":"live","desc":"Go-live-Roadmap, Einrichtung","title":"KI-Einführung: in einer Woche startklar mit Claude","file":"app/(site)/managed-claude/onboarding/page.tsx"},{"label":"coaching","path":"/managed-claude/coaching","type":"HUB","status":"live","desc":"Schulung, Kanzlei-Handbuch, KI-Kompetenzschulung","title":"KI-Schulung: Coaching mit Zertifikat nach EU AI Act","file":"app/(site)/managed-claude/coaching/page.tsx","children":[{"label":"paket-m","path":"/managed-claude/coaching/paket-m","type":"MONEY","status":"live","desc":"5 PT, 5.000 €, Einrichtung und Outlook zu 100 % angerechnet (`paket-s` leitet per 301 hierher)","title":"KI-Workshop für Unternehmen: Paket M, 5 Tage Coaching","file":"app/(site)/managed-claude/coaching/paket-m/page.tsx"},{"label":"paket-l","path":"/managed-claude/coaching/paket-l","type":"MONEY","status":"live","desc":"10 PT, 10.000 €, Einrichtung und Outlook zu 100 % angerechnet","title":"KI-Beratung für Unternehmen: Paket L, 10 Tage Coaching","file":"app/(site)/managed-claude/coaching/paket-l/page.tsx"}]},{"label":"preise","path":"/managed-claude/preise","type":"MONEY","status":"live","desc":"Preise und Kostenrechner","title":"Claude Kosten: Tokenpreise, Einrichtung und Pakete","file":"app/(site)/managed-claude/preise/page.tsx"},{"label":"was-kostet-ki","path":"/managed-claude/was-kostet-ki","type":"MONEY","status":"live","desc":"Kostenfrage allgemein, früher `services/was-kostet-ki`","title":"Was kostet KI? Die Rechnung statt der nächsten Preisspanne","file":"app/(site)/managed-claude/was-kostet-ki/page.tsx"}]},{"label":"Angebot, nach Priorität","group":true,"children":[{"label":"claude-app","path":"/managed-claude/claude-app","type":"HUB","status":"live","desc":"Prio 1: Claude für Teams und Enterprise einführen und betreiben","title":"Claude im Team: Claude Desktop für alle, ohne Lizenz pro Kopf","file":"app/(site)/managed-claude/claude-app/page.tsx"},{"label":"zentrale-steuerung","path":"/managed-claude/zentrale-steuerung","type":"MONEY","status":"live","desc":"Managed Claude Interface: Profile, Ordner-Freigaben, Tools sperren","title":"KI-Compliance für Claude: Kosten, Team und Regeln zentral","file":"app/(site)/managed-claude/zentrale-steuerung/page.tsx"},{"label":"claude-api","path":"/managed-claude/claude-api","type":"HUB","status":"live","desc":"Prio 2: Claude per API in eigene Systeme und Prozesse","title":"Claude API Key: eigene Apps bauen, Kosten je Use Case","file":"app/(site)/managed-claude/claude-api/page.tsx"},{"label":"use-cases","path":"/managed-claude/use-cases","type":"HUB","status":"live","desc":"Prio 3: Wir bauen Use Cases auf Claude","title":"Claude Agent: KI-Agenten für Kanzlei und Unternehmen","file":"app/(site)/managed-claude/use-cases/page.tsx","children":[{"label":"ki-agent-kaufen","path":"/managed-claude/use-cases/ki-agent-kaufen","type":"MONEY","status":"live","title":"KI-Agent kaufen: drei Wege, echte Preise, klare Entscheidung","file":"app/(site)/managed-claude/use-cases/ki-agent-kaufen/page.tsx"},{"label":"ki-agent-kostenlos","path":"/managed-claude/use-cases/ki-agent-kostenlos","type":"CONTENT","status":"live","title":"KI-Agent kostenlos: wie weit Sie ohne Budget kommen","file":"app/(site)/managed-claude/use-cases/ki-agent-kostenlos/page.tsx"},{"label":"ki-chatbot-fuer-unternehmen","path":"/managed-claude/use-cases/ki-chatbot-fuer-unternehmen","type":"MONEY","status":"live","title":"KI-Chatbot für Unternehmen: Bauart, Kosten, Ablauf","file":"app/(site)/managed-claude/use-cases/ki-chatbot-fuer-unternehmen/page.tsx"}]},{"label":"governance-compliance","path":"/managed-claude/governance-compliance","type":"HUB","status":"live","desc":"Governance, Compliance und Guardrails für Claude Enterprise. Jede Unterseite zeigt ihren Preis, bestellt wird per Formular, bezahlt per Rechnung nach der Bestellung","title":"Governance und Compliance für Claude Enterprise","file":"app/(site)/managed-claude/governance-compliance/page.tsx","children":[{"label":"webinar","path":"/managed-claude/governance-compliance/webinar","type":"MONEY","status":"live","desc":"Kostenloses Webinar: Governance, Compliance und Guardrails für Claude Enterprise von Anthropic konfigurieren","title":"Webinar: Governance für Claude Enterprise, kostenlos","file":"app/(site)/managed-claude/governance-compliance/webinar/page.tsx"},{"label":"studie","path":"/managed-claude/governance-compliance/studie","type":"MONEY","status":"live","desc":"Studie Claude Enterprise Compliance: geladener Kreis, Fragebogen über 6 Wochen, Teilnahme 1.000 €, Ergebnisse inklusive","title":"Studie: Compliance mit Claude Enterprise","file":"app/(site)/managed-claude/governance-compliance/studie/page.tsx"},{"label":"schulung","path":"/managed-claude/governance-compliance/schulung","type":"MONEY","status":"live","desc":"850 € pro Teilnehmer oder 7.500 € pro Gruppe eines Unternehmens. Keyword-Abgrenzung zu `coaching/` („ki schulung“) beachten","title":"Schulung: Governance für Claude Enterprise","file":"app/(site)/managed-claude/governance-compliance/schulung/page.tsx"}]}]},{"label":"Integrationen","group":true,"children":[{"label":"integrationen","path":"/managed-claude/integrationen","type":"HUB","status":"live","desc":"Claude an die Systeme der Kunden anbinden","title":"Claude MCP: DATEV, Outlook und eigene Systeme anbinden","file":"app/(site)/managed-claude/integrationen/page.tsx","children":[{"label":"datev","path":"/managed-claude/integrationen/datev","type":"MONEY","status":"live","desc":"Claude und DATEV","title":"DATEV KI: Claude fragt Ihren DATEV-Bestand direkt","file":"app/(site)/managed-claude/integrationen/datev/page.tsx"},{"label":"microsoft","path":"/managed-claude/integrationen/microsoft","type":"MONEY","status":"live","desc":"Claude und Microsoft 365 (Outlook, Teams, SharePoint)","title":"Claude Outlook: Mails, Kalender und Dateien in Claude","file":"app/(site)/managed-claude/integrationen/microsoft/page.tsx"},{"label":"websearch","path":"/managed-claude/integrationen/websearch","type":"MONEY","status":"live","desc":"Claude mit Websuche","title":"Claude Web Search: aktuelle Antworten mit Quellen","file":"app/(site)/managed-claude/integrationen/websearch/page.tsx"},{"label":"mcp-server-erstellen","path":"/managed-claude/integrationen/mcp-server-erstellen","type":"MONEY","status":"live","desc":"Eigene MCP-Server, früher `services/mcp-server-erstellen`","title":"MCP-Server erstellen lassen: fertig nutzen oder bauen","file":"app/(site)/managed-claude/integrationen/mcp-server-erstellen/page.tsx"}]}]},{"label":"Einstiege aus der Suche","group":true,"children":[{"label":"chatgpt-alternative","path":"/managed-claude/chatgpt-alternative","type":"LANDING","status":"geplant","desc":"ChatGPT-Alternative für Unternehmen, auf DSGVO zugespitzt (Lücke aus der [Keyword-Map](keyword-map.md))"}]},{"label":"Nebenthema","group":true,"children":[{"label":"weitere-tools","path":"/managed-claude/weitere-tools","type":"HUB","status":"live","desc":"Software-Ökosystem, Ziel kontextueller Links aus Branchen, Angebot und Blog","title":"Tools im Überblick","file":"app/(site)/managed-claude/weitere-tools/page.tsx","children":[{"label":"n8n","path":"/managed-claude/weitere-tools/n8n","type":"HUB","status":"live","desc":"n8n als eigenes Thema, die früheren n8n-Services darunter","title":"n8n Beratung, Implementierung & Hosting","file":"app/(site)/managed-claude/weitere-tools/n8n/page.tsx","children":[{"label":"n8n-hosting","path":"/managed-claude/weitere-tools/n8n/n8n-hosting","type":"MONEY","status":"live","title":"n8n Hosting Deutschland - Self-Hosted auf Ihrer Infrastruktur","file":"app/(site)/managed-claude/weitere-tools/n8n/n8n-hosting/page.tsx"},{"label":"workflow-wartung","path":"/managed-claude/weitere-tools/n8n/workflow-wartung","type":"MONEY","status":"live","title":"Workflow Wartung & Servicevertrag","file":"app/(site)/managed-claude/weitere-tools/n8n/workflow-wartung/page.tsx"},{"label":"schulungen","path":"/managed-claude/weitere-tools/n8n/schulungen","type":"MONEY","status":"live","title":"n8n Schulung & Workshops","file":"app/(site)/managed-claude/weitere-tools/n8n/schulungen/page.tsx"},{"label":"custom-nodes","path":"/managed-claude/weitere-tools/n8n/custom-nodes","type":"MONEY","status":"live","title":"n8n Node Entwicklung | Custom Nodes","file":"app/(site)/managed-claude/weitere-tools/n8n/custom-nodes/page.tsx"},{"label":"performance-scaling","path":"/managed-claude/weitere-tools/n8n/performance-scaling","type":"MONEY","status":"live","title":"n8n Performance Scaling","file":"app/(site)/managed-claude/weitere-tools/n8n/performance-scaling/page.tsx"},{"label":"zertifizierung","path":"/managed-claude/weitere-tools/n8n/zertifizierung","type":"MONEY","status":"live","desc":"auch Trust","title":"KI Agentur mit Zertifizierung","file":"app/(site)/managed-claude/weitere-tools/n8n/zertifizierung/page.tsx"}]},{"label":"make","path":"/managed-claude/weitere-tools/make","type":"CONTENT","status":"live","desc":"Automation-Tool","title":"Make (Integromat) im Detail: Kosten, Grenzen & Vergleich mit n8n","file":"app/(site)/managed-claude/weitere-tools/(automation-tools)/make/page.tsx"},{"label":"zapier","path":"/managed-claude/weitere-tools/zapier","type":"CONTENT","status":"live","desc":"Automation-Tool","title":"Zapier ehrlich bewertet: Kosten, Grenzen & Alternativen (2026)","file":"app/(site)/managed-claude/weitere-tools/(automation-tools)/zapier/page.tsx"},{"label":"power-automate","path":"/managed-claude/weitere-tools/power-automate","type":"CONTENT","status":"live","desc":"Automation-Tool","title":"Microsoft Power Automate: Ehrliche Analyse, Kosten & Alternativen","file":"app/(site)/managed-claude/weitere-tools/(automation-tools)/power-automate/page.tsx"},{"label":"activepieces","path":"/managed-claude/weitere-tools/activepieces","type":"CONTENT","status":"live","desc":"Automation-Tool","title":"Activepieces: Ehrliche Bewertung der Open-Source-Automatisierung","file":"app/(site)/managed-claude/weitere-tools/(automation-tools)/activepieces/page.tsx"},{"label":"pipedream","path":"/managed-claude/weitere-tools/pipedream","type":"CONTENT","status":"live","desc":"Automation-Tool","title":"Pipedream: Ehrliche Bewertung nach der Workday-Übernahme","file":"app/(site)/managed-claude/weitere-tools/(automation-tools)/pipedream/page.tsx"},{"label":"tray-io","path":"/managed-claude/weitere-tools/tray-io","type":"CONTENT","status":"live","desc":"Automation-Tool","title":"Tray.io (Tray.ai): Funktionen, Kosten, Grenzen & Vergleich","file":"app/(site)/managed-claude/weitere-tools/(automation-tools)/tray-io/page.tsx"},{"label":"uipath","path":"/managed-claude/weitere-tools/uipath","type":"CONTENT","status":"live","desc":"Automation-Tool","title":"UiPath: Funktionen, Kosten, Grenzen & Vergleich","file":"app/(site)/managed-claude/weitere-tools/(automation-tools)/uipath/page.tsx"},{"label":"workato","path":"/managed-claude/weitere-tools/workato","type":"CONTENT","status":"live","desc":"Automation-Tool","title":"Workato: Ehrliche Analyse, echte Kosten & Alternativen","file":"app/(site)/managed-claude/weitere-tools/(automation-tools)/workato/page.tsx"},{"label":"freshworks","path":"/managed-claude/weitere-tools/freshworks","type":"CONTENT","status":"live","desc":"Automation-Tool","title":"Freshworks Integration & Automatisierung","file":"app/(site)/managed-claude/weitere-tools/(grosshandel)/freshworks/page.tsx"},{"label":"navision","path":"/managed-claude/weitere-tools/navision","type":"CONTENT","status":"live","desc":"Großhandel-Tool","title":"Navision ERP automatisieren: Rechnungen, EDI, Buchhaltung","file":"app/(site)/managed-claude/weitere-tools/(grosshandel)/navision/page.tsx"},{"label":"easybill","path":"/managed-claude/weitere-tools/easybill","type":"CONTENT","status":"live","desc":"Großhandel-Tool","title":"Easybill Rechnungssoftware Automatisierung","file":"app/(site)/managed-claude/weitere-tools/(grosshandel)/easybill/page.tsx"},{"label":"microtech-bueroplus","path":"/managed-claude/weitere-tools/microtech-bueroplus","type":"CONTENT","status":"live","desc":"Großhandel-Tool","title":"microtech ERP-Automatisierung mit n8n","file":"app/(site)/managed-claude/weitere-tools/(grosshandel)/microtech-bueroplus/page.tsx"},{"label":"ebootis","path":"/managed-claude/weitere-tools/ebootis","type":"HUB","status":"live","desc":"e.bootis ERP: Tool-Portrait und Integrations-Hub","title":"e.bootis ERP: KI-Integration und Automatisierung","file":"app/(site)/managed-claude/weitere-tools/ebootis/page.tsx","children":[{"label":"ki-assessment","path":"/managed-claude/weitere-tools/ebootis/ki-assessment","type":"MONEY","status":"live","desc":"500 € Festpreis","title":"e.bootis KI-Assessment: Potenzial-Check für 500 Euro Festpreis","file":"app/(site)/managed-claude/weitere-tools/ebootis/ki-assessment/page.tsx"},{"label":"n8n-integration","path":"/managed-claude/weitere-tools/ebootis/n8n-integration","type":"MONEY","status":"live","title":"e.bootis mit n8n verbinden: ERP-Automatisierung über die OpenEngine","file":"app/(site)/managed-claude/weitere-tools/ebootis/n8n-integration/page.tsx"},{"label":"chatbot-integration","path":"/managed-claude/weitere-tools/ebootis/chatbot-integration","type":"MONEY","status":"live","title":"KI-Chatbot mit e.bootis-Anbindung: Bestände, Preise, Aufträge im Chat","file":"app/(site)/managed-claude/weitere-tools/ebootis/chatbot-integration/page.tsx"},{"label":"mcp-server","path":"/managed-claude/weitere-tools/ebootis/mcp-server","type":"MONEY","status":"live","title":"MCP-Server für e.bootis: ERP für KI-Agenten ansprechbar machen","file":"app/(site)/managed-claude/weitere-tools/ebootis/mcp-server/page.tsx"},{"label":"openengine-schnittstellen","path":"/managed-claude/weitere-tools/ebootis/openengine-schnittstellen","type":"CONTENT","status":"live","title":"e.bootis-OpenEngine: die ERP-Schnittstelle ohne Sonderprogrammierung","file":"app/(site)/managed-claude/weitere-tools/ebootis/openengine-schnittstellen/page.tsx"},{"label":"ki-anwendungsfaelle","path":"/managed-claude/weitere-tools/ebootis/ki-anwendungsfaelle","type":"CONTENT","status":"live","title":"KI-Anwendungsfälle mit e.bootis: Use-Cases für den Großhandel","file":"app/(site)/managed-claude/weitere-tools/ebootis/ki-anwendungsfaelle/page.tsx"},{"label":"edi-automatisierung","path":"/managed-claude/weitere-tools/ebootis/edi-automatisierung","type":"CONTENT","status":"live","title":"EDI-Automatisierung mit e.bootis: Prozessketten per n8n","file":"app/(site)/managed-claude/weitere-tools/ebootis/edi-automatisierung/page.tsx"}]}]}]},{"label":"Geparkt, Zuordnung offen","group":true,"children":[{"label":"digitale-rechnungsverarbeitung","path":"/managed-claude/digitale-rechnungsverarbeitung","type":"CONTENT","status":"unveröffentlicht","desc":"Aus der Repositionierung geparkt","title":"Digitale Rechnungsverarbeitung: 25 oder 2.065 Euro","file":"app/(site)/managed-claude/_digitale-rechnungsverarbeitung/page.tsx"},{"label":"dokumentenmanagement-software","path":"/managed-claude/dokumentenmanagement-software","type":"CONTENT","status":"unveröffentlicht","desc":"Aus der Repositionierung geparkt","title":"Dokumentenmanagement-Software: die Auswahl für den Mittelstand","file":"app/(site)/managed-claude/_dokumentenmanagement-software/page.tsx"},{"label":"ki-chatbot-kostenlos","path":"/managed-claude/ki-chatbot-kostenlos","type":"CONTENT","status":"unveröffentlicht","desc":"Aus der Repositionierung geparkt","title":"KI-Chatbot kostenlos: was der Gratis-Weg wirklich leistet","file":"app/(site)/managed-claude/_ki-chatbot-kostenlos/page.tsx"},{"label":"lieferantenmanagement","path":"/managed-claude/lieferantenmanagement","type":"CONTENT","status":"unveröffentlicht","desc":"Aus der Repositionierung geparkt","title":"Lieferantenmanagement: welcher Schritt Software wird","file":"app/(site)/managed-claude/_lieferantenmanagement/page.tsx"},{"label":"sap-mcp-server","path":"/managed-claude/sap-mcp-server","type":"CONTENT","status":"unveröffentlicht","desc":"Aus der Repositionierung geparkt","title":"SAP MCP Server: KI-Agenten an S/4HANA und ECC anbinden","file":"app/(site)/managed-claude/_sap-mcp-server/page.tsx"},{"label":"software-angebotserstellung","path":"/managed-claude/software-angebotserstellung","type":"CONTENT","status":"unveröffentlicht","desc":"Aus der Repositionierung geparkt","title":"Software zur Angebotserstellung: 3 Wege im Vergleich","file":"app/(site)/managed-claude/_software-angebotserstellung/page.tsx"},{"label":"warenwirtschaft","path":"/managed-claude/warenwirtschaft","type":"CONTENT","status":"unveröffentlicht","desc":"Aus der Repositionierung geparkt","title":"Warenwirtschaft: was das System abdeckt und wo ERP anfängt","file":"app/(site)/managed-claude/_warenwirtschaft/page.tsx"}]}]}]},{"label":"Branchen","group":true,"section":true,"children":[{"label":"branchen","path":"/branchen","type":"HUB","status":"live","desc":"Verteiler nach Zielgruppe. Vorerst unverändert, später Fokus „Was kann ich mit Claude umsetzen?“","title":"Branchen - Bluebatch | Branchenlösungen für AI-Automation","file":"app/(site)/branchen/page.tsx","children":[{"label":"grosshandel","path":"/branchen/grosshandel","type":"HUB","status":"live","desc":"Branchen-Hub","title":"KI für den Großhandel - Private AI, Agenten & Workflows","file":"app/(site)/branchen/grosshandel/page.tsx","children":[{"label":"private-ai","path":"/branchen/grosshandel/private-ai","type":"HUB","status":"live","desc":"„Wo läuft die KI?“","title":"Private AI für den Großhandel - KI in eigener Umgebung","file":"app/(site)/branchen/grosshandel/private-ai/page.tsx","flags":["eingefroren"],"children":[{"label":"implementierung-open-webui","path":"/branchen/grosshandel/private-ai/implementierung-open-webui","type":"MONEY","status":"geplant"},{"label":"implementierung-vllm","path":"/branchen/grosshandel/private-ai/implementierung-vllm","type":"MONEY","status":"geplant"},{"label":"managed-private-ai","path":"/branchen/grosshandel/private-ai/managed-private-ai","type":"MONEY","status":"geplant"},{"label":"private-ai-schulung","path":"/branchen/grosshandel/private-ai/private-ai-schulung","type":"MONEY","status":"geplant"},{"label":"was-kostet-private-ai","path":"/branchen/grosshandel/private-ai/was-kostet-private-ai","type":"MONEY","status":"geplant","desc":"Preise und Dauer"},{"label":"was-ist-private-ai","path":"/branchen/grosshandel/private-ai/was-ist-private-ai","type":"CONTENT","status":"geplant"},{"label":"lokale-llms-fuer-produktdaten","path":"/branchen/grosshandel/private-ai/lokale-llms-fuer-produktdaten","type":"CONTENT","status":"geplant"},{"label":"dsgvo-ki-im-grosshandel","path":"/branchen/grosshandel/private-ai/dsgvo-ki-im-grosshandel","type":"CONTENT","status":"geplant"},{"label":"private-ai-vs-cloud-ki","path":"/branchen/grosshandel/private-ai/private-ai-vs-cloud-ki","type":"CONTENT","status":"geplant"},{"label":"private-ai-erfolgreich-einfuehren","path":"/branchen/grosshandel/private-ai/private-ai-erfolgreich-einfuehren","type":"CONTENT","status":"geplant"}]},{"label":"ki-assistenten","path":"/branchen/grosshandel/ki-assistenten","type":"HUB","status":"live","desc":"„KI als Werkzeug fürs Team“: Claude, ChatGPT, Copilot","title":"KI-Assistenten für den Großhandel - Claude, ChatGPT, Copilot","file":"app/(site)/branchen/grosshandel/ki-assistenten/page.tsx","children":[{"label":"claude-einfuehrung","path":"/branchen/grosshandel/ki-assistenten/claude-einfuehrung","type":"MONEY","status":"geplant"},{"label":"chatgpt-enterprise-einfuehrung","path":"/branchen/grosshandel/ki-assistenten/chatgpt-enterprise-einfuehrung","type":"MONEY","status":"geplant"},{"label":"copilot-einfuehrung","path":"/branchen/grosshandel/ki-assistenten/copilot-einfuehrung","type":"MONEY","status":"geplant"},{"label":"ki-assistenten-schulung","path":"/branchen/grosshandel/ki-assistenten/ki-assistenten-schulung","type":"MONEY","status":"geplant"},{"label":"was-kosten-ki-assistenten","path":"/branchen/grosshandel/ki-assistenten/was-kosten-ki-assistenten","type":"MONEY","status":"geplant","desc":"Preise und Lizenzen"},{"label":"was-ist-ein-ki-assistent","path":"/branchen/grosshandel/ki-assistenten/was-ist-ein-ki-assistent","type":"CONTENT","status":"geplant"},{"label":"assistent-oder-agent","path":"/branchen/grosshandel/ki-assistenten/assistent-oder-agent","type":"CONTENT","status":"geplant","desc":"Abgrenzungsseite"},{"label":"claude-vs-chatgpt-vs-copilot","path":"/branchen/grosshandel/ki-assistenten/claude-vs-chatgpt-vs-copilot","type":"CONTENT","status":"geplant"},{"label":"ki-assistenten-dsgvo","path":"/branchen/grosshandel/ki-assistenten/ki-assistenten-dsgvo","type":"CONTENT","status":"geplant"},{"label":"ki-assistenten-erfolgreich-einfuehren","path":"/branchen/grosshandel/ki-assistenten/ki-assistenten-erfolgreich-einfuehren","type":"CONTENT","status":"geplant"}]},{"label":"ki-agenten","path":"/branchen/grosshandel/ki-agenten","type":"HUB","status":"live","desc":"„KI als digitaler Mitarbeiter“: Agenten-Katalog","title":"KI-Agenten für den Großhandel","file":"app/(site)/branchen/grosshandel/ki-agenten/page.tsx","children":[{"label":"angebots-bot-implementierung","path":"/branchen/grosshandel/ki-agenten/angebots-bot-implementierung","type":"MONEY","status":"geplant"},{"label":"invoice-bot-implementierung","path":"/branchen/grosshandel/ki-agenten/invoice-bot-implementierung","type":"MONEY","status":"geplant"},{"label":"ki-agenten-workshop","path":"/branchen/grosshandel/ki-agenten/ki-agenten-workshop","type":"MONEY","status":"geplant"},{"label":"ki-agenten-betrieb","path":"/branchen/grosshandel/ki-agenten/ki-agenten-betrieb","type":"MONEY","status":"geplant"},{"label":"was-kostet-ein-ki-agent","path":"/branchen/grosshandel/ki-agenten/was-kostet-ein-ki-agent","type":"MONEY","status":"geplant","desc":"Preise und Dauer"},{"label":"angebots-bot","path":"/branchen/grosshandel/ki-agenten/angebots-bot","type":"CONTENT","status":"live","desc":"Katalog","title":"Angebots-Bot","file":"app/(site)/branchen/grosshandel/ki-agenten/angebots-bot/page.tsx"},{"label":"invoice-bot","path":"/branchen/grosshandel/ki-agenten/invoice-bot","type":"CONTENT","status":"live","desc":"Katalog","title":"Invoice-Bot","file":"app/(site)/branchen/grosshandel/ki-agenten/invoice-bot/page.tsx"},{"label":"was-ist-ein-ki-agent","path":"/branchen/grosshandel/ki-agenten/was-ist-ein-ki-agent","type":"CONTENT","status":"live","title":"Was ist ein KI-Agent? Definition und Abgrenzung","file":"app/(site)/branchen/grosshandel/ki-agenten/was-ist-ein-ki-agent/page.tsx"},{"label":"ki-agent-vs-workflow","path":"/branchen/grosshandel/ki-agenten/ki-agent-vs-workflow","type":"CONTENT","status":"geplant","desc":"Abgrenzung"},{"label":"ki-agenten-erfolgreich-einfuehren","path":"/branchen/grosshandel/ki-agenten/ki-agenten-erfolgreich-einfuehren","type":"CONTENT","status":"geplant"}]},{"label":"chatbots","path":"/branchen/grosshandel/chatbots","type":"HUB","status":"live","desc":"KI-Chatbots für Kunden und Website. Eigener Hub, weil „Chatbot“ eigenes Suchvolumen hat","title":"KI-Chatbots für den Großhandel","file":"app/(site)/branchen/grosshandel/chatbots/page.tsx","children":[{"label":"ki-chatbot-implementierung","path":"/branchen/grosshandel/chatbots/ki-chatbot-implementierung","type":"MONEY","status":"live","title":"KI-Chatbot erstellen: Anleitung für den Großhandel","file":"app/(site)/branchen/grosshandel/chatbots/ki-chatbot-implementierung/page.tsx"},{"label":"chatbot-erp-anbindung","path":"/branchen/grosshandel/chatbots/chatbot-erp-anbindung","type":"MONEY","status":"geplant","desc":"Navision, easybill"},{"label":"chatbot-betrieb","path":"/branchen/grosshandel/chatbots/chatbot-betrieb","type":"MONEY","status":"geplant"},{"label":"chatbot-workshop","path":"/branchen/grosshandel/chatbots/chatbot-workshop","type":"MONEY","status":"geplant"},{"label":"was-kostet-ein-chatbot","path":"/branchen/grosshandel/chatbots/was-kostet-ein-chatbot","type":"MONEY","status":"live","desc":"Preise und Dauer","title":"Was kostet ein KI-Chatbot? Preise 2026 für den Großhandel","file":"app/(site)/branchen/grosshandel/chatbots/was-kostet-ein-chatbot/page.tsx"},{"label":"ki-chatbot-grosshandel","path":"/branchen/grosshandel/chatbots/ki-chatbot-grosshandel","type":"CONTENT","status":"live","desc":"Katalog","title":"KI-Chatbot Großhandel","file":"app/(site)/branchen/grosshandel/chatbots/ki-chatbot-grosshandel/page.tsx"},{"label":"was-ist-ein-ki-chatbot","path":"/branchen/grosshandel/chatbots/was-ist-ein-ki-chatbot","type":"CONTENT","status":"live","title":"Was ist ein KI-Chatbot? Definition und Einsatz im Großhandel","file":"app/(site)/branchen/grosshandel/chatbots/was-ist-ein-ki-chatbot/page.tsx"},{"label":"chatbot-vs-ki-agent","path":"/branchen/grosshandel/chatbots/chatbot-vs-ki-agent","type":"CONTENT","status":"geplant","desc":"Abgrenzung"},{"label":"chatbot-dsgvo","path":"/branchen/grosshandel/chatbots/chatbot-dsgvo","type":"CONTENT","status":"unveröffentlicht","title":"Chatbot DSGVO-konform: Pflichten, AI Act, ERP-Anbindung","file":"app/(site)/branchen/grosshandel/chatbots/_chatbot-dsgvo/page.tsx"},{"label":"chatbot-erfolgreich-einfuehren","path":"/branchen/grosshandel/chatbots/chatbot-erfolgreich-einfuehren","type":"CONTENT","status":"geplant"}]},{"label":"workflows","path":"/branchen/grosshandel/workflows","type":"HUB","status":"live","desc":"„Fest automatisierte Prozesse“: Workflow-Katalog","title":"Workflows für den Großhandel","file":"app/(site)/branchen/grosshandel/workflows/page.tsx","flags":["future"],"children":[{"label":"auftragserfassung-implementierung","path":"/branchen/grosshandel/workflows/auftragserfassung-implementierung","type":"MONEY","status":"geplant"},{"label":"rechnungspruefung-implementierung","path":"/branchen/grosshandel/workflows/rechnungspruefung-implementierung","type":"MONEY","status":"geplant"},{"label":"easybill-automation-implementierung","path":"/branchen/grosshandel/workflows/easybill-automation-implementierung","type":"MONEY","status":"geplant"},{"label":"workflow-audit-grosshandel","path":"/branchen/grosshandel/workflows/workflow-audit-grosshandel","type":"MONEY","status":"geplant"},{"label":"was-kostet-workflow-automatisierung","path":"/branchen/grosshandel/workflows/was-kostet-workflow-automatisierung","type":"MONEY","status":"geplant","desc":"Preise und Dauer"},{"label":"auftragserfassung","path":"/branchen/grosshandel/workflows/auftragserfassung","type":"CONTENT","status":"live","desc":"Katalog","title":"Auftragserfassung","file":"app/(site)/branchen/grosshandel/workflows/auftragserfassung/page.tsx"},{"label":"bestellabwicklung","path":"/branchen/grosshandel/workflows/bestellabwicklung","type":"CONTENT","status":"live","desc":"Katalog","title":"Automatisierte Bestellabwicklung","file":"app/(site)/branchen/grosshandel/workflows/bestellabwicklung/page.tsx"},{"label":"lagerverwaltung","path":"/branchen/grosshandel/workflows/lagerverwaltung","type":"CONTENT","status":"live","desc":"Katalog","title":"Lagerverwaltung","file":"app/(site)/branchen/grosshandel/workflows/lagerverwaltung/page.tsx"},{"label":"3-wege-rechnungspruefung","path":"/branchen/grosshandel/workflows/3-wege-rechnungspruefung","type":"CONTENT","status":"live","desc":"Katalog","title":"3-Wege-Rechnungsprüfung","file":"app/(site)/branchen/grosshandel/workflows/3-wege-rechnungspruefung/page.tsx"},{"label":"zertifikatspruefung-lieferanten","path":"/branchen/grosshandel/workflows/zertifikatspruefung-lieferanten","type":"CONTENT","status":"live","desc":"Katalog","title":"Zertifikatsprüfung Lieferanten","file":"app/(site)/branchen/grosshandel/workflows/zertifikatspruefung-lieferanten/page.tsx"},{"label":"ai-automation-with-easybill","path":"/branchen/grosshandel/workflows/ai-automation-with-easybill","type":"CONTENT","status":"live","desc":"Katalog","title":"KI-Automatisierung mit easybill","file":"app/(site)/branchen/grosshandel/workflows/ai-automation-with-easybill/page.tsx"}]},{"label":"roi-rechner","path":"/branchen/grosshandel/roi-rechner","type":"TOOL","status":"live","desc":"Conversion-Assist des Großhandel-Hubs","title":"ROI-Rechner - Lohnt sich KI-Automatisierung?","file":"app/(site)/branchen/grosshandel/roi-rechner/page.tsx","children":[{"label":"document","path":"/branchen/grosshandel/roi-rechner/document","type":"TOOL","status":"live","desc":"Rechner Dokumentenverarbeitung","title":"ROI-Rechner: Dokumentenprüfung - Bluebatch","file":"app/(site)/branchen/grosshandel/roi-rechner/document/page.tsx"},{"label":"service-requests","path":"/branchen/grosshandel/roi-rechner/service-requests","type":"TOOL","status":"live","desc":"Rechner Service-Anfragen","title":"ROI-Rechner: Service Requests - Bluebatch","file":"app/(site)/branchen/grosshandel/roi-rechner/service-requests/page.tsx"},{"label":"social-media-ads","path":"/branchen/grosshandel/roi-rechner/social-media-ads","type":"TOOL","status":"live","desc":"Rechner Social-Media-Ads","title":"ROI-Rechner: Social Media Ads - Bluebatch","file":"app/(site)/branchen/grosshandel/roi-rechner/social-media-ads/page.tsx"}]}]},{"label":"steuerberater","path":"/branchen/steuerberater","type":"HUB","status":"live","desc":"Branchen-Hub, Fokus-Branche","title":"KI für Steuerberater - Private AI, KI-Agenten & Workflows","file":"app/(site)/branchen/steuerberater/page.tsx","children":[{"label":"private-ai","path":"/branchen/steuerberater/private-ai","type":"HUB","status":"live","desc":"„Wo läuft die KI?“","title":"Private AI für Steuerberater - KI in eigener Umgebung","file":"app/(site)/branchen/steuerberater/private-ai/page.tsx","flags":["eingefroren"],"children":[{"label":"implementierung-open-webui","path":"/branchen/steuerberater/private-ai/implementierung-open-webui","type":"MONEY","status":"geplant"},{"label":"implementierung-vllm","path":"/branchen/steuerberater/private-ai/implementierung-vllm","type":"MONEY","status":"geplant"},{"label":"managed-private-ai","path":"/branchen/steuerberater/private-ai/managed-private-ai","type":"MONEY","status":"geplant"},{"label":"dsgvo-203-audit","path":"/branchen/steuerberater/private-ai/dsgvo-203-audit","type":"MONEY","status":"geplant"},{"label":"was-kostet-private-ai","path":"/branchen/steuerberater/private-ai/was-kostet-private-ai","type":"MONEY","status":"geplant","desc":"Preise und Dauer"},{"label":"ki-steuerberater-62a-stberg","path":"/branchen/steuerberater/private-ai/ki-steuerberater-62a-stberg","type":"MONEY","status":"live","desc":"Vertragskette und Gateway nach § 62a StBerG, Schwesterseite zu `anwaelte/ki-anwaltskanzlei-43e-brao`","title":"${TITLE}: Gateway statt Consumer-ChatGPT","file":"app/(site)/branchen/steuerberater/private-ai/ki-steuerberater-62a-stberg/page.tsx"},{"label":"was-ist-private-ai","path":"/branchen/steuerberater/private-ai/was-ist-private-ai","type":"CONTENT","status":"geplant"},{"label":"open-webui-fuer-kanzleien","path":"/branchen/steuerberater/private-ai/open-webui-fuer-kanzleien","type":"CONTENT","status":"geplant"},{"label":"lokale-llms-fuer-kanzleien","path":"/branchen/steuerberater/private-ai/lokale-llms-fuer-kanzleien","type":"CONTENT","status":"geplant"},{"label":"paragraph-203-und-ki","path":"/branchen/steuerberater/private-ai/paragraph-203-und-ki","type":"CONTENT","status":"geplant"},{"label":"private-ai-erfolgreich-einfuehren","path":"/branchen/steuerberater/private-ai/private-ai-erfolgreich-einfuehren","type":"CONTENT","status":"geplant"},{"label":"kanzlei-wissensdatenbank","path":"/branchen/steuerberater/private-ai/kanzlei-wissensdatenbank","type":"CONTENT","status":"live","desc":"Durchsuchbares Kanzlei-Wissen inklusive Call-Aufzeichnungen","title":"Kanzlei-Wissensdatenbank mit RAG auf eigener Infrastruktur","file":"app/(site)/branchen/steuerberater/private-ai/kanzlei-wissensdatenbank/page.tsx"}]},{"label":"claude-cowork","path":"/branchen/steuerberater/claude-cowork","type":"HUB","status":"live","desc":"„KI als Werkzeug fürs Team“, § 203-konform","title":"Claude Cowork für Steuerberater, DSGVO- & § 203-konform","file":"app/(site)/branchen/steuerberater/claude-cowork/page.tsx","children":[{"label":"implementierung-claude-cowork","path":"/branchen/steuerberater/claude-cowork/implementierung-claude-cowork","type":"MONEY","status":"geplant"},{"label":"claude-cowork-schulung","path":"/branchen/steuerberater/claude-cowork/claude-cowork-schulung","type":"MONEY","status":"geplant"},{"label":"claude-cowork-managed","path":"/branchen/steuerberater/claude-cowork/claude-cowork-managed","type":"MONEY","status":"geplant"},{"label":"claude-cowork-datev-integration","path":"/branchen/steuerberater/claude-cowork/claude-cowork-datev-integration","type":"MONEY","status":"geplant"},{"label":"was-kostet-claude-cowork","path":"/branchen/steuerberater/claude-cowork/was-kostet-claude-cowork","type":"MONEY","status":"geplant","desc":"Preise und Dauer"},{"label":"kanzlei-skills-entwicklung","path":"/branchen/steuerberater/claude-cowork/kanzlei-skills-entwicklung","type":"MONEY","status":"live","desc":"Fachwissen als KI-Skills kodieren lassen","title":"Kanzlei-Skills entwickeln lassen - Fachwissen als KI-Skill","file":"app/(site)/branchen/steuerberater/claude-cowork/kanzlei-skills-entwicklung/page.tsx"},{"label":"was-ist-claude-cowork","path":"/branchen/steuerberater/claude-cowork/was-ist-claude-cowork","type":"CONTENT","status":"geplant"},{"label":"claude-cowork-use-cases","path":"/branchen/steuerberater/claude-cowork/claude-cowork-use-cases","type":"CONTENT","status":"geplant"},{"label":"claude-cowork-vs-copilot","path":"/branchen/steuerberater/claude-cowork/claude-cowork-vs-copilot","type":"CONTENT","status":"geplant"},{"label":"claude-cowork-dsgvo-203","path":"/branchen/steuerberater/claude-cowork/claude-cowork-dsgvo-203","type":"CONTENT","status":"geplant"},{"label":"claude-cowork-erfolgreich-einfuehren","path":"/branchen/steuerberater/claude-cowork/claude-cowork-erfolgreich-einfuehren","type":"CONTENT","status":"geplant"},{"label":"was-sind-ki-skills","path":"/branchen/steuerberater/claude-cowork/was-sind-ki-skills","type":"CONTENT","status":"live","desc":"Inklusive Mandanten-Markdown je Mandant","title":"Was sind KI-Skills? Kanzlei-Fachwissen in Markdown","file":"app/(site)/branchen/steuerberater/claude-cowork/was-sind-ki-skills/page.tsx"},{"label":"gutachten-mit-ki","path":"/branchen/steuerberater/claude-cowork/gutachten-mit-ki","type":"CONTENT","status":"live","desc":"Gutachten und verbindliche Auskünfte, rund 3 Stunden statt Tagen","title":"Gutachten mit KI","file":"app/(site)/branchen/steuerberater/claude-cowork/gutachten-mit-ki/page.tsx"},{"label":"pruef-skills","path":"/branchen/steuerberater/claude-cowork/pruef-skills","type":"CONTENT","status":"live","desc":"Provisionsanspruch, Arbeitszeugnis, Bauträger und AGB","title":"Prüf-Skills für Kanzleien - Verträge & Zeugnisse per KI","file":"app/(site)/branchen/steuerberater/claude-cowork/pruef-skills/page.tsx"},{"label":"begleitschreiben-veranlagung","path":"/branchen/steuerberater/claude-cowork/begleitschreiben-veranlagung","type":"CONTENT","status":"live","title":"Begleitschreiben zur Veranlagung","file":"app/(site)/branchen/steuerberater/claude-cowork/begleitschreiben-veranlagung/page.tsx"},{"label":"diktat-zu-text","path":"/branchen/steuerberater/claude-cowork/diktat-zu-text","type":"CONTENT","status":"live","desc":"Spracheingabe zur fertigen Mail, rund 150 Stunden im Jahr","title":"Diktat zu Text","file":"app/(site)/branchen/steuerberater/claude-cowork/diktat-zu-text/page.tsx"}]},{"label":"ki-agenten","path":"/branchen/steuerberater/ki-agenten","type":"HUB","status":"live","desc":"„KI als digitaler Mitarbeiter“: Agenten-Katalog als Kachel-Grid","title":"KI-Agenten für Steuerberater","file":"app/(site)/branchen/steuerberater/ki-agenten/page.tsx","children":[{"label":"mail-agent-implementierung","path":"/branchen/steuerberater/ki-agenten/mail-agent-implementierung","type":"MONEY","status":"geplant"},{"label":"mandantenkommunikation-implementierung","path":"/branchen/steuerberater/ki-agenten/mandantenkommunikation-implementierung","type":"MONEY","status":"geplant"},{"label":"jahresabschluss-agent-implementierung","path":"/branchen/steuerberater/ki-agenten/jahresabschluss-agent-implementierung","type":"MONEY","status":"geplant"},{"label":"ki-agenten-workshop","path":"/branchen/steuerberater/ki-agenten/ki-agenten-workshop","type":"MONEY","status":"geplant"},{"label":"was-kostet-ein-ki-agent","path":"/branchen/steuerberater/ki-agenten/was-kostet-ein-ki-agent","type":"MONEY","status":"geplant","desc":"Preise und Dauer"},{"label":"mail-agent","path":"/branchen/steuerberater/ki-agenten/mail-agent","type":"CONTENT","status":"live","desc":"Katalog","title":"Mail Agent für Steuerberater: Mandanten-Mails mit KI","file":"app/(site)/branchen/steuerberater/ki-agenten/mail-agent/page.tsx"},{"label":"mandantenkommunikation","path":"/branchen/steuerberater/ki-agenten/mandantenkommunikation","type":"CONTENT","status":"live","desc":"Katalog","title":"KI-Mandantenkommunikation","file":"app/(site)/branchen/steuerberater/ki-agenten/mandantenkommunikation/page.tsx"},{"label":"jahresabschluss-ki","path":"/branchen/steuerberater/ki-agenten/jahresabschluss-ki","type":"CONTENT","status":"live","desc":"Katalog","title":"KI-Jahresabschluss","file":"app/(site)/branchen/steuerberater/ki-agenten/jahresabschluss-ki/page.tsx"},{"label":"einspruch-agent","path":"/branchen/steuerberater/ki-agenten/einspruch-agent","type":"CONTENT","status":"live","desc":"Katalog: Einspruch mit Recherche und Schriftsatz, 2 statt 8 Stunden","title":"Einspruch-Agent","file":"app/(site)/branchen/steuerberater/ki-agenten/einspruch-agent/page.tsx"},{"label":"bwa-analyse-agent","path":"/branchen/steuerberater/ki-agenten/bwa-analyse-agent","type":"CONTENT","status":"live","desc":"Katalog: BWA-Analyse und Steuer-Forecast","title":"BWA-Analyse-Agent","file":"app/(site)/branchen/steuerberater/ki-agenten/bwa-analyse-agent/page.tsx"},{"label":"beratungsanlaesse-agent","path":"/branchen/steuerberater/ki-agenten/beratungsanlaesse-agent","type":"CONTENT","status":"live","desc":"Katalog: Anlässe aus Mandantendaten, Vorauszahlungs-Check","title":"Beratungsanlässe-Agent","file":"app/(site)/branchen/steuerberater/ki-agenten/beratungsanlaesse-agent/page.tsx"},{"label":"mandanten-chatbot","path":"/branchen/steuerberater/ki-agenten/mandanten-chatbot","type":"CONTENT","status":"live","desc":"Katalog: Support-Bot mit Kanzlei-Wissensbasis","title":"Mandanten-Chatbot","file":"app/(site)/branchen/steuerberater/ki-agenten/mandanten-chatbot/page.tsx"},{"label":"was-ist-ein-ki-agent","path":"/branchen/steuerberater/ki-agenten/was-ist-ein-ki-agent","type":"CONTENT","status":"geplant"},{"label":"ki-agenten-erfolgreich-einfuehren","path":"/branchen/steuerberater/ki-agenten/ki-agenten-erfolgreich-einfuehren","type":"CONTENT","status":"geplant"}]},{"label":"workflows","path":"/branchen/steuerberater/workflows","type":"HUB","status":"live","desc":"„Fest automatisierte Prozesse“: Workflow-Katalog","title":"Workflows für Steuerberater","file":"app/(site)/branchen/steuerberater/workflows/page.tsx","flags":["future"],"children":[{"label":"belegpruefung-implementierung","path":"/branchen/steuerberater/workflows/belegpruefung-implementierung","type":"MONEY","status":"geplant"},{"label":"e-rechnung-implementierung","path":"/branchen/steuerberater/workflows/e-rechnung-implementierung","type":"MONEY","status":"geplant"},{"label":"datev-jira-sync-implementierung","path":"/branchen/steuerberater/workflows/datev-jira-sync-implementierung","type":"MONEY","status":"geplant"},{"label":"workflow-audit-kanzlei","path":"/branchen/steuerberater/workflows/workflow-audit-kanzlei","type":"MONEY","status":"geplant"},{"label":"was-kostet-workflow-automatisierung","path":"/branchen/steuerberater/workflows/was-kostet-workflow-automatisierung","type":"MONEY","status":"geplant","desc":"Preise und Dauer"},{"label":"fibu-monatsreview-implementierung","path":"/branchen/steuerberater/workflows/fibu-monatsreview-implementierung","type":"MONEY","status":"live","title":"FiBu-Monatsreview implementieren","file":"app/(site)/branchen/steuerberater/workflows/fibu-monatsreview-implementierung/page.tsx"},{"label":"belegpruefung","path":"/branchen/steuerberater/workflows/belegpruefung","type":"CONTENT","status":"live","desc":"Katalog","title":"Belegprüfung","file":"app/(site)/branchen/steuerberater/workflows/belegpruefung/page.tsx"},{"label":"dokumentenverarbeitung","path":"/branchen/steuerberater/workflows/dokumentenverarbeitung","type":"CONTENT","status":"live","desc":"Katalog","title":"Dokumentenverarbeitung","file":"app/(site)/branchen/steuerberater/workflows/dokumentenverarbeitung/page.tsx"},{"label":"datev-jira-task-orchestration","path":"/branchen/steuerberater/workflows/datev-jira-task-orchestration","type":"CONTENT","status":"live","desc":"Katalog","title":"DATEV-Jira Orchestration","file":"app/(site)/branchen/steuerberater/workflows/datev-jira-task-orchestration/page.tsx"},{"label":"e-rechnung-verarbeitung","path":"/branchen/steuerberater/workflows/e-rechnung-verarbeitung","type":"CONTENT","status":"live","desc":"Katalog","title":"E-Rechnung-Verarbeitung","file":"app/(site)/branchen/steuerberater/workflows/e-rechnung-verarbeitung/page.tsx"},{"label":"mandanten-onboarding","path":"/branchen/steuerberater/workflows/mandanten-onboarding","type":"CONTENT","status":"live","desc":"Katalog","title":"Mandanten-Onboarding","file":"app/(site)/branchen/steuerberater/workflows/mandanten-onboarding/page.tsx"},{"label":"fibu-monatsreview","path":"/branchen/steuerberater/workflows/fibu-monatsreview","type":"CONTENT","status":"live","desc":"Katalog: Buchungen prüfen per MCP und DATEV Connect, inklusive Kreditoren- und Ordnungsmäßigkeitsprüfung","title":"FiBu-Monatsreview","file":"app/(site)/branchen/steuerberater/workflows/fibu-monatsreview/page.tsx"},{"label":"anlage-v-mit-ki","path":"/branchen/steuerberater/workflows/anlage-v-mit-ki","type":"CONTENT","status":"live","title":"Anlage V mit KI","file":"app/(site)/branchen/steuerberater/workflows/anlage-v-mit-ki/page.tsx"},{"label":"buchungsstapel-per-ki","path":"/branchen/steuerberater/workflows/buchungsstapel-per-ki","type":"CONTENT","status":"live","title":"Buchungsstapel per KI","file":"app/(site)/branchen/steuerberater/workflows/buchungsstapel-per-ki/page.tsx"},{"label":"bankabgleich-automatisieren","path":"/branchen/steuerberater/workflows/bankabgleich-automatisieren","type":"CONTENT","status":"live","title":"Bankabgleich automatisieren","file":"app/(site)/branchen/steuerberater/workflows/bankabgleich-automatisieren/page.tsx"},{"label":"bewirtungsbelege-per-ki","path":"/branchen/steuerberater/workflows/bewirtungsbelege-per-ki","type":"CONTENT","status":"live","desc":"Auch handschriftlich","title":"Bewirtungsbelege per KI","file":"app/(site)/branchen/steuerberater/workflows/bewirtungsbelege-per-ki/page.tsx"},{"label":"beleg-upload-automatisieren","path":"/branchen/steuerberater/workflows/beleg-upload-automatisieren","type":"CONTENT","status":"live","desc":"GetMyInvoices, DUO und lexware je Mandant","title":"Beleg-Upload automatisieren","file":"app/(site)/branchen/steuerberater/workflows/beleg-upload-automatisieren/page.tsx"},{"label":"honorarprozess-automatisieren","path":"/branchen/steuerberater/workflows/honorarprozess-automatisieren","type":"CONTENT","status":"live","desc":"Mahnwesen, Serienrechnung, SEPA","title":"Honorarprozess automatisieren","file":"app/(site)/branchen/steuerberater/workflows/honorarprozess-automatisieren/page.tsx"},{"label":"kassenmeldepflicht","path":"/branchen/steuerberater/workflows/kassenmeldepflicht","type":"CONTENT","status":"live","desc":"Formular, XML, ELSTER-Import","title":"Kassenmeldepflicht","file":"app/(site)/branchen/steuerberater/workflows/kassenmeldepflicht/page.tsx"},{"label":"lohnprozess-automatisieren","path":"/branchen/steuerberater/workflows/lohnprozess-automatisieren","type":"CONTENT","status":"live","desc":"Bis White-Label","title":"Lohnprozess automatisieren","file":"app/(site)/branchen/steuerberater/workflows/lohnprozess-automatisieren/page.tsx"}]},{"label":"kanzlei-organisation","path":"/branchen/steuerberater/kanzlei-organisation","type":"HUB","status":"live","desc":"Prozesse, Handbuch, internes Onboarding: die Kanzlei als Betrieb","title":"Kanzleiorganisation: Prozesse, Handbuch, Onboarding","file":"app/(site)/branchen/steuerberater/kanzlei-organisation/page.tsx","children":[{"label":"kanzlei-digitalisierungs-workshop","path":"/branchen/steuerberater/kanzlei-organisation/kanzlei-digitalisierungs-workshop","type":"MONEY","status":"live","title":"Kanzlei-Digitalisierungs-Workshop - Ist-Aufnahme & Fahrplan","file":"app/(site)/branchen/steuerberater/kanzlei-organisation/kanzlei-digitalisierungs-workshop/page.tsx"},{"label":"kanzleihandbuch-aufbauen","path":"/branchen/steuerberater/kanzlei-organisation/kanzleihandbuch-aufbauen","type":"CONTENT","status":"live","desc":"Inklusive Muster-Vorlage","title":"Kanzleihandbuch: mit Muster-Vorlage aufbauen statt leerem Blatt","file":"app/(site)/branchen/steuerberater/kanzlei-organisation/kanzleihandbuch-aufbauen/page.tsx"},{"label":"prozessdoku-mit-ki","path":"/branchen/steuerberater/kanzlei-organisation/prozessdoku-mit-ki","type":"CONTENT","status":"live","desc":"Screen-Recording zum Artikel, senkt die Fehlerquote","title":"Prozessdoku mit KI - Kanzlei-Prozesse per Screen-Recording","file":"app/(site)/branchen/steuerberater/kanzlei-organisation/prozessdoku-mit-ki/page.tsx"},{"label":"mitarbeiter-onboarding-digital","path":"/branchen/steuerberater/kanzlei-organisation/mitarbeiter-onboarding-digital","type":"CONTENT","status":"live","desc":"DATEV-fit in einer Woche","title":"Digitales Mitarbeiter-Onboarding in der Kanzlei - Video-Kurs","file":"app/(site)/branchen/steuerberater/kanzlei-organisation/mitarbeiter-onboarding-digital/page.tsx"},{"label":"rollenbasierte-kanzlei","path":"/branchen/steuerberater/kanzlei-organisation/rollenbasierte-kanzlei","type":"CONTENT","status":"live","desc":"Rollen und Dashboards","title":"Rollenbasierte Kanzlei - Organisation vor Automatisierung","file":"app/(site)/branchen/steuerberater/kanzlei-organisation/rollenbasierte-kanzlei/page.tsx"},{"label":"ticketsystem-kanzlei","path":"/branchen/steuerberater/kanzlei-organisation/ticketsystem-kanzlei","type":"CONTENT","status":"live","desc":"Statt Mail-Chaos","title":"Ticketsystem in der Kanzlei - Mandantenkommunikation mit Struktur","file":"app/(site)/branchen/steuerberater/kanzlei-organisation/ticketsystem-kanzlei/page.tsx"}]}]},{"label":"anwaelte","path":"/branchen/anwaelte","type":"HUB","status":"live","desc":"Dritte Fokus-Branche, Struktur wie Steuerberater. Zwei Kanzleisoftwares im Fokus: actaport (REST-API) und RA-MICRO (keine offene REST-API, Anbindung über Ablage, Export, beA)","title":"${TITLE}","file":"app/(site)/branchen/anwaelte/page.tsx","children":[{"label":"actaport-cloud-connector","path":"/branchen/anwaelte/actaport-cloud-connector","type":"CONTENT","status":"live","desc":"actaport-Anbindung (REST-API, n8n, beA) erklärt","title":"${TITLE}","file":"app/(site)/branchen/anwaelte/actaport-cloud-connector/page.tsx"},{"label":"actaport-cloud-connector-implementierung","path":"/branchen/anwaelte/actaport-cloud-connector-implementierung","type":"MONEY","status":"live","desc":"Connector zu actaport bauen","title":"${TITLE} - Angebot für Kanzleien","file":"app/(site)/branchen/anwaelte/actaport-cloud-connector-implementierung/page.tsx"},{"label":"ki-anwaltskanzlei-43e-brao","path":"/branchen/anwaelte/ki-anwaltskanzlei-43e-brao","type":"MONEY","status":"live","desc":"Vertragskette und Gateway nach § 43e BRAO, Schwesterseite zu `steuerberater/private-ai/ki-steuerberater-62a-stberg`. Slug bewusst gleich wie die Pexon-Seite (Partner-Cluster)","title":"${TITLE}: Freigabe vor Versand","file":"app/(site)/branchen/anwaelte/ki-anwaltskanzlei-43e-brao/page.tsx"},{"label":"private-ai","path":"/branchen/anwaelte/private-ai","type":"HUB","status":"live","desc":"„Wo läuft die KI?“","title":"${TITLE}: KI auf eigener Infrastruktur","file":"app/(site)/branchen/anwaelte/private-ai/page.tsx","flags":["eingefroren"],"children":[{"label":"private-ai-implementierung","path":"/branchen/anwaelte/private-ai/private-ai-implementierung","type":"MONEY","status":"live","desc":"Umgebung bauen und übergeben","title":"${TITLE}","file":"app/(site)/branchen/anwaelte/private-ai/private-ai-implementierung/page.tsx"},{"label":"kanzlei-wissensdatenbank","path":"/branchen/anwaelte/private-ai/kanzlei-wissensdatenbank","type":"CONTENT","status":"live","desc":"RAG auf eigenen Schriftsätzen","title":"${TITLE}: eigene Schriftsätze durchsuchbar","file":"app/(site)/branchen/anwaelte/private-ai/kanzlei-wissensdatenbank/page.tsx"}]},{"label":"claude-cowork","path":"/branchen/anwaelte/claude-cowork","type":"HUB","status":"live","desc":"Verwaltete KI fürs Team","title":"${TITLE}: KI als Werkzeug fürs Team","file":"app/(site)/branchen/anwaelte/claude-cowork/page.tsx","children":[{"label":"schriftsatz-entwuerfe","path":"/branchen/anwaelte/claude-cowork/schriftsatz-entwuerfe","type":"MONEY","status":"live","desc":"Rohling aus der Aktenlage","title":"${TITLE} für Anwaltskanzleien","file":"app/(site)/branchen/anwaelte/claude-cowork/schriftsatz-entwuerfe/page.tsx"},{"label":"rechtsrecherche-mit-ki","path":"/branchen/anwaelte/claude-cowork/rechtsrecherche-mit-ki","type":"CONTENT","status":"live","desc":"Einstieg mit Fundstellen","title":"${TITLE} in der Anwaltskanzlei","file":"app/(site)/branchen/anwaelte/claude-cowork/rechtsrecherche-mit-ki/page.tsx"}]},{"label":"ki-agenten","path":"/branchen/anwaelte/ki-agenten","type":"HUB","status":"live","desc":"Vorschlag, Prüfung, Ausführung","title":"${TITLE}: Posteingang und Fristen","file":"app/(site)/branchen/anwaelte/ki-agenten/page.tsx","children":[{"label":"posteingang-agent","path":"/branchen/anwaelte/ki-agenten/posteingang-agent","type":"MONEY","status":"live","desc":"beA, Mail und Scan zuordnen","title":"${TITLE}: beA, Mail und Scan","file":"app/(site)/branchen/anwaelte/ki-agenten/posteingang-agent/page.tsx"},{"label":"fristen-agent","path":"/branchen/anwaelte/ki-agenten/fristen-agent","type":"MONEY","status":"live","desc":"Fristen erkennen und rechnen","title":"${TITLE}: erkennen, rechnen, vorlegen","file":"app/(site)/branchen/anwaelte/ki-agenten/fristen-agent/page.tsx"}]},{"label":"workflows","path":"/branchen/anwaelte/workflows","type":"HUB","status":"live","desc":"Feste Abläufe mit n8n","title":"${TITLE}: actaport und RA-MICRO","file":"app/(site)/branchen/anwaelte/workflows/page.tsx","flags":["future"],"children":[{"label":"ra-micro-anbindung","path":"/branchen/anwaelte/workflows/ra-micro-anbindung","type":"MONEY","status":"live","desc":"Ohne offene API anbinden","title":"${TITLE}","file":"app/(site)/branchen/anwaelte/workflows/ra-micro-anbindung/page.tsx"},{"label":"bea-nachrichten-automatisieren","path":"/branchen/anwaelte/workflows/bea-nachrichten-automatisieren","type":"MONEY","status":"live","desc":"Eingang verarbeiten","title":"${TITLE}","file":"app/(site)/branchen/anwaelte/workflows/bea-nachrichten-automatisieren/page.tsx"}]}]}]}]},{"label":"Blog","group":true,"section":true,"children":[{"label":"blog","path":"/blog","type":"HUB","status":"live","desc":"Blog-Übersicht","title":"Blog Workflow Automatisierung & n8n Expertise","file":"app/(site)/blog/page.tsx","children":[{"label":"*","type":"CONTENT","status":"79 live, 6 unveröffentlicht","desc":"Blog-Artikel sind immer Content und werden hier nicht einzeln gepflegt","collection":true,"children":[{"label":"agentic-ai-im-grosshandel","path":"/blog/agentic-ai-im-grosshandel","type":"CONTENT","status":"live","title":"Agentic AI im Großhandel: Autonome KI-Agenten für Einkauf, Lager und Vertrieb","file":"app/(site)/blog/(grosshandel)/agentic-ai-im-grosshandel/page.tsx"},{"label":"amazon-bedrock","path":"/blog/amazon-bedrock","type":"CONTENT","status":"live","title":"Amazon Bedrock: KI managed und DSGVO-nah in der EU nutzen","file":"app/(site)/blog/(technical)/amazon-bedrock/page.tsx"},{"label":"auftragsabwicklung-grosshandel","path":"/blog/auftragsabwicklung-grosshandel","type":"CONTENT","status":"live","title":"Auftragsabwicklung im Großhandel: KI-Workflow vor dem ERP statt neues Modul","file":"app/(site)/blog/(grosshandel)/auftragsabwicklung-grosshandel/page.tsx"},{"label":"auftragsabwicklung-optimieren","path":"/blog/auftragsabwicklung-optimieren","type":"CONTENT","status":"live","title":"Auftragsabwicklung optimieren: KPIs, Hebel und Quick-Wins","file":"app/(site)/blog/(grosshandel)/auftragsabwicklung-optimieren/page.tsx"},{"label":"automatische-angebotserstellung-grosshandel","path":"/blog/automatische-angebotserstellung-grosshandel","type":"CONTENT","status":"live","title":"KI Angebote im Großhandel: Automatische Angebotserstellung in Sekunden","file":"app/(site)/blog/(grosshandel)/automatische-angebotserstellung-grosshandel/page.tsx"},{"label":"aws-bedrock-knowledge-base","path":"/blog/aws-bedrock-knowledge-base","type":"CONTENT","status":"live","title":"AWS Bedrock Knowledge Base: Managed RAG praxisnah erklärt","file":"app/(site)/blog/(technical)/aws-bedrock-knowledge-base/page.tsx"},{"label":"aws-bedrock-kosten","path":"/blog/aws-bedrock-kosten","type":"CONTENT","status":"live","title":"AWS Bedrock Kosten 2026: Preise, Frankfurt-Faktor und Sparhebel","file":"app/(site)/blog/(technical)/aws-bedrock-kosten/page.tsx"},{"label":"b2b-grosshandel-digitalisierung","path":"/blog/b2b-grosshandel-digitalisierung","type":"CONTENT","status":"live","title":"B2B-Großhandel digitalisieren: Strategie, Kanäle und Workflows für 2026","file":"app/(site)/blog/(grosshandel)/b2b-grosshandel-digitalisierung/page.tsx"},{"label":"bestellungen-erfassen-automatisieren","path":"/blog/bestellungen-erfassen-automatisieren","type":"CONTENT","status":"live","title":"Bestellungen erfassen automatisieren: So verarbeitet KI eure Aufträge in Sekunden","file":"app/(site)/blog/(grosshandel)/bestellungen-erfassen-automatisieren/page.tsx"},{"label":"building-custom-node-dev-guide","path":"/blog/building-custom-node-dev-guide","type":"CONTENT","status":"live","title":"Benutzerdefinierte Nodes in n8n erstellen: Ein vollständiger Entwickler-Leitfaden","file":"app/(site)/blog/(technical)/building-custom-node-dev-guide/page.tsx"},{"label":"chatgpt-agent-erstellen","path":"/blog/chatgpt-agent-erstellen","type":"CONTENT","status":"live","title":"ChatGPT Agent erstellen: Schritt-für-Schritt-Anleitung (2026)","file":"app/(site)/blog/(technical)/chatgpt-agent-erstellen/page.tsx"},{"label":"chatgpt-dsgvo-konform-nutzen","path":"/blog/chatgpt-dsgvo-konform-nutzen","type":"CONTENT","status":"live","title":"ChatGPT DSGVO-konform nutzen: Praxis-Leitfaden 2026","file":"app/(site)/blog/(technical)/chatgpt-dsgvo-konform-nutzen/page.tsx"},{"label":"chatgpt-enterprise-deutschland","path":"/blog/chatgpt-enterprise-deutschland","type":"CONTENT","status":"live","title":"ChatGPT Enterprise 2026: Kosten, DSGVO & Rollout","file":"app/(site)/blog/(technical)/chatgpt-enterprise-deutschland/page.tsx"},{"label":"claude-api","path":"/blog/claude-api","type":"CONTENT","status":"live","title":"Claude API: Anthropics Modelle direkt im Mittelstand nutzen","file":"app/(site)/blog/(technical)/claude-api/page.tsx"},{"label":"claude-code-alternativen","path":"/blog/claude-code-alternativen","type":"CONTENT","status":"live","title":"Claude Code Alternativen 2026: Welche ihr wirklich braucht","file":"app/(site)/blog/(technical)/claude-code-alternativen/page.tsx"},{"label":"claude-code-best-practices","path":"/blog/claude-code-best-practices","type":"CONTENT","status":"unveröffentlicht","title":"Claude Code Best Practices: die eine Größe hinter allen Listen","file":"app/(site)/blog/(technical)/_claude-code-best-practices/page.tsx"},{"label":"claude-code-installieren","path":"/blog/claude-code-installieren","type":"CONTENT","status":"live","title":"Claude Code installieren: Setup-Guide für macOS, Windows, Linux","file":"app/(site)/blog/(technical)/claude-code-installieren/page.tsx"},{"label":"claude-code-kosten","path":"/blog/claude-code-kosten","type":"CONTENT","status":"live","title":"Claude Abo Preise 2026: Pro, Max und Team im Vergleich","file":"app/(site)/blog/(technical)/claude-code-kosten/page.tsx"},{"label":"claude-code-mcp","path":"/blog/claude-code-mcp","type":"CONTENT","status":"live","title":"Claude Code MCP: Server einbinden und im Team betreiben","file":"app/(site)/blog/(technical)/claude-code-mcp/page.tsx"},{"label":"claude-code-mit-ollama","path":"/blog/claude-code-mit-ollama","type":"CONTENT","status":"live","title":"Claude Code mit Ollama: lokal betreiben, was das wirklich heißt","file":"app/(site)/blog/(technical)/claude-code-mit-ollama/page.tsx"},{"label":"claude-code-plan-mode","path":"/blog/claude-code-plan-mode","type":"CONTENT","status":"live","title":"Claude Code Plan Mode: Anleitung, Ablauf und Team-Default","file":"app/(site)/blog/(technical)/claude-code-plan-mode/page.tsx"},{"label":"claude-code-router","path":"/blog/claude-code-router","type":"CONTENT","status":"unveröffentlicht","title":"Claude Code Router: was die Anleitungen verschweigen","file":"app/(site)/blog/(technical)/_claude-code-router/page.tsx"},{"label":"claude-code-subagents","path":"/blog/claude-code-subagents","type":"CONTENT","status":"unveröffentlicht","title":"Claude Code Subagents: Anleitung, Kosten und Grenzen","file":"app/(site)/blog/(technical)/_claude-code-subagents/page.tsx"},{"label":"claude-code-tutorial","path":"/blog/claude-code-tutorial","type":"CONTENT","status":"live","title":"Claude Code Tutorial auf Deutsch: Einstieg ohne Programmieren","file":"app/(site)/blog/(technical)/claude-code-tutorial/page.tsx"},{"label":"claude-code-vs-codex","path":"/blog/claude-code-vs-codex","type":"CONTENT","status":"live","title":"Claude Code vs. Codex: Welcher Agent für welches Team?","file":"app/(site)/blog/(technical)/claude-code-vs-codex/page.tsx"},{"label":"claude-code-vs-cursor","path":"/blog/claude-code-vs-cursor","type":"CONTENT","status":"live","title":"Claude Code vs. Cursor 2026: Vergleich für den Mittelstand","file":"app/(site)/blog/(technical)/claude-code-vs-cursor/page.tsx"},{"label":"claude-code-vs-github-copilot","path":"/blog/claude-code-vs-github-copilot","type":"CONTENT","status":"unveröffentlicht","title":"Claude Code vs. GitHub Copilot 2026: Vergleich für Teams","file":"app/(site)/blog/(technical)/_claude-code-vs-github-copilot/page.tsx"},{"label":"claude-cowork-managed-private","path":"/blog/claude-cowork-managed-private","type":"CONTENT","status":"live","title":"Amazon Bedrock für deutsche Unternehmen: DSGVO, Modelle und Claude Cowork managed private","file":"app/(site)/blog/(technical)/claude-cowork-managed-private/page.tsx"},{"label":"claude-cowork-vs-copilot-chatgpt","path":"/blog/claude-cowork-vs-copilot-chatgpt","type":"CONTENT","status":"live","title":"Claude vs. ChatGPT vs. Copilot 2026: Welches Tool für welche Firma?","file":"app/(site)/blog/(technical)/claude-cowork-vs-copilot-chatgpt/page.tsx"},{"label":"copilot-agent-erstellen","path":"/blog/copilot-agent-erstellen","type":"CONTENT","status":"live","title":"Copilot Agent erstellen: Anleitung für Microsoft Copilot Studio 2026","file":"app/(site)/blog/(technical)/copilot-agent-erstellen/page.tsx"},{"label":"copilot-vs-chatgpt-vergleich","path":"/blog/copilot-vs-chatgpt-vergleich","type":"CONTENT","status":"live","title":"Copilot vs ChatGPT: Welcher KI-Assistent passt zu deinem Unternehmen?","file":"app/(site)/blog/(technical)/copilot-vs-chatgpt-vergleich/page.tsx"},{"label":"digitale-prozessautomatisierung-einstieg","path":"/blog/digitale-prozessautomatisierung-einstieg","type":"CONTENT","status":"live","title":"Digitale Prozessautomatisierung: Der Einstieg für den Mittelstand","file":"app/(site)/blog/(technical)/digitale-prozessautomatisierung-einstieg/page.tsx"},{"label":"digitalisierung-grosshandel","path":"/blog/digitalisierung-grosshandel","type":"CONTENT","status":"live","title":"Digitalisierung im Großhandel: 15 Use Cases mit ROI-Zahlen (2026)","file":"app/(site)/blog/(grosshandel)/digitalisierung-grosshandel/page.tsx"},{"label":"digitalisierung-steuerberatung","path":"/blog/digitalisierung-steuerberatung","type":"CONTENT","status":"live","title":"Digitalisierung Steuerberatung 2026: Bausteine, Stichtage, Roadmap","file":"app/(site)/blog/(pdl)/digitalisierung-steuerberatung/page.tsx"},{"label":"dsgvo-konforme-ki-tools","path":"/blog/dsgvo-konforme-ki-tools","type":"CONTENT","status":"live","title":"DSGVO-konforme KI-Tools: Worauf Unternehmen 2026 achten müssen","file":"app/(site)/blog/(grosshandel)/dsgvo-konforme-ki-tools/page.tsx"},{"label":"e-rechnung-automatisieren","path":"/blog/e-rechnung-automatisieren","type":"CONTENT","status":"live","title":"E-Rechnung automatisieren 2026: XRechnung-Workflow für KMU","file":"app/(site)/blog/(technical)/e-rechnung-automatisieren/page.tsx"},{"label":"einkauf-automatisieren-grosshandel","path":"/blog/einkauf-automatisieren-grosshandel","type":"CONTENT","status":"live","title":"Einkauf automatisieren im Großhandel: Beschaffung ohne Zettel","file":"app/(site)/blog/(grosshandel)/einkauf-automatisieren-grosshandel/page.tsx"},{"label":"erp-workflows-automatisieren","path":"/blog/erp-workflows-automatisieren","type":"CONTENT","status":"live","title":"ERP-Workflows automatisieren mit n8n: SAP, Dynamics NAV, microtech","file":"app/(site)/blog/(grosshandel)/erp-workflows-automatisieren/page.tsx"},{"label":"flexibilitaet-im-grosshandel-mit-n8n-workflows","path":"/blog/flexibilitaet-im-grosshandel-mit-n8n-workflows","type":"CONTENT","status":"live","title":"Flexibilität im Großhandel: Was Intralogistik vormacht, können n8n-Workflows für dein Backoffice","file":"app/(site)/blog/(grosshandel)/flexibilitaet-im-grosshandel-mit-n8n-workflows/page.tsx"},{"label":"gemini-cli-vs-claude-code","path":"/blog/gemini-cli-vs-claude-code","type":"CONTENT","status":"unveröffentlicht","title":"Gemini CLI vs. Claude Code: Der Vergleich nach dem 18. Juni","file":"app/(site)/blog/(technical)/_gemini-cli-vs-claude-code/page.tsx"},{"label":"github-copilot-agent","path":"/blog/github-copilot-agent","type":"CONTENT","status":"live","title":"GitHub Copilot Agent: Coding Agent und Agent Mode erklärt","file":"app/(site)/blog/(technical)/github-copilot-agent/page.tsx"},{"label":"google-ai-agent","path":"/blog/google-ai-agent","type":"CONTENT","status":"live","title":"Google AI Agent erstellen: Gems, Vertex AI und Co. 2026","file":"app/(site)/blog/(technical)/google-ai-agent/page.tsx"},{"label":"grosshandel-software","path":"/blog/grosshandel-software","type":"CONTENT","status":"live","title":"Großhandel-Software 2026: ERP, Warenwirtschaft, WMS und EDI","file":"app/(site)/blog/(grosshandel)/grosshandel-software/page.tsx"},{"label":"ist-n8n-kostenlos","path":"/blog/ist-n8n-kostenlos","type":"CONTENT","status":"live","title":"Ist n8n kostenlos? Free Tier, Self-Hosting und Pricing 2026","file":"app/(site)/blog/(technical)/ist-n8n-kostenlos/page.tsx"},{"label":"ki-agenten-beispiele","path":"/blog/ki-agenten-beispiele","type":"CONTENT","status":"live","title":"KI-Agenten Beispiele: 12 Use-Cases für den Mittelstand","file":"app/(site)/blog/(workflow)/ki-agenten-beispiele/page.tsx"},{"label":"ki-agenten-erstellen","path":"/blog/ki-agenten-erstellen","type":"CONTENT","status":"live","title":"KI-Agenten erstellen: Tool-Vergleich und Entscheidungshilfe für den Mittelstand","file":"app/(site)/blog/(workflow)/ki-agenten-erstellen/page.tsx"},{"label":"ki-automatisierung-agentur","path":"/blog/ki-automatisierung-agentur","type":"CONTENT","status":"live","title":"KI-Automatisierungsagentur: Leistungen, Auswahl und Projektablauf 2026","file":"app/(site)/blog/(workflow)/ki-automatisierung-agentur/page.tsx"},{"label":"ki-automatisierung-tools","path":"/blog/ki-automatisierung-tools","type":"CONTENT","status":"live","title":"KI Automatisierung Tools 2026: Vergleich und Auswahlhilfe","file":"app/(site)/blog/(workflow)/ki-automatisierung-tools/page.tsx"},{"label":"ki-datenschutz","path":"/blog/ki-datenschutz","type":"CONTENT","status":"live","title":"KI Datenschutz 2026: DSGVO-konforme KI-Nutzung im Mittelstand","file":"app/(site)/blog/(technical)/ki-datenschutz/page.tsx"},{"label":"ki-fuer-unternehmen","path":"/blog/ki-fuer-unternehmen","type":"CONTENT","status":"live","title":"KI für Unternehmen: der Praxisleitfaden für den Mittelstand 2026","file":"app/(site)/blog/(technical)/ki-fuer-unternehmen/page.tsx"},{"label":"ki-im-support-grosshandel","path":"/blog/ki-im-support-grosshandel","type":"CONTENT","status":"live","title":"KI im Support für den Großhandel: Freshdesk + n8n automatisieren","file":"app/(site)/blog/(grosshandel)/ki-im-support-grosshandel/page.tsx"},{"label":"ki-steuerberater","path":"/blog/ki-steuerberater","type":"CONTENT","status":"live","title":"KI für Steuerberater 2026: Sieben Aufgabenfelder, drei Tool-Wege, ein Pilotplan","file":"app/(site)/blog/(pdl)/ki-steuerberater/page.tsx"},{"label":"ki-workflow-erp","path":"/blog/ki-workflow-erp","type":"CONTENT","status":"live","title":"KI-Workflows für ERP: SAP, Datev und Business Central intelligent automatisieren","file":"app/(site)/blog/(technical)/ki-workflow-erp/page.tsx"},{"label":"kmu-workflow-automatisierung","path":"/blog/kmu-workflow-automatisierung","type":"CONTENT","status":"live","title":"KMU Workflow-Automatisierung 2026: Tools, Workflows, ROI","file":"app/(site)/blog/(technical)/kmu-workflow-automatisierung/page.tsx"},{"label":"make-vs-n8n-vergleich","path":"/blog/make-vs-n8n-vergleich","type":"CONTENT","status":"live","title":"Make vs n8n: Der ehrliche Tool-Vergleich für 2026","file":"app/(site)/blog/(technical)/make-vs-n8n-vergleich/page.tsx"},{"label":"make-vs-zapier-vergleich","path":"/blog/make-vs-zapier-vergleich","type":"CONTENT","status":"live","title":"Make vs Zapier: Welches No-Code-Tool passt 2026?","file":"app/(site)/blog/(technical)/make-vs-zapier-vergleich/page.tsx"},{"label":"microsoft-365-copilot-kosten","path":"/blog/microsoft-365-copilot-kosten","type":"CONTENT","status":"live","title":"Microsoft 365 Copilot Kosten 2026: Lizenz, TCO und ROI für den Mittelstand","file":"app/(site)/blog/(technical)/microsoft-365-copilot-kosten/page.tsx"},{"label":"mobile-auftragsabwicklung","path":"/blog/mobile-auftragsabwicklung","type":"CONTENT","status":"live","title":"Mobile Auftragsabwicklung im Großhandel: Außendienst, Theke, Lager","file":"app/(site)/blog/(grosshandel)/mobile-auftragsabwicklung/page.tsx"},{"label":"n8n-community-guide","path":"/blog/n8n-community-guide","type":"CONTENT","status":"live","title":"n8n Community 2026: Forum, GitHub, Templates und Discord im Überblick","file":"app/(site)/blog/(technical)/n8n-community-guide/page.tsx"},{"label":"n8n-installieren-anleitung","path":"/blog/n8n-installieren-anleitung","type":"CONTENT","status":"live","title":"n8n installieren: Anleitung für npx, Docker und Desktop App","file":"app/(site)/blog/(technical)/n8n-installieren-anleitung/page.tsx"},{"label":"n8n-ki-agenten-erstellen","path":"/blog/n8n-ki-agenten-erstellen","type":"CONTENT","status":"live","title":"n8n KI-Agenten erstellen: Praxisanleitung mit AI-Agent-Node und Tools","file":"app/(site)/blog/(technical)/n8n-ki-agenten-erstellen/page.tsx"},{"label":"n8n-pricing-guide","path":"/blog/n8n-pricing-guide","type":"CONTENT","status":"live","title":"n8n Pricing 2026: Cloud-Tarife, TCO und Skalierungs-Schwellen","file":"app/(site)/blog/(technical)/n8n-pricing-guide/page.tsx"},{"label":"n8n-selbst-hosten-anleitung","path":"/blog/n8n-selbst-hosten-anleitung","type":"CONTENT","status":"live","title":"n8n selbst hosten: Anleitung für Docker, Datenbank, TLS und Backups","file":"app/(site)/blog/(technical)/n8n-selbst-hosten-anleitung/page.tsx"},{"label":"n8n-sicherheit-self-hosting","path":"/blog/n8n-sicherheit-self-hosting","type":"CONTENT","status":"live","title":"n8n Sicherheit: So schützt ihr eure Self-Hosted Instanz vor Angriffen","file":"app/(site)/blog/(technical)/n8n-sicherheit-self-hosting/page.tsx"},{"label":"n8n-tutorial-deutsch","path":"/blog/n8n-tutorial-deutsch","type":"CONTENT","status":"live","title":"n8n Tutorial Deutsch: Vom ersten Workflow bis zum Produktivbetrieb","file":"app/(site)/blog/(technical)/n8n-tutorial-deutsch/page.tsx"},{"label":"n8n-vorlagen-grosshandel","path":"/blog/n8n-vorlagen-grosshandel","type":"CONTENT","status":"live","title":"n8n Vorlagen für den Großhandel: 7 Workflow-Templates zum Sofort-Starten","file":"app/(site)/blog/(grosshandel)/n8n-vorlagen-grosshandel/page.tsx"},{"label":"n8n-vs-zapier-vergleich","path":"/blog/n8n-vs-zapier-vergleich","type":"CONTENT","status":"live","title":"n8n vs Zapier: Der ehrliche Tool-Vergleich für 2026","file":"app/(site)/blog/(technical)/n8n-vs-zapier-vergleich/page.tsx"},{"label":"n8n-workflows-fuer-den-grosshandel","path":"/blog/n8n-workflows-fuer-den-grosshandel","type":"CONTENT","status":"live","title":"7 n8n-Workflows für den Großhandel, die sofort wirken","file":"app/(site)/blog/(grosshandel)/n8n-workflows-fuer-den-grosshandel/page.tsx"},{"label":"n8n-zertifizierung-guide","path":"/blog/n8n-zertifizierung-guide","type":"CONTENT","status":"live","title":"n8n Zertifizierung 2026: Foundations, Builder und wann sie sich lohnt","file":"app/(site)/blog/(technical)/n8n-zertifizierung-guide/page.tsx"},{"label":"openai-api-kosten","path":"/blog/openai-api-kosten","type":"CONTENT","status":"live","title":"OpenAI API Kosten 2026: Token-Preise, Rechenbeispiele und Kostenhebel","file":"app/(site)/blog/(technical)/openai-api-kosten/page.tsx"},{"label":"opencode-vs-claude-code","path":"/blog/opencode-vs-claude-code","type":"CONTENT","status":"unveröffentlicht","title":"OpenCode vs Claude Code: Der Vergleich für Unternehmen","file":"app/(site)/blog/(technical)/_opencode-vs-claude-code/page.tsx"},{"label":"pabbly-connect-alternative","path":"/blog/pabbly-connect-alternative","type":"CONTENT","status":"live","title":"Pabbly Connect: Lohnt sich die günstige Alternative?","file":"app/(site)/blog/(technical)/pabbly-connect-alternative/page.tsx"},{"label":"prozessautomatisierung-guide","path":"/blog/prozessautomatisierung-guide","type":"CONTENT","status":"live","title":"Prozessautomatisierung 2026: Der komplette Guide für den Mittelstand","file":"app/(site)/blog/(technical)/prozessautomatisierung-guide/page.tsx"},{"label":"sonderteile-im-grosshandel-mit-ki","path":"/blog/sonderteile-im-grosshandel-mit-ki","type":"CONTENT","status":"live","title":"Angebotserstellung Sonderteile: KI-Software im Großhandel automatisieren","file":"app/(site)/blog/(grosshandel)/sonderteile-im-grosshandel-mit-ki/page.tsx"},{"label":"speed-to-hire","path":"/blog/speed-to-hire","type":"CONTENT","status":"live","title":"Speed to Hire: Warum deine besten Kandidaten weg sind, bevor du anrufst","file":"app/(site)/blog/(pdl)/speed-to-hire/page.tsx"},{"label":"vertriebsautomatisierung-grosshandel","path":"/blog/vertriebsautomatisierung-grosshandel","type":"CONTENT","status":"live","title":"Vertriebsautomatisierung im Großhandel: Anfrage bis Abschluss","file":"app/(site)/blog/(grosshandel)/vertriebsautomatisierung-grosshandel/page.tsx"},{"label":"warenwirtschaftssystem-grosshandel","path":"/blog/warenwirtschaftssystem-grosshandel","type":"CONTENT","status":"live","title":"Warenwirtschaftssystem Großhandel 2026: Anbieter-Vergleich und KI-Layer","file":"app/(site)/blog/(grosshandel)/warenwirtschaftssystem-grosshandel/page.tsx"},{"label":"was-ist-claude-code","path":"/blog/was-ist-claude-code","type":"CONTENT","status":"live","title":"Was ist Claude Code? Erklärung für Unternehmen 2026","file":"app/(site)/blog/(technical)/was-ist-claude-code/page.tsx"},{"label":"was-ist-mcp-server","path":"/blog/was-ist-mcp-server","type":"CONTENT","status":"live","title":"Was ist ein MCP-Server? Der Standard hinter KI-Agenten erklärt","file":"app/(site)/blog/(technical)/was-ist-mcp-server/page.tsx"},{"label":"was-ist-n8n","path":"/blog/was-ist-n8n","type":"CONTENT","status":"live","title":"Was ist n8n? Der komplette Guide für Einsteiger (2026)","file":"app/(site)/blog/(technical)/was-ist-n8n/page.tsx"},{"label":"werden-steuerberater-durch-ki-ersetzt","path":"/blog/werden-steuerberater-durch-ki-ersetzt","type":"CONTENT","status":"live","title":"Werden Steuerberater durch KI ersetzt? Die Kostenrechnung","file":"app/(site)/blog/(pdl)/werden-steuerberater-durch-ki-ersetzt/page.tsx"},{"label":"wie-baut-man-ki-agents","path":"/blog/wie-baut-man-ki-agents","type":"CONTENT","status":"live","title":"KI-Agents bauen: Das Anthropic-Framework für den Großhandel","file":"app/(site)/blog/(technical)/wie-baut-man-ki-agents/page.tsx"},{"label":"wie-wirkt-sich-ki-auf-den-grosshandel-aus","path":"/blog/wie-wirkt-sich-ki-auf-den-grosshandel-aus","type":"CONTENT","status":"live","title":"Wie wirkt sich KI auf den Großhandel aus? Der komplette Überblick für 2026","file":"app/(site)/blog/(grosshandel)/wie-wirkt-sich-ki-auf-den-grosshandel-aus/page.tsx"},{"label":"zapier-alternativen","path":"/blog/zapier-alternativen","type":"CONTENT","status":"live","title":"Die 5 besten Zapier-Alternativen 2026: Vergleich für deutsche Unternehmen","file":"app/(site)/blog/(technical)/zapier-alternativen/page.tsx"},{"label":"zapier-kosten-vergleich","path":"/blog/zapier-kosten-vergleich","type":"CONTENT","status":"live","title":"Zapier Kosten 2026: Alle Pläne, Preise und versteckte Kostenfallen","file":"app/(site)/blog/(technical)/zapier-kosten-vergleich/page.tsx"}]}]}]},{"label":"Standorte","group":true,"section":true,"children":[{"label":"standorte","path":"/standorte","type":"HUB","status":"live","desc":"Lokales SEO, nur über den Footer verlinkt","title":"Automatisierungs Agentur — Workflow-Automatisierung in ganz Deutschland","file":"app/(site)/standorte/page.tsx","children":[{"label":"*","type":"LANDING","status":"67 unveröffentlicht, 13 live","desc":"Eine Seite je Stadt, bis zu 6 Keyword-Aliasse je Stadt. Unveröffentlichte Städte haben `publish: false`","collection":true,"children":[{"label":"aachen","path":"/standorte/aachen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/aachen/page.tsx"},{"label":"augsburg","path":"/standorte/augsburg","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/augsburg/page.tsx"},{"label":"bergisch-gladbach","path":"/standorte/bergisch-gladbach","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/bergisch-gladbach/page.tsx"},{"label":"berlin","path":"/standorte/berlin","type":"LANDING","status":"live","file":"app/(site)/standorte/berlin/page.tsx"},{"label":"bielefeld","path":"/standorte/bielefeld","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/bielefeld/page.tsx"},{"label":"bochum","path":"/standorte/bochum","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/bochum/page.tsx"},{"label":"bonn","path":"/standorte/bonn","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/bonn/page.tsx"},{"label":"bottrop","path":"/standorte/bottrop","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/bottrop/page.tsx"},{"label":"braunschweig","path":"/standorte/braunschweig","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/braunschweig/page.tsx"},{"label":"bremen","path":"/standorte/bremen","type":"LANDING","status":"live","file":"app/(site)/standorte/bremen/page.tsx"},{"label":"bremerhaven","path":"/standorte/bremerhaven","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/bremerhaven/page.tsx"},{"label":"chemnitz","path":"/standorte/chemnitz","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/chemnitz/page.tsx"},{"label":"cottbus","path":"/standorte/cottbus","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/cottbus/page.tsx"},{"label":"darmstadt","path":"/standorte/darmstadt","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/darmstadt/page.tsx"},{"label":"dortmund","path":"/standorte/dortmund","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/dortmund/page.tsx"},{"label":"dresden","path":"/standorte/dresden","type":"LANDING","status":"live","file":"app/(site)/standorte/dresden/page.tsx"},{"label":"duesseldorf","path":"/standorte/duesseldorf","type":"LANDING","status":"live","file":"app/(site)/standorte/duesseldorf/page.tsx"},{"label":"duisburg","path":"/standorte/duisburg","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/duisburg/page.tsx"},{"label":"erfurt","path":"/standorte/erfurt","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/erfurt/page.tsx"},{"label":"erlangen","path":"/standorte/erlangen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/erlangen/page.tsx"},{"label":"essen","path":"/standorte/essen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/essen/page.tsx"},{"label":"frankfurt-am-main","path":"/standorte/frankfurt-am-main","type":"LANDING","status":"live","file":"app/(site)/standorte/frankfurt-am-main/page.tsx"},{"label":"freiburg-im-breisgau","path":"/standorte/freiburg-im-breisgau","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/freiburg-im-breisgau/page.tsx"},{"label":"fuerth","path":"/standorte/fuerth","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/fuerth/page.tsx"},{"label":"gelsenkirchen","path":"/standorte/gelsenkirchen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/gelsenkirchen/page.tsx"},{"label":"goettingen","path":"/standorte/goettingen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/goettingen/page.tsx"},{"label":"hagen","path":"/standorte/hagen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/hagen/page.tsx"},{"label":"halle-saale","path":"/standorte/halle-saale","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/halle-saale/page.tsx"},{"label":"hamburg","path":"/standorte/hamburg","type":"LANDING","status":"live","file":"app/(site)/standorte/hamburg/page.tsx"},{"label":"hamm","path":"/standorte/hamm","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/hamm/page.tsx"},{"label":"hannover","path":"/standorte/hannover","type":"LANDING","status":"live","file":"app/(site)/standorte/hannover/page.tsx"},{"label":"heidelberg","path":"/standorte/heidelberg","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/heidelberg/page.tsx"},{"label":"heilbronn","path":"/standorte/heilbronn","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/heilbronn/page.tsx"},{"label":"herne","path":"/standorte/herne","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/herne/page.tsx"},{"label":"hildesheim","path":"/standorte/hildesheim","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/hildesheim/page.tsx"},{"label":"ingolstadt","path":"/standorte/ingolstadt","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/ingolstadt/page.tsx"},{"label":"jena","path":"/standorte/jena","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/jena/page.tsx"},{"label":"karlsruhe","path":"/standorte/karlsruhe","type":"LANDING","status":"live","file":"app/(site)/standorte/karlsruhe/page.tsx"},{"label":"kassel","path":"/standorte/kassel","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/kassel/page.tsx"},{"label":"kiel","path":"/standorte/kiel","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/kiel/page.tsx"},{"label":"koblenz","path":"/standorte/koblenz","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/koblenz/page.tsx"},{"label":"koeln","path":"/standorte/koeln","type":"LANDING","status":"live","title":"Workflow-Automatisierung Köln","file":"app/(site)/standorte/koeln/page.tsx"},{"label":"krefeld","path":"/standorte/krefeld","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/krefeld/page.tsx"},{"label":"leipzig","path":"/standorte/leipzig","type":"LANDING","status":"live","file":"app/(site)/standorte/leipzig/page.tsx"},{"label":"leverkusen","path":"/standorte/leverkusen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/leverkusen/page.tsx"},{"label":"ludwigshafen-am-rhein","path":"/standorte/ludwigshafen-am-rhein","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/ludwigshafen-am-rhein/page.tsx"},{"label":"luebeck","path":"/standorte/luebeck","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/luebeck/page.tsx"},{"label":"magdeburg","path":"/standorte/magdeburg","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/magdeburg/page.tsx"},{"label":"mainz","path":"/standorte/mainz","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/mainz/page.tsx"},{"label":"mannheim","path":"/standorte/mannheim","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/mannheim/page.tsx"},{"label":"moenchengladbach","path":"/standorte/moenchengladbach","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/moenchengladbach/page.tsx"},{"label":"moers","path":"/standorte/moers","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/moers/page.tsx"},{"label":"muelheim-an-der-ruhr","path":"/standorte/muelheim-an-der-ruhr","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/muelheim-an-der-ruhr/page.tsx"},{"label":"muenchen","path":"/standorte/muenchen","type":"LANDING","status":"live","title":"KI Agentur München - n8n, Workflow-Automatisierung & Prozessoptimierung","file":"app/(site)/standorte/muenchen/page.tsx"},{"label":"muenster","path":"/standorte/muenster","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/muenster/page.tsx"},{"label":"neuss","path":"/standorte/neuss","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/neuss/page.tsx"},{"label":"nuernberg","path":"/standorte/nuernberg","type":"LANDING","status":"live","file":"app/(site)/standorte/nuernberg/page.tsx"},{"label":"oberhausen","path":"/standorte/oberhausen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/oberhausen/page.tsx"},{"label":"offenbach-am-main","path":"/standorte/offenbach-am-main","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/offenbach-am-main/page.tsx"},{"label":"oldenburg","path":"/standorte/oldenburg","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/oldenburg/page.tsx"},{"label":"osnabrueck","path":"/standorte/osnabrueck","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/osnabrueck/page.tsx"},{"label":"paderborn","path":"/standorte/paderborn","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/paderborn/page.tsx"},{"label":"pforzheim","path":"/standorte/pforzheim","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/pforzheim/page.tsx"},{"label":"potsdam","path":"/standorte/potsdam","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/potsdam/page.tsx"},{"label":"recklinghausen","path":"/standorte/recklinghausen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/recklinghausen/page.tsx"},{"label":"regensburg","path":"/standorte/regensburg","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/regensburg/page.tsx"},{"label":"remscheid","path":"/standorte/remscheid","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/remscheid/page.tsx"},{"label":"reutlingen","path":"/standorte/reutlingen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/reutlingen/page.tsx"},{"label":"rostock","path":"/standorte/rostock","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/rostock/page.tsx"},{"label":"saarbruecken","path":"/standorte/saarbruecken","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/saarbruecken/page.tsx"},{"label":"salzgitter","path":"/standorte/salzgitter","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/salzgitter/page.tsx"},{"label":"siegen","path":"/standorte/siegen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/siegen/page.tsx"},{"label":"solingen","path":"/standorte/solingen","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/solingen/page.tsx"},{"label":"stuttgart","path":"/standorte/stuttgart","type":"LANDING","status":"live","file":"app/(site)/standorte/stuttgart/page.tsx"},{"label":"trier","path":"/standorte/trier","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/trier/page.tsx"},{"label":"ulm","path":"/standorte/ulm","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/ulm/page.tsx"},{"label":"wiesbaden","path":"/standorte/wiesbaden","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/wiesbaden/page.tsx"},{"label":"wolfsburg","path":"/standorte/wolfsburg","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/wolfsburg/page.tsx"},{"label":"wuerzburg","path":"/standorte/wuerzburg","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/wuerzburg/page.tsx"},{"label":"wuppertal","path":"/standorte/wuppertal","type":"LANDING","status":"unveröffentlicht","file":"app/(site)/standorte/wuppertal/page.tsx"}]}]}]},{"label":"Funnel-Landingpages","group":true,"section":true,"children":[{"label":"Ads-Einstiege: Minimal-Layout, noindex, nicht in der Sitemap","group":true,"children":[{"label":"sensitiv-ai","path":"/sensitiv-ai","type":"LANDING","status":"live, noindex","desc":"Passt zum Private-AI-Hub","title":"Claude für sensible Daten — DSGVO- & § 203-StGB-konform","file":"app/(landingpage-funnel)/sensitiv-ai/page.tsx"},{"label":"sensitiv-ai-2","path":"/sensitiv-ai-2","type":"LANDING","status":"live, noindex","desc":"Vergleichsfassung: Handy zuerst, Portal, Startpaket 5.000 €","title":"Claude für sensible Daten: DSGVO und § 203 StGB","file":"app/(landingpage-funnel)/sensitiv-ai-2/page.tsx"},{"label":"claude-insolvenzverwalter","path":"/claude-insolvenzverwalter","type":"LANDING","status":"live, noindex","desc":"Private Claude für Insolvenzkanzleien (Meta iv-run-0001)","title":"Claude für Insolvenzverwalter: eigenes Claude für die Kanzlei","file":"app/(landingpage-funnel)/claude-insolvenzverwalter/page.tsx"},{"label":"claude-ma-private-equity","path":"/claude-ma-private-equity","type":"LANDING","status":"live, noindex","desc":"Private Claude für M&A, PE und VC (Meta ma-run-0001)","title":"Claude für M&A und Private Equity: eigenes Claude fürs Deal-Team","file":"app/(landingpage-funnel)/claude-ma-private-equity/page.tsx"},{"label":"claude-cowork-schulung","path":"/claude-cowork-schulung","type":"LANDING","status":"live, noindex","desc":"Passt zum Cowork-Hub, branchenoffen, 399 €","title":"Claude Cowork Schulung für 399 €: KI, die im Alltag mitarbeitet","file":"app/(landingpage-funnel)/claude-cowork-schulung/page.tsx"},{"label":"impressum-funnel","path":"/impressum-funnel","type":"SYS","status":"live, noindex","desc":"Impressum im Funnel-Layout","title":"Impressum - Bluebatch","file":"app/(landingpage-funnel)/impressum-funnel/page.tsx"},{"label":"datenschutz-funnel","path":"/datenschutz-funnel","type":"SYS","status":"live, noindex","desc":"Datenschutz im Funnel-Layout","title":"Datenschutzerklärung - Bluebatch","file":"app/(landingpage-funnel)/datenschutz-funnel/page.tsx"}]}]},{"label":"Unternehmen","group":true,"section":true,"children":[{"label":"contact","path":"/contact","type":"MONEY","status":"live","desc":"Ziel aller Conversion-Ketten","title":"Kontakt | Bluebatch - KI-Automatisierung & Beratung","file":"app/(site)/contact/page.tsx"},{"label":"mit-euch-wachsen","path":"/mit-euch-wachsen","type":"CONTENT","status":"live","desc":"Prozess und Positionierung (Trust)","title":"Mit euch wachsen — vom Workshop zur eigenen AI-Plattform","file":"app/(site)/mit-euch-wachsen/page.tsx"},{"label":"team","path":"/team","type":"CONTENT","status":"live","desc":"Trust","title":"Team - Bluebatch | Die Menschen hinter der Automatisierung","file":"app/(site)/team/page.tsx"},{"label":"karriere","path":"/karriere","type":"CONTENT","status":"live","desc":"Trust und Recruiting. Stellen aus `lib/career-jobs.ts`, Bewerbung nur per Formular (`/api/karriere` an das Google Sheet „Bewerbungen“, nicht HubSpot)","title":"Karriere bei Bluebatch | Jobs rund um Claude und KI","file":"app/(site)/karriere/page.tsx"}]},{"label":"Rechtliches","group":true,"section":true,"children":[{"label":"impressum","path":"/impressum","type":"SYS","status":"live, noindex","title":"Impressum - Bluebatch","file":"app/(site)/impressum/page.tsx"},{"label":"datenschutz","path":"/datenschutz","type":"SYS","status":"live, noindex","title":"Datenschutzerklärung - Bluebatch","file":"app/(site)/datenschutz/page.tsx"}]}]},"unplaced":[]}</script>
+<script>
+(function () {
+  "use strict";
+  const DATA = JSON.parse(document.getElementById("data").textContent);
+
+  const TYPE_INFO = {
+    HUB: ["Hub", "Verteiler: bündelt ein Thema und sammelt interne Links."],
+    MONEY: ["Money Page", "Verkauft ein konkretes Angebot, Ziel jeder Conversion-Kette."],
+    LANDING: ["Landing Page", "Externer Einstieg über SEO-Keyword oder Ads, führt zur Money Page."],
+    CONTENT: ["Content Page", "Informiert, baut Topical Authority auf und verlinkt nach oben."],
+    TOOL: ["Tool Page", "Interaktives Werkzeug wie ein Rechner: qualifiziert Leads, verkauft nicht selbst."],
+    SYS: ["System", "Pflicht- und Betriebsseite ohne SEO-Rolle."],
+    ORDNER: ["Ordner", "Nur URL-Präfix, keine eigene Seite."],
+  };
+  const STATUS = [
+    ["live", "Live", "Veröffentlicht und erreichbar."],
+    ["unveroeffentlicht", "Unveröffentlicht", "Gebaut, aber nicht erreichbar: Ordner mit _ oder publish: false."],
+    ["geplant", "Geplant", "Die Seite gibt es noch nicht."],
+  ];
+  const FLAG_INFO = {
+    eingefroren: "Eingefroren: kein weiterer Ausbau",
+    future: "Future: bleibt stehen, keine neuen Seiten",
+  };
+  const COLORS = { live: "var(--live)", unveroeffentlicht: "var(--unv)", geplant: "var(--plan)" };
+
+  const skey = (s) =>
+    !s ? null : s.startsWith("live") ? "live" : s === "unveröffentlicht" ? "unveroeffentlicht" : s === "geplant" ? "geplant" : null;
+
+  // Baum vorbereiten: IDs, Eltern, Zähler je Teilbaum
+  const byId = new Map();
+  const order = [];
+  let seq = 0;
+  (function prep(n, parent, depth) {
+    n.id = seq++;
+    n.parent = parent;
+    n.depth = depth;
+    n.children = n.children || [];
+    n.key = n.collection ? null : skey(n.status);
+    byId.set(n.id, n);
+    order.push(n);
+    n.cnt = { live: 0, unveroeffentlicht: 0, geplant: 0 };
+    for (const c of n.children) {
+      prep(c, n, depth + 1);
+      if (c.key) n.cnt[c.key]++;
+      for (const k in n.cnt) n.cnt[k] += c.cnt[k];
+    }
+  })(DATA.tree, null, 0);
+  const total = (c) => c.live + c.unveroeffentlicht + c.geplant;
+  const pages = order.filter((n) => n.key);
+
+  const defaultOpen = () => new Set(order.filter((n) => n.depth < 2 || n.group).map((n) => n.id));
+  const state = { view: "map", expanded: defaultOpen(), status: new Set(), types: new Set(), q: "", selected: null };
+
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  };
+  const bar = (cnt, cls) => {
+    const b = el("span", cls);
+    const t = total(cnt) || 1;
+    for (const [k] of STATUS) {
+      if (!cnt[k]) continue;
+      const s = el("span");
+      s.style.width = (cnt[k] / t) * 100 + "%";
+      s.style.background = COLORS[k];
+      b.append(s);
+    }
+    return b;
+  };
+
+  const filtering = () => state.status.size > 0 || state.types.size > 0 || state.q !== "";
+  const hay = (n) => [n.label, n.path, n.desc, n.title].filter(Boolean).join(" ").toLowerCase();
+  const matches = (n) =>
+    !!n.key && !n.root &&
+    (!state.status.size || state.status.has(n.key)) &&
+    (!state.types.size || state.types.has(n.type)) &&
+    (!state.q || hay(n).includes(state.q));
+
+  // ── Kopf ──
+  $("stand").textContent = DATA.stand;
+  function renderStats() {
+    const s = DATA.summary;
+    const t = $("total");
+    t.replaceChildren(el("strong", "", String(s.gesamt)), document.createTextNode(" Seiten im Zielbild"));
+    $("bigbar").replaceChildren(...bar(s, "").childNodes);
+    const chips = STATUS.map(([k, label]) => {
+      const b = el("button", "statchip");
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(state.status.has(k)));
+      b.append(el("span", "dot " + k), el("b", "", String(s[k])), document.createTextNode(label.toLowerCase()));
+      b.onclick = () => toggle(state.status, k);
+      return b;
+    });
+    $("statchips").replaceChildren(...chips);
+    const typeCount = {};
+    for (const n of pages) typeCount[n.type] = (typeCount[n.type] || 0) + 1;
+    const types = ["HUB", "MONEY", "CONTENT", "LANDING", "TOOL", "SYS"].filter((k) => typeCount[k]).map((k) => {
+      const b = el("button", "typechip");
+      b.type = "button";
+      b.title = TYPE_INFO[k][1];
+      b.setAttribute("aria-pressed", String(state.types.has(k)));
+      b.append(el("span", "tc tc-" + k.toLowerCase()), document.createTextNode(TYPE_INFO[k][0]), el("b", "", String(typeCount[k])));
+      b.onclick = () => toggle(state.types, k);
+      return b;
+    });
+    $("types").replaceChildren(...types);
+  }
+  function toggle(set, k) {
+    set.has(k) ? set.delete(k) : set.add(k);
+    render();
+  }
+
+  function renderUnplaced() {
+    const u = DATA.unplaced || [];
+    if (!u.length) return;
+    const d = el("details", "warn");
+    d.append(el("summary", "", u.length + " Seiten in app/ fehlen im Zielbild"));
+    const ul = el("ul");
+    for (const r of u) {
+      const li = el("li");
+      li.append(el("code", "", r.path), document.createTextNode(" · " + r.status));
+      ul.append(li);
+    }
+    d.append(ul, el("p", "", "In docs/site-structure/zielbild.md einordnen und das Skript neu laufen lassen."));
+    $("unplaced").append(d);
+  }
+
+  // ── Mindmap ──
+  function nodeEl(n, open, kidCount, hit) {
+    const b = el("button", "node");
+    b.type = "button";
+    b.dataset.id = n.id;
+    if (n.root) b.classList.add("root");
+    if (n.group) b.classList.add(n.section ? "section" : "group");
+    if (!n.group && !n.root && n.type) b.classList.add("t-" + n.type.toLowerCase());
+    if (n.key && !n.root) b.classList.add("s-" + n.key);
+    if (n.collection) b.classList.add("coll");
+    if (hit) b.classList.add("hit");
+    if (state.selected === n.id) b.classList.add("sel");
+    if (kidCount) b.setAttribute("aria-expanded", String(open));
+
+    const row = el("span", "row");
+    if (n.key && !n.root) row.append(el("span", "dot"));
+    row.append(el("span", "label", n.collection ? "alle Unterseiten" : n.label));
+    if (!n.group && !n.root && n.type && n.type !== "ORDNER") row.append(el("span", "chip", n.type));
+    for (const f of n.flags || []) row.append(el("span", "flag", f));
+    const t = total(n.cnt);
+    if (kidCount && !open) row.append(el("span", "more", "+" + (t || kidCount)));
+    b.append(row);
+    if (n.root) b.append(el("span", "rootsub", "Startseite · Hub · " + n.status));
+    if (t >= 2) b.append(bar(n.cnt, "bar"));
+    return b;
+  }
+
+  function renderLi(n, filt, vis) {
+    const li = el("li");
+    const kids = filt ? n.children.filter((c) => vis.has(c.id)) : n.children;
+    const open = kids.length > 0 && (filt || state.expanded.has(n.id));
+    li.append(nodeEl(n, open, kids.length, filt && matches(n)));
+    if (open) {
+      const ul = el("ul", "kids");
+      for (const c of kids) ul.append(renderLi(c, filt, vis));
+      li.append(ul);
+    }
+    return li;
+  }
+
+  function renderMap() {
+    const filt = filtering();
+    let vis = null;
+    if (filt) {
+      vis = new Set();
+      (function walk(n) {
+        let any = matches(n);
+        for (const c of n.children) if (walk(c)) any = true;
+        if (any) vis.add(n.id);
+        return any;
+      })(DATA.tree);
+      if (vis.size === 0) {
+        $("map").replaceChildren(el("div", "empty", "Keine Seite passt zu den Filtern."));
+        return;
+      }
+      vis.add(DATA.tree.id);
+    }
+    const tree = el("div", "tree");
+    const ul = el("ul");
+    ul.append(renderLi(DATA.tree, filt, vis));
+    tree.append(ul);
+    $("map").replaceChildren(tree);
+  }
+
+  $("map").addEventListener("click", (e) => {
+    const b = e.target.closest(".node");
+    if (!b) return;
+    const n = byId.get(Number(b.dataset.id));
+    if (!filtering() && n.children.length) {
+      state.expanded.has(n.id) ? state.expanded.delete(n.id) : state.expanded.add(n.id);
+    }
+    if (!n.group) state.selected = n.id;
+    renderMap();
+    renderDetails();
+  });
+
+  // ── Liste ──
+  function renderList() {
+    const rows = pages.filter((n) => !filtering() || matches(n));
+    const table = el("table");
+    const head = el("tr");
+    for (const h of ["Pfad", "Typ", "Status", "Beschreibung"]) head.append(el("th", "", h));
+    const thead = el("thead");
+    thead.append(head);
+    const tbody = el("tbody");
+    for (const n of rows) {
+      const tr = el("tr");
+      tr.dataset.id = n.id;
+      if (state.selected === n.id) tr.className = "sel";
+      const p = el("td");
+      p.append(el("code", "", n.path || n.label));
+      const ty = el("td");
+      const tp = el("span", "pill");
+      tp.append(el("span", "tc tc-" + (n.type || "").toLowerCase()), document.createTextNode(n.type || ""));
+      ty.append(tp);
+      const st = el("td");
+      const sp = el("span", "pill");
+      sp.append(el("span", "dot " + n.key), document.createTextNode(n.status));
+      st.append(sp);
+      tr.append(p, ty, st, el("td", "desc", n.desc || n.title || ""));
+      tbody.append(tr);
+    }
+    table.append(thead, tbody);
+    $("list").replaceChildren(rows.length ? table : el("div", "empty", "Keine Seite passt zu den Filtern."));
+  }
+  $("list").addEventListener("click", (e) => {
+    const tr = e.target.closest("tr[data-id]");
+    if (!tr) return;
+    state.selected = Number(tr.dataset.id);
+    renderList();
+    renderDetails();
+  });
+
+  // ── Details ──
+  function renderDetails() {
+    const d = $("details");
+    const n = byId.get(state.selected);
+    const ws = $("workspace");
+    if (!n || n.group) {
+      d.hidden = true;
+      ws.classList.remove("has-details");
+      return;
+    }
+    ws.classList.add("has-details");
+    const close = el("button", "close", "×");
+    close.type = "button";
+    close.setAttribute("aria-label", "Details schließen");
+    close.onclick = () => {
+      state.selected = null;
+      render();
+    };
+    const parts = [close];
+    parts.push(el("code", "path", n.collection ? (n.parent.path || "") + "/*" : n.path || ""));
+    parts.push(el("h2", "", n.title || (n.collection ? "Alle Unterseiten" : n.label)));
+
+    const tags = el("div", "tags");
+    if (n.type) {
+      const t = el("span", "tag");
+      t.append(el("span", "tc tc-" + n.type.toLowerCase()), document.createTextNode(TYPE_INFO[n.type] ? TYPE_INFO[n.type][0] : n.type));
+      tags.append(t);
+    }
+    if (n.status) {
+      const s = el("span", "tag");
+      if (n.key) s.append(el("span", "dot " + n.key));
+      s.append(document.createTextNode(n.status));
+      tags.append(s);
+    }
+    for (const f of n.flags || []) tags.append(el("span", "tag", FLAG_INFO[f] || f));
+    parts.push(tags);
+    if (n.desc) parts.push(el("p", "", n.desc));
+
+    const dl = el("dl");
+    const row = (k, v) => {
+      if (!v) return;
+      dl.append(el("dt", "", k), el("dd", "", v));
+    };
+    if (n.type && TYPE_INFO[n.type]) row("Typ", TYPE_INFO[n.type][1]);
+    const si = STATUS.find(([k]) => k === n.key);
+    if (si) row("Status", si[2]);
+    if (n.file) row("Datei", n.file);
+    const t = total(n.cnt);
+    if (t) row("Darunter", `${t} Seiten: ${n.cnt.live} live, ${n.cnt.unveroeffentlicht} unveröffentlicht, ${n.cnt.geplant} geplant`);
+    if (n.parent && !n.parent.group && n.parent.path) row("Eltern", n.parent.path);
+    parts.push(dl);
+
+    if (n.key === "live" && n.path) {
+      const a = el("a", "open", "Seite öffnen ↗");
+      a.href = "https://bluebatch.io" + n.path;
+      a.target = "_blank";
+      a.rel = "noopener";
+      parts.push(a);
+    }
+    d.replaceChildren(...parts);
+    d.hidden = false;
+  }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && state.selected !== null) {
+      state.selected = null;
+      render();
+    }
+  });
+
+  // ── Steuerung ──
+  document.querySelectorAll(".views button").forEach((b) => {
+    b.onclick = () => {
+      state.view = b.dataset.view;
+      render();
+    };
+  });
+  $("q").addEventListener("input", (e) => {
+    state.q = e.target.value.trim().toLowerCase();
+    render();
+  });
+  $("expand").onclick = () => {
+    state.expanded = new Set(order.filter((n) => n.children.length).map((n) => n.id));
+    render();
+  };
+  $("collapse").onclick = () => {
+    state.expanded = defaultOpen();
+    render();
+  };
+  $("reset").onclick = () => {
+    state.status.clear();
+    state.types.clear();
+    state.q = "";
+    $("q").value = "";
+    render();
+  };
+
+  // ── Legende ──
+  $("legend-types").replaceChildren(
+    ...["HUB", "MONEY", "CONTENT", "LANDING", "TOOL", "SYS"].map((k) => {
+      const li = el("li");
+      const txt = el("span");
+      txt.append(el("strong", "", TYPE_INFO[k][0] + " "), el("small", "", TYPE_INFO[k][1]));
+      li.append(el("span", "tc tc-" + k.toLowerCase()), txt);
+      return li;
+    }),
+  );
+  $("legend-status").replaceChildren(
+    ...STATUS.map(([k, label, info]) => {
+      const li = el("li");
+      const txt = el("span");
+      txt.append(el("strong", "", label + " "), el("small", "", info));
+      li.append(el("span", "dot " + k), txt);
+      return li;
+    }),
+    ...Object.values(FLAG_INFO).map((info) => {
+      const li = el("li");
+      li.append(el("span"), el("small", "", info));
+      return li;
+    }),
+  );
+
+  function render() {
+    document.querySelectorAll(".views button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === state.view)));
+    $("map").hidden = state.view !== "map";
+    $("list").hidden = state.view !== "list";
+    $("expand").hidden = $("collapse").hidden = state.view !== "map";
+    $("reset").hidden = !filtering();
+    renderStats();
+    if (state.view === "map") renderMap();
+    else renderList();
+    renderDetails();
+  }
+  renderUnplaced();
+  render();
+})();
+</script>
+</body>
+</html>
