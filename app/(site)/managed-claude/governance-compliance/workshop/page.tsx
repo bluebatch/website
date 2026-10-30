@@ -10,7 +10,6 @@ import {
   Hero2ColumnCallToAction,
   Hero2ColumnSubtext,
 } from "@/components/heroes";
-import { StepJourneyRow } from "@/components/sections";
 import { ContactButton, InternalLink } from "@/components/buttons";
 
 // Gerüst: Inhalte, Ablauf und Preis folgen von Max (t-0084).
@@ -75,22 +74,8 @@ export default function Page() {
         <IntroBox textCentered>
           <IntroBox.PreHeadline>Ablauf</IntroBox.PreHeadline>
           <IntroBox.Headline>So läuft der Compliance-Workshop</IntroBox.Headline>
-          <IntroBox.Paragraph>Die Module und der Zeitplan folgen in Kürze.</IntroBox.Paragraph>
+          <IntroBox.Paragraph>Module und Zeitplan des Workshops veröffentlichen wir in Kürze.</IntroBox.Paragraph>
         </IntroBox>
-        <StepJourneyRow className="mt-10">
-          <StepJourneyRow.Step n={1}>
-            <StepJourneyRow.Title>Bestandsaufnahme</StepJourneyRow.Title>
-            <StepJourneyRow.Description>Details folgen.</StepJourneyRow.Description>
-          </StepJourneyRow.Step>
-          <StepJourneyRow.Step n={2}>
-            <StepJourneyRow.Title>Compliance durchgehen</StepJourneyRow.Title>
-            <StepJourneyRow.Description>Details folgen.</StepJourneyRow.Description>
-          </StepJourneyRow.Step>
-          <StepJourneyRow.Step n={3}>
-            <StepJourneyRow.Title>Ergebnis</StepJourneyRow.Title>
-            <StepJourneyRow.Description>Details folgen.</StepJourneyRow.Description>
-          </StepJourneyRow.Step>
-        </StepJourneyRow>
       </ContentWrapper>
 
       <ContentWrapper>
