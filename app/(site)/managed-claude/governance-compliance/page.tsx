@@ -79,13 +79,13 @@ export default function Page() {
       <ContentWrapper colorScheme="gray-light">
         <IntroBox textCentered>
           <IntroBox.PreHeadline>Angebote und Preise</IntroBox.PreHeadline>
-          <IntroBox.Headline>Webinar, Studie oder Schulung</IntroBox.Headline>
+          <IntroBox.Headline>Webinar, Studie, Schulung oder Workshop</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Drei Formate, alle mit festem Preis. Sie bestellen über das Formular auf der jeweiligen Seite, die Rechnung
-            kommt nach der Bestellung.
+            Drei Formate mit festem Preis: Sie bestellen über das Formular auf der jeweiligen Seite, die Rechnung kommt
+            nach der Bestellung. Den Compliance-Workshop für Enterprise bieten wir auf Anfrage an.
           </IntroBox.Paragraph>
         </IntroBox>
-        <SimpleGrid cols={3} className="mx-auto mt-10 max-w-6xl">
+        <SimpleGrid cols={4} className="mx-auto mt-10 max-w-7xl">
           <OfferCard
             href="/managed-claude/governance-compliance/webinar"
             price="Kostenlos"
@@ -107,6 +107,13 @@ export default function Page() {
             title="Schulung"
             description="Rollen, Freigaben und Datenregeln selbst einrichten. 850 € pro Teilnehmer oder 7.500 € pro Gruppe."
             linkLabel="Zur Schulung"
+          />
+          <OfferCard
+            href="/managed-claude/governance-compliance/workshop"
+            price="Auf Anfrage"
+            title="Compliance-Workshop"
+            description="Das Enterprise-Angebot: In 10 Personentagen gehen wir mit Ihrem Team die KI-Compliance einmal vollständig durch."
+            linkLabel="Zum Compliance-Workshop"
           />
         </SimpleGrid>
         <Typo.Paragraph className="mt-8 text-center text-sm text-gray-500">
