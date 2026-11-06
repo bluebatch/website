@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { ensureContact } from "@/lib/server/hubspot-lead";
 
 export const runtime = "nodejs";
 
@@ -46,23 +47,6 @@ async function searchContactId(email: string): Promise<string | null> {
     | { results?: Array<{ id?: string }> }
     | null;
   return json?.results?.[0]?.id ?? null;
-}
-
-async function ensureContact(
-  email: string,
-  extra: Record<string, string> = {},
-): Promise<string | null> {
-  const existing = await searchContactId(email);
-  if (existing) return existing;
-  const res = await hs("/crm/v3/objects/contacts", {
-    method: "POST",
-    body: JSON.stringify({
-      properties: { email, lead_source: "landingpage_funnel", ...extra },
-    }),
-  });
-  if (!res.ok) return null;
-  const json = (await res.json().catch(() => null)) as { id?: string } | null;
-  return json?.id ?? null;
 }
 
 function fmtAnswer(value: string | string[]): string {
@@ -128,7 +112,9 @@ export async function POST(req: NextRequest) {
   if (body.utm_campaign?.trim()) utm.utm_campaign = body.utm_campaign.trim();
 
   try {
-    const contactId = await ensureContact(email, utm);
+    // lead_source ist ein Dropdown (referral|outbound|inbound). Ungültige Werte
+    // ließen den Create still scheitern; ensureContact versucht sonst nur mit email.
+    const contactId = await ensureContact(email, { lead_source: "inbound", ...utm });
     if (contactId) await createNote(contactId, buildNoteBody(body));
     return NextResponse.json({ ok: true, contactId });
   } catch {
