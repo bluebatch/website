@@ -34,14 +34,50 @@ const facts = [
   { bold: "Max. 15 Teilnehmer,", rest: "damit Zeit für deine Fragen bleibt." },
 ];
 
-const ablauf = [
-  { zeit: "9:00", text: "Start: Ziele, Erwartungen, Claude Cowork einrichten" },
-  { zeit: "10:30", text: "Erste echte Aufgaben lösen: Mails, Dokumente, Recherche" },
-  { zeit: "12:30", text: "Mittagspause" },
-  { zeit: "13:30", text: "Eigene Skills bauen für deine wiederkehrenden Aufgaben" },
-  { zeit: "15:30", text: "Datenschutz und sichere Nutzung im Alltag" },
-  { zeit: "16:30", text: "Umsetzungsplan und Fragen" },
-  { zeit: "17:00", text: "Ende" },
+// Agenda in 3 Teilen (Clara, t-0175, Quellen: support.claude.com).
+const agenda = [
+  {
+    teil: "Teil 1",
+    zeit: "9:00 bis 12:30 Uhr",
+    title: "Claude Cowork kennenlernen",
+    nutzen:
+      "Du weißt, was die App kann, und hast sie am Ende dieses Teils eingerichtet.",
+    punkte: [
+      { bold: "Ordner freigeben:", rest: "Claude liest und schreibt Dateien direkt in deinen Ordnern, ohne Hoch- und Herunterladen." },
+      { bold: "Anweisungen und Projekte:", rest: "Ordner-Anweisungen, globale Anweisungen und Projekte mit eigenen Dateien und Gedächtnis." },
+      { bold: "Ergebnisse, die du weiterverwendest:", rest: "Excel mit funktionierenden Formeln, PowerPoint und formatierte Dokumente." },
+      { bold: "Anbindungen und Plugins:", rest: "Connectors zu deinen Tools, Plugins bündeln Skills, Connectors und Sub-Agenten." },
+      { bold: "Browser und geplante Aufgaben:", rest: "Claude bedient Webseiten und füllt Formulare, wiederkehrende Aufgaben laufen nach Zeitplan in der Cloud." },
+    ],
+  },
+  {
+    teil: "Teil 2",
+    zeit: "13:30 bis 14:30 Uhr",
+    title: "Was „agentisch“ bedeutet",
+    nutzen:
+      "Du verstehst den Unterschied zu einem Chat und weißt, wann du Claude arbeiten lässt.",
+    punkte: [
+      { bold: "Chat vs. Agent:", rest: "Du beschreibst das Ziel, Claude plant die Schritte und führt sie selbst aus." },
+      { bold: "Teilaufgaben und Parallelarbeit:", rest: "Claude zerlegt größere Aufträge in Sub-Aufgaben und arbeitet sie nebeneinander ab." },
+      { bold: "Lange Aufgaben:", rest: "Claude arbeitet weiter, ohne dass du daneben sitzt, und du kannst unterwegs eingreifen." },
+      { bold: "Berechtigungen:", rest: "Manuell, Auto oder ohne Rückfrage. Du entscheidest, wie viel Kontrolle du behältst." },
+      { bold: "Grenzen:", rest: "Wo Claude Fehler macht und warum du Ergebnisse prüfst." },
+    ],
+  },
+  {
+    teil: "Teil 3",
+    zeit: "14:30 bis 17:00 Uhr",
+    title: "Praxis: so arbeitest du damit",
+    nutzen:
+      "Du gehst mit eigenen, funktionierenden Abläufen und einem Plan nach Hause.",
+    punkte: [
+      { bold: "Deine eigenen Aufgaben:", rest: "Mails, Dokumente, Tabellen oder Recherche aus deinem Alltag, direkt in Cowork gelöst." },
+      { bold: "Eigene Skills:", rest: "Wiederkehrende Aufgaben einmal anlegen und danach immer gleich abrufen." },
+      { bold: "Datenschutz im Alltag:", rest: "Welche Daten in Claude dürfen, welche Schutzfunktionen es gibt (z. B. Rückfrage vor dem Löschen von Dateien) und was du im Team festlegst." },
+      { bold: "Gute Aufträge formulieren:", rest: "Ziel, Kontext, Ergebnisformat, damit du nicht mehrfach nachbessern musst." },
+      { bold: "Umsetzungsplan:", rest: "Was du als Nächstes automatisierst, in welcher Reihenfolge. Zum Schluss Fragen." },
+    ],
+  },
 ];
 
 const fuerWen = [
@@ -100,19 +136,41 @@ export default function Page() {
       </FunnelPage>
 
       <ContentWrapper colorScheme="white" bodyWidth="small">
-        <h2 className="mb-6 text-2xl font-bold text-gray-900 md:text-3xl">
+        <h2 className="mb-3 text-2xl font-bold text-gray-900 md:text-3xl">
           So läuft der Tag
         </h2>
-        <ol className="mb-12 space-y-3">
-          {ablauf.map((a) => (
-            <li key={a.zeit} className="flex gap-4">
-              <span className="w-14 shrink-0 font-semibold text-primary-800">
-                {a.zeit}
-              </span>
-              <span className="text-gray-700">{a.text}</span>
-            </li>
+        <p className="mb-8 text-gray-700">
+          Drei Teile, ein Tag. Du lernst die App kennen, verstehst, was
+          „agentisch“ heißt, und arbeitest dann mit deinen eigenen Aufgaben.
+        </p>
+        <div className="mb-12 space-y-6">
+          {agenda.map((t, i) => (
+            <div key={t.teil}>
+              {i === 1 && (
+                <p className="mb-6 text-sm font-semibold text-gray-500">
+                  12:30 bis 13:30 Uhr · Mittagspause
+                </p>
+              )}
+              <section className="rounded-2xl border border-gray-200 p-5 sm:p-6">
+                <p className="text-sm font-semibold text-primary-800">
+                  {t.teil} · {t.zeit}
+                </p>
+                <h3 className="mt-1 text-xl font-bold text-gray-900">
+                  {t.title}
+                </h3>
+                <p className="mt-2 text-gray-700">{t.nutzen}</p>
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-gray-700">
+                  {t.punkte.map((p) => (
+                    <li key={p.bold}>
+                      <strong className="text-gray-900">{p.bold}</strong>{" "}
+                      {p.rest}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </div>
           ))}
-        </ol>
+        </div>
 
         <h2 className="mb-6 text-2xl font-bold text-gray-900 md:text-3xl">
           Für wen der Workshop passt
