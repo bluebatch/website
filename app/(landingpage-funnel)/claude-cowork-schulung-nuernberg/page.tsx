@@ -7,7 +7,7 @@ import ClaudeCoworkNuernbergFunnel from "./funnel";
 export const metadata: Metadata = {
   title: "Claude Cowork Schulung Nürnberg: 1 Tag Workshop am 10.12.2026",
   description:
-    "Ein Tag vor Ort in Nürnberg: Claude Cowork im Arbeitsalltag einsetzen und mit eigenen Abläufen nach Hause gehen. 800 € netto, nur 15 Plätze. Jetzt anmelden.",
+    "Ein Tag vor Ort in Nürnberg: Claude Cowork im Arbeitsalltag einsetzen und mit eigenen Abläufen nach Hause gehen. 850 € netto, nur 15 Plätze. Jetzt anmelden.",
   keywords: [
     "Claude Cowork Schulung Nürnberg",
     "Claude Cowork Workshop",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Claude Cowork Schulung Nürnberg: 1 Tag Workshop am 10.12.2026",
     description:
-      "Ein Tag vor Ort in Nürnberg, 9 bis 17 Uhr: Claude Cowork für Mails, Dokumente und Recherche, an deinen eigenen Aufgaben. 800 € netto, nur 15 Plätze.",
+      "Ein Tag vor Ort in Nürnberg, 9 bis 17 Uhr: Claude Cowork für Mails, Dokumente und Recherche, an deinen eigenen Aufgaben. 850 € netto, nur 15 Plätze.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const facts = [
   { bold: "Do, 10.12.2026,", rest: "9 bis 17 Uhr." },
   { bold: "Nürnberg vor Ort,", rest: "genaue Adresse folgt mit der Anmeldebestätigung." },
-  { bold: "800 € netto", rest: "pro Person, Rechnung per Mail." },
+  { bold: "850 € netto", rest: "pro Person, Rechnung per Mail." },
   { bold: "Max. 15 Teilnehmer,", rest: "damit Zeit für deine Fragen bleibt." },
 ];
 
@@ -95,7 +95,7 @@ const faqs = [
   {
     question: "Was kostet die Teilnahme?",
     answer:
-      "800 € netto pro Person, zuzüglich Mehrwertsteuer. Du bekommst eine Rechnung.",
+      "850 € netto pro Person, zuzüglich Mehrwertsteuer. Du bekommst eine Rechnung.",
   },
   {
     question: "Brauche ich Vorkenntnisse?",
@@ -124,7 +124,7 @@ export default function Page() {
         variant="mobile-first"
         preHeadline="Workshop vor Ort · Do, 10.12.2026 · 9 bis 17 Uhr"
         headline="Claude Cowork Schulung Nürnberg: Ein Tag, danach arbeitet KI für dich."
-        description="Du bringst deine echten Aufgaben mit. Am Abend laufen Mails, Dokumente und Recherche in Minuten statt Stunden. 800 € netto, nur 15 Plätze."
+        description="Du bringst deine echten Aufgaben mit. Am Abend laufen Mails, Dokumente und Recherche in Minuten statt Stunden. 850 € netto, nur 15 Plätze."
         facts={facts}
         image={{
           src: "/images/claude-cowork-schulung-hero.webp",

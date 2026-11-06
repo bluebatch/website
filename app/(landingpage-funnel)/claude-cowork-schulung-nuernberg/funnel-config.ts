@@ -2,10 +2,10 @@ import { Sparkles, Building2, Clock, Loader2, Ticket } from "lucide-react";
 import type { FunnelConfig } from "../_engine/funnel-wizard";
 
 // Meta-Ad-Funnel "Claude Cowork Schulung Nürnberg": 1-Tages-Workshop vor Ort,
-// 800 € netto, fester Termin. Kurzer Flow, am Ende direkte Anmeldung mit Termin.
+// 850 € netto, fester Termin. Kurzer Flow, am Ende direkte Anmeldung mit Termin.
 export const claudeCoworkNuernbergFunnel: FunnelConfig = {
   id: "claude-cowork-schulung-nuernberg",
-  title: "Claude Cowork Workshop Nürnberg (800 € netto, 10.12.2026)",
+  title: "Claude Cowork Workshop Nürnberg (850 € netto, 10.12.2026)",
   steps: [
     {
       id: "kennt_cowork",
@@ -59,6 +59,7 @@ export const claudeCoworkNuernbergFunnel: FunnelConfig = {
         "Übungen an deinen Zeitfresser andocken …",
         "Platz am 10.12.2026 prüfen …",
       ],
+      durationMs: 2000,
     },
     {
       id: "final",
@@ -68,13 +69,13 @@ export const claudeCoworkNuernbergFunnel: FunnelConfig = {
       eyebrow: "Fast geschafft",
       title: "Sichere dir deinen Platz am 10.12.2026",
       subtitle:
-        "1 Tag vor Ort in Nürnberg, 9 bis 17 Uhr, 800 € netto. Die Anmeldung ist verbindlich. Die Rechnung bekommst du von uns.",
-      dates: [{ label: "Do, 10.12.2026 · Nürnberg", meta: "9 bis 17 Uhr vor Ort, 800 € netto, max. 15 Plätze" }],
+        "1 Tag vor Ort in Nürnberg, 9 bis 17 Uhr, 850 € netto. Die Anmeldung ist verbindlich. Die Rechnung bekommst du von uns.",
+      dates: [{ label: "Do, 10.12.2026 · Nürnberg", meta: "9 bis 17 Uhr vor Ort, 850 € netto, max. 15 Plätze" }],
       noteLabel: "Was soll Claude Cowork bei dir übernehmen? (optional)",
       notePlaceholder: "z. B. Monatsberichte, Angebotsentwürfe, Posteingang",
       submitLabel: "Verbindlich anmelden",
       hints: [
-        "Mit Klick auf „Verbindlich anmelden“ meldest du dich für den Workshop am 10.12.2026 an. Preis: 800 € zzgl. MwSt.",
+        "Mit Klick auf „Verbindlich anmelden“ meldest du dich für den Workshop am 10.12.2026 an. Preis: 850 € zzgl. MwSt.",
         "Die genaue Adresse bekommst du vor dem Termin.",
       ],
       successTitle: "Du bist dabei!",
