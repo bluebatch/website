@@ -86,6 +86,35 @@ const fuerWen = [
   "Mitbringen: Laptop, einen Claude-Zugang (Bezahlplan) und 2 bis 3 echte Aufgaben aus deinem Alltag",
 ];
 
+// Einwände (Text von Max, t-0194, wörtlich).
+const einwaende = [
+  {
+    einwand: "Ich nutze Claude doch schon",
+    antwort:
+      "Du chattest. Mit angebundenen Systemen und Skills ist das ein anderes Werkzeug.",
+  },
+  {
+    einwand: "Ich hab keinen Tag Zeit",
+    antwort:
+      "Wenn Claude dir danach eine Stunde am Tag spart, hast du den Tag nach zwei Wochen wieder drin.",
+  },
+  {
+    einwand: "Das ist mir zu technisch",
+    antwort:
+      "Kein Programmieren. Du brauchst deine Aufgaben und einen Laptop, den Rest machen wir zusammen.",
+  },
+  {
+    einwand: "Und der Datenschutz?",
+    antwort:
+      "Wir zeigen, was rein darf, was nicht, und wie du das einstellst. Das gehört zur Schulung dazu.",
+  },
+  {
+    einwand: "850 Euro ist viel",
+    antwort:
+      "Für eine Stunde pro Tag, die du zurückbekommst, ist das nach einem Monat bezahlt.",
+  },
+];
+
 const faqs = [
   {
     question: "Wann und wo findet der Workshop statt?",
@@ -182,6 +211,52 @@ export default function Page() {
             <li key={f}>{f}</li>
           ))}
         </ul>
+      </ContentWrapper>
+
+      <ContentWrapper colorScheme="gradient-primary-dark" bodyWidth="wide">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary-300">
+            Ehrlich gesagt
+          </p>
+          <h2 className="mt-2 text-3xl font-bold md:text-4xl">
+            Die fünf Einwände, die wir immer hören
+          </h2>
+          <p className="mt-4 text-lg text-primary-100">
+            Jedes Mal, wenn ich die Masterclass anspreche, kommen dieselben fünf
+            Einwände. Hier sind sie.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          {einwaende.map((e, i) => (
+            <div
+              key={e.einwand}
+              className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-primary-300/50 hover:bg-white/10"
+            >
+              <span className="block text-5xl font-black leading-none tabular-nums text-primary-300 transition-colors group-hover:text-white">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <p className="mt-4 text-lg italic text-white/50 line-through decoration-primary-300/70 decoration-2">
+                „{e.einwand}“
+              </p>
+              <p className="mt-3 text-lg font-bold leading-snug text-white">
+                {e.antwort}
+              </p>
+            </div>
+          ))}
+
+          <div className="flex flex-col justify-between gap-6 rounded-2xl bg-white p-6 text-gray-900">
+            <p className="text-xl font-bold leading-snug">
+              Kein Einwand mehr übrig? Dann sichere dir einen der 15 Plätze.
+            </p>
+            <a
+              href="#start"
+              className="flex w-full items-center justify-center rounded-full bg-primary-800 px-6 py-4 text-base font-semibold text-white transition-colors hover:bg-primary-700 sm:py-3.5 sm:text-sm"
+            >
+              Platz sichern
+            </a>
+          </div>
+        </div>
       </ContentWrapper>
 
       <ContentWrapper colorScheme="gray-light" bodyWidth="small">
