@@ -127,8 +127,10 @@ export default function Page() {
         description="Du bringst deine echten Aufgaben mit. Am Abend laufen Mails, Dokumente und Recherche in Minuten statt Stunden. 800 € netto, nur 15 Plätze."
         facts={facts}
         image={{
-          src: "/images/claude-cowork.png",
-          alt: "Claude Cowork Workshop in Nürnberg",
+          src: "/images/claude-cowork-schulung-hero.webp",
+          alt: "Claude Cowork Schulung: Trainer zeigt Claude am Bildschirm, Teilnehmende arbeiten am Laptop",
+          width: 1600,
+          height: 1073,
         }}
         startLabel="Platz sichern"
       >

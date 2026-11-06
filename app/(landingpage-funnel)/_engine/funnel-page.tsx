@@ -28,7 +28,8 @@ export interface FunnelPageProps {
   headline: string;
   description: string;
   facts: Fact[];
-  image?: { src: string; alt: string };
+  /** width/height: Pixelmaße der Datei, Standard 1080×1350 (Hochformat 4:5). */
+  image?: { src: string; alt: string; width?: number; height?: number };
   /** Statt Bild: eigenes Medium, z. B. ein Portal-Screenshot. */
   media?: React.ReactNode;
   /** Preis-Kasten über dem Start-Button (nur Variante mobile-first). */
@@ -87,8 +88,8 @@ function ClassicFunnelPage({
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    width={1080}
-                    height={1350}
+                    width={image.width ?? 1080}
+                    height={image.height ?? 1350}
                     priority
                     className="h-auto w-full"
                     sizes="(min-width: 1024px) 40vw, 240px"
@@ -277,8 +278,8 @@ function MobileFirstFunnelPage({
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      width={1080}
-                      height={1350}
+                      width={image.width ?? 1080}
+                      height={image.height ?? 1350}
                       priority
                       className="h-auto w-full"
                       sizes="40vw"
