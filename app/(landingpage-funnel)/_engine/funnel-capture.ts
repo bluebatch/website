@@ -9,12 +9,20 @@ export interface Utm {
   utm_campaign?: string;
 }
 
+export interface FunnelContact {
+  firstname: string;
+  lastname: string;
+  company: string;
+  phone?: string;
+}
+
 export interface FunnelSubmission {
   funnel: string;
   funnelTitle: string;
   email: string;
   selectedDate?: string;
   note?: string;
+  contact?: FunnelContact;
   answers: Record<string, string | string[]>;
 }
 

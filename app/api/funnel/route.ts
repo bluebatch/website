@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { ensureContact } from "@/lib/server/hubspot-lead";
+import { ensureContact, upsertContact } from "@/lib/server/hubspot-lead";
 
 export const runtime = "nodejs";
 
@@ -15,6 +15,7 @@ interface Payload {
   email?: string;
   selectedDate?: string; // gewählter Termin (Klartext) — leer bei reinem Request
   note?: string; // freie Nachricht des Users
+  contact?: { firstname?: string; lastname?: string; company?: string; phone?: string };
   answers?: Record<string, string | string[]>; // alle Game-Antworten
   utm_source?: string;
   utm_campaign?: string;
@@ -53,17 +54,25 @@ function fmtAnswer(value: string | string[]): string {
   return Array.isArray(value) ? value.join(", ") : value;
 }
 
+const esc = (s: string) =>
+  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
 function buildNoteBody(p: Payload): string {
   const head = p.funnelTitle ?? p.funnel ?? "Landingpage-Funnel";
   const lines: string[] = [];
   if (p.email) lines.push(`<strong>E-Mail:</strong> ${p.email}`);
+  const c = p.contact;
+  const name = [c?.firstname, c?.lastname].filter(Boolean).join(" ");
+  if (name) lines.push(`<strong>Name:</strong> ${esc(name)}`);
+  if (c?.company) lines.push(`<strong>Firma:</strong> ${esc(c.company)}`);
+  if (c?.phone) lines.push(`<strong>Telefon:</strong> ${esc(c.phone)}`);
   if (p.selectedDate)
     lines.push(`<strong>Gewählter Termin:</strong> ${p.selectedDate}`);
   for (const [k, v] of Object.entries(p.answers ?? {})) {
     const val = fmtAnswer(v);
     if (val && val.trim()) lines.push(`<strong>${k}:</strong> ${val}`);
   }
-  if (p.note?.trim()) lines.push(`<strong>Nachricht:</strong> ${p.note.trim()}`);
+  if (p.note?.trim()) lines.push(`<strong>Nachricht:</strong> ${esc(p.note.trim())}`);
   if (p.utm_source) lines.push(`<strong>utm_source:</strong> ${p.utm_source}`);
   if (p.utm_campaign)
     lines.push(`<strong>utm_campaign:</strong> ${p.utm_campaign}`);
@@ -114,7 +123,19 @@ export async function POST(req: NextRequest) {
   try {
     // lead_source ist ein Dropdown (referral|outbound|inbound). Ungültige Werte
     // ließen den Create still scheitern; ensureContact versucht sonst nur mit email.
-    const contactId = await ensureContact(email, { lead_source: "inbound", ...utm });
+    const contactProps: Record<string, string> = {};
+    for (const k of ["firstname", "lastname", "company", "phone"] as const) {
+      const v = body.contact?.[k]?.trim();
+      if (v) contactProps[k] = v;
+    }
+    const contactId = await ensureContact(email, {
+      lead_source: "inbound",
+      ...contactProps,
+      ...utm,
+    });
+    // Bestehende Contacts: Name/Firma/Telefon aus der Anmeldung nachtragen.
+    if (contactId && Object.keys(contactProps).length)
+      await upsertContact(email, contactProps);
     if (contactId) await createNote(contactId, buildNoteBody(body));
     return NextResponse.json({ ok: true, contactId });
   } catch {

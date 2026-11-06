@@ -64,6 +64,7 @@ export const claudeCoworkNuernbergFunnel: FunnelConfig = {
       id: "final",
       type: "final",
       icon: Ticket,
+      contact: true,
       eyebrow: "Fast geschafft",
       title: "Sichere dir deinen Platz am 10.12.2026",
       subtitle:

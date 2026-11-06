@@ -88,6 +88,9 @@ export interface FinalStep extends BaseStep {
   type: "final";
   /** Wenn gesetzt: Terminauswahl (Pflicht) vor dem Absenden. */
   dates?: DateOption[];
+  /** Wenn true: Vorname, Nachname, Firma (Pflicht), Telefon (optional) und
+   *  Datenschutz-Checkbox, z. B. für verbindliche Anmeldung auf Rechnung. */
+  contact?: boolean;
   /** Optionales Freitextfeld ("Was möchtest du automatisieren?"). */
   noteLabel?: string;
   notePlaceholder?: string;
@@ -635,10 +638,25 @@ function FinalView({
   const [note, setNote] = useState("");
   const [dateIdx, setDateIdx] = useState<number | null>(null);
   const [sent, setSent] = useState(false);
+  const [contact, setContact] = useState({
+    firstname: "",
+    lastname: "",
+    company: "",
+    phone: "",
+  });
+  const [privacy, setPrivacy] = useState(false);
+  const setField = (k: keyof typeof contact) => (v: string) =>
+    setContact((c) => ({ ...c, [k]: v }));
 
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const dateOk = !step.dates || dateIdx !== null;
-  const canSend = emailValid && dateOk;
+  const contactOk =
+    !step.contact ||
+    (!!contact.firstname.trim() &&
+      !!contact.lastname.trim() &&
+      !!contact.company.trim() &&
+      privacy);
+  const canSend = emailValid && dateOk && contactOk;
 
   const send = () => {
     if (!canSend || sent) return;
@@ -651,6 +669,14 @@ function FinalView({
         email,
         selectedDate,
         note: note.trim() || undefined,
+        contact: step.contact
+          ? {
+              firstname: contact.firstname.trim(),
+              lastname: contact.lastname.trim(),
+              company: contact.company.trim(),
+              phone: contact.phone.trim() || undefined,
+            }
+          : undefined,
         answers,
       },
       utm,
@@ -750,9 +776,52 @@ function FinalView({
         </div>
       )}
 
+      {/* Kontaktdaten für die Rechnung (optional je nach Funnel) */}
+      {step.contact && (
+        <div className="mb-6 grid gap-3 sm:grid-cols-2">
+          {(
+            [
+              ["firstname", "Vorname", "given-name"],
+              ["lastname", "Nachname", "family-name"],
+              ["company", "Firma", "organization"],
+              ["phone", "Telefon (optional)", "tel"],
+            ] as const
+          ).map(([k, label, auto]) => (
+            <input
+              key={k}
+              type={k === "phone" ? "tel" : "text"}
+              aria-label={label}
+              autoComplete={auto}
+              value={contact[k]}
+              placeholder={label}
+              onChange={(e) => setField(k)(e.target.value)}
+              className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition-colors placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-100"
+            />
+          ))}
+          <label className="flex items-start gap-2 text-sm text-gray-600 sm:col-span-2">
+            <input
+              type="checkbox"
+              checked={privacy}
+              onChange={(e) => setPrivacy(e.target.checked)}
+              className="mt-1"
+            />
+            <span>
+              Ich habe die{" "}
+              <a href="/datenschutz-funnel" target="_blank" className="underline">
+                Datenschutzerklärung
+              </a>{" "}
+              gelesen und bin mit der Verarbeitung meiner Angaben zur Anmeldung
+              einverstanden.
+            </span>
+          </label>
+        </div>
+      )}
+
       {/* Mail + Absenden */}
       <label className="mb-2 block text-sm font-semibold text-gray-800">
-        An welche Mail sollen wir die Bestätigung schicken?
+        {step.contact
+          ? "E-Mail"
+          : "An welche Mail sollen wir die Bestätigung schicken?"}
       </label>
       <div className="flex flex-col gap-2 sm:flex-row">
         <input
@@ -778,6 +847,11 @@ function FinalView({
       {step.dates && dateIdx === null && (
         <p className="mt-2 text-xs text-gray-400">
           Bitte oben einen Termin auswählen.
+        </p>
+      )}
+      {step.contact && !contactOk && (
+        <p className="mt-2 text-xs text-gray-400">
+          Bitte Vorname, Nachname und Firma ausfüllen und den Datenschutz bestätigen.
         </p>
       )}
       {step.hints?.map((h) => (
