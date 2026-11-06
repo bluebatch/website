@@ -90,10 +90,6 @@ export default function Page() {
         headline="Claude Cowork Schulung Nürnberg: Ein Tag, danach arbeitet KI für dich."
         description="Du bringst deine echten Aufgaben mit. Am Abend laufen Mails, Dokumente und Recherche in Minuten statt Stunden. 800 € netto, nur 15 Plätze."
         facts={facts}
-        offer={{
-          price: "800 € netto",
-          label: "1 Tag vor Ort in Nürnberg am 10.12.2026, max. 15 Plätze.",
-        }}
         image={{
           src: "/images/claude-cowork.png",
           alt: "Claude Cowork Workshop in Nürnberg",
