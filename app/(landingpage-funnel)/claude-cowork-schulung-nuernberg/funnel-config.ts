@@ -67,8 +67,8 @@ export const claudeCoworkNuernbergFunnel: FunnelConfig = {
       eyebrow: "Fast geschafft",
       title: "Sichere dir deinen Platz am 10.12.2026",
       subtitle:
-        "1 Tag vor Ort in Nürnberg, 9–17 Uhr, 800 € netto. Die Anmeldung ist verbindlich. Die Rechnung bekommst du von uns.",
-      dates: [{ label: "Do, 10.12.2026 · Nürnberg", meta: "9–17 Uhr vor Ort, 800 € netto, max. 15 Plätze" }],
+        "1 Tag vor Ort in Nürnberg, 9 bis 17 Uhr, 800 € netto. Die Anmeldung ist verbindlich. Die Rechnung bekommst du von uns.",
+      dates: [{ label: "Do, 10.12.2026 · Nürnberg", meta: "9 bis 17 Uhr vor Ort, 800 € netto, max. 15 Plätze" }],
       noteLabel: "Was soll Claude Cowork bei dir übernehmen? (optional)",
       notePlaceholder: "z. B. Monatsberichte, Angebotsentwürfe, Posteingang",
       submitLabel: "Verbindlich anmelden",
@@ -78,7 +78,7 @@ export const claudeCoworkNuernbergFunnel: FunnelConfig = {
       ],
       successTitle: "Du bist dabei!",
       successBody:
-        "Danke für deine Anmeldung zum Workshop am 10.12.2026 in Nürnberg. Wir melden uns innerhalb von 1–2 Werktagen bei dir, mit der Rechnung und allen Infos zum Ort.",
+        "Danke für deine Anmeldung zum Workshop am 10.12.2026 in Nürnberg. Wir melden uns innerhalb von 1 bis 2 Werktagen bei dir, mit der Rechnung und allen Infos zum Ort.",
     },
   ],
 };
