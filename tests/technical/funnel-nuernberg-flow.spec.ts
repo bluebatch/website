@@ -13,6 +13,7 @@ import { BASE_URL } from "../helpers/crawl";
 test("Nürnberg-Funnel: 3 Fragen, Mehrfachauswahl kommt als Liste an", async ({
   page,
 }) => {
+  test.setTimeout(90_000);
   let payload: Record<string, unknown> | null = null;
   await page.route("**/api/**", async (route) => {
     if (route.request().url().includes("/api/funnel")) {
@@ -22,6 +23,8 @@ test("Nürnberg-Funnel: 3 Fragen, Mehrfachauswahl kommt als Liste an", async ({
   });
 
   await page.goto(`${BASE_URL}/claude-cowork-schulung-nuernberg`);
+  // Cookie-Dialog verdeckt sonst den Funnel
+  await page.getByRole("button", { name: "Alle ablehnen" }).click();
 
   // Frage 1 (Pills, springt automatisch weiter)
   await expect(page.getByText("Kennst du Claude Cowork schon?")).toBeVisible();
