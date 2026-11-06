@@ -13,7 +13,7 @@ import {
   Mail,
 } from "lucide-react";
 import ContactButton from "@/components/buttons/contact-button";
-import { captureFunnel } from "./funnel-capture";
+import { captureFunnel, type Utm } from "./funnel-capture";
 
 /* -------------------------------------------------------------------------- */
 /*  Typen — eine Config beschreibt einen kompletten Game-Funnel               */
@@ -156,6 +156,9 @@ export default function FunnelWizard({ config }: { config: FunnelConfig }) {
   const utm = {
     utm_source: searchParams.get("utm_source") ?? undefined,
     utm_campaign: searchParams.get("utm_campaign") ?? undefined,
+    utm_medium: searchParams.get("utm_medium") ?? undefined,
+    utm_content: searchParams.get("utm_content") ?? undefined,
+    utm_term: searchParams.get("utm_term") ?? undefined,
   };
 
   return (
@@ -361,7 +364,7 @@ interface StepProps {
   onNext: () => void;
   onBack?: () => void;
   config: FunnelConfig;
-  utm: { utm_source?: string; utm_campaign?: string };
+  utm: Utm;
 }
 
 function StepRenderer(props: StepProps) {

@@ -7,6 +7,9 @@ import { tracking, MetaEvent } from "@/lib/tracking";
 export interface Utm {
   utm_source?: string;
   utm_campaign?: string;
+  utm_medium?: string;
+  utm_content?: string;
+  utm_term?: string;
 }
 
 export interface FunnelContact {

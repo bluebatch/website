@@ -19,6 +19,9 @@ interface Payload {
   answers?: Record<string, string | string[]>; // alle Game-Antworten
   utm_source?: string;
   utm_campaign?: string;
+  utm_medium?: string;
+  utm_content?: string; // je Meta-Ad, z. B. "dokumente", "mails"
+  utm_term?: string;
 }
 
 function hs(path: string, init: RequestInit) {
@@ -74,8 +77,10 @@ function buildNoteBody(p: Payload): string {
   }
   if (p.note?.trim()) lines.push(`<strong>Nachricht:</strong> ${esc(p.note.trim())}`);
   if (p.utm_source) lines.push(`<strong>utm_source:</strong> ${p.utm_source}`);
-  if (p.utm_campaign)
-    lines.push(`<strong>utm_campaign:</strong> ${p.utm_campaign}`);
+  for (const k of ["utm_campaign", "utm_medium", "utm_content", "utm_term"] as const) {
+    const v = p[k]?.trim();
+    if (v) lines.push(`<strong>${k}:</strong> ${esc(v)}`);
+  }
   return `<p><strong>Anmeldung — ${head}</strong></p><p>${lines.join("<br>")}</p>`;
 }
 
