@@ -92,6 +92,8 @@ export interface FinalStep extends BaseStep {
   noteLabel?: string;
   notePlaceholder?: string;
   submitLabel: string;
+  /** Optionaler Hinweis unter dem Absende-Button (Preis, Verbindlichkeit, Ort). */
+  hints?: string[];
   /** Erfolgstext nach dem Absenden. */
   successTitle: string;
   successBody: string;
@@ -778,6 +780,11 @@ function FinalView({
           Bitte oben einen Termin auswählen.
         </p>
       )}
+      {step.hints?.map((h) => (
+        <p key={h} className="mt-2 text-xs text-gray-500">
+          {h}
+        </p>
+      ))}
 
       {onBack && (
         <div className="mt-8">
