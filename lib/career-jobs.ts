@@ -17,19 +17,20 @@ export const INITIATIVE_APPLICATION = "Initiativbewerbung";
 
 export const jobs: Job[] = [
   {
-    id: "sales-consultant-claude-ki",
-    title: "Sales Consultant Claude / KI",
+    id: "vertrieb-telefonie-sdr",
+    title: "Vertrieb – Telefonie SDR",
     type: "Vollzeit",
     location: "Nürnberg bevorzugt, remote möglich",
     description:
-      "Du verkaufst unsere Private-Claude-Lösung an Anwaltskanzleien und Steuerkanzleien: Claude für das ganze Team, DSGVO-konform über unser Private Claude AI Gateway in Frankfurt. Du führst die Gespräche mit Partnern und Kanzleiinhabern, zeigst an echten Beispielen aus Mandatsarbeit und Kanzleialltag, was Claude abnimmt, und begleitest die Kanzlei bis zum Abschluss.",
+      "Du bist am Telefon zu Hause und liebst es, wenn aus einem kalten Anruf ein heißer Termin wird. Du rufst Anwalts- und Steuerkanzleien an, knackst den Vorzimmer-Check, holst Partner und Inhaber ans Telefon und buchst Demos für unsere Private-Claude-Lösung: Claude fürs ganze Team, DSGVO-konform über unser Private Claude AI Gateway in Frankfurt. Du bringst die Pipeline zum Laufen, wir kümmern uns um den Abschluss.",
     requirements: [
-      "Erfahrung im B2B-Vertrieb, gern an Kanzleien oder andere freie Berufe",
-      "Du arbeitest selbst täglich mit Claude oder ChatGPT und kannst den Nutzen konkret zeigen",
-      "Sicher im Gespräch über Datenschutz und Verschwiegenheit, ohne in Fachjargon zu verfallen",
-      "Strukturierte Arbeitsweise mit CRM und sauberer Pipeline",
+      "Erfahrung in Kaltakquise und Terminierung, gern B2B, gern bei Kanzleien oder anderen freien Berufen",
+      "Du hast Biss, bleibst nach dem dritten Nein freundlich dran und gehst mit Einwänden souverän um",
+      "Du arbeitest selbst täglich mit Claude oder ChatGPT und kannst den Nutzen in zwei Sätzen auf den Punkt bringen",
+      "Sicher im Gespräch über Datenschutz und Verschwiegenheit, ohne Fachjargon",
+      "Du pflegst dein CRM sauber und denkst in Anrufen, Terminen und Abschlussquote",
     ],
-    tags: ["Sales", "Claude", "Kanzleien"],
+    tags: ["Vertrieb", "Telefonie", "Kanzleien"],
   },
   {
     id: "delivery-consultant-claude",

@@ -20,12 +20,12 @@ import CareerOpenings from "@/components/hiring/career-openings";
 export const metadata: Metadata = {
   title: "Karriere bei Bluebatch | Jobs rund um Claude und KI",
   description:
-    "Offene Stellen bei Bluebatch: Sales Consultant und Delivery Consultant für Claude. Bevorzugt an unserem Standort Nürnberg, remote möglich, kleines Team.",
+    "Offene Stellen bei Bluebatch: Vertrieb (Telefonie SDR) und Delivery Consultant für Claude. Bevorzugt an unserem Standort Nürnberg, remote möglich, kleines Team.",
   keywords: [
     "Bluebatch Karriere",
     "Claude Jobs",
     "KI Jobs Deutschland",
-    "Sales Consultant KI",
+    "SDR Vertrieb Telefonie",
     "Delivery Consultant Claude",
   ],
   openGraph: {
