@@ -5,7 +5,7 @@ import type { FunnelConfig } from "../_engine/funnel-wizard";
 // 850 € netto, fester Termin. Kurzer Flow, am Ende direkte Anmeldung mit Termin.
 export const claudeCoworkNuernbergFunnel: FunnelConfig = {
   id: "claude-cowork-schulung-nuernberg",
-  title: "Claude Cowork Workshop Nürnberg (850 € netto, 10.12.2026)",
+  title: "Claude Cowork Workshop Nürnberg (850 € netto, 9.12.2026)",
   steps: [
     {
       id: "kennt_cowork",
@@ -65,7 +65,7 @@ export const claudeCoworkNuernbergFunnel: FunnelConfig = {
       stages: [
         "Antworten auswerten …",
         "Übungen an deine Auswahl andocken …",
-        "Platz am 10.12.2026 prüfen …",
+        "Platz am 9.12.2026 prüfen …",
       ],
       durationMs: 2000,
     },
@@ -75,20 +75,20 @@ export const claudeCoworkNuernbergFunnel: FunnelConfig = {
       icon: Ticket,
       contact: true,
       eyebrow: "Fast geschafft",
-      title: "Sichere dir deinen Platz am 10.12.2026",
+      title: "Sichere dir deinen Platz am 9.12.2026",
       subtitle:
         "1 Tag vor Ort in Nürnberg, 9 bis 17 Uhr, 850 € netto. Die Anmeldung ist verbindlich. Die Rechnung bekommst du von uns.",
-      dates: [{ label: "Do, 10.12.2026 · Nürnberg", meta: "9 bis 17 Uhr vor Ort, 850 € netto, max. 15 Plätze" }],
+      dates: [{ label: "Mi, 9.12.2026 · Nürnberg", meta: "9 bis 17 Uhr vor Ort, 850 € netto, max. 15 Plätze" }],
       noteLabel: "Gibt es eine konkrete Aufgabe, die du mitbringst? (optional)",
       notePlaceholder: "z. B. Monatsbericht, Angebotsentwurf, Posteingang",
       submitLabel: "Verbindlich anmelden",
       hints: [
-        "Mit Klick auf „Verbindlich anmelden“ meldest du dich für den Workshop am 10.12.2026 an. Preis: 850 € zzgl. MwSt.",
+        "Mit Klick auf „Verbindlich anmelden“ meldest du dich für den Workshop am 9.12.2026 an. Preis: 850 € zzgl. MwSt.",
         "Die genaue Adresse bekommst du vor dem Termin.",
       ],
       successTitle: "Du bist dabei!",
       successBody:
-        "Danke für deine Anmeldung zum Workshop am 10.12.2026 in Nürnberg. Wir melden uns innerhalb von 1 bis 2 Werktagen bei dir, mit der Rechnung und allen Infos zum Ort.",
+        "Danke für deine Anmeldung zum Workshop am 9.12.2026 in Nürnberg. Wir melden uns innerhalb von 1 bis 2 Werktagen bei dir, mit der Rechnung und allen Infos zum Ort.",
     },
   ],
 };

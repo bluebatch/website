@@ -5,7 +5,7 @@ import { FaqContainer } from "@/components/ui";
 import ClaudeCoworkNuernbergFunnel from "./funnel";
 
 export const metadata: Metadata = {
-  title: "Claude Cowork Schulung Nürnberg: 1 Tag Workshop am 10.12.2026",
+  title: "Claude Cowork Schulung Nürnberg: 1 Tag Workshop am 9.12.2026",
   description:
     "Ein Tag vor Ort in Nürnberg: Claude Cowork im Arbeitsalltag einsetzen und mit eigenen Abläufen nach Hause gehen. 850 € netto, nur 15 Plätze. Jetzt anmelden.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Bluebatch",
   ],
   openGraph: {
-    title: "Claude Cowork Schulung Nürnberg: 1 Tag Workshop am 10.12.2026",
+    title: "Claude Cowork Schulung Nürnberg: 1 Tag Workshop am 9.12.2026",
     description:
       "Ein Tag vor Ort in Nürnberg, 9 bis 17 Uhr: Claude Cowork für Mails, Dokumente und Recherche, an deinen eigenen Aufgaben. 850 € netto, nur 15 Plätze.",
     type: "website",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 };
 
 const facts = [
-  { bold: "Do, 10.12.2026,", rest: "9 bis 17 Uhr." },
+  { bold: "Mi, 9.12.2026,", rest: "9 bis 17 Uhr." },
   { bold: "Nürnberg vor Ort,", rest: "genaue Adresse folgt mit der Anmeldebestätigung." },
   { bold: "850 € netto", rest: "pro Person, Rechnung per Mail." },
   { bold: "Max. 15 Teilnehmer,", rest: "damit Zeit für deine Fragen bleibt." },
@@ -119,7 +119,7 @@ const faqs = [
   {
     question: "Wann und wo findet der Workshop statt?",
     answer:
-      "Am 10.12.2026 von 9 bis 17 Uhr in Nürnberg. Die genaue Adresse bekommst du mit der Bestätigung.",
+      "Am 9.12.2026 von 9 bis 17 Uhr in Nürnberg. Die genaue Adresse bekommst du mit der Bestätigung.",
   },
   {
     question: "Was kostet die Teilnahme?",
@@ -151,7 +151,7 @@ export default function Page() {
     <>
       <FunnelPage
         variant="mobile-first"
-        preHeadline="Workshop vor Ort · Do, 10.12.2026 · 9 bis 17 Uhr"
+        preHeadline="Workshop vor Ort · Mi, 9.12.2026 · 9 bis 17 Uhr"
         headline="Claude Cowork Schulung Nürnberg: Ein Tag, danach arbeitet KI für dich."
         description="Du bringst deine echten Aufgaben mit. Am Abend laufen Mails, Dokumente und Recherche in Minuten statt Stunden. 850 € netto, nur 15 Plätze."
         facts={facts}

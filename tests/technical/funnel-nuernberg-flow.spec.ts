@@ -58,11 +58,11 @@ test("Nürnberg-Funnel: 3 Fragen, Mehrfachauswahl kommt als Liste an", async ({
 
   // Ladeschritt (2 s), danach Anmeldung
   await expect(
-    page.getByText("Sichere dir deinen Platz am 10.12.2026"),
+    page.getByText("Sichere dir deinen Platz am 9.12.2026"),
   ).toBeVisible({ timeout: 10_000 });
   await expect(page.getByText("850 € netto").first()).toBeVisible();
 
-  await page.getByRole("button", { name: /Do, 10\.12\.2026/ }).click();
+  await page.getByRole("button", { name: /Mi, 9\.12\.2026/ }).click();
   await page.getByPlaceholder("Vorname", { exact: true }).fill("Test");
   await page.getByPlaceholder("Nachname", { exact: true }).fill("Durchklick");
   await page.getByPlaceholder("Firma", { exact: true }).fill("Testfirma");
