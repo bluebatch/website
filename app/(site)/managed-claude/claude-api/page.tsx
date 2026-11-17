@@ -195,7 +195,7 @@ const models = [
     name: "Opus 5.5",
     use: "Die harten Fälle: lange Akten, mehrstufige Agenten, knifflige Analysen.",
     input: "5,15 €",
-    output: "25,74 €",
+    output: "25,80 €",
   },
 ];
 
@@ -213,7 +213,7 @@ const faqs = [
   {
     question: "Was kostet die Claude API über Bluebatch?",
     answer:
-      "Abgerechnet wird der Verbrauch je 1 Million Tokens, getrennt nach Input und Output, netto: Haiku 5.5 kostet 0,13 € und 0,65 €, Sonnet 5.5 2,60 € und 12,60 €, Opus 5.5 5,15 € und 25,74 €. Die vollständige Preisliste mit Cache-Preisen und älteren Modellen steht auf der Preisseite unter Modellkosten.",
+      "Abgerechnet wird der Verbrauch je 1 Million Tokens, getrennt nach Input und Output, netto: Haiku 5.5 kostet 0,13 € und 0,65 €, Sonnet 5.5 2,60 € und 12,60 €, Opus 5.5 5,15 € und 25,80 €. Die vollständige Preisliste mit Cache-Preisen und älteren Modellen steht auf der Preisseite unter Modellkosten.",
   },
   {
     question: "Wie behalte ich die Claude API Kosten im Griff?",

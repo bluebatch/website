@@ -277,7 +277,7 @@ export default function Page() {
           />
           <OfferCard
             href="/managed-claude/integrationen/websearch"
-            price="inklusive"
+            price="0,012 € je Suche"
             title="Websuche (Brave)"
             description="Claude recherchiert im Netz, standardmäßig dabei. Der Admin legt fest, ob Claude vor jeder Suche nachfragt."
             linkLabel="Zur Websuche"

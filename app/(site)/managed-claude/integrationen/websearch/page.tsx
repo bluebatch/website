@@ -84,7 +84,7 @@ const faqs = [
   {
     question: "Kostet die Websuche extra?",
     answer:
-      "Die Websuche ist standardmäßig inklusive, ohne eigenes Such-Abo und ohne eigene Einrichtung. Im Portal sehen Sie die Suchen im Verbrauch unter Werkzeuge, neben den Modellkosten.",
+      "Ja, aber wenig: 0,012 € netto je Suche. Ein eigenes Such-Abo und eine eigene Einrichtung brauchen Sie nicht. Im Portal sehen Sie die Suchen im Verbrauch unter Werkzeuge, neben den Modellkosten.",
   },
   {
     question: "Kann ich die Websuche abschalten?",

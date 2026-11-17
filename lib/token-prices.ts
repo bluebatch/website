@@ -1,4 +1,4 @@
-// Kundenpreise netto je 1 Mio. Tokens, Stand 12.10.2026. Eine Quelle für die
+// Kundenpreise netto je 1 Mio. Tokens, wie im Portal (Preisliste ab 19.10.2026). Eine Quelle für die
 // Preisseite (/managed-claude/preise) und die Funnel-Landingpages.
 export interface TokenPrice {
   model: string;
@@ -10,7 +10,7 @@ export interface TokenPrice {
 }
 
 export const TOKEN_PRICES: TokenPrice[] = [
-  { model: "Claude Opus 5.5", input: "5,15 €", output: "25,74 €", write5m: "6,44 €", write1h: "10,30 €", read: "0,26 €" },
+  { model: "Claude Opus 5.5", input: "5,15 €", output: "25,80 €", write5m: "6,44 €", write1h: "10,30 €", read: "0,26 €" },
   { model: "Claude Opus 5", input: "6,35 €", output: "31,50 €", write5m: "8,05 €", write1h: "12,87 €", read: "0,65 €" },
   { model: "Claude Sonnet 5.5", input: "2,60 €", output: "12,60 €", write5m: "3,22 €", write1h: "5,15 €", read: "0,13 €" },
   { model: "Claude Sonnet 5", input: "2,60 €", output: "12,60 €", write5m: "3,22 €", write1h: "5,15 €", read: "0,26 €" },

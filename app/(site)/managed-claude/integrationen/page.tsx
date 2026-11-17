@@ -101,7 +101,7 @@ const faqs = [
   {
     question: "Was kosten die Anbindungen?",
     answer:
-      "Die Websuche ist inklusive. Der Outlook Connector kostet einmalig 500 € und wird bei Coaching-Paket M oder L voll angerechnet. Der DATEV MCP kostet in der Beta 100 € pro Monat. Ein eigener MCP-Server wird nach Aufwand gebaut, mit Schätzung vorab.",
+      "Die Websuche kostet 0,012 € je Suche, ohne eigenes Abo. Der Outlook Connector kostet einmalig 500 € und wird bei Coaching-Paket M oder L voll angerechnet. Der DATEV MCP kostet in der Beta 100 € pro Monat. Ein eigener MCP-Server wird nach Aufwand gebaut, mit Schätzung vorab.",
   },
   {
     question: "Darf Claude in meinen Systemen schreiben?",
