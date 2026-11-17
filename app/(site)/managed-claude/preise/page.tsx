@@ -152,7 +152,6 @@ export default function Page() {
           <p>
             Cache: Teile, die in vielen Anfragen gleich bleiben, etwa lange Anweisungen oder ein Dokument, das Sie mehrfach befragen, hält Claude 5 Minuten oder 1 Stunde vor. Das Ablegen kostet etwas mehr als normaler Input, jedes weitere Lesen nur einen Bruchteil.
           </p>
-          <p>Die Tokenpreise unterliegen Kursschwankungen und können daher leicht variieren.</p>
         </div>
 
         <SimpleGrid cols={2} className="mt-16 items-start gap-6">
