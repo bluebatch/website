@@ -9,7 +9,7 @@ import { ContactButton, InternalLink } from "@/components/buttons";
 import CertificateMock from "@/components/mockups/certificate-mock";
 
 const description =
-  "KI-Beratung für Unternehmen: 10 Personentage über rund drei Monate, mit Kanzlei-Handbuch, KI-Beauftragten und KI-Strategie. 10.000 €, 2.000 € angerechnet.";
+  "KI-Beratung für Unternehmen: 10 Personentage über rund drei Monate, mit Kanzlei-Handbuch, KI-Beauftragten und KI-Strategie. 10.000 €, 1.500 € angerechnet.";
 
 export const metadata: Metadata = {
   title: "KI-Beratung für Unternehmen: Paket L, 10 Tage Coaching | Bluebatch",
@@ -41,7 +41,7 @@ export default function Page() {
         <StatsLeadHero.PreHeadline>Coaching · Paket L</StatsLeadHero.PreHeadline>
         <StatsLeadHero.Headline>KI-Beratung für Unternehmen: Paket&nbsp;L</StatsLeadHero.Headline>
         <GeoSummary>
-          Paket L ist die KI-Beratung für Unternehmen von Bluebatch: 10 Personentage für 10.000 € zzgl. USt., verteilt auf rund drei Monate. Enthalten sind alles aus Paket M, ein fertiges Kanzlei-Handbuch, die Ausbildung einer KI-Beauftragten oder eines KI-Beauftragten und Ihre KI-Strategie. Einrichtung (1.500 €) und Outlook Connector (500 €) werden zu 100 % angerechnet.
+          Paket L ist die KI-Beratung für Unternehmen von Bluebatch: 10 Personentage für 10.000 € zzgl. USt., verteilt auf rund drei Monate. Enthalten sind alles aus Paket M, ein fertiges Kanzlei-Handbuch, die Ausbildung einer KI-Beauftragten oder eines KI-Beauftragten und Ihre KI-Strategie. Die Einrichtung (1.500 €) wird zu 100 % angerechnet, der Outlook Connector ist darin enthalten.
         </GeoSummary>
         <StatsLeadHero.Cta>
           <ContactButton icon="chat">Paket L anfragen</ContactButton>
@@ -52,8 +52,8 @@ export default function Page() {
             stats={[
               { value: "10", label: "Personentage" },
               { value: "ca. 3", label: "Monate Begleitung" },
-              { value: "2.000 €", label: "angerechnet" },
-              { value: "8.000 €", label: "effektiv zusätzlich" },
+              { value: "1.500 €", label: "angerechnet" },
+              { value: "8.500 €", label: "effektiv zusätzlich" },
             ]}
           />
         </StatsLeadHero.Stats>
@@ -169,17 +169,14 @@ export default function Page() {
         <SimpleGrid cols={2} className="items-center gap-10! lg:gap-16!">
           <RoiCalculation className="order-2 rounded-2xl md:order-1">
             <RoiCalculation.Assumption>
-              Sie buchen die Einrichtung, den Outlook Connector und Paket L.
+              Sie buchen die Einrichtung mit Outlook Connector und Paket L.
             </RoiCalculation.Assumption>
             <div className="py-2">
               <RoiCalculation.Row label="Einrichtung Gateway, einmalig">1.500 €</RoiCalculation.Row>
-              <RoiCalculation.Row label="Outlook Connector, einmalig">500 €</RoiCalculation.Row>
+              <RoiCalculation.Row label="Outlook Connector">inklusive</RoiCalculation.Row>
               <RoiCalculation.Row label="Paket L, 10 Personentage">10.000 €</RoiCalculation.Row>
               <RoiCalculation.Row label="Anrechnung Einrichtung" highlight>
                 − 1.500 €
-              </RoiCalculation.Row>
-              <RoiCalculation.Row label="Anrechnung Outlook Connector" highlight>
-                − 500 €
               </RoiCalculation.Row>
             </div>
             <RoiCalculation.Total label="Gesamt">10.000 €</RoiCalculation.Total>
@@ -190,7 +187,7 @@ export default function Page() {
               <IntroBox.PreHeadline>Rechenbeispiel</IntroBox.PreHeadline>
               <IntroBox.Headline>Einrichtung und Outlook Connector sind drin</IntroBox.Headline>
               <IntroBox.Paragraph className="mb-4!">
-                Bei Paket L rechnen wir die Einrichtung (1.500 €) und den Outlook Connector (500 €) zu 100 % an. Für Gateway, Outlook-Anbindung und zehn Tage Beratung zahlen Sie zusammen 10.000 €, das Coaching selbst kostet effektiv 8.000 € zusätzlich.
+                Bei Paket L rechnen wir die Einrichtung (1.500 €) zu 100 % an, der Outlook Connector ist darin enthalten. Für Gateway, Outlook-Anbindung und zehn Tage Beratung zahlen Sie zusammen 10.000 €, das Coaching selbst kostet effektiv 8.500 € zusätzlich.
               </IntroBox.Paragraph>
             </IntroBox>
             <Typo.Paragraph className="text-gray-600">
@@ -213,7 +210,7 @@ export default function Page() {
             href="/managed-claude/coaching/paket-m"
             price="5.000 €"
             title="Paket M: KI-Workshop, 5 Personentage"
-            description="Grundlagen, KI-Kompetenzschulung mit Zertifikat, erste Anleitungen und Routinen, Grundgerüst für das Handbuch. Ebenfalls 2.000 € angerechnet."
+            description="Grundlagen, KI-Kompetenzschulung mit Zertifikat, erste Anleitungen und Routinen, Grundgerüst für das Handbuch. Ebenfalls 1.500 € angerechnet."
             linkLabel="Zu Paket M"
           />
           <OfferCard
@@ -233,7 +230,7 @@ export default function Page() {
             {
               question: "Was kostet die KI-Beratung für Unternehmen mit Paket L?",
               answer:
-                "Paket L umfasst 10 Personentage und kostet 10.000 € zzgl. USt. Die Einrichtung (1.500 €) und der Outlook Connector (500 €) werden zu 100 % angerechnet, effektiv kommen also 8.000 € hinzu.",
+                "Paket L umfasst 10 Personentage und kostet 10.000 € zzgl. USt. Die Einrichtung (1.500 €) wird zu 100 % angerechnet, der Outlook Connector ist darin enthalten. Effektiv kommen also 8.500 € hinzu.",
             },
             {
               question: "Was unterscheidet Paket L von Paket M?",
@@ -258,7 +255,7 @@ export default function Page() {
             {
               question: "Wie läuft die Anrechnung?",
               answer:
-                "Die Einrichtung des Gateways kostet 1.500 €, der Outlook Connector 500 €. Buchen Sie Paket L, schreiben wir beides voll gut, zusammen bis zu 2.000 €.",
+                "Die Einrichtung des Gateways kostet 1.500 €, der Outlook Connector ist darin enthalten. Buchen Sie Paket L, schreiben wir die 1.500 € voll gut.",
             },
           ]}
         />

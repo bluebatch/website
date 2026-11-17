@@ -1,17 +1,16 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Check, Euro, Mail } from "lucide-react";
+import { Check, Euro } from "lucide-react";
 import ContactButton from "@/components/buttons/contact-button";
 import { Slider, formatEur } from "@/app/(site)/branchen/grosshandel/roi-rechner/shared";
 
 // Kostenrechner Private Claude AI Gateway (Stand 10/2026, alle Werte netto):
-// Einrichtung 1.500 € fix, Outlook Connector 500 € zubuchbar, Verbrauch nach
-// Nutzerklasse. Coaching-Paket M (5 PT) oder L (10 PT) rechnet Einrichtung und
-// Outlook Connector zu 100 % an, höchstens bis zum Paketpreis.
+// Einrichtung 1.500 € fix, Outlook Connector darin enthalten, Verbrauch nach
+// Nutzerklasse. Coaching-Paket M (5 PT) oder L (10 PT) rechnet die Einrichtung
+// zu 100 % an.
 
 const SETUP_EUR = 1500;
-const OUTLOOK_EUR = 500;
 
 const USER_CLASSES = [
   { key: "normal", label: "Normale Nutzer", hint: "gelegentlich Chat und Entwürfe", eurPerMonth: 40, initial: 10, max: 200 },
@@ -43,18 +42,16 @@ export default function KostenRechner() {
     Object.fromEntries(USER_CLASSES.map((c) => [c.key, c.initial])),
   );
   const [pkgKey, setPkgKey] = useState<PackageKey>("m");
-  const [outlook, setOutlook] = useState(false);
 
   const r = useMemo(() => {
     const pkg = PACKAGES[pkgKey];
-    const outlookCost = outlook ? OUTLOOK_EUR : 0;
-    // Angerechnet werden Einrichtung und (falls gebucht) Outlook, nie mehr als der Paketpreis
-    const credit = pkg.price > 0 ? Math.min(SETUP_EUR + outlookCost, pkg.price) : 0;
-    const oneTime = SETUP_EUR + outlookCost + pkg.price - credit;
+    // Angerechnet wird die Einrichtung, nie mehr als der Paketpreis
+    const credit = pkg.price > 0 ? Math.min(SETUP_EUR, pkg.price) : 0;
+    const oneTime = SETUP_EUR + pkg.price - credit;
     const monthly = USER_CLASSES.reduce((sum, c) => sum + users[c.key] * c.eurPerMonth, 0);
     const totalUsers = USER_CLASSES.reduce((sum, c) => sum + users[c.key], 0);
-    return { pkg, outlookCost, credit, oneTime, monthly, totalUsers, year1: oneTime + monthly * 12 };
-  }, [users, pkgKey, outlook]);
+    return { pkg, credit, oneTime, monthly, totalUsers, year1: oneTime + monthly * 12 };
+  }, [users, pkgKey]);
 
   return (
     <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl shadow-primary-900/5">
@@ -136,41 +133,6 @@ export default function KostenRechner() {
               })}
             </div>
           </section>
-
-          <section>
-            <StepLabel n={3}>Add-on</StepLabel>
-            <button
-              type="button"
-              role="switch"
-              aria-checked={outlook}
-              onClick={() => setOutlook((o) => !o)}
-              className={`flex w-full cursor-pointer items-center gap-4 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
-                outlook ? "border-primary-600 bg-primary-50" : "border-gray-200 bg-white hover:border-primary-300"
-              }`}
-            >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-primary-700 ring-1 ring-gray-200">
-                <Mail className="h-5 w-5" aria-hidden />
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block font-bold text-gray-900">Outlook Connector, 500 € einmalig</span>
-                <span className="block text-xs text-gray-500">
-                  Posteingang, Kalender und Entwürfe direkt in Claude. Mit Paket M oder L voll angerechnet.
-                </span>
-              </span>
-              <span
-                className={`relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors ${
-                  outlook ? "bg-primary-600" : "bg-gray-300"
-                }`}
-                aria-hidden
-              >
-                <span
-                  className={`h-5 w-5 rounded-full bg-white shadow transition-transform ${
-                    outlook ? "translate-x-[22px]" : "translate-x-0.5"
-                  }`}
-                />
-              </span>
-            </button>
-          </section>
         </div>
 
         {/* Summenkarte */}
@@ -206,12 +168,10 @@ export default function KostenRechner() {
               <dt className="text-primary-100">Einrichtung (Festpreis)</dt>
               <dd className="font-medium tabular-nums">{formatEur(SETUP_EUR)}</dd>
             </div>
-            {outlook && (
-              <div className="flex justify-between gap-4 py-2.5">
-                <dt className="text-primary-100">Outlook Connector</dt>
-                <dd className="font-medium tabular-nums">{formatEur(OUTLOOK_EUR)}</dd>
-              </div>
-            )}
+            <div className="flex justify-between gap-4 py-2.5">
+              <dt className="text-primary-100">Outlook Connector</dt>
+              <dd className="font-medium">inklusive</dd>
+            </div>
             {r.pkg.price > 0 && (
               <>
                 <div className="flex justify-between gap-4 py-2.5">
@@ -222,7 +182,7 @@ export default function KostenRechner() {
                 </div>
                 <div className="flex justify-between gap-4 py-2.5">
                   <dt className="text-green-300">
-                    Anrechnung {outlook ? "Einrichtung und Outlook" : "Einrichtung"}
+                    Anrechnung Einrichtung
                   </dt>
                   <dd className="font-semibold tabular-nums text-green-300">− {formatEur(r.credit)}</dd>
                 </div>
@@ -242,8 +202,8 @@ export default function KostenRechner() {
             <p className="flex gap-2.5 rounded-xl bg-green-400/15 px-4 py-3 text-sm text-green-100 ring-1 ring-green-300/30">
               <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-300" aria-hidden />
               <span>
-                {formatEur(r.credit)} angerechnet: Mit {r.pkg.label} zahlen Sie für Einrichtung
-                {outlook ? ", Outlook Connector" : ""} und {r.pkg.days} Personentage Coaching zusammen{" "}
+                {formatEur(r.credit)} angerechnet: Mit {r.pkg.label} zahlen Sie für Einrichtung, Outlook
+                Connector und {r.pkg.days} Personentage Coaching zusammen{" "}
                 {formatEur(r.oneTime)}.
               </span>
             </p>

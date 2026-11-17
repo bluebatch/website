@@ -163,7 +163,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Nach dem Go-live</IntroBox.PreHeadline>
           <IntroBox.Headline>Zwei Coaching-Pakete, die Einrichtung wird angerechnet</IntroBox.Headline>
           <IntroBox.Paragraph>
-            5 oder 10 Personentage. Bei beiden Paketen rechnen wir die Einrichtung (1.500 €) und den Outlook Connector (500 €) zu 100 % an. Alle Preise zzgl. USt.
+            5 oder 10 Personentage. Bei beiden Paketen rechnen wir die Einrichtung (1.500 €) zu 100 % an, der Outlook Connector ist darin enthalten. Alle Preise zzgl. USt.
           </IntroBox.Paragraph>
         </IntroBox>
         <SimpleGrid cols={2} className="mx-auto max-w-5xl">

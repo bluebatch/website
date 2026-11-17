@@ -101,7 +101,7 @@ const faqs = [
   {
     question: "Was kosten die Anbindungen?",
     answer:
-      "Die Websuche kostet 0,012 € je Suche, ohne eigenes Abo. Der Outlook Connector kostet einmalig 500 € und wird bei Coaching-Paket M oder L voll angerechnet. Der DATEV MCP kostet in der Beta 100 € pro Monat. Ein eigener MCP-Server wird nach Aufwand gebaut, mit Schätzung vorab.",
+      "Die Websuche kostet 0,012 € je Suche, ohne eigenes Abo. Der Outlook Connector ist in der Einrichtung enthalten. Der DATEV MCP kostet in der Beta 100 € pro Monat. Ein eigener MCP-Server wird nach Aufwand gebaut, mit Schätzung vorab.",
   },
   {
     question: "Darf Claude in meinen Systemen schreiben?",
@@ -170,7 +170,7 @@ export default function Page() {
           />
           <OfferCard
             href="/managed-claude/integrationen/microsoft"
-            price="500 € einmalig"
+            price="inklusive"
             title={
               <>
                 <LogoBadge>
@@ -184,7 +184,7 @@ export default function Page() {
           />
           <OfferCard
             href="/managed-claude/integrationen/websearch"
-            price="inklusive"
+            price="0,012 € je Suche"
             title={
               <>
                 <LogoBadge>

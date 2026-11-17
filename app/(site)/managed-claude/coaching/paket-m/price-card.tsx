@@ -46,7 +46,7 @@ export default function PriceCard() {
         <div className="mx-6 mb-6 rounded-2xl bg-green-50 p-4 ring-1 ring-green-200 sm:mx-7 sm:mb-7">
           <p className="flex items-start gap-2 text-sm font-semibold text-green-800">
             <BadgePercent className="mt-px h-5 w-5 shrink-0" aria-hidden />
-            Einrichtung und Outlook Connector zu 100 % angerechnet
+            Einrichtung zu 100 % angerechnet, Outlook inklusive
           </p>
           <dl className="mt-3 space-y-1.5 text-sm text-gray-700">
             <div className="flex justify-between gap-4">
@@ -55,11 +55,11 @@ export default function PriceCard() {
             </div>
             <div className="flex justify-between gap-4">
               <dt>Outlook Connector</dt>
-              <dd className="tabular-nums text-green-700">− 500 €</dd>
+              <dd className="tabular-nums text-green-700">inklusive</dd>
             </div>
             <div className="flex justify-between gap-4 border-t border-green-200 pt-2 font-semibold text-gray-900">
               <dt>Effektiv zusätzlich</dt>
-              <dd className="tabular-nums">3.000 €</dd>
+              <dd className="tabular-nums">3.500 €</dd>
             </div>
           </dl>
         </div>

@@ -25,7 +25,7 @@ export const rewriteSiteConfig: RewriteSiteConfig = {
 };
 
 const description =
-  "KI-Workshop für Unternehmen: 5 Personentage Coaching für Claude mit KI-Kompetenzschulung und Zertifikat. 5.000 €, Einrichtung und Outlook voll angerechnet.";
+  "KI-Workshop für Unternehmen: 5 Personentage Coaching für Claude mit KI-Kompetenzschulung und Zertifikat. 5.000 €, Einrichtung voll angerechnet, Outlook inklusive.";
 
 export const metadata: Metadata = {
   title: "KI-Workshop für Unternehmen: Paket M, 5 Tage Coaching | Bluebatch",
@@ -126,7 +126,7 @@ export default function Page() {
               <IntroBox.PreHeadline>Rechenbeispiel</IntroBox.PreHeadline>
               <IntroBox.Headline>Was Paket M unterm Strich kostet</IntroBox.Headline>
               <IntroBox.Paragraph className="mb-4!">
-                Die Einrichtung des Gateways (1.500 €) und den Outlook Connector (500 €) rechnen wir bei Paket M zu 100 % an. Wer beides gebucht hat, zahlt für Einrichtung, Outlook Connector und fünf Tage Coaching zusammen 5.000 €. Das Coaching selbst kostet damit effektiv 3.000 € zusätzlich.
+                Die Einrichtung des Gateways (1.500 €) rechnen wir bei Paket M zu 100 % an, der Outlook Connector ist darin enthalten. Für Einrichtung, Outlook Connector und fünf Tage Coaching zahlen Sie zusammen 5.000 €. Das Coaching selbst kostet damit effektiv 3.500 € zusätzlich.
               </IntroBox.Paragraph>
             </IntroBox>
             <Typo.Paragraph className="text-gray-600">
@@ -139,17 +139,14 @@ export default function Page() {
           </div>
           <RoiCalculation className="rounded-2xl">
             <RoiCalculation.Assumption>
-              Sie buchen die Einrichtung, den Outlook Connector und Paket M.
+              Sie buchen die Einrichtung mit Outlook Connector und Paket M.
             </RoiCalculation.Assumption>
             <div className="py-2">
               <RoiCalculation.Row label="Einrichtung Gateway, einmalig">1.500 €</RoiCalculation.Row>
-              <RoiCalculation.Row label="Outlook Connector, einmalig">500 €</RoiCalculation.Row>
+              <RoiCalculation.Row label="Outlook Connector">inklusive</RoiCalculation.Row>
               <RoiCalculation.Row label="Paket M, 5 Personentage">5.000 €</RoiCalculation.Row>
               <RoiCalculation.Row label="Anrechnung Einrichtung" highlight>
                 − 1.500 €
-              </RoiCalculation.Row>
-              <RoiCalculation.Row label="Anrechnung Outlook Connector" highlight>
-                − 500 €
               </RoiCalculation.Row>
             </div>
             <RoiCalculation.Total label="Gesamt">5.000 €</RoiCalculation.Total>
@@ -228,7 +225,7 @@ export default function Page() {
             {
               question: "Was kostet der KI-Workshop für Unternehmen?",
               answer:
-                "Paket M umfasst 5 Personentage und kostet 5.000 € zzgl. USt. Die Einrichtung (1.500 €) und der Outlook Connector (500 €) werden zu 100 % angerechnet, effektiv kommen also 3.000 € hinzu.",
+                "Paket M umfasst 5 Personentage und kostet 5.000 € zzgl. USt. Die Einrichtung (1.500 €) wird zu 100 % angerechnet, der Outlook Connector ist darin enthalten. Effektiv kommen also 3.500 € hinzu.",
             },
             {
               question: "Ist Paket M ein KI-Seminar?",
@@ -238,7 +235,7 @@ export default function Page() {
             {
               question: "Wie läuft die Anrechnung?",
               answer:
-                "Die Einrichtung des Gateways kostet 1.500 €, der Outlook Connector 500 €. Buchen Sie Paket M, schreiben wir beides voll gut, zusammen bis zu 2.000 €. Ohne Outlook Connector werden die 1.500 € der Einrichtung angerechnet.",
+                "Die Einrichtung des Gateways kostet 1.500 €, der Outlook Connector ist darin enthalten. Buchen Sie Paket M, schreiben wir die 1.500 € voll gut.",
             },
             {
               question: "Bekommen alle Mitarbeiter ein Zertifikat?",
@@ -248,7 +245,7 @@ export default function Page() {
             {
               question: "Was ist aus Paket S geworden?",
               answer:
-                "Paket S mit 3 Personentagen gibt es nicht mehr, Paket M ersetzt es. Damit bleibt mehr Zeit für die ersten Anleitungen und das Handbuch, und Einrichtung und Outlook Connector werden jetzt voll angerechnet.",
+                "Paket S mit 3 Personentagen gibt es nicht mehr, Paket M ersetzt es. Damit bleibt mehr Zeit für die ersten Anleitungen und das Handbuch, und die Einrichtung wird jetzt voll angerechnet.",
             },
           ]}
         />

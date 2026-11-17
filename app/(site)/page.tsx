@@ -254,7 +254,7 @@ export default function Home() {
             href="/managed-claude/coaching"
             price="ab 5.000 €"
             title="Schritt 2: Coaching"
-            description="KI-Schulung im Haus: Paket M mit 5 Personentagen für 5.000 €, Paket L mit 10 Personentagen für 10.000 €. Einrichtung und Outlook Connector werden voll angerechnet."
+            description="KI-Schulung im Haus: Paket M mit 5 Personentagen für 5.000 €, Paket L mit 10 Personentagen für 10.000 €. Die Einrichtung wird voll angerechnet, der Outlook Connector ist enthalten."
             linkLabel="Zum Coaching"
           />
           <OfferCard

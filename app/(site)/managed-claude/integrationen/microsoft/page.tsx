@@ -39,7 +39,7 @@ import { ClaudeLogo, MicrosoftLogo, OutlookLogo } from "@/components/icons/brand
 const meta = {
   title: "Claude Outlook: Mails, Kalender und Dateien in Claude",
   description:
-    "Claude Outlook für Microsoft 365: Claude liest Mails, Kalender und OneDrive mit den Rechten jeder Person. 500 € einmalig, bei Coaching M oder L angerechnet.",
+    "Claude Outlook für Microsoft 365: Claude liest Mails, Kalender und OneDrive mit den Rechten jeder Person. In der Einrichtung des Gateways enthalten.",
 };
 
 export const metadata: Metadata = {
@@ -112,7 +112,7 @@ const faqs = [
   {
     question: "Was kostet der Outlook Connector?",
     answer:
-      "Einmalig 500 € für die Einrichtung mit App-Registrierung und Freigabe im Portal. Mit Coaching-Paket M oder L wird der Betrag zu 100 % angerechnet, ebenso die Einrichtung des Gateways mit 1.500 €.",
+      "Nichts extra. App-Registrierung, Freigabe im Portal und Test sind in der Einrichtung des Gateways (1.500 €) enthalten. Mit Coaching-Paket M oder L wird die Einrichtung zu 100 % angerechnet.",
   },
   {
     question: "Sieht Claude alle Postfächer der Kanzlei?",
@@ -130,7 +130,7 @@ export default function Page() {
             <Hero2ColumnPreHeadline>Integration · Microsoft 365</Hero2ColumnPreHeadline>
             <Hero2ColumnHeadline>Claude Outlook Connector für Microsoft 365</Hero2ColumnHeadline>
             <Hero2ColumnDescription geo>
-              Mit dem Claude Outlook Connector liest Claude Ihre Mails, Termine und Dateien aus Microsoft 365, direkt in Claude Desktop. Jede Person meldet sich mit dem eigenen Microsoft-Konto an und Claude sieht nur, was sie sehen darf, standardmäßig nur lesend. Die Einrichtung kostet einmalig 500 €, mit Coaching-Paket M oder L wird sie voll angerechnet.
+              Mit dem Claude Outlook Connector liest Claude Ihre Mails, Termine und Dateien aus Microsoft 365, direkt in Claude Desktop. Jede Person meldet sich mit dem eigenen Microsoft-Konto an und Claude sieht nur, was sie sehen darf, standardmäßig nur lesend. Der Connector ist in der Einrichtung des Gateways enthalten, ohne Aufpreis.
             </Hero2ColumnDescription>
             <Hero2ColumnCallToAction>
               <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
@@ -314,9 +314,9 @@ export default function Page() {
         <SimpleGrid cols={3}>
           <OfferCard
             href="/managed-claude/preise"
-            price="500 € einmalig"
+            price="inklusive"
             title="Outlook Connector"
-            description="Einrichtung mit App-Registrierung, Freigabe im Portal und Test mit Ihrer IT."
+            description="In der Einrichtung des Gateways enthalten: App-Registrierung, Freigabe im Portal und Test mit Ihrer IT."
             linkLabel="Zu den Preisen"
           />
           <OfferCard
@@ -324,7 +324,7 @@ export default function Page() {
             href="/managed-claude/coaching"
             price="100 % angerechnet"
             title="Mit Coaching-Paket M oder L"
-            description="Bei Paket M oder L werden der Outlook Connector und die Einrichtung des Gateways voll angerechnet, bis zu 2.000 €."
+            description="Bei Paket M oder L wird die Einrichtung des Gateways (1.500 €) voll angerechnet, der Outlook Connector ist darin enthalten."
             linkLabel="Zu den Coaching-Paketen"
           />
           <OfferCard

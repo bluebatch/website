@@ -115,8 +115,8 @@ const buildingBlocks = [
 const comparison: { label: string; m: string | boolean; l: string | boolean; strong?: boolean }[] = [
   { label: "Umfang", m: "5 Personentage", l: "10 Personentage" },
   { label: "Preis zzgl. USt.", m: "5.000 €", l: "10.000 €", strong: true },
-  { label: "Angerechnet: Einrichtung und Outlook Connector", m: "− 2.000 €", l: "− 2.000 €" },
-  { label: "Effektiv zusätzlich", m: "3.000 €", l: "8.000 €", strong: true },
+  { label: "Angerechnet: Einrichtung, Outlook Connector inklusive", m: "− 1.500 €", l: "− 1.500 €" },
+  { label: "Effektiv zusätzlich", m: "3.500 €", l: "8.500 €", strong: true },
   { label: "Begleitung", m: "kompakt, Termine nach Absprache", l: "rund drei Monate" },
   { label: "Schulung: Modelle, App, Chat, Co-Work, Projekte", m: true, l: true },
   { label: "KI-Kompetenzschulung mit Zertifikat je Mitarbeiter", m: true, l: true },
@@ -155,7 +155,7 @@ export default function Page() {
               <ContactButton icon="chat">Gespräch vereinbaren</ContactButton>
             </Hero2ColumnCallToAction>
             <Hero2ColumnSubtext>
-              Einrichtung und Outlook Connector werden zu 100 % angerechnet. Alle Preise zzgl. USt. Vor dem Coaching steht die{" "}
+              Die Einrichtung wird zu 100 % angerechnet, der Outlook Connector ist darin enthalten. Alle Preise zzgl. USt. Vor dem Coaching steht die{" "}
               <InternalLink href="/managed-claude/onboarding" variant="underline">
                 KI-Einführung in einer Woche
               </InternalLink>
@@ -189,7 +189,7 @@ export default function Page() {
           <IntroBox.PreHeadline>Zwei Pakete</IntroBox.PreHeadline>
           <IntroBox.Headline>KI-Schulung für Unternehmen: Paket M oder Paket L</IntroBox.Headline>
           <IntroBox.Paragraph>
-            5 oder 10 Personentage. Bei beiden Paketen rechnen wir die Einrichtung (1.500 €) und den Outlook Connector (500 €) zu 100 % an, zusammen bis zu 2.000 €. Alle Preise zzgl. USt.
+            5 oder 10 Personentage. Bei beiden Paketen rechnen wir die Einrichtung (1.500 €) zu 100 % an, der Outlook Connector ist darin enthalten. Alle Preise zzgl. USt.
           </IntroBox.Paragraph>
         </IntroBox>
         <SimpleGrid cols={2} className="mx-auto max-w-5xl">
@@ -197,7 +197,7 @@ export default function Page() {
             href="/managed-claude/coaching/paket-m"
             price="5.000 €"
             title="Paket M: KI-Workshop, 5 Personentage"
-            description="Schulung zu Modellen, App, Chat, Co-Work und Projekten, KI-Kompetenzschulung mit Zertifikat, erste Arbeitsanleitungen und Routinen, Grundgerüst für das Kanzlei-Handbuch. Effektiv 3.000 € zusätzlich."
+            description="Schulung zu Modellen, App, Chat, Co-Work und Projekten, KI-Kompetenzschulung mit Zertifikat, erste Arbeitsanleitungen und Routinen, Grundgerüst für das Kanzlei-Handbuch. Effektiv 3.500 € zusätzlich."
             linkLabel="Zu Paket M"
           />
           <OfferCard
@@ -205,7 +205,7 @@ export default function Page() {
             href="/managed-claude/coaching/paket-l"
             price="10.000 €"
             title="Paket L: KI-Beratung, 10 Personentage"
-            description="Alles aus Paket M, dazu rund drei Monate Begleitung, ein fertiges Kanzlei-Handbuch, eine KI-Beauftragte oder ein KI-Beauftragter im Haus und Ihre KI-Strategie. Effektiv 8.000 € zusätzlich."
+            description="Alles aus Paket M, dazu rund drei Monate Begleitung, ein fertiges Kanzlei-Handbuch, eine KI-Beauftragte oder ein KI-Beauftragter im Haus und Ihre KI-Strategie. Effektiv 8.500 € zusätzlich."
             linkLabel="Zu Paket L"
           />
         </SimpleGrid>
@@ -255,7 +255,7 @@ export default function Page() {
             ))}
           </div>
           <Typo.Paragraph className="mt-4 text-center text-sm text-gray-500">
-            Effektiv zusätzlich: Paketpreis abzüglich der Anrechnung, wenn Sie Einrichtung und Outlook Connector gebucht haben. Die Modellkosten laufen nach Verbrauch, siehe{" "}
+            Effektiv zusätzlich: Paketpreis abzüglich der angerechneten Einrichtung. Die Modellkosten laufen nach Verbrauch, siehe{" "}
             <InternalLink href="/managed-claude/preise" variant="underline">
               Preise
             </InternalLink>
@@ -420,7 +420,7 @@ export default function Page() {
             {
               question: "Was kostet die KI-Schulung für Unternehmen?",
               answer:
-                "Paket M (5 Personentage) kostet 5.000 €, Paket L (10 Personentage) 10.000 €, jeweils zzgl. USt. Bei beiden rechnen wir die Einrichtung (1.500 €) und den Outlook Connector (500 €) zu 100 % an. Effektiv kommen damit 3.000 € bzw. 8.000 € hinzu.",
+                "Paket M (5 Personentage) kostet 5.000 €, Paket L (10 Personentage) 10.000 €, jeweils zzgl. USt. Bei beiden rechnen wir die Einrichtung (1.500 €) zu 100 % an, der Outlook Connector ist darin enthalten. Effektiv kommen damit 3.500 € bzw. 8.500 € hinzu.",
             },
             {
               question: "Was ist der Unterschied zwischen KI-Schulung und KI-Coaching?",

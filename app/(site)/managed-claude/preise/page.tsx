@@ -43,9 +43,9 @@ const PRICE_COLUMNS = [
 ] as const;
 
 const CREDIT_ROWS = [
-  { name: "Ohne Coaching", scope: "Nur Einrichtung", price: "0 €", credited: null, total: "1.500 €", totalNote: "mit Outlook 2.000 €" },
-  { name: "Paket M", scope: "5 Personentage", price: "5.000 €", credited: "bis 2.000 €", total: "5.000 €", totalNote: null },
-  { name: "Paket L", scope: "10 Personentage", price: "10.000 €", credited: "bis 2.000 €", total: "10.000 €", totalNote: null },
+  { name: "Ohne Coaching", scope: "Nur Einrichtung", price: "0 €", credited: null, total: "1.500 €", totalNote: "Outlook Connector inklusive" },
+  { name: "Paket M", scope: "5 Personentage", price: "5.000 €", credited: "1.500 €", total: "5.000 €", totalNote: null },
+  { name: "Paket L", scope: "10 Personentage", price: "10.000 €", credited: "1.500 €", total: "10.000 €", totalNote: null },
 ];
 
 export default function Page() {
@@ -197,9 +197,9 @@ export default function Page() {
 
       <ContentWrapper colorScheme="gray-light" id="coaching-pakete">
         <IntroBox textCentered>
-          <IntroBox.Headline>Coaching-Pakete: Einrichtung und Outlook voll angerechnet</IntroBox.Headline>
+          <IntroBox.Headline>Coaching-Pakete: Einrichtung voll angerechnet</IntroBox.Headline>
           <IntroBox.Paragraph>
-            Mit Paket M oder L bekommen Sie die Einrichtung (1.500 €) und den Outlook Connector (500 €) zu 100 % angerechnet, zusammen bis zu 2.000 €.
+            Mit Paket M oder L bekommen Sie die Einrichtung (1.500 €) zu 100 % angerechnet. Der Outlook Connector ist in der Einrichtung enthalten.
           </IntroBox.Paragraph>
         </IntroBox>
         <SimpleGrid cols={2} className="gap-6">
@@ -207,7 +207,7 @@ export default function Page() {
             href="/managed-claude/coaching/paket-m"
             price="5.000 €"
             title="Paket M: 5 Personentage"
-            description="Schulung zu Modellen, App, Chat, Co-Work und Projekten, KI-Kompetenzschulung mit Zertifikat, erste Arbeitsanleitungen und Routinen, Grundgerüst für das Kanzlei-Handbuch. Einrichtung und Outlook Connector zu 100 % angerechnet."
+            description="Schulung zu Modellen, App, Chat, Co-Work und Projekten, KI-Kompetenzschulung mit Zertifikat, erste Arbeitsanleitungen und Routinen, Grundgerüst für das Kanzlei-Handbuch. Einrichtung zu 100 % angerechnet."
             linkLabel="Zu Paket M"
           />
           <OfferCard
@@ -215,7 +215,7 @@ export default function Page() {
             href="/managed-claude/coaching/paket-l"
             price="10.000 €"
             title="Paket L: 10 Personentage"
-            description="Alles aus Paket M, dazu rund drei Monate Begleitung, ein fertiges Kanzlei-Handbuch, eine KI-Beauftragte oder ein KI-Beauftragter im Haus und Ihre KI-Strategie. Einrichtung und Outlook Connector zu 100 % angerechnet."
+            description="Alles aus Paket M, dazu rund drei Monate Begleitung, ein fertiges Kanzlei-Handbuch, eine KI-Beauftragte oder ein KI-Beauftragter im Haus und Ihre KI-Strategie. Einrichtung zu 100 % angerechnet."
             linkLabel="Zu Paket L"
           />
         </SimpleGrid>
@@ -248,7 +248,7 @@ export default function Page() {
           </DataTable.Body>
         </DataTable>
         <Typo.Paragraph className="mx-auto mt-6 max-w-3xl text-center text-gray-600">
-          Einmalig gesamt = Einrichtung, Outlook Connector und Paket nach Anrechnung. Mit Paket M zahlen Sie für alles zusammen 5.000 €, mit Paket L 10.000 €. Alle Preise zzgl. USt.
+          Einmalig gesamt = Einrichtung und Paket nach Anrechnung, der Outlook Connector ist enthalten. Mit Paket M zahlen Sie für alles zusammen 5.000 €, mit Paket L 10.000 €. Alle Preise zzgl. USt.
         </Typo.Paragraph>
       </ContentWrapper>
 
@@ -262,9 +262,9 @@ export default function Page() {
         <SimpleGrid cols={3} className="gap-6">
           <OfferCard
             href="/managed-claude/integrationen/microsoft"
-            price="500 € einmalig"
+            price="inklusive"
             title="Outlook Connector"
-            description="Posteingang, Kalender und Entwürfe direkt in Claude, die Grundlage für den Mail-Agenten. Mit Coaching-Paket M oder L voll angerechnet."
+            description="Posteingang, Kalender und Entwürfe direkt in Claude, die Grundlage für den Mail-Agenten. In der Einrichtung enthalten."
             linkLabel="Zum Outlook Connector"
           />
           <OfferCard
@@ -295,7 +295,7 @@ export default function Page() {
             },
             {
               question: "Wie setzen sich die Claude Preise bei Bluebatch zusammen?",
-              answer: "Aus drei Teilen: Einrichtung des Gateways einmalig 1.500 €, Modellkosten nach Verbrauch laut Preisliste je 1 Million Tokens und, wenn Sie wollen, Coaching und Add-ons. Mit Coaching-Paket M (5.000 €) oder L (10.000 €) werden Einrichtung und Outlook Connector zu 100 % angerechnet. Alle Preise zzgl. USt.",
+              answer: "Aus drei Teilen: Einrichtung des Gateways einmalig 1.500 €, Modellkosten nach Verbrauch laut Preisliste je 1 Million Tokens und, wenn Sie wollen, Coaching und Add-ons. Mit Coaching-Paket M (5.000 €) oder L (10.000 €) werden Einrichtung zu 100 % angerechnet. Alle Preise zzgl. USt.",
             },
             {
               question: "Was kosten Tokens bei Claude?",
