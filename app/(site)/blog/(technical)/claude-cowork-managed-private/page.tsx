@@ -437,6 +437,15 @@ export default function Page() {
               Bedrock-Modus und sagt ihm, auf welchen Endpoint er zugreifen
               soll. Ab dann laufen alle Anfragen über das eigene AWS-Konto.
             </Typo.Paragraph>
+            <Typo.Paragraph>
+              Wie die Konfiguration im Detail aussieht, was nach dem Rollout
+              dauerhaft an der IT hängen bleibt und warum ein Gateway das
+              meist einfacher löst, zeigt der Beitrag{" "}
+              <Link href="/blog/claude-cowork-bedrock-dsgvo">
+                Claude Cowork Bedrock: Claude Desktop DSGVO-konform über AWS
+              </Link>
+              .
+            </Typo.Paragraph>
 
             <BlogImage
               src="/blog/claude-cowork-managed-private/bedrock-architecture.png"

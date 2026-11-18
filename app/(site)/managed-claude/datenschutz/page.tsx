@@ -469,7 +469,11 @@ export default function Page() {
               </TimelineAsStepsStep>
             </TimelineAsSteps>
             <Typo.Paragraph textColor="muted" className="mt-8" spacing="none">
-              Welche anderen Werkzeuge sich ähnlich absichern lassen, zeigt unser Überblick über{" "}
+              Wie Claude Cowork über Amazon Bedrock läuft, direkt per MDM oder über das Gateway, zeigt der Beitrag zu{" "}
+              <InternalLink href="/blog/claude-cowork-bedrock-dsgvo" variant="underline">
+                Claude Cowork Bedrock
+              </InternalLink>
+              . Welche anderen Werkzeuge sich ähnlich absichern lassen, zeigt unser Überblick über{" "}
               <InternalLink href="/blog/dsgvo-konforme-ki-tools" variant="underline">
                 DSGVO-konforme KI-Tools
               </InternalLink>
