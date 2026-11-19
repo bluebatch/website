@@ -364,6 +364,14 @@ export default function Page() {
           <InternalLink href="/managed-claude/integrationen/mcp-server-erstellen" variant="underline">
             MCP-Server erstellen lassen
           </InternalLink>
+          . Wie Server und Skills als Plugin auf alle Rechner kommen, zeigt{" "}
+          <InternalLink href="/managed-claude/plugins" variant="underline">
+            Plugins im Gateway
+          </InternalLink>
+          , ganze Plugins für Ihre Abläufe bauen wir in der{" "}
+          <InternalLink href="/managed-claude/integrationen/plugin-entwicklung" variant="underline">
+            Plugin-Entwicklung
+          </InternalLink>
           .
         </Typo.Paragraph>
       </ContentWrapper>

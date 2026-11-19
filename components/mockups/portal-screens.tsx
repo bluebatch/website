@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import {
+  Box,
   ChevronDown,
   Download,
   FileCode,
@@ -10,6 +11,7 @@ import {
   Plus,
   Search,
   Server,
+  Upload,
 } from "lucide-react";
 import { BraveLogo, ClaudeLogo, DatevLogo, MicrosoftLogo } from "@/components/icons/brand-logos";
 import BrowserFrame from "./browser-frame";
@@ -522,7 +524,7 @@ export function InstructionsScreen({ tilt, compact, sidebar, className }: Screen
 
 export function SkillsScreen({ tilt, compact, sidebar, className }: ScreenProps) {
   return (
-    <Screen path="/skills" active="skills" tilt={tilt} compact={compact} sidebar={sidebar} className={className}>
+    <Screen path="/plugins" active="skills" tilt={tilt} compact={compact} sidebar={sidebar} className={className}>
       <Head action={<PortalMock.Button variant="primary">Neuer Skill</PortalMock.Button>}>
         Skills bringen Claude bei, wie Ihre Organisation bestimmte Aufgaben erledigt. Sie erscheinen in Claude
         Desktop unter Anpassen → Plugins → Organisation.
@@ -578,6 +580,185 @@ export function SkillsScreen({ tilt, compact, sidebar, className }: ScreenProps)
           </div>
         </PortalMock.Card>
       </div>
+    </Screen>
+  );
+}
+
+// ── Plugins: Bibliotheken, Plugins, Skills und benötigte Server ────────────
+
+const pluginLibraries = [
+  {
+    name: "Generell",
+    scope: "Alle Personen",
+    plugins: [
+      { name: "Mandantenpost", count: 3, open: true },
+      { name: "Abrechnung", count: 2 },
+      { name: "Fristen", count: 1 },
+    ],
+  },
+  {
+    name: "Buchhaltung",
+    scope: "4 Personen",
+    plugins: [{ name: "Belegprüfung", count: 2 }],
+  },
+];
+
+function PluginRow({ children, badge }: { children: ReactNode; badge?: ReactNode }) {
+  return (
+    <div className="flex items-center justify-between gap-2 rounded-md border border-gray-200 px-2 py-1 text-[11px] text-gray-800">
+      <span className="min-w-0 truncate">{children}</span>
+      {badge}
+    </div>
+  );
+}
+
+export function PluginsScreen({ tilt, compact, sidebar, className }: ScreenProps) {
+  return (
+    <Screen path="/plugins" active="skills" tilt={tilt} compact={compact} sidebar={sidebar} className={className}>
+      <Head action={<PortalMock.Button variant="primary">Neue Bibliothek</PortalMock.Button>}>
+        Plugins bringen Claude Skills und MCP-Server Ihrer Organisation. Sie liegen in Bibliotheken, die in Claude
+        Desktop unter Anpassen → Plugins → Organisation erscheinen.
+      </Head>
+      <div className="grid gap-3 @xl:grid-cols-[185px_1fr]">
+        <div className="space-y-2">
+          {(compact ? pluginLibraries.slice(0, 1) : pluginLibraries).map((library) => (
+            <PortalMock.Card key={library.name} className="space-y-1 p-2">
+              <div className="flex items-center justify-between gap-2 px-1.5 pb-1">
+                <span className="font-semibold text-gray-900">{library.name}</span>
+                <PortalMock.Switch />
+              </div>
+              <div className="px-1.5 pb-1">
+                <PortalMock.Badge tone={library.scope === "Alle Personen" ? "accent" : "muted"}>{library.scope}</PortalMock.Badge>
+              </div>
+              {library.plugins.map((plugin) => (
+                <div
+                  key={plugin.name}
+                  className={`flex items-center justify-between rounded px-1.5 py-1 ${
+                    "open" in plugin && plugin.open ? "bg-blue-50 font-medium text-[#145cad]" : "text-gray-700"
+                  }`}
+                >
+                  <span className="flex items-center gap-1">
+                    <Box className="h-3 w-3 text-gray-400" aria-hidden />
+                    {plugin.name}
+                  </span>
+                  <span className="text-[10px] text-gray-400">{plugin.count}</span>
+                </div>
+              ))}
+            </PortalMock.Card>
+          ))}
+        </div>
+        <PortalMock.Card className="space-y-3">
+          <div className="flex items-center justify-between gap-2">
+            <span className="font-semibold text-gray-900">Mandantenpost</span>
+            <PortalMock.Badge tone="ok">Version 7</PortalMock.Badge>
+          </div>
+          <PortalMock.Section title="Skills">
+            <div className="space-y-1">
+              <PluginRow>Antwort an Mandanten entwerfen</PluginRow>
+              <PluginRow>Unterlagen anfordern</PluginRow>
+              {!compact && <PluginRow>Bescheid prüfen</PluginRow>}
+            </div>
+          </PortalMock.Section>
+          <PortalMock.Section title="Benötigte MCP-Server">
+            <div className="space-y-1">
+              <PluginRow badge={<PortalMock.Badge>Remote</PortalMock.Badge>}>
+                <span className="inline-flex items-center gap-1.5">
+                  <MicrosoftLogo className="h-3 w-3" />
+                  Microsoft 365
+                </span>
+              </PluginRow>
+              <PluginRow badge={<PortalMock.Badge tone="accent">Lokal · 1.2.0</PortalMock.Badge>}>
+                <span className="inline-flex items-center gap-1.5">
+                  <Server className="h-3 w-3 text-gray-500" aria-hidden />
+                  Akten-Laufwerk
+                </span>
+              </PluginRow>
+            </div>
+          </PortalMock.Section>
+          <div className="flex items-start justify-between gap-3 rounded-md bg-gray-50 px-2 py-1.5">
+            <div>
+              <div className="text-[11px] font-medium text-gray-900">Automatisch installieren</div>
+              {!compact && (
+                <Note>Landet beim nächsten Abgleich ohne Klick bei allen Personen der Bibliothek.</Note>
+              )}
+            </div>
+            <PortalMock.Switch />
+          </div>
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="text-[10px] text-gray-500">In Claude das Plugin „mandantenpost“</span>
+            <PortalMock.Button variant="primary">Speichern</PortalMock.Button>
+          </div>
+        </PortalMock.Card>
+      </div>
+    </Screen>
+  );
+}
+
+// ── Lokale MCP-Server: Bundle hochladen, Versionen, aktive Version ─────────
+
+const bundleVersions = [
+  { version: "1.2.0", type: "binary", size: "4,2 MB", date: "19.11.2026", active: true },
+  { version: "1.1.0", type: "binary", size: "4,1 MB", date: "04.11.2026" },
+  { version: "1.0.0", type: "node", size: "0,8 MB", date: "21.10.2026" },
+];
+
+export function LocalServersScreen({ tilt, compact, sidebar, className }: ScreenProps) {
+  return (
+    <Screen path="/connectors" active="connectors" tilt={tilt} compact={compact} sidebar={sidebar} className={className}>
+      <Head
+        action={
+          <PortalMock.Button variant="primary">
+            <Upload className="mr-1 h-3 w-3" aria-hidden />
+            MCP-Bundle hochladen
+          </PortalMock.Button>
+        }
+      >
+        Lokale MCP-Server laufen auf dem Rechner der Person, gestartet von Claude Desktop. Plugins verweisen auf
+        den Server, die aktive Version kommt bei allen an.
+      </Head>
+      <PortalMock.Card className="space-y-3">
+        <div className="flex items-start gap-3">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gray-50 ring-1 ring-gray-200">
+            <Server className="h-4 w-4 text-gray-600" aria-hidden />
+          </span>
+          <div className="min-w-0 flex-1">
+            <div className="font-semibold text-gray-900">Akten-Laufwerk</div>
+            <div className="text-[11px] leading-snug text-gray-500">Sucht und liest Akten auf dem Kanzlei-Laufwerk.</div>
+            <div className="mt-1.5 flex flex-wrap items-center gap-1.5 text-[10px] text-gray-500">
+              <PortalMock.Badge tone="ok">Aktiv: 1.2.0</PortalMock.Badge>
+              <span>in 2 Plugins</span>
+              <span>· Freigabe: Rückfrage</span>
+            </div>
+          </div>
+          <PortalMock.Switch />
+        </div>
+        <PortalMock.Section title="Versionen">
+          <div className="space-y-1">
+            {(compact ? bundleVersions.slice(0, 2) : bundleVersions).map((v) => (
+              <div
+                key={v.version}
+                className="grid grid-cols-[1fr_auto] items-center gap-2 rounded-md border border-gray-200 px-2 py-1 text-[11px] @md:grid-cols-[70px_60px_60px_1fr_auto]"
+              >
+                <span className="font-medium text-gray-900">{v.version}</span>
+                <span className="hidden text-gray-500 @md:inline">{v.type}</span>
+                <span className="hidden text-gray-500 @md:inline">{v.size}</span>
+                <span className="hidden text-gray-500 @md:inline">{v.date}</span>
+                {v.active ? (
+                  <PortalMock.Badge tone="ok">aktiv</PortalMock.Badge>
+                ) : (
+                  <PortalMock.Button>Aktiv schalten</PortalMock.Button>
+                )}
+              </div>
+            ))}
+          </div>
+        </PortalMock.Section>
+        {!compact && (
+          <>
+            <PortalMock.Field label="Ordner auf dem Rechner">D:\Akten</PortalMock.Field>
+            <Note>Geprüft: Manifest, Größe, keine Pfade nach außen, keine Symlinks. Der Code läuft nur auf den Rechnern, nicht im Gateway.</Note>
+          </>
+        )}
+      </PortalMock.Card>
     </Screen>
   );
 }

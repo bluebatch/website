@@ -37,7 +37,7 @@ const nav = {
   connectors: { label: "Connectors", icon: Plug, group: "Team-Einstellungen" },
   instructions: { label: "Anweisungen", icon: FileText, group: "Team-Einstellungen" },
   banner: { label: "Banner", icon: PanelTop, group: "Team-Einstellungen" },
-  skills: { label: "Skills", icon: Box, group: "Team-Einstellungen" },
+  skills: { label: "Plugins", icon: Box, group: "Team-Einstellungen" },
   folders: { label: "Ordner", icon: Folder, group: "Team-Einstellungen", beta: true },
   network: { label: "Netzwerk", icon: Globe, group: "Team-Einstellungen", beta: true },
   setup: { label: "Einrichtung", icon: Download, group: "System" },

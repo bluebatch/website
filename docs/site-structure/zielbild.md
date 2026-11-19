@@ -6,7 +6,7 @@ die Quelle für die Mindmap [`zielbild.html`](zielbild.html) (im Browser
 [`grundsaetze.md`](grundsaetze.md).
 
 <!-- zielbild:stand -->
-**Stand 2026-10-26:** 393 Seiten im Baum, davon 242 live, 81 unveröffentlicht und 70 geplant.
+**Stand 2026-11-19:** 398 Seiten im Baum, davon 247 live, 81 unveröffentlicht und 70 geplant. 2 Seiten in `app/` fehlen im Baum.
 <!-- /zielbild:stand -->
 
 ## So wird der Baum gepflegt
@@ -46,6 +46,7 @@ die Quelle für die Mindmap [`zielbild.html`](zielbild.html) (im Browser
   - _Angebot, nach Priorität_
     - `claude-app/` HUB · live · Prio 1: Claude für Teams und Enterprise einführen und betreiben
     - `zentrale-steuerung` MONEY · live · Managed Claude Interface: Profile, Ordner-Freigaben, Tools sperren
+    - `plugins` CONTENT · live · Plugins im Gateway: Bibliotheken, Skills, lokale MCP-Server (.mcpb), Auto-Install
     - `claude-api/` HUB · live · Prio 2: Claude per API in eigene Systeme und Prozesse
     - `use-cases/` HUB · live · Prio 3: Wir bauen Use Cases auf Claude
       - `ki-agent-kaufen` MONEY · live
@@ -61,6 +62,7 @@ die Quelle für die Mindmap [`zielbild.html`](zielbild.html) (im Browser
       - `microsoft` MONEY · live · Claude und Microsoft 365 (Outlook, Teams, SharePoint)
       - `websearch` MONEY · live · Claude mit Websuche
       - `mcp-server-erstellen` MONEY · live · Eigene MCP-Server, früher `services/mcp-server-erstellen`
+      - `plugin-entwicklung` MONEY · live · Claude Plugins und MCP-Server nach Maß für Kunden, ab 2.500 €
   - _Einstiege aus der Suche_
     - `chatgpt-alternative` LANDING · geplant · ChatGPT-Alternative für Unternehmen, auf DSGVO zugespitzt (Lücke aus der [Keyword-Map](keyword-map.md))
   - _Nebenthema_
@@ -259,7 +261,7 @@ die Quelle für die Mindmap [`zielbild.html`](zielbild.html) (im Browser
 ## Blog
 
 - `blog/` HUB · live · Blog-Übersicht
-  - `*` CONTENT · 79 live, 6 unveröffentlicht · Blog-Artikel sind immer Content und werden hier nicht einzeln gepflegt
+  - `*` CONTENT · 82 live, 6 unveröffentlicht · Blog-Artikel sind immer Content und werden hier nicht einzeln gepflegt
 
 ## Standorte
 

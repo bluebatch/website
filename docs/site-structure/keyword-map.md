@@ -31,6 +31,8 @@ H2, FAQ, Fließtext. Je Keyword genau **eine** Zielseite (Kannibalisierung).
 | `managed-claude/integrationen` | claude mcp 1000/9 | claude mcp server 320/19, claude desktop mcp 140/15, claude cowork connectors 30 |
 | `managed-claude/integrationen/microsoft` | claude outlook 210/2 | claude for outlook 140/3, claude microsoft 110/0, claude outlook integration 90/0, claude for microsoft 365 70/5, claude für excel 210/7 |
 | `managed-claude/integrationen/datev` | datev ki 880/0 | ki buchhaltung datev 90/0, ki datev 70/0, datev mcp server 40 (Achtung: „datev ki werkstatt“ 3600/0 ist DATEVs eigenes Produkt, nur im Fließtext abgrenzen) |
+| `managed-claude/plugins` | claude plugins verteilen (keine Daten, Stand 2026-11-19) | claude desktop plugins 20/3, claude plugin marketplace (keine Daten); Hauptkeyword „claude plugins“ gehört `/blog/claude-plugins` |
+| `managed-claude/integrationen/plugin-entwicklung` | claude plugins entwickeln lassen (keine Daten, Stand 2026-11-19) | claude plugin entwicklung, claude plugin erstellen (keine Daten), custom mcp server 20/52; „mcp server erstellen“ bleibt bei mcp-server-erstellen |
 | `managed-claude/integrationen/websearch` | claude web search 50 | claude websuche 10 (kaum Volumen, Seite bleibt Feature-Seite) |
 | `managed-claude/use-cases` | claude agent 2900/0 | ki-agenten für unternehmen 90/0, claude ai agent 320/14, claude agent erstellen 140/0, ki-agent claude 110/0 |
 
@@ -50,6 +52,7 @@ H2, FAQ, Fließtext. Je Keyword genau **eine** Zielseite (Kannibalisierung).
 - „claude vs chatgpt“ → `/blog/claude-cowork-vs-copilot-chatgpt`.
 - „amazon bedrock“ → `/blog/amazon-bedrock`, deshalb nur „aws bedrock claude“ auf wie-es-funktioniert.
 - „mcp server erstellen“ → `integrationen/mcp-server-erstellen`.
+- „claude plugins“ (1900/6, Stand 2026-11-19) → `/blog/claude-plugins`, deshalb zielen `plugins` und `plugin-entwicklung` auf Varianten.
 
 ## Offen
 

@@ -380,6 +380,9 @@ export default function Page() {
                 <FeatureRow.Point>Mandantenpost, Abrechnung und Fristen als Themen sortieren.</FeatureRow.Point>
                 <FeatureRow.Point>Skills verteilen, ohne dass jemand selbst etwas installiert.</FeatureRow.Point>
               </FeatureRow.Points>
+              <InternalLink href="/managed-claude/plugins" className="mt-6">
+                Plugins, lokale MCP-Server und Auto-Install
+              </InternalLink>
             </FeatureRow.Text>
             <FeatureRow.Media>
               <SkillsScreen sidebar={false} />

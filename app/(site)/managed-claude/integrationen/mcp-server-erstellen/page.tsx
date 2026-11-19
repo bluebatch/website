@@ -196,6 +196,12 @@ export default function Page() {
           <InternalLink href="/blog/was-ist-mcp-server" variant="underline">
             was ist ein MCP-Server
           </InternalLink>
+          . Soll der Server zusammen mit Skills als Plugin auf alle Rechner,
+          auch als lokaler Server für Laufwerk oder Fachsoftware, ist das ein
+          Fall für die{" "}
+          <InternalLink href="/managed-claude/integrationen/plugin-entwicklung" variant="underline">
+            Plugin-Entwicklung
+          </InternalLink>
           .
         </Typo.Paragraph>
       </ContentWrapper>
