@@ -298,7 +298,13 @@ export default function Page() {
               der eigenen Doku offen, dass Claude Desktop mit Team oder
               Enterprise einfacher zu verteilen ist und neue Funktionen früher
               bekommt. Wer zwingend das Neueste braucht, ist bei claude.ai
-              besser aufgehoben.
+              besser aufgehoben. Welche Neuerungen vom November 2026, etwa
+              Claude Meetings, Sheets und der Advisor, über Bedrock fehlen,
+              zeigt unser Überblick{" "}
+              <Link href="/blog/claude-updates" className={linkClass}>
+                Claude Updates
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>Was sich bei Abrechnung und Anmeldung ändert</Typo.H3>

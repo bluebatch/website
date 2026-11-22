@@ -284,6 +284,13 @@ export default function Page() {
         <Typo.Paragraph textColor="muted" className="mx-auto mt-8 max-w-3xl text-center">
           Schreibrechte wie Entwürfe direkt im Postfach sind über Microsoft technisch möglich, aber bewusst nicht Standard. Ob und wofür, klären wir im Scoping.
         </Typo.Paragraph>
+        <Typo.Paragraph textColor="muted" className="mx-auto mt-4 max-w-3xl text-center">
+          Protokolle aus Teams-Besprechungen schreibt Claude aus dem Teams-Transkript, ohne eigenen Bot im Call. Warum das für deutsche Firmen der einfachere Weg ist als Claude Meetings, steht in den{" "}
+          <InternalLink href="/blog/claude-updates" variant="underline">
+            Claude Updates vom November 2026
+          </InternalLink>
+          .
+        </Typo.Paragraph>
       </ContentWrapper>
 
       <ContentWrapper>

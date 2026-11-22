@@ -53,6 +53,7 @@ H2, FAQ, Fließtext. Je Keyword genau **eine** Zielseite (Kannibalisierung).
 - „amazon bedrock“ → `/blog/amazon-bedrock`, deshalb nur „aws bedrock claude“ auf wie-es-funktioniert.
 - „mcp server erstellen“ → `integrationen/mcp-server-erstellen`.
 - „claude plugins“ (1900/6, Stand 2026-11-19) → `/blog/claude-plugins`, deshalb zielen `plugins` und `plugin-entwicklung` auf Varianten.
+- „claude updates“ / „claude update“ (720/9, Stand 2026-11-22) → `/blog/claude-updates`; Nebenkeywords dort: claude dashboards 1000/4, claude artefakte 480/1, claude advisor 110/2. Die Seite wird bei neuen Anthropic-Releases fortgeschrieben, keine Monats-Slugs anlegen.
 
 ## Offen
 
