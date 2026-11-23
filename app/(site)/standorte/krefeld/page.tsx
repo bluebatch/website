@@ -334,8 +334,8 @@ export default async function Page({
               Aus der historischen Samt- und Seidenstadt wurde Krefeld zum Chemie-Cluster mit einem Drittel der NRW-Chemieproduktion, dazu Outokumpu-Edelstahl und Siempelkamp-Anlagenbau. Quartiers- und Anlagen-Management bedeutet: REACH, IED, CBAM, IATF-Audits und globaler Anlagenbau-Service. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
-                Mit euch wachsen: unser Modell →
+              <Link href="/ueber-uns" className="text-primary-600 hover:underline font-semibold">
+                Über Bluebatch: unsere Geschichte →
               </Link>
             </div>
           </BoundlessImageCard.Content>

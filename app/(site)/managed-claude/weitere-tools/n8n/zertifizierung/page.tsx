@@ -253,14 +253,14 @@ export default async function KiAgenturZertifizierungPage({
                 Bei Bluebatch durchläuft jedes Projekt einen
                 strukturierten{" "}
                 <Link
-                  href={resolveHref("/mit-euch-wachsen")}
+                  href={resolveHref("/managed-claude/onboarding")}
                   className="text-primary-600 hover:underline"
                 >
                   Implementierungsprozess
                 </Link>
                 , der Qualität sicherstellt und Risiken minimiert.
               </Typo.Paragraph>
-              <Link href={resolveHref("/mit-euch-wachsen")}>
+              <Link href={resolveHref("/managed-claude/onboarding")}>
                 <InternalLinkLabel>So arbeiten wir zusammen</InternalLinkLabel>
               </Link>
             </BoundlessImageCard.Content>

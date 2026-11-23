@@ -332,8 +332,8 @@ export default async function Page({
               Aus dem ehemaligen Bergbau-Standort wurde bundesweit beachtetes Modellprojekt für klimagerechten Stadtumbau - mit erreichtem CO2-Ziel von -50% bis 2020. Quartiers- und Energiewende-Management bedeutet: Heizkostenverordnung, KWKG-Förderung, Quartiers-IoT, Bürger-Portale. Daneben hält MC-Bauchemie globale REACH-Compliance, Eurovia baut Straßen, RAG dokumentiert Ewigkeitsaufgaben. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
-                Mit euch wachsen: unser Modell →
+              <Link href="/ueber-uns" className="text-primary-600 hover:underline font-semibold">
+                Über Bluebatch: unsere Geschichte →
               </Link>
             </div>
           </BoundlessImageCard.Content>

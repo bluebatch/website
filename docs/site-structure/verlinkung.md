@@ -33,7 +33,7 @@ Branchen-Hub ────────────┬──> seine Unter-Hubs (ru
                          └──> contact (CTA)
 
 Standort-Seite ──────────┬──> Startseite (Managed-Claude-Hub)
-                         └──> mit-euch-wachsen (Trust)
+                         └──> ueber-uns (Trust)
 
 Funnel-Landingpage ──────> nur eigenes Formular bzw. Kontakt, keine Ausgänge
 ```

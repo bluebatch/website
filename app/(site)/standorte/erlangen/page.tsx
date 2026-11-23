@@ -375,9 +375,9 @@ export default async function Page({
             Rückgrat. Hier entstehen Spin-offs, die früh MDR-konforme Prozesse
             brauchen - und Mittelständler, die als Tier-1 oder Tier-2 in
             Siemens-Lieferketten passen müssen. Wie wir das in sechs Phasen
-            ausrollen, beschreiben wir auf{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            ausrollen, beschreiben wir auf der Seite{" "}
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

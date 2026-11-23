@@ -277,8 +277,8 @@ export default async function Page({
               Aus ehemaligen Bergbauflächen wurde Eurotec-Park und EDEKA-Logistik-Drehkreuz für hunderte Märkte am Rhein. Quartiers- und Logistik-Management bedeutet: WMS-Anbindung, EDIFACT-Lieferanten, Promo-Steuerung und Personaleinsatzplanung. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
-                Mit euch wachsen: unser Modell →
+              <Link href="/ueber-uns" className="text-primary-600 hover:underline font-semibold">
+                Über Bluebatch: unsere Geschichte →
               </Link>
             </div>
           </BoundlessImageCard.Content>

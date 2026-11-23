@@ -358,8 +358,8 @@ export default async function Page({
               Aus dem ehemaligen Senvion-Areal wurden Service-Standorte für Offshore-Wind. Parallel laufen Eurogate und BLG den Container- und Auto-Umschlag, im Fischereihafen werden 200.000 t Fisch verarbeitet, das AWI orchestriert globale Klimaforschung. Quartiers- und Logistik-Management bedeutet: Zollabwicklung, Service-Pipelines, IUU-Doku. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
-                Mit euch wachsen: unser Modell →
+              <Link href="/ueber-uns" className="text-primary-600 hover:underline font-semibold">
+                Über Bluebatch: unsere Geschichte →
               </Link>
             </div>
           </BoundlessImageCard.Content>

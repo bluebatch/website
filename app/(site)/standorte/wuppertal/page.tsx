@@ -400,8 +400,8 @@ export default async function Page({
           <Typo.Paragraph>
             Wie wir die Implementierung Schritt für Schritt strukturieren, beschreiben wir
             auf der Seite{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

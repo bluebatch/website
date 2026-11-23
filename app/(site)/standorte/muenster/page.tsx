@@ -331,9 +331,9 @@ export default async function Page({
             Westfalen-Lippe sein. Im Münsterland kommen Westfleisch, Agravis
             und der Agrar-Mittelstand hinzu, mit eigenen QS-, Tierarzneimittel-
             und CSRD-Anforderungen. Wie wir die Implementierung in sechs
-            Phasen ausrollen, beschreiben wir auf{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            Phasen ausrollen, beschreiben wir auf der Seite{" "}
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

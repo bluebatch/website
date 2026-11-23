@@ -41,7 +41,7 @@ Branchen ▾  (Link auf branchen/)
 │  └─ ROI-Rechner
 
 Blog ▾:      die fünf neuesten Artikel, Alle Artikel (→ Hub)
-Über uns ▾:  Mit euch wachsen, Das Team, Karriere, Kontakt
+Über uns ▾:  Über uns, Karriere, Kontakt
 ```
 
 ## Handy: Drawer mit einer Akkordeon-Ebene
@@ -66,7 +66,7 @@ Link auf den Hub).
 │    Anwälte → Hub         Private AI · Claude Cowork · KI-Agenten · Workflows
 ├─ Blog               (direkter Link)
 ├─ Über uns ▾         (Akkordeon)
-│    Startseite · Mit euch wachsen · Das Team · Karriere · Kontakt
+│    Startseite · Über uns · Karriere · Kontakt
 └─ [Kontakt]          (fest am unteren Rand des Drawers)
 ```
 
@@ -83,10 +83,9 @@ Managed-Claude-Menü.
 
 ```
 BRANCHEN         ANGEBOT & WISSEN    UNTERNEHMEN         RECHTLICHES
-Großhandel       Claude Preise       Mit euch wachsen    Impressum
-Steuerberater    Weitere Tools       Das Team            Datenschutz
-Anwälte          Blog                Karriere
-                                     Standorte
+Großhandel       Claude Preise       Über uns            Impressum
+Steuerberater    Weitere Tools       Karriere            Datenschutz
+Anwälte          Blog                Standorte
                                      Kontakt
 ```
 

@@ -18,8 +18,7 @@ export default function Footer() {
   ];
 
   const unternehmenMenu = [
-    { label: "Mit euch wachsen", href: "/mit-euch-wachsen" },
-    { label: "Das Team", href: "/team" },
+    { label: "Über uns", href: "/ueber-uns" },
     { label: "Karriere", href: "/karriere" },
     { label: "Standorte", href: "/standorte" },
     { label: "Kontakt", href: "/contact" },

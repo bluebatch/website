@@ -315,9 +315,9 @@ export default async function Page({
             Lab dazu. Dichteste Mittelstands-Cluster in Eichstätt,
             Pfaffenhofen und Neuburg liefern in die Audi-Lieferkette zu.
             Wie wir die Implementierung in sechs Phasen strukturieren,
-            beschreiben wir auf{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            beschreiben wir auf der Seite{" "}
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

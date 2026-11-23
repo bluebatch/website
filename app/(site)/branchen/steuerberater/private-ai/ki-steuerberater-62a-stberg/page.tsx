@@ -640,10 +640,10 @@ export default function Page() {
             <Typo.Paragraph className="text-gray-600">
               Entweder als fest kalkulierter Workflow ab 8.000 € oder als feste
               Engineer-Kapazität ab 3.000 € pro Monat, wenn mehrere Use Cases
-              folgen sollen. Modell- und Hostingkosten kommen dazu. Alle Stufen
-              stehen in unserem{" "}
-              <InternalLink href="/mit-euch-wachsen" variant="underline">
-                Wachstumsmodell mit festen Paketpreisen
+              folgen sollen. Modell- und Hostingkosten kommen dazu, die
+              Token-Preise stehen auf der{" "}
+              <InternalLink href="/managed-claude/preise" variant="underline">
+                Preisseite von Managed Claude
               </InternalLink>
               .
             </Typo.Paragraph>

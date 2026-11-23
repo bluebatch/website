@@ -376,9 +376,9 @@ export default async function Page({
             Dieter-Schwarz-Stiftung. Bis 2027 sollen hier bis zu 5.000
             hochqualifizierte Stellen entstehen. Dazu kommt der Bildungscampus
             mit TUM Heilbronn, DHBW und Hochschule Heilbronn. Wie wir die
-            Implementierung in sechs Phasen ausrollen, beschreiben wir auf{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            Implementierung in sechs Phasen ausrollen, beschreiben wir auf der Seite{" "}
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

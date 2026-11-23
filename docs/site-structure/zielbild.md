@@ -6,7 +6,7 @@ die Quelle für die Mindmap [`zielbild.html`](zielbild.html) (im Browser
 [`grundsaetze.md`](grundsaetze.md).
 
 <!-- zielbild:stand -->
-**Stand 2026-11-22:** 399 Seiten im Baum, davon 248 live, 81 unveröffentlicht und 70 geplant. 2 Seiten in `app/` fehlen im Baum.
+**Stand 2026-11-23:** 398 Seiten im Baum, davon 247 live, 81 unveröffentlicht und 70 geplant. 2 Seiten in `app/` fehlen im Baum.
 <!-- /zielbild:stand -->
 
 ## So wird der Baum gepflegt
@@ -282,8 +282,7 @@ die Quelle für die Mindmap [`zielbild.html`](zielbild.html) (im Browser
 ## Unternehmen
 
 - `contact` MONEY · live · Ziel aller Conversion-Ketten
-- `mit-euch-wachsen` CONTENT · live · Prozess und Positionierung (Trust)
-- `team` CONTENT · live · Trust
+- `ueber-uns` CONTENT · live · Trust: Gründer (Max, Phillip) und Founder Story Managed Claude. Ersetzt seit 2026-11 `team` und `mit-euch-wachsen` (beide 301 hierher)
 - `karriere` CONTENT · live · Trust und Recruiting. Stellen aus `lib/career-jobs.ts`, Bewerbung nur per Formular (`/api/karriere` an das Google Sheet „Bewerbungen“, nicht HubSpot)
 
 ## Rechtliches

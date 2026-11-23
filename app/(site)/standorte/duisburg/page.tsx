@@ -284,8 +284,8 @@ export default async function Page({
               Auf dem TKS-Gelände entsteht Europas größte Direktreduktionsanlage für grünen Stahl. duisport baut den China-Hub und logport-Areale weiter aus. Beide Welten brauchen End-to-End-Workflows - Subventionsreporting, H2-Herkunftsnachweise, CBAM, Zollabwicklung und Werkstoff-Tracking. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
-                Mit euch wachsen: unser Modell →
+              <Link href="/ueber-uns" className="text-primary-600 hover:underline font-semibold">
+                Über Bluebatch: unsere Geschichte →
               </Link>
             </div>
           </BoundlessImageCard.Content>

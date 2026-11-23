@@ -12,8 +12,7 @@ import ContactButton from "@/components/buttons/contact-button";
 
 const uberUns = [
   { label: "Startseite", href: "/" },
-  { label: "Mit euch wachsen", href: "/mit-euch-wachsen" },
-  { label: "Das Team", href: "/team" },
+  { label: "Über uns", href: "/ueber-uns" },
   { label: "Karriere", href: "/karriere" },
   { label: "Kontakt", href: "/contact" },
 ];

@@ -344,8 +344,8 @@ export default async function Page({
               Die Vestische elektrifiziert schrittweise ihre Flotte. Aus dem klassischen Diesel-Depot wird ein Hochleistungs-Ladestandort mit Lastmanagement, Werkstatt-Workflows für Hochvolt-Technik und neuen Schnittstellen zur Stadtwerke-Energieversorgung. n8n verbindet Depot-Management, ITCS, EFM und Echtzeit-PV zu einer Pipeline - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
-                Mit euch wachsen: unser Modell →
+              <Link href="/ueber-uns" className="text-primary-600 hover:underline font-semibold">
+                Über Bluebatch: unsere Geschichte →
               </Link>
             </div>
           </BoundlessImageCard.Content>

@@ -317,8 +317,8 @@ export default async function Page({
               Aus dem ehemaligen Textil-Manchester wurde Werkzeugmaschinen-Welthauptstadt und VW-Motorenwerk. Heute kommt die nächste Welle: E-Antrieb statt Verbrenner, MEMS-Zulieferung statt Schwerindustrie. Beide Welten brauchen End-to-End-Workflows - Lieferanten-Onboarding, Service-Pipelines, IATF-Audit-Trails. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
-                Mit euch wachsen: unser Modell →
+              <Link href="/ueber-uns" className="text-primary-600 hover:underline font-semibold">
+                Über Bluebatch: unsere Geschichte →
               </Link>
             </div>
           </BoundlessImageCard.Content>

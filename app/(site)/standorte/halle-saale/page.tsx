@@ -297,8 +297,8 @@ export default async function Page({
               Aus dem ehemaligen DDR-Chemie-Erbe wurde mit InfraLeuna eine Industrie-Infrastruktur, die 100+ Chemieunternehmen aus 10 Nationen anzieht - jetzt mit Total Leuna, Refhyne und Linde als Wasserstoff-Pionieren. Quartiers- und Anlagen-Management bedeutet: REACH, CSRD, H2-Herkunftsnachweise, IPCEI-Reporting. n8n verbindet diese Schnittstellen - ein Use-Case, den wir mehrfach gebaut haben.
             </Typo.Paragraph>
             <div className="mt-4">
-              <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline font-semibold">
-                Mit euch wachsen: unser Modell →
+              <Link href="/ueber-uns" className="text-primary-600 hover:underline font-semibold">
+                Über Bluebatch: unsere Geschichte →
               </Link>
             </div>
           </BoundlessImageCard.Content>

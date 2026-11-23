@@ -14,21 +14,15 @@ const uberUnsMenu = {
     {
       items: [
         {
-          icon: "grow" as NavIconName,
-          title: "Mit euch wachsen",
-          description: "Vom ersten Workflow zur AI-Plattform",
-          href: "/mit-euch-wachsen",
+          icon: "team" as NavIconName,
+          title: "Über uns",
+          description: "Gründer & Founder Story",
+          href: "/ueber-uns",
         },
       ],
     },
     {
       items: [
-        {
-          icon: "team" as NavIconName,
-          title: "Das Team",
-          description: "lernen Sie uns kennen",
-          href: "/team",
-        },
         {
           icon: "career" as NavIconName,
           title: "Karriere",

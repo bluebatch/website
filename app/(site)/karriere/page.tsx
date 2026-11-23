@@ -334,9 +334,10 @@ export default function KarrierePage() {
           <IntroBox.Headline>Mit wem du zusammenarbeitest</IntroBox.Headline>
           <IntroBox.Paragraph>
             Bluebatch ist ein kleines, verteiltes Team aus Entwicklung, Sales
-            und Kundenbetreuung. Wer dahintersteckt, siehst du auf der{" "}
-            <InternalLink href="/team" variant="underline">
-              Teamseite von Bluebatch
+            und Kundenbetreuung. Wer Bluebatch gegründet hat und warum wir auf
+            Claude setzen, steht{" "}
+            <InternalLink href="/ueber-uns" variant="underline">
+              auf unserer Über-uns-Seite
             </InternalLink>
             .
           </IntroBox.Paragraph>

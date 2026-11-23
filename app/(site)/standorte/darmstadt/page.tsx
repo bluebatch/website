@@ -395,9 +395,9 @@ export default async function Page({
             Universitätsklinikum mit etwa 3.500. ENTEGA als regionaler
             Energieversorger steht unter Smart-Meter-Rollout- und MAKO-Druck.
             Wie wir die Implementierung in sechs Phasen ausrollen, beschreiben
-            wir auf{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            wir auf der Seite{" "}
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

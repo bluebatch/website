@@ -181,18 +181,6 @@ const nextConfig: NextConfig = {
         destination: "/branchen/steuerberater/workflows/datev-jira-task-orchestration",
         permanent: true,
       },
-      // Retired page → Angebot-/Value-Seite (still linked from Standorte)
-      {
-        source: "/unser-prozess",
-        destination: "/mit-euch-wachsen",
-        permanent: true,
-      },
-      // Alte URL → neuer value-driven Slug
-      {
-        source: "/warum-bluebatch",
-        destination: "/mit-euch-wachsen",
-        permanent: true,
-      },
       // Eingestellte Funnel-Landingpages (Oktober 2026): alte Anzeigen- und
       // Blog-Links laufen auf das nächstliegende Angebot statt ins 404.
       {

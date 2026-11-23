@@ -56,7 +56,7 @@ function buildMap(): Map<string, string> {
  *
  * @example
  * resolveHref("/standorte/berlin") // → "/standorte/berlin"
- * resolveHref("/team")             // → "/team" (no mainRewrite)
+ * resolveHref("/karriere")         // → "/karriere" (no mainRewrite)
  */
 export function resolveHref(folderPath: string): string {
   const map = buildMap();

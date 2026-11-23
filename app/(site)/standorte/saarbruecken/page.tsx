@@ -380,9 +380,9 @@ export default async function Page({
             mehrsprachige Kommunikation - alles im Tagesgeschäft. Strukturhilfen
             für ostdeutsche Standorte gibt es nicht, das Saarland muss durch
             Effizienz wachsen. Wie wir die Implementierung in sechs Phasen
-            ausrollen, beschreiben wir auf{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            ausrollen, beschreiben wir auf der Seite{" "}
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

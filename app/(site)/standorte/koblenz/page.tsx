@@ -327,9 +327,9 @@ export default async function Page({
             Investitionsimpuls, das Bundesarchiv, drei Hochschulen und ein
             klassischer rheinischer Mittelstand zwischen Bau, Maschinenbau
             und Logistik. Wie wir die Implementierung in sechs Phasen ausrollen,
-            beschreiben wir auf{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            beschreiben wir auf der Seite{" "}
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

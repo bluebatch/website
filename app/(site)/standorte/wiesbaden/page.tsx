@@ -374,8 +374,8 @@ export default async function Page({
             automatisieren wir mit denselben n8n-Bausteinen. Wie wir die
             Implementierung in sechs Phasen strukturieren, beschreiben wir auf
             der Seite{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

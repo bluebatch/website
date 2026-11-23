@@ -321,9 +321,9 @@ export default async function Page({
             beschleunigen und gleichzeitig den Trinity-Hochlauf perfekt
             abliefern. Hinzu kommen die Autostadt mit über 2 Millionen
             Besuchern pro Jahr und die Wolfsburg AG als Diversifizierungs-Vehikel.
-            Wie wir das in sechs Phasen ausrollen, beschreiben wir auf{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            Wie wir das in sechs Phasen ausrollen, beschreiben wir auf der Seite{" "}
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

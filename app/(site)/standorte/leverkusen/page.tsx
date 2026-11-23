@@ -321,9 +321,9 @@ export default async function Page({
             und ein städtisches Verwaltungs-Ökosystem unter OZG-Druck.
             Drei Welten, dieselbe technische Antwort: auditfeste, on-premise
             Workflow-Automatisierung mit n8n. Wie wir das in sechs Phasen
-            ausrollen, beschreiben wir auf{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            ausrollen, beschreiben wir auf der Seite{" "}
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>

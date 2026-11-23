@@ -399,9 +399,9 @@ export default async function Page({
             Magdeburg-Stendal liefern Maschinenbau-, Verfahrenstechnik-
             und Informatik-Absolventen in die regionale Industrie. Wie wir
             die Implementierung in sechs Phasen ausrollen, beschreiben wir
-            auf{" "}
-            <Link href="/mit-euch-wachsen" className="text-primary-600 hover:underline">
-              Mit euch wachsen
+            auf der Seite{" "}
+            <Link href="/managed-claude/onboarding" className="text-primary-600 hover:underline">
+              Onboarding
             </Link>
             .
           </Typo.Paragraph>
