@@ -180,7 +180,10 @@ export default function UeberUnsPage() {
             </TeamMember>
 
             <TeamMember>
-              <TeamImage initials="PP" />
+              <TeamImage
+                src="/team/phillip-pham.webp"
+                alt="Phillip Pham, Investor und Advisor von Bluebatch"
+              />
               <TeamName>Phillip Pham</TeamName>
               <TeamRole>Investor & Advisor</TeamRole>
               <TeamDescription>
