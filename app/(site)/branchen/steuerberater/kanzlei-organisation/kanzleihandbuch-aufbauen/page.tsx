@@ -17,13 +17,13 @@ import TimelineAsSteps, {
 import { FaqContainer } from "@/components/ui/faqs";
 
 export const metadata: Metadata = {
-  title: "Kanzleihandbuch: mit Muster-Vorlage aufbauen statt leerem Blatt | Bluebatch",
+  title: "Kanzleihandbuch aufbauen: gemeinsam statt allein | Bluebatch",
   description:
-    "Kanzleihandbuch als Notion-Wiki aufbauen: Fundament für Onboarding, Delegation, Führung und KI. Mit Muster-Handbuch (circa 200 Seiten) als Vorlage starten.",
+    "Kanzleihandbuch als Notion-Wiki aufbauen: Fundament für Onboarding, Delegation, Führung und KI. Wir erstellen es gemeinsam mit Ihnen aus den Abläufen Ihrer Kanzlei.",
   openGraph: {
     title: "Kanzleihandbuch aufbauen - Bluebatch",
     description:
-      "Kanzleihandbuch als Notion-Wiki aufbauen: Fundament für Onboarding, Delegation, Führung und KI. Mit Muster-Handbuch (circa 200 Seiten) als Vorlage starten.",
+      "Kanzleihandbuch als Notion-Wiki aufbauen: Fundament für Onboarding, Delegation, Führung und KI. Wir erstellen es gemeinsam mit Ihnen aus den Abläufen Ihrer Kanzlei.",
     type: "website",
     locale: "de_DE",
     siteName: "Bluebatch",
@@ -72,7 +72,7 @@ const faqs = [
   {
     question: "Wie lange dauert der Aufbau eines Kanzleihandbuchs?",
     answer:
-      "Mit dem Muster-Handbuch als Vorlage steht das Grundgerüst schnell: Struktur übernehmen, an die eigene Kanzlei anpassen, offensichtlich Unpassendes streichen. Die eigentliche Füllung mit den eigenen Prozessen läuft danach kontinuierlich, am besten per Prozessdokumentation mit KI nebenbei im Tagesgeschäft.",
+      "Das hängt von der Größe der Kanzlei und der Zahl der Prozesse ab. Weil wir das Handbuch gemeinsam mit Ihnen erstellen und das Strukturieren und Schreiben übernehmen, steht das Grundgerüst mit den wichtigsten Kernprozessen deutlich schneller als im Alleingang. Weitere Prozesse kommen danach kontinuierlich dazu, am besten per Prozessdokumentation mit KI nebenbei im Tagesgeschäft.",
   },
   {
     question: "Wer pflegt das Handbuch im Alltag?",
@@ -93,8 +93,9 @@ export default function Page() {
             Wissensdokumentation einer Steuerkanzlei, aufgebaut als
             durchsuchbares Notion-Wiki. Das Handbuch ist das Fundament für
             Mitarbeiter-Onboarding, Delegation, Führung und den KI-Einsatz.
-            Statt bei null zu starten, passen Kanzleien ein Muster-Handbuch
-            mit circa 200 Seiten an die eigenen Abläufe an.
+            Wir erstellen das Handbuch gemeinsam mit der Kanzlei, aus ihren
+            eigenen Abläufen: Wir bringen Struktur und Methode mit, das Team
+            sein Wissen.
           </GeoSummary>
           <ContactButton icon="chat">Beratung anfragen</ContactButton>
         </div>
@@ -168,40 +169,42 @@ export default function Page() {
         </SimpleGrid>
       </ContentWrapper>
 
-      {/* Muster-Handbuch + Vorgehen */}
+      {/* Gemeinsam erstellen + Vorgehen */}
       <ContentWrapper colorScheme="gray-light">
         <IntroBox size="small">
-          <IntroBox.PreHeadline>Vorlage statt leeres Blatt</IntroBox.PreHeadline>
+          <IntroBox.PreHeadline>Gemeinsam statt allein</IntroBox.PreHeadline>
           <IntroBox.Headline>
-            Mit dem Muster-Handbuch starten, nicht bei null
+            Wir erstellen Ihr Kanzleihandbuch zusammen mit Ihnen
           </IntroBox.Headline>
           <IntroBox.Paragraph>
-            Die größte Hürde beim Kanzleihandbuch ist der Anfang: 200 leere
-            Seiten schreibt niemand neben dem Tagesgeschäft. Deshalb starten
-            wir mit einem Muster-Handbuch von circa 200 Seiten, das die
-            typischen Kanzleiprozesse bereits abdeckt und nur noch angepasst
-            wird.
+            Die größte Hürde beim Kanzleihandbuch ist der Anfang: Neben dem
+            Tagesgeschäft schreibt niemand ein Handbuch von Grund auf. Deshalb
+            erstellen wir es gemeinsam mit Ihnen. Wir bringen Struktur,
+            Methode und das Schreiben mit, Ihr Team das Wissen über die
+            eigenen Abläufe.
           </IntroBox.Paragraph>
         </IntroBox>
 
         <div className="mt-12 max-w-3xl mx-auto">
           <TimelineAsSteps>
             <TimelineAsStepsStep value={1}>
-              <Typo.H3>Vorlage übernehmen</Typo.H3>
+              <Typo.H3>Struktur gemeinsam festlegen</Typo.H3>
               <Typo.Paragraph>
-                Das Muster-Handbuch wird als Notion-Wiki für Ihre Kanzlei
-                aufgesetzt: Struktur, Kapitel und Standard-Prozesse stehen
-                damit vom ersten Tag an. Zugriffsrechte regeln, wer lesen und
-                wer ändern darf.
+                Zusammen legen wir fest, welche Kapitel Ihr Handbuch braucht:
+                Kernprozesse, Rollen und Zuständigkeiten, Software, Vorlagen
+                und Grundsätze. Dann setzen wir das Notion-Wiki für Ihre
+                Kanzlei auf. Zugriffsrechte regeln, wer lesen und wer ändern
+                darf.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
             <TimelineAsStepsStep value={2}>
-              <Typo.H3>An die eigene Kanzlei anpassen</Typo.H3>
+              <Typo.H3>Abläufe zusammen erfassen</Typo.H3>
               <Typo.Paragraph>
-                Rolle für Rolle wird die Vorlage mit der Realität abgeglichen:
-                Was passt, bleibt. Was anders läuft, wird geändert. Was fehlt,
-                kommt auf die Liste. So entsteht in Wochen, was als
-                Schreibprojekt Jahre bräuchte.
+                Rolle für Rolle gehen wir die Abläufe mit Ihrem Team durch: wie
+                es heute läuft, wer zuständig ist, wo es hakt. Wir übernehmen
+                das Formulieren und Strukturieren, Ihr Team prüft und ergänzt.
+                So entsteht in Wochen, was als Schreibprojekt nebenbei Jahre
+                bräuchte.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
             <TimelineAsStepsStep value={3}>

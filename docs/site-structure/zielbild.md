@@ -236,7 +236,7 @@ die Quelle für die Mindmap [`zielbild.html`](zielbild.html) (im Browser
       - `lohnprozess-automatisieren` CONTENT · live · Bis White-Label
     - `kanzlei-organisation/` HUB · live · Prozesse, Handbuch, internes Onboarding: die Kanzlei als Betrieb
       - `kanzlei-digitalisierungs-workshop` MONEY · live
-      - `kanzleihandbuch-aufbauen` CONTENT · live · Inklusive Muster-Vorlage
+      - `kanzleihandbuch-aufbauen` CONTENT · live · Gemeinsam mit der Kanzlei erstellt
       - `prozessdoku-mit-ki` CONTENT · live · Screen-Recording zum Artikel, senkt die Fehlerquote
       - `mitarbeiter-onboarding-digital` CONTENT · live · DATEV-fit in einer Woche
       - `rollenbasierte-kanzlei` CONTENT · live · Rollen und Dashboards

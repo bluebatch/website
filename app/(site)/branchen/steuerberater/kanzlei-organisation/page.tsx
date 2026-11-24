@@ -46,14 +46,14 @@ const fundament = [
     title: "Kanzleihandbuch",
     badge: "Baustein #01",
     role: "Zentrale Wissensbasis",
-    stat: "200 S.",
+    stat: "1 Wiki",
     description:
-      "Alle Prozesse und Standards der Kanzlei in einem durchsuchbaren Notion-Wiki. Ein Muster-Handbuch mit circa 200 Seiten dient als Vorlage, statt bei null zu starten.",
+      "Alle Prozesse und Standards der Kanzlei in einem durchsuchbaren Notion-Wiki. Wir erstellen es gemeinsam mit Ihnen aus Ihren eigenen Abläufen, statt dass Sie allein bei null starten.",
     image: "/images/steuerberater/kanzlei-organisation/kanzleihandbuch-aufbauen/hero.png",
     features: [
-      "Fundament für Delegation und Führung",
-      "Basis für jeden KI-Einsatz",
-      { label: "Muster-Handbuch als Vorlage", badge: "200 S." },
+      "Gemeinsam mit uns erstellt",
+      "Basis für Delegation, Führung und KI",
+      { label: "Alles Wissen an einem Ort", badge: "1 Wiki" },
     ],
     linkLabel: "Zum Kanzleihandbuch",
   },
@@ -299,9 +299,9 @@ export default function Page() {
                 >
                   Kanzleihandbuch als Notion-Wiki
                 </InternalLink>{" "}
-                wird zur zentralen Wissensbasis. Als Startpunkt dient ein
-                Muster-Handbuch mit circa 200 Seiten, das an die eigene Kanzlei
-                angepasst wird, statt alles selbst zu schreiben.
+                wird zur zentralen Wissensbasis. Wir erstellen es gemeinsam mit
+                Ihrem Team aus den eigenen Abläufen: Wir übernehmen Struktur und
+                Schreiben, Ihr Team bringt das Wissen ein.
               </Typo.Paragraph>
             </TimelineAsStepsStep>
             <TimelineAsStepsStep value={3}>
