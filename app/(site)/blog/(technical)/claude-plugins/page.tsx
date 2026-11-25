@@ -255,7 +255,13 @@ export default function Page() {
               Claude liest zunächst nur die Kurzbeschreibung. Passt eine Aufgabe
               dazu, lädt es den ganzen Skill. Mitarbeiter müssen also nicht
               wissen, welcher Skill gerade dran ist. Sie beschreiben die
-              Aufgabe, und Claude arbeitet nach Ihrer Anleitung.
+              Aufgabe, und Claude arbeitet nach Ihrer Anleitung. Wie Sie gute
+              Skills schreiben und worauf Sie bei Skills aus dem Netz achten,
+              steht im Beitrag{" "}
+              <Link href="/blog/claude-skills" className={linkClass}>
+                Claude Skills
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>Connectors: womit gearbeitet wird</Typo.H3>

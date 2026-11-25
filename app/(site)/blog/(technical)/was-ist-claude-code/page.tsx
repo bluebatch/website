@@ -334,7 +334,15 @@ export default function Page() {
               bestimmten Aktionen zwingend ausgeführt werden. Für den
               Unternehmenseinsatz sind Hooks der interessantere Teil: Damit
               lassen sich Regeln erzwingen, statt sie in eine Anweisung zu
-              schreiben und zu hoffen.
+              schreiben und zu hoffen. Wie ihr Skills schreibt, prüft und im
+              Team verteilt, zeigt der Beitrag{" "}
+              <Link
+                href="/blog/claude-skills"
+                className="text-primary-600 hover:underline"
+              >
+                Claude Skills
+              </Link>
+              .
             </Typo.Paragraph>
 
             <Typo.H3>MCP als Anschluss an eure Systeme</Typo.H3>

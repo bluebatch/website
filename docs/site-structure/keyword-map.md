@@ -41,7 +41,6 @@ H2, FAQ, Fließtext. Je Keyword genau **eine** Zielseite (Kannibalisierung).
 | Vorschlag | Typ | Keywords | Begründung |
 | --- | --- | --- | --- |
 | `managed-claude/chatgpt-alternative` | `LANDING` | chatgpt alternative 9900/0, alternative zu chatgpt 8100/0, europäische alternative zu chatgpt 390/0, deutsche alternative zu chatgpt 110/0, chatgpt alternative europa 140/0 | Größtes Volumen bei KD 0. Viele Suchen wollen „kostenlos“, daher auf Unternehmen/DSGVO zuspitzen. |
-| `blog/claude-skills` | `CONTENT` | claude skills 8100/0, best claude skills 390/0, claude skills marketplace 590/16 | Informativ, verlinkt auf zentrale-steuerung (Skills zentral verteilen). |
 | `blog/claude-pro-team-enterprise` | `CONTENT` | claude pro 8100/10, claude max 3600/0, claude pro kosten 1300/0, claude team vs pro 30 | Abo-Vergleich, verlinkt auf preise und claude-app. |
 
 ## Bereits besetzt (nicht doppelt targeten)
@@ -54,6 +53,7 @@ H2, FAQ, Fließtext. Je Keyword genau **eine** Zielseite (Kannibalisierung).
 - „mcp server erstellen“ → `integrationen/mcp-server-erstellen`.
 - „claude plugins“ (1900/6, Stand 2026-11-19) → `/blog/claude-plugins`, deshalb zielen `plugins` und `plugin-entwicklung` auf Varianten.
 - „claude updates“ / „claude update“ (720/9, Stand 2026-11-22) → `/blog/claude-updates`; Nebenkeywords dort: claude dashboards 1000/4, claude artefakte 480/1, claude advisor 110/2. Die Seite wird bei neuen Anthropic-Releases fortgeschrieben, keine Monats-Slugs anlegen.
+- „claude skills“ / „claude skill“ (9900/5, Stand 2026-11-25) → `/blog/claude-skills`; Nebenkeywords dort: claude code skills 2900/10, agent skills 1900/7, skills.sh 1900/3, claude skill creator 320/5, skill.md 260/2, claude skill erstellen 90/3. Auf `zentrale-steuerung` bleibt „claude skills“ Nebenkeyword, der Blog verlinkt dorthin.
 
 ## Offen
 

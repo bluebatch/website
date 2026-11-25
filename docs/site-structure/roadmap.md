@@ -9,8 +9,9 @@ Status `geplant` (in der Mindmap über den Filter „geplant“).
 ### Managed Claude
 
 - [ ] **Seiten aus der Keyword-Map:** `managed-claude/chatgpt-alternative`
-      (im Zielbild als geplant), Blog „claude skills“ und Blog „Claude Pro,
-      Team, Enterprise“. Details in der [Keyword-Map](keyword-map.md).
+      (im Zielbild als geplant) und Blog „Claude Pro, Team, Enterprise“.
+      Blog „claude skills“ ist seit 2026-11-25 live (`/blog/claude-skills`).
+      Details in der [Keyword-Map](keyword-map.md).
 - [ ] **Gerüstseiten schärfen:** claude-app/, claude-api/, use-cases/ und
       integrationen/ sind live, aber noch dünn. Unter claude-app/ und
       claude-api/ fehlen eigene Unterseiten.

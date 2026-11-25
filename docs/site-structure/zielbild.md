@@ -6,7 +6,7 @@ die Quelle für die Mindmap [`zielbild.html`](zielbild.html) (im Browser
 [`grundsaetze.md`](grundsaetze.md).
 
 <!-- zielbild:stand -->
-**Stand 2026-11-23:** 398 Seiten im Baum, davon 247 live, 81 unveröffentlicht und 70 geplant. 2 Seiten in `app/` fehlen im Baum.
+**Stand 2026-11-25:** 399 Seiten im Baum, davon 248 live, 81 unveröffentlicht und 70 geplant. 2 Seiten in `app/` fehlen im Baum.
 <!-- /zielbild:stand -->
 
 ## So wird der Baum gepflegt
@@ -261,7 +261,7 @@ die Quelle für die Mindmap [`zielbild.html`](zielbild.html) (im Browser
 ## Blog
 
 - `blog/` HUB · live · Blog-Übersicht
-  - `*` CONTENT · 83 live, 6 unveröffentlicht · Blog-Artikel sind immer Content und werden hier nicht einzeln gepflegt
+  - `*` CONTENT · 84 live, 6 unveröffentlicht · Blog-Artikel sind immer Content und werden hier nicht einzeln gepflegt
 
 ## Standorte
 
