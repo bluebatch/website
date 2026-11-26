@@ -462,7 +462,7 @@ export default function Home() {
           </ProseColumns.Item>
           <ProseColumns.Item title={<IconTitle icon={LifeBuoy}>Betrieb mit Ansprechpartner</IconTitle>}>
             Neue Modelle, neue Mitarbeiter, neue Connectors: Sie haben einen festen Ansprechpartner, der das Gateway kennt.{" "}
-            <InternalLink href="/team" variant="underline">
+            <InternalLink href="/ueber-uns" variant="underline">
               Das Team
             </InternalLink>
           </ProseColumns.Item>
